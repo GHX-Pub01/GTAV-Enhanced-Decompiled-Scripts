@@ -113651,20 +113651,20 @@ char* func_965(int iParam0, int iParam1) // Position - 0x8DAF9 (580345)
 
 BOOL func_966(int iParam0) // Position - 0x8E45F (582751)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_967(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_215(num2));
+	p_num = func_967(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_215(num));
 }
 
-int func_967(int iParam0) // Position - 0x8E47C (582780)
+int* func_967(int iParam0) // Position - 0x8E47C (582780)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682393.f_1061[func_219(iParam0)];
-	return unk;
+	p_num = Global_1682393.f_1061[func_219(iParam0)];
+	return p_num;
 }
 
 void func_968(BOOL bParam0) // Position - 0x8E497 (582807)
@@ -127016,20 +127016,20 @@ void func_1054(int iParam0, BOOL bParam1) // Position - 0x9E68F (648847)
 
 BOOL func_1055(int iParam0) // Position - 0x9E6DE (648926)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_1056(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_215(num2));
+	p_num = func_1056(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_215(num));
 }
 
-int func_1056(int iParam0) // Position - 0x9E6FB (648955)
+int* func_1056(int iParam0) // Position - 0x9E6FB (648955)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682393.f_1205[func_219(iParam0)];
-	return unk;
+	p_num = Global_1682393.f_1205[func_219(iParam0)];
+	return p_num;
 }
 
 void func_1057(int iParam0, BOOL bParam1) // Position - 0x9E716 (648982)
@@ -127175,20 +127175,20 @@ void func_1062(int iParam0, BOOL bParam1) // Position - 0x9E923 (649507)
 
 BOOL func_1063(int iParam0) // Position - 0x9E972 (649586)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_1064(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_215(num2));
+	p_num = func_1064(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_215(num));
 }
 
-int func_1064(int iParam0) // Position - 0x9E98F (649615)
+int* func_1064(int iParam0) // Position - 0x9E98F (649615)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682393.f_1157[func_219(iParam0)];
-	return unk;
+	p_num = Global_1682393.f_1157[func_219(iParam0)];
+	return p_num;
 }
 
 void func_1065(int iParam0, BOOL bParam1) // Position - 0x9E9AA (649642)
@@ -127344,20 +127344,20 @@ void func_1070(int iParam0, BOOL bParam1) // Position - 0x9EC89 (650377)
 
 BOOL func_1071(int iParam0) // Position - 0x9ECD8 (650456)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_1072(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_215(num2));
+	p_num = func_1072(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_215(num));
 }
 
-int func_1072(int iParam0) // Position - 0x9ECF5 (650485)
+int* func_1072(int iParam0) // Position - 0x9ECF5 (650485)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682393.f_1109[func_219(iParam0)];
-	return unk;
+	p_num = Global_1682393.f_1109[func_219(iParam0)];
+	return p_num;
 }
 
 void func_1073(int iParam0, BOOL bParam1) // Position - 0x9ED10 (650512)
@@ -131822,7 +131822,7 @@ void func_1273(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 		switch (Global_1920804.f_9)
 		{
 			case 1:
-				if (!func_1430() && func_1427(0) > false)
+				if (!func_1430() && func_1427(0) > 0)
 					Global_1939321[0 /*8*/].f_5 = 1;
 			
 				if (!flag3)
@@ -135322,7 +135322,7 @@ void func_1426(float fParam0) // Position - 0xA84AC (689324)
 	return;
 }
 
-BOOL func_1427(int iParam0) // Position - 0xA84D0 (689360)
+int func_1427(int iParam0) // Position - 0xA84D0 (689360)
 {
 	int num;
 

@@ -140203,7 +140203,7 @@ void func_990() // Position - 0xB5767 (743271)
 	func_660(&uLocal_26, 0, false);
 	func_1033();
 	MISC::SET_WEATHER_TYPE_NOW_PERSIST("EXTRASUNNY");
-	Global_33116 = 0;
+	Global_33116 = false;
 
 	switch (iLocal_3186)
 	{
@@ -142709,7 +142709,7 @@ void func_1042() // Position - 0xB9805 (759813)
 	MISC::SET_INSTANCE_PRIORITY_HINT(0);
 	PLAYER::SET_MAX_WANTED_LEVEL(5);
 	VEHICLE::SET_RANDOM_TRAINS(true);
-	Global_33116 = 0;
+	Global_33116 = false;
 	return;
 }
 

@@ -3540,75 +3540,75 @@ struct<14> func_8(Hash hParam0, int iParam1, ePedComponentType epctParam2, int i
 	return Global_79347[0 /*14*/];
 }
 
-void func_9(int iParam0, BOOL bParam1) // Position - 0x1A1A (6682)
+void func_9(int iParam0, ePedComponentType epctParam1) // Position - 0x1A1A (6682)
 {
 	switch (iParam0)
 	{
 		case 0:
-			func_40(bParam1);
+			func_40(epctParam1);
 			break;
 	
 		case 2:
-			func_39(bParam1);
+			func_39(epctParam1);
 			break;
 	
 		case 3:
-			func_36(bParam1);
+			func_36(epctParam1);
 			break;
 	
 		case 4:
-			func_35(bParam1);
+			func_35(epctParam1);
 			break;
 	
 		case 6:
-			func_34(bParam1);
+			func_34(epctParam1);
 			break;
 	
 		case 5:
-			func_33(bParam1);
+			func_33(epctParam1);
 			break;
 	
 		case 8:
-			func_32(bParam1);
+			func_32(epctParam1);
 			break;
 	
 		case 9:
-			func_31(bParam1);
+			func_31(epctParam1);
 			break;
 	
 		case 10:
-			func_30(bParam1);
+			func_30(epctParam1);
 			break;
 	
 		case 1:
-			func_29(bParam1);
+			func_29(epctParam1);
 			break;
 	
 		case 7:
-			func_28(bParam1);
+			func_28(epctParam1);
 			break;
 	
 		case 11:
-			func_27(bParam1);
+			func_27(epctParam1);
 			break;
 	
 		case 12:
-			func_26(bParam1);
+			func_26(epctParam1);
 			break;
 	
 		case 13:
-			func_25(bParam1);
+			func_25(epctParam1);
 			break;
 	
 		case 14:
-			func_10(bParam1);
+			func_10(epctParam1);
 			break;
 	}
 
 	return;
 }
 
-void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
+void func_10(ePedComponentType epctParam0) // Position - 0x1B0A (6922)
 {
 	BOOL flag;
 	int num;
@@ -3628,9 +3628,9 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 	num6 = 14;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3638,7 +3638,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3646,7 +3646,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3654,7 +3654,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3662,7 +3662,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3670,7 +3670,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3678,7 +3678,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3686,7 +3686,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -3694,7 +3694,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -4234,7 +4234,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 10;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
@@ -4242,7 +4242,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
@@ -4250,7 +4250,7 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			num4 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "PROPS_P2_H2_0" /*Hockey Mask*/, 16);
 			num2 = 2;
 			num3 = 0;
@@ -4820,23 +4820,23 @@ void func_10(BOOL bParam0) // Position - 0x1B0A (6922)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 155, -1);
+			func_23(num6, epctParam0, 155, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_11(int iParam0, int iParam1, BOOL bParam2, char* sParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x2D3E (11582)
+void func_11(int iParam0, int iParam1, ePedComponentType epctParam2, char* sParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x2D3E (11582)
 {
 	int num;
 	int num2;
 
 	iParam0->f_6 = 0;
 	*iParam0 = iParam9;
-	iParam0->f_1 = bParam2 % 32;
-	iParam0->f_2 = bParam2 / 32;
+	iParam0->f_1 = epctParam2 % 32;
+	iParam0->f_2 = epctParam2 / 32;
 	iParam0->f_3 = iParam4;
 	iParam0->f_4 = iParam5;
 	iParam0->f_7 = iParam6;
@@ -8888,7 +8888,7 @@ ePedComponentType func_24(int iParam0) // Position - 0x6D28 (27944)
 	return 0;
 }
 
-void func_25(BOOL bParam0) // Position - 0x6DD8 (28120)
+void func_25(ePedComponentType epctParam0) // Position - 0x6DD8 (28120)
 {
 	BOOL flag;
 	int num;
@@ -8908,7 +8908,7 @@ void func_25(BOOL bParam0) // Position - 0x6DD8 (28120)
 	num6 = 13;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 31:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
@@ -8916,60 +8916,60 @@ void func_25(BOOL bParam0) // Position - 0x6DD8 (28120)
 			num3 = 0;
 			break;
 	
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
-			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
-			num2 = 0;
-			num3 = 0;
-			flag = true;
-			break;
-	
-		case 3:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_HAND:
+			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
+			num2 = 0;
+			num3 = 0;
+			flag = true;
+			break;
+	
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
@@ -8977,15 +8977,15 @@ void func_25(BOOL bParam0) // Position - 0x6DD8 (28120)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 9, -1);
+			func_23(num6, epctParam0, 9, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_26(BOOL bParam0) // Position - 0x6F25 (28453)
+void func_26(ePedComponentType epctParam0) // Position - 0x6F25 (28453)
 {
 	BOOL flag;
 	int num;
@@ -9005,82 +9005,82 @@ void func_26(BOOL bParam0) // Position - 0x6F25 (28453)
 	num6 = 12;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_0" /*White T-Shirt, Sweatpants*/, 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_5" /*Dock Worker*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_6" /*Highway Patrol*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_7" /*Golf*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_8" /*Tennis*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_9", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_10" /*Scuba Land*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_12" /*Stealth*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_13" /*Triathlon*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_14" /*Underwear*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_15" /*Security*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P2_16" /*Toilet*/, 16);
 			num2 = 0;
 			num3 = 0;
@@ -9318,15 +9318,15 @@ void func_26(BOOL bParam0) // Position - 0x6F25 (28453)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 48, -1);
+			func_23(num6, epctParam0, 48, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_27(BOOL bParam0) // Position - 0x7432 (29746)
+void func_27(ePedComponentType epctParam0) // Position - 0x7432 (29746)
 {
 	BOOL flag;
 	int num;
@@ -9346,24 +9346,24 @@ void func_27(BOOL bParam0) // Position - 0x7432 (29746)
 	num6 = 11;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 1, -1);
+			func_23(num6, epctParam0, 1, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_28(BOOL bParam0) // Position - 0x74A6 (29862)
+void func_28(ePedComponentType epctParam0) // Position - 0x74A6 (29862)
 {
 	BOOL flag;
 	int num;
@@ -9383,24 +9383,24 @@ void func_28(BOOL bParam0) // Position - 0x74A6 (29862)
 	num6 = 7;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 1, -1);
+			func_23(num6, epctParam0, 1, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_29(BOOL bParam0) // Position - 0x7519 (29977)
+void func_29(ePedComponentType epctParam0) // Position - 0x7519 (29977)
 {
 	BOOL flag;
 	int num;
@@ -9420,54 +9420,54 @@ void func_29(BOOL bParam0) // Position - 0x7519 (29977)
 	num6 = 1;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_0_0" /*Clean Shave*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_1_0" /*Beard 1*/, 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_2_0" /*Stubble*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_3_0" /*Big Mustache*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_4_0" /*Handlebar*/, 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P2_5_0" /*The Gerry*/, 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 6, -1);
+			func_23(num6, epctParam0, 6, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_30(BOOL bParam0) // Position - 0x7600 (30208)
+void func_30(ePedComponentType epctParam0) // Position - 0x7600 (30208)
 {
 	BOOL flag;
 	int num;
@@ -9487,81 +9487,81 @@ void func_30(BOOL bParam0) // Position - 0x7600 (30208)
 	num6 = 10;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 1;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 2;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 3;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 4;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 5;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 1;
@@ -9688,15 +9688,15 @@ void func_30(BOOL bParam0) // Position - 0x7600 (30208)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 33, -1);
+			func_23(num6, epctParam0, 33, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_31(BOOL bParam0) // Position - 0x7942 (31042)
+void func_31(ePedComponentType epctParam0) // Position - 0x7942 (31042)
 {
 	BOOL flag;
 	int num;
@@ -9716,87 +9716,87 @@ void func_31(BOOL bParam0) // Position - 0x7942 (31042)
 	num6 = 9;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 1;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 2;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 3;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_0" /*Red Wrestler Mask*/, 16);
 			num2 = 6;
 			num3 = 0;
 			num = 125;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_1" /*Green Wrestler Mask*/, 16);
 			num2 = 6;
 			num3 = 1;
 			num = 150;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_2" /*Patriot Wrestler Mask*/, 16);
 			num2 = 6;
 			num3 = 2;
 			num = 175;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_3" /*Domino Wrestler Mask*/, 16);
 			num2 = 6;
 			num3 = 3;
@@ -9832,15 +9832,15 @@ void func_31(BOOL bParam0) // Position - 0x7942 (31042)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 17, -1);
+			func_23(num6, epctParam0, 17, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_32(BOOL bParam0) // Position - 0x7B4A (31562)
+void func_32(ePedComponentType epctParam0) // Position - 0x7B4A (31562)
 {
 	BOOL flag;
 	int num;
@@ -9860,91 +9860,91 @@ void func_32(BOOL bParam0) // Position - 0x7B4A (31562)
 	num6 = 8;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P2_0_0" /*Black Digital Watch*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P2_0_1" /*White Digital Watch*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 8;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 9;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 10;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 11;
 			num3 = 0;
@@ -9985,15 +9985,15 @@ void func_32(BOOL bParam0) // Position - 0x7B4A (31562)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 18, -1);
+			func_23(num6, epctParam0, 18, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_33(BOOL bParam0) // Position - 0x7D6A (32106)
+void func_33(ePedComponentType epctParam0) // Position - 0x7D6A (32106)
 {
 	BOOL flag;
 	int num;
@@ -10013,50 +10013,50 @@ void func_33(BOOL bParam0) // Position - 0x7D6A (32106)
 	num6 = 5;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 1;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
@@ -10064,15 +10064,15 @@ void func_33(BOOL bParam0) // Position - 0x7D6A (32106)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 7, -1);
+			func_23(num6, epctParam0, 7, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_34(BOOL bParam0) // Position - 0x7E73 (32371)
+void func_34(ePedComponentType epctParam0) // Position - 0x7E73 (32371)
 {
 	BOOL flag;
 	int num;
@@ -10092,91 +10092,91 @@ void func_34(BOOL bParam0) // Position - 0x7E73 (32371)
 	num6 = 6;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_0" /*Black Chukka Boots*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_1" /*Snakeskin Chukka Boots*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 22;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_2" /*Gray Chukka Boots*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 45;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_3" /*Brown Chukka Boots*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 65;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_4" /*Crocodile Skin Boots*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num = 58;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_5" /*Cowboy Boots*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num = 72;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_6" /*Yellow Reptile Skin Boots*/, 16);
 			num2 = 0;
 			num3 = 6;
 			num = 68;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_0_7" /*Reptile Skin Boots*/, 16);
 			num2 = 0;
 			num3 = 7;
 			num = 60;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P2_5_0" /*Work Boots*/, 16);
 			num2 = 5;
 			num3 = 0;
@@ -10676,15 +10676,15 @@ void func_34(BOOL bParam0) // Position - 0x7E73 (32371)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 84, -1);
+			func_23(num6, epctParam0, 84, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_35(BOOL bParam0) // Position - 0x896B (35179)
+void func_35(ePedComponentType epctParam0) // Position - 0x896B (35179)
 {
 	BOOL flag;
 	int num;
@@ -10704,92 +10704,92 @@ void func_35(BOOL bParam0) // Position - 0x896B (35179)
 	num6 = 4;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P2_0_0" /*Blue Jeans*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P2_0_1" /*Dirty Blue Jeans*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 95;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P2_0_2" /*Navy Jeans*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 129;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P2_0_3" /*Faded Jeans*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 115;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 1;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 2;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 3;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 4;
@@ -11416,28 +11416,28 @@ void func_35(BOOL bParam0) // Position - 0x896B (35179)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 104, -1);
+			func_23(num6, epctParam0, 104, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_36(BOOL bParam0) // Position - 0x94C3 (38083)
+void func_36(ePedComponentType epctParam0) // Position - 0x94C3 (38083)
 {
-	if (bParam0 < 136)
-		func_38(bParam0);
+	if (epctParam0 < 136)
+		func_38(epctParam0);
 	else
-		func_37(bParam0);
+		func_37(epctParam0);
 
 	if (Global_79347[0 /*14*/].f_2 == -1)
-		func_23(3, bParam0, 242, -1);
+		func_23(3, epctParam0, 242, -1);
 
 	return;
 }
 
-void func_37(BOOL bParam0) // Position - 0x94F8 (38136)
+void func_37(ePedComponentType epctParam0) // Position - 0x94F8 (38136)
 {
 	BOOL flag;
 	int num;
@@ -11457,7 +11457,7 @@ void func_37(BOOL bParam0) // Position - 0x94F8 (38136)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 136:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_21_0" /*Peyton Blue Blouson*/, 16);
@@ -12192,11 +12192,11 @@ void func_37(BOOL bParam0) // Position - 0x94F8 (38136)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_38(BOOL bParam0) // Position - 0xA0FC (41212)
+void func_38(ePedComponentType epctParam0) // Position - 0xA0FC (41212)
 {
 	BOOL flag;
 	int num;
@@ -12216,91 +12216,91 @@ void func_38(BOOL bParam0) // Position - 0xA0FC (41212)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_0" /*White T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_1" /*Yellow T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 25;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_2" /*Dusche Gold T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_3" /*Charcoal T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 15;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_4" /*Cerveza Barracho T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num = 25;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_5" /*Liberty City Wrath T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num = 25;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_6" /*Pump & Run T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 6;
 			num = 22;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_7" /*Atomic T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 7;
 			num = 22;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_8" /*LS Nuclear Power T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 8;
 			num = 20;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_9" /*Zancudo T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 9;
 			num = 20;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_10" /*West Coast Classics T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 10;
 			num = 24;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_11" /*BC Talk Radio T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 11;
 			num = 26;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P2_0_12" /*Animal Ark T-Shirt*/, 16);
 			num2 = 0;
 			num3 = 12;
@@ -13164,11 +13164,11 @@ void func_38(BOOL bParam0) // Position - 0xA0FC (41212)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_39(BOOL bParam0) // Position - 0xAFFC (45052)
+void func_39(ePedComponentType epctParam0) // Position - 0xAFFC (45052)
 {
 	BOOL flag;
 	int num;
@@ -13188,72 +13188,72 @@ void func_39(BOOL bParam0) // Position - 0xAFFC (45052)
 	num6 = 2;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_0_0" /*Trailer Cut*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_0_1" /*Frozen*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_1_0" /*Clean Razor*/, 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_2_0" /*Randal*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_3_0" /*Side Shed*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_4_0" /*Grown Out*/, 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_5_0" /*Mullet*/, 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_6_0" /*Shaved 2*/, 16);
 			num2 = 6;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P2_7_0" /*Swept Back*/, 16);
 			num2 = 7;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 9, -1);
+			func_23(num6, epctParam0, 9, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_40(BOOL bParam0) // Position - 0xB129 (45353)
+void func_40(ePedComponentType epctParam0) // Position - 0xB129 (45353)
 {
 	BOOL flag;
 	int num;
@@ -13273,128 +13273,128 @@ void func_40(BOOL bParam0) // Position - 0xB129 (45353)
 	num6 = 0;
 	Global_79347[0 /*14*/].f_5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 6;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 7, -1);
+			func_23(num6, epctParam0, 7, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_41(int iParam0, BOOL bParam1) // Position - 0xB220 (45600)
+void func_41(int iParam0, ePedComponentType epctParam1) // Position - 0xB220 (45600)
 {
 	switch (iParam0)
 	{
 		case 0:
-			func_59(bParam1);
+			func_59(epctParam1);
 			break;
 	
 		case 2:
-			func_58(bParam1);
+			func_58(epctParam1);
 			break;
 	
 		case 3:
-			func_54(bParam1);
+			func_54(epctParam1);
 			break;
 	
 		case 4:
-			func_53(bParam1);
+			func_53(epctParam1);
 			break;
 	
 		case 6:
-			func_52(bParam1);
+			func_52(epctParam1);
 			break;
 	
 		case 5:
-			func_51(bParam1);
+			func_51(epctParam1);
 			break;
 	
 		case 8:
-			func_50(bParam1);
+			func_50(epctParam1);
 			break;
 	
 		case 9:
-			func_49(bParam1);
+			func_49(epctParam1);
 			break;
 	
 		case 10:
-			func_48(bParam1);
+			func_48(epctParam1);
 			break;
 	
 		case 1:
-			func_47(bParam1);
+			func_47(epctParam1);
 			break;
 	
 		case 7:
-			func_46(bParam1);
+			func_46(epctParam1);
 			break;
 	
 		case 11:
-			func_45(bParam1);
+			func_45(epctParam1);
 			break;
 	
 		case 12:
-			func_44(bParam1);
+			func_44(epctParam1);
 			break;
 	
 		case 13:
-			func_43(bParam1);
+			func_43(epctParam1);
 			break;
 	
 		case 14:
-			func_42(bParam1);
+			func_42(epctParam1);
 			break;
 	}
 
 	return;
 }
 
-void func_42(BOOL bParam0) // Position - 0xB310 (45840)
+void func_42(ePedComponentType epctParam0) // Position - 0xB310 (45840)
 {
 	BOOL flag;
 	int num;
@@ -13414,9 +13414,9 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 	num6 = 14;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13424,7 +13424,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13432,7 +13432,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13440,7 +13440,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13448,7 +13448,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13456,7 +13456,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13464,7 +13464,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13472,7 +13472,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -13480,7 +13480,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -14231,7 +14231,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 10;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "PROPS_P1_H0_0" /*Hockey Mask*/, 16);
 			num2 = 0;
 			num3 = 0;
@@ -14239,7 +14239,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
@@ -14247,7 +14247,7 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			num4 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
@@ -14772,15 +14772,15 @@ void func_42(BOOL bParam0) // Position - 0xB310 (45840)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 175, -1);
+			func_23(num6, epctParam0, 175, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_43(BOOL bParam0) // Position - 0xC7DF (51167)
+void func_43(ePedComponentType epctParam0) // Position - 0xC7DF (51167)
 {
 	BOOL flag;
 	int num;
@@ -14800,7 +14800,7 @@ void func_43(BOOL bParam0) // Position - 0xC7DF (51167)
 	num6 = 13;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 31:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
@@ -14808,74 +14808,74 @@ void func_43(BOOL bParam0) // Position - 0xC7DF (51167)
 			num3 = 0;
 			break;
 	
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
-			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
-			num2 = 0;
-			num3 = 0;
-			flag = true;
-			break;
-	
-		case 2:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
-			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
-			num2 = 0;
-			num3 = 0;
-			break;
-	
-		case 5:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_HAND:
+			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
+			num2 = 0;
+			num3 = 0;
+			flag = true;
+			break;
+	
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_TEEF:
+			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
+			num2 = 0;
+			num3 = 0;
+			break;
+	
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 9, -1);
+			func_23(num6, epctParam0, 9, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_44(BOOL bParam0) // Position - 0xC926 (51494)
+void func_44(ePedComponentType epctParam0) // Position - 0xC926 (51494)
 {
 	BOOL flag;
 	int num;
@@ -14895,83 +14895,83 @@ void func_44(BOOL bParam0) // Position - 0xC926 (51494)
 	num6 = 12;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_0" /*Blue Shirt, Jeans*/, 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_2" /*White Tuxedo*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_4" /*Golf*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_7" /*Scuba Land*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_10" /*Stealth*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_11" /*Triathlon*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_12" /*Fireman*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_13" /*Exterminator*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_15" /*Black Boiler Suit*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_16" /*Skydiving*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_17" /*Tuxedo*/, 16);
 			num2 = 0;
 			num3 = 0;
 			num = 10000;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P1_18" /*Blue Boiler Suit*/, 16);
 			num2 = 0;
 			num3 = 0;
@@ -15204,15 +15204,15 @@ void func_44(BOOL bParam0) // Position - 0xC926 (51494)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 47, -1);
+			func_23(num6, epctParam0, 47, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_45(BOOL bParam0) // Position - 0xCE30 (52784)
+void func_45(ePedComponentType epctParam0) // Position - 0xCE30 (52784)
 {
 	BOOL flag;
 	int num;
@@ -15232,81 +15232,81 @@ void func_45(BOOL bParam0) // Position - 0xCE30 (52784)
 	num6 = 11;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 1;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 2;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 3;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_1_0", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_1_1", 16);
 			num2 = 2;
 			num3 = 1;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_1_2", 16);
 			num2 = 2;
 			num3 = 2;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_1_3", 16);
 			num2 = 2;
 			num3 = 3;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_3_0" /*Silver Plaid Vest*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_3_1" /*Ash Vest*/, 16);
 			num2 = 3;
 			num3 = 1;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_3_2" /*Navy Vest*/, 16);
 			num2 = 3;
 			num3 = 2;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P1_3_3" /*Colorful Plaid Vest*/, 16);
 			num2 = 3;
 			num3 = 3;
@@ -15628,15 +15628,15 @@ void func_45(BOOL bParam0) // Position - 0xCE30 (52784)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 63, -1);
+			func_23(num6, epctParam0, 63, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_46(BOOL bParam0) // Position - 0xD499 (54425)
+void func_46(ePedComponentType epctParam0) // Position - 0xD499 (54425)
 {
 	BOOL flag;
 	int num;
@@ -15656,24 +15656,24 @@ void func_46(BOOL bParam0) // Position - 0xD499 (54425)
 	num6 = 7;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 1, -1);
+			func_23(num6, epctParam0, 1, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_47(BOOL bParam0) // Position - 0xD50C (54540)
+void func_47(ePedComponentType epctParam0) // Position - 0xD50C (54540)
 {
 	BOOL flag;
 	int num;
@@ -15693,48 +15693,48 @@ void func_47(BOOL bParam0) // Position - 0xD50C (54540)
 	num6 = 1;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P1_0_0" /*Clean Shave*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P1_1_0" /*Full Van Dyke*/, 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P1_2_0" /*Methodical*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P1_3_0" /*Full Spartan*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P1_4_0" /*Stubble*/, 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 5, -1);
+			func_23(num6, epctParam0, 5, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_48(BOOL bParam0) // Position - 0xD5DC (54748)
+void func_48(ePedComponentType epctParam0) // Position - 0xD5DC (54748)
 {
 	BOOL flag;
 	int num;
@@ -15754,81 +15754,81 @@ void func_48(BOOL bParam0) // Position - 0xD5DC (54748)
 	num6 = 10;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 1;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 2;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 3;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 4;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 5;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 1;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 2;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 3;
@@ -16075,15 +16075,15 @@ void func_48(BOOL bParam0) // Position - 0xD5DC (54748)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 53, -1);
+			func_23(num6, epctParam0, 53, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_49(BOOL bParam0) // Position - 0xDAD7 (56023)
+void func_49(ePedComponentType epctParam0) // Position - 0xDAD7 (56023)
 {
 	BOOL flag;
 	int num;
@@ -16103,100 +16103,100 @@ void func_49(BOOL bParam0) // Position - 0xDAD7 (56023)
 	num6 = 9;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_0" /*Red Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 0;
 			num = 125;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_1" /*Green Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 1;
 			num = 150;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_2" /*Patriot Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 2;
 			num = 175;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_3" /*Domino Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 3;
 			num = 85;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_4" /*Gray Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 4;
 			num = 150;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_5" /*Phoenix Wrestler Mask*/, 16);
 			num2 = 5;
 			num3 = 5;
 			num = 175;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 12, -1);
+			func_23(num6, epctParam0, 12, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_50(BOOL bParam0) // Position - 0xDC68 (56424)
+void func_50(ePedComponentType epctParam0) // Position - 0xDC68 (56424)
 {
 	BOOL flag;
 	int num;
@@ -16216,90 +16216,90 @@ void func_50(BOOL bParam0) // Position - 0xDC68 (56424)
 	num6 = 8;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 8;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P1_9_0" /*Bandana*/, 16);
 			num2 = 9;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 10;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P1_11_0" /*Silver Tie*/, 16);
 			num2 = 11;
 			num3 = 0;
 			num = 195;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P1_11_1" /*Gold Tie*/, 16);
 			num2 = 11;
 			num3 = 1;
@@ -16704,15 +16704,15 @@ void func_50(BOOL bParam0) // Position - 0xDC68 (56424)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 77, -1);
+			func_23(num6, epctParam0, 77, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_51(BOOL bParam0) // Position - 0xE457 (58455)
+void func_51(ePedComponentType epctParam0) // Position - 0xE457 (58455)
 {
 	BOOL flag;
 	int num;
@@ -16732,50 +16732,50 @@ void func_51(BOOL bParam0) // Position - 0xE457 (58455)
 	num6 = 5;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 1;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
@@ -16783,15 +16783,15 @@ void func_51(BOOL bParam0) // Position - 0xE457 (58455)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 7, -1);
+			func_23(num6, epctParam0, 7, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_52(BOOL bParam0) // Position - 0xE560 (58720)
+void func_52(ePedComponentType epctParam0) // Position - 0xE560 (58720)
 {
 	BOOL flag;
 	int num;
@@ -16811,92 +16811,92 @@ void func_52(BOOL bParam0) // Position - 0xE560 (58720)
 	num6 = 6;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_0" /*White Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_1" /*All White Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 80;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_2" /*Charcoal Two-Tone Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 80;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_3" /*Yellow Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 89;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_4" /*Gray Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num = 45;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_5" /*Black Two-Tone Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num = 35;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_6" /*Gray Two-Tone Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 6;
 			num = 89;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_7" /*Lemon Accent Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 7;
 			num = 95;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_8" /*Two-Tone Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 8;
 			num = 115;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_9" /*Cyan Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 9;
 			num = 40;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_10" /*Cyan Accent Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 10;
 			num = 145;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_00_11" /*Fluorescent Athletic Shoes*/, 16);
 			num2 = 0;
 			num3 = 11;
 			num = 145;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P1_01_0" /*Work Boots*/, 16);
 			num2 = 1;
 			num3 = 0;
@@ -17745,15 +17745,15 @@ void func_52(BOOL bParam0) // Position - 0xE560 (58720)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 134, -1);
+			func_23(num6, epctParam0, 134, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_53(BOOL bParam0) // Position - 0xF483 (62595)
+void func_53(ePedComponentType epctParam0) // Position - 0xF483 (62595)
 {
 	BOOL flag;
 	int num;
@@ -17773,92 +17773,92 @@ void func_53(BOOL bParam0) // Position - 0xF483 (62595)
 	num6 = 4;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P1_0_0" /*Cream Cargo Shorts*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P1_0_1" /*Sand Cargo Shorts*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 32;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P1_0_2" /*Navy Cargo Shorts*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 38;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P1_0_3" /*Olive Cargo Shorts*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 44;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 1;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 2;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 3;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 4;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 5;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P1_2_0" /*Black Tuxedo Pants*/, 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
@@ -18570,30 +18570,30 @@ void func_53(BOOL bParam0) // Position - 0xF483 (62595)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 117, -1);
+			func_23(num6, epctParam0, 117, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_54(BOOL bParam0) // Position - 0x10132 (65842)
+void func_54(ePedComponentType epctParam0) // Position - 0x10132 (65842)
 {
-	if (bParam0 < 107)
-		func_57(bParam0);
-	else if (bParam0 < 227)
-		func_56(bParam0);
+	if (epctParam0 < 107)
+		func_57(epctParam0);
+	else if (epctParam0 < 227)
+		func_56(epctParam0);
 	else
-		func_55(bParam0);
+		func_55(epctParam0);
 
 	if (Global_79347[0 /*14*/].f_2 == -1)
-		func_23(3, bParam0, 318, -1);
+		func_23(3, epctParam0, 318, -1);
 
 	return;
 }
 
-void func_55(BOOL bParam0) // Position - 0x10178 (65912)
+void func_55(ePedComponentType epctParam0) // Position - 0x10178 (65912)
 {
 	BOOL flag;
 	int num;
@@ -18613,7 +18613,7 @@ void func_55(BOOL bParam0) // Position - 0x10178 (65912)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 227:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_18_0" /*Gray Plaid Jacket*/, 16);
@@ -19271,11 +19271,11 @@ void func_55(BOOL bParam0) // Position - 0x10178 (65912)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_56(BOOL bParam0) // Position - 0x10C1C (68636)
+void func_56(ePedComponentType epctParam0) // Position - 0x10C1C (68636)
 {
 	BOOL flag;
 	int num;
@@ -19295,7 +19295,7 @@ void func_56(BOOL bParam0) // Position - 0x10C1C (68636)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 107:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_12_0" /*Snake A Jacket*/, 16);
@@ -20156,11 +20156,11 @@ void func_56(BOOL bParam0) // Position - 0x10C1C (68636)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_57(BOOL bParam0) // Position - 0x11A0A (72202)
+void func_57(ePedComponentType epctParam0) // Position - 0x11A0A (72202)
 {
 	BOOL flag;
 	int num;
@@ -20180,91 +20180,91 @@ void func_57(BOOL bParam0) // Position - 0x11A0A (72202)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_0" /*White Tank Top*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_1" /*Black Tank Top*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_2" /*Gray Tank Top*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 180;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_3" /*Feud Green Tank Top*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 22;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_4" /*Fruntalot Jade Tank Top*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num = 20;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_5" /*Fruntalot Brown Tank Top*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num = 18;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_6" /*Broker Blue Tank Top*/, 16);
 			num2 = 0;
 			num3 = 6;
 			num = 19;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_7" /*Kingz Green Tank Top*/, 16);
 			num2 = 0;
 			num3 = 7;
 			num = 22;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_8" /*Broker Gray Tank Top*/, 16);
 			num2 = 0;
 			num3 = 8;
 			num = 20;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_9" /*Harsh Souls Tank Top*/, 16);
 			num2 = 0;
 			num3 = 9;
 			num = 19;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_10" /*Sweatbox Tank Top*/, 16);
 			num2 = 0;
 			num3 = 10;
 			num = 19;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_11" /*White Ringer Tank Top*/, 16);
 			num2 = 0;
 			num3 = 11;
 			num = 18;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P1_0_12" /*Rearwall Tank Top*/, 16);
 			num2 = 0;
 			num3 = 12;
@@ -20967,11 +20967,11 @@ void func_57(BOOL bParam0) // Position - 0x11A0A (72202)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_58(BOOL bParam0) // Position - 0x12649 (75337)
+void func_58(ePedComponentType epctParam0) // Position - 0x12649 (75337)
 {
 	BOOL flag;
 	int num;
@@ -20991,90 +20991,90 @@ void func_58(BOOL bParam0) // Position - 0x12649 (75337)
 	num6 = 2;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_0" /*Fade*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_1" /*Triple Rails*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_2" /*Side Shaded*/, 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_3" /*Wavy Siderows*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num5 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_4" /*Snakes*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num5 = 3;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_5" /*Tramlines*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num5 = 3;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_6" /*The King Fresh*/, 16);
 			num2 = 0;
 			num3 = 6;
 			num5 = 3;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_7" /*Star Kutz*/, 16);
 			num2 = 0;
 			num3 = 7;
 			num5 = 3;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_8" /*Tigerized*/, 16);
 			num2 = 0;
 			num3 = 8;
 			num5 = 3;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_9" /*Abstraction*/, 16);
 			num2 = 0;
 			num3 = 9;
 			num5 = 3;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_10" /*Shutters*/, 16);
 			num2 = 0;
 			num3 = 10;
 			num5 = 3;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_11" /*Berms*/, 16);
 			num2 = 0;
 			num3 = 11;
 			num5 = 3;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P1_0_12" /*Mellowplex*/, 16);
 			num2 = 0;
 			num3 = 12;
@@ -21136,15 +21136,15 @@ void func_58(BOOL bParam0) // Position - 0x12649 (75337)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 21, -1);
+			func_23(num6, epctParam0, 21, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_59(BOOL bParam0) // Position - 0x128C1 (75969)
+void func_59(ePedComponentType epctParam0) // Position - 0x128C1 (75969)
 {
 	BOOL flag;
 	int num;
@@ -21164,146 +21164,146 @@ void func_59(BOOL bParam0) // Position - 0x128C1 (75969)
 	num6 = 0;
 	Global_79347[0 /*14*/].f_5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 8;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 9;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 10, -1);
+			func_23(num6, epctParam0, 10, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_60(int iParam0, BOOL bParam1) // Position - 0x129FD (76285)
+void func_60(int iParam0, ePedComponentType epctParam1) // Position - 0x129FD (76285)
 {
 	switch (iParam0)
 	{
 		case 0:
-			func_77(bParam1);
+			func_77(epctParam1);
 			break;
 	
 		case 2:
-			func_76(bParam1);
+			func_76(epctParam1);
 			break;
 	
 		case 3:
-			func_73(bParam1);
+			func_73(epctParam1);
 			break;
 	
 		case 4:
-			func_72(bParam1);
+			func_72(epctParam1);
 			break;
 	
 		case 6:
-			func_71(bParam1);
+			func_71(epctParam1);
 			break;
 	
 		case 5:
-			func_70(bParam1);
+			func_70(epctParam1);
 			break;
 	
 		case 8:
-			func_69(bParam1);
+			func_69(epctParam1);
 			break;
 	
 		case 9:
-			func_68(bParam1);
+			func_68(epctParam1);
 			break;
 	
 		case 10:
-			func_67(bParam1);
+			func_67(epctParam1);
 			break;
 	
 		case 1:
-			func_66(bParam1);
+			func_66(epctParam1);
 			break;
 	
 		case 7:
-			func_65(bParam1);
+			func_65(epctParam1);
 			break;
 	
 		case 11:
-			func_64(bParam1);
+			func_64(epctParam1);
 			break;
 	
 		case 12:
-			func_63(bParam1);
+			func_63(epctParam1);
 			break;
 	
 		case 13:
-			func_62(bParam1);
+			func_62(epctParam1);
 			break;
 	
 		case 14:
-			func_61(bParam1);
+			func_61(epctParam1);
 			break;
 	}
 
 	return;
 }
 
-void func_61(BOOL bParam0) // Position - 0x12AED (76525)
+void func_61(ePedComponentType epctParam0) // Position - 0x12AED (76525)
 {
 	BOOL flag;
 	int num;
@@ -21323,9 +21323,9 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 	num6 = 14;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21333,7 +21333,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21341,7 +21341,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21349,7 +21349,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21357,7 +21357,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21365,7 +21365,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21373,7 +21373,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21381,7 +21381,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21389,7 +21389,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = -1;
 			num3 = 0;
@@ -21397,7 +21397,7 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 8;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
@@ -21405,14 +21405,14 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			num4 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "PROPS_P0_H1" /*Blue Baseball Cap*/, 16);
 			num2 = 1;
 			num3 = 0;
 			num4 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "PROPS_P0_H2" /*White Hockey Mask*/, 16);
 			num2 = 2;
 			num3 = 0;
@@ -22196,15 +22196,15 @@ void func_61(BOOL bParam0) // Position - 0x12AED (76525)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 113, -1);
+			func_23(num6, epctParam0, 113, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_62(BOOL bParam0) // Position - 0x1384B (79947)
+void func_62(ePedComponentType epctParam0) // Position - 0x1384B (79947)
 {
 	BOOL flag;
 	int num;
@@ -22224,7 +22224,7 @@ void func_62(BOOL bParam0) // Position - 0x1384B (79947)
 	num6 = 13;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 31:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
@@ -22232,70 +22232,70 @@ void func_62(BOOL bParam0) // Position - 0x1384B (79947)
 			num3 = 0;
 			break;
 	
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
@@ -22303,15 +22303,15 @@ void func_62(BOOL bParam0) // Position - 0x1384B (79947)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 10, -1);
+			func_23(num6, epctParam0, 10, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_63(BOOL bParam0) // Position - 0x139BA (80314)
+void func_63(ePedComponentType epctParam0) // Position - 0x139BA (80314)
 {
 	BOOL flag;
 	int num;
@@ -22331,82 +22331,82 @@ void func_63(BOOL bParam0) // Position - 0x139BA (80314)
 	num6 = 12;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_0" /*Gray Suit*/, 16);
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_1" /*Firefighter*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_4" /*Janitor*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_7" /*Highway Patrol*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_8" /*Golf*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_9" /*Bed*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_11" /*Epsilon Robes*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_12" /*Tennis*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_14" /*Scuba Land*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "OUTFIT_P0_17" /*Stealth*/, 16);
 			num2 = 0;
 			num3 = 0;
@@ -22670,15 +22670,15 @@ void func_63(BOOL bParam0) // Position - 0x139BA (80314)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 53, -1);
+			func_23(num6, epctParam0, 53, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_64(BOOL bParam0) // Position - 0x13F2B (81707)
+void func_64(ePedComponentType epctParam0) // Position - 0x13F2B (81707)
 {
 	BOOL flag;
 	int num;
@@ -22698,85 +22698,85 @@ void func_64(BOOL bParam0) // Position - 0x13F2B (81707)
 	num6 = 11;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_0" /*Ash T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_1" /*White T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 1;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_2" /*Gray T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 2;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_3" /*Charcoal T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 3;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_4" /*Green T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 4;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_02_5" /*Blue T-Shirt*/, 16);
 			num2 = 2;
 			num3 = 5;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_03_0" /*Charcoal Henley*/, 16);
 			num2 = 3;
 			num3 = 0;
 			num = 390;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_03_1" /*Gray Henley*/, 16);
 			num2 = 3;
 			num3 = 1;
 			num = 390;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_03_2" /*Black Henley*/, 16);
 			num2 = 3;
 			num3 = 2;
 			num = 420;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_03_3" /*Beige Henley*/, 16);
 			num2 = 3;
 			num3 = 3;
 			num = 420;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "JBIB_P0_03_4" /*Brown Henley*/, 16);
 			num2 = 3;
 			num3 = 4;
@@ -23007,15 +23007,15 @@ void func_64(BOOL bParam0) // Position - 0x13F2B (81707)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 45, -1);
+			func_23(num6, epctParam0, 45, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_65(BOOL bParam0) // Position - 0x14500 (83200)
+void func_65(ePedComponentType epctParam0) // Position - 0x14500 (83200)
 {
 	BOOL flag;
 	int num;
@@ -23035,24 +23035,24 @@ void func_65(BOOL bParam0) // Position - 0x14500 (83200)
 	num6 = 7;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 1, -1);
+			func_23(num6, epctParam0, 1, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_66(BOOL bParam0) // Position - 0x14573 (83315)
+void func_66(ePedComponentType epctParam0) // Position - 0x14573 (83315)
 {
 	BOOL flag;
 	int num;
@@ -23072,48 +23072,48 @@ void func_66(BOOL bParam0) // Position - 0x14573 (83315)
 	num6 = 1;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P0_0_0" /*Clean Shave*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P0_1_0" /*Stubbled*/, 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P0_2_0" /*Long Stubbled*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P0_3_0" /*Full Goatee*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "BERD_P0_4_0" /*Full Beard*/, 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 5, -1);
+			func_23(num6, epctParam0, 5, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_67(BOOL bParam0) // Position - 0x14643 (83523)
+void func_67(ePedComponentType epctParam0) // Position - 0x14643 (83523)
 {
 	BOOL flag;
 	int num;
@@ -23133,81 +23133,81 @@ void func_67(BOOL bParam0) // Position - 0x14643 (83523)
 	num6 = 10;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 1;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 2;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 3;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 4;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 5;
@@ -23424,15 +23424,15 @@ void func_67(BOOL bParam0) // Position - 0x14643 (83523)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 48, -1);
+			func_23(num6, epctParam0, 48, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_68(BOOL bParam0) // Position - 0x14AF3 (84723)
+void func_68(ePedComponentType epctParam0) // Position - 0x14AF3 (84723)
 {
 	BOOL flag;
 	int num;
@@ -23452,88 +23452,88 @@ void func_68(BOOL bParam0) // Position - 0x14AF3 (84723)
 	num6 = 9;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 1;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_0" /*Red Wrestler Mask*/, 16);
 			num2 = 8;
 			num3 = 0;
 			num = 125;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_1" /*Green Wrestler Mask*/, 16);
 			num2 = 8;
 			num3 = 1;
 			num = 150;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_2" /*Patriot Wrestler Mask*/, 16);
 			num2 = 8;
 			num3 = 2;
 			num = 175;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC2_P0_08_3" /*Domino Wrestler Mask*/, 16);
 			num2 = 8;
 			num3 = 3;
@@ -23590,15 +23590,15 @@ void func_68(BOOL bParam0) // Position - 0x14AF3 (84723)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 20, -1);
+			func_23(num6, epctParam0, 20, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_69(BOOL bParam0) // Position - 0x14D4E (85326)
+void func_69(ePedComponentType epctParam0) // Position - 0x14D4E (85326)
 {
 	BOOL flag;
 	int num;
@@ -23618,91 +23618,91 @@ void func_69(BOOL bParam0) // Position - 0x14D4E (85326)
 	num6 = 8;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 8;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 9;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SPEC_P0_10" /*Watch and Bracelet*/, 16);
 			num2 = 10;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 11;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 12;
 			num3 = 0;
@@ -23786,15 +23786,15 @@ void func_69(BOOL bParam0) // Position - 0x14D4E (85326)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 24, -1);
+			func_23(num6, epctParam0, 24, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_70(BOOL bParam0) // Position - 0x1500E (86030)
+void func_70(ePedComponentType epctParam0) // Position - 0x1500E (86030)
 {
 	BOOL flag;
 	int num;
@@ -23814,92 +23814,92 @@ void func_70(BOOL bParam0) // Position - 0x1500E (86030)
 	num6 = 5;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 1;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 2;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 3;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 4;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 8;
 			num3 = 0;
@@ -23914,15 +23914,15 @@ void func_70(BOOL bParam0) // Position - 0x1500E (86030)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 14, -1);
+			func_23(num6, epctParam0, 14, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_71(BOOL bParam0) // Position - 0x151C9 (86473)
+void func_71(ePedComponentType epctParam0) // Position - 0x151C9 (86473)
 {
 	BOOL flag;
 	int num;
@@ -23942,90 +23942,90 @@ void func_71(BOOL bParam0) // Position - 0x151C9 (86473)
 	num6 = 6;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_0" /*Black Leather Shoes*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_1" /*Brown Leather Shoes*/, 16);
 			num2 = 0;
 			num3 = 1;
 			num = 665;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_2" /*Charcoal Leather Shoes*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 620;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_3" /*Gray Leather Shoes*/, 16);
 			num2 = 0;
 			num3 = 3;
 			num = 540;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_4" /*Sand Leather Shoes*/, 16);
 			num2 = 0;
 			num3 = 4;
 			num = 580;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "FEET_P0_0_5" /*Blue Suede Shoes*/, 16);
 			num2 = 0;
 			num3 = 5;
 			num = 650;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 3;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 4;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 6;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 7;
 			num3 = 0;
@@ -24633,15 +24633,15 @@ void func_71(BOOL bParam0) // Position - 0x151C9 (86473)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 99, -1);
+			func_23(num6, epctParam0, 99, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_72(BOOL bParam0) // Position - 0x15D0F (89359)
+void func_72(ePedComponentType epctParam0) // Position - 0x15D0F (89359)
 {
 	BOOL flag;
 	int num;
@@ -24661,81 +24661,81 @@ void func_72(BOOL bParam0) // Position - 0x15D0F (89359)
 	num6 = 4;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_0" /*Gray Pants*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_0" /*Gray Pants*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_2" /*Charcoal Pants*/, 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_3" /*Slate Pants*/, 16);
 			num2 = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_4" /*Topaz Pants*/, 16);
 			num2 = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_5" /*Pale Blue Pants*/, 16);
 			num2 = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_6" /*Cream Pants*/, 16);
 			num2 = 0;
 			num3 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_7" /*Olive Pants*/, 16);
 			num2 = 0;
 			num3 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_8" /*Off-White Pants*/, 16);
 			num2 = 0;
 			num3 = 8;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_9" /*Navy Pants*/, 16);
 			num2 = 0;
 			num3 = 9;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_10" /*Beige Pants*/, 16);
 			num2 = 0;
 			num3 = 10;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_11" /*Smoke Pants*/, 16);
 			num2 = 0;
 			num3 = 11;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "LEGS_P0_0_12" /*Blue-Gray Pants*/, 16);
 			num2 = 0;
 			num3 = 12;
@@ -25432,28 +25432,28 @@ void func_72(BOOL bParam0) // Position - 0x15D0F (89359)
 			break;
 	
 		default:
-			func_23(num6, bParam0, 113, -1);
+			func_23(num6, epctParam0, 113, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_73(BOOL bParam0) // Position - 0x16941 (92481)
+void func_73(ePedComponentType epctParam0) // Position - 0x16941 (92481)
 {
-	if (bParam0 < 60)
-		func_75(bParam0);
+	if (epctParam0 < 60)
+		func_75(epctParam0);
 	else
-		func_74(bParam0);
+		func_74(epctParam0);
 
 	if (Global_79347[0 /*14*/].f_2 == -1)
-		func_23(3, bParam0, 181, -1);
+		func_23(3, epctParam0, 181, -1);
 
 	return;
 }
 
-void func_74(BOOL bParam0) // Position - 0x16976 (92534)
+void func_74(ePedComponentType epctParam0) // Position - 0x16976 (92534)
 {
 	BOOL flag;
 	int num;
@@ -25473,7 +25473,7 @@ void func_74(BOOL bParam0) // Position - 0x16976 (92534)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 60:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
@@ -26317,11 +26317,11 @@ void func_74(BOOL bParam0) // Position - 0x16976 (92534)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_75(BOOL bParam0) // Position - 0x17709 (96009)
+void func_75(ePedComponentType epctParam0) // Position - 0x17709 (96009)
 {
 	BOOL flag;
 	int num;
@@ -26341,82 +26341,82 @@ void func_75(BOOL bParam0) // Position - 0x17709 (96009)
 	num6 = 3;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_0" /*Gray Jacket*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_0" /*Gray Jacket*/, 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_2" /*Charcoal Jacket*/, 16);
 			num2 = 0;
 			num3 = 2;
 			num = 3500;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_3" /*Slate Jacket*/, 16);
 			num2 = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_4" /*Topaz Jacket*/, 16);
 			num2 = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_5" /*Pale Blue Jacket*/, 16);
 			num2 = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_6" /*Cream Jacket*/, 16);
 			num2 = 0;
 			num3 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_7" /*Olive Jacket*/, 16);
 			num2 = 0;
 			num3 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_8" /*Off-White Jacket*/, 16);
 			num2 = 0;
 			num3 = 8;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_9" /*Navy Jacket*/, 16);
 			num2 = 0;
 			num3 = 9;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_10" /*Beige Jacket*/, 16);
 			num2 = 0;
 			num3 = 10;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_11" /*Smoke Jacket*/, 16);
 			num2 = 0;
 			num3 = 11;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "TORSO_P0_0_12" /*Blue-Gray Jacket*/, 16);
 			num2 = 0;
 			num3 = 12;
@@ -26751,11 +26751,11 @@ void func_75(BOOL bParam0) // Position - 0x17709 (96009)
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_76(BOOL bParam0) // Position - 0x17D8B (97675)
+void func_76(ePedComponentType epctParam0) // Position - 0x17D8B (97675)
 {
 	BOOL flag;
 	int num;
@@ -26775,54 +26775,54 @@ void func_76(BOOL bParam0) // Position - 0x17D8B (97675)
 	num6 = 2;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P0_0_0" /*Lexington*/, 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P0_1_0" /*The Wood*/, 16);
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P0_2_0" /*Clippered Cut*/, 16);
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P0_3_0" /*Grown Out*/, 16);
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAIR_P0_4_0" /*Slicker*/, 16);
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 5;
 			num3 = 0;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 6, -1);
+			func_23(num6, epctParam0, 6, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_77(BOOL bParam0) // Position - 0x17E71 (97905)
+void func_77(ePedComponentType epctParam0) // Position - 0x17E71 (97905)
 {
 	BOOL flag;
 	int num;
@@ -26842,56 +26842,56 @@ void func_77(BOOL bParam0) // Position - 0x17E71 (97905)
 	num6 = 0;
 	Global_79347[0 /*14*/].f_5 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "NO_LABEL", 16);
 			num2 = 0;
 			num3 = 6;
 			break;
 	
 		default:
-			func_23(num6, bParam0, 7, -1);
+			func_23(num6, epctParam0, 7, -1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
@@ -27873,58 +27873,58 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 		case joaat("Player_Zero"):
 			switch (epctParam1)
 			{
-				case false:
+				case PV_COMP_HEAD:
 					if (Global_114162.f_9089.f_99.f_58[120])
 						func_91(&unk, -99, -99, 1, 1, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					else
 						func_91(&unk, -99, -99, 0, 0, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case true:
+				case PV_COMP_BERD:
 					func_91(&unk, -99, -99, 16, 16, 6, 1, 1, 0, 1, -99, 0, 0, 0);
 					break;
 			
-				case 2:
+				case PV_COMP_HAIR:
 					func_91(&unk, -99, -99, 36, 21, 6, 1, 5, 0, 0, -99, 0, 0, 8);
 					break;
 			
-				case 3:
+				case PV_COMP_UPPR:
 					func_91(&unk, -99, -99, 65, 36, 6, 0, 2, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 4:
+				case PV_COMP_LOWR:
 					func_91(&unk, -99, -99, 61, 32, 6, 0, 0, 7, 3, -99, 0, 0, 2);
 					break;
 			
-				case 5:
+				case PV_COMP_HAND:
 					func_91(&unk, -99, -99, Global_114162.f_2367.f_539.f_196[0], Global_114162.f_2367.f_539.f_200[0], 6, 3, 0, 0, 0, -99, 0, 0, 3);
 					break;
 			
-				case 6:
+				case PV_COMP_FEET:
 					func_91(&unk, -99, -99, 92, 72, 7, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 7:
+				case PV_COMP_TEEF:
 					func_91(&unk, -99, -99, 85, 95, 6, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 8:
+				case PV_COMP_ACCS:
 					func_91(&unk, -99, -99, 170, 80, 6, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 9:
+				case PV_COMP_TASK:
 					func_91(&unk, -99, -99, 171, 89, 6, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 10:
+				case PV_COMP_DECL:
 					func_91(&unk, -99, -99, 33, 18, 8, 10, 3, 8, 0, -99, 0, 0, 4);
 					break;
 			
-				case 11:
+				case PV_COMP_JBIB:
 					func_91(&unk, -99, -99, 33, 18, 17, 10, 4, 8, 0, -99, 0, 0, 5);
 					break;
 			
-				case 12:
+				case PV_COMP_MAX:
 					func_91(&unk, -99, -99, 35, 20, 9, 10, 23, 0, 0, -99, 0, 0, 31);
 					break;
 			
@@ -28097,55 +28097,55 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 		case joaat("Player_One"):
 			switch (epctParam1)
 			{
-				case false:
+				case PV_COMP_HEAD:
 					func_91(&unk, -99, -99, 73, 24, 18, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case true:
+				case PV_COMP_BERD:
 					func_91(&unk, -99, -99, 22, PV_COMP_DECL, 64, 0, 24, 0, 0, -99, 0, 43, 31);
 					break;
 			
-				case 2:
+				case PV_COMP_HAIR:
 					func_91(&unk, -99, -99, Global_114162.f_2367.f_539.f_196[1], Global_114162.f_2367.f_539.f_200[1], 17, 2, 26, 0, 0, -99, 0, 45, 31);
 					break;
 			
-				case 3:
+				case PV_COMP_UPPR:
 					func_91(&unk, -99, -99, 23, PV_COMP_JBIB, 13, 5, 2, 4, 0, -99, 0, 0, 1);
 					break;
 			
-				case 4:
+				case PV_COMP_LOWR:
 					func_91(&unk, -99, -99, 23, PV_COMP_JBIB, 34, 5, 26, 0, 0, -99, 0, 0, 2);
 					break;
 			
-				case 5:
+				case PV_COMP_HAND:
 					func_91(&unk, -99, 20, 159, 69, 17, 5, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 6:
+				case PV_COMP_FEET:
 					func_91(&unk, -99, -99, 40, 13, 14, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 7:
+				case PV_COMP_TEEF:
 					func_91(&unk, -99, -99, 90, 32, 17, 1, 8, 0, 1, -99, 0, 0, 3);
 					break;
 			
-				case 8:
+				case PV_COMP_ACCS:
 					func_91(&unk, -99, -99, 17, PV_COMP_HAND, 12, 0, 26, 0, 2, -99, 0, 0, 5);
 					break;
 			
-				case 9:
+				case PV_COMP_TASK:
 					func_91(&unk, -99, -99, 16, PV_COMP_LOWR, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 10:
+				case PV_COMP_DECL:
 					func_91(&unk, -99, -99, 208, 71, 17, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 11:
+				case PV_COMP_JBIB:
 					func_91(&unk, -99, -99, 259, PV_COMP_DECL, 35, 0, 24, 0, 0, -99, 0, 43, 31);
 					break;
 			
-				case 12:
+				case PV_COMP_MAX:
 					func_91(&unk, -99, -99, 18, PV_COMP_FEET, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
@@ -28294,55 +28294,55 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 		case joaat("Player_Two"):
 			switch (epctParam1)
 			{
-				case false:
+				case PV_COMP_HEAD:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, 91, 28, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case true:
+				case PV_COMP_BERD:
 					func_91(&unk, -99, -99, 17, PV_COMP_HAND, 8, 2, 3, 0, 0, -99, 0, 0, 8);
 					break;
 			
-				case 2:
+				case PV_COMP_HAIR:
 					func_91(&unk, -99, -99, 43, PV_COMP_ACCS, 12, 3, 5, 0, 0, -99, 0, 0, 1);
 					break;
 			
-				case 3:
+				case PV_COMP_UPPR:
 					func_91(&unk, -99, -99, 50, 14, 8, 0, 15, 6, 3, -99, 0, 0, 2);
 					break;
 			
-				case 4:
+				case PV_COMP_LOWR:
 					func_91(&unk, -99, -99, Global_114162.f_2367.f_539.f_196[2], Global_114162.f_2367.f_539.f_200[2], 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 5:
+				case PV_COMP_HAND:
 					func_91(&unk, -99, -99, 95, 33, 8, 0, 15, 0, 0, -99, 0, 0, 6);
 					break;
 			
-				case 6:
+				case PV_COMP_FEET:
 					func_91(&unk, -99, -99, 49, 13, 10, 4, 6, 0, 0, -99, 0, 0, 3);
 					break;
 			
-				case 7:
+				case PV_COMP_TEEF:
 					func_91(&unk, -99, -99, 49, 13, 14, 4, 15, 0, 0, -99, 0, 0, 4);
 					break;
 			
-				case 8:
+				case PV_COMP_ACCS:
 					func_91(&unk, -99, -99, 79, 32, 8, 5, 7, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 9:
+				case PV_COMP_TASK:
 					func_91(&unk, -99, -99, 53, 17, 11, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 10:
+				case PV_COMP_DECL:
 					func_91(&unk, -99, -99, 96, 81, 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
-				case 11:
+				case PV_COMP_JBIB:
 					func_91(&unk, -99, -99, 51, 15, 33, 0, 8, 0, 0, -99, 0, 0, 5);
 					break;
 			
-				case 12:
+				case PV_COMP_MAX:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, 93, 29, 0, 13, 0, 0, -99, 0, 0, 31);
 					break;
 			
@@ -28495,55 +28495,55 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 		case joaat("MP_M_Freemode_01"):
 			switch (epctParam1)
 			{
-				case false:
+				case PV_COMP_HEAD:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, PV_COMP_HEAD, 10, -99, 0, -99, -99, 0, 0, 0, 31);
 					break;
 			
-				case true:
+				case PV_COMP_BERD:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 127, 38, -99, 2, 0, 0, 0, 0, 62, 0);
 					break;
 			
-				case 2:
+				case PV_COMP_HAIR:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, 248, 45, -99, 240, 0, 0, 0, 0, 144, 1);
 					break;
 			
-				case 3:
+				case PV_COMP_UPPR:
 					func_91(&unk, -99, -99, PV_COMP_LOWR, 31, 25, -99, 240, 0, 0, 0, 0, 231, 2);
 					break;
 			
-				case 4:
+				case PV_COMP_LOWR:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 66, 10, -99, 21, 0, 0, 0, 0, 123, 3);
 					break;
 			
-				case 5:
+				case PV_COMP_HAND:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 93, 141, -99, 3, 0, 0, 0, 0, 114, 4);
 					break;
 			
-				case 6:
+				case PV_COMP_FEET:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 116, 113, -99, 7, 0, 0, 0, 0, 113, 5);
 					break;
 			
-				case 7:
+				case PV_COMP_TEEF:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 61, 136, -99, 27, 0, 0, 0, 0, 61, 6);
 					break;
 			
-				case 8:
+				case PV_COMP_ACCS:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, 112, 10, -99, 240, 0, 0, 0, 0, 8, 7);
 					break;
 			
-				case 9:
+				case PV_COMP_TASK:
 					func_91(&unk, -99, -99, PV_COMP_LOWR, 131, 24, -99, 240, 0, 0, 0, 0, 223, 8);
 					break;
 			
-				case 10:
+				case PV_COMP_DECL:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 209, 188, -99, 208, 0, 0, 0, 0, 64, 9);
 					break;
 			
-				case 11:
+				case PV_COMP_JBIB:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 209, 160, -99, 211, 0, 0, 0, 43, 157, 10);
 					break;
 			
-				case 12:
+				case PV_COMP_MAX:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 162, 174, -99, 201, 0, 0, 0, 0, 158, 11);
 					break;
 			
@@ -28608,55 +28608,55 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 		case joaat("MP_F_Freemode_01"):
 			switch (epctParam1)
 			{
-				case false:
+				case PV_COMP_HEAD:
 					func_91(&unk, -99, -99, PV_COMP_HEAD, PV_COMP_HEAD, 0, -99, 0, -99, -99, 0, -99, 0, 31);
 					break;
 			
-				case true:
+				case PV_COMP_BERD:
 					func_91(&unk, -99, -99, PV_COMP_HAND, 136, 241, -99, 47, 0, 0, 0, 0, 21, 31);
 					break;
 			
-				case 2:
+				case PV_COMP_HAIR:
 					func_91(&unk, -99, -99, PV_COMP_LOWR, PV_COMP_BERD, 96, -99, 32, 0, 0, 0, 7, 215, 0);
 					break;
 			
-				case 3:
+				case PV_COMP_UPPR:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 73, 241, -99, 3, 0, 0, 0, 0, 25, 1);
 					break;
 			
-				case 4:
+				case PV_COMP_LOWR:
 					func_91(&unk, -99, -99, PV_COMP_HAIR, 88, 217, -99, 32, 0, 0, 0, 0, 33, 2);
 					break;
 			
-				case 5:
+				case PV_COMP_HAND:
 					func_91(&unk, -99, -99, PV_COMP_TASK, PV_COMP_TEEF, 98, -99, 32, 0, 0, 0, 7, 153, 3);
 					break;
 			
-				case 6:
+				case PV_COMP_FEET:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 140, 241, -99, 7, 0, 0, 0, 31, 16, 4);
 					break;
 			
-				case 7:
+				case PV_COMP_TEEF:
 					func_91(&unk, -99, -99, PV_COMP_LOWR, 139, 112, -99, 32, 0, 0, 0, 49, 78, 5);
 					break;
 			
-				case 8:
+				case PV_COMP_ACCS:
 					func_91(&unk, -99, -99, PV_COMP_BERD, 193, 48, -99, 108, 0, 0, 0, 0, 17, 6);
 					break;
 			
-				case 9:
+				case PV_COMP_TASK:
 					func_91(&unk, -99, -99, PV_COMP_HAND, 114, 97, -99, 103, 0, 0, 0, 0, 98, 7);
 					break;
 			
-				case 10:
+				case PV_COMP_DECL:
 					func_91(&unk, -99, -99, PV_COMP_TASK, 134, 239, -99, 32, 0, 0, 0, 2, 144, 8);
 					break;
 			
-				case 11:
+				case PV_COMP_JBIB:
 					func_91(&unk, -99, -99, PV_COMP_HAND, 152, 96, -99, 10, 0, 0, 0, 31, 96, 9);
 					break;
 			
-				case 12:
+				case PV_COMP_MAX:
 					func_91(&unk, -99, -99, PV_COMP_FEET, 129, 1, -99, 96, 0, 0, 0, 5, 120, 10);
 					break;
 			
@@ -28730,7 +28730,7 @@ struct<17> func_88(Hash hParam0, ePedComponentType epctParam1) // Position - 0x1
 	return unk;
 }
 
-void func_89(var uParam0, Hash hParam1, BOOL bParam2, int iParam3) // Position - 0x1B2AD (111277)
+void func_89(var uParam0, Hash hParam1, ePedComponentType epctParam2, int iParam3) // Position - 0x1B2AD (111277)
 {
 	int num;
 	Hash outfit;
@@ -28758,17 +28758,17 @@ void func_89(var uParam0, Hash hParam1, BOOL bParam2, int iParam3) // Position -
 	if (hParam1 == joaat("Player_Zero"))
 	{
 		num = 0;
-		uParam0->[13] = 10 + (bParam2 - iParam3);
+		uParam0->[13] = 10 + (epctParam2 - iParam3);
 	}
 	else if (hParam1 == joaat("Player_One"))
 	{
 		num = 1;
-		uParam0->[13] = 9 + (bParam2 - iParam3);
+		uParam0->[13] = 9 + (epctParam2 - iParam3);
 	}
 	else if (hParam1 == joaat("Player_Two"))
 	{
 		num = 2;
-		uParam0->[13] = 9 + (bParam2 - iParam3);
+		uParam0->[13] = 9 + (epctParam2 - iParam3);
 	}
 	else if (hParam1 == joaat("MP_M_Freemode_01"))
 	{
@@ -28780,7 +28780,7 @@ void func_89(var uParam0, Hash hParam1, BOOL bParam2, int iParam3) // Position -
 	}
 
 	EXTRAMETADATA::SETUP_SHOP_PED_OUTFIT_QUERY(num, false);
-	EXTRAMETADATA::GET_SHOP_PED_QUERY_OUTFIT(bParam2 - iParam3, &outfit);
+	EXTRAMETADATA::GET_SHOP_PED_QUERY_OUTFIT(epctParam2 - iParam3, &outfit);
 
 	if (!EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outfit))
 	{
@@ -28929,7 +28929,7 @@ ePedComponentType func_95(Ped pedParam0, int iParam1, ePedComponentType epctPara
 	{
 		if (iParam1 == 12)
 		{
-			for (i = false; i <= 53; i = i + 1)
+			for (i = PV_COMP_HEAD; i <= 53; i = i + 1)
 			{
 				if (func_102(pedParam0, iParam1, i))
 					return i;
@@ -28937,7 +28937,7 @@ ePedComponentType func_95(Ped pedParam0, int iParam1, ePedComponentType epctPara
 		}
 		else if (iParam1 == 13)
 		{
-			for (j = false; j <= 19; j = j + 1)
+			for (j = PV_COMP_HEAD; j <= 19; j = j + 1)
 			{
 				if (func_102(pedParam0, iParam1, j))
 					return j;
@@ -29191,13 +29191,13 @@ ePedComponentType func_101(ePedComponentType epctParam0) // Position - 0x1BA5B (
 	return 0;
 }
 
-BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Position - 0x1BAE1 (113377)
+BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, ePedComponentType epctParam2) // Position - 0x1BAE1 (113377)
 {
 	Hash entityModel;
 	ePedComponentType type;
 	int i;
 	ePedComponentType j;
-	BOOL k;
+	ePedComponentType k;
 	var unk;
 	var unk18;
 	int l;
@@ -29207,14 +29207,14 @@ BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_79347[1 /*14*/] = { func_8(entityModel, epctParam1, bParam2, -1) };
+	Global_79347[1 /*14*/] = { func_8(entityModel, epctParam1, epctParam2, -1) };
 
 	if (!IS_BIT_SET(Global_79347[1 /*14*/].f_6, 0))
 		return false;
 
 	if (epctParam1 == 12)
 	{
-		unk = { func_88(entityModel, bParam2) };
+		unk = { func_88(entityModel, epctParam2) };
 	
 		for (i = 0; i <= 14; i = i + 1)
 		{
@@ -29230,13 +29230,13 @@ BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 						{
 							if (!func_102(pedParam0, 14, unk18[j]))
 							{
-								for (k = false; k <= 19; k = k + 1)
+								for (k = PV_COMP_HEAD; k <= 19; k = k + 1)
 								{
 									Global_79347[2 /*14*/] = { func_8(entityModel, 14, k, -1) };
 								
 									if (Global_79347[2 /*14*/].f_12 == j)
 										if (func_102(pedParam0, 14, k))
-											if (!func_103(entityModel, bParam2, 14, k, &unk, &Global_79347[2 /*14*/]))
+											if (!func_103(entityModel, epctParam2, 14, k, &unk, &Global_79347[2 /*14*/]))
 												return false;
 								}
 							}
@@ -29247,7 +29247,7 @@ BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 						type = func_96(pedParam0, i);
 						Global_79347[2 /*14*/] = { func_8(entityModel, i, type, -1) };
 					
-						if (!func_103(entityModel, bParam2, i, type, &unk, &Global_79347[2 /*14*/]))
+						if (!func_103(entityModel, epctParam2, i, type, &unk, &Global_79347[2 /*14*/]))
 							return false;
 					}
 				}
@@ -29258,7 +29258,7 @@ BOOL func_102(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 	}
 	else if (epctParam1 == 13)
 	{
-		unk28 = { func_81(entityModel, bParam2) };
+		unk28 = { func_81(entityModel, epctParam2) };
 	
 		for (l = 0; l <= 8; l = l + 1)
 		{
@@ -29293,7 +29293,7 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 		return true;
 
 	if (iParam2 == 13 || iParam2 == 14 && uParam4->[13] == 31)
-		if (epctParam3 == false || epctParam3 == true || epctParam3 == 2 || epctParam3 == 3 || epctParam3 == 4 || epctParam3 == 5 || epctParam3 == 6 || epctParam3 == 7 || epctParam3 == 8)
+		if (epctParam3 == PV_COMP_HEAD || epctParam3 == PV_COMP_BERD || epctParam3 == PV_COMP_HAIR || epctParam3 == PV_COMP_UPPR || epctParam3 == PV_COMP_LOWR || epctParam3 == PV_COMP_HAND || epctParam3 == PV_COMP_FEET || epctParam3 == PV_COMP_TEEF || epctParam3 == PV_COMP_ACCS)
 			return true;
 
 	if (epctParam3 == -99 || iParam5->f_1 == -1)
@@ -29317,14 +29317,14 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 	{
 		if (func_107(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 10 || epctParam1 == 11 || epctParam1 == 12 || epctParam1 == 18 || epctParam1 == 50)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_DECL || epctParam1 == PV_COMP_JBIB || epctParam1 == PV_COMP_MAX || epctParam1 == 18 || epctParam1 == 50)
 				return false;
 		
 			return true;
 		}
 		else if (func_106(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 4 || epctParam1 == 5 || epctParam1 == 10 || epctParam1 == 11 || epctParam1 == 12 || epctParam1 == 14 || epctParam1 == 18 || epctParam1 == 50)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_LOWR || epctParam1 == PV_COMP_HAND || epctParam1 == PV_COMP_DECL || epctParam1 == PV_COMP_JBIB || epctParam1 == PV_COMP_MAX || epctParam1 == 14 || epctParam1 == 18 || epctParam1 == 50)
 				return false;
 		
 			if (iParam2 == 8)
@@ -29338,7 +29338,7 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 		}
 		else if (func_104(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 4 || epctParam1 == 5 || epctParam1 == 10 || epctParam1 == 11 || epctParam1 == 12 || epctParam1 == 14 || epctParam1 == 18 || epctParam1 == 50)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_LOWR || epctParam1 == PV_COMP_HAND || epctParam1 == PV_COMP_DECL || epctParam1 == PV_COMP_JBIB || epctParam1 == PV_COMP_MAX || epctParam1 == 14 || epctParam1 == 18 || epctParam1 == 50)
 				return false;
 		
 			return true;
@@ -29348,17 +29348,17 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 	{
 		if (func_107(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == 3 || epctParam1 == 5 || epctParam1 == 7)
+			if (epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_HAND || epctParam1 == PV_COMP_TEEF)
 				return false;
 		
 			return true;
 		}
 		else if (func_106(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == 3 || epctParam1 == 5 || epctParam1 == 7 || epctParam1 == 8 || epctParam1 == 21)
+			if (epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_HAND || epctParam1 == PV_COMP_TEEF || epctParam1 == PV_COMP_ACCS || epctParam1 == 21)
 				if (iParam2 == 8)
 					if (epctParam3 == PV_COMP_TASK)
-						if (epctParam1 == 8 || epctParam1 == 21)
+						if (epctParam1 == PV_COMP_ACCS || epctParam1 == 21)
 							return true;
 					else
 						return false;
@@ -29390,7 +29390,7 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 		}
 		else if (func_104(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == 3 || epctParam1 == 3 || epctParam1 == 5 || epctParam1 == 7 || epctParam1 == 8 || epctParam1 == 21)
+			if (epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_HAND || epctParam1 == PV_COMP_TEEF || epctParam1 == PV_COMP_ACCS || epctParam1 == 21)
 				return false;
 		
 			return true;
@@ -29403,20 +29403,20 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 	}
 	else if (hParam0 == joaat("Player_Two"))
 	{
-		if (epctParam1 == 2)
+		if (epctParam1 == PV_COMP_HAIR)
 			if (iParam2 == 14 && epctParam3 == PV_COMP_HEAD)
 				return true;
 	
 		if (func_107(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 6 || epctParam1 == 8 || epctParam1 == 45 || epctParam1 == 12)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_FEET || epctParam1 == PV_COMP_ACCS || epctParam1 == 45 || epctParam1 == PV_COMP_MAX)
 				return false;
 		
 			return true;
 		}
 		else if (func_106(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 3 || epctParam1 == 6 || epctParam1 == 8 || epctParam1 == 11 || epctParam1 == 45 || epctParam1 == 12)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_FEET || epctParam1 == PV_COMP_ACCS || epctParam1 == PV_COMP_JBIB || epctParam1 == 45 || epctParam1 == PV_COMP_MAX)
 				return false;
 		
 			if (iParam2 == 8)
@@ -29430,7 +29430,7 @@ BOOL func_103(Hash hParam0, ePedComponentType epctParam1, int iParam2, ePedCompo
 		}
 		else if (func_104(hParam0, iParam2, epctParam3, -1))
 		{
-			if (epctParam1 == true || epctParam1 == 2 || epctParam1 == 3 || epctParam1 == 6 || epctParam1 == 8 || epctParam1 == 11 || epctParam1 == 12)
+			if (epctParam1 == PV_COMP_BERD || epctParam1 == PV_COMP_HAIR || epctParam1 == PV_COMP_UPPR || epctParam1 == PV_COMP_FEET || epctParam1 == PV_COMP_ACCS || epctParam1 == PV_COMP_JBIB || epctParam1 == PV_COMP_MAX)
 				return false;
 		
 			return true;
@@ -58475,7 +58475,7 @@ void func_260(int iParam0, ePedComponentType epctParam1, Hash hParam2) // Positi
 	return;
 }
 
-void func_261(BOOL bParam0) // Position - 0x49C8E (302222)
+void func_261(ePedComponentType epctParam0) // Position - 0x49C8E (302222)
 {
 	BOOL flag;
 	int num;
@@ -58494,74 +58494,74 @@ void func_261(BOOL bParam0) // Position - 0x49C8E (302222)
 	num5 = 2;
 	num6 = 13;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 31:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num2 = 0;
 			num3 = 0;
 			break;
@@ -58622,7 +58622,7 @@ void func_261(BOOL bParam0) // Position - 0x49C8E (302222)
 			break;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
@@ -58636,7 +58636,7 @@ void func_262(ePedComponentType epctParam0, Hash hParam1) // Position - 0x49E49 
 	return;
 }
 
-void func_263(BOOL bParam0, Hash hParam1) // Position - 0x49E69 (302697)
+void func_263(ePedComponentType epctParam0, Hash hParam1) // Position - 0x49E69 (302697)
 {
 	BOOL flag;
 	int num;
@@ -58655,56 +58655,56 @@ void func_263(BOOL bParam0, Hash hParam1) // Position - 0x49E69 (302697)
 	num5 = 2;
 	num6 = 5;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 6;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 7;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 8;
 			num3 = 0;
 			break;
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num6, bParam0, 9, hParam1);
+			func_23(num6, epctParam0, 9, hParam1);
 			return;
 	}
 
@@ -58712,11 +58712,11 @@ void func_263(BOOL bParam0, Hash hParam1) // Position - 0x49E69 (302697)
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num3, 16);
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_264(BOOL bParam0, Hash hParam1) // Position - 0x49F6C (302956)
+void func_264(ePedComponentType epctParam0, Hash hParam1) // Position - 0x49F6C (302956)
 {
 	BOOL flag;
 	int num;
@@ -58735,81 +58735,81 @@ void func_264(BOOL bParam0, Hash hParam1) // Position - 0x49F6C (302956)
 	num5 = 2;
 	num6 = 12;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			flag = true;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S1" /*The Indie Heart*/, 16);
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S2" /*The Kitten*/, 16);
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S3" /*The Vacation*/, 16);
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S4" /*The Girly*/, 16);
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S5" /*The Standout*/, 16);
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S6" /*The Streetwise*/, 16);
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S7" /*The Butterfly*/, 16);
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_S8" /*The Festival*/, 16);
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_P1" /*The Interview*/, 16);
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_P2" /*The Red Hot*/, 16);
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_P3" /*The Upmarket*/, 16);
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num2 = 0;
 			num3 = 0;
 			TEXT_LABEL_ASSIGN_STRING(&unk, "O_FMF_P4" /*The Power Suit*/, 16);
@@ -58907,15 +58907,15 @@ void func_264(BOOL bParam0, Hash hParam1) // Position - 0x49F6C (302956)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num6, bParam0, 28, hParam1);
+			func_23(num6, epctParam0, 28, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
+void func_265(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4A24B (303691)
 {
 	BOOL flag;
 	int value;
@@ -58940,72 +58940,72 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 	num5 = 14;
 	num6 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 1;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 2;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 3;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 4;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 5;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 6;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 7;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = -1;
 			num2 = 0;
 			value = 0;
 			num3 = 8;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMF_0_0" /*Red Ear Defenders*/, 16);
 			num = 0;
 			num2 = 0;
@@ -59014,7 +59014,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			num6 = 1;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMF_0_1" /*Magenta Ear Defenders*/, 16);
 			num = 0;
 			num2 = 1;
@@ -59023,7 +59023,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			num6 = 1;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMF_0_2" /*Green Ear Defenders*/, 16);
 			num = 0;
 			num2 = 2;
@@ -59078,7 +59078,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 18:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMF_1_0", 16);
@@ -59534,7 +59534,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 67:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMF_8_0", 16);
@@ -60140,7 +60140,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 131:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HE_FMF_16_0" /*Western MC Yellow Helmet*/, 16);
@@ -60359,7 +60359,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 155:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "G_FMF_0_0" /*Hornet Sports Shades*/, 16);
@@ -61169,7 +61169,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 243:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "G_FMF_8_0" /*Orange Tint Squared*/, 16);
@@ -61887,7 +61887,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 319:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "W_FMF_0_0", 16);
@@ -61971,7 +61971,7 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 
 	if (num6 == 1)
 	{
-		num7 = bParam0 - 10;
+		num7 = epctParam0 - 10;
 	
 		if (num7 >= 0 && num7 < 121)
 		{
@@ -61983,30 +61983,30 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 	}
 	else if (num6 == 2)
 	{
-		num8 = bParam0 - 131;
+		num8 = epctParam0 - 131;
 	
 		if (num8 >= 0 && num8 < 24)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2160[num8] * Global_299108.f_21);
 	}
 	else if (num6 == 3)
 	{
-		num9 = bParam0 - 155;
+		num9 = epctParam0 - 155;
 	
 		if (num9 >= 0 && num9 < 128)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2185[num9] * Global_299108.f_44);
 	}
 	else if (num6 == 4)
 	{
-		num10 = bParam0 - 319;
+		num10 = epctParam0 - 319;
 	
 		if (num10 >= 0 && num10 < 10)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2314[num10] * Global_299108.f_22);
 	}
 
-	if (bParam0 >= 327)
+	if (epctParam0 >= 327)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num5, bParam0, 327, hParam1);
+		func_23(num5, epctParam0, 327, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			if (EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("HAT"), 1))
@@ -62018,13 +62018,13 @@ void func_265(BOOL bParam0, Hash hParam1) // Position - 0x4A24B (303691)
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_266(BOOL bParam0, Hash hParam1) // Position - 0x4D0DA (315610)
+void func_266(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4D0DA (315610)
 {
 	BOOL flag;
 	int num;
@@ -62043,44 +62043,44 @@ void func_266(BOOL bParam0, Hash hParam1) // Position - 0x4D0DA (315610)
 	num5 = 2;
 	num6 = 10;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_0_0" /*No Crew Emblem*/, 16);
 			num2 = 0;
 			num3 = 0;
 			num = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_2_0" /*Large Crew Emblem*/, 16);
 			num2 = 1;
 			num3 = 0;
 			num = 10000;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_1_0" /*Small Crew Emblem*/, 16);
 			num2 = 2;
 			num3 = 0;
 			num = 5000;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_2_0" /*Large Crew Emblem*/, 16);
 			num2 = 3;
 			num3 = 0;
 			num = 10000;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_1_0" /*Small Crew Emblem*/, 16);
 			num2 = 4;
 			num3 = 0;
 			num = 5000;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_2_0" /*Large Crew Emblem*/, 16);
 			num2 = 5;
 			num3 = 0;
@@ -62089,15 +62089,15 @@ void func_266(BOOL bParam0, Hash hParam1) // Position - 0x4D0DA (315610)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num6, bParam0, 6, hParam1);
+			func_23(num6, epctParam0, 6, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
+void func_267(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 {
 	BOOL flag;
 	int value;
@@ -62116,15 +62116,15 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 	num4 = 2;
 	num5 = 7;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 1;
 			num2 = 0;
 		
@@ -62134,7 +62134,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 310;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 1;
 			num2 = 1;
 		
@@ -62144,7 +62144,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 125;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 1;
 			num2 = 2;
 		
@@ -62154,7 +62154,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 145;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 1;
 			num2 = 3;
 		
@@ -62164,7 +62164,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 130;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 1;
 			num2 = 4;
 		
@@ -62174,7 +62174,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 265;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 1;
 			num2 = 5;
 		
@@ -62184,7 +62184,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 280;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 2;
 			num2 = 0;
 		
@@ -62194,7 +62194,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 295;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 2;
 			num2 = 1;
 		
@@ -62204,7 +62204,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 95;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 2;
 			num2 = 2;
 		
@@ -62214,7 +62214,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 85;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 2;
 			num2 = 3;
 		
@@ -62224,7 +62224,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 95;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 2;
 			num2 = 4;
 		
@@ -62234,7 +62234,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 				value = 105;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 2;
 			num2 = 5;
 		
@@ -62597,7 +62597,7 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num5, bParam0, 55, hParam1);
+			func_23(num5, epctParam0, 55, hParam1);
 		
 			if (Global_79347[0 /*14*/].f_7 > 0)
 				Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_46);
@@ -62610,11 +62610,11 @@ void func_267(BOOL bParam0, Hash hParam1) // Position - 0x4D1E5 (315877)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
-void func_268(BOOL bParam0, Hash hParam1) // Position - 0x4D9C2 (317890)
+void func_268(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4D9C2 (317890)
 {
 	BOOL flag;
 	int value;
@@ -62634,81 +62634,81 @@ void func_268(BOOL bParam0, Hash hParam1) // Position - 0x4D9C2 (317890)
 	num4 = 2;
 	num5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 1;
 			num2 = 0;
 			value = 965;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 1;
 			num2 = 1;
 			value = 960;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 1;
 			num2 = 2;
 			value = 9500;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 1;
 			num2 = 3;
 			value = 975;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 2;
 			num2 = 0;
 			value = 1185;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 2;
 			num2 = 1;
 			value = 15000;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 2;
 			num2 = 2;
 			value = 1115;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 2;
 			num2 = 3;
 			value = 1105;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 3;
 			num2 = 0;
 			value = 25000;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 4;
 			num2 = 0;
 			value = 510;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 4;
 			num2 = 1;
 			value = 530;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 4;
 			num2 = 2;
 			value = 5500;
@@ -62794,7 +62794,7 @@ void func_268(BOOL bParam0, Hash hParam1) // Position - 0x4D9C2 (317890)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num5, bParam0, 26, hParam1);
+			func_23(num5, epctParam0, 26, hParam1);
 		
 			if (Global_79347[0 /*14*/].f_7 > 0)
 				Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_23);
@@ -62806,16 +62806,16 @@ void func_268(BOOL bParam0, Hash hParam1) // Position - 0x4D9C2 (317890)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	num6 = bParam0 - 1;
+	num6 = epctParam0 - 1;
 
 	if (num6 >= 0 && num6 < 26)
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2012[num6] * Global_299108.f_23);
 
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
-void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
+void func_269(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 {
 	BOOL flag;
 	int value;
@@ -62825,7 +62825,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -62835,89 +62835,89 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 	num4 = 2;
 	num5 = 6;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 1765;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 0;
 			num2 = 1;
 			value = 760;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 0;
 			num2 = 2;
 			value = 760;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 0;
 			num2 = 3;
 			value = 765;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 0;
 			num2 = 4;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 0;
 			num2 = 5;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 0;
 			num2 = 6;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 0;
 			num2 = 7;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 0;
 			num2 = 8;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 0;
 			num2 = 9;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 0;
 			num2 = 10;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 0;
 			num2 = 11;
 			value = 0;
 			flag = true;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 0;
 			num2 = 12;
 			value = 0;
@@ -63042,7 +63042,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			num = 2;
@@ -63237,7 +63237,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			num = 4;
@@ -63456,7 +63456,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			num = 6;
@@ -63663,7 +63663,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 128:
 			num = 8;
@@ -63868,7 +63868,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 160:
 			num = 10;
@@ -64199,7 +64199,7 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 208:
 			num = 13;
@@ -64494,28 +64494,28 @@ void func_269(BOOL bParam0, Hash hParam1) // Position - 0x4DCA8 (318632)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	flag2 = bParam0;
+	type = epctParam0;
 
-	if (flag2 >= false && flag2 < 256)
-		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1755[flag2] * Global_299108.f_19);
+	if (type >= PV_COMP_HEAD && type < 256)
+		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1755[type] * Global_299108.f_19);
 
-	if (bParam0 >= 256)
+	if (epctParam0 >= 256)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num5, bParam0, 256, hParam1);
+		func_23(num5, epctParam0, 256, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_19);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
+void func_270(ePedComponentType epctParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 {
 	BOOL flag;
 	int value;
@@ -64525,7 +64525,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -64535,81 +64535,81 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 	num4 = 2;
 	num5 = 4;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 270;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 0;
 			num2 = 1;
 			value = 750;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 0;
 			num2 = 2;
 			value = 450;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 0;
 			num2 = 3;
 			value = 4875;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 0;
 			num2 = 4;
 			value = 1760;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 0;
 			num2 = 5;
 			value = 1090;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 0;
 			num2 = 6;
 			value = 2465;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 0;
 			num2 = 7;
 			value = 305;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 0;
 			num2 = 8;
 			value = 290;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 0;
 			num2 = 9;
 			value = 410;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 0;
 			num2 = 10;
 			value = 255;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 0;
 			num2 = 11;
 			value = 255;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 0;
 			num2 = 12;
 			value = 405;
@@ -64634,7 +64634,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 16:
 			num = 1;
@@ -64733,7 +64733,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			num = 2;
@@ -64845,7 +64845,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 48:
 			num = 3;
@@ -64944,7 +64944,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			num = 4;
@@ -65043,7 +65043,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 80:
 			num = 5;
@@ -65155,7 +65155,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			num = 6;
@@ -65267,7 +65267,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 112:
 			num = 7;
@@ -65379,7 +65379,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 128:
 			num = 8;
@@ -65479,7 +65479,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 144:
 			num = 9;
@@ -65687,7 +65687,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 176:
 			num = 11;
@@ -65882,7 +65882,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 208:
 			num = 13;
@@ -66105,7 +66105,7 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 240:
 			num = 15;
@@ -66220,28 +66220,28 @@ void func_270(BOOL bParam0, Hash hParam1) // Position - 0x4F2D0 (324304)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	flag2 = bParam0;
+	type = epctParam0;
 
-	if (flag2 >= false && flag2 < 256)
-		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1241[flag2] * Global_299108.f_17);
+	if (type >= PV_COMP_HEAD && type < 256)
+		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1241[type] * Global_299108.f_17);
 
-	if (bParam0 >= 256)
+	if (epctParam0 >= 256)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num5, bParam0, 256, hParam1);
+		func_23(num5, epctParam0, 256, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_17);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_271(BOOL bParam0, Hash hParam1) // Position - 0x50931 (330033)
+void func_271(ePedComponentType epctParam0, Hash hParam1) // Position - 0x50931 (330033)
 {
 	BOOL flag;
 	int num;
@@ -66260,69 +66260,69 @@ void func_271(BOOL bParam0, Hash hParam1) // Position - 0x50931 (330033)
 	num5 = 2;
 	num6 = 3;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 4;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 5;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 6;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 7;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 8;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num2 = 9;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num2 = 10;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num2 = 11;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num2 = 12;
 			num3 = 0;
 			break;
@@ -66343,18 +66343,18 @@ void func_271(BOOL bParam0, Hash hParam1) // Position - 0x50931 (330033)
 			break;
 	}
 
-	if (bParam0 >= 16)
+	if (epctParam0 >= 16)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num6, bParam0, 16, hParam1);
+		func_23(num6, epctParam0, 16, hParam1);
 		return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_272(BOOL bParam0, Hash hParam1) // Position - 0x50A8C (330380)
+void func_272(ePedComponentType epctParam0, Hash hParam1) // Position - 0x50A8C (330380)
 {
 	BOOL flag;
 	int num;
@@ -66373,69 +66373,69 @@ void func_272(BOOL bParam0, Hash hParam1) // Position - 0x50A8C (330380)
 	num5 = 2;
 	num6 = 9;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 1;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 1;
 			num3 = 1;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 1;
 			num3 = 2;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 1;
 			num3 = 3;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 1;
 			num3 = 4;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 2;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 2;
 			num3 = 1;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 2;
 			num3 = 2;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num2 = 2;
 			num3 = 3;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num2 = 2;
 			num3 = 4;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num2 = 3;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num2 = 3;
 			num3 = 1;
 			break;
@@ -66556,18 +66556,18 @@ void func_272(BOOL bParam0, Hash hParam1) // Position - 0x50A8C (330380)
 			break;
 	}
 
-	if (bParam0 >= 36)
+	if (epctParam0 >= 36)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num6, bParam0, 36, hParam1);
+		func_23(num6, epctParam0, 36, hParam1);
 		return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
+void func_273(ePedComponentType epctParam0, Hash hParam1) // Position - 0x50D0C (331020)
 {
 	BOOL flag;
 	int value;
@@ -66577,7 +66577,7 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 	int num6;
 
 	flag = false;
@@ -66588,93 +66588,93 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 	num4 = 2;
 	num5 = 8;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_0" /*Crew T-Shirt*/, 16);
 			num = 0;
 			num2 = 0;
 			value = 250;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_1" /*Salamanders T-Shirt*/, 16);
 			num = 0;
 			num2 = 1;
 			value = 225;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_2" /*The Feud T-Shirt*/, 16);
 			num = 0;
 			num2 = 2;
 			value = 50;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_3" /*Yellow T-Shirt*/, 16);
 			num = 0;
 			num2 = 3;
 			value = 40;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_4" /*Red T-Shirt*/, 16);
 			num = 0;
 			num2 = 4;
 			value = 40;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_5" /*Cyan T-Shirt*/, 16);
 			num = 0;
 			num2 = 5;
 			value = 40;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_6" /*Blue T-Shirt*/, 16);
 			num = 0;
 			num2 = 6;
 			value = 40;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_7" /*Tan T-Shirt*/, 16);
 			num = 0;
 			num2 = 7;
 			value = 45;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_8" /*Pink T-Shirt*/, 16);
 			num = 0;
 			num2 = 8;
 			value = 40;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_9" /*Mint T-Shirt*/, 16);
 			num = 0;
 			num2 = 9;
 			value = 40;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_10" /*Ash T-Shirt*/, 16);
 			num = 0;
 			num2 = 10;
 			value = 135;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_11" /*Gray T-Shirt*/, 16);
 			num = 0;
 			num2 = 11;
 			value = 60;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMF_0_12" /*Leopard T-Shirt*/, 16);
 			num = 0;
 			num2 = 12;
@@ -67563,7 +67563,7 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num5, bParam0, 136, hParam1);
+			func_23(num5, epctParam0, 136, hParam1);
 		
 			if (Global_79347[0 /*14*/].f_7 > 0)
 				Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_18);
@@ -67571,7 +67571,7 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 			return;
 	}
 
-	if (bParam0 == 4 || bParam0 == 20)
+	if (epctParam0 == PV_COMP_LOWR || epctParam0 == 20)
 	{
 		if (func_171(89, -1))
 		{
@@ -67583,12 +67583,12 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(40) * Global_262145.f_1498[4]);
 		}
 	}
-	else if (bParam0 == 7 || bParam0 == 23)
+	else if (epctParam0 == PV_COMP_TEEF || epctParam0 == 23)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "REW_LSB" /*Los Santos Belle V Neck*/, 16);
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(450) * Global_262145.f_2897);
 	}
-	else if (bParam0 == 9 || bParam0 == 25)
+	else if (epctParam0 == PV_COMP_TASK || epctParam0 == 25)
 	{
 		if (func_171(87, -1))
 		{
@@ -67600,27 +67600,27 @@ void func_273(BOOL bParam0, Hash hParam1) // Position - 0x50D0C (331020)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(40) * Global_262145.f_1498[9]);
 		}
 	}
-	else if (bParam0 >= false && bParam0 < 16)
+	else if (epctParam0 >= PV_COMP_HEAD && epctParam0 < 16)
 	{
-		flag2 = bParam0;
+		type = epctParam0;
 	
-		if (flag2 >= false && flag2 < 256)
-			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1498[flag2]);
+		if (type >= PV_COMP_HEAD && type < 256)
+			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1498[type]);
 	}
-	else if (bParam0 >= 16 && bParam0 < 32)
+	else if (epctParam0 >= 16 && epctParam0 < 32)
 	{
-		num6 = bParam0 - 16;
+		num6 = epctParam0 - 16;
 	
 		if (num6 >= 0 && num6 < 256)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1498[num6]);
 	}
 
 	value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_299108.f_18);
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
-void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
+void func_274(ePedComponentType epctParam0, Hash hParam1) // Position - 0x52131 (336177)
 {
 	BOOL flag;
 	int value;
@@ -67630,7 +67630,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -67640,81 +67640,81 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 	num4 = 2;
 	num5 = 11;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 250;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 0;
 			num2 = 1;
 			value = 225;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 0;
 			num2 = 2;
 			value = 50;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 0;
 			num2 = 3;
 			value = 40;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 0;
 			num2 = 4;
 			value = 40;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 0;
 			num2 = 5;
 			value = 40;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 0;
 			num2 = 6;
 			value = 40;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 0;
 			num2 = 7;
 			value = 45;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 0;
 			num2 = 8;
 			value = 40;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 0;
 			num2 = 9;
 			value = 40;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 0;
 			num2 = 10;
 			value = 135;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 0;
 			num2 = 11;
 			value = 60;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 0;
 			num2 = 12;
 			value = 220;
@@ -67739,7 +67739,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 16:
 			num = 1;
@@ -67845,7 +67845,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			num = 2;
@@ -67944,7 +67944,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 48:
 			num = 3;
@@ -68049,7 +68049,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			num = 4;
@@ -68162,7 +68162,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 80:
 			num = 5;
@@ -68273,7 +68273,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			num = 6;
@@ -68384,7 +68384,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 112:
 			num = 7;
@@ -68495,7 +68495,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 128:
 			num = 8;
@@ -68606,7 +68606,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 144:
 			num = 9;
@@ -68706,7 +68706,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 160:
 			num = 10;
@@ -68813,7 +68813,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 176:
 			num = 11;
@@ -68922,7 +68922,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 192:
 			num = 12;
@@ -69034,7 +69034,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 208:
 			num = 13;
@@ -69133,7 +69133,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 224:
 			num = 14;
@@ -69232,7 +69232,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 240:
 			num = 15;
@@ -69348,7 +69348,7 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
 
-	if (bParam0 == 4)
+	if (epctParam0 == PV_COMP_LOWR)
 	{
 		if (func_171(89, -1))
 		{
@@ -69360,12 +69360,12 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(40) * Global_262145.f_1498[4] * Global_299108.f_18);
 		}
 	}
-	else if (bParam0 == 7)
+	else if (epctParam0 == PV_COMP_TEEF)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "REW_LSB" /*Los Santos Belle V Neck*/, 16);
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(450) * Global_262145.f_2897 * Global_299108.f_18);
 	}
-	else if (bParam0 == 9)
+	else if (epctParam0 == PV_COMP_TASK)
 	{
 		if (func_171(87, -1))
 		{
@@ -69379,29 +69379,29 @@ void func_274(BOOL bParam0, Hash hParam1) // Position - 0x52131 (336177)
 	}
 	else
 	{
-		flag2 = bParam0;
+		type = epctParam0;
 	
-		if (flag2 >= false && flag2 < 256)
-			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1498[flag2] * Global_299108.f_18);
+		if (type >= PV_COMP_HEAD && type < 256)
+			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1498[type] * Global_299108.f_18);
 	}
 
-	if (bParam0 >= 256)
+	if (epctParam0 >= 256)
 	{
 		Global_79347[0 /*14*/].f_5 = 4;
-		func_23(num5, bParam0, 256, hParam1);
+		func_23(num5, epctParam0, 256, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_18);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_275(BOOL bParam0, Hash hParam1) // Position - 0x5389A (342170)
+void func_275(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5389A (342170)
 {
 	BOOL flag;
 	int value;
@@ -69420,92 +69420,92 @@ void func_275(BOOL bParam0, Hash hParam1) // Position - 0x5389A (342170)
 	num4 = 2;
 	num5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case false:
+		case PV_COMP_HEAD:
 			num = 0;
 			num2 = 0;
 			value = 500;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[0]);
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num = 1;
 			num2 = 0;
 			value = 500;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[1]);
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num = 1;
 			num2 = 1;
 			value = 495;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[2]);
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num = 1;
 			num2 = 2;
 			value = 490;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[3]);
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num = 1;
 			num2 = 3;
 			value = 485;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[4]);
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num = 1;
 			num2 = 4;
 			value = 480;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[5]);
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num = 1;
 			num2 = 5;
 			value = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num = 2;
 			num2 = 0;
 			value = 440;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[6]);
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num = 2;
 			num2 = 1;
 			value = 435;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[7]);
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num = 2;
 			num2 = 2;
 			value = 430;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[8]);
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num = 2;
 			num2 = 3;
 			value = 425;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[9]);
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num = 2;
 			num2 = 4;
 			value = 420;
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_2435[10]);
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num = 2;
 			num2 = 5;
 			value = 0;
@@ -70052,7 +70052,7 @@ void func_275(BOOL bParam0, Hash hParam1) // Position - 0x5389A (342170)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 4;
-			func_23(num5, bParam0, 92, hParam1);
+			func_23(num5, epctParam0, 92, hParam1);
 			return;
 	}
 
@@ -70060,7 +70060,7 @@ void func_275(BOOL bParam0, Hash hParam1) // Position - 0x5389A (342170)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
@@ -70132,7 +70132,7 @@ void func_276(int iParam0, ePedComponentType epctParam1, Hash hParam2) // Positi
 	return;
 }
 
-void func_277(BOOL bParam0) // Position - 0x5487A (346234)
+void func_277(ePedComponentType epctParam0) // Position - 0x5487A (346234)
 {
 	BOOL flag;
 	int num;
@@ -70151,74 +70151,74 @@ void func_277(BOOL bParam0) // Position - 0x5487A (346234)
 	num5 = 2;
 	num6 = 13;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 31:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case false:
+		case PV_COMP_HEAD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case true:
+		case PV_COMP_BERD:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 5:
+		case PV_COMP_HAND:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 6:
+		case PV_COMP_FEET:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 9:
+		case PV_COMP_TASK:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 10:
+		case PV_COMP_DECL:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 11:
+		case PV_COMP_JBIB:
 			num2 = 0;
 			num3 = 0;
 			break;
 	
-		case 12:
+		case PV_COMP_MAX:
 			num2 = 0;
 			num3 = 0;
 			break;
@@ -70284,7 +70284,7 @@ void func_277(BOOL bParam0) // Position - 0x5487A (346234)
 			break;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
@@ -70298,7 +70298,7 @@ void func_278(ePedComponentType epctParam0, Hash hParam1) // Position - 0x54A44 
 	return;
 }
 
-void func_279(BOOL bParam0, Hash hParam1) // Position - 0x54A64 (346724)
+void func_279(ePedComponentType epctParam0, Hash hParam1) // Position - 0x54A64 (346724)
 {
 	BOOL flag;
 	int num;
@@ -70317,7 +70317,7 @@ void func_279(BOOL bParam0, Hash hParam1) // Position - 0x54A64 (346724)
 	num5 = 2;
 	num6 = 5;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num2 = 0;
@@ -70366,7 +70366,7 @@ void func_279(BOOL bParam0, Hash hParam1) // Position - 0x54A64 (346724)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num6, bParam0, 9, hParam1);
+			func_23(num6, epctParam0, 9, hParam1);
 			return;
 	}
 
@@ -70374,11 +70374,11 @@ void func_279(BOOL bParam0, Hash hParam1) // Position - 0x54A64 (346724)
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num3, 16);
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_280(BOOL bParam0, Hash hParam1) // Position - 0x54B68 (346984)
+void func_280(ePedComponentType epctParam0, Hash hParam1) // Position - 0x54B68 (346984)
 {
 	BOOL flag;
 	int num;
@@ -70397,7 +70397,7 @@ void func_280(BOOL bParam0, Hash hParam1) // Position - 0x54B68 (346984)
 	num5 = 2;
 	num6 = 12;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num2 = 0;
@@ -70557,15 +70557,15 @@ void func_280(BOOL bParam0, Hash hParam1) // Position - 0x54B68 (346984)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num6, bParam0, 26, hParam1);
+			func_23(num6, epctParam0, 26, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
+void func_281(ePedComponentType epctParam0, Hash hParam1) // Position - 0x54E32 (347698)
 {
 	BOOL flag;
 	int value;
@@ -70590,7 +70590,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 	num5 = 14;
 	num6 = 0;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = -1;
@@ -70728,7 +70728,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 18:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMM_1_0" /*White Dunce Cap*/, 16);
@@ -71188,7 +71188,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 67:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HT_FMM_8_0", 16);
@@ -71797,7 +71797,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 131:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HE_FMM_16_0" /*Western MC Yellow Helmet*/, 16);
@@ -72016,7 +72016,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 155:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "G_FMM_0_0", 16);
@@ -72780,7 +72780,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 237:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "G_FMM_8_0" /*Brown Eyewear*/, 16);
@@ -73527,7 +73527,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 319:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "W_FMM_0_0" /*Deep Sea Watch*/, 16);
@@ -73610,7 +73610,7 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 
 	if (num6 == 1)
 	{
-		num7 = bParam0 - 10;
+		num7 = epctParam0 - 10;
 	
 		if (num7 >= 0 && num7 < 121)
 		{
@@ -73622,30 +73622,30 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 	}
 	else if (num6 == 2)
 	{
-		num8 = bParam0 - 131;
+		num8 = epctParam0 - 131;
 	
 		if (num8 >= 0 && num8 < 24)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1071[num8] * Global_299108.f_13);
 	}
 	else if (num6 == 3)
 	{
-		num9 = bParam0 - 155;
+		num9 = epctParam0 - 155;
 	
 		if (num9 >= 0 && num9 < 128)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1096[num9] * Global_299108.f_14);
 	}
 	else if (num6 == 4)
 	{
-		num10 = bParam0 - 319;
+		num10 = epctParam0 - 319;
 	
 		if (num10 >= 0 && num10 < 15)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_1225[num10] * Global_299108.f_15);
 	}
 
-	if (bParam0 >= 327)
+	if (epctParam0 >= 327)
 	{
 		Global_79347[0 /*14*/].f_5 = 3;
-		func_23(num5, bParam0, 327, hParam1);
+		func_23(num5, epctParam0, 327, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			if (EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("HAT"), 1))
@@ -73657,13 +73657,13 @@ void func_281(BOOL bParam0, Hash hParam1) // Position - 0x54E32 (347698)
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_282(BOOL bParam0, Hash hParam1) // Position - 0x57D2D (359725)
+void func_282(ePedComponentType epctParam0, Hash hParam1) // Position - 0x57D2D (359725)
 {
 	BOOL flag;
 	int num;
@@ -73682,7 +73682,7 @@ void func_282(BOOL bParam0, Hash hParam1) // Position - 0x57D2D (359725)
 	num5 = 2;
 	num6 = 10;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "D_FMM_0_0" /*No Crew Emblem*/, 16);
@@ -73735,15 +73735,15 @@ void func_282(BOOL bParam0, Hash hParam1) // Position - 0x57D2D (359725)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num6, bParam0, 7, hParam1);
+			func_23(num6, epctParam0, 7, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_283(BOOL bParam0, Hash hParam1) // Position - 0x57E55 (360021)
+void func_283(ePedComponentType epctParam0, Hash hParam1) // Position - 0x57E55 (360021)
 {
 	BOOL flag;
 	int value;
@@ -73762,7 +73762,7 @@ void func_283(BOOL bParam0, Hash hParam1) // Position - 0x57E55 (360021)
 	num4 = 2;
 	num5 = 7;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -74412,7 +74412,7 @@ void func_283(BOOL bParam0, Hash hParam1) // Position - 0x57E55 (360021)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num5, bParam0, 92, hParam1);
+			func_23(num5, epctParam0, 92, hParam1);
 		
 			if (Global_79347[0 /*14*/].f_7 > 0)
 				Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_45);
@@ -74425,11 +74425,11 @@ void func_283(BOOL bParam0, Hash hParam1) // Position - 0x57E55 (360021)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
-void func_284(BOOL bParam0, Hash hParam1) // Position - 0x588DC (362716)
+void func_284(ePedComponentType epctParam0, Hash hParam1) // Position - 0x588DC (362716)
 {
 	BOOL flag;
 	int value;
@@ -74449,7 +74449,7 @@ void func_284(BOOL bParam0, Hash hParam1) // Position - 0x588DC (362716)
 	num4 = 2;
 	num5 = 1;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -74609,7 +74609,7 @@ void func_284(BOOL bParam0, Hash hParam1) // Position - 0x588DC (362716)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num5, bParam0, 26, hParam1);
+			func_23(num5, epctParam0, 26, hParam1);
 			return;
 	}
 
@@ -74617,16 +74617,16 @@ void func_284(BOOL bParam0, Hash hParam1) // Position - 0x588DC (362716)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	num6 = bParam0 - 1;
+	num6 = epctParam0 - 1;
 
 	if (num6 >= 0 && num6 < 26)
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_923[num6] * Global_299108.f_16);
 
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 
-void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
+void func_285(ePedComponentType epctParam0, Hash hParam1) // Position - 0x58B94 (363412)
 {
 	BOOL flag;
 	int value;
@@ -74636,7 +74636,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -74646,7 +74646,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 	num4 = 2;
 	num5 = 6;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -74856,7 +74856,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			num = 2;
@@ -75065,7 +75065,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			num = 4;
@@ -75284,7 +75284,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			num = 6;
@@ -75493,7 +75493,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 128:
 			num = 8;
@@ -75688,7 +75688,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 160:
 			num = 10;
@@ -75907,7 +75907,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 192:
 			num = 12;
@@ -76118,7 +76118,7 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 224:
 			num = 14;
@@ -76313,33 +76313,33 @@ void func_285(BOOL bParam0, Hash hParam1) // Position - 0x58B94 (363412)
 			break;
 	}
 
-	flag2 = bParam0;
+	type = epctParam0;
 
-	if (flag2 >= false && flag2 < 256)
-		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_666[flag2] * Global_299108.f_11);
+	if (type >= PV_COMP_HEAD && type < 256)
+		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_666[type] * Global_299108.f_11);
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "F_FMM_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
 
-	if (bParam0 >= 256)
+	if (epctParam0 >= 256)
 	{
 		Global_79347[0 /*14*/].f_5 = 3;
-		func_23(num5, bParam0, 256, hParam1);
+		func_23(num5, epctParam0, 256, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_11);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
+void func_286(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 {
 	BOOL flag;
 	int value;
@@ -76349,7 +76349,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -76359,7 +76359,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 	num4 = 2;
 	num5 = 4;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -76665,7 +76665,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 48:
 			num = 3;
@@ -76872,7 +76872,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 80:
 			num = 5;
@@ -77079,7 +77079,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 112:
 			num = 7;
@@ -77286,7 +77286,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 144:
 			num = 9;
@@ -77494,7 +77494,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 176:
 			num = 11;
@@ -77716,7 +77716,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 208:
 			num = 13;
@@ -77936,7 +77936,7 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 240:
 			num = 15;
@@ -78039,28 +78039,28 @@ void func_286(BOOL bParam0, Hash hParam1) // Position - 0x5A1D2 (369106)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	flag2 = bParam0;
+	type = epctParam0;
 
-	if (flag2 >= false && flag2 < 256)
-		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_171[flag2] * Global_299108.f_9);
+	if (type >= PV_COMP_HEAD && type < 256)
+		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_171[type] * Global_299108.f_9);
 
-	if (bParam0 >= 256)
+	if (epctParam0 >= 256)
 	{
 		Global_79347[0 /*14*/].f_5 = 3;
-		func_23(num5, bParam0, 256, hParam1);
+		func_23(num5, epctParam0, 256, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_9);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_287(BOOL bParam0, Hash hParam1) // Position - 0x5B806 (374790)
+void func_287(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5B806 (374790)
 {
 	BOOL flag;
 	int num;
@@ -78079,7 +78079,7 @@ void func_287(BOOL bParam0, Hash hParam1) // Position - 0x5B806 (374790)
 	num5 = 2;
 	num6 = 3;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num2 = 0;
@@ -78163,15 +78163,15 @@ void func_287(BOOL bParam0, Hash hParam1) // Position - 0x5B806 (374790)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num6, bParam0, 16, hParam1);
+			func_23(num6, epctParam0, 16, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_288(BOOL bParam0, Hash hParam1) // Position - 0x5B95D (375133)
+void func_288(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5B95D (375133)
 {
 	BOOL flag;
 	int num;
@@ -78190,7 +78190,7 @@ void func_288(BOOL bParam0, Hash hParam1) // Position - 0x5B95D (375133)
 	num5 = 2;
 	num6 = 9;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num2 = 0;
@@ -78424,15 +78424,15 @@ void func_288(BOOL bParam0, Hash hParam1) // Position - 0x5B95D (375133)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num6, bParam0, 46, hParam1);
+			func_23(num6, epctParam0, 46, hParam1);
 			return;
 	}
 
-	func_11(&Global_79347[0 /*14*/], num6, bParam0, &unk, num2, num3, num, flag, num4, num5, false);
+	func_11(&Global_79347[0 /*14*/], num6, epctParam0, &unk, num2, num3, num, flag, num4, num5, false);
 	return;
 }
 
-void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
+void func_289(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 {
 	BOOL flag;
 	int value;
@@ -78442,7 +78442,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 	int num6;
 	int num7;
 	int num8;
@@ -78455,7 +78455,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 	num4 = 2;
 	num5 = 8;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMM_0_0" /*Crew T-Shirt*/, 16);
@@ -78682,7 +78682,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMM_0_0" /*Crew T-Shirt*/, 16);
@@ -78921,7 +78921,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SP_FMM_3_0" /*Black Vest*/, 16);
@@ -79164,7 +79164,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SP_FMM_6_0" /*White Shirt*/, 16);
@@ -79519,7 +79519,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 128:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMM_8_0" /*Red Accent Tee*/, 16);
@@ -79746,7 +79746,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 160:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "SP_FMM_10_0" /*White Shirt*/, 16);
@@ -80101,7 +80101,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 192:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMM_12_0" /*White Untucked*/, 16);
@@ -80328,7 +80328,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 224:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "U_FMM_1_0" /*White V Neck*/, 16);
@@ -80462,7 +80462,7 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			break;
 	}
 
-	if (bParam0 == 23 || bParam0 == 231)
+	if (epctParam0 == 23 || epctParam0 == 231)
 	{
 		if (func_171(89, -1))
 		{
@@ -80474,12 +80474,12 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(45) * Global_262145.f_428[23]);
 		}
 	}
-	else if (bParam0 == 17 || bParam0 == 225)
+	else if (epctParam0 == 17 || epctParam0 == 225)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "REW_LSB" /*Los Santos Belle V Neck*/, 16);
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(450) * Global_262145.f_2897);
 	}
-	else if (bParam0 == 28 || bParam0 == 236)
+	else if (epctParam0 == 28 || epctParam0 == 236)
 	{
 		if (func_171(87, -1))
 		{
@@ -80491,30 +80491,30 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(55) * Global_262145.f_428[28]);
 		}
 	}
-	else if (bParam0 >= 0 && bParam0 < 32)
+	else if (epctParam0 >= 0 && epctParam0 < 32)
 	{
-		flag2 = bParam0;
+		type = epctParam0;
 	
-		if (flag2 >= false && flag2 < 237)
-			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[flag2]);
+		if (type >= PV_COMP_HEAD && type < 237)
+			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[type]);
 	}
-	else if (bParam0 >= 32 && bParam0 < 48)
+	else if (epctParam0 >= 32 && epctParam0 < 48)
 	{
-		num6 = bParam0 - 32;
+		num6 = epctParam0 - 32;
 	
 		if (num6 >= 0 && num6 < 237)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[num6]);
 	}
-	else if (bParam0 >= 128 && bParam0 < 160)
+	else if (epctParam0 >= 128 && epctParam0 < 160)
 	{
-		num7 = (bParam0 - 160) + 124;
+		num7 = (epctParam0 - 160) + 124;
 	
 		if (num7 >= 0 && num7 < 237)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[num7]);
 	}
-	else if (bParam0 >= 192 && bParam0 < 224)
+	else if (epctParam0 >= 192 && epctParam0 < 224)
 	{
-		num8 = (bParam0 - 160) + 188;
+		num8 = (epctParam0 - 160) + 188;
 	
 		if (num8 >= 0 && num8 < 237)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[num8]);
@@ -80522,23 +80522,23 @@ void func_289(BOOL bParam0, Hash hParam1) // Position - 0x5BC79 (375929)
 
 	value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_299108.f_10);
 
-	if (bParam0 >= 241)
+	if (epctParam0 >= 241)
 	{
 		Global_79347[0 /*14*/].f_5 = 3;
-		func_23(num5, bParam0, 241, hParam1);
+		func_23(num5, epctParam0, 241, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_10);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
+void func_290(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5E25F (385631)
 {
 	BOOL flag;
 	int value;
@@ -80548,7 +80548,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 	int num3;
 	int num4;
 	int num5;
-	BOOL flag2;
+	ePedComponentType type;
 
 	flag = false;
 	value = 10;
@@ -80558,7 +80558,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 	num4 = 2;
 	num5 = 11;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -80765,7 +80765,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 32:
 			num = 2;
@@ -80975,7 +80975,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 64:
 			num = 4;
@@ -81193,7 +81193,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 96:
 			num = 6;
@@ -81367,7 +81367,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 124:
 			num = 8;
@@ -81576,7 +81576,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 156:
 			num = 10;
@@ -81796,7 +81796,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 188:
 			num = 12;
@@ -82005,7 +82005,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			break;
 	}
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 220:
 			num = 14;
@@ -82114,7 +82114,7 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
 
-	if (bParam0 == 23)
+	if (epctParam0 == 23)
 	{
 		if (func_171(89, -1))
 		{
@@ -82126,12 +82126,12 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(45) * Global_262145.f_428[23] * Global_299108.f_10);
 		}
 	}
-	else if (bParam0 == 17)
+	else if (epctParam0 == 17)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "REW_LSB" /*Los Santos Belle V Neck*/, 16);
 		value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(450) * Global_262145.f_2897 * Global_299108.f_10);
 	}
-	else if (bParam0 == 28)
+	else if (epctParam0 == 28)
 	{
 		if (func_171(87, -1))
 		{
@@ -82145,29 +82145,29 @@ void func_290(BOOL bParam0, Hash hParam1) // Position - 0x5E25F (385631)
 	}
 	else
 	{
-		flag2 = bParam0;
+		type = epctParam0;
 	
-		if (flag2 >= false && flag2 < 237)
-			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[flag2] * Global_299108.f_10);
+		if (type >= PV_COMP_HEAD && type < 237)
+			value = BUILTIN::ROUND(BUILTIN::TO_FLOAT(value) * Global_262145.f_428[type] * Global_299108.f_10);
 	}
 
-	if (bParam0 >= 237)
+	if (epctParam0 >= 237)
 	{
 		Global_79347[0 /*14*/].f_5 = 3;
-		func_23(num5, bParam0, 237, hParam1);
+		func_23(num5, epctParam0, 237, hParam1);
 	
 		if (Global_79347[0 /*14*/].f_7 > 0)
 			Global_79347[0 /*14*/].f_7 = BUILTIN::ROUND(BUILTIN::TO_FLOAT(Global_79347[0 /*14*/].f_7) * Global_299108.f_10);
 	}
 	else
 	{
-		func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+		func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	}
 
 	return;
 }
 
-void func_291(BOOL bParam0, Hash hParam1) // Position - 0x5F7EE (391150)
+void func_291(ePedComponentType epctParam0, Hash hParam1) // Position - 0x5F7EE (391150)
 {
 	BOOL flag;
 	int value;
@@ -82186,7 +82186,7 @@ void func_291(BOOL bParam0, Hash hParam1) // Position - 0x5F7EE (391150)
 	num4 = 2;
 	num5 = 2;
 
-	switch (bParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			num = 0;
@@ -82812,7 +82812,7 @@ void func_291(BOOL bParam0, Hash hParam1) // Position - 0x5F7EE (391150)
 	
 		default:
 			Global_79347[0 /*14*/].f_5 = 3;
-			func_23(num5, bParam0, 91, hParam1);
+			func_23(num5, epctParam0, 91, hParam1);
 			return;
 	}
 
@@ -82820,7 +82820,7 @@ void func_291(BOOL bParam0, Hash hParam1) // Position - 0x5F7EE (391150)
 	TEXT_LABEL_APPEND_INT(&unk, num, 16);
 	TEXT_LABEL_APPEND_STRING(&unk, "_", 16);
 	TEXT_LABEL_APPEND_INT(&unk, num2, 16);
-	func_11(&Global_79347[0 /*14*/], num5, bParam0, &unk, num, num2, value, flag, num3, num4, false);
+	func_11(&Global_79347[0 /*14*/], num5, epctParam0, &unk, num, num2, value, flag, num3, num4, false);
 	return;
 }
 

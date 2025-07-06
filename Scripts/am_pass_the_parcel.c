@@ -10432,9 +10432,9 @@ BOOL func_293() // Position - 0x9F8E (40846)
 
 void func_294() // Position - 0x9F9F (40863)
 {
+	BOOL flag;
 	int num;
 	int num2;
-	int num3;
 	int value;
 	var unk;
 	var unk2;
@@ -10471,42 +10471,42 @@ void func_294() // Position - 0x9F9F (40863)
 				else if (value < 1)
 					value = 1;
 			
-				num3 = func_380() * value;
+				num2 = func_380() * value;
 			
 				if (func_150(false, false) && !IS_BIT_SET(iLocal_122.f_1, 3))
 				{
-					num = BUILTIN::ROUND((float)func_379() * Global_262145.f_11925);
-					num2 = BUILTIN::ROUND((float)func_378() * Global_262145.f_11926) + (func_377() * value);
+					flag = BUILTIN::ROUND((float)func_379() * Global_262145.f_11925);
+					num = BUILTIN::ROUND((float)func_378() * Global_262145.f_11926) + (func_377() * value);
 				}
 				else
 				{
 					func_375(true);
-					num2 = func_377() * value;
+					num = func_377() * value;
 				}
 			
-				func_355(&num, 1);
-				num = num + num3;
+				func_355(&flag, 1);
+				flag = flag + num2;
+			
+				if (flag > 0)
+					if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
+						_NETSHOPPING_PROCESS_TRANSACTION(joaat("SERVICE_EARN_AMBIENT_JOB_PASS_PARCEL"), flag, &unk, false, true, false);
+					else
+						MONEY::NETWORK_EARN_FROM_AMBIENT_JOB(flag, "AM_PASS_THE_PARCEL", &unk2);
 			
 				if (num > 0)
-					if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
-						_NETSHOPPING_PROCESS_TRANSACTION(joaat("SERVICE_EARN_AMBIENT_JOB_PASS_PARCEL"), num, &unk, false, true, false);
-					else
-						MONEY::NETWORK_EARN_FROM_AMBIENT_JOB(num, "AM_PASS_THE_PARCEL", &unk2);
-			
-				if (num2 > 0)
 				{
 					func_341();
-					func_297(0, PLAYER::PLAYER_PED_ID(), "", joaat("XPTYPE_COMPLETE"), joaat("XPCATEGORY_COMPLETE_CHALLENGES"), num2, 1, -1, 0, false, 0);
+					func_297(0, PLAYER::PLAYER_PED_ID(), "", joaat("XPTYPE_COMPLETE"), joaat("XPCATEGORY_COMPLETE_CHALLENGES"), num, 1, -1, 0, false, 0);
 				}
 			
-				Global_2698980 = num;
-				uLocal_2156.f_6 = uLocal_2156.f_6 + num;
+				Global_2698980 = flag;
+				uLocal_2156.f_6 = uLocal_2156.f_6 + flag;
 			
 				if (!Global_262145.f_11874)
 					if (uLocal_2156.f_6 > 0)
 						func_295(13, uLocal_2156.f_6);
 			
-				uLocal_2156.f_7 = uLocal_2156.f_7 + num2;
+				uLocal_2156.f_7 = uLocal_2156.f_7 + num;
 			}
 		}
 		else
@@ -131102,7 +131102,7 @@ void func_1743(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xAFA01 (7
 	if (iParam0 == 133)
 		func_1759(79, 1);
 	else
-		func_1759(80, 1);
+		func_1759(80, true);
 
 	if (PLAYER::PLAYER_ID() != -1)
 	{
@@ -131351,7 +131351,7 @@ void func_1758() // Position - 0xAFF43 (720707)
 	return;
 }
 
-void func_1759(int iParam0, Hash hParam1) // Position - 0xAFFD5 (720853)
+void func_1759(int iParam0, BOOL bParam1) // Position - 0xAFFD5 (720853)
 {
 	int i;
 
@@ -131366,7 +131366,7 @@ void func_1759(int iParam0, Hash hParam1) // Position - 0xAFFD5 (720853)
 			{
 				Global_1574749.f_4[i] = iParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}

@@ -2830,9 +2830,9 @@ void func_35() // Position - 0x2D95 (11669)
 	Global_22455 = Global_22456;
 	Global_22457 = { Global_22473 };
 	Global_22446 = Global_22447;
-	Global_23458 = false;
+	Global_23458 = 0;
 	Global_22491 = 0;
-	Global_22492 = false;
+	Global_22492 = 0;
 	MISC::CLEAR_BIT(&Global_8920, 16);
 	return;
 }
@@ -70665,27 +70665,27 @@ int func_601(Ped pedParam0, int iParam1) // Position - 0x60DC1 (396737)
 	return -99;
 }
 
-BOOL func_602(Hash hParam0, BOOL bParam1, Hash hParam2) // Position - 0x60E93 (396947)
+BOOL func_602(Hash hParam0, int iParam1, Hash hParam2) // Position - 0x60E93 (396947)
 {
 	switch (hParam0)
 	{
 		case joaat("MP_M_Freemode_01"):
-			if (bParam1 >= 48 && bParam1 < 64 || bParam1 >= 64 && bParam1 < 80 || bParam1 >= 96 && bParam1 < 108 || bParam1 >= 108 && bParam1 < 124 || bParam1 >= 156 && bParam1 < 172)
+			if (iParam1 >= 48 && iParam1 < 64 || iParam1 >= 64 && iParam1 < 80 || iParam1 >= 96 && iParam1 < 108 || iParam1 >= 108 && iParam1 < 124 || iParam1 >= 156 && iParam1 < 172)
 				return true;
 		
-			if (hParam2 == -1 && bParam1 >= 237)
-				hParam2 = func_464(hParam0, bParam1, 11, 3);
+			if (hParam2 == -1 && iParam1 >= 237)
+				hParam2 = func_464(hParam0, iParam1, 11, 3);
 		
 			if (EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(hParam2, joaat("JACKET"), 0))
 				return true;
 			break;
 	
 		case joaat("MP_F_Freemode_01"):
-			if (bParam1 >= 16 && bParam1 < 32 || bParam1 >= 96 && bParam1 < 112 || bParam1 >= 112 && bParam1 < 128 || bParam1 >= 128 && bParam1 < 144 || bParam1 >= 160 && bParam1 < 176)
+			if (iParam1 >= 16 && iParam1 < 32 || iParam1 >= 96 && iParam1 < 112 || iParam1 >= 112 && iParam1 < 128 || iParam1 >= 128 && iParam1 < 144 || iParam1 >= 160 && iParam1 < 176)
 				return true;
 		
-			if (hParam2 == -1 && bParam1 >= 256)
-				hParam2 = func_464(hParam0, bParam1, 11, 4);
+			if (hParam2 == -1 && iParam1 >= 256)
+				hParam2 = func_464(hParam0, iParam1, 11, 4);
 		
 			if (EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(hParam2, joaat("JACKET"), 0))
 				return true;
@@ -76759,7 +76759,7 @@ void func_625(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 	int i;
 	Hash nameHash;
 	int enumValue;
-	ePedComponentType componentType;
+	int componentType;
 	int num;
 	int num2;
 	int address;
@@ -76801,7 +76801,7 @@ void func_625(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 					if (num < Global_4540932)
 					{
 						Global_4540932[num] = -1;
-						Global_4540943[num] = PV_COMP_INVALID;
+						Global_4540943[num] = -1;
 					}
 				
 					EXTRAMETADATA::GET_VARIANT_COMPONENT(Global_2883588, i, &nameHash, &enumValue, &componentType);

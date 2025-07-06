@@ -81914,16 +81914,16 @@ BOOL func_623() // Position - 0x6B096 (438422)
 	return func_624(*Global_4718592.f_134976);
 }
 
-int func_624(Hash hParam0) // Position - 0x6B0AC (438444)
+int func_624(ePedComponentType epctParam0) // Position - 0x6B0AC (438444)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_30385[i] == hParam0)
+		if (Global_262145.f_30385[i] == epctParam0)
 			return 1;
 	}
 
@@ -132540,7 +132540,7 @@ void func_989(float fParam0, float fParam1, float fParam2, float fParam3) // Pos
 
 void func_990(Ped pedParam0, eCharacter echParam1) // Position - 0xAAFE9 (700393)
 {
-	int weaponHash;
+	Hash weaponHash;
 
 	weaponHash = 0;
 

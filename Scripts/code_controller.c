@@ -30042,7 +30042,7 @@ void func_210(int iParam0, int iParam1, int iParam2) // Position - 0x1F537 (1283
 
 	flag = true;
 
-	if (Global_114162.f_10198[iParam0 /*12*/].f_5 == 1)
+	if (Global_114162.f_10198[iParam0 /*12*/].f_5 == true)
 	{
 		if (Global_114162.f_10198[iParam0 /*12*/].f_6 == 11 || Global_114162.f_10198[iParam0 /*12*/].f_6 == 12)
 			flag = false;
@@ -30102,7 +30102,7 @@ void func_211() // Position - 0x1F61D (128541)
 
 	while (num < 321)
 	{
-		if (Global_114162.f_10198[num /*12*/].f_5 == 1)
+		if (Global_114162.f_10198[num /*12*/].f_5 == true)
 		{
 			switch (Global_114162.f_10198[num /*12*/].f_6)
 			{
@@ -30228,7 +30228,7 @@ void func_211() // Position - 0x1F61D (128541)
 			if (func_212() == 2 == false && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			{
 				if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE())
-					Global_113896 = 0;
+					Global_113896 = false;
 			
 				if (!Global_64326)
 					func_191();

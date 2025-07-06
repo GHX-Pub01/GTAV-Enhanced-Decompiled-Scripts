@@ -5954,20 +5954,20 @@ void func_24() // Position - 0x16CB (5835)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
+				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
 					func_25(Global_98621[i /*17*/].f_5, true);
 	}
 
 	return;
 }
 
-void func_25(eCharacter echParam0, BOOL bParam1) // Position - 0x1752 (5970)
+void func_25(int iParam0, BOOL bParam1) // Position - 0x1752 (5970)
 {
 	if (bParam1)
-		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
-			Global_95673[echParam0 /*2*/] = true;
+		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
+			Global_95673[iParam0 /*2*/] = true;
 	else
-		Global_95673[echParam0 /*2*/] = false;
+		Global_95673[iParam0 /*2*/] = false;
 
 	return;
 }
@@ -98491,7 +98491,7 @@ void func_691(ePedComponentType epctParam0, int iParam1, char* sParam2, int iPar
 	return;
 }
 
-void func_692(ePedComponentType epctParam0, char* sParam1, ePedComponentType epctParam2, int iParam3, int iParam4, int iParam5, char* sParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15) // Position - 0x72897 (469143)
+void func_692(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, char* sParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15) // Position - 0x72897 (469143)
 {
 	int num;
 	int i;
@@ -98515,7 +98515,7 @@ void func_692(ePedComponentType epctParam0, char* sParam1, ePedComponentType epc
 		Global_1675263.f_2872[num] = epctParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_2872.f_11[num /*16*/], sParam1, 64);
 		Global_1675263.f_2872.f_183[num] = iParam3;
-		Global_1675263.f_2872.f_172[num] = epctParam2;
+		Global_1675263.f_2872.f_172[num] = iParam2;
 		Global_1675263.f_2872.f_205[num] = iParam4;
 		Global_1675263.f_2872.f_216[num] = iParam5;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_2872.f_259[num /*16*/], sParam6, 64);

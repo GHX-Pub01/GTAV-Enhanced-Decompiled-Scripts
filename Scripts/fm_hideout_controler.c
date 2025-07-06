@@ -12368,14 +12368,14 @@ void func_253(Vehicle veParam0, int iParam1, var uParam2, var uParam3, var uPara
 	return;
 }
 
-void func_254(Vehicle veParam0, int iParam1, int iParam2, Hash hParam3, int iParam4) // Position - 0xE85F (59487)
+void func_254(Vehicle veParam0, int iParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0xE85F (59487)
 {
 	if (iParam1 > 3 || iParam1 < 0)
 		return;
 
-	switch (hParam3)
+	switch (bParam3)
 	{
-		case 1:
+		case true:
 			VEHICLE::SET_VEHICLE_COLOURS(veParam0, 0, 0);
 			break;
 	

@@ -15651,8 +15651,8 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	int b;
 	int a;
 	int i;
-	BOOL numberOfLinesForString;
-	BOOL j;
+	ePedComponentType numberOfLinesForString;
+	ePedComponentType j;
 	int k;
 	int num2;
 	int num3;
@@ -15711,7 +15711,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	float num42;
 	float size;
 	float size2;
-	BOOL flag8;
+	ePedComponentType type;
 	float num43;
 	float num44;
 	int m;
@@ -15760,7 +15760,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 	if (bParam3)
 	{
-		if (Global_23987.f_5821 <= true)
+		if (Global_23987.f_5821 <= PV_COMP_BERD)
 		{
 			func_295(Global_23987.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, 1, 0, false, 0);
 			Global_23987.f_6617 = 1;
@@ -15900,7 +15900,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			while (num2 < Global_23987.f_5828 && numberOfLinesForString <= Global_23987.f_5821)
 			{
-				if (numberOfLinesForString >= false)
+				if (numberOfLinesForString >= PV_COMP_HEAD)
 				{
 					if (Global_23987.f_6088[numberOfLinesForString])
 					{
@@ -16382,15 +16382,15 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 			num4 = 0;
 			num5 = 0;
 			num6 = 0;
-			flag8 = Global_23987.f_5821;
+			type = Global_23987.f_5821;
 		
 			if (Global_23987.f_6332)
-				flag8 = Global_23987.f_6335 - 1;
+				type = Global_23987.f_6335 - 1;
 		
 			num43 = 0f;
 			num44 = 0f;
 		
-			for (j = false; j <= flag8; j = j + 1)
+			for (j = PV_COMP_HEAD; j <= type; j = j + 1)
 			{
 				num37 = 0.034722f;
 			
@@ -18411,7 +18411,7 @@ char* func_294(int iParam0) // Position - 0x1972F (104239)
 	return "CommonMenu";
 }
 
-void func_295(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x197A4 (104356)
+void func_295(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x197A4 (104356)
 {
 	int num;
 	float num2;
@@ -18419,7 +18419,7 @@ void func_295(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bPara
 	var unk;
 	float num4;
 
-	if (Global_23987.f_5821 > bParam0)
+	if (Global_23987.f_5821 > epctParam0)
 		return;
 
 	if (Global_23987.f_5821 >= 128)
@@ -18431,9 +18431,9 @@ void func_295(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bPara
 	if (Global_23987.f_6346 < Global_23987.f_6344)
 		return;
 
-	if (Global_23987.f_5821 != bParam0)
+	if (Global_23987.f_5821 != epctParam0)
 	{
-		Global_23987.f_5821 = bParam0;
+		Global_23987.f_5821 = epctParam0;
 		Global_23987.f_5822 = 0;
 	}
 
@@ -18483,12 +18483,12 @@ void func_295(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bPara
 		{
 			num4 = func_296(&Global_23987.f_79[Global_23987.f_5823 /*6*/]);
 		
-			if (num4 > Global_23987.f_6348[bParam0])
-				Global_23987.f_6348[bParam0] = num4;
+			if (num4 > Global_23987.f_6348[epctParam0])
+				Global_23987.f_6348[epctParam0] = num4;
 		}
 	}
 
-	MISC::SET_BIT(&Global_23987.f_5692[bParam0], Global_23987.f_5822);
+	MISC::SET_BIT(&Global_23987.f_5692[epctParam0], Global_23987.f_5822);
 	Global_23987.f_5822 = Global_23987.f_5822 + 1;
 	Global_23987.f_6347 = 1;
 	Global_23987.f_6345 = Global_23987.f_5823 - 1;
@@ -18516,16 +18516,16 @@ float func_297(char* sParam0) // Position - 0x199DC (104924)
 	return func_274(true);
 }
 
-void func_298(BOOL bParam0, BOOL bParam1) // Position - 0x19A19 (104985)
+void func_298(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x19A19 (104985)
 {
 	int num;
 
-	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(bParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(epctParam0) / 32f);
 
 	if (bParam1)
-		MISC::SET_BIT(&Global_23987.f_6618[num], bParam0 - (num * 32));
+		MISC::SET_BIT(&Global_23987.f_6618[num], epctParam0 - (num * 32));
 	else
-		MISC::CLEAR_BIT(&Global_23987.f_6618[num], bParam0 - (num * 32));
+		MISC::CLEAR_BIT(&Global_23987.f_6618[num], epctParam0 - (num * 32));
 
 	return;
 }
@@ -18757,7 +18757,7 @@ void func_308(char* sParam0, int iParam1, int iParam2) // Position - 0x19EF9 (10
 
 void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106334)
 {
-	BOOL i;
+	ePedComponentType i;
 	int num;
 
 	Global_23987.f_6342 = iParam0;
@@ -18771,7 +18771,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 	{
 		for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 		{
-			if (i >= false && i < 127)
+			if (i >= PV_COMP_HEAD && i < 127)
 				if (Global_23987.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -18783,7 +18783,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 		
 			for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 			{
-				if (i >= false && i < 127)
+				if (i >= PV_COMP_HEAD && i < 127)
 					if (Global_23987.f_5692[i] != 0)
 						num = num + 1;
 			}

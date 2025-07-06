@@ -17757,10 +17757,10 @@ int func_228(int iParam0) // Position - 0x1A3B5 (107445)
 	return 0;
 }
 
-void func_229(eCharacter echParam0) // Position - 0x1A519 (107801)
+void func_229(int iParam0) // Position - 0x1A519 (107801)
 {
 	if (Global_98612 == -1)
-		Global_98612 = echParam0;
+		Global_98612 = iParam0;
 
 	return;
 }

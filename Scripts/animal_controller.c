@@ -101341,7 +101341,7 @@ BOOL func_636(int iParam0, BOOL bParam1) // Position - 0x7E079 (516217)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_44959[num /*32*/] == true && Global_44959[num /*32*/].f_4 == true)
+		if (Global_44959[num /*32*/] == true && Global_44959[num /*32*/].f_4 == 1)
 		{
 			if (bParam1)
 				if (Global_44959[num /*32*/].f_29)

@@ -34289,7 +34289,7 @@ void func_239(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				HUD::SET_TEXT_JUSTIFICATION(2);
 				character = _GET_CURRENT_PLAYER_CHARACTER();
 			
-				if (Global_79822 == 1 && Global_79820 == CHAR_MAUDE)
+				if (Global_79822 == 1 && Global_79820 == 62)
 					character = Global_114162.f_2367.f_539.f_4322;
 			
 				switch (character)
@@ -34610,14 +34610,14 @@ struct<2> func_248(int iParam0) // Position - 0x28289 (164489)
 	return unk;
 }
 
-struct<2> func_249(eCharacter echParam0) // Position - 0x282BC (164540)
+struct<2> func_249(int iParam0) // Position - 0x282BC (164540)
 {
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "M_", 8);
-	TEXT_LABEL_APPEND_STRING(&unk, &(Global_92476[echParam0 /*34*/].f_8), 8);
+	TEXT_LABEL_APPEND_STRING(&unk, &(Global_92476[iParam0 /*34*/].f_8), 8);
 
-	if (echParam0 == _CHAR_JULIO_FABRIZIO)
+	if (iParam0 == 90)
 	{
 		switch (Global_114162.f_9089.f_99.f_205[7])
 		{

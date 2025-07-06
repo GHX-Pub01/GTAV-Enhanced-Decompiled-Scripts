@@ -102023,13 +102023,13 @@ void func_729() // Position - 0x7F612 (521746)
 	STREAMING::CLEAR_HD_AREA();
 	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_1537);
 
-	if (func_730() != CHAR_DENISE)
+	if (func_730() != 44)
 		func_723(6, true);
 
 	return;
 }
 
-eCharacter func_730() // Position - 0x7F688 (521864)
+int func_730() // Position - 0x7F688 (521864)
 {
 	return Global_79827;
 }

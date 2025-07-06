@@ -14430,7 +14430,7 @@ BOOL func_263(BOOL bParam0) // Position - 0x11B6E (72558)
 	return Global_1575058;
 }
 
-var func_264() // Position - 0x11B7F (72575)
+BOOL func_264() // Position - 0x11B7F (72575)
 {
 	return Global_2684721.f_19;
 }

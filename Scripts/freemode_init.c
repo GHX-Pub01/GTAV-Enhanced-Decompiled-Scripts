@@ -4141,7 +4141,7 @@ void func_136() // Position - 0x46A5 (18085)
 
 	if (!func_137() && !func_322())
 	{
-		Global_1685141 = PV_COMP_INVALID;
+		Global_1685141 = -1;
 		func_128(&(Global_1685141.f_1));
 	}
 

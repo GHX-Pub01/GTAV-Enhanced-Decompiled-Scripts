@@ -45564,8 +45564,8 @@ BOOL func_409(Entity eParam0, eCharacter echParam1, int iParam2, var uParam3) //
 	Vector3 entityCoords;
 	Vector3 entityCoords2;
 	float num;
-	eCharacter character;
 	int num2;
+	int num3;
 
 	if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
@@ -45625,31 +45625,31 @@ BOOL func_409(Entity eParam0, eCharacter echParam1, int iParam2, var uParam3) //
 		}
 	}
 
-	character = Global_98609;
+	num2 = Global_98609;
 
-	if (character != -1)
+	if (num2 != -1)
 	{
-		num2 = 4;
+		num3 = 4;
 	
 		if (echParam1 == CHAR_MICHAEL)
 		{
-			num2 = 0;
+			num3 = 0;
 		}
 		else if (echParam1 == CHAR_TREVOR)
 		{
-			num2 = 2;
+			num3 = 2;
 		}
 		else if (echParam1 == CHAR_FRANKLIN)
 		{
-			num2 = 1;
+			num3 = 1;
 		}
 		else if (echParam1 == _CHAR_NULL)
 		{
-			num2 = 3;
+			num3 = 3;
 			return false;
 		}
 	
-		if (IS_BIT_SET(Global_99166.f_47, num2))
+		if (IS_BIT_SET(Global_99166.f_47, num3))
 		{
 			*uParam3 = 24;
 			return false;
@@ -101670,11 +101670,11 @@ BOOL func_655(eCharacter echParam0, var uParam1) // Position - 0x84A46 (543302)
 	int num3;
 	Vector3 vector3;
 	int k;
-	eCharacter character;
-	float num4;
-	int num5;
+	int num4;
+	float num5;
+	int num6;
 	Vector3 vector4;
-	float num6;
+	float num7;
 
 	if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
@@ -101815,17 +101815,17 @@ BOOL func_655(eCharacter echParam0, var uParam1) // Position - 0x84A46 (543302)
 	{
 		if (Global_98621[k /*17*/])
 		{
-			character = Global_98621[k /*17*/].f_5;
-			num4 = Global_98621[k /*17*/].f_10.f_4;
-			num4 = num4 * 1.5f;
-			num5 = Global_98621[k /*17*/].f_10.f_6;
-			i = Global_92476[character /*34*/].f_10;
+			num4 = Global_98621[k /*17*/].f_5;
+			num5 = Global_98621[k /*17*/].f_10.f_4;
+			num5 = num5 * 1.5f;
+			num6 = Global_98621[k /*17*/].f_10.f_6;
+			i = Global_92476[num4 /*34*/].f_10;
 			vector4 = { Global_33485[i /*23*/][0 /*3*/] };
-			num6 = BUILTIN::VDIST2(vector, vector4);
+			num7 = BUILTIN::VDIST2(vector, vector4);
 		
-			if (!IS_BIT_SET(num5, echParam0))
+			if (!IS_BIT_SET(num6, echParam0))
 			{
-				if (num6 < num4 * num4)
+				if (num7 < num5 * num5)
 				{
 					*uParam1 = 13;
 					return false;

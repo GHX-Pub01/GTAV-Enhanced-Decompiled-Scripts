@@ -27104,7 +27104,7 @@ int func_389(int iParam0) // Position - 0x1CD22 (118050)
 	return 14379;
 }
 
-BOOL func_390(int iParam0) // Position - 0x1CD88 (118152)
+int func_390(int iParam0) // Position - 0x1CD88 (118152)
 {
 	if (!func_391(iParam0))
 		return -1;
@@ -30676,7 +30676,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_22449 = false;
 	Global_22451 = 0;
-	Global_22456 = false;
+	Global_22456 = 0;
 	Global_23433 = 0;
 	Global_23435 = 0;
 	Global_23439 = 0;
@@ -31149,10 +31149,10 @@ void func_534() // Position - 0x213A8 (136104)
 	return;
 }
 
-void func_535(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x213FF (136191)
+void func_535(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x213FF (136191)
 {
 	Global_21896 = { *uParam0 };
-	Global_8235 = echParam1;
+	Global_8235 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_22512, sParam2, 24);
 	Global_23431 = iParam5;
 

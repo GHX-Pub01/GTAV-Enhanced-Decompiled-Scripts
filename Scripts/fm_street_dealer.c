@@ -6348,7 +6348,7 @@ void func_143(var uParam0) // Position - 0x8598 (34200)
 				}
 			
 				Global_2739945.f_6853[num2 /*7*/].f_6 = 1;
-				func_144(49, 1);
+				func_144(49, true);
 			}
 		}
 	}
@@ -6360,7 +6360,7 @@ void func_143(var uParam0) // Position - 0x8598 (34200)
 	return;
 }
 
-void func_144(int iParam0, Hash hParam1) // Position - 0x86D8 (34520)
+void func_144(int iParam0, BOOL bParam1) // Position - 0x86D8 (34520)
 {
 	int i;
 
@@ -6375,7 +6375,7 @@ void func_144(int iParam0, Hash hParam1) // Position - 0x86D8 (34520)
 			{
 				Global_1574749.f_4[i] = iParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}
@@ -6645,7 +6645,7 @@ BOOL func_152(var uParam0, var uParam1) // Position - 0x89A4 (35236)
 	return false;
 }
 
-BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) // Position - 0x8BF7 (35831)
+BOOL func_153(BOOL bParam0, int iParam1, var uParam2, var uParam3, int iParam4) // Position - 0x8BF7 (35831)
 {
 	int i;
 	int num;
@@ -6696,7 +6696,7 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 					break;
 			}
 		
-			if (iParam1 == 0 || func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hash2, -788753717, 1, 0, 1, iParam4, hash, 3))
+			if (iParam1 == 0 || func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hash2, -788753717, 1, false, 1, iParam4, hash, 3))
 			{
 				for (i = 0; i < 8; i = i + 1)
 				{
@@ -6705,7 +6705,7 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 						hash3 = func_167(i);
 						num = num + uParam3->[i];
 					
-						if (!func_168(78225582, joaat("CATEGORY_CONTRABAND_QNTY"), hash3, -788753717, uParam3->[i], 0, 1, iParam4, 0, 3))
+						if (!func_168(78225582, joaat("CATEGORY_CONTRABAND_QNTY"), hash3, -788753717, uParam3->[i], false, 1, iParam4, 0, 3))
 						{
 							*uParam2 = 3;
 							break;
@@ -6713,7 +6713,7 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 					}
 				}
 			
-				if (*uParam2 != 3 && func_168(78225582, joaat("CATEGORY_CONTRABAND_FLAGS"), hash4, -788753717, 1, hParam0, 0, iParam4, hash3, 3))
+				if (*uParam2 != 3 && func_168(78225582, joaat("CATEGORY_CONTRABAND_FLAGS"), hash4, -788753717, 1, bParam0, 0, iParam4, hash3, 3))
 					*uParam2 = 1;
 				else
 					*uParam2 = 3;
@@ -6750,7 +6750,7 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 				}
 				else if (func_156(func_172()) == 2)
 				{
-					if (hParam0 > 0)
+					if (bParam0 > false)
 					{
 						for (i = 0; i < 8; i = i + 1)
 						{
@@ -6759,7 +6759,7 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 						}
 					
 						NETSHOPPING::NET_GAMESERVER_SET_TELEMETRY_NONCE_SEED(func_155(func_172()));
-						MONEY::NETWORK_EARN_FROM_BUSINESS_HUB_SELL(hParam0, func_154(PLAYER::PLAYER_ID()), num);
+						MONEY::NETWORK_EARN_FROM_BUSINESS_HUB_SELL(bParam0, func_154(PLAYER::PLAYER_ID()), num);
 					}
 				
 					*uParam2 = 2;
@@ -7359,7 +7359,7 @@ Hash func_167(int iParam0) // Position - 0x99CB (39371)
 	return MISC::GET_HASH_KEY(&unk);
 }
 
-BOOL func_168(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4, Hash hParam5, int iParam6, int iParam7, Hash hParam8, int iParam9) // Position - 0x9A64 (39524)
+BOOL func_168(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4, BOOL bParam5, int iParam6, int iParam7, Hash hParam8, int iParam9) // Position - 0x9A64 (39524)
 {
 	BOOL flag;
 	int num;
@@ -7403,14 +7403,14 @@ BOOL func_168(int iParam0, Hash hParam1, Hash hParam2, Hash hParam3, int iParam4
 		{
 			itemData = hParam8;
 			itemData.f_1 = hParam2;
-			itemData.f_2 = hParam5;
+			itemData.f_2 = bParam5;
 			itemData.f_3 = iParam6;
 		}
 		else
 		{
 			itemData = hParam2;
 			itemData.f_1 = hParam8;
-			itemData.f_2 = hParam5;
+			itemData.f_2 = bParam5;
 			itemData.f_3 = iParam6;
 		}
 	
@@ -7591,7 +7591,7 @@ BOOL func_173(var uParam0, BOOL bParam1) // Position - 0x9E8A (40586)
 			if (bParam1)
 				hash2 = -782037206;
 		
-			if (func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hash2, -1018905335, 1, 0, 1, 4, hash, 3))
+			if (func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hash2, -1018905335, 1, false, 1, 4, hash, 3))
 				*uParam0 = 1;
 			else
 				*uParam0 = 3;
@@ -7668,7 +7668,7 @@ BOOL func_177(var uParam0, Hash hParam1, var uParam2) // Position - 0x9FC5 (4090
 		
 			hash = func_178(uParam0);
 		
-			if (func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hParam1, -1018905335, 1, 0, 1, 4, hash, 3))
+			if (func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hParam1, -1018905335, 1, false, 1, 4, hash, 3))
 				*uParam2 = 1;
 			else
 				*uParam2 = 3;
@@ -7762,7 +7762,7 @@ void func_179(var uParam0, var uParam1, int iParam2) // Position - 0xA131 (41265
 	return;
 }
 
-void func_180(int iParam0, Hash hParam1) // Position - 0xA196 (41366)
+void func_180(int iParam0, BOOL bParam1) // Position - 0xA196 (41366)
 {
 	switch (iParam0)
 	{
@@ -7771,8 +7771,8 @@ void func_180(int iParam0, Hash hParam1) // Position - 0xA196 (41366)
 		case 4:
 		case 5:
 		case 6:
-			func_144(61, hParam1);
-			func_144(89, hParam1);
+			func_144(61, bParam1);
+			func_144(89, bParam1);
 			break;
 	}
 
@@ -7891,7 +7891,7 @@ ePedComponentType func_187(int iParam0) // Position - 0xA35C (41820)
 	return func_85(PLAYER::PLAYER_ID(), iParam0);
 }
 
-BOOL func_188(ePedComponentType epctParam0, int iParam1, Hash hParam2, var uParam3) // Position - 0xA36E (41838)
+BOOL func_188(ePedComponentType epctParam0, int iParam1, BOOL bParam2, var uParam3) // Position - 0xA36E (41838)
 {
 	int num;
 	int num2;
@@ -7916,10 +7916,10 @@ BOOL func_188(ePedComponentType epctParam0, int iParam1, Hash hParam2, var uPara
 			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_199[num2 /*13*/].f_1 = num3;
 			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_199[num2 /*13*/].f_11 = func_198(PLAYER::PLAYER_ID(), epctParam0, num3, true);
 		
-			if (hParam2 > 0)
+			if (bParam2 > false)
 			{
-				func_144(61, hParam2);
-				func_144(89, hParam2);
+				func_144(61, bParam2);
+				func_144(89, bParam2);
 			}
 		
 			*uParam3 = 2;
@@ -7931,7 +7931,7 @@ BOOL func_188(ePedComponentType epctParam0, int iParam1, Hash hParam2, var uPara
 	}
 	else if (num2 >= 0 && num >= iParam1)
 	{
-		if (func_189(num2, iParam1, hParam2, 4, uParam3, iParam1, 8))
+		if (func_189(num2, iParam1, bParam2, 4, uParam3, iParam1, 8))
 		{
 			if (*uParam3 == 2)
 			{
@@ -7940,10 +7940,10 @@ BOOL func_188(ePedComponentType epctParam0, int iParam1, Hash hParam2, var uPara
 				Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_199[num2 /*13*/].f_1 = num4;
 				Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_199[num2 /*13*/].f_11 = func_198(PLAYER::PLAYER_ID(), epctParam0, num4, true);
 			
-				if (hParam2 > 0)
+				if (bParam2 > false)
 				{
-					func_144(61, hParam2);
-					func_144(89, hParam2);
+					func_144(61, bParam2);
+					func_144(89, bParam2);
 				}
 			}
 		}
@@ -7956,7 +7956,7 @@ BOOL func_188(ePedComponentType epctParam0, int iParam1, Hash hParam2, var uPara
 	return *uParam3 != 1;
 }
 
-BOOL func_189(int iParam0, int iParam1, Hash hParam2, int iParam3, var uParam4, int iParam5, int iParam6) // Position - 0xA4D9 (42201)
+BOOL func_189(int iParam0, int iParam1, BOOL bParam2, int iParam3, var uParam4, int iParam5, int iParam6) // Position - 0xA4D9 (42201)
 {
 	ePedComponentType type;
 	int num;
@@ -8006,7 +8006,7 @@ BOOL func_189(int iParam0, int iParam1, Hash hParam2, int iParam3, var uParam4, 
 		
 			if (iParam3 == 0 || func_168(78225582, joaat("CATEGORY_INVENTORY_CONTRABAND_MISSION"), hash2, -788753717, 1, 0, 1, iParam6, hash, 3))
 				if (func_168(78225582, joaat("CATEGORY_CONTRABAND_QNTY"), hash3, -788753717, iParam1, 0, 1, iParam6, 0, 3))
-					if (func_168(78225582, joaat("CATEGORY_CONTRABAND_FLAGS"), hash4, -788753717, 1, hParam2, 0, iParam6, hash3, 3))
+					if (func_168(78225582, joaat("CATEGORY_CONTRABAND_FLAGS"), hash4, -788753717, 1, bParam2, 0, iParam6, hash3, 3))
 						*uParam4 = 1;
 					else
 						*uParam4 = 3;
@@ -8032,19 +8032,19 @@ BOOL func_189(int iParam0, int iParam1, Hash hParam2, int iParam3, var uParam4, 
 				{
 					if (iParam3 != 4)
 					{
-						if (hParam2 > 0)
+						if (bParam2 > false)
 						{
 							NETSHOPPING::NET_GAMESERVER_SET_TELEMETRY_NONCE_SEED(func_155(func_172()));
 						
 							if (iParam0 == 6)
 							{
-								MONEY::_NETWORK_EARN_SELL_ACID(hParam2, func_191(PLAYER::PLAYER_ID(), 306));
+								MONEY::_NETWORK_EARN_SELL_ACID(bParam2, func_191(PLAYER::PLAYER_ID(), 306));
 							}
 							else
 							{
 								type = func_100(PLAYER::PLAYER_ID(), iParam0);
 								num = func_93(type);
-								MONEY::NETWORK_EARN_FROM_BUSINESS_PRODUCT(hParam2, MISC::GET_HASH_KEY(func_190(type)), num, iParam5);
+								MONEY::NETWORK_EARN_FROM_BUSINESS_PRODUCT(bParam2, MISC::GET_HASH_KEY(func_190(type)), num, iParam5);
 							}
 						}
 					

@@ -93392,7 +93392,7 @@ void func_494() // Position - 0x74AF0 (477936)
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_98621[i /*17*/].f_5 != -1 && Global_98621[i /*17*/].f_5 != _CHAR_UNK && Global_98621[i /*17*/].f_5 != CHAR_CARSITE3 && Global_98621[i /*17*/].f_5 != _CHAR_GANGAPP_SECUROSERV)
+		if (Global_98621[i /*17*/].f_5 != -1 && Global_98621[i /*17*/].f_5 != 80 && Global_98621[i /*17*/].f_5 != 81 && Global_98621[i /*17*/].f_5 != 82)
 		{
 			if (func_498(Global_92476[Global_98621[i /*17*/].f_5 /*34*/].f_11, character) && func_497(Global_98621[i /*17*/].f_9))
 			{
@@ -93664,64 +93664,64 @@ void func_494() // Position - 0x74AF0 (477936)
 	return;
 }
 
-char* func_495(eCharacter echParam0) // Position - 0x75289 (479881)
+char* func_495(int iParam0) // Position - 0x75289 (479881)
 {
 	int num;
 
-	switch (echParam0)
+	switch (iParam0)
 	{
-		case CHAR_MP_STRIPCLUB_PR:
+		case 87:
 			return "M_JHP1A" /*Bugstars Equipment*/;
 	
-		case CHAR_LS_CUSTOMS:
+		case 89:
 			return "M_JHP1B" /*Carbine Rifles*/;
 	
-		case CHAR_DETONATEBOMB:
+		case 88:
 			return "M_JHP2A" /*BZ Gas Grenades*/;
 	
-		case CHAR_MP_MEX_BOSS:
+		case 72:
 			return "M_DHP1" /*Minisub*/;
 	
-		case CHAR_MP_PROF_BOSS:
+		case 73:
 			return "M_DHP2b" /*Cargobob*/;
 	
-		case _CHAR_COREY_PARKER:
+		case 78:
 			return "M_FHPRA" /*Stingers*/;
 	
-		case CHAR_BOATSITE2:
+		case 79:
 			return "M_FHPRB" /*Driller*/;
 	
-		case CHAR_MP_FM_CONTACT:
+		case 83:
 			return "PIM_TRAIN" /*Train*/;
 	
-		case CHAR_GAYMILITARY:
+		case 33:
 			return "M_FB4P1" /*Trash Truck*/;
 	
-		case CHAR_OSCAR:
+		case 34:
 			return "M_FB4P2" /*Tow Truck*/;
 	
-		case CHAR_CHENGSR:
+		case 35:
 			return "M_FB4P3" /*Getaway Vehicle*/;
 	
-		case CHAR_DR_FRIEDLANDER:
+		case 36:
 			return "M_FB4P4" /*Masks*/;
 	
-		case CHAR_STRETCH:
+		case 37:
 			return "M_FB4P5" /*Boiler Suits*/;
 	
-		case CHAR_CHEF:
+		case 47:
 			return "PIM_FRANK" /*Franklin*/;
 	
-		case CHAR_MAUDE:
+		case 62:
 			return "PIM_MIKE" /*Michael*/;
 	
-		case CHAR_LAMAR:
+		case 19:
 			if (_GET_CURRENT_PLAYER_CHARACTER_0() == CHAR_FRANKLIN)
 				return "PIM_MIKE" /*Michael*/;
 			break;
 	}
 
-	num = func_496(echParam0);
+	num = func_496(iParam0);
 
 	switch (num)
 	{
@@ -93825,165 +93825,165 @@ char* func_495(eCharacter echParam0) // Position - 0x75289 (479881)
 	return "";
 }
 
-int func_496(eCharacter echParam0) // Position - 0x755E1 (480737)
+int func_496(int iParam0) // Position - 0x755E1 (480737)
 {
-	switch (echParam0)
+	switch (iParam0)
 	{
-		case CHAR_ASHLEY:
-		case CHAR_ANDREAS:
-		case CHAR_OMEGA:
-		case CHAR_MP_BIKER_BOSS:
-		case CHAR_DREYFUSS:
+		case 66:
+		case 67:
+		case 69:
+		case 70:
+		case 68:
 			return 0;
 	
-		case CHAR_MICHAEL:
-		case CHAR_FRANKLIN:
-		case CHAR_TREVOR:
+		case 0:
+		case 1:
+		case 2:
 			return 1;
 	
-		case CHAR_MULTIPLAYER:
-		case CHAR_ALL_PLAYERS_CONF:
-		case CHAR_FRANK_TREV_CONF:
-		case CHAR_LEST_FRANK_CONF:
-		case CHAR_LEST_MIKE_CONF:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
 			return 2;
 	
-		case CHAR_MIKE_FRANK_CONF:
-		case CHAR_MIKE_TREV_CONF:
-		case CHAR_STEVE_MIKE_CONF:
-		case CHAR_STEVE_TREV_CONF:
+		case 8:
+		case 9:
+		case 10:
+		case 11:
 			return 3;
 	
-		case CHAR_LESTER:
-		case CHAR_LESTER_DEATHWISH:
+		case 12:
+		case 13:
 			return 4;
 	
-		case CHAR_MP_FAM_BOSS:
-		case CHAR_MP_MEX_BOSS:
-		case CHAR_PA_FEMALE:
-		case CHAR_PA_MALE:
+		case 71:
+		case 72:
+		case 74:
+		case 75:
 			return 5;
 	
-		case CHAR_MP_PROF_BOSS:
+		case 73:
 			return 6;
 	
-		case CHAR_JIMMY:
-		case CHAR_TRACEY:
-		case CHAR_ABIGAIL:
+		case 14:
+		case 15:
+		case 16:
 			return 7;
 	
-		case CHAR_AMANDA:
-		case CHAR_SIMEON:
-		case CHAR_LAMAR:
-		case CHAR_RON:
-		case CHAR_CHENG:
-		case CHAR_GANGAPP:
+		case 17:
+		case 18:
+		case 19:
+		case 20:
+		case 21:
+		case 22:
 			return 8;
 	
-		case CHAR_DEVIN:
-		case CHAR_DAVE:
-		case CHAR_MARTIN:
-		case CHAR_FLOYD:
-		case CHAR_GAYMILITARY:
-		case CHAR_ORTEGA:
-		case CHAR_ONEIL:
+		case 29:
+		case 30:
+		case 31:
+		case 32:
+		case 33:
+		case 38:
+		case 39:
 			return 9;
 	
-		case CHAR_OSCAR:
+		case 34:
 			return 10;
 	
-		case CHAR_CHENGSR:
+		case 35:
 			return 11;
 	
-		case CHAR_DR_FRIEDLANDER:
+		case 36:
 			return 12;
 	
-		case CHAR_STRETCH:
+		case 37:
 			return 13;
 	
-		case CHAR_STEVE:
-		case CHAR_WADE:
-		case CHAR_TENNIS_COACH:
-		case CHAR_SOLOMON:
-		case CHAR_LAZLOW:
+		case 23:
+		case 24:
+		case 25:
+		case 26:
+		case 27:
 			return 14;
 	
-		case CHAR_AGENT14:
-		case CHAR_MP_STRETCH:
-		case _CHAR_COREY_PARKER:
-		case CHAR_BOATSITE2:
-		case CHAR_MP_BRUCIE:
-		case CHAR_MP_MERRYWEATHER:
+		case 76:
+		case 77:
+		case 78:
+		case 79:
+		case 84:
+		case 85:
 			return 15;
 	
-		case _CHAR_UNK:
-		case CHAR_MP_FM_CONTACT:
+		case 80:
+		case 83:
 			return 16;
 	
-		case CHAR_CARSITE3:
+		case 81:
 			return 17;
 	
-		case _CHAR_GANGAPP_SECUROSERV:
+		case 82:
 			return 18;
 	
-		case CHAR_PATRICIA:
-		case CHAR_PEGASUS_DELIVERY:
-		case CHAR_LIFEINVADER:
+		case 40:
+		case 41:
+		case 42:
 			return 19;
 	
-		case CHAR_MP_GERALD:
-		case CHAR_MP_STRIPCLUB_PR:
-		case CHAR_LS_CUSTOMS:
-		case _CHAR_JULIO_FABRIZIO:
+		case 86:
+		case 87:
+		case 89:
+		case 90:
 			return 20;
 	
-		case CHAR_DETONATEBOMB:
+		case 88:
 			return 21;
 	
-		case CHAR_TANISHA:
+		case 43:
 			return 22;
 	
-		case CHAR_DENISE:
+		case 44:
 			return 23;
 	
-		case CHAR_MOLLY:
+		case 45:
 			return 24;
 	
-		case CHAR_RICKIE:
-		case CHAR_CHEF:
-		case CHAR_BLIMP:
-		case CHAR_BARRY:
+		case 46:
+		case 47:
+		case 48:
+		case 49:
 			return 25;
 	
-		case CHAR_BEVERLY:
-		case CHAR_CRIS:
-		case CHAR_DOM:
+		case 50:
+		case 51:
+		case 52:
 			return 26;
 	
-		case CHAR_HAO:
+		case 53:
 			return 27;
 	
-		case CHAR_MP_MORS_MUTUAL:
-		case CHAR_DOMESTIC_GIRL:
-		case CHAR_HITCHER_GIRL:
+		case 91:
+		case 92:
+		case 93:
 			return 28;
 	
-		case CHAR_HUNTER:
-		case CHAR_JIMMY_BOSTON:
-		case CHAR_JOE:
-		case CHAR_JOSEF:
-		case CHAR_JOSH:
+		case 54:
+		case 55:
+		case 56:
+		case 57:
+		case 58:
 			return 29;
 	
-		case CHAR_MANUEL:
-		case CHAR_MARNIE:
-		case CHAR_MARY_ANN:
+		case 59:
+		case 60:
+		case 61:
 			return 30;
 	
-		case CHAR_MAUDE:
-		case CHAR_MRS_THORNHILL:
-		case CHAR_NIGEL:
-		case CHAR_SASQUATCH:
+		case 62:
+		case 63:
+		case 64:
+		case 65:
 			return 31;
 	}
 

@@ -63010,16 +63010,16 @@ BOOL func_377() // Position - 0x4B122 (307490)
 	return func_378(*Global_4718592.f_134976);
 }
 
-int func_378(Hash hParam0) // Position - 0x4B138 (307512)
+int func_378(ePedComponentType epctParam0) // Position - 0x4B138 (307512)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_30385[i] == hParam0)
+		if (Global_262145.f_30385[i] == epctParam0)
 			return 1;
 	}
 

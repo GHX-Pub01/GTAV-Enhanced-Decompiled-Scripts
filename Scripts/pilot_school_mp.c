@@ -11468,20 +11468,20 @@ void func_28() // Position - 0x2236 (8758)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
+				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
 					func_29(Global_98621[i /*17*/].f_5, true);
 	}
 
 	return;
 }
 
-void func_29(eCharacter echParam0, BOOL bParam1) // Position - 0x22BD (8893)
+void func_29(int iParam0, BOOL bParam1) // Position - 0x22BD (8893)
 {
 	if (bParam1)
-		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
-			Global_95673[echParam0 /*2*/] = true;
+		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
+			Global_95673[iParam0 /*2*/] = true;
 	else
-		Global_95673[echParam0 /*2*/] = false;
+		Global_95673[iParam0 /*2*/] = false;
 
 	return;
 }

@@ -39279,9 +39279,9 @@ void func_356() // Position - 0x2D938 (186680)
 			else
 				iLocal_302 = 2;
 	
-		bLocal_362 = (MISC::GET_GAME_TIMER() - iLocal_361) + bLocal_363;
+		iLocal_362 = (MISC::GET_GAME_TIMER() - iLocal_361) + iLocal_363;
 		func_368();
-		func_357(bLocal_362, "", -1, -1, "", iLocal_302, 2, "", 0, 1, -1, -1, 0, 12, -1, -1, 0, 6, -1, 0, 0, true, -1, 0, -1082130432, 1, 1);
+		func_357(iLocal_362, "", -1, -1, "", iLocal_302, 2, "", 0, 1, -1, -1, 0, 12, -1, -1, 0, 6, -1, 0, 0, true, -1, 0, -1082130432, 1, 1);
 	}
 
 	return;
@@ -40400,7 +40400,7 @@ void func_384() // Position - 0x2F7C8 (194504)
 			}
 		
 			func_385(2, "Jog section", 0, 0, 0, 1);
-			Global_101713.f_12[0] = bLocal_362;
+			Global_101713.f_12[0] = iLocal_362;
 			iLocal_155 = 4;
 			iLocal_157 = 0;
 			break;
@@ -45709,7 +45709,7 @@ void func_471() // Position - 0x376C2 (227010)
 			}
 		
 			func_385(1, "Bike section", 0, 0, 0, 1);
-			Global_101713.f_12[0] = bLocal_362;
+			Global_101713.f_12[0] = iLocal_362;
 			bLocal_337 = false;
 			iLocal_157 = 0;
 			iLocal_155 = 2;
@@ -46892,7 +46892,7 @@ void func_509() // Position - 0x38E25 (232997)
 	sLocal_306 = "Fan3_pedBike";
 
 	if (func_548())
-		bLocal_363 = Global_101713.f_12[0];
+		iLocal_363 = Global_101713.f_12[0];
 
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-191.09845f, 6550.964f, 10.097297f, -199.40993f, 6542.312f, 11.097295f, false, true);
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(-226.3857f, 6498.877f, 9.2147f, -173.1313f, 6595.771f, 20.7218f, false, true);

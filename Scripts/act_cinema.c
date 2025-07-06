@@ -2731,10 +2731,10 @@ void func_60(BOOL bParam0, BOOL bParam1) // Position - 0x2DE2 (11746)
 	for (i = 0; i < 128; i = i + 1)
 	{
 		Global_23987.f_5692[i] = 0;
-		Global_23987.f_5830[i] = false;
-		Global_23987.f_5959[i] = false;
+		Global_23987.f_5830[i] = 0;
+		Global_23987.f_5959[i] = 0;
 		Global_23987.f_6482[i] = 0f;
-		Global_23987.f_6088[i] = false;
+		Global_23987.f_6088[i] = 0;
 		Global_23987.f_6348[i] = 0f;
 	}
 
@@ -2743,7 +2743,7 @@ void func_60(BOOL bParam0, BOOL bParam1) // Position - 0x2DE2 (11746)
 		Global_23987.f_5659[i] = 0;
 		Global_23987.f_5671[i] = 0f;
 		Global_23987.f_5665[i] = -1f;
-		Global_23987.f_5678[i] = false;
+		Global_23987.f_5678[i] = 0;
 		Global_23987.f_5686[i] = 1;
 	}
 
@@ -2765,13 +2765,13 @@ void func_60(BOOL bParam0, BOOL bParam1) // Position - 0x2DE2 (11746)
 	{
 		for (i = 0; i < 256; i = i + 1)
 		{
-			Global_23987.f_1616[i] = false;
+			Global_23987.f_1616[i] = 0;
 		}
 	}
 
 	TEXT_LABEL_ASSIGN_STRING(&(Global_4542374.f_16), "", 16);
 	Global_4542374.f_20 = -1;
-	Global_23987 = false;
+	Global_23987 = 0;
 	Global_23987.f_5821 = 0;
 	Global_23987.f_5822 = 0;
 	Global_23987.f_5823 = 0;
@@ -6746,7 +6746,7 @@ BOOL func_157(Ped pedParam0, var uParam1) // Position - 0x8B86 (35718)
 	return false;
 }
 
-void func_158(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x8C8F (35983)
+void func_158(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x8C8F (35983)
 {
 	Hash statName;
 
@@ -6755,7 +6755,7 @@ void func_158(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		statName = func_159(iParam0, iParam2);
 	
 		if (statName != 0)
-			STATS::STAT_SET_INT(statName, bParam1, bParam3);
+			STATS::STAT_SET_INT(statName, iParam1, bParam3);
 	}
 
 	return;
@@ -67424,7 +67424,7 @@ BOOL func_411(Vehicle veParam0) // Position - 0x5663D (353853)
 
 int func_412(int iParam0, var uParam1, BOOL bParam2, int iParam3, BOOL bParam4, BOOL bParam5) // Position - 0x5668A (353930)
 {
-	BOOL cloudTimeAsInt;
+	int cloudTimeAsInt;
 
 	if (bParam2)
 	{
@@ -79274,7 +79274,7 @@ int func_415(int iParam0, var uParam1, BOOL bParam2, int iParam3, BOOL bParam4, 
 {
 	int i;
 	int num;
-	BOOL cloudTimeAsInt;
+	int cloudTimeAsInt;
 
 	if (bParam2)
 	{
@@ -80929,7 +80929,7 @@ int func_437(int iParam0, int iParam1) // Position - 0x63A0B (408075)
 
 int func_438(int iParam0, var uParam1, BOOL bParam2, int iParam3, BOOL bParam4, BOOL bParam5) // Position - 0x652FB (414459)
 {
-	BOOL cloudTimeAsInt;
+	int cloudTimeAsInt;
 
 	if (bParam2)
 	{
@@ -81080,19 +81080,19 @@ void func_439(int iParam0) // Position - 0x6539C (414620)
 	return;
 }
 
-void func_440(int iParam0, BOOL bParam1, int iParam2) // Position - 0x65684 (415364)
+void func_440(int iParam0, int iParam1, int iParam2) // Position - 0x65684 (415364)
 {
 	if (iParam0 < 0)
 		return;
 
-	bParam1 = bParam1 + 1;
-	func_441(iParam0, bParam1, iParam2);
+	iParam1 = iParam1 + 1;
+	func_441(iParam0, iParam1, iParam2);
 
 	if (iParam0 >= 547)
 		return;
 
 	if (iParam2 == func_161() || iParam2 == -1)
-		Global_1938530[iParam0] = bParam1;
+		Global_1938530[iParam0] = iParam1;
 
 	return;
 }

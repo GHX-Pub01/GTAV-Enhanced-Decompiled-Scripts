@@ -1952,7 +1952,7 @@ BOOL func_78(Ped pedParam0) // Position - 0x1C6B (7275)
 BOOL func_79(Ped pedParam0) // Position - 0x1C8B (7307)
 {
 	Hash entityModel;
-	Hash hash;
+	BOOL flag;
 	Hash componentHash;
 	int num;
 
@@ -1962,15 +1962,15 @@ BOOL func_79(Ped pedParam0) // Position - 0x1C8B (7307)
 
 	if (entityModel == joaat("MP_F_Freemode_01"))
 	{
-		hash = func_85(pedParam0, 6);
+		flag = func_85(pedParam0, 6);
 	
-		if (hash >= 256)
+		if (flag >= 256)
 		{
-			componentHash = func_81(entityModel, hash, 6, 4);
+			componentHash = func_81(entityModel, flag, 6, 4);
 			num = func_80(componentHash);
 		}
 	
-		if (hash >= 0 && hash <= 15 || hash >= 96 && hash <= 111 || hash >= 112 && hash <= 127 || hash >= 128 && hash <= 143 || hash >= 192 && hash <= 207 || hash >= 224 && hash <= 239 || num == 0 || num == 6 || num == 7 || num == 8 || num == 12 || num == 14 || componentHash != -1 && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash, joaat("HIGH_HEELS"), 0))
+		if (flag >= false && flag <= 15 || flag >= 96 && flag <= 111 || flag >= 112 && flag <= 127 || flag >= 128 && flag <= 143 || flag >= 192 && flag <= 207 || flag >= 224 && flag <= 239 || num == 0 || num == 6 || num == 7 || num == 8 || num == 12 || num == 14 || componentHash != -1 && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash, joaat("HIGH_HEELS"), 0))
 			return true;
 	}
 
@@ -2022,7 +2022,7 @@ int func_80(Hash hParam0) // Position - 0x1DA9 (7593)
 	return num;
 }
 
-Hash func_81(Hash hParam0, Hash hParam1, int iParam2, int iParam3) // Position - 0x1F16 (7958)
+Hash func_81(Hash hParam0, BOOL bParam1, int iParam2, int iParam3) // Position - 0x1F16 (7958)
 {
 	var outProp;
 	int componentId;
@@ -2040,7 +2040,7 @@ Hash func_81(Hash hParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	else if (iParam2 == 14)
 	{
 		EXTRAMETADATA::INIT_SHOP_PED_PROP(&outProp);
-		componentId = hParam1 - func_84(hParam0);
+		componentId = bParam1 - func_84(hParam0);
 	
 		if (componentId < 0)
 			return -1;
@@ -2056,12 +2056,12 @@ Hash func_81(Hash hParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	else
 	{
 		EXTRAMETADATA::INIT_SHOP_PED_COMPONENT(&outComponent);
-		componentId2 = hParam1 - func_82(hParam0, func_83(iParam2));
+		componentId2 = bParam1 - func_82(hParam0, func_83(iParam2));
 	
 		if (componentId2 < 0)
 			return -1;
 	
-		if (hParam0 == Global_79497.f_26[iParam2] && hParam1 == Global_79497[iParam2] && Global_79497.f_13[iParam2] != 0)
+		if (hParam0 == Global_79497.f_26[iParam2] && bParam1 == Global_79497[iParam2] && Global_79497.f_13[iParam2] != 0)
 			return Global_79497.f_13[iParam2];
 	
 		num2 = EXTRAMETADATA::SETUP_SHOP_PED_APPAREL_QUERY_TU(iParam3, 10, -1, false, -1, func_83(iParam2));
@@ -2071,7 +2071,7 @@ Hash func_81(Hash hParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	
 		EXTRAMETADATA::GET_SHOP_PED_QUERY_COMPONENT(componentId2, &outComponent);
 		Global_79497.f_13[iParam2] = outComponent.f_1;
-		Global_79497[iParam2] = hParam1;
+		Global_79497[iParam2] = bParam1;
 		Global_79497.f_26[iParam2] = hParam0;
 		return outComponent.f_1;
 	}
@@ -2365,7 +2365,7 @@ int func_84(Hash hParam0) // Position - 0x2487 (9351)
 	return -99;
 }
 
-Hash func_85(Ped pedParam0, int iParam1) // Position - 0x24E8 (9448)
+BOOL func_85(Ped pedParam0, int iParam1) // Position - 0x24E8 (9448)
 {
 	ePedComponentType componentId;
 	int pedDrawableVariation;

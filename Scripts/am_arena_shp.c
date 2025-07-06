@@ -2902,9 +2902,9 @@ struct<2> func_49(int iParam0) // Position - 0x51E1 (20961)
 	return hash;
 }
 
-Hash func_50(int iParam0, var uParam1) // Position - 0x52E4 (21220)
+Hash func_50(int iParam0, int iParam1) // Position - 0x52E4 (21220)
 {
-	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_51(uParam1));
+	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(0, iParam0, func_51(iParam1));
 }
 
 int func_51(int iParam0) // Position - 0x52F9 (21241)

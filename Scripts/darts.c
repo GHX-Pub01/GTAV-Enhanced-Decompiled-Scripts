@@ -23499,7 +23499,7 @@ void func_492() // Position - 0x22E58 (142936)
 {
 	if (Global_21083.f_1 == 9 || Global_21083.f_1 == 10)
 	{
-		Global_22495 = 0;
+		Global_22495 = false;
 		Global_22491 = 1;
 	}
 

@@ -2577,7 +2577,7 @@ void func_110(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > false)
+		else if (Global_2635102.f_1 > 0)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;
@@ -2591,7 +2591,7 @@ void func_110(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > false)
+		else if (Global_2635102.f_1 > 0)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;

@@ -26936,8 +26936,8 @@ BOOL func_409(var uParam0, var uParam1) // Position - 0x1B2BF (111295)
 void func_410(int iParam0, var uParam1, BOOL bParam2) // Position - 0x1B334 (111412)
 {
 	int num;
-	BOOL flag;
-	BOOL flag2;
+	Hash hash;
+	Hash hash2;
 
 	if (iParam0 <= 0)
 	{
@@ -26958,9 +26958,9 @@ void func_410(int iParam0, var uParam1, BOOL bParam2) // Position - 0x1B334 (111
 	{
 		if (num >= iParam0)
 		{
-			flag = func_321() + iParam0;
-			func_434(flag);
-			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_299.f_3 = flag;
+			hash = func_321() + iParam0;
+			func_434(hash);
+			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_299.f_3 = hash;
 			func_391(18090, false, -1);
 			func_431(iParam0, bParam2);
 			*uParam1 = 2;
@@ -26976,9 +26976,9 @@ void func_410(int iParam0, var uParam1, BOOL bParam2) // Position - 0x1B334 (111
 		{
 			if (*uParam1 == 2)
 			{
-				flag2 = func_321() + iParam0;
-				func_434(flag2);
-				Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_299.f_3 = flag2;
+				hash2 = func_321() + iParam0;
+				func_434(hash2);
+				Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_299.f_3 = hash2;
 				*uParam1 = 2;
 				func_431(iParam0, bParam2);
 			}
@@ -27806,24 +27806,24 @@ struct<4> func_433(int iParam0) // Position - 0x1BF2D (114477)
 	return unk;
 }
 
-void func_434(BOOL bParam0) // Position - 0x1BFE0 (114656)
+void func_434(Hash hParam0) // Position - 0x1BFE0 (114656)
 {
-	func_435(6104, bParam0, -1);
+	func_435(6104, hParam0, -1);
 
-	if (bParam0 == 50)
+	if (hParam0 == 50)
 		_STAT_SET_PACKED_BOOL(41987, true, -1);
 
 	return;
 }
 
-void func_435(int iParam0, BOOL bParam1, int iParam2) // Position - 0x1C003 (114691)
+void func_435(int iParam0, Hash hParam1, int iParam2) // Position - 0x1C003 (114691)
 {
 	BOOL flag;
 	int num;
 
 	if (*Global_262145.f_35150)
 	{
-		func_226(iParam0, bParam1, iParam2, true);
+		func_226(iParam0, hParam1, iParam2, true);
 		return;
 	}
 
@@ -27831,7 +27831,7 @@ void func_435(int iParam0, BOOL bParam1, int iParam2) // Position - 0x1C003 (114
 	num.f_2 = -1;
 	num = func_438(iParam0);
 
-	if (!func_406(num, bParam1 == func_150(iParam0, -1)))
+	if (!func_406(num, hParam1 == func_150(iParam0, -1)))
 	{
 		flag = false;
 	}
@@ -27846,7 +27846,7 @@ void func_435(int iParam0, BOOL bParam1, int iParam2) // Position - 0x1C003 (114
 			flag = false;
 	}
 
-	func_226(iParam0, bParam1, iParam2, true);
+	func_226(iParam0, hParam1, iParam2, true);
 
 	if (flag)
 		func_344(&num);

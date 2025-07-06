@@ -101621,7 +101621,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x7E024 (516132)
 	return false;
 }
 
-BOOL func_643(Hash hParam0, int iParam1) // Position - 0x7E03B (516155)
+BOOL func_643(ePedComponentType epctParam0, int iParam1) // Position - 0x7E03B (516155)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -101637,7 +101637,7 @@ BOOL func_643(Hash hParam0, int iParam1) // Position - 0x7E03B (516155)
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case -1321131184:
 			num = Global_262145.f_36169[0];
@@ -101717,7 +101717,7 @@ BOOL func_643(Hash hParam0, int iParam1) // Position - 0x7E03B (516155)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (hParam0 == Global_1835471[i])
+		if (epctParam0 == Global_1835471[i])
 			return true;
 	}
 

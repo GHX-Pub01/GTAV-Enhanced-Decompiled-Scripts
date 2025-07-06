@@ -91980,7 +91980,7 @@ void func_1278() // Position - 0x6D5FA (447994)
 	Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_144 = type2;
 	func_785(3666, type, -1, true);
 	func_707(3667, type2, -1);
-	func_701(63, 1);
+	func_701(63, true);
 	return;
 }
 
@@ -92738,7 +92738,7 @@ void func_1288(int iParam0, BOOL bParam1) // Position - 0x6E685 (452229)
 		case 171:
 		case 172:
 			if (func_1289(PLAYER::PLAYER_ID()))
-				func_701(27, 1);
+				func_701(27, true);
 			break;
 	
 		case 199:
@@ -92749,7 +92749,7 @@ void func_1288(int iParam0, BOOL bParam1) // Position - 0x6E685 (452229)
 		case 193:
 		case 189:
 			if (func_1289(PLAYER::PLAYER_ID()))
-				func_701(26, 1);
+				func_701(26, true);
 			break;
 	
 		case 242:
@@ -92759,7 +92759,7 @@ void func_1288(int iParam0, BOOL bParam1) // Position - 0x6E685 (452229)
 		case 239:
 		case 240:
 			if (bParam1)
-				func_701(59, 1);
+				func_701(59, true);
 			break;
 	}
 

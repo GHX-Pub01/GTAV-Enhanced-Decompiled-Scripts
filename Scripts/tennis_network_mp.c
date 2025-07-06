@@ -87304,7 +87304,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		{
 			if (hParam3 == joaat("CATEGORY_WEAPON_AMMO") || hParam3 == joaat("CATEGORY_MART"))
 			{
-				Global_4538091 = 1;
+				Global_4538091 = true;
 				return 0;
 			}
 		}
@@ -87351,7 +87351,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 	{
 		if (iParam7 & 2 != 0)
 		{
-			Global_4538089 = 1;
+			Global_4538089 = true;
 			Global_4538092 = hParam4;
 			Global_4538094 = hParam3;
 			Global_4538095 = 1;
@@ -87371,7 +87371,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		if (flag4)
 		{
 			func_1076(1, hParam4);
-			Global_4538089 = 0;
+			Global_4538089 = false;
 		}
 	
 		if (iParam7 & 4 != 0)

@@ -14864,13 +14864,13 @@ BOOL func_374(BOOL bParam0, BOOL bParam1) // Position - 0x1422B (82475)
 	if (Global_2672942.f_1761.f_701 != 0)
 		return true;
 
-	if (!CAM::IS_SCREEN_FADED_IN() || func_254(8, -1) && func_375() != 65 || HUD::GET_PAUSE_MENU_STATE() != 0 && !bParam1 || STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && !bParam0 || NETWORK::IS_COMMERCE_STORE_OPEN() || Global_79825 || Global_23987.f_9115 || HUD::IS_WARNING_MESSAGE_ACTIVE() || Global_101765.f_1490)
+	if (!CAM::IS_SCREEN_FADED_IN() || func_254(8, -1) && func_375() != TRANSITION_STATE_WAITING_FOR_EXTERNAL_TERMINATION_CALL || HUD::GET_PAUSE_MENU_STATE() != 0 && !bParam1 || STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && !bParam0 || NETWORK::IS_COMMERCE_STORE_OPEN() || Global_79825 || Global_23987.f_9115 || HUD::IS_WARNING_MESSAGE_ACTIVE() || Global_101765.f_1490)
 		return false;
 
 	return true;
 }
 
-int func_375() // Position - 0x142C8 (82632)
+eTransitionState func_375() // Position - 0x142C8 (82632)
 {
 	return Global_1575014;
 }

@@ -29902,7 +29902,7 @@ int func_480(int iParam0) // Position - 0x2042E (132142)
 	return 14379;
 }
 
-int func_481(int iParam0) // Position - 0x20494 (132244)
+BOOL func_481(int iParam0) // Position - 0x20494 (132244)
 {
 	if (!func_482(iParam0))
 		return -1;

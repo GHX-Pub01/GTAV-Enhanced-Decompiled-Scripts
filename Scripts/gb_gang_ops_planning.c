@@ -5084,7 +5084,7 @@ BOOL func_186(ePedComponentType epctParam0) // Position - 0x6398 (25496)
 BOOL func_187(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x63A8 (25512)
 {
 	if (func_108(epctParam0))
-		if (Global_1887694[epctParam0 /*611*/].f_10.f_33 != PV_COMP_INVALID || bParam1 && Global_1887694[epctParam0 /*611*/].f_10.f_32 != PV_COMP_INVALID)
+		if (Global_1887694[epctParam0 /*611*/].f_10.f_33 != -1 || bParam1 && Global_1887694[epctParam0 /*611*/].f_10.f_32 != PV_COMP_INVALID)
 			return true;
 
 	return false;
@@ -23320,7 +23320,7 @@ void func_480(int iParam0, int iParam1) // Position - 0x1C84E (116814)
 	return;
 }
 
-void func_481(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1C8B6 (116918)
+void func_481(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0x1C8B6 (116918)
 {
 	Hash eventData;
 
@@ -23329,7 +23329,7 @@ void func_481(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	eventData.f_3 = iParam0;
 	eventData.f_4 = iParam2;
 	eventData.f_5 = iParam3;
-	eventData.f_6 = iParam4;
+	eventData.f_6 = uParam4;
 	eventData.f_7 = iParam5;
 
 	if (!(iParam1 == 0))
@@ -23338,7 +23338,7 @@ void func_481(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return;
 }
 
-int func_482() // Position - 0x1C903 (116995)
+var func_482() // Position - 0x1C903 (116995)
 {
 	return Global_2739945.f_5266.f_349;
 }
@@ -23367,9 +23367,9 @@ BOOL func_486(ePedComponentType epctParam0, int iParam1) // Position - 0x1C952 (
 	return false;
 }
 
-int func_487(ePedComponentType epctParam0) // Position - 0x1C97C (117116)
+int func_487(int iParam0) // Position - 0x1C97C (117116)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 153:
 		case 154:

@@ -69314,11 +69314,11 @@ void func_612() // Position - 0x49021 (299041)
 	Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_144 = type2;
 	func_187(3666, type, -1, true);
 	func_499(3667, type2, -1);
-	func_613(63, 1);
+	func_613(63, true);
 	return;
 }
 
-void func_613(int iParam0, Hash hParam1) // Position - 0x4907D (299133)
+void func_613(int iParam0, BOOL bParam1) // Position - 0x4907D (299133)
 {
 	int i;
 
@@ -69333,7 +69333,7 @@ void func_613(int iParam0, Hash hParam1) // Position - 0x4907D (299133)
 			{
 				Global_1574749.f_4[i] = iParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}
@@ -70358,7 +70358,7 @@ void func_625(int iParam0, BOOL bParam1) // Position - 0x4A45C (304220)
 		case 171:
 		case 172:
 			if (func_626(PLAYER::PLAYER_ID()))
-				func_613(27, 1);
+				func_613(27, true);
 			break;
 	
 		case 199:
@@ -70369,7 +70369,7 @@ void func_625(int iParam0, BOOL bParam1) // Position - 0x4A45C (304220)
 		case 193:
 		case 189:
 			if (func_626(PLAYER::PLAYER_ID()))
-				func_613(26, 1);
+				func_613(26, true);
 			break;
 	
 		case 242:
@@ -70379,7 +70379,7 @@ void func_625(int iParam0, BOOL bParam1) // Position - 0x4A45C (304220)
 		case 239:
 		case 240:
 			if (bParam1)
-				func_613(59, 1);
+				func_613(59, true);
 			break;
 	}
 

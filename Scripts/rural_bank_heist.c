@@ -87808,7 +87808,7 @@ BOOL func_371(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 			}
 		}
 	
-		Global_98970 = 1;
+		Global_98970 = true;
 		func_415(PLAYER::PLAYER_PED_ID());
 		func_414();
 		func_413(character2);
@@ -90586,7 +90586,7 @@ void func_406(eCharacter echParam0, int iParam1) // Position - 0x6E2BF (451263)
 		case 7:
 			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("armenian3")) != 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("trevor3")) != 0)
 			{
-				Global_98971 = 1;
+				Global_98971 = true;
 			}
 			else
 			{

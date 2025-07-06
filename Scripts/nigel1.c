@@ -34688,7 +34688,7 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_246(-1, false) == 8;
+		flag = func_246(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -34699,28 +34699,28 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 	return flag;
 }
 
-int func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
+eCharacter func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_11();
+	if (num == -1)
+		num = func_11();
 
-	if (Global_1575066[num2] == true)
+	if (Global_1575066[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574920[num2];
+		character = Global_1574920[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 BOOL func_247(Player plParam0) // Position - 0x28240 (164416)

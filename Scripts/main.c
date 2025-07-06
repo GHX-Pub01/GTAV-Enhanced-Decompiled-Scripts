@@ -3607,7 +3607,7 @@ int func_128(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 		if (!func_131())
 			func_129();
 	
-		Global_98607 = false;
+		Global_98607 = 0;
 		return 1;
 	}
 	else
@@ -102436,11 +102436,11 @@ void func_649() // Position - 0x85C56 (547926)
 	Global_98610 = -1;
 	Global_98611 = -1;
 	Global_98612 = -1;
-	Global_98614 = false;
+	Global_98614 = 0;
 	Global_98615 = 0;
 	Global_98616 = false;
-	Global_98546 = false;
-	Global_98547 = false;
+	Global_98546 = 0;
+	Global_98547 = 0;
 	Global_98549 = -15;
 	Global_23847 = 0;
 
@@ -102496,14 +102496,14 @@ void func_650(int iParam0) // Position - 0x85CC3 (548035)
 	return;
 }
 
-void func_651(eCharacter echParam0) // Position - 0x85EA5 (548517)
+void func_651(int iParam0) // Position - 0x85EA5 (548517)
 {
-	if (echParam0 >= CHAR_BROKEN_DOWN_GIRL)
+	if (iParam0 >= 94)
 		return;
 
 	if (Global_97535 != -1)
 	{
-		if (Global_97535 != echParam0)
+		if (Global_97535 != iParam0)
 			return;
 	
 		Global_97535 = -1;
@@ -165097,7 +165097,7 @@ void func_2048() // Position - 0xD8823 (886819)
 
 	if (!func_893() && !func_629())
 	{
-		Global_1685141 = PV_COMP_INVALID;
+		Global_1685141 = -1;
 		func_102(&(Global_1685141.f_1));
 	}
 

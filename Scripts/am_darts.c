@@ -7786,7 +7786,7 @@ int func_104(Hash hParam0) // Position - 0x9F5A (40794)
 	return -99;
 }
 
-int func_105(ePedComponentType epctParam0) // Position - 0x9FB9 (40889)
+BOOL func_105(ePedComponentType epctParam0) // Position - 0x9FB9 (40889)
 {
 	switch (epctParam0)
 	{
@@ -29603,48 +29603,48 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[0 /*65*/].f_59;
 			
 				case 3:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return 1;
+						return true;
 					else
-						return 0;
+						return false;
 					break;
 			
 				case 4:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return 1;
+						return true;
 					else
-						return 0;
+						return false;
 					break;
 			
 				case 6:
 					return 6;
 			
 				case 5:
-					return 0;
+					return false;
 			
 				case 8:
-					return 0;
+					return false;
 			
 				case 9:
-					return 0;
+					return false;
 			
 				case 10:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 7:
-					return 0;
+					return false;
 			
 				case 11:
-					return 0;
+					return false;
 			
 				case 12:
 					break;
@@ -29658,7 +29658,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[1 /*65*/].f_59;
@@ -29673,25 +29673,25 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					return 17;
 			
 				case 5:
-					return 0;
+					return false;
 			
 				case 8:
 					return 26;
 			
 				case 9:
-					return 0;
+					return false;
 			
 				case 10:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 7:
-					return 0;
+					return false;
 			
 				case 11:
-					return 0;
+					return false;
 			
 				case 12:
 					break;
@@ -29705,13 +29705,13 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[2 /*65*/].f_59;
 			
 				case 3:
-					return 0;
+					return false;
 			
 				case 4:
 					return 91;
@@ -29720,25 +29720,25 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					return 8;
 			
 				case 5:
-					return 0;
+					return false;
 			
 				case 8:
 					return 15;
 			
 				case 9:
-					return 0;
+					return false;
 			
 				case 10:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 7:
-					return 0;
+					return false;
 			
 				case 11:
-					return 0;
+					return false;
 			
 				case 12:
 					break;
@@ -29758,7 +29758,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 3:
-					return 0;
+					return false;
 			
 				case 4:
 					return 80;
@@ -29770,19 +29770,19 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 8:
-					return 0;
+					return false;
 			
 				case 9:
-					return 0;
+					return false;
 			
 				case 10:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 7:
-					return 0;
+					return false;
 			
 				case 11:
 					return 2;
@@ -29799,7 +29799,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 3:
-					return 0;
+					return false;
 			
 				case 4:
 					return 233;
@@ -29811,19 +29811,19 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 8:
-					return 0;
+					return false;
 			
 				case 9:
-					return 0;
+					return false;
 			
 				case 10:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 7:
-					return 0;
+					return false;
 			
 				case 11:
 					return 78;
@@ -133230,7 +133230,7 @@ void func_1246(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 		switch (Global_1920804.f_9)
 		{
 			case 1:
-				if (!func_1401() && func_1398(0) > false)
+				if (!func_1401() && func_1398(0) > 0)
 					Global_1939321[0 /*8*/].f_5 = 1;
 			
 				if (!flag3)
@@ -133982,14 +133982,14 @@ void func_1255(int iParam0, int iParam1) // Position - 0xA7489 (685193)
 	return;
 }
 
-void func_1256(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA74A3 (685219)
+void func_1256(int iParam0, int iParam1, int iParam2) // Position - 0xA74A3 (685219)
 {
 	BOOL flag;
 	int num;
 
 	if (*Global_262145.f_35150)
 	{
-		func_313(iParam0, bParam1, iParam2, true);
+		func_313(iParam0, iParam1, iParam2, true);
 		return;
 	}
 
@@ -133997,7 +133997,7 @@ void func_1256(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA74A3 (68
 	num.f_2 = -1;
 	num = func_1259(iParam0);
 
-	if (!func_848(num, bParam1 == func_1210(iParam0, -1)))
+	if (!func_848(num, iParam1 == func_1210(iParam0, -1)))
 	{
 		flag = false;
 	}
@@ -134012,7 +134012,7 @@ void func_1256(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA74A3 (68
 			flag = false;
 	}
 
-	func_313(iParam0, bParam1, iParam2, true);
+	func_313(iParam0, iParam1, iParam2, true);
 
 	if (flag)
 		func_794(&num);
@@ -136738,30 +136738,30 @@ void func_1397() // Position - 0xAA1EA (696810)
 	return;
 }
 
-BOOL func_1398(int iParam0) // Position - 0xAA1F7 (696823)
+int func_1398(int iParam0) // Position - 0xAA1F7 (696823)
 {
-	BOOL flag;
+	int num;
 
 	if (Global_1939321[iParam0 /*8*/] == -1)
 	{
-		flag = func_1210(func_1400(iParam0), -1);
+		num = func_1210(func_1400(iParam0), -1);
 	
-		if (flag == -1)
+		if (num == -1)
 		{
 			func_1399(iParam0, 0);
-			flag = 0;
+			num = 0;
 		}
 	
-		Global_1939321[iParam0 /*8*/] = flag;
+		Global_1939321[iParam0 /*8*/] = num;
 	}
 
 	return Global_1939321[iParam0 /*8*/];
 }
 
-void func_1399(int iParam0, BOOL bParam1) // Position - 0xAA23A (696890)
+void func_1399(int iParam0, int iParam1) // Position - 0xAA23A (696890)
 {
-	Global_1939321[iParam0 /*8*/] = bParam1;
-	func_1256(func_1400(iParam0), bParam1, -1);
+	Global_1939321[iParam0 /*8*/] = iParam1;
+	func_1256(func_1400(iParam0), iParam1, -1);
 	return;
 }
 
