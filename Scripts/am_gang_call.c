@@ -10408,23 +10408,23 @@ int func_300(Any* panParam0) // Position - 0xDB81 (56193)
 	return Global_2696375;
 }
 
-void func_301(int iParam0, Hash hParam1, int iParam2) // Position - 0xDBA4 (56228)
+void func_301(BOOL bParam0, Hash hParam1, int iParam2) // Position - 0xDBA4 (56228)
 {
 	if (func_322())
 	{
-		if (iParam0 >= 1787576850)
-			iParam0 = 1787576850;
+		if (bParam0 >= 1787576850)
+			bParam0 = 1787576850;
 	
 		if (Global_262145.f_10099 == 0 && hParam1 != joaat("XPCATEGORY_KEYS_DEBUG"))
 		{
 			if (iParam2 == 0)
 			{
-				if (iParam0 < func_312(640, -1))
+				if (bParam0 < func_312(640, -1))
 				{
-					STATS::PLAYSTATS_AWARD_XP(iParam0, joaat("XPTYPE_ERROR"), hParam1);
+					STATS::PLAYSTATS_AWARD_XP(bParam0, joaat("XPTYPE_ERROR"), hParam1);
 					return;
 				}
-				else if (iParam0 == func_312(640, -1))
+				else if (bParam0 == func_312(640, -1))
 				{
 					return;
 				}
@@ -10433,9 +10433,9 @@ void func_301(int iParam0, Hash hParam1, int iParam2) // Position - 0xDBA4 (5622
 	
 		if (Global_262145.f_10098 == 0)
 		{
-			if (iParam0 == 0)
+			if (bParam0 == false)
 			{
-				STATS::PLAYSTATS_AWARD_XP(iParam0, -1158693853, -1345423847);
+				STATS::PLAYSTATS_AWARD_XP(bParam0, -1158693853, -1345423847);
 			
 				if (iParam2 == 0)
 					return;
@@ -10444,21 +10444,21 @@ void func_301(int iParam0, Hash hParam1, int iParam2) // Position - 0xDBA4 (5622
 	
 		if (Global_262145.f_10098 == 0)
 		{
-			if (iParam0 < 0)
+			if (bParam0 < false)
 			{
-				STATS::PLAYSTATS_AWARD_XP(iParam0, joaat("XPTYPE_ERROR_NEGATIVE"), hParam1);
+				STATS::PLAYSTATS_AWARD_XP(bParam0, joaat("XPTYPE_ERROR_NEGATIVE"), hParam1);
 				return;
 			}
 		}
 	
 		if (func_311(PLAYER::PLAYER_ID()))
 		{
-			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_206.f_1 = iParam0;
-			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_206.f_6 = func_308(iParam0, true);
+			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_206.f_1 = bParam0;
+			Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_206.f_6 = func_308(bParam0, true);
 		}
 	
-		func_305(640, iParam0, -1, true);
-		func_305(641, func_308(iParam0, true), -1, true);
+		func_305(640, bParam0, -1, true);
+		func_305(641, func_308(bParam0, true), -1, true);
 		func_302(-1109644434, 7, false);
 	}
 
@@ -10514,7 +10514,7 @@ BOOL func_304(int iParam0, BOOL bParam1) // Position - 0xDD18 (56600)
 	return true;
 }
 
-void func_305(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0xDD9E (56734)
+void func_305(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0xDD9E (56734)
 {
 	Hash statName;
 
@@ -10523,7 +10523,7 @@ void func_305(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 		statName = func_306(iParam0, iParam2);
 	
 		if (statName != 0)
-			STATS::STAT_SET_INT(statName, iParam1, bParam3);
+			STATS::STAT_SET_INT(statName, bParam1, bParam3);
 	}
 
 	return;
@@ -10560,13 +10560,13 @@ int func_307(int iParam0) // Position - 0xDDE1 (56801)
 	return num;
 }
 
-int func_308(int iParam0, BOOL bParam1) // Position - 0xDE15 (56853)
+BOOL func_308(BOOL bParam0, BOOL bParam1) // Position - 0xDE15 (56853)
 {
 	bParam1;
-	return func_309(iParam0, 0);
+	return func_309(bParam0, 0);
 }
 
-int func_309(int iParam0, int iParam1) // Position - 0xDE29 (56873)
+int func_309(BOOL bParam0, int iParam1) // Position - 0xDE29 (56873)
 {
 	int i;
 	int value;
@@ -10591,12 +10591,12 @@ int func_309(int iParam0, int iParam1) // Position - 0xDE29 (56873)
 			return num;
 		}
 	
-		if (func_310(num) == iParam0)
+		if (func_310(num) == bParam0)
 		{
 			value = num;
 			value2 = num;
 		}
-		else if (func_310(num) < iParam0)
+		else if (func_310(num) < bParam0)
 		{
 			if (value2 == num)
 				value2 = value2 + 1;
@@ -10620,7 +10620,7 @@ int func_309(int iParam0, int iParam1) // Position - 0xDE29 (56873)
 }
 
 // Unhandled jump detected. Output should be considered invalid
-int func_310(int iParam0) // Position - 0xDEE4 (57060)
+BOOL func_310(int iParam0) // Position - 0xDEE4 (57060)
 {
 	int num;
 	int num2;
@@ -10948,7 +10948,7 @@ BOOL func_311(Player plParam0) // Position - 0xE41F (58399)
 	return IS_BIT_SET(Global_2672942.f_1, plParam0);
 }
 
-int func_312(int iParam0, int iParam1) // Position - 0xE43E (58430)
+BOOL func_312(int iParam0, int iParam1) // Position - 0xE43E (58430)
 {
 	Hash statHash;
 	int outValue;
@@ -10964,7 +10964,7 @@ int func_312(int iParam0, int iParam1) // Position - 0xE43E (58430)
 	return 0;
 }
 
-int func_313(Player plParam0) // Position - 0xE46D (58477)
+BOOL func_313(Player plParam0) // Position - 0xE46D (58477)
 {
 	if (Global_1574633.f_9 == 0)
 		if (plParam0 > -1)
@@ -10975,16 +10975,16 @@ int func_313(Player plParam0) // Position - 0xE46D (58477)
 	else
 		return func_312(640, -1);
 
-	return 0;
+	return false;
 }
 
 void func_314(int iParam0, int iParam1, int iParam2) // Position - 0xE4C4 (58564)
 {
-	int num;
+	BOOL flag;
 
-	num = func_312(iParam0, func_307(iParam2));
-	num = num + iParam1;
-	func_305(iParam0, num, iParam2, true);
+	flag = func_312(iParam0, func_307(iParam2));
+	flag = flag + iParam1;
+	func_305(iParam0, flag, iParam2, true);
 	return;
 }
 
@@ -11141,14 +11141,14 @@ int func_320(int iParam0) // Position - 0xE764 (59236)
 		if (MISC::ABSI(iParam0) > func_313(PLAYER::PLAYER_ID()))
 			iParam0 = -func_313(PLAYER::PLAYER_ID());
 
-	if (func_321(8000, false, 0) > 0)
+	if (func_321(8000, false, 0) > false)
 		if (func_321(8000, false, 0) < iParam0 + func_313(PLAYER::PLAYER_ID()))
 			iParam0 = func_321(8000, false, 0) - func_313(PLAYER::PLAYER_ID());
 
 	return iParam0;
 }
 
-int func_321(int iParam0, BOOL bParam1, int iParam2) // Position - 0xE7C8 (59336)
+BOOL func_321(int iParam0, BOOL bParam1, int iParam2) // Position - 0xE7C8 (59336)
 {
 	iParam2 == 0;
 	bParam1;
@@ -13036,7 +13036,7 @@ eHudColour func_376(Player plParam0, Player plParam1, int iParam2, BOOL bParam3,
 		}
 		else if (Global_1836740 || Global_1836730 || Global_1845270[plParam0 /*892*/] == 0)
 		{
-			if (plParam0 == plParam1 || Global_1836740 == true && Global_1836750 == 0)
+			if (plParam0 == plParam1 || Global_1836740 == true && Global_1836750 == false)
 				return func_370(true);
 			else
 				return func_365(plParam1, true, playerTeam, bParam4);
@@ -15866,9 +15866,9 @@ void func_477() // Position - 0x14146 (82246)
 	Global_22455 = Global_22456;
 	Global_22457 = { Global_22473 };
 	Global_22446 = Global_22447;
-	Global_23458 = 0;
+	Global_23458 = false;
 	Global_22491 = 0;
-	Global_22492 = 0;
+	Global_22492 = false;
 	MISC::CLEAR_BIT(&Global_8920, 16);
 	return;
 }

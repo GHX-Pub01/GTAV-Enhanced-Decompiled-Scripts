@@ -100216,15 +100216,15 @@ void func_473(BOOL bParam0, int iParam1) // Position - 0x6AE34 (437812)
 	return;
 }
 
-void func_474(int iParam0) // Position - 0x6AEFD (438013)
+void func_474(int* piParam0) // Position - 0x6AEFD (438013)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -103777,20 +103777,20 @@ char* func_585(int iParam0, int iParam1) // Position - 0x6F5F2 (456178)
 
 BOOL func_586(int iParam0) // Position - 0x6FAF7 (457463)
 {
-	int* p_num;
 	int num;
+	int num2;
 
-	p_num = func_587(iParam0);
-	num = iParam0;
-	return IS_BIT_SET(p_num, func_236(num));
+	num = func_587(iParam0);
+	num2 = iParam0;
+	return IS_BIT_SET(num, func_236(num2));
 }
 
-int* func_587(int iParam0) // Position - 0x6FB14 (457492)
+int func_587(int iParam0) // Position - 0x6FB14 (457492)
 {
-	int* p_num;
+	var unk;
 
-	p_num = Global_2751072.f_1032[func_239(iParam0)];
-	return p_num;
+	unk = Global_2751072.f_1032[func_239(iParam0)];
+	return unk;
 }
 
 void func_588(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6FB2F (457519)
@@ -120996,47 +120996,47 @@ BOOL func_1008(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x8C0F1 (
 	return flag && flag2;
 }
 
-BOOL func_1009(int iParam0) // Position - 0x8C206 (573958)
+BOOL func_1009(int* piParam0) // Position - 0x8C206 (573958)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_1010() // Position - 0x8C2A8 (574120)

@@ -1639,7 +1639,7 @@ void func_60(int iParam0, int iParam1) // Position - 0x1F08 (7944)
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	Global_114162.f_8617[iParam0] = true;
+	Global_114162.f_8617[iParam0] = 1;
 	Global_114162.f_8617.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }

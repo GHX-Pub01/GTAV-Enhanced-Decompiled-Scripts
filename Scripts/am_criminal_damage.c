@@ -124131,9 +124131,9 @@ int func_501(Player plParam0) // Position - 0xA3B96 (670614)
 	return 0;
 }
 
-BOOL func_502(BOOL bParam0) // Position - 0xA3BB8 (670648)
+BOOL func_502(int iParam0) // Position - 0xA3BB8 (670648)
 {
-	switch (bParam0)
+	switch (iParam0)
 	{
 		case 87:
 		case 88:
@@ -128920,7 +128920,7 @@ void func_728(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) /
 			iParam0 = 23;
 
 	if (iParam0 != 18 && iParam0 != 17)
-		Global_2643601 = false;
+		Global_2643601 = 0;
 
 	Global_2635516.f_491 = iParam0;
 	Global_2635516.f_491.f_1 = SCRIPT::GET_ID_OF_THIS_THREAD();

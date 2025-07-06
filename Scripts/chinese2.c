@@ -25545,7 +25545,7 @@ BOOL func_376(Ped* ppedParam0, eCharacter echParam1, float fParam2, float fParam
 	return false;
 }
 
-int func_377(var uParam0, eCharacter echParam1) // Position - 0x25353 (152403)
+int func_377(Entity eParam0, eCharacter echParam1) // Position - 0x25353 (152403)
 {
 	int num;
 
@@ -25569,7 +25569,7 @@ int func_377(var uParam0, eCharacter echParam1) // Position - 0x25353 (152403)
 		return 0;
 	}
 
-	Global_97522[num - 3] = uParam0;
+	Global_97522[num - 3] = eParam0;
 	return 1;
 }
 

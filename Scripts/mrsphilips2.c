@@ -34209,7 +34209,7 @@ void func_217(int iParam0, BOOL bParam1) // Position - 0x27BDA (162778)
 	else
 		MISC::CLEAR_BIT(&Global_112797, iParam0);
 
-	Global_112796 = 1;
+	Global_112796 = true;
 	return;
 }
 
@@ -36638,7 +36638,7 @@ BOOL func_240(Player plParam0, int iParam1) // Position - 0x2C768 (182120)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_241(-1, false) == 8;
+		flag = func_241(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -36649,28 +36649,28 @@ BOOL func_240(Player plParam0, int iParam1) // Position - 0x2C768 (182120)
 	return flag;
 }
 
-int func_241(int iParam0, BOOL bParam1) // Position - 0x2C7C1 (182209)
+eCharacter func_241(int iParam0, BOOL bParam1) // Position - 0x2C7C1 (182209)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_45();
+	if (num == -1)
+		num = func_45();
 
-	if (Global_1575066[num2] == true)
+	if (Global_1575066[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574920[num2];
+		character = Global_1574920[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 BOOL func_242(ePedComponentType epctParam0) // Position - 0x2C802 (182274)

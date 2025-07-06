@@ -87794,7 +87794,7 @@ void func_388(int iParam0) // Position - 0x68B0F (428815)
 	return;
 }
 
-void func_389(char* sParam0) // Position - 0x68C44 (429124)
+void func_389(const char* sParam0) // Position - 0x68C44 (429124)
 {
 	int i;
 
@@ -87834,7 +87834,7 @@ BOOL func_390(int iParam0) // Position - 0x68CF3 (429299)
 	return false;
 }
 
-void func_391(char* sParam0, int iParam1) // Position - 0x68D48 (429384)
+void func_391(const char* sParam0, int iParam1) // Position - 0x68D48 (429384)
 {
 	int i;
 
@@ -101341,7 +101341,7 @@ BOOL func_636(int iParam0, BOOL bParam1) // Position - 0x7E079 (516217)
 
 	if (num > -1 && num < 6)
 	{
-		if (Global_44959[num /*32*/] == true && Global_44959[num /*32*/].f_4 == 1)
+		if (Global_44959[num /*32*/] == true && Global_44959[num /*32*/].f_4 == true)
 		{
 			if (bParam1)
 				if (Global_44959[num /*32*/].f_29)

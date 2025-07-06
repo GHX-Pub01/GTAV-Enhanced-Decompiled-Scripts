@@ -122391,7 +122391,7 @@ void func_981(int iParam0) // Position - 0x99DD4 (630228)
 	{
 		if (iParam0 == Global_98610)
 		{
-			Global_98614 = 1;
+			Global_98614 = true;
 			return;
 		}
 	}

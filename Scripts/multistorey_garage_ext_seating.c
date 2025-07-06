@@ -2566,7 +2566,7 @@ int func_101(int iParam0, BOOL bParam1) // Position - 0x2A53 (10835)
 	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		num = 8;
+		num = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{

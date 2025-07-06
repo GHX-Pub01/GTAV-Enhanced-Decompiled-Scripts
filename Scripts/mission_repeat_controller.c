@@ -305,7 +305,7 @@ void func_7(eCharacter echParam0) // Position - 0x2A3 (675)
 
 	if (Global_98610 == echParam0)
 		if (echParam0 != CHAR_MP_STRETCH)
-			Global_98614 = 1;
+			Global_98614 = true;
 
 	func_62("TRIG_FT" /*Return as Franklin or Trevor to start this mission.*/, 1);
 	func_62("TRIG_F" /*Return as Franklin to start this mission.*/, true);
@@ -1382,7 +1382,7 @@ void func_59() // Position - 0x159E (5534)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
+				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
 					func_60(Global_98621[i /*17*/].f_5, true);
 	}
 
@@ -97621,14 +97621,14 @@ void func_617(int iParam0) // Position - 0x7AC60 (502880)
 	return;
 }
 
-void func_618(int iParam0) // Position - 0x7AE42 (503362)
+void func_618(eCharacter echParam0) // Position - 0x7AE42 (503362)
 {
-	if (iParam0 >= 94)
+	if (echParam0 >= CHAR_BROKEN_DOWN_GIRL)
 		return;
 
 	if (Global_97535 != -1)
 	{
-		if (Global_97535 != iParam0)
+		if (Global_97535 != echParam0)
 			return;
 	
 		Global_97535 = -1;
@@ -101802,7 +101802,7 @@ int func_660(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 		if (!func_663())
 			func_661();
 	
-		Global_98607 = 0;
+		Global_98607 = false;
 		return 1;
 	}
 	else
@@ -119869,8 +119869,8 @@ void func_861() // Position - 0x9FA44 (653892)
 	Global_98614 = false;
 	Global_98615 = 0;
 	Global_98616 = false;
-	Global_98546 = 0;
-	Global_98547 = 0;
+	Global_98546 = false;
+	Global_98547 = false;
 	Global_98549 = -15;
 	Global_23847 = 0;
 

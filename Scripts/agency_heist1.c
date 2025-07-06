@@ -1027,8 +1027,8 @@
 	int iLocal_1025 = 0;
 	char* sLocal_1026 = 0;
 	char* sLocal_1027 = 0;
-	Object obLocal_1028 = 0;
-	Object obLocal_1029 = 0;
+	Object* pobLocal_1028 = 0;
+	Entity eLocal_1029 = 0;
 	Hash hLocal_1030 = 0;
 	var uLocal_1031 = 0;
 	var uLocal_1032 = 0;
@@ -6109,8 +6109,8 @@ void func_91() // Position - 0x7054 (28756)
 			break;
 	
 		case 101:
-			if (ENTITY::DOES_ENTITY_EXIST(obLocal_1028))
-				OBJECT::DELETE_OBJECT(&obLocal_1028);
+			if (ENTITY::DOES_ENTITY_EXIST(pobLocal_1028))
+				OBJECT::DELETE_OBJECT(&pobLocal_1028);
 		
 			if (AUDIO::IS_AUDIO_SCENE_ACTIVE("AGENCY_H_1_DRIVE_TO_FACTORY"))
 				AUDIO::STOP_AUDIO_SCENE("AGENCY_H_1_DRIVE_TO_FACTORY");
@@ -6173,7 +6173,7 @@ void func_91() // Position - 0x7054 (28756)
 
 	if (!PED::IS_PED_INJURED(pedLocal_1004))
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(obLocal_1028))
+		if (!ENTITY::DOES_ENTITY_EXIST(pobLocal_1028))
 		{
 			if (iLocal_906 < 100)
 			{
@@ -6183,21 +6183,21 @@ void func_91() // Position - 0x7054 (28756)
 				
 					if (STREAMING::HAS_MODEL_LOADED(joaat("prop_cs_walking_stick")))
 					{
-						obLocal_1028 = OBJECT::CREATE_OBJECT(joaat("prop_cs_walking_stick"), ENTITY::GET_ENTITY_COORDS(pedLocal_1004, false), true, true, false);
-						ENTITY::SET_ENTITY_VISIBLE(obLocal_1028, false, false);
-						ENTITY::ATTACH_ENTITY_TO_ENTITY(obLocal_1028, pedLocal_1004, PED::GET_PED_BONE_INDEX(pedLocal_1004, 28422), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true, 0);
+						pobLocal_1028 = OBJECT::CREATE_OBJECT(joaat("prop_cs_walking_stick"), ENTITY::GET_ENTITY_COORDS(pedLocal_1004, false), true, true, false);
+						ENTITY::SET_ENTITY_VISIBLE(pobLocal_1028, false, false);
+						ENTITY::ATTACH_ENTITY_TO_ENTITY(pobLocal_1028, pedLocal_1004, PED::GET_PED_BONE_INDEX(pedLocal_1004, 28422), 0f, 0f, 0f, 0f, 0f, 0f, false, false, false, false, 2, true, 0);
 					}
 				}
 			}
 		}
-		else if (ENTITY::IS_ENTITY_VISIBLE(obLocal_1028))
+		else if (ENTITY::IS_ENTITY_VISIBLE(pobLocal_1028))
 		{
 			if (PED::IS_PED_IN_ANY_VEHICLE(pedLocal_1004, false))
-				ENTITY::SET_ENTITY_VISIBLE(obLocal_1028, false, false);
+				ENTITY::SET_ENTITY_VISIBLE(pobLocal_1028, false, false);
 		}
 		else if (!PED::IS_PED_IN_ANY_VEHICLE(pedLocal_1004, false))
 		{
-			ENTITY::SET_ENTITY_VISIBLE(obLocal_1028, true, false);
+			ENTITY::SET_ENTITY_VISIBLE(pobLocal_1028, true, false);
 		}
 	}
 
@@ -31880,9 +31880,9 @@ void func_173(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-int func_174(ePedComponentType epctParam0) // Position - 0x2268D (140941)
+int func_174(int iParam0) // Position - 0x2268D (140941)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 0:
 			return 0;
@@ -35052,7 +35052,7 @@ void func_218(Ped pedParam0, BOOL bParam1) // Position - 0x271A8 (160168)
 	eCharacter character;
 	int num;
 	var unk;
-	ePedComponentType i;
+	int i;
 
 	if (!PED::IS_PED_INJURED(pedParam0))
 	{
@@ -35089,12 +35089,12 @@ void func_218(Ped pedParam0, BOOL bParam1) // Position - 0x271A8 (160168)
 					Global_114162.f_2367.f_539[character /*65*/] = { unk };
 					Global_114162.f_2367.f_539.f_2391[character] = func_219(pedParam0);
 				
-					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
+					for (i = 0; i < 12; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_206(pedParam0, func_174(i));
 					}
 				
-					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
+					for (i = 0; i < 12; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_206(pedParam0, func_174(i));
 					}
@@ -63430,7 +63430,7 @@ void func_365(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 	int i;
 	Hash nameHash;
 	int enumValue;
-	ePedComponentType componentType;
+	int componentType;
 	int num;
 	int num2;
 	int address;
@@ -63472,7 +63472,7 @@ void func_365(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 					if (num < Global_4540932)
 					{
 						Global_4540932[num] = -1;
-						Global_4540943[num] = PV_COMP_INVALID;
+						Global_4540943[num] = -1;
 					}
 				
 					EXTRAMETADATA::GET_VARIANT_COMPONENT(Global_2883588, i, &nameHash, &enumValue, &componentType);
@@ -98226,26 +98226,26 @@ BOOL func_578() // Position - 0x79F0E (499470)
 	return true;
 }
 
-BOOL func_579(Player plParam0) // Position - 0x79F9D (499613)
+BOOL func_579(int iParam0) // Position - 0x79F9D (499613)
 {
-	Player player;
+	int num;
 
-	player = plParam0;
+	num = iParam0;
 
-	if (player != -1)
-		return Global_1882925[player /*149*/].f_82.f_66 != 0;
+	if (num != -1)
+		return Global_1882925[num /*149*/].f_82.f_66 != 0;
 
 	return false;
 }
 
-BOOL func_580(Player plParam0) // Position - 0x79FC1 (499649)
+BOOL func_580(int iParam0) // Position - 0x79FC1 (499649)
 {
-	Player player;
+	int num;
 
-	player = plParam0;
+	num = iParam0;
 
-	if (player != -1)
-		return func_77(plParam0, 9);
+	if (num != -1)
+		return func_77(iParam0, 9);
 
 	return false;
 }
@@ -107591,7 +107591,7 @@ void func_764() // Position - 0x8986D (563309)
 				bLocal_48 = false;
 				iLocal_906 = -1;
 			}
-			else if (!ENTITY::DOES_ENTITY_EXIST(obLocal_1029) || !ENTITY::DOES_ENTITY_EXIST(obLocal_1028) || !ENTITY::DOES_ENTITY_EXIST(pedLocal_1004))
+			else if (!ENTITY::DOES_ENTITY_EXIST(eLocal_1029) || !ENTITY::DOES_ENTITY_EXIST(pobLocal_1028) || !ENTITY::DOES_ENTITY_EXIST(pedLocal_1004))
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[0]) && !ENTITY::DOES_ENTITY_EXIST(pedLocal_1004))
 				{
@@ -107600,17 +107600,17 @@ void func_764() // Position - 0x8986D (563309)
 					Global_98185.f_9[0] = 0;
 				}
 			
-				if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_28[0]) && !ENTITY::DOES_ENTITY_EXIST(obLocal_1029))
+				if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_28[0]) && !ENTITY::DOES_ENTITY_EXIST(eLocal_1029))
 				{
 					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_98185.f_28[0], true, true);
-					obLocal_1029 = Global_98185.f_28[0];
+					eLocal_1029 = Global_98185.f_28[0];
 					Global_98185.f_28[0] = 0;
 				}
 			
-				if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_28[1]) && !ENTITY::DOES_ENTITY_EXIST(obLocal_1028))
+				if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_28[1]) && !ENTITY::DOES_ENTITY_EXIST(pobLocal_1028))
 				{
 					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_98185.f_28[1], true, true);
-					obLocal_1028 = Global_98185.f_28[1];
+					pobLocal_1028 = Global_98185.f_28[1];
 					Global_98185.f_28[1] = 0;
 				}
 			}
@@ -107684,11 +107684,11 @@ void func_764() // Position - 0x8986D (563309)
 				}
 			}
 		
-			if (ENTITY::DOES_ENTITY_EXIST(obLocal_1029))
-				OBJECT::DELETE_OBJECT(&obLocal_1029);
+			if (ENTITY::DOES_ENTITY_EXIST(eLocal_1029))
+				OBJECT::DELETE_OBJECT(&eLocal_1029);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(obLocal_1028))
-				OBJECT::DELETE_OBJECT(&obLocal_1028);
+			if (ENTITY::DOES_ENTITY_EXIST(pobLocal_1028))
+				OBJECT::DELETE_OBJECT(&pobLocal_1028);
 		
 			iLocal_906 = iLocal_906 + 1;
 			break;

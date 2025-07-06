@@ -8310,11 +8310,11 @@ void func_324() // Position - 0x9885 (39045)
 	Global_1836725 = 0;
 	Global_1836517 = false;
 	Global_1836519 = 0;
-	Global_1836227 = false;
+	Global_1836227 = 0;
 	Global_1836760 = false;
 	Global_1836754 = 0;
 	Global_1836535 = -1;
-	Global_1836518 = PV_COMP_INVALID;
+	Global_1836518 = -1;
 	Global_1836530 = false;
 	Global_1836228 = 0;
 	Global_1845116 = -1;
@@ -8330,7 +8330,7 @@ void func_324() // Position - 0x9885 (39045)
 	Global_1929281 = false;
 	Global_1836730 = false;
 	Global_1836722 = 0;
-	Global_1882083 = false;
+	Global_1882083 = 0;
 	Global_1882084 = 0;
 	Global_1882085 = 0;
 	Global_1882086 = 0;
@@ -8467,10 +8467,10 @@ void func_326() // Position - 0x9BA2 (39842)
 void func_327(BOOL bParam0) // Position - 0x9BC7 (39879)
 {
 	if (bParam0)
-		if (Global_1836226 == false)
-			Global_1836226 = true;
-	else if (Global_1836226 == true)
-		Global_1836226 = false;
+		if (Global_1836226 == 0)
+			Global_1836226 = 1;
+	else if (Global_1836226 == 1)
+		Global_1836226 = 0;
 
 	return;
 }
@@ -8635,9 +8635,9 @@ void func_343(int iParam0) // Position - 0x9D7E (40318)
 void func_344(int iParam0) // Position - 0x9D99 (40345)
 {
 	if (iParam0 == 1)
-		Global_1574601 = true;
+		Global_1574601 = 1;
 	else
-		Global_1574601 = false;
+		Global_1574601 = 0;
 
 	return;
 }

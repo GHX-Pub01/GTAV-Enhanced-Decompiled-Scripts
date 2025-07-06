@@ -2277,7 +2277,7 @@ void func_67(var uParam0) // Position - 0x1E3F (7743)
 	Global_44160 = 0;
 	Global_44162 = 0;
 	Global_44199 = 15;
-	Global_64323 = false;
+	Global_64323 = 0;
 	Global_64324 = 0;
 	return;
 }

@@ -125273,7 +125273,7 @@ BOOL func_1553(int* piParam0, int iParam1, var uParam2, int iParam3, BOOL bParam
 			if (IS_BIT_SET(uParam2->f_33, 0))
 			{
 				Global_1836504 = iParam3;
-				Global_1836503 = 1;
+				Global_1836503 = true;
 				HUD::THEFEED_SET_SCRIPTED_MENU_HEIGHT(pos);
 			
 				if (flag)
@@ -126242,7 +126242,7 @@ void func_1581(int* piParam0, var uParam1, BOOL bParam2) // Position - 0xA9A50 (
 	MISC::CLEAR_BIT(&(uParam1->f_33), 7);
 	Global_1836504 = 0;
 	func_1489();
-	Global_1836503 = 0;
+	Global_1836503 = false;
 	uParam1->f_27 = 0;
 
 	if (bParam2)

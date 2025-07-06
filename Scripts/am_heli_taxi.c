@@ -13919,15 +13919,15 @@ void func_402(BOOL bParam0, int iParam1) // Position - 0x10AF0 (68336)
 	return;
 }
 
-void func_403(int iParam0) // Position - 0x10BB6 (68534)
+void func_403(int* piParam0) // Position - 0x10BB6 (68534)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -14296,7 +14296,7 @@ void func_414(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	{
 		if (Global_23987.f_5821 <= 1)
 		{
-			func_447(Global_23987.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, true, 0, false, 0);
+			func_447(Global_23987.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, true, false, false, false);
 			Global_23987.f_6617 = 1;
 		}
 	}
@@ -16904,7 +16904,7 @@ char* func_446(int iParam0) // Position - 0x15693 (87699)
 	return "CommonMenu";
 }
 
-void func_447(int iParam0, char* sParam1, int iParam2, BOOL bParam3, int iParam4, BOOL bParam5, int iParam6) // Position - 0x15708 (87816)
+void func_447(int iParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x15708 (87816)
 {
 	int num;
 	float num2;
@@ -16947,8 +16947,8 @@ void func_447(int iParam0, char* sParam1, int iParam2, BOOL bParam3, int iParam4
 	TEXT_LABEL_ASSIGN_STRING(&Global_23987.f_79[Global_23987.f_5823 /*6*/], sParam1, 24);
 	!MISC::IS_STRING_NULL_OR_EMPTY(sParam1) && !HUD::DOES_TEXT_LABEL_EXIST(sParam1);
 	Global_23987.f_1616[Global_23987.f_5823] = bParam3;
-	Global_23987.f_1873[Global_23987.f_5823] = iParam4;
-	Global_23987.f_2130[Global_23987.f_5823] = iParam6;
+	Global_23987.f_1873[Global_23987.f_5823] = bParam4;
+	Global_23987.f_2130[Global_23987.f_5823] = bParam6;
 	Global_23987.f_5823 = Global_23987.f_5823 + 1;
 
 	if (!bParam3)
@@ -17444,7 +17444,7 @@ void func_462() // Position - 0x16267 (90727)
 				else
 					flag = false;
 			
-				func_447(iLocal_137, func_465(uLocal_145[i]), 0, flag, 0, false, 0);
+				func_447(iLocal_137, func_465(uLocal_145[i]), 0, flag, false, false, false);
 				iLocal_137 = iLocal_137 + 1;
 			}
 		}
@@ -17454,7 +17454,7 @@ void func_462() // Position - 0x16267 (90727)
 
 	if (func_384(PLAYER::PLAYER_ID()))
 	{
-		func_447(iLocal_137, func_464(func_385(PLAYER::PLAYER_ID())), 0, bLocal_153, 0, false, 0);
+		func_447(iLocal_137, func_464(func_385(PLAYER::PLAYER_ID())), 0, bLocal_153, false, false, false);
 		iLocal_139 = iLocal_137;
 		iLocal_137 = iLocal_137 + 1;
 	}
@@ -18368,47 +18368,47 @@ BOOL func_474(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x17421 (9
 	return flag && flag2;
 }
 
-BOOL func_475(int iParam0) // Position - 0x1752F (95535)
+BOOL func_475(int* piParam0) // Position - 0x1752F (95535)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_476(var uParam0) // Position - 0x175D1 (95697)

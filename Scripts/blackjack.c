@@ -15587,15 +15587,15 @@ void func_255(BOOL bParam0, int iParam1) // Position - 0x14E8B (85643)
 	return;
 }
 
-void func_256(int iParam0) // Position - 0x14F51 (85841)
+void func_256(int* piParam0) // Position - 0x14F51 (85841)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -15651,8 +15651,8 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	int b;
 	int a;
 	int i;
-	ePedComponentType numberOfLinesForString;
-	ePedComponentType j;
+	BOOL numberOfLinesForString;
+	BOOL j;
 	int k;
 	int num2;
 	int num3;
@@ -15711,7 +15711,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	float num42;
 	float size;
 	float size2;
-	ePedComponentType type;
+	BOOL flag8;
 	float num43;
 	float num44;
 	int m;
@@ -15900,7 +15900,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			while (num2 < Global_23987.f_5828 && numberOfLinesForString <= Global_23987.f_5821)
 			{
-				if (numberOfLinesForString >= PV_COMP_HEAD)
+				if (numberOfLinesForString >= false)
 				{
 					if (Global_23987.f_6088[numberOfLinesForString])
 					{
@@ -16382,15 +16382,15 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 			num4 = 0;
 			num5 = 0;
 			num6 = 0;
-			type = Global_23987.f_5821;
+			flag8 = Global_23987.f_5821;
 		
 			if (Global_23987.f_6332)
-				type = Global_23987.f_6335 - 1;
+				flag8 = Global_23987.f_6335 - 1;
 		
 			num43 = 0f;
 			num44 = 0f;
 		
-			for (j = PV_COMP_HEAD; j <= type; j = j + 1)
+			for (j = false; j <= flag8; j = j + 1)
 			{
 				num37 = 0.034722f;
 			
@@ -18757,7 +18757,7 @@ void func_308(char* sParam0, int iParam1, int iParam2) // Position - 0x19EF9 (10
 
 void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106334)
 {
-	ePedComponentType i;
+	BOOL i;
 	int num;
 
 	Global_23987.f_6342 = iParam0;
@@ -18771,7 +18771,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 	{
 		for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 		{
-			if (i >= PV_COMP_HEAD && i < 127)
+			if (i >= false && i < 127)
 				if (Global_23987.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -18783,7 +18783,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 		
 			for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 			{
-				if (i >= PV_COMP_HEAD && i < 127)
+				if (i >= false && i < 127)
 					if (Global_23987.f_5692[i] != 0)
 						num = num + 1;
 			}
@@ -19084,47 +19084,47 @@ BOOL func_315(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1A643 (1
 	return flag && flag2;
 }
 
-BOOL func_316(int iParam0) // Position - 0x1A751 (108369)
+BOOL func_316(int* piParam0) // Position - 0x1A751 (108369)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_317(int iParam0) // Position - 0x1A7F3 (108531)

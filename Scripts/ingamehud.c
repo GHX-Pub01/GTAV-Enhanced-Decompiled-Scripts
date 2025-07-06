@@ -12660,7 +12660,7 @@ void func_143(ePedComponentType epctParam0, Player plParam1) // Position - 0xE70
 			func_100(8802, epctParam0, -1, true);
 		}
 	
-		if (Global_262145.f_27991 != PV_COMP_INVALID && func_147(PLAYER::PLAYER_ID()) == Global_262145.f_27991)
+		if (Global_262145.f_27991 != -1 && func_147(PLAYER::PLAYER_ID()) == Global_262145.f_27991)
 			if (!IS_BIT_SET(address, 17) && func_146(PLAYER::PLAYER_ID(), 0))
 				MISC::SET_BIT(&address, 17);
 	

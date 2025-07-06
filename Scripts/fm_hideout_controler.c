@@ -12368,14 +12368,14 @@ void func_253(Vehicle veParam0, int iParam1, var uParam2, var uParam3, var uPara
 	return;
 }
 
-void func_254(Vehicle veParam0, int iParam1, int iParam2, Hash hParam3, int iParam4) // Position - 0xE85F (59487)
+void func_254(Vehicle veParam0, int iParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0xE85F (59487)
 {
 	if (iParam1 > 3 || iParam1 < 0)
 		return;
 
-	switch (hParam3)
+	switch (bParam3)
 	{
-		case 1:
+		case true:
 			VEHICLE::SET_VEHICLE_COLOURS(veParam0, 0, 0);
 			break;
 	
@@ -174019,15 +174019,15 @@ void func_2187(BOOL bParam0, int iParam1) // Position - 0xE9B16 (957206)
 	return;
 }
 
-void func_2188(int iParam0) // Position - 0xE9BDF (957407)
+void func_2188(int* piParam0) // Position - 0xE9BDF (957407)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;

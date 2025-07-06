@@ -6462,7 +6462,7 @@ BOOL func_213(int* piParam0, int* piParam1) // Position - 0x6A28 (27176)
 			
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1929777);
 				Global_1929778 = false;
-				Global_1929780 = 0;
+				Global_1929780 = false;
 				Global_1929779 = false;
 				Global_1929781 = 0;
 				piParam0->f_19 = { 0f, 0f, 0f };
@@ -30943,15 +30943,15 @@ void func_758(BOOL bParam0, int iParam1) // Position - 0x27FC9 (163785)
 	return;
 }
 
-void func_759(int iParam0) // Position - 0x28091 (163985)
+void func_759(int* piParam0) // Position - 0x28091 (163985)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;

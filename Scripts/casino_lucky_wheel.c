@@ -2700,15 +2700,15 @@ void func_103(BOOL bParam0, int iParam1) // Position - 0x212E (8494)
 	return;
 }
 
-void func_104(int iParam0) // Position - 0x21F4 (8692)
+void func_104(int* piParam0) // Position - 0x21F4 (8692)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -9061,7 +9061,7 @@ void func_262(int iParam0) // Position - 0xA2FE (41726)
 				{
 					if (i == Global_8926[num /*15*/].f_4)
 					{
-						if (Global_9520[i] == 0)
+						if (Global_9520[i] == false)
 						{
 							Global_9482[i] = num;
 						
@@ -9092,7 +9092,7 @@ void func_262(int iParam0) // Position - 0xA2FE (41726)
 								if (num == 14)
 									func_263(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_8926[num /*15*/].f_10), BUILTIN::TO_FLOAT(Global_23505), -1f, &Global_8926[num /*15*/], 0, 0, 0, 0);
 						
-							Global_9520[i] = 1;
+							Global_9520[i] = true;
 						}
 					}
 				}
@@ -9108,7 +9108,7 @@ void func_262(int iParam0) // Position - 0xA2FE (41726)
 				{
 					if (i == Global_8926[num /*15*/].f_4)
 					{
-						if (Global_9520[i] == 0)
+						if (Global_9520[i] == false)
 						{
 							Global_9482[i] = num;
 						
@@ -9250,7 +9250,7 @@ void func_262(int iParam0) // Position - 0xA2FE (41726)
 								func_263(Global_21064, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_8926[num /*15*/].f_10), BUILTIN::TO_FLOAT(0), -1f, &Global_8926[num /*15*/], 0, 0, 0, 0);
 							}
 						
-							Global_9520[i] = 1;
+							Global_9520[i] = true;
 						}
 					}
 				}
@@ -9317,7 +9317,7 @@ void func_266() // Position - 0xA958 (43352)
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_9520[i] = 0;
+		Global_9520[i] = false;
 	}
 
 	return;
@@ -14070,7 +14070,7 @@ void func_291(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posit
 					if (Global_21083 != echParam1)
 					{
 						Global_9612[echParam1 /*4*/] = { _GET_CHARACTER_NAME(echParam0) };
-						Global_9629[echParam1] = 1;
+						Global_9629[echParam1] = true;
 						Global_9634[echParam1] = echParam0;
 					}
 					else if (echParam0 == Global_21083)
@@ -58576,47 +58576,47 @@ BOOL func_725(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x463A8 (2
 	return flag && flag2;
 }
 
-BOOL func_726(int iParam0) // Position - 0x464B6 (287926)
+BOOL func_726(int* piParam0) // Position - 0x464B6 (287926)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_727(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x46558 (288088)

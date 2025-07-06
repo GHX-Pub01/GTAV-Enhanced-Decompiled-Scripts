@@ -618,12 +618,12 @@ void func_7() // Position - 0xCE7 (3303)
 	return;
 }
 
-int func_8(int iParam0, eCharacter echParam1) // Position - 0xD17 (3351)
+int func_8(eCharacter echParam0, eCharacter echParam1) // Position - 0xD17 (3351)
 {
 	if (echParam1 < CHAR_MICHAEL || echParam1 > CHAR_ALL_PLAYERS_CONF)
 		return 0;
 
-	return Global_2201[iParam0 /*29*/].f_24[echParam1];
+	return Global_2201[echParam0 /*29*/].f_24[echParam1];
 }
 
 void func_9(char* sParam0) // Position - 0xD41 (3393)
@@ -4883,7 +4883,7 @@ BOOL func_95() // Position - 0x5B7E (23422)
 	{
 		if (Global_21083.f_1 == 10 || Global_21083.f_1 == 9)
 			if (Global_21026 == false)
-				if (Global_8234 != 128)
+				if (Global_8234 != _CHAR_DETONATEBOMB_2)
 					if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 						Global_22442 != 2;
 	

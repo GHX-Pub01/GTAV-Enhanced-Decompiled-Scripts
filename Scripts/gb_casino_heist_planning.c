@@ -1686,15 +1686,15 @@ void func_65(BOOL bParam0, int iParam1) // Position - 0x17BA (6074)
 	return;
 }
 
-void func_66(int iParam0) // Position - 0x1880 (6272)
+void func_66(int* piParam0) // Position - 0x1880 (6272)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;
@@ -4943,7 +4943,7 @@ char* func_124(var uParam0) // Position - 0x68ED (26861)
 					return "CH_DP_FB_D_4" /*Lester will have this optional disguise stashed inside the Casino for you after robbing the vault. It can be used to avoid detection when escaping and will allow you to walk out the Casino Main Entrance.*/;
 			
 				case 15:
-					if (func_125(uParam0->f_4356) == PV_COMP_HAIR && uParam0->f_1497.f_1020 != 4)
+					if (func_125(uParam0->f_4356) == 2 && uParam0->f_1497.f_1020 != 4)
 						return "CH_DP_FB_D_5b" /*This is your unmarked weapon loadout. You will have access to the Ceramic Pistol from the start but Lester will have your other weapon stashed inside the Casino so your cover is not blown when passing through any initial metal detectors.*/;
 				
 					return "CH_DP_FB_D_5" /*This is the unmarked weapon loadout that will be available to you during The Diamond Casino Heist.*/;
@@ -4957,13 +4957,13 @@ char* func_124(var uParam0) // Position - 0x68ED (26861)
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_FB_D_8a" /*This is the equipment you have acquired:~n~- Nano Drone~n~- Vault Laser~n~- Vault Key Cards*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return "CH_DP_FB_D_8b" /*This is the equipment you have acquired:~n~- Entry Disguise(s)~n~- Vault Drill~n~- Vault Key Cards*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_FB_D_8c" /*This is the equipment you have acquired:~n~- Thermal/Breaching Charges~n~- Vault Explosives~n~- Vault Key Cards*/;
 					
 						default:
@@ -4983,12 +4983,12 @@ char* func_124(var uParam0) // Position - 0x68ED (26861)
 	return "";
 }
 
-ePedComponentType func_125(Player plParam0) // Position - 0x69F9 (27129)
+int func_125(Player plParam0) // Position - 0x69F9 (27129)
 {
 	if (plParam0 != -1)
 		return Global_1971261[plParam0 /*68*/].f_18.f_4;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 void func_126(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6A17 (27159)
@@ -5156,29 +5156,29 @@ void func_131(char* sParam0) // Position - 0x6D08 (27912)
 	return;
 }
 
-char* func_132(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x6D69 (28009)
+char* func_132(int iParam0, BOOL bParam1) // Position - 0x6D69 (28009)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
-		case PV_COMP_HEAD:
+		case 0:
 			if (!bParam1)
 				return "CH_TARGET_0b" /*Cash*/;
 		
 			return "CH_TARGET_0" /*CASH*/;
 	
-		case PV_COMP_BERD:
+		case 1:
 			if (!bParam1)
 				return "CH_TARGET_1b" /*Gold*/;
 		
 			return "CH_TARGET_1" /*GOLD*/;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			if (!bParam1)
 				return "CH_TARGET_2b" /*Artwork*/;
 		
 			return "CH_TARGET_2" /*ARTWORK*/;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			if (!bParam1)
 				return "CH_TARGET_3b" /*Diamonds*/;
 		
@@ -5191,12 +5191,12 @@ char* func_132(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x6D69 
 	return "";
 }
 
-ePedComponentType func_133(int iParam0) // Position - 0x6DE3 (28131)
+int func_133(int iParam0) // Position - 0x6DE3 (28131)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_7;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_134(var uParam0) // Position - 0x6E01 (28161)
@@ -5395,9 +5395,9 @@ char* func_144(var uParam0, int iParam1) // Position - 0x705E (28766)
 	return "";
 }
 
-char* func_145(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x709D (28829)
+char* func_145(int iParam0, BOOL bParam1) // Position - 0x709D (28829)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 1:
 			if (!bParam1)
@@ -5666,7 +5666,7 @@ BOOL func_156(Player plParam0, int iParam1) // Position - 0x752F (29999)
 			break;
 	
 		case 4:
-			if (func_165(plParam0, false) == PV_COMP_HAND)
+			if (func_165(plParam0, false) == 5)
 				return false;
 		
 			if (func_164(plParam0) && func_159(plParam0, func_163(plParam0)))
@@ -5710,7 +5710,7 @@ BOOL func_159(ePedComponentType epctParam0, ePedComponentType epctParam1) // Pos
 	{
 		num = func_160(epctParam0, epctParam1);
 	
-		if (Global_1845270[epctParam0 /*892*/].f_268.f_199[num /*13*/].f_4 > PV_COMP_HEAD && Global_1845270[epctParam0 /*892*/].f_268.f_199[num /*13*/].f_7)
+		if (Global_1845270[epctParam0 /*892*/].f_268.f_199[num /*13*/].f_4 > false && Global_1845270[epctParam0 /*892*/].f_268.f_199[num /*13*/].f_7)
 			return 1;
 	}
 
@@ -5770,16 +5770,16 @@ BOOL func_164(ePedComponentType epctParam0) // Position - 0x776B (30571)
 	return func_163(epctParam0) != PV_COMP_HEAD;
 }
 
-ePedComponentType func_165(Player plParam0, BOOL bParam1) // Position - 0x777B (30587)
+int func_165(Player plParam0, BOOL bParam1) // Position - 0x777B (30587)
 {
 	if (plParam0 != -1)
-		if (Global_1971261[plParam0 /*68*/].f_18.f_12 != PV_COMP_HEAD || !bParam1)
+		if (Global_1971261[plParam0 /*68*/].f_18.f_12 != 0 || !bParam1)
 			return Global_1971261[plParam0 /*68*/].f_18.f_12;
 
 	if (bParam1)
 		return Global_1966864.f_15;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_166(Player plParam0) // Position - 0x77C4 (30660)
@@ -5934,9 +5934,9 @@ BOOL func_170(var uParam0, int iParam1) // Position - 0x7986 (31110)
 	return false;
 }
 
-BOOL func_171(ePedComponentType epctParam0) // Position - 0x79FE (31230)
+BOOL func_171(int iParam0) // Position - 0x79FE (31230)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 1:
 			return Global_262145.f_28369;
@@ -5960,9 +5960,9 @@ BOOL func_171(ePedComponentType epctParam0) // Position - 0x79FE (31230)
 	return 0;
 }
 
-BOOL func_172(ePedComponentType epctParam0) // Position - 0x7A5E (31326)
+BOOL func_172(int iParam0) // Position - 0x7A5E (31326)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 1:
 			return Global_262145.f_28364;
@@ -5986,9 +5986,9 @@ BOOL func_172(ePedComponentType epctParam0) // Position - 0x7A5E (31326)
 	return 0;
 }
 
-BOOL func_173(ePedComponentType epctParam0) // Position - 0x7ABE (31422)
+BOOL func_173(int iParam0) // Position - 0x7ABE (31422)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 1:
 			return Global_262145.f_28359;
@@ -6054,7 +6054,7 @@ BOOL func_175(ePedComponentType epctParam0, int iParam1) // Position - 0x7B7C (3
 			break;
 	
 		case 5:
-			if (func_176(epctParam0, false) == PV_COMP_LOWR)
+			if (func_176(epctParam0, false) == 4)
 				return 0;
 		
 			if (func_164(epctParam0) && func_159(epctParam0, func_163(epctParam0)))
@@ -6068,16 +6068,16 @@ BOOL func_175(ePedComponentType epctParam0, int iParam1) // Position - 0x7B7C (3
 	return 0;
 }
 
-ePedComponentType func_176(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x7C29 (31785)
+int func_176(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x7C29 (31785)
 {
 	if (epctParam0 != -1)
-		if (Global_1971261[epctParam0 /*68*/].f_18.f_10 != PV_COMP_HEAD || !bParam1)
+		if (Global_1971261[epctParam0 /*68*/].f_18.f_10 != 0 || !bParam1)
 			return Global_1971261[epctParam0 /*68*/].f_18.f_10;
 
 	if (bParam1)
 		return Global_1966864.f_13;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_177(ePedComponentType epctParam0) // Position - 0x7C72 (31858)
@@ -6256,7 +6256,7 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 					return 2;
 			
 				case 6:
-					if (func_165(uParam0->f_4356, false) == PV_COMP_LOWR)
+					if (func_165(uParam0->f_4356, false) == 4)
 						return 4;
 				
 					return 2;
@@ -6273,10 +6273,10 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 1;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_744)
 							{
 								case 1:
@@ -6299,7 +6299,7 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return 2;
 					}
 					break;
@@ -6307,13 +6307,13 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 				case 15:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 2;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return 2;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return 2;
 					
 						default:
@@ -6324,16 +6324,16 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 				case 16:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 1;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							if (func_182(uParam0->f_4356, 4))
 								return 2;
 						
 							return 1;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return 2;
 					
 						default:
@@ -6344,10 +6344,10 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 2;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_745)
 							{
 								case 6:
@@ -6361,7 +6361,7 @@ int func_181(var uParam0, int iParam1, int iParam2) // Position - 0x7EC7 (32455)
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return 1;
 					}
 					break;
@@ -6452,7 +6452,7 @@ char* func_183(var uParam0, int iParam1, int iParam2) // Position - 0x8141 (3308
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_HAIR:
+						case 2:
 							if (func_184(uParam0->f_4356))
 								return "CH_DP_OPT" /*Optional*/;
 							break;
@@ -6579,10 +6579,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 5:
 					switch (func_176(uParam0->f_4356, false))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_BERD:
+								case 1:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6596,7 +6596,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_HAIR:
+								case 2:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6610,7 +6610,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_UPPR:
+								case 3:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6626,10 +6626,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_BERD:
+								case 1:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6643,7 +6643,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_HAIR:
+								case 2:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6657,7 +6657,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_UPPR:
+								case 3:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6673,10 +6673,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_BERD:
+								case 1:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6690,7 +6690,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_HAIR:
+								case 2:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6704,7 +6704,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_UPPR:
+								case 3:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6720,10 +6720,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_LOWR:
+						case 4:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_BERD:
+								case 1:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6737,7 +6737,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_HAIR:
+								case 2:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6751,7 +6751,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_UPPR:
+								case 3:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6767,10 +6767,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_HAND:
+						case 5:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_BERD:
+								case 1:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6784,7 +6784,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_HAIR:
+								case 2:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6798,7 +6798,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 									}
 									break;
 							
-								case PV_COMP_UPPR:
+								case 3:
 									switch (uParam0->f_744.f_739)
 									{
 										case 0:
@@ -6842,10 +6842,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_I_P_8a" /*Can sedate security guards.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_744)
 							{
 								case 1:
@@ -6862,7 +6862,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_I_P_8c" /*Burn through secure keypads.*/;
 					}
 					break;
@@ -6870,13 +6870,13 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 15:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_I_P_9a" /*Quietly drill through the vault door to gain access to the vault.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return "CH_DP_I_P_9b" /*Drill through the vault door to gain access to the vault.*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_I_P_9c" /*Vault door can be blown open.*/;
 					
 						default:
@@ -6887,13 +6887,13 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 16:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_I_P_10a" /*Disables the lights inside the Casino.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return "CH_DP_I_P_10b" /*Disguise as Yung Ancestor's entourage to get into the back area of the Casino undetected.*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_I_P_10c" /*Provides reinforced armor to wear that reduces bullet damage, and rappelling equipment.*/;
 					
 						default:
@@ -6904,10 +6904,10 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_I_P_11a" /*Provides nightvision and rappelling equipment.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_745)
 							{
 								case 6:
@@ -6921,7 +6921,7 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_I_P_11c" /*Tunnel access to the Casino basement.*/;
 					}
 					break;
@@ -6932,11 +6932,11 @@ char* func_187(var uParam0, int iParam1, int iParam2) // Position - 0x83A8 (3370
 				case 18:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
-						case PV_COMP_HAIR:
+						case 1:
+						case 2:
 							return "CH_DP_I_P_13" /*Chosen masks can be equipped if your cover is blown and you're switched to the Aggressive approach.*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_I_P_13b" /*Masks equipped at the start of The Diamond Casino Heist.*/;
 					
 						default:
@@ -7020,10 +7020,10 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_D_P_8a" /*Steal parts from several police drones to create a Nano Drone that can be used inside the Casino.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_744)
 							{
 								case 1:
@@ -7055,7 +7055,7 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							if (func_190(uParam0->f_4356))
 								return "CH_DP_D_P_8cb" /*Steal a breaching charge and thermal charges that can be used to blow a route into the Casino basement and burn through secure keypads.*/;
 						
@@ -7066,13 +7066,13 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 				case 15:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_D_P_9a" /*Steal a set of lasers that can be used to quietly drill through the vault door.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return "CH_DP_D_P_9b" /*Steal a set of drills that can be used to drill through the vault door.*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_D_P_9c" /*Steal crates of vault explosives that are needed to blow open the vault door.*/;
 					
 						default:
@@ -7083,16 +7083,16 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 				case 16:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_D_P_10a" /*Steal a device that can trigger an electro-magnetic pulse to disable the lights inside the Casino.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							if (!func_182(uParam0->f_4356, 4))
 								return "CH_DP_D_P_10ba" /*Help Yung Ancestor so he will give access to the back areas of the Casino.*/;
 						
 							return "CH_DP_D_P_10bb" /*Help Yung Ancestor so he will give access to the back areas of the Casino.*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_D_P_10c" /*Steal crates of equipment containing reinforced armor and rappelling gear to get down the Casino elevator shaft.*/;
 					
 						default:
@@ -7103,10 +7103,10 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_D_P_11a" /*Steal a set of infiltration suits that can provide nightvision and the ability to rappel down the elevator shaft.*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_745)
 							{
 								case 6:
@@ -7120,7 +7120,7 @@ char* func_189(var uParam0, int iParam1, int iParam2) // Position - 0x8996 (3522
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_D_P_11c" /*Steal a Tunnel Boring Machine that can excavate a tunnel directly to the Casino basement.*/;
 					}
 					break;
@@ -7225,10 +7225,10 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_T_P_8a" /*PREP: NANO DRONE*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_744)
 							{
 								case 1:
@@ -7254,7 +7254,7 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							if (func_190(uParam0->f_4356))
 								return "CH_DP_T_P_8cb" /*PREP: BREACHING CHARGES*/;
 						
@@ -7265,13 +7265,13 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 				case 15:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_T_P_9a" /*PREP: VAULT LASERS*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return "CH_DP_T_P_9b" /*PREP: VAULT DRILLS*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_T_P_9c" /*PREP: VAULT EXPLOSIVES*/;
 					
 						default:
@@ -7282,16 +7282,16 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 				case 16:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_T_P_10a" /*PREP: EMP DEVICE*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							if (!func_182(uParam0->f_4356, 4))
 								return "CH_DP_T_P_10ba" /*PREP: DEAD WEIGHT*/;
 						
 							return "CH_DP_T_P_10bb" /*PREP: AFTER PARTY*/;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_T_P_10c" /*PREP: REINFORCED ARMOR*/;
 					
 						default:
@@ -7302,10 +7302,10 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return "CH_DP_T_P_11a" /*PREP: INFILTRATION SUITS*/;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							switch (uParam0->f_744.f_745)
 							{
 								case 6:
@@ -7319,7 +7319,7 @@ char* func_193(var uParam0, int iParam1, int iParam2) // Position - 0x8D36 (3615
 							}
 							break;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return "CH_DP_T_P_11c" /*PREP: TUNNEL BORING MACHINE*/;
 					}
 					break;
@@ -7643,47 +7643,47 @@ BOOL func_199(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x95B9 (38
 	return flag && flag2;
 }
 
-BOOL func_200(int iParam0) // Position - 0x96C7 (38599)
+BOOL func_200(int* piParam0) // Position - 0x96C7 (38599)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_201(var uParam0) // Position - 0x9769 (38761)
@@ -7783,25 +7783,25 @@ int func_205(var uParam0) // Position - 0x9939 (39225)
 			switch (uParam0->f_2593)
 			{
 				case 5:
-					if (func_208(uParam0->f_4356) == PV_COMP_BERD)
+					if (func_208(uParam0->f_4356) == 1)
 						return 63;
-					else if (func_207(uParam0->f_4356) == PV_COMP_BERD)
+					else if (func_207(uParam0->f_4356) == 1)
 						return 64;
 				
 					return 4;
 			
 				case 6:
-					if (func_208(uParam0->f_4356) == PV_COMP_HAIR)
+					if (func_208(uParam0->f_4356) == 2)
 						return 63;
-					else if (func_207(uParam0->f_4356) == PV_COMP_HAIR)
+					else if (func_207(uParam0->f_4356) == 2)
 						return 64;
 				
 					return 5;
 			
 				case 7:
-					if (func_208(uParam0->f_4356) == PV_COMP_UPPR)
+					if (func_208(uParam0->f_4356) == 3)
 						return 63;
-					else if (func_207(uParam0->f_4356) == PV_COMP_UPPR)
+					else if (func_207(uParam0->f_4356) == 3)
 						return 64;
 				
 					return 6;
@@ -7827,7 +7827,7 @@ int func_205(var uParam0) // Position - 0x9939 (39225)
 		case 2:
 			if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			{
-				if (func_206(uParam0->f_4356, PV_COMP_HEAD))
+				if (func_206(uParam0->f_4356, 0))
 				{
 					switch (uParam0->f_2593)
 					{
@@ -7860,7 +7860,7 @@ int func_205(var uParam0) // Position - 0x9939 (39225)
 						case 15:
 							switch (func_125(uParam0->f_4356))
 							{
-								case PV_COMP_HAIR:
+								case 2:
 									if (uParam0->f_1497.f_1020 != 4)
 										return 54;
 									break;
@@ -7874,7 +7874,7 @@ int func_205(var uParam0) // Position - 0x9939 (39225)
 				switch (uParam0->f_2593)
 				{
 					case 12:
-						if (func_206(uParam0->f_4356, PV_COMP_HEAD))
+						if (func_206(uParam0->f_4356, 0))
 							return 73;
 					
 						return 58;
@@ -7889,11 +7889,11 @@ int func_205(var uParam0) // Position - 0x9939 (39225)
 	return -1;
 }
 
-BOOL func_206(Player plParam0, ePedComponentType epctParam1) // Position - 0x9AFA (39674)
+BOOL func_206(Player plParam0, int iParam1) // Position - 0x9AFA (39674)
 {
 	if (plParam0 != -1)
 	{
-		switch (epctParam1)
+		switch (iParam1)
 		{
 			case 0:
 				return IS_BIT_SET(Global_1971261[plParam0 /*68*/].f_40, 10);
@@ -7915,20 +7915,20 @@ BOOL func_206(Player plParam0, ePedComponentType epctParam1) // Position - 0x9AF
 	return false;
 }
 
-ePedComponentType func_207(int iParam0) // Position - 0x9B68 (39784)
+int func_207(int iParam0) // Position - 0x9B68 (39784)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_6;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
-ePedComponentType func_208(int iParam0) // Position - 0x9B86 (39814)
+int func_208(int iParam0) // Position - 0x9B86 (39814)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_5;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 void func_209(var uParam0, int iParam1) // Position - 0x9BA4 (39844)
@@ -30129,7 +30129,7 @@ BOOL func_582(var uParam0, int iParam1) // Position - 0x21895 (137365)
 			if (!func_295(uParam0->f_4356))
 				return false;
 		
-			if (func_125(uParam0->f_4356) == PV_COMP_HEAD)
+			if (func_125(uParam0->f_4356) == 0)
 				return false;
 			break;
 	
@@ -30137,7 +30137,7 @@ BOOL func_582(var uParam0, int iParam1) // Position - 0x21895 (137365)
 			if (!func_295(uParam0->f_4356))
 				return false;
 		
-			if (func_125(uParam0->f_4356) == PV_COMP_HEAD)
+			if (func_125(uParam0->f_4356) == 0)
 				return false;
 		
 			if (!func_583(uParam0->f_4356))
@@ -30156,19 +30156,19 @@ BOOL func_583(Player plParam0) // Position - 0x21915 (137493)
 	if (!func_593(plParam0))
 		return false;
 
-	if (func_176(plParam0, false) == PV_COMP_HEAD)
+	if (func_176(plParam0, false) == 0)
 		return false;
 
 	if (!func_592(plParam0))
 		return false;
 
-	if (func_165(plParam0, false) == PV_COMP_HEAD)
+	if (func_165(plParam0, false) == 0)
 		return false;
 
 	if (!func_591(plParam0))
 		return false;
 
-	if (func_590(plParam0, false) == PV_COMP_HEAD)
+	if (func_590(plParam0, false) == 0)
 		return false;
 
 	if (!func_589(plParam0))
@@ -30176,7 +30176,7 @@ BOOL func_583(Player plParam0) // Position - 0x21915 (137493)
 
 	switch (func_125(plParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			if (!func_588(plParam0))
 				return false;
 		
@@ -30184,7 +30184,7 @@ BOOL func_583(Player plParam0) // Position - 0x21915 (137493)
 				return false;
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			if (!func_184(plParam0))
 				return false;
 		
@@ -30192,7 +30192,7 @@ BOOL func_583(Player plParam0) // Position - 0x21915 (137493)
 				return false;
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			if (!func_585(plParam0))
 				return false;
 		
@@ -30255,16 +30255,16 @@ BOOL func_589(Player plParam0) // Position - 0x21AB3 (137907)
 	return false;
 }
 
-ePedComponentType func_590(Player plParam0, BOOL bParam1) // Position - 0x21AD3 (137939)
+int func_590(Player plParam0, BOOL bParam1) // Position - 0x21AD3 (137939)
 {
 	if (plParam0 != -1)
-		if (Global_1971261[plParam0 /*68*/].f_18.f_14 != PV_COMP_HEAD || bParam1)
+		if (Global_1971261[plParam0 /*68*/].f_18.f_14 != 0 || bParam1)
 			return Global_1971261[plParam0 /*68*/].f_18.f_14;
 
 	if (bParam1)
 		return Global_1966864.f_17;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_591(Player plParam0) // Position - 0x21B1B (138011)
@@ -30749,7 +30749,7 @@ BOOL func_621(var uParam0) // Position - 0x222E9 (140009)
 	float randomFloatInRange;
 	int i;
 
-	if (Global_262145.f_27991 != PV_COMP_INVALID && !IS_BIT_SET(func_10(8726, -1), 17) && func_206(PLAYER::PLAYER_ID(), PV_COMP_HEAD))
+	if (Global_262145.f_27991 != -1 && !IS_BIT_SET(func_10(8726, -1), 17) && func_206(PLAYER::PLAYER_ID(), 0))
 	{
 		*uParam0 = Global_262145.f_27991;
 		return true;
@@ -31857,7 +31857,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 		case 1:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31877,7 +31877,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31897,7 +31897,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31922,7 +31922,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 		case 2:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31942,7 +31942,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31962,7 +31962,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -31987,7 +31987,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 		case 3:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32007,7 +32007,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32027,7 +32027,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32052,7 +32052,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 		case 4:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32072,7 +32072,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32092,7 +32092,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32117,7 +32117,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 		case 5:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32137,7 +32137,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32157,7 +32157,7 @@ char* func_639(var uParam0, BOOL bParam1) // Position - 0x2393F (145727)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -32350,32 +32350,32 @@ void func_644(var uParam0) // Position - 0x23FF0 (147440)
 
 BOOL func_645(var uParam0) // Position - 0x24087 (147591)
 {
-	ePedComponentType type;
 	int num;
 	int num2;
-	var unk;
-	ePedComponentType type2;
-	ePedComponentType type3;
-	var unk7;
 	int num3;
+	var unk;
+	ePedComponentType type;
+	ePedComponentType type2;
+	var unk7;
+	int num4;
 	var unk10;
 	int address;
 
-	type = func_125(uParam0->f_4356);
-	num = func_800(type);
-	num2 = func_798(num);
+	num = func_125(uParam0->f_4356);
+	num2 = func_800(num);
+	num3 = func_798(num2);
 
-	if (num2 == -1)
+	if (num3 == -1)
 		return false;
 
-	unk = { Global_794744.f_4[num2 /*89*/] };
-	type2 = Global_794744.f_4[num2 /*89*/].f_65;
-	type3 = Global_794744.f_4[num2 /*89*/].f_71;
+	unk = { Global_794744.f_4[num3 /*89*/] };
+	type = Global_794744.f_4[num3 /*89*/].f_65;
+	type2 = Global_794744.f_4[num3 /*89*/].f_71;
 	func_734(func_735(PLAYER::PLAYER_ID()));
 	_SET_PLAYER_CONTROL_EX(PLAYER::PLAYER_ID(), false, 376832, false);
 	Global_2685663.f_3852 = 1;
 	func_733(PLAYER::PLAYER_ID(), 0);
-	type2 = 158;
+	type = 158;
 	func_732();
 	func_731();
 	func_730(65);
@@ -32388,14 +32388,14 @@ BOOL func_645(var uParam0) // Position - 0x24087 (147591)
 	else
 	{
 		Global_1944438.f_728 = 1;
-		func_727(type2);
+		func_727(type);
 	
 		if (func_370() <= 3)
 			func_726();
 	
 		func_724(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		func_722(&unk);
-		func_721(type3);
+		func_721(type2);
 		func_720();
 		func_718();
 		func_717();
@@ -32403,7 +32403,7 @@ BOOL func_645(var uParam0) // Position - 0x24087 (147591)
 		func_716();
 		unk10 = { 0f, 0f, 0f };
 		MISC::SET_BIT(&address, 4);
-		func_646(&(Global_2684721.f_785), 0, 0, unk10, &unk7, unk10, true, false, &unk7, &num3, num3, false, address);
+		func_646(&(Global_2684721.f_785), 0, 0, unk10, &unk7, unk10, true, false, &unk7, &num4, num4, false, address);
 		func_223(false, 0);
 		Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_96 = 8;
 		return true;
@@ -37192,17 +37192,17 @@ Hash func_799(int iParam0) // Position - 0x2ADAA (175530)
 	return Global_262145.f_6007[iParam0];
 }
 
-int func_800(ePedComponentType epctParam0) // Position - 0x2ADD3 (175571)
+int func_800(int iParam0) // Position - 0x2ADD3 (175571)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			return 0;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 6;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 13;
 	
 		default:
@@ -37797,7 +37797,7 @@ void func_831(var uParam0) // Position - 0x2B812 (178194)
 
 	if (flag)
 	{
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (func_125(uParam0->f_4356) == 2)
 		{
 			if (uParam0->f_1497.f_1025 == 0)
 			{
@@ -38657,7 +38657,7 @@ void func_850(var uParam0) // Position - 0x2CBB2 (183218)
 		else
 			func_881(uParam0->f_1497.f_709, 2, false);
 	
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (func_125(uParam0->f_4356) == 2)
 			func_880(uParam0->f_1497.f_709, 2, 2);
 	
 		func_879(uParam0, false);
@@ -38690,7 +38690,7 @@ void func_850(var uParam0) // Position - 0x2CBB2 (183218)
 
 	if (func_870(uParam0) || func_918())
 	{
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (func_125(uParam0->f_4356) == 2)
 		{
 			func_885(uParam0->f_1497.f_709, 13, func_869(uParam0));
 		
@@ -38715,7 +38715,7 @@ void func_850(var uParam0) // Position - 0x2CBB2 (183218)
 
 	if (func_866(uParam0) || func_918())
 	{
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (func_125(uParam0->f_4356) == 2)
 		{
 			func_885(uParam0->f_1497.f_709, 14, func_865(uParam0));
 		
@@ -38802,19 +38802,19 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 {
 	switch (func_165(uParam0->f_4356, false))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (func_857(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 1;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 2;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 3;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 4;
 			
 				default:
@@ -38822,19 +38822,19 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (func_857(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 5;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 6;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 7;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 8;
 			
 				default:
@@ -38842,19 +38842,19 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (func_857(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 9;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 10;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 11;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 12;
 			
 				default:
@@ -38862,19 +38862,19 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 			}
 			break;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			switch (func_857(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 13;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 14;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 15;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 16;
 			
 				default:
@@ -38882,19 +38882,19 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 			}
 			break;
 	
-		case PV_COMP_HAND:
+		case 5:
 			switch (func_857(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 17;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 18;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 19;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 20;
 			
 				default:
@@ -38906,12 +38906,12 @@ int func_856(var uParam0) // Position - 0x2D2F6 (185078)
 	return -1;
 }
 
-ePedComponentType func_857(int iParam0) // Position - 0x2D456 (185430)
+int func_857(int iParam0) // Position - 0x2D456 (185430)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_13;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_858(var uParam0) // Position - 0x2D474 (185460)
@@ -38933,16 +38933,16 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 {
 	switch (func_176(uParam0->f_4356, false))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -38950,13 +38950,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -38964,13 +38964,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return 1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return 2;
 					
 						default:
@@ -38980,16 +38980,16 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -38997,13 +38997,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39011,13 +39011,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return 3;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return 4;
 					
 						default:
@@ -39027,16 +39027,16 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39044,13 +39044,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39058,13 +39058,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return 5;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return 6;
 					
 						default:
@@ -39074,16 +39074,16 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 			}
 			break;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39091,13 +39091,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39105,13 +39105,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return 7;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return 8;
 					
 						default:
@@ -39121,16 +39121,16 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 			}
 			break;
 	
-		case PV_COMP_HAND:
+		case 5:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39138,13 +39138,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return -1;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return -1;
 					
 						default:
@@ -39152,13 +39152,13 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (func_861(uParam0->f_4356))
 					{
-						case PV_COMP_HEAD:
+						case 0:
 							return 9;
 					
-						case PV_COMP_BERD:
+						case 1:
 							return 10;
 					
 						default:
@@ -39172,12 +39172,12 @@ int func_860(var uParam0) // Position - 0x2D4B3 (185523)
 	return -1;
 }
 
-ePedComponentType func_861(int iParam0) // Position - 0x2D7C6 (186310)
+int func_861(int iParam0) // Position - 0x2D7C6 (186310)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_11;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_862(var uParam0) // Position - 0x2D7E4 (186340)
@@ -39566,8 +39566,8 @@ BOOL func_889(var uParam0, int iParam1) // Position - 0x2DD1D (187677)
 		case 13:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
-				case PV_COMP_UPPR:
+				case 1:
+				case 3:
 					return false;
 			
 				default:
@@ -39578,11 +39578,11 @@ BOOL func_889(var uParam0, int iParam1) // Position - 0x2DD1D (187677)
 		case 14:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
-				case PV_COMP_UPPR:
+				case 1:
+				case 3:
 					return false;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return func_891(uParam0->f_4356);
 			
 				default:
@@ -39807,20 +39807,20 @@ float func_899(int iParam0) // Position - 0x2E11F (188703)
 	return 1f;
 }
 
-int func_900(ePedComponentType epctParam0) // Position - 0x2E14F (188751)
+int func_900(int iParam0) // Position - 0x2E14F (188751)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
-		case PV_COMP_HEAD:
+		case 0:
 			return Global_262145.f_28347;
 	
-		case PV_COMP_BERD:
+		case 1:
 			return Global_262145.f_28349;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return Global_262145.f_28348;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return Global_262145.f_28350;
 	
 		default:
@@ -39871,7 +39871,7 @@ int func_901(var uParam0) // Position - 0x2E19F (188831)
 	return num;
 }
 
-ePedComponentType func_902(var uParam0) // Position - 0x2E259 (189017)
+int func_902(var uParam0) // Position - 0x2E259 (189017)
 {
 	return func_125(uParam0->f_4356);
 }
@@ -39911,7 +39911,7 @@ BOOL func_906(var uParam0, int iParam1) // Position - 0x2E2C9 (189129)
 			return func_886(uParam0->f_4356);
 	
 		case 2:
-			if (func_902(uParam0) == PV_COMP_HAIR)
+			if (func_902(uParam0) == 2)
 				return uParam0->f_1497.f_1021 != 5;
 			break;
 	}
@@ -39930,7 +39930,7 @@ char* func_907(var uParam0, int iParam1) // Position - 0x2E31D (189213)
 			return "CH_OPT_FIN_1" /*Clean Vehicle*/;
 	
 		case 2:
-			if (func_902(uParam0) == PV_COMP_HAIR)
+			if (func_902(uParam0) == 2)
 				return "CH_OPT_FIN_2" /*Exit Disguise*/;
 			break;
 	}
@@ -39973,7 +39973,7 @@ BOOL func_912(var uParam0, int iParam1) // Position - 0x2E3D4 (189396)
 	switch (iParam1)
 	{
 		case 0:
-			if (func_902(uParam0) == PV_COMP_HAIR)
+			if (func_902(uParam0) == 2)
 				return uParam0->f_1497.f_1025 != 0;
 		
 			return uParam0->f_1497.f_1022 != -1;
@@ -39998,7 +39998,7 @@ char* func_913(var uParam0, int iParam1) // Position - 0x2E456 (189526)
 	switch (iParam1)
 	{
 		case 0:
-			if (func_902(uParam0) == PV_COMP_HAIR)
+			if (func_902(uParam0) == 2)
 				return "CH_TODO_FIN_1" /*Entry Disguise*/;
 		
 			return "CH_TODO_FIN_0" /*Entrance*/;
@@ -40525,7 +40525,7 @@ void func_941(var uParam0) // Position - 0x2EC2A (191530)
 						if (func_969(uParam0, num2))
 							func_966(uParam0, num2);
 					
-						if (num2 == 2 && func_125(uParam0->f_4356) == PV_COMP_HAIR)
+						if (num2 == 2 && func_125(uParam0->f_4356) == 2)
 							func_202(uParam0, 15);
 					}
 					else if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
@@ -40661,7 +40661,7 @@ void func_942(var uParam0, int iParam1, BOOL bParam2) // Position - 0x2EF07 (192
 				case 13:
 					uParam0->f_1497.f_1025 = uParam0->f_1497.f_1020;
 				
-					if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+					if (func_125(uParam0->f_4356) == 2)
 					{
 						if (uParam0->f_1497.f_1017 != func_943(uParam0))
 						{
@@ -41270,7 +41270,7 @@ BOOL func_956(var uParam0) // Position - 0x2FB6F (195439)
 
 	switch (func_125(uParam0->f_4356))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (num)
 			{
 				case 0:
@@ -41283,7 +41283,7 @@ BOOL func_956(var uParam0) // Position - 0x2FB6F (195439)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (num)
 			{
 				case 0:
@@ -41296,7 +41296,7 @@ BOOL func_956(var uParam0) // Position - 0x2FB6F (195439)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (num)
 			{
 				case 10:
@@ -41357,7 +41357,7 @@ BOOL func_958(var uParam0) // Position - 0x2FC96 (195734)
 
 	switch (func_125(uParam0->f_4356))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (num)
 			{
 				case 0:
@@ -41370,7 +41370,7 @@ BOOL func_958(var uParam0) // Position - 0x2FC96 (195734)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (uParam0->f_1497.f_1020)
 			{
 				case 1:
@@ -41395,7 +41395,7 @@ BOOL func_958(var uParam0) // Position - 0x2FC96 (195734)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (num)
 			{
 				case 9:
@@ -41495,7 +41495,7 @@ int func_962(var uParam0) // Position - 0x2FE5C (196188)
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 22;
 					
 						default:
@@ -41506,13 +41506,13 @@ int func_962(var uParam0) // Position - 0x2FE5C (196188)
 				case 15:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 20;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return 23;
 					
-						case PV_COMP_UPPR:
+						case 3:
 							return 25;
 					
 						default:
@@ -41523,10 +41523,10 @@ int func_962(var uParam0) // Position - 0x2FE5C (196188)
 				case 16:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 21;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							if (IS_BIT_SET(Global_1971261[uParam0->f_4356 /*68*/].f_42, 6))
 								return 18;
 							break;
@@ -41536,10 +41536,10 @@ int func_962(var uParam0) // Position - 0x2FE5C (196188)
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_BERD:
+						case 1:
 							return 21;
 					
-						case PV_COMP_HAIR:
+						case 2:
 							return 24;
 					
 						default:
@@ -41764,7 +41764,7 @@ int func_967(var uParam0) // Position - 0x3029D (197277)
 				case 14:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_HAIR:
+						case 2:
 							return 17;
 					
 						default:
@@ -41775,7 +41775,7 @@ int func_967(var uParam0) // Position - 0x3029D (197277)
 				case 17:
 					switch (func_125(uParam0->f_4356))
 					{
-						case PV_COMP_HAIR:
+						case 2:
 							return 18;
 					
 						default:
@@ -41876,7 +41876,7 @@ BOOL func_969(var uParam0, int iParam1) // Position - 0x3046A (197738)
 	switch (iParam1)
 	{
 		case 2:
-			if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_125(uParam0->f_4356) == 2)
 				return false;
 		
 			return true;
@@ -43046,7 +43046,7 @@ void func_1003(var uParam0) // Position - 0x31AC2 (203458)
 			Global_1971261[num /*68*/].f_18.f_19 = uParam0->f_1497.f_1018;
 		}
 	
-		if (func_125(PLAYER::PLAYER_ID()) == PV_COMP_HAIR)
+		if (func_125(PLAYER::PLAYER_ID()) == 2)
 		{
 			if (Global_1971261[num /*68*/].f_18.f_20 != uParam0->f_1497.f_1020)
 			{
@@ -43149,7 +43149,7 @@ void func_1003(var uParam0) // Position - 0x31AC2 (203458)
 				func_893(uParam0, true);
 			}
 		
-			if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_125(uParam0->f_4356) == 2)
 			{
 				if (uParam0->f_1497.f_1020 != Global_1971261[num2 /*68*/].f_18.f_20)
 				{
@@ -43239,7 +43239,7 @@ void func_1004(var uParam0) // Position - 0x32386 (205702)
 	if (PLAYER::PLAYER_ID() != uParam0->f_4356)
 		return;
 
-	if (!func_206(uParam0->f_4356, PV_COMP_HEAD))
+	if (!func_206(uParam0->f_4356, 0))
 	{
 		if (!func_1007(5))
 		{
@@ -43284,14 +43284,14 @@ void func_1004(var uParam0) // Position - 0x32386 (205702)
 		{
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
-				case PV_COMP_UPPR:
-					if (!func_206(uParam0->f_4356, PV_COMP_BERD) && !func_206(uParam0->f_4356, PV_COMP_UPPR))
+				case 1:
+				case 3:
+					if (!func_206(uParam0->f_4356, 1) && !func_206(uParam0->f_4356, 3))
 						func_204(uParam0, 48);
 					break;
 			
-				case PV_COMP_HAIR:
-					if (!func_206(uParam0->f_4356, PV_COMP_HAIR))
+				case 2:
+					if (!func_206(uParam0->f_4356, 2))
 						func_204(uParam0, 52);
 					break;
 			}
@@ -43578,7 +43578,7 @@ void func_1013(var uParam0) // Position - 0x32B90 (207760)
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 	{
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (func_125(uParam0->f_4356) == 2)
 			func_825(&(uParam0->f_2593), 13, false);
 		else
 			func_825(&(uParam0->f_2593), 2, false);
@@ -43588,7 +43588,7 @@ void func_1013(var uParam0) // Position - 0x32B90 (207760)
 		func_825(&(uParam0->f_2593), 12, false);
 		func_202(uParam0, 11);
 	}
-	else if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+	else if (func_125(uParam0->f_4356) == 2)
 	{
 		func_825(&(uParam0->f_2593), 13, false);
 	}
@@ -43721,7 +43721,7 @@ void func_1021(var uParam0) // Position - 0x32ED8 (208600)
 	func_876(uParam0, true);
 	func_871(uParam0, true);
 
-	if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+	if (func_125(uParam0->f_4356) == 2)
 	{
 		func_867(uParam0, true);
 		func_863(uParam0, true);
@@ -44191,7 +44191,7 @@ void func_1050(var uParam0) // Position - 0x33703 (210691)
 	switch (num)
 	{
 		case 18:
-			if (func_1051(uParam0->f_4356) == PV_COMP_HEAD)
+			if (func_1051(uParam0->f_4356) == 0)
 				func_241("CH_HELP_MASKS" /*Visit Vespucci Movie Masks ~HUD_COLOUR_GREEN~~BLIP_MASK~~s~ to collect masks for The Diamond Casino Heist.*/);
 			break;
 	
@@ -44208,32 +44208,32 @@ void func_1050(var uParam0) // Position - 0x33703 (210691)
 	return;
 }
 
-ePedComponentType func_1051(int iParam0) // Position - 0x33887 (211079)
+int func_1051(int iParam0) // Position - 0x33887 (211079)
 {
 	if (iParam0 != -1)
 		return Global_1971261[iParam0 /*68*/].f_18.f_16;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_1052(Player plParam0) // Position - 0x338A5 (211109)
 {
-	if (func_593(plParam0) || func_592(plParam0) || func_591(plParam0) || func_589(plParam0) || func_1061(plParam0) || func_1060(plParam0) || func_1059(plParam0) || func_1058(plParam0) || func_1057(plParam0) != PV_COMP_HEAD)
+	if (func_593(plParam0) || func_592(plParam0) || func_591(plParam0) || func_589(plParam0) || func_1061(plParam0) || func_1060(plParam0) || func_1059(plParam0) || func_1058(plParam0) || func_1057(plParam0) != 0)
 		return true;
 
 	switch (func_125(plParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			if (func_588(plParam0) || func_587(plParam0) || func_1056(plParam0) || func_1055(plParam0))
 				return true;
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			if (func_184(plParam0) || func_586(plParam0) || func_891(plParam0))
 				return true;
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			if (func_585(plParam0) || func_584(plParam0) || func_1054(plParam0) || func_1053(plParam0))
 				return true;
 			break;
@@ -44274,12 +44274,12 @@ BOOL func_1056(Player plParam0) // Position - 0x33A26 (211494)
 	return false;
 }
 
-ePedComponentType func_1057(Player plParam0) // Position - 0x33A44 (211524)
+int func_1057(Player plParam0) // Position - 0x33A44 (211524)
 {
 	if (plParam0 != -1)
 		return Global_1971261[plParam0 /*68*/].f_18.f_15;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 BOOL func_1058(Player plParam0) // Position - 0x33A62 (211554)
@@ -44316,7 +44316,7 @@ BOOL func_1061(Player plParam0) // Position - 0x33ABC (211644)
 
 BOOL func_1062(var uParam0) // Position - 0x33ADA (211674)
 {
-	if (func_176(uParam0->f_4356, false) == PV_COMP_HEAD || func_165(uParam0->f_4356, false) == PV_COMP_HEAD || func_590(uParam0->f_4356, false) == PV_COMP_HEAD)
+	if (func_176(uParam0->f_4356, false) == 0 || func_165(uParam0->f_4356, false) == 0 || func_590(uParam0->f_4356, false) == 0)
 		return false;
 
 	return true;
@@ -44344,7 +44344,7 @@ BOOL func_1063(var uParam0, int iParam1) // Position - 0x33B1A (211738)
 		
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_744)
 					{
 						case 1:
@@ -45090,10 +45090,10 @@ BOOL func_1086(var uParam0, int iParam1) // Position - 0x34A3F (215615)
 		case 16:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return true;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return true;
 			
 				default:
@@ -45104,13 +45104,13 @@ BOOL func_1086(var uParam0, int iParam1) // Position - 0x34A3F (215615)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return true;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return true;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return true;
 			
 				default:
@@ -45154,7 +45154,7 @@ BOOL func_1087(var uParam0, int iParam1, BOOL bParam2) // Position - 0x34AF2 (21
 			return func_1059(uParam0->f_4356);
 	
 		case 13:
-			return func_1057(uParam0->f_4356) != PV_COMP_HEAD;
+			return func_1057(uParam0->f_4356) != 0;
 	
 		case 14:
 			return func_1088(uParam0, func_125(uParam0->f_4356), 0);
@@ -45175,11 +45175,11 @@ BOOL func_1087(var uParam0, int iParam1, BOOL bParam2) // Position - 0x34AF2 (21
 	return false;
 }
 
-BOOL func_1088(var uParam0, ePedComponentType epctParam1, int iParam2) // Position - 0x34C1B (216091)
+BOOL func_1088(var uParam0, int iParam1, int iParam2) // Position - 0x34C1B (216091)
 {
-	switch (epctParam1)
+	switch (iParam1)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam2)
 			{
 				case 0:
@@ -45199,7 +45199,7 @@ BOOL func_1088(var uParam0, ePedComponentType epctParam1, int iParam2) // Positi
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam2)
 			{
 				case 0:
@@ -45219,7 +45219,7 @@ BOOL func_1088(var uParam0, ePedComponentType epctParam1, int iParam2) // Positi
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam2)
 			{
 				case 0:
@@ -45256,24 +45256,24 @@ BOOL func_1090(var uParam0, int iParam1) // Position - 0x34D63 (216419)
 	switch (iParam1)
 	{
 		case 5:
-			if (func_176(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_176(uParam0->f_4356, false) == 0)
 				return false;
 			break;
 	
 		case 6:
-			if (func_165(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_165(uParam0->f_4356, false) == 0)
 				return false;
 			break;
 	
 		case 7:
-			if (func_590(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_590(uParam0->f_4356, false) == 0)
 				return false;
 			break;
 	
 		case 16:
 			switch (func_902(uParam0))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					if (!IS_BIT_SET(Global_1971261[uParam0->f_4356 /*68*/].f_42, 6))
 						return false;
 					break;
@@ -45283,7 +45283,7 @@ BOOL func_1090(var uParam0, int iParam1) // Position - 0x34D63 (216419)
 		case 17:
 			switch (func_902(uParam0))
 			{
-				case PV_COMP_UPPR:
+				case 3:
 					if (!func_191(uParam0->f_4356, 10))
 						return false;
 					break;
@@ -45311,7 +45311,7 @@ void func_1091(var uParam0, int iParam1, BOOL bParam2) // Position - 0x34E28 (21
 		func_978(uParam0);
 		Global_1971261[PLAYER::NETWORK_PLAYER_ID_TO_INT() /*68*/].f_67 = 1;
 	
-		if (iParam1 == 14 && func_125(uParam0->f_4356) == PV_COMP_HAIR)
+		if (iParam1 == 14 && func_125(uParam0->f_4356) == 2)
 			Global_1971261[uParam0->f_4356 /*68*/].f_64 = uParam0->f_744.f_744;
 	
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Highlight_Accept", "DLC_HEIST_PLANNING_BOARD_SOUNDS", true);
@@ -45466,10 +45466,10 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 		case 14:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 11;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_744)
 					{
 						case 1:
@@ -45495,7 +45495,7 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 13;
 			}
 			break;
@@ -45503,13 +45503,13 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 		case 15:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 4;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 6;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 7;
 			}
 			break;
@@ -45517,17 +45517,17 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 		case 16:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 14;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					if (!func_182(uParam0->f_4356, 4))
 						return 32;
 					else
 						return 33;
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 30;
 			}
 			break;
@@ -45535,10 +45535,10 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 22;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_745)
 					{
 						case 6:
@@ -45552,7 +45552,7 @@ int func_1096(var uParam0, int iParam1) // Position - 0x3506F (217199)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 15;
 			}
 			break;
@@ -45579,8 +45579,8 @@ BOOL func_1097(var uParam0, int iParam1) // Position - 0x352A8 (217768)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
-				case PV_COMP_UPPR:
+				case 1:
+				case 3:
 					return true;
 			
 				default:
@@ -45600,7 +45600,7 @@ BOOL func_1098(var uParam0, int iParam1) // Position - 0x35319 (217881)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return 1;
 			
 				default:
@@ -45617,7 +45617,7 @@ BOOL func_1099(var uParam0, int iParam1) // Position - 0x35350 (217936)
 	switch (iParam1)
 	{
 		case 5:
-			if (func_176(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_176(uParam0->f_4356, false) == 0)
 				return false;
 		
 			if (func_592(uParam0->f_4356))
@@ -45625,7 +45625,7 @@ BOOL func_1099(var uParam0, int iParam1) // Position - 0x35350 (217936)
 			break;
 	
 		case 6:
-			if (func_165(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_165(uParam0->f_4356, false) == 0)
 				return false;
 		
 			if (func_591(uParam0->f_4356))
@@ -45633,7 +45633,7 @@ BOOL func_1099(var uParam0, int iParam1) // Position - 0x35350 (217936)
 			break;
 	
 		case 7:
-			if (func_590(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_590(uParam0->f_4356, false) == 0)
 				return false;
 		
 			if (func_589(uParam0->f_4356))
@@ -45641,7 +45641,7 @@ BOOL func_1099(var uParam0, int iParam1) // Position - 0x35350 (217936)
 			break;
 	
 		case 13:
-			if (func_1057(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_1057(uParam0->f_4356) == 2)
 				return false;
 			else if (func_1090(uParam0, iParam1) && !func_1063(uParam0, iParam1))
 				return true;
@@ -45667,7 +45667,7 @@ BOOL func_1100(var uParam0, int iParam1) // Position - 0x35448 (218184)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return true;
 			
 				default:
@@ -45695,7 +45695,7 @@ void func_1101(var uParam0, int iParam1) // Position - 0x35495 (218261)
 	
 		if (func_1103(iParam1))
 			func_202(uParam0, 4);
-		else if (func_125(uParam0->f_4356) == PV_COMP_HAIR && iParam1 == 14)
+		else if (func_125(uParam0->f_4356) == 2 && iParam1 == 14)
 			if (func_182(uParam0->f_4356, uParam0->f_744.f_744))
 				func_202(uParam0, 10);
 			else
@@ -45714,13 +45714,13 @@ BOOL func_1102(var uParam0, int iParam1) // Position - 0x35570 (218480)
 	switch (iParam1)
 	{
 		case 10:
-			return func_176(uParam0->f_4356, false) != PV_COMP_HEAD;
+			return func_176(uParam0->f_4356, false) != 0;
 	
 		case 11:
-			return func_165(uParam0->f_4356, false) != PV_COMP_HEAD;
+			return func_165(uParam0->f_4356, false) != 0;
 	
 		case 12:
-			return func_590(uParam0->f_4356, false) != PV_COMP_HEAD;
+			return func_590(uParam0->f_4356, false) != 0;
 	
 		default:
 		
@@ -45934,17 +45934,17 @@ void func_1109(var uParam0) // Position - 0x35972 (219506)
 	
 		case 13:
 			func_1118(PV_COMP_HAIR);
-			func_1117(uParam0->f_744.f_709, PV_COMP_HAIR);
+			func_1117(uParam0->f_744.f_709, 2);
 			break;
 	
 		case 16:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					func_1116(true);
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					func_1115(true);
 					break;
 			}
@@ -45953,11 +45953,11 @@ void func_1109(var uParam0) // Position - 0x35972 (219506)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					func_1114(true);
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_745)
 					{
 						case 6:
@@ -45972,7 +45972,7 @@ void func_1109(var uParam0) // Position - 0x35972 (219506)
 					flag = false;
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					func_1110(true);
 					break;
 			}
@@ -46339,10 +46339,10 @@ void func_1116(BOOL bParam0) // Position - 0x36066 (221286)
 	return;
 }
 
-void func_1117(int iParam0, ePedComponentType epctParam1) // Position - 0x360BB (221371)
+void func_1117(int iParam0, int iParam1) // Position - 0x360BB (221371)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_SECURITY_PASS_VISIBLE");
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(epctParam1);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam1);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;
 }
@@ -46419,13 +46419,13 @@ void func_1122(int iParam0, int iParam1, BOOL bParam2) // Position - 0x361F5 (22
 	return;
 }
 
-void func_1123(int iParam0, ePedComponentType epctParam1, int iParam2, BOOL bParam3) // Position - 0x36218 (221720)
+void func_1123(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0x36218 (221720)
 {
 	ePedComponentType address;
 	int offset;
 
 	address = func_10(8805, -1);
-	offset = func_1124(iParam0, epctParam1, iParam2);
+	offset = func_1124(iParam0, iParam1, iParam2);
 
 	if (offset != -1)
 	{
@@ -46445,7 +46445,7 @@ void func_1123(int iParam0, ePedComponentType epctParam1, int iParam2, BOOL bPar
 	return;
 }
 
-int func_1124(int iParam0, ePedComponentType epctParam1, int iParam2) // Position - 0x36283 (221827)
+int func_1124(int iParam0, int iParam1, int iParam2) // Position - 0x36283 (221827)
 {
 	switch (iParam0)
 	{
@@ -46459,12 +46459,12 @@ int func_1124(int iParam0, ePedComponentType epctParam1, int iParam2) // Positio
 			return 2;
 	
 		case 16:
-			switch (epctParam1)
+			switch (iParam1)
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 3;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 4;
 			
 				default:
@@ -46473,12 +46473,12 @@ int func_1124(int iParam0, ePedComponentType epctParam1, int iParam2) // Positio
 			break;
 	
 		case 17:
-			switch (epctParam1)
+			switch (iParam1)
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 5;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (iParam2)
 					{
 						case 6:
@@ -46492,7 +46492,7 @@ int func_1124(int iParam0, ePedComponentType epctParam1, int iParam2) // Positio
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 8;
 			}
 			break;
@@ -46506,7 +46506,7 @@ int func_1125(var uParam0, int iParam1) // Position - 0x3631E (221982)
 	switch (iParam1)
 	{
 		case 17:
-			if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_125(uParam0->f_4356) == 2)
 				return uParam0->f_744.f_745;
 			break;
 	}
@@ -46926,12 +46926,12 @@ void func_1144(var uParam0) // Position - 0x366FD (222973)
 						break;
 				
 					case 14:
-						if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+						if (func_125(uParam0->f_4356) == 2)
 							func_991(2, 8, "CH_INSTR_CHENT" /*Change Entry Disguise*/, &(uParam0->f_744));
 						break;
 				
 					case 17:
-						if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+						if (func_125(uParam0->f_4356) == 2)
 							func_991(2, 8, "CH_INSTR_CHEXT" /*Change Exit Disguise*/, &(uParam0->f_744));
 						break;
 				}
@@ -47085,10 +47085,10 @@ void func_1146(var uParam0) // Position - 0x36DC3 (224707)
 			func_1121(uParam0->f_744.f_709, j, func_1174(uParam0, j), func_1173(uParam0, j), func_1170(uParam0, j));
 		}
 	
-		if (j == 7 && func_590(uParam0->f_4356, false) != PV_COMP_HEAD)
+		if (j == 7 && func_590(uParam0->f_4356, false) != 0)
 			func_835(uParam0->f_744.f_709, 7, true);
 	
-		if (func_125(uParam0->f_4356) == PV_COMP_HAIR && func_1090(uParam0, 16))
+		if (func_125(uParam0->f_4356) == 2 && func_1090(uParam0, 16))
 			func_1168(uParam0->f_744.f_709, 16, true, func_1169(uParam0), 2);
 	
 		func_1140(uParam0, false);
@@ -47207,13 +47207,13 @@ BOOL func_1149(var uParam0) // Position - 0x375EC (226796)
 	return IS_BIT_SET(uParam0->f_744.f_736, 16);
 }
 
-BOOL func_1150(int iParam0, int iParam1, ePedComponentType epctParam2, int iParam3) // Position - 0x375FF (226815)
+BOOL func_1150(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0x375FF (226815)
 {
 	int num;
 
 	if (iParam0 != -1)
 	{
-		num = func_1124(iParam1, epctParam2, iParam3);
+		num = func_1124(iParam1, iParam2, iParam3);
 	
 		if (num != -1)
 			return IS_BIT_SET(Global_1971261[iParam0 /*68*/].f_44, num);
@@ -47245,7 +47245,7 @@ BOOL func_1152(var uParam0, int iParam1) // Position - 0x37643 (226883)
 			return 1;
 	
 		case 16:
-			if (func_125(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_125(uParam0->f_4356) == 2)
 				return 0;
 		
 			return 1;
@@ -47440,7 +47440,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 		case 1:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47454,7 +47454,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47468,7 +47468,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47487,7 +47487,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 		case 2:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47501,7 +47501,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47515,7 +47515,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47534,7 +47534,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 		case 3:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47548,7 +47548,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47562,7 +47562,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47581,7 +47581,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 		case 4:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47595,7 +47595,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47609,7 +47609,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47628,7 +47628,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 		case 5:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47642,7 +47642,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47656,7 +47656,7 @@ int func_1161(var uParam0) // Position - 0x378EE (227566)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					switch (uParam0->f_744.f_739)
 					{
 						case 0:
@@ -47769,7 +47769,7 @@ int func_1171(int iParam0, int iParam1, BOOL bParam2) // Position - 0x37D14 (228
 			case 2:
 				switch (Global_1971261[iParam0 /*68*/].f_18.f_12)
 				{
-					case PV_COMP_LOWR:
+					case 4:
 						num2 = 4;
 						break;
 				
@@ -47940,28 +47940,28 @@ int func_1175(var uParam0, int iParam1) // Position - 0x37FAC (229292)
 			return 2;
 	
 		case 10:
-			if (func_176(uParam0->f_4356, false) != PV_COMP_HEAD)
+			if (func_176(uParam0->f_4356, false) != 0)
 				return 2;
 			else
 				return 0;
 			break;
 	
 		case 11:
-			if (func_165(uParam0->f_4356, false) != PV_COMP_HEAD)
+			if (func_165(uParam0->f_4356, false) != 0)
 				return 2;
 			else
 				return 0;
 			break;
 	
 		case 12:
-			if (func_590(uParam0->f_4356, false) != PV_COMP_HEAD)
+			if (func_590(uParam0->f_4356, false) != 0)
 				return 2;
 			else
 				return 0;
 			break;
 	
 		case 13:
-			if (func_1057(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_1057(uParam0->f_4356) == 2)
 				return 2;
 			else
 				return 0;
@@ -47970,7 +47970,7 @@ int func_1175(var uParam0, int iParam1) // Position - 0x37FAC (229292)
 		case 14:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return 0;
 			
 				default:
@@ -47987,7 +47987,7 @@ int func_1175(var uParam0, int iParam1) // Position - 0x37FAC (229292)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return 0;
 			
 				default:
@@ -48024,7 +48024,7 @@ char* func_1178(var uParam0, int iParam1) // Position - 0x38132 (229682)
 		case 14:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return "CH_PREP_OUTFITIN" /*ENTRY DISGUISE*/;
 			
 				default:
@@ -48035,7 +48035,7 @@ char* func_1178(var uParam0, int iParam1) // Position - 0x38132 (229682)
 		case 17:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_HAIR:
+				case 2:
 					return "CH_PREP_OUTFITOUT" /*EXIT DISGUISE*/;
 			
 				default:
@@ -48062,11 +48062,11 @@ BOOL func_1179(int iParam0) // Position - 0x3818C (229772)
 	return false;
 }
 
-char* func_1180(var uParam0, ePedComponentType epctParam1, int iParam2) // Position - 0x381AC (229804)
+char* func_1180(var uParam0, int iParam1, int iParam2) // Position - 0x381AC (229804)
 {
-	switch (epctParam1)
+	switch (iParam1)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam2)
 			{
 				case 0:
@@ -48086,7 +48086,7 @@ char* func_1180(var uParam0, ePedComponentType epctParam1, int iParam2) // Posit
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam2)
 			{
 				case 0:
@@ -48128,7 +48128,7 @@ char* func_1180(var uParam0, ePedComponentType epctParam1, int iParam2) // Posit
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam2)
 			{
 				case 0:
@@ -48155,11 +48155,11 @@ char* func_1180(var uParam0, ePedComponentType epctParam1, int iParam2) // Posit
 	return "";
 }
 
-int func_1181(var uParam0, ePedComponentType epctParam1, int iParam2) // Position - 0x382F0 (230128)
+int func_1181(var uParam0, int iParam1, int iParam2) // Position - 0x382F0 (230128)
 {
-	switch (epctParam1)
+	switch (iParam1)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam2)
 			{
 				case 0:
@@ -48179,7 +48179,7 @@ int func_1181(var uParam0, ePedComponentType epctParam1, int iParam2) // Positio
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam2)
 			{
 				case 0:
@@ -48247,7 +48247,7 @@ int func_1181(var uParam0, ePedComponentType epctParam1, int iParam2) // Positio
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam2)
 			{
 				case 0:
@@ -48276,17 +48276,17 @@ int func_1182(int iParam0) // Position - 0x38467 (230503)
 	return 14 + iParam0;
 }
 
-int func_1183(ePedComponentType epctParam0) // Position - 0x38474 (230516)
+int func_1183(int iParam0) // Position - 0x38474 (230516)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			return 4;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 4;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 4;
 	
 		default:
@@ -48353,13 +48353,13 @@ int func_1191(var uParam0) // Position - 0x38563 (230755)
 		case 1:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 2;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 1;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 3;
 			
 				default:
@@ -48370,13 +48370,13 @@ int func_1191(var uParam0) // Position - 0x38563 (230755)
 		case 2:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 5;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 4;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 6;
 			
 				default:
@@ -48387,13 +48387,13 @@ int func_1191(var uParam0) // Position - 0x38563 (230755)
 		case 3:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 8;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 7;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 9;
 			
 				default:
@@ -48404,13 +48404,13 @@ int func_1191(var uParam0) // Position - 0x38563 (230755)
 		case 4:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 11;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 10;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 12;
 			
 				default:
@@ -48421,13 +48421,13 @@ int func_1191(var uParam0) // Position - 0x38563 (230755)
 		case 5:
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					return 14;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 13;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 15;
 			
 				default:
@@ -48509,7 +48509,7 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 {
 	switch (func_902(uParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam1)
 			{
 				case 0:
@@ -48525,10 +48525,10 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 					return func_1059(uParam0->f_4356);
 			
 				case 4:
-					return func_1057(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1057(uParam0->f_4356) != 0;
 			
 				case 5:
-					return func_1051(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1051(uParam0->f_4356) != 0;
 			
 				case 6:
 					return func_1055(uParam0->f_4356);
@@ -48541,7 +48541,7 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam1)
 			{
 				case 0:
@@ -48557,10 +48557,10 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 					return func_1059(uParam0->f_4356);
 			
 				case 4:
-					return func_1057(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1057(uParam0->f_4356) != 0;
 			
 				case 5:
-					return func_1051(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1051(uParam0->f_4356) != 0;
 			
 				case 6:
 					return func_891(uParam0->f_4356);
@@ -48570,7 +48570,7 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam1)
 			{
 				case 0:
@@ -48586,10 +48586,10 @@ BOOL func_1198(var uParam0, int iParam1) // Position - 0x38768 (231272)
 					return func_1059(uParam0->f_4356);
 			
 				case 4:
-					return func_1057(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1057(uParam0->f_4356) != 0;
 			
 				case 5:
-					return func_1051(uParam0->f_4356) != PV_COMP_HEAD;
+					return func_1051(uParam0->f_4356) != 0;
 			
 				case 6:
 					return func_1054(uParam0->f_4356);
@@ -48610,7 +48610,7 @@ char* func_1199(var uParam0, int iParam1) // Position - 0x38956 (231766)
 {
 	switch (func_902(uParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam1)
 			{
 				case 0:
@@ -48642,7 +48642,7 @@ char* func_1199(var uParam0, int iParam1) // Position - 0x38956 (231766)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam1)
 			{
 				case 0:
@@ -48671,7 +48671,7 @@ char* func_1199(var uParam0, int iParam1) // Position - 0x38956 (231766)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam1)
 			{
 				case 0:
@@ -48717,7 +48717,7 @@ BOOL func_1201(var uParam0, int iParam1) // Position - 0x38AF4 (232180)
 {
 	switch (func_902(uParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam1)
 			{
 				case 0:
@@ -48743,7 +48743,7 @@ BOOL func_1201(var uParam0, int iParam1) // Position - 0x38AF4 (232180)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam1)
 			{
 				case 0:
@@ -48769,7 +48769,7 @@ BOOL func_1201(var uParam0, int iParam1) // Position - 0x38AF4 (232180)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam1)
 			{
 				case 0:
@@ -48803,7 +48803,7 @@ char* func_1202(var uParam0, int iParam1) // Position - 0x38C7C (232572)
 {
 	switch (func_902(uParam0))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			switch (iParam1)
 			{
 				case 0:
@@ -48829,7 +48829,7 @@ char* func_1202(var uParam0, int iParam1) // Position - 0x38C7C (232572)
 			}
 			break;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			switch (iParam1)
 			{
 				case 0:
@@ -48855,7 +48855,7 @@ char* func_1202(var uParam0, int iParam1) // Position - 0x38C7C (232572)
 			}
 			break;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			switch (iParam1)
 			{
 				case 0:
@@ -48920,7 +48920,7 @@ void func_1205(var uParam0) // Position - 0x38DDD (232925)
 				case 1:
 					if (func_1006(uParam0, func_1207(func_1208(uParam0))))
 					{
-						if (func_206(uParam0->f_4356, PV_COMP_HEAD))
+						if (func_206(uParam0->f_4356, 0))
 						{
 							func_204(uParam0, 69);
 							uParam0->f_744.f_737 = 2;
@@ -49053,13 +49053,13 @@ int func_1206(var uParam0) // Position - 0x3915C (233820)
 {
 	switch (func_125(uParam0->f_4356))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			return 8;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 9;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 10;
 	
 		default:
@@ -49093,13 +49093,13 @@ int func_1208(var uParam0) // Position - 0x391C5 (233925)
 {
 	switch (func_125(uParam0->f_4356))
 	{
-		case PV_COMP_BERD:
+		case 1:
 			return 2;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 3;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 4;
 	
 		default:
@@ -49163,10 +49163,10 @@ void func_1213(var uParam0) // Position - 0x392C4 (234180)
 	func_1140(uParam0, true);
 	func_1141(uParam0, true);
 
-	if (func_176(uParam0->f_4356, false) != PV_COMP_HEAD)
+	if (func_176(uParam0->f_4356, false) != 0)
 		func_1078(uParam0, true);
 
-	if (func_165(uParam0->f_4356, false) != PV_COMP_HEAD)
+	if (func_165(uParam0->f_4356, false) != 0)
 		func_1077(uParam0, true);
 
 	func_1076(uParam0, true);
@@ -49933,13 +49933,13 @@ BOOL func_1251(var uParam0, int iParam1) // Position - 0x3A02D (237613)
 	switch (iParam1)
 	{
 		case 5:
-			return func_902(uParam0) == PV_COMP_BERD;
+			return func_902(uParam0) == 1;
 	
 		case 6:
-			return func_902(uParam0) == PV_COMP_HAIR;
+			return func_902(uParam0) == 2;
 	
 		case 7:
-			return func_902(uParam0) == PV_COMP_UPPR;
+			return func_902(uParam0) == 3;
 	
 		case 2:
 			return func_1243(uParam0->f_4356);
@@ -50155,17 +50155,17 @@ BOOL func_1260(var uParam0, int iParam1) // Position - 0x3A361 (238433)
 			break;
 	
 		case 5:
-			if (func_208(uParam0->f_4356) == PV_COMP_BERD)
+			if (func_208(uParam0->f_4356) == 1)
 				return true;
 			break;
 	
 		case 6:
-			if (func_208(uParam0->f_4356) == PV_COMP_HAIR)
+			if (func_208(uParam0->f_4356) == 2)
 				return true;
 			break;
 	
 		case 7:
-			if (func_208(uParam0->f_4356) == PV_COMP_UPPR)
+			if (func_208(uParam0->f_4356) == 3)
 				return true;
 			break;
 	}
@@ -50175,7 +50175,7 @@ BOOL func_1260(var uParam0, int iParam1) // Position - 0x3A361 (238433)
 
 BOOL func_1261(var uParam0) // Position - 0x3A3D9 (238553)
 {
-	return func_902(uParam0) != PV_COMP_HEAD;
+	return func_902(uParam0) != 0;
 }
 
 BOOL func_1262(int iParam0) // Position - 0x3A3E9 (238569)
@@ -50851,30 +50851,30 @@ void func_1276(var uParam0) // Position - 0x3AFA2 (241570)
 	{
 		switch (func_125(uParam0->f_4356))
 		{
-			case PV_COMP_BERD:
+			case 1:
 				func_887(uParam0->f_709, 5, true);
 				break;
 		
-			case PV_COMP_HAIR:
+			case 2:
 				func_887(uParam0->f_709, 6, true);
 				break;
 		
-			case PV_COMP_UPPR:
+			case 3:
 				func_887(uParam0->f_709, 7, true);
 				break;
 		}
 	
 		switch (func_207(uParam0->f_4356))
 		{
-			case PV_COMP_BERD:
+			case 1:
 				func_1297(uParam0->f_709, 5, true);
 				break;
 		
-			case PV_COMP_HAIR:
+			case 2:
 				func_1297(uParam0->f_709, 6, true);
 				break;
 		
-			case PV_COMP_UPPR:
+			case 3:
 				func_1297(uParam0->f_709, 7, true);
 				break;
 		}
@@ -51357,16 +51357,16 @@ int func_1308(var uParam0, int iParam1) // Position - 0x3BA13 (244243)
 		case 8:
 			switch (func_133(uParam0->f_4356))
 			{
-				case PV_COMP_HEAD:
+				case 0:
 					return 1;
 			
-				case PV_COMP_BERD:
+				case 1:
 					return 2;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					return 3;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					return 4;
 			
 				default:
@@ -51786,7 +51786,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 		{
 			switch (func_125(uParam0->f_4356))
 			{
-				case PV_COMP_BERD:
+				case 1:
 					if (func_1006(uParam0, 7))
 					{
 						func_975(uParam0, 1);
@@ -51794,7 +51794,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 					}
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					if (func_1006(uParam0, 8))
 					{
 						func_975(uParam0, 1);
@@ -51802,7 +51802,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 					}
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					if (func_1006(uParam0, 9))
 					{
 						func_975(uParam0, 1);
@@ -51816,7 +51816,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 	{
 		switch (func_125(uParam0->f_4356))
 		{
-			case PV_COMP_BERD:
+			case 1:
 				if (func_1006(uParam0, 65))
 				{
 					func_975(uParam0, 1);
@@ -51824,7 +51824,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 				}
 				break;
 		
-			case PV_COMP_HAIR:
+			case 2:
 				if (func_1006(uParam0, 66))
 				{
 					func_975(uParam0, 1);
@@ -51832,7 +51832,7 @@ void func_1324(var uParam0) // Position - 0x3BE38 (245304)
 				}
 				break;
 		
-			case PV_COMP_UPPR:
+			case 3:
 				if (func_1006(uParam0, 67))
 				{
 					func_975(uParam0, 1);
@@ -52187,7 +52187,7 @@ BOOL func_1347(var uParam0) // Position - 0x3C8CC (248012)
 			uParam0->f_2529.f_35.f_1 = 0f;
 			uParam0->f_2529.f_35.f_2 = -180f;
 		
-			if (func_176(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_176(uParam0->f_4356, false) == 0)
 			{
 				uParam0->f_744.f_738 = 1;
 				uParam0->f_744.f_739 = 0;
@@ -52202,7 +52202,7 @@ BOOL func_1347(var uParam0) // Position - 0x3C8CC (248012)
 					uParam0->f_744.f_739 = 0;
 			}
 		
-			if (func_165(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_165(uParam0->f_4356, false) == 0)
 			{
 				uParam0->f_744.f_740 = 1;
 				uParam0->f_744.f_741 = 0;
@@ -52217,12 +52217,12 @@ BOOL func_1347(var uParam0) // Position - 0x3C8CC (248012)
 					uParam0->f_744.f_741 = 0;
 			}
 		
-			if (func_590(uParam0->f_4356, false) == PV_COMP_HEAD)
+			if (func_590(uParam0->f_4356, false) == 0)
 				uParam0->f_744.f_743 = 1;
 			else
 				uParam0->f_744.f_743 = func_590(uParam0->f_4356, false);
 		
-			if (func_1057(uParam0->f_4356) == PV_COMP_HEAD)
+			if (func_1057(uParam0->f_4356) == 0)
 				uParam0->f_744.f_742 = 1;
 			else
 				uParam0->f_744.f_742 = func_1057(uParam0->f_4356);

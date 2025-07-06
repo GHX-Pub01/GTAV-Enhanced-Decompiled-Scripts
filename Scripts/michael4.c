@@ -102212,7 +102212,7 @@ void func_624(int iParam0) // Position - 0x7F01D (520221)
 	{
 		if (iParam0 == Global_98610)
 		{
-			Global_98614 = 1;
+			Global_98614 = true;
 			return;
 		}
 	}
@@ -102483,7 +102483,7 @@ int func_628(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 		if (!func_631())
 			func_629();
 	
-		Global_98607 = 0;
+		Global_98607 = false;
 		return 1;
 	}
 	else

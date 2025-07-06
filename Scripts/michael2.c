@@ -128588,7 +128588,7 @@ void func_932(int iParam0) // Position - 0xA4CD5 (675029)
 	{
 		if (iParam0 == Global_98610)
 		{
-			Global_98614 = 1;
+			Global_98614 = true;
 			return;
 		}
 	}
@@ -128920,7 +128920,7 @@ BOOL func_940(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 		if (!func_942())
 			func_941();
 	
-		Global_98607 = 0;
+		Global_98607 = false;
 		return true;
 	}
 	else

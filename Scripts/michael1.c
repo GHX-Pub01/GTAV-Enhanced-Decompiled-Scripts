@@ -106120,7 +106120,7 @@ BOOL func_722(var uParam0) // Position - 0x8346D (537709)
 					else
 						RECORDING::REPLAY_RECORD_BACK_FOR_TIME(0f, 7f, 4);
 				
-					func_723(CHAR_RICKIE);
+					func_723(46);
 					func_322(false, true, true, false, false, false, false);
 				
 					if (CAM::IS_SCREEN_FADED_OUT())
@@ -106145,11 +106145,11 @@ BOOL func_722(var uParam0) // Position - 0x8346D (537709)
 	return false;
 }
 
-void func_723(eCharacter echParam0) // Position - 0x841FE (541182)
+void func_723(int iParam0) // Position - 0x841FE (541182)
 {
 	if (Global_98610 != -1)
 	{
-		if (echParam0 == Global_98610)
+		if (iParam0 == Global_98610)
 		{
 			Global_98614 = 1;
 			return;
