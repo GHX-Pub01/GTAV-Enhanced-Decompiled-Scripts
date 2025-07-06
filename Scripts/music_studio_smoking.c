@@ -1417,7 +1417,7 @@ int func_28(char* sParam0, ePedComponentType epctParam1, BOOL bParam2, BOOL bPar
 	return num;
 }
 
-void func_29(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x18FE (6398)
+void func_29(int iParam0, char* sParam1, int iParam2, char* sParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x18FE (6398)
 {
 	int num;
 
@@ -1431,9 +1431,9 @@ void func_29(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4
 		Global_1938165.f_5[num /*53*/] = iParam0;
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
-		Global_1938165.f_5[num /*53*/].f_2[0] = iParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
+		Global_1938165.f_5[num /*53*/].f_2[0] = bParam4;
+		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);

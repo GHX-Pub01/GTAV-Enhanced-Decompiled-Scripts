@@ -115990,7 +115990,7 @@ BOOL func_638() // Position - 0x8C8D2 (575698)
 	return false;
 }
 
-void func_639(int iParam0, BOOL bParam1) // Position - 0x8D0F0 (577776)
+void func_639(BOOL bParam0, BOOL bParam1) // Position - 0x8D0F0 (577776)
 {
 	Global_79833 = bParam1;
 
@@ -116009,7 +116009,7 @@ void func_639(int iParam0, BOOL bParam1) // Position - 0x8D0F0 (577776)
 		{
 		}
 	
-		Global_64346 = iParam0;
+		Global_64346 = bParam0;
 		Global_64320 = true;
 		Global_64331 = true;
 	}
@@ -126538,7 +126538,7 @@ BOOL func_790() // Position - 0x9E846 (649286)
 					func_12(&bLocal_3221, true);
 					BUILTIN::SETTIMERB(0);
 					bLocal_6690 = true;
-					Global_33116 = false;
+					Global_33116 = 0;
 				}
 			
 				if (bLocal_6690 && !bLocal_6691)
@@ -128938,7 +128938,7 @@ BOOL func_835() // Position - 0xA32F7 (668407)
 					iLocal_6705 = 1;
 	}
 
-	Global_33116 = true;
+	Global_33116 = 1;
 
 	if (!bLocal_3485)
 	{
@@ -140203,7 +140203,7 @@ void func_990() // Position - 0xB5767 (743271)
 	func_660(&uLocal_26, 0, false);
 	func_1033();
 	MISC::SET_WEATHER_TYPE_NOW_PERSIST("EXTRASUNNY");
-	Global_33116 = false;
+	Global_33116 = 0;
 
 	switch (iLocal_3186)
 	{
@@ -142709,7 +142709,7 @@ void func_1042() // Position - 0xB9805 (759813)
 	MISC::SET_INSTANCE_PRIORITY_HINT(0);
 	PLAYER::SET_MAX_WANTED_LEVEL(5);
 	VEHICLE::SET_RANDOM_TRAINS(true);
-	Global_33116 = false;
+	Global_33116 = 0;
 	return;
 }
 

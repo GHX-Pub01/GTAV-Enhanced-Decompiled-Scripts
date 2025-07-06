@@ -28179,11 +28179,11 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0x26F9F (15
 
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-	func_645(0, sParam0, num2, 0, 0, 0, 0, 0, 1, 0, 0, 0);
+	func_645(0, sParam0, num2, 0, false, false, false, 0, 1, 0, 0, 0);
 	return num;
 }
 
-void func_645(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x26FD7 (159703)
+void func_645(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x26FD7 (159703)
 {
 	int num;
 
@@ -28198,8 +28198,8 @@ void func_645(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompon
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -82896,9 +82896,9 @@ int func_839(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_645(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
+		func_645(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
 	else
-		func_645(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
+		func_645(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
 
 	return num;
 }
@@ -83802,7 +83802,7 @@ int func_851(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	return 0;
 }
 
-void func_852(int iParam0, Hash hParam1, int iParam2, ePedComponentType epctParam3, int iParam4) // Position - 0x637CA (407498)
+void func_852(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x637CA (407498)
 {
 	switch (hParam1)
 	{
@@ -85902,7 +85902,7 @@ int func_919(char* sParam0, ePedComponentType epctParam1, ePedComponentType epct
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_645(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
+		func_645(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -87935,7 +87935,7 @@ int func_944(char* sParam0, char* sParam1, eHudColour ehcParam2, eHudColour ehcP
 		}
 	}
 
-	func_645(8, sParam0, 1, sParam1, 0, 0, 0, 0, 1, 0, 0, 0);
+	func_645(8, sParam0, 1, sParam1, false, false, false, 0, 1, 0, 0, 0);
 	return num;
 }
 

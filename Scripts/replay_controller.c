@@ -104485,7 +104485,7 @@ void func_801(int iParam0) // Position - 0x84CF8 (543992)
 	return;
 }
 
-void func_802(char* sParam0) // Position - 0x84E2D (544301)
+void func_802(const char* sParam0) // Position - 0x84E2D (544301)
 {
 	int i;
 
@@ -104525,7 +104525,7 @@ BOOL func_803(int iParam0) // Position - 0x84EDC (544476)
 	return false;
 }
 
-void func_804(char* sParam0, int iParam1) // Position - 0x84F31 (544561)
+void func_804(const char* sParam0, int iParam1) // Position - 0x84F31 (544561)
 {
 	int i;
 

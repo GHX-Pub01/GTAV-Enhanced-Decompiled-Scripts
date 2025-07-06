@@ -36918,7 +36918,7 @@ void func_293() // Position - 0x2B1E6 (176614)
 	if (num == -1)
 		return;
 
-	Global_113249[num /*10*/] = 1;
+	Global_113249[num /*10*/] = true;
 	return;
 }
 

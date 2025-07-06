@@ -1222,7 +1222,7 @@ int func_16(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, 
 				}
 			}
 		
-			Global_4538071 = true;
+			Global_4538071 = 1;
 			return 1;
 		}
 	}

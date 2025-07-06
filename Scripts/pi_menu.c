@@ -93392,7 +93392,7 @@ void func_494() // Position - 0x74AF0 (477936)
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_98621[i /*17*/].f_5 != -1 && Global_98621[i /*17*/].f_5 != 80 && Global_98621[i /*17*/].f_5 != 81 && Global_98621[i /*17*/].f_5 != 82)
+		if (Global_98621[i /*17*/].f_5 != -1 && Global_98621[i /*17*/].f_5 != _CHAR_UNK && Global_98621[i /*17*/].f_5 != CHAR_CARSITE3 && Global_98621[i /*17*/].f_5 != _CHAR_GANGAPP_SECUROSERV)
 		{
 			if (func_498(Global_92476[Global_98621[i /*17*/].f_5 /*34*/].f_11, character) && func_497(Global_98621[i /*17*/].f_9))
 			{
@@ -93664,64 +93664,64 @@ void func_494() // Position - 0x74AF0 (477936)
 	return;
 }
 
-char* func_495(int iParam0) // Position - 0x75289 (479881)
+char* func_495(eCharacter echParam0) // Position - 0x75289 (479881)
 {
 	int num;
 
-	switch (iParam0)
+	switch (echParam0)
 	{
-		case 87:
+		case CHAR_MP_STRIPCLUB_PR:
 			return "M_JHP1A" /*Bugstars Equipment*/;
 	
-		case 89:
+		case CHAR_LS_CUSTOMS:
 			return "M_JHP1B" /*Carbine Rifles*/;
 	
-		case 88:
+		case CHAR_DETONATEBOMB:
 			return "M_JHP2A" /*BZ Gas Grenades*/;
 	
-		case 72:
+		case CHAR_MP_MEX_BOSS:
 			return "M_DHP1" /*Minisub*/;
 	
-		case 73:
+		case CHAR_MP_PROF_BOSS:
 			return "M_DHP2b" /*Cargobob*/;
 	
-		case 78:
+		case _CHAR_COREY_PARKER:
 			return "M_FHPRA" /*Stingers*/;
 	
-		case 79:
+		case CHAR_BOATSITE2:
 			return "M_FHPRB" /*Driller*/;
 	
-		case 83:
+		case CHAR_MP_FM_CONTACT:
 			return "PIM_TRAIN" /*Train*/;
 	
-		case 33:
+		case CHAR_GAYMILITARY:
 			return "M_FB4P1" /*Trash Truck*/;
 	
-		case 34:
+		case CHAR_OSCAR:
 			return "M_FB4P2" /*Tow Truck*/;
 	
-		case 35:
+		case CHAR_CHENGSR:
 			return "M_FB4P3" /*Getaway Vehicle*/;
 	
-		case 36:
+		case CHAR_DR_FRIEDLANDER:
 			return "M_FB4P4" /*Masks*/;
 	
-		case 37:
+		case CHAR_STRETCH:
 			return "M_FB4P5" /*Boiler Suits*/;
 	
-		case 47:
+		case CHAR_CHEF:
 			return "PIM_FRANK" /*Franklin*/;
 	
-		case 62:
+		case CHAR_MAUDE:
 			return "PIM_MIKE" /*Michael*/;
 	
-		case 19:
+		case CHAR_LAMAR:
 			if (_GET_CURRENT_PLAYER_CHARACTER_0() == CHAR_FRANKLIN)
 				return "PIM_MIKE" /*Michael*/;
 			break;
 	}
 
-	num = func_496(iParam0);
+	num = func_496(echParam0);
 
 	switch (num)
 	{
@@ -93825,165 +93825,165 @@ char* func_495(int iParam0) // Position - 0x75289 (479881)
 	return "";
 }
 
-int func_496(int iParam0) // Position - 0x755E1 (480737)
+int func_496(eCharacter echParam0) // Position - 0x755E1 (480737)
 {
-	switch (iParam0)
+	switch (echParam0)
 	{
-		case 66:
-		case 67:
-		case 69:
-		case 70:
-		case 68:
+		case CHAR_ASHLEY:
+		case CHAR_ANDREAS:
+		case CHAR_OMEGA:
+		case CHAR_MP_BIKER_BOSS:
+		case CHAR_DREYFUSS:
 			return 0;
 	
-		case 0:
-		case 1:
-		case 2:
+		case CHAR_MICHAEL:
+		case CHAR_FRANKLIN:
+		case CHAR_TREVOR:
 			return 1;
 	
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
+		case CHAR_MULTIPLAYER:
+		case CHAR_ALL_PLAYERS_CONF:
+		case CHAR_FRANK_TREV_CONF:
+		case CHAR_LEST_FRANK_CONF:
+		case CHAR_LEST_MIKE_CONF:
 			return 2;
 	
-		case 8:
-		case 9:
-		case 10:
-		case 11:
+		case CHAR_MIKE_FRANK_CONF:
+		case CHAR_MIKE_TREV_CONF:
+		case CHAR_STEVE_MIKE_CONF:
+		case CHAR_STEVE_TREV_CONF:
 			return 3;
 	
-		case 12:
-		case 13:
+		case CHAR_LESTER:
+		case CHAR_LESTER_DEATHWISH:
 			return 4;
 	
-		case 71:
-		case 72:
-		case 74:
-		case 75:
+		case CHAR_MP_FAM_BOSS:
+		case CHAR_MP_MEX_BOSS:
+		case CHAR_PA_FEMALE:
+		case CHAR_PA_MALE:
 			return 5;
 	
-		case 73:
+		case CHAR_MP_PROF_BOSS:
 			return 6;
 	
-		case 14:
-		case 15:
-		case 16:
+		case CHAR_JIMMY:
+		case CHAR_TRACEY:
+		case CHAR_ABIGAIL:
 			return 7;
 	
-		case 17:
-		case 18:
-		case 19:
-		case 20:
-		case 21:
-		case 22:
+		case CHAR_AMANDA:
+		case CHAR_SIMEON:
+		case CHAR_LAMAR:
+		case CHAR_RON:
+		case CHAR_CHENG:
+		case CHAR_GANGAPP:
 			return 8;
 	
-		case 29:
-		case 30:
-		case 31:
-		case 32:
-		case 33:
-		case 38:
-		case 39:
+		case CHAR_DEVIN:
+		case CHAR_DAVE:
+		case CHAR_MARTIN:
+		case CHAR_FLOYD:
+		case CHAR_GAYMILITARY:
+		case CHAR_ORTEGA:
+		case CHAR_ONEIL:
 			return 9;
 	
-		case 34:
+		case CHAR_OSCAR:
 			return 10;
 	
-		case 35:
+		case CHAR_CHENGSR:
 			return 11;
 	
-		case 36:
+		case CHAR_DR_FRIEDLANDER:
 			return 12;
 	
-		case 37:
+		case CHAR_STRETCH:
 			return 13;
 	
-		case 23:
-		case 24:
-		case 25:
-		case 26:
-		case 27:
+		case CHAR_STEVE:
+		case CHAR_WADE:
+		case CHAR_TENNIS_COACH:
+		case CHAR_SOLOMON:
+		case CHAR_LAZLOW:
 			return 14;
 	
-		case 76:
-		case 77:
-		case 78:
-		case 79:
-		case 84:
-		case 85:
+		case CHAR_AGENT14:
+		case CHAR_MP_STRETCH:
+		case _CHAR_COREY_PARKER:
+		case CHAR_BOATSITE2:
+		case CHAR_MP_BRUCIE:
+		case CHAR_MP_MERRYWEATHER:
 			return 15;
 	
-		case 80:
-		case 83:
+		case _CHAR_UNK:
+		case CHAR_MP_FM_CONTACT:
 			return 16;
 	
-		case 81:
+		case CHAR_CARSITE3:
 			return 17;
 	
-		case 82:
+		case _CHAR_GANGAPP_SECUROSERV:
 			return 18;
 	
-		case 40:
-		case 41:
-		case 42:
+		case CHAR_PATRICIA:
+		case CHAR_PEGASUS_DELIVERY:
+		case CHAR_LIFEINVADER:
 			return 19;
 	
-		case 86:
-		case 87:
-		case 89:
-		case 90:
+		case CHAR_MP_GERALD:
+		case CHAR_MP_STRIPCLUB_PR:
+		case CHAR_LS_CUSTOMS:
+		case _CHAR_JULIO_FABRIZIO:
 			return 20;
 	
-		case 88:
+		case CHAR_DETONATEBOMB:
 			return 21;
 	
-		case 43:
+		case CHAR_TANISHA:
 			return 22;
 	
-		case 44:
+		case CHAR_DENISE:
 			return 23;
 	
-		case 45:
+		case CHAR_MOLLY:
 			return 24;
 	
-		case 46:
-		case 47:
-		case 48:
-		case 49:
+		case CHAR_RICKIE:
+		case CHAR_CHEF:
+		case CHAR_BLIMP:
+		case CHAR_BARRY:
 			return 25;
 	
-		case 50:
-		case 51:
-		case 52:
+		case CHAR_BEVERLY:
+		case CHAR_CRIS:
+		case CHAR_DOM:
 			return 26;
 	
-		case 53:
+		case CHAR_HAO:
 			return 27;
 	
-		case 91:
-		case 92:
-		case 93:
+		case CHAR_MP_MORS_MUTUAL:
+		case CHAR_DOMESTIC_GIRL:
+		case CHAR_HITCHER_GIRL:
 			return 28;
 	
-		case 54:
-		case 55:
-		case 56:
-		case 57:
-		case 58:
+		case CHAR_HUNTER:
+		case CHAR_JIMMY_BOSTON:
+		case CHAR_JOE:
+		case CHAR_JOSEF:
+		case CHAR_JOSH:
 			return 29;
 	
-		case 59:
-		case 60:
-		case 61:
+		case CHAR_MANUEL:
+		case CHAR_MARNIE:
+		case CHAR_MARY_ANN:
 			return 30;
 	
-		case 62:
-		case 63:
-		case 64:
-		case 65:
+		case CHAR_MAUDE:
+		case CHAR_MRS_THORNHILL:
+		case CHAR_NIGEL:
+		case CHAR_SASQUATCH:
 			return 31;
 	}
 
@@ -94337,47 +94337,47 @@ BOOL func_506(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x75FED (4
 	return flag && flag2;
 }
 
-BOOL func_507(int iParam0) // Position - 0x76102 (483586)
+BOOL func_507(int* piParam0) // Position - 0x76102 (483586)
 {
-	switch (iParam0->f_9)
+	switch (piParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
-				iParam0->f_9 = 1;
+				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
+				piParam0->f_9 = 1;
 			
-				if (iParam0->f_7)
+				if (piParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 					{
-						iParam0->f_8 = MISC::GET_GAME_TIMER();
-						iParam0->f_9 = 2;
+						piParam0->f_8 = MISC::GET_GAME_TIMER();
+						piParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			{
-				iParam0->f_8 = MISC::GET_GAME_TIMER();
-				iParam0->f_9 = 2;
+				piParam0->f_8 = MISC::GET_GAME_TIMER();
+				piParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-				iParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+				piParam0->f_9 = 0;
 			break;
 	}
 
-	return iParam0->f_9 == 2;
+	return piParam0->f_9 == 2;
 }
 
 void func_508() // Position - 0x761A4 (483748)
@@ -95100,15 +95100,15 @@ void func_527(BOOL bParam0, int iParam1) // Position - 0x76DCF (486863)
 	return;
 }
 
-void func_528(int iParam0) // Position - 0x76E98 (487064)
+void func_528(int* piParam0) // Position - 0x76E98 (487064)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;

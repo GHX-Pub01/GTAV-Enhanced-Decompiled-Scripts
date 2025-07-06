@@ -132579,14 +132579,14 @@ void func_1283(int iParam0, int iParam1) // Position - 0xA57AA (677802)
 	return;
 }
 
-void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (677828)
+void func_1284(int iParam0, int iParam1, int iParam2) // Position - 0xA57C4 (677828)
 {
 	BOOL flag;
 	int num;
 
 	if (*Global_262145.f_35150)
 	{
-		func_868(iParam0, bParam1, iParam2, true);
+		func_868(iParam0, iParam1, iParam2, true);
 		return;
 	}
 
@@ -132594,7 +132594,7 @@ void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (67
 	num.f_2 = -1;
 	num = func_1287(iParam0);
 
-	if (!func_1023(num, bParam1 == func_1230(iParam0, -1)))
+	if (!func_1023(num, iParam1 == func_1230(iParam0, -1)))
 	{
 		flag = false;
 	}
@@ -132609,7 +132609,7 @@ void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (67
 			flag = false;
 	}
 
-	func_868(iParam0, bParam1, iParam2, true);
+	func_868(iParam0, iParam1, iParam2, true);
 
 	if (flag)
 		func_970(&num);
@@ -135324,28 +135324,28 @@ void func_1426(float fParam0) // Position - 0xA84AC (689324)
 
 BOOL func_1427(int iParam0) // Position - 0xA84D0 (689360)
 {
-	BOOL flag;
+	int num;
 
 	if (Global_1939321[iParam0 /*8*/] == -1)
 	{
-		flag = func_1230(func_1429(iParam0), -1);
+		num = func_1230(func_1429(iParam0), -1);
 	
-		if (flag == -1)
+		if (num == -1)
 		{
 			func_1428(iParam0, 0);
-			flag = 0;
+			num = 0;
 		}
 	
-		Global_1939321[iParam0 /*8*/] = flag;
+		Global_1939321[iParam0 /*8*/] = num;
 	}
 
 	return Global_1939321[iParam0 /*8*/];
 }
 
-void func_1428(int iParam0, BOOL bParam1) // Position - 0xA8513 (689427)
+void func_1428(int iParam0, int iParam1) // Position - 0xA8513 (689427)
 {
-	Global_1939321[iParam0 /*8*/] = bParam1;
-	func_1284(func_1429(iParam0), bParam1, -1);
+	Global_1939321[iParam0 /*8*/] = iParam1;
+	func_1284(func_1429(iParam0), iParam1, -1);
 	return;
 }
 
@@ -135695,15 +135695,15 @@ void func_1459(BOOL bParam0, int iParam1) // Position - 0xA89E0 (690656)
 	return;
 }
 
-void func_1460(int iParam0) // Position - 0xA8AA9 (690857)
+void func_1460(int* piParam0) // Position - 0xA8AA9 (690857)
 {
-	if (iParam0->f_9 != 0)
+	if (piParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
-		*iParam0 = 0;
-		iParam0->f_9 = 0;
+		*piParam0 = 0;
+		piParam0->f_9 = 0;
 	}
 
 	return;

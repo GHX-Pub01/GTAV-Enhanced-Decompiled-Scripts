@@ -424,7 +424,7 @@ void main() // Position - 0x0 (0)
 
 	if (func_318())
 	{
-		Global_79810 = true;
+		Global_79810 = 1;
 		iLocal_77 = 0;
 	
 		while (!func_310(&uLocal_84))
@@ -432,7 +432,7 @@ void main() // Position - 0x0 (0)
 			BUILTIN::WAIT(0);
 		}
 	
-		Global_79810 = false;
+		Global_79810 = 0;
 	}
 
 	func_303(60, 0, false);

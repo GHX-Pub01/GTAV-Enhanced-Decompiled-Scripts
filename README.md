@@ -1,2 +1,2 @@
 # GTAV Enhanced Decompiled Scripts
-* Scripts: 1.70|811.5
+* Scripts: 811.8|1.70

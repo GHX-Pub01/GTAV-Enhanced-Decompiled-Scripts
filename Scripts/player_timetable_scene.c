@@ -43322,12 +43322,12 @@ BOOL func_331(int iParam0, int iParam1) // Position - 0x383F9 (230393)
 	Vector3 vector;
 	int num;
 	int i;
-	int num2;
-	float num3;
+	eCharacter character;
+	float num2;
+	int num3;
 	int num4;
-	int num5;
 	Vector3 vector2;
-	float num6;
+	float num5;
 
 	num = 145;
 
@@ -43376,15 +43376,15 @@ BOOL func_331(int iParam0, int iParam1) // Position - 0x383F9 (230393)
 	{
 		if (Global_98621[i /*17*/])
 		{
-			num2 = Global_98621[i /*17*/].f_5;
-			num3 = Global_98621[i /*17*/].f_10.f_4;
-			num4 = Global_98621[i /*17*/].f_10.f_6;
-			num5 = Global_92476[num2 /*34*/].f_10;
-			vector2 = { func_332(num5, 0) };
-			num6 = BUILTIN::VDIST2(vector, vector2);
+			character = Global_98621[i /*17*/].f_5;
+			num2 = Global_98621[i /*17*/].f_10.f_4;
+			num3 = Global_98621[i /*17*/].f_10.f_6;
+			num4 = Global_92476[character /*34*/].f_10;
+			vector2 = { func_332(num4, 0) };
+			num5 = BUILTIN::VDIST2(vector, vector2);
 		
-			if (!IS_BIT_SET(num4, num))
-				if (num6 < num3 * num3)
+			if (!IS_BIT_SET(num3, num))
+				if (num5 < num2 * num2)
 					return true;
 		}
 	}
@@ -117140,11 +117140,11 @@ int func_693(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	
 		case 232:
 		case 233:
-			func_694(67);
+			func_694(CHAR_ANDREAS);
 			return 1;
 	
 		case 174:
-			func_694(20);
+			func_694(CHAR_RON);
 			return 1;
 	}
 
@@ -117152,10 +117152,10 @@ int func_693(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	return 0;
 }
 
-void func_694(int iParam0) // Position - 0x99FFC (630780)
+void func_694(eCharacter echParam0) // Position - 0x99FFC (630780)
 {
 	if (Global_98612 == -1)
-		Global_98612 = iParam0;
+		Global_98612 = echParam0;
 
 	return;
 }
@@ -117374,11 +117374,11 @@ void func_705(int iParam0, BOOL bParam1) // Position - 0x9A443 (631875)
 	return;
 }
 
-void func_706(int iParam0) // Position - 0x9A481 (631937)
+void func_706(eCharacter echParam0) // Position - 0x9A481 (631937)
 {
-	if (func_707(iParam0))
+	if (func_707(echParam0))
 	{
-		Global_98611 = iParam0;
+		Global_98611 = echParam0;
 		Global_98615 = true;
 		return;
 	}

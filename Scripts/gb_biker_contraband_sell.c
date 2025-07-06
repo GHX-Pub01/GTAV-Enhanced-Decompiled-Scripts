@@ -126827,14 +126827,14 @@ int func_1130(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_1131(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
+		func_1131(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
 	else
-		func_1131(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
+		func_1131(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-void func_1131(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0xA150D (660749)
+void func_1131(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0xA150D (660749)
 {
 	int num;
 
@@ -126849,8 +126849,8 @@ void func_1131(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompo
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -127685,7 +127685,7 @@ int func_1143(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 	return 0;
 }
 
-void func_1144(int iParam0, Hash hParam1, int iParam2, ePedComponentType epctParam3, int iParam4) // Position - 0xA2671 (665201)
+void func_1144(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0xA2671 (665201)
 {
 	switch (hParam1)
 	{
@@ -129791,7 +129791,7 @@ int func_1212(char* sParam0, ePedComponentType epctParam1, ePedComponentType epc
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_1131(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
+		func_1131(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -130510,7 +130510,7 @@ int func_1231(char* sParam0, char* sParam1, eHudColour ehcParam2, eHudColour ehc
 		}
 	}
 
-	func_1131(8, sParam0, 1, sParam1, 0, 0, 0, 0, 1, 0, 0, 0);
+	func_1131(8, sParam0, 1, sParam1, false, false, false, 0, 1, 0, 0, 0);
 	return num;
 }
 
@@ -140319,7 +140319,7 @@ int func_1466(char* sParam0, ePedComponentType epctParam1, BOOL bParam2, BOOL bP
 				}
 			}
 		
-			func_1131(14, sParam0, 1, &playerName, 0, 0, 0, 0, 1, 0, 0, 0);
+			func_1131(14, sParam0, 1, &playerName, false, false, false, 0, 1, 0, 0, 0);
 		}
 	}
 
@@ -140940,13 +140940,13 @@ void func_1501() // Position - 0xB31AC (733612)
 	int num4;
 	int num5;
 	int num6;
-	BOOL flag;
+	ePedComponentType type;
 	int num7;
 	int num8;
-	BOOL flag2;
+	ePedComponentType type2;
 	int num9;
 	int num10;
-	ePedComponentType type;
+	ePedComponentType type3;
 	int participantIndex;
 	int num11;
 
@@ -141006,8 +141006,8 @@ void func_1501() // Position - 0xB31AC (733612)
 						num2 = 7;
 				
 					num6 = func_248(-1);
-					flag = num6 - epctLocal_727.f_122;
-					func_1506(flag, "BSELL_PRODHELD" /*CARRYING*/, -1, 1, num2, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0);
+					type = num6 - epctLocal_727.f_122;
+					func_1506(type, "BSELL_PRODHELD" /*CARRYING*/, -1, 1, num2, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0);
 				}
 			}
 			else if (func_25())
@@ -141022,8 +141022,8 @@ void func_1501() // Position - 0xB31AC (733612)
 						{
 							num2 = 5;
 							num8 = func_248(-1);
-							flag2 = num8 - epctLocal_727.f_124[num7];
-							func_1506(flag2, "BSELL_PRODHELD" /*CARRYING*/, -1, 1, num2, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0);
+							type2 = num8 - epctLocal_727.f_124[num7];
+							func_1506(type2, "BSELL_PRODHELD" /*CARRYING*/, -1, 1, num2, 0, 0, 1, 0, 0, 0, 0, 0, 0, -1, 0);
 						}
 					}
 				}
@@ -141049,7 +141049,7 @@ void func_1501() // Position - 0xB31AC (733612)
 				
 					if (func_1313(num10, true))
 					{
-						type = func_1503() - func_1502(&uLocal_1712[NETWORK::PARTICIPANT_ID_TO_INT() /*29*/].f_16[num9 /*2*/], false, false);
+						type3 = func_1503() - func_1502(&uLocal_1712[NETWORK::PARTICIPANT_ID_TO_INT() /*29*/].f_16[num9 /*2*/], false, false);
 					}
 					else
 					{
@@ -141057,20 +141057,20 @@ void func_1501() // Position - 0xB31AC (733612)
 							participantIndex = NETWORK::NETWORK_GET_PARTICIPANT_INDEX(func_491(num10));
 					
 						if (participantIndex != -1)
-							type = func_1503() - func_1502(&uLocal_1712[participantIndex /*29*/].f_16[num9 /*2*/], false, false);
+							type3 = func_1503() - func_1502(&uLocal_1712[participantIndex /*29*/].f_16[num9 /*2*/], false, false);
 					}
 				
 					if (epctLocal_727.f_893[num10] > 0)
 					{
 						num11 = 1;
 					
-						if (type < PV_COMP_HEAD)
+						if (type3 < PV_COMP_HEAD)
 						{
-							type = PV_COMP_HEAD;
+							type3 = PV_COMP_HEAD;
 							num11 = 6;
 						}
 					
-						func_1381(type, "BIKESELL_BPTR" /*CHECKPOINT TIME*/, 0, 0, PV_COMP_INVALID, 0, 5, 0, num11, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+						func_1381(type3, "BIKESELL_BPTR" /*CHECKPOINT TIME*/, 0, 0, PV_COMP_INVALID, 0, 5, 0, num11, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 					}
 				
 					func_1387(epctLocal_727.f_893[num10], "SCONTRA_HUD_DMG" /*DELIVERY BONUS*/, -1, 109, 4, 0, "HUD_CASH" /*$~1~*/, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 0, 0, 0, 0, 1, -1, 0);
@@ -141242,7 +141242,7 @@ int func_1505() // Position - 0xB37A9 (735145)
 	return num;
 }
 
-void func_1506(BOOL bParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, const char* sParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15) // Position - 0xB38D1 (735441)
+void func_1506(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, const char* sParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15) // Position - 0xB38D1 (735441)
 {
 	int num;
 	int i;
@@ -141263,7 +141263,7 @@ void func_1506(BOOL bParam0, char* sParam1, int iParam2, int iParam3, int iParam
 	{
 		Global_1675263.f_1 = 1;
 		func_1382(3, num);
-		Global_1675263.f_2872[num] = bParam0;
+		Global_1675263.f_2872[num] = epctParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_2872.f_11[num /*16*/], sParam1, 64);
 		Global_1675263.f_2872.f_183[num] = iParam3;
 		Global_1675263.f_2872.f_172[num] = iParam2;

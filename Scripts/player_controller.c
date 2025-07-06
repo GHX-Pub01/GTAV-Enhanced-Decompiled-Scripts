@@ -101670,11 +101670,11 @@ BOOL func_655(eCharacter echParam0, var uParam1) // Position - 0x84A46 (543302)
 	int num3;
 	Vector3 vector3;
 	int k;
-	int num4;
-	float num5;
-	int num6;
+	eCharacter character;
+	float num4;
+	int num5;
 	Vector3 vector4;
-	float num7;
+	float num6;
 
 	if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
@@ -101815,17 +101815,17 @@ BOOL func_655(eCharacter echParam0, var uParam1) // Position - 0x84A46 (543302)
 	{
 		if (Global_98621[k /*17*/])
 		{
-			num4 = Global_98621[k /*17*/].f_5;
-			num5 = Global_98621[k /*17*/].f_10.f_4;
-			num5 = num5 * 1.5f;
-			num6 = Global_98621[k /*17*/].f_10.f_6;
-			i = Global_92476[num4 /*34*/].f_10;
+			character = Global_98621[k /*17*/].f_5;
+			num4 = Global_98621[k /*17*/].f_10.f_4;
+			num4 = num4 * 1.5f;
+			num5 = Global_98621[k /*17*/].f_10.f_6;
+			i = Global_92476[character /*34*/].f_10;
 			vector4 = { Global_33485[i /*23*/][0 /*3*/] };
-			num7 = BUILTIN::VDIST2(vector, vector4);
+			num6 = BUILTIN::VDIST2(vector, vector4);
 		
-			if (!IS_BIT_SET(num6, echParam0))
+			if (!IS_BIT_SET(num5, echParam0))
 			{
-				if (num7 < num5 * num5)
+				if (num6 < num4 * num4)
 				{
 					*uParam1 = 13;
 					return false;

@@ -58293,7 +58293,7 @@ void func_538(int iParam0, BOOL bParam1) // Position - 0x4DAA5 (318117)
 			func_539(iParam0, 3, false);
 			func_539(iParam0, 4, false);
 			func_539(iParam0, 0, true);
-			Global_78354[iParam0] = 1;
+			Global_78354[iParam0] = true;
 		}
 	}
 	else
@@ -58350,7 +58350,7 @@ void func_541(int iParam0) // Position - 0x4DB5D (318301)
 			}
 		}
 	
-		Global_78354[iParam0] = 1;
+		Global_78354[iParam0] = true;
 	
 		if (IS_BIT_SET(Global_78354.f_555[0 /*21*/].f_9, 13))
 		{

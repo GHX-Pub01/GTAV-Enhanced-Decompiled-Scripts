@@ -10703,7 +10703,7 @@ void func_203(eBlipSprite ebsParam0, BOOL bParam1) // Position - 0xEAE2 (60130)
 	Blip firstBlipInfoId;
 	int num;
 	int blipInfoIdType;
-	int num2;
+	eCharacter character;
 
 	firstBlipInfoId = HUD::GET_FIRST_BLIP_INFO_ID(ebsParam0);
 	num = 20;
@@ -10863,9 +10863,9 @@ void func_203(eBlipSprite ebsParam0, BOOL bParam1) // Position - 0xEAE2 (60130)
 								break;
 						
 							case BLIP_HEIST_PREP:
-								num2 = func_212(&firstBlipInfoId);
+								character = func_212(&firstBlipInfoId);
 							
-								if (num2 == 33 || num2 == 92 || num2 == 89 || num2 == 88)
+								if (character == CHAR_GAYMILITARY || character == CHAR_DOMESTIC_GIRL || character == CHAR_LS_CUSTOMS || character == CHAR_DETONATEBOMB)
 									flag = false;
 								else
 									flag = true;
@@ -11096,7 +11096,7 @@ BOOL func_211(var uParam0) // Position - 0xF1C2 (61890)
 	return false;
 }
 
-int func_212(var uParam0) // Position - 0xF230 (62000)
+eCharacter func_212(var uParam0) // Position - 0xF230 (62000)
 {
 	int i;
 

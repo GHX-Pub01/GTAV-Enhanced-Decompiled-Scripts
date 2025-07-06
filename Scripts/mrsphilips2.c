@@ -50960,10 +50960,10 @@ int func_425(int iParam0) // Position - 0x41662 (267874)
 	return 0;
 }
 
-void func_426(int iParam0) // Position - 0x417E1 (268257)
+void func_426(eCharacter echParam0) // Position - 0x417E1 (268257)
 {
 	if (Global_98612 == -1)
-		Global_98612 = iParam0;
+		Global_98612 = echParam0;
 
 	return;
 }

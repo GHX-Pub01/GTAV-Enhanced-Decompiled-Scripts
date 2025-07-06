@@ -109,15 +109,15 @@ void main() // Position - 0x0 (0)
 	float groundZ;
 	Vector3 pedBoneCoords;
 	BOOL groundZFor3dCoord;
+	eCharacter character3;
 	int num9;
-	int num10;
 	BOOL flag5;
 	Vehicle vehiclePedIsIn;
 	Hash roomKeyFromEntity;
+	int num10;
 	int num11;
 	int num12;
 	int num13;
-	int num14;
 
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -450,17 +450,17 @@ void main() // Position - 0x0 (0)
 			}
 		}
 	
-		num9 = -1;
+		character3 = -1;
 	
 		if (Global_114162.f_25088.f_96 != -1)
 		{
-			num10 = Global_114162.f_25088.f_96;
+			num9 = Global_114162.f_25088.f_96;
 		
-			if (func_112(Global_92476[num10 /*34*/].f_11, _GET_CURRENT_PLAYER_CHARACTER_0()))
-				num9 = Global_114162.f_25088.f_96;
+			if (func_112(Global_92476[num9 /*34*/].f_11, _GET_CURRENT_PLAYER_CHARACTER_0()))
+				character3 = Global_114162.f_25088.f_96;
 		}
 	
-		if (!flag4 && num9 == -1)
+		if (!flag4 && character3 == -1)
 		{
 			if (!func_111(vector, heading, 0, true, false))
 			{
@@ -566,9 +566,9 @@ void main() // Position - 0x0 (0)
 		PED::INSTANTLY_FILL_PED_POPULATION();
 		VEHICLE::INSTANTLY_FILL_VEHICLE_POPULATION();
 		MISC::POPULATE_NOW();
-		num11 = MISC::GET_GAME_TIMER() + 1500;
+		num10 = MISC::GET_GAME_TIMER() + 1500;
 	
-		while (!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && num11 > MISC::GET_GAME_TIMER())
+		while (!VEHICLE::HAS_INSTANT_FILL_VEHICLE_POPULATION_FINISHED() && num10 > MISC::GET_GAME_TIMER())
 		{
 			BUILTIN::WAIT(0);
 		}
@@ -582,14 +582,14 @@ void main() // Position - 0x0 (0)
 	
 		func_9();
 	
-		if (num9 != -1)
+		if (character3 != -1)
 		{
 			while (!Global_152751)
 			{
 				BUILTIN::WAIT(0);
 			}
 		
-			func_7(num9);
+			func_7(character3);
 		
 			while (Global_98611 != -1)
 			{
@@ -604,21 +604,21 @@ void main() // Position - 0x0 (0)
 			}
 		
 			Global_33484 = false;
-			num12 = MISC::GET_GAME_TIMER() + 5000;
+			num11 = MISC::GET_GAME_TIMER() + 5000;
 		
-			while (Global_33482 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("blip_controller")) < 1 && num12 > MISC::GET_GAME_TIMER())
+			while (Global_33482 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("blip_controller")) < 1 && num11 > MISC::GET_GAME_TIMER())
 			{
 				BUILTIN::WAIT(0);
 			}
 		
-			func_6(num9, false);
+			func_6(character3, false);
 		}
 		else
 		{
 			Global_33484 = false;
-			num13 = MISC::GET_GAME_TIMER() + 5000;
+			num12 = MISC::GET_GAME_TIMER() + 5000;
 		
-			while (Global_33482 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("blip_controller")) < 1 && num13 > MISC::GET_GAME_TIMER())
+			while (Global_33482 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("blip_controller")) < 1 && num12 > MISC::GET_GAME_TIMER())
 			{
 				BUILTIN::WAIT(0);
 			}
@@ -628,14 +628,14 @@ void main() // Position - 0x0 (0)
 		{
 			if (func_5(PLAYER::PLAYER_PED_ID()))
 			{
-				num14 = MISC::GET_GAME_TIMER() + 5000;
+				num13 = MISC::GET_GAME_TIMER() + 5000;
 			
-				while (!func_4(Global_113186, 32) && MISC::GET_GAME_TIMER() < num14)
+				while (!func_4(Global_113186, 32) && MISC::GET_GAME_TIMER() < num13)
 				{
 					BUILTIN::WAIT(0);
 				}
 			
-				if (MISC::GET_GAME_TIMER() < num14)
+				if (MISC::GET_GAME_TIMER() < num13)
 				{
 				}
 			}
@@ -667,7 +667,7 @@ void main() // Position - 0x0 (0)
 			if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 				ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), false);
 	
-		if (num9 != -1)
+		if (character3 != -1)
 			BUILTIN::WAIT(1000);
 	
 		func_684();
@@ -731,13 +731,13 @@ BOOL func_5(Ped pedParam0) // Position - 0xE95 (3733)
 	return INTERIOR::GET_INTERIOR_FROM_ENTITY(pedParam0) == Global_152838;
 }
 
-void func_6(int iParam0, BOOL bParam1) // Position - 0xEC0 (3776)
+void func_6(eCharacter echParam0, BOOL bParam1) // Position - 0xEC0 (3776)
 {
 	if (bParam1)
-		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
-			Global_95673[iParam0 /*2*/] = true;
+		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
+			Global_95673[echParam0 /*2*/] = true;
 	else
-		Global_95673[iParam0 /*2*/] = false;
+		Global_95673[echParam0 /*2*/] = false;
 
 	return;
 }
@@ -784,7 +784,7 @@ void func_9() // Position - 0xF7C (3964)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
+				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
 					func_6(Global_98621[i /*17*/].f_5, true);
 	}
 

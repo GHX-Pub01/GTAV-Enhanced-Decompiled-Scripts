@@ -124205,18 +124205,18 @@ BOOL func_827(Hash hParam0) // Position - 0x9F96E (653678)
 	return true;
 }
 
-BOOL func_828(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x9FB2C (654124)
+BOOL func_828(ePedComponentType epctParam0, BOOL bParam1, int iParam2) // Position - 0x9FB2C (654124)
 {
 	int i;
 	Hash outData;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return false;
 
-	if (!STREAMING::IS_MODEL_A_VEHICLE(hParam0))
+	if (!STREAMING::IS_MODEL_A_VEHICLE(epctParam0))
 		return false;
 
-	if (hParam0 == joaat("dominator2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || hParam0 == joaat("buffalo3") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || hParam0 == joaat("gauntlet2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || hParam0 == joaat("blimp2") || hParam0 == joaat("stalion2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
+	if (epctParam0 == joaat("dominator2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || epctParam0 == joaat("buffalo3") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || epctParam0 == joaat("gauntlet2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || epctParam0 == joaat("blimp2") || epctParam0 == joaat("stalion2") && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
 		if (!_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 			return false;
@@ -124227,7 +124227,7 @@ BOOL func_828(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x9FB2C (65
 		{
 			if (EXTRAMETADATA::GET_DLC_VEHICLE_DATA(i, &outData))
 			{
-				if (hParam0 == outData.f_1)
+				if (epctParam0 == outData.f_1)
 				{
 					if (EXTRAMETADATA::IS_CONTENT_ITEM_LOCKED(outData))
 						return false;
@@ -124238,11 +124238,11 @@ BOOL func_828(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x9FB2C (65
 		}
 	}
 
-	if (hParam0 == joaat("blimp"))
+	if (epctParam0 == joaat("blimp"))
 		if (!func_834() && !func_234() && !func_233() && !func_833() && !_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 			return false;
 
-	if (hParam0 == joaat("hotknife") || hParam0 == joaat("carbonrs") || hParam0 == joaat("khamelion"))
+	if (epctParam0 == joaat("hotknife") || epctParam0 == joaat("carbonrs") || epctParam0 == joaat("khamelion"))
 	{
 		if (func_832() || MISC::IS_PC_VERSION() || func_438())
 		{
@@ -124254,10 +124254,10 @@ BOOL func_828(Hash hParam0, BOOL bParam1, int iParam2) // Position - 0x9FB2C (65
 	}
 
 	if (bParam1)
-		if (!func_831(hParam0, iParam2))
+		if (!func_831(epctParam0, iParam2))
 			return false;
 
-	if (!func_829(hParam0))
+	if (!func_829(epctParam0))
 		return false;
 
 	return true;
@@ -124329,7 +124329,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x9FD85 (654725)
 	return false;
 }
 
-BOOL func_831(Hash hParam0, int iParam1) // Position - 0x9FD9C (654748)
+BOOL func_831(ePedComponentType epctParam0, int iParam1) // Position - 0x9FD9C (654748)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -124345,7 +124345,7 @@ BOOL func_831(Hash hParam0, int iParam1) // Position - 0x9FD9C (654748)
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (hParam0)
+	switch (epctParam0)
 	{
 		case -1321131184:
 			num = Global_262145.f_36169[0];
@@ -124425,7 +124425,7 @@ BOOL func_831(Hash hParam0, int iParam1) // Position - 0x9FD9C (654748)
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (hParam0 == Global_1835471[i])
+		if (epctParam0 == Global_1835471[i])
 			return true;
 	}
 

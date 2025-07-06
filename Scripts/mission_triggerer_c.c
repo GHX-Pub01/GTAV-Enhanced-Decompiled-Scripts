@@ -2764,13 +2764,13 @@ void func_13() // Position - 0xD0B (3339)
 	return;
 }
 
-int func_14(int iParam0) // Position - 0xD19 (3353)
+int func_14(eCharacter echParam0) // Position - 0xD19 (3353)
 {
 	int i;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_98621[i /*17*/].f_5 == iParam0)
+		if (Global_98621[i /*17*/].f_5 == echParam0)
 			return i;
 	}
 
@@ -2906,12 +2906,12 @@ BOOL func_18(int iParam0) // Position - 0xF1D (3869)
 	return 1;
 }
 
-int func_19(int iParam0) // Position - 0xF3F (3903)
+int func_19(eCharacter echParam0) // Position - 0xF3F (3903)
 {
-	if (IS_BIT_SET(Global_92476[iParam0 /*34*/].f_15, 15))
+	if (IS_BIT_SET(Global_92476[echParam0 /*34*/].f_15, 15))
 		return 2;
 
-	if (func_20(iParam0))
+	if (func_20(echParam0))
 		return 3;
 
 	return 0;
@@ -110511,7 +110511,7 @@ int func_910() // Position - 0x8CE20 (577056)
 					{
 						func_190(8, "CAR_1_INT_CONCAT", 8, 15, 12);
 						func_685(8, "DEVIN", Global_98185.f_9[0]);
-						func_912(8, "DEVIN", 8, 1, 0);
+						func_912(CHAR_MIKE_FRANK_CONF, "DEVIN", 8, 1, 0);
 						func_685(8, "MOLLY", Global_98185.f_9[1]);
 						MISC::SET_BIT(&iLocal_488, 1);
 					}
@@ -110523,7 +110523,7 @@ int func_910() // Position - 0x8CE20 (577056)
 				{
 					func_190(8, "CAR_1_INT_CONCAT", 8, 14, 12);
 					func_685(8, "DEVIN", Global_98185.f_9[0]);
-					func_912(8, "DEVIN", 8, 1, 0);
+					func_912(CHAR_MIKE_FRANK_CONF, "DEVIN", 8, 1, 0);
 					func_685(8, "MOLLY", Global_98185.f_9[1]);
 					MISC::SET_BIT(&iLocal_488, 2);
 				}
@@ -110618,11 +110618,11 @@ BOOL func_911(float fParam0, float fParam1, float fParam2, float fParam3, float 
 	return false;
 }
 
-void func_912(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x8D57F (578943)
+void func_912(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x8D57F (578943)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79627 < 30)
 		{

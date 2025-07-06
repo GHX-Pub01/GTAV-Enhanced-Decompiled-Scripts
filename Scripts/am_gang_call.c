@@ -15866,9 +15866,9 @@ void func_477() // Position - 0x14146 (82246)
 	Global_22455 = Global_22456;
 	Global_22457 = { Global_22473 };
 	Global_22446 = Global_22447;
-	Global_23458 = 0;
+	Global_23458 = false;
 	Global_22491 = 0;
-	Global_22492 = 0;
+	Global_22492 = false;
 	MISC::CLEAR_BIT(&Global_8920, 16);
 	return;
 }
