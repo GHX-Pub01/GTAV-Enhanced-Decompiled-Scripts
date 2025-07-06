@@ -7457,13 +7457,13 @@ void func_73(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 	i = 0;
 	j = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_3[0] > 0)
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_3[0] > 0)
 		{
 			for (j = 0; j < 10; j = j + 1)
 			{
-				uParam2->[j] = Global_1982267.f_1[i /*14*/].f_3[j];
+				uParam2->[j] = Global_1982269.f_1[i /*14*/].f_3[j];
 			}
 		
 			return;
@@ -9087,10 +9087,10 @@ ePedComponentType func_95(int iParam0, int iParam1) // Position - 0x9D68 (40296)
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_2 > PV_COMP_HEAD)
-			return Global_1982267.f_1[i /*14*/].f_2;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_2 > PV_COMP_HEAD)
+			return Global_1982269.f_1[i /*14*/].f_2;
 	}
 
 	switch (iParam0)
@@ -12174,10 +12174,10 @@ ePedComponentType func_113(int iParam0, int iParam1) // Position - 0xCFCA (53194
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_1 > PV_COMP_HEAD)
-			return Global_1982267.f_1[i /*14*/].f_1;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_1 > PV_COMP_HEAD)
+			return Global_1982269.f_1[i /*14*/].f_1;
 	}
 
 	type = PV_COMP_HEAD;
@@ -20353,7 +20353,7 @@ void func_166(var uParam0, var uParam1) // Position - 0x17209 (94729)
 		func_175(joaat("WEAPON_SPECIALCARBINE_MK2"), uParam0, *uParam1, 0);
 
 	if (WEAPON::IS_WEAPON_VALID(joaat("WEAPON_DOUBLEACTION")) && uLocal_65[49] == uParam1->f_5)
-		if (Global_262145.f_23092 && func_171() || Global_1963561)
+		if (Global_262145.f_23092 && func_171() || Global_1963563)
 			func_175(joaat("WEAPON_DOUBLEACTION"), uParam0, *uParam1, 0);
 
 	if (WEAPON::IS_WEAPON_VALID(joaat("WEAPON_STONE_HATCHET")) && uLocal_65[50] == uParam1->f_5)
@@ -20373,7 +20373,7 @@ void func_166(var uParam0, var uParam1) // Position - 0x17209 (94729)
 		func_175(joaat("WEAPON_CERAMICPISTOL"), uParam0, *uParam1, 0);
 
 	if (WEAPON::IS_WEAPON_VALID(joaat("WEAPON_NAVYREVOLVER")) && uLocal_65[55] == uParam1->f_5)
-		if (Global_262145.f_27964 && func_169() || Global_1963567)
+		if (Global_262145.f_27964 && func_169() || Global_1963569)
 			func_175(joaat("WEAPON_NAVYREVOLVER"), uParam0, *uParam1, 0);
 
 	if (WEAPON::IS_WEAPON_VALID(joaat("WEAPON_MILITARYRIFLE")) && uLocal_65[56] == uParam1->f_5)
@@ -23662,7 +23662,7 @@ void func_217() // Position - 0x1BB87 (113543)
 		uLocal_65[48] = -1;
 	}
 
-	if (Global_262145.f_23092 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_DOUBLEACTION")) && func_171() || Global_1963561)
+	if (Global_262145.f_23092 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_DOUBLEACTION")) && func_171() || Global_1963563)
 	{
 		uLocal_65[49] = (iLocal_64 / 9) + iLocal_63;
 		iLocal_64 = iLocal_64 + 1;
@@ -23722,7 +23722,7 @@ void func_217() // Position - 0x1BB87 (113543)
 		uLocal_65[54] = -1;
 	}
 
-	if (Global_262145.f_27964 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_NAVYREVOLVER")) && func_169() || Global_1963567)
+	if (Global_262145.f_27964 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_NAVYREVOLVER")) && func_169() || Global_1963569)
 	{
 		uLocal_65[55] = (iLocal_64 / 9) + iLocal_63;
 		iLocal_64 = iLocal_64 + 1;
@@ -23762,7 +23762,7 @@ void func_217() // Position - 0x1BB87 (113543)
 		uLocal_65[58] = -1;
 	}
 
-	if (Global_262145.f_27964 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_NAVYREVOLVER")) && func_169() || Global_1963567)
+	if (Global_262145.f_27964 && WEAPON::IS_WEAPON_VALID(joaat("WEAPON_NAVYREVOLVER")) && func_169() || Global_1963569)
 	{
 		uLocal_65[55] = (iLocal_64 / 9) + iLocal_63;
 		iLocal_64 = iLocal_64 + 1;

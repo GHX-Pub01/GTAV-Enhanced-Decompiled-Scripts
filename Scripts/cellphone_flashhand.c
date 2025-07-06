@@ -1604,7 +1604,7 @@ BOOL func_6(int iParam0) // Position - 0x211F (8479)
 
 BOOL func_7() // Position - 0x2176 (8566)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_8() // Position - 0x2184 (8580)
@@ -4252,7 +4252,7 @@ void func_54(var uParam0) // Position - 0x4CE6 (19686)
 		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/))
 			_DISPLAY_HELP_TEXT("HROBA_INGNG_BLK" /*The Darnell Inc. phone app is unavailable while working for another Boss.*/, -1);
 	}
-	else if (func_68(PLAYER::PLAYER_ID()) || func_64(PLAYER::PLAYER_ID()) || func_63() || func_61(PLAYER::PLAYER_ID()) || func_59() || func_77(false) || func_58() || Global_1057440 != -1 || Global_1845270[PLAYER::PLAYER_ID() /*892*/] == 5 || func_55(PLAYER::PLAYER_ID(), true, false) || Global_1983510)
+	else if (func_68(PLAYER::PLAYER_ID()) || func_64(PLAYER::PLAYER_ID()) || func_63() || func_61(PLAYER::PLAYER_ID()) || func_59() || func_77(false) || func_58() || Global_1057440 != -1 || Global_1845270[PLAYER::PLAYER_ID() /*892*/] == 5 || func_55(PLAYER::PLAYER_ID(), true, false) || Global_1983512)
 	{
 		*uParam0 = 1;
 	
@@ -5298,7 +5298,7 @@ BOOL func_105() // Position - 0x62A7 (25255)
 
 BOOL func_106() // Position - 0x62CE (25294)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_107() // Position - 0x62DD (25309)

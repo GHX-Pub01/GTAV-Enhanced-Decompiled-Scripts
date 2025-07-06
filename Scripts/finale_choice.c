@@ -991,12 +991,12 @@ void func_44(BOOL bParam0, BOOL bParam1) // Position - 0x146D (5229)
 
 BOOL func_45() // Position - 0x14E1 (5345)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_46() // Position - 0x14EF (5359)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_47() // Position - 0x14FE (5374)

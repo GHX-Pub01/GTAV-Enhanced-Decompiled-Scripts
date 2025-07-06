@@ -1221,9 +1221,9 @@ void func_10() // Position - 0x100D (4109)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -10141,7 +10141,7 @@ void func_140(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_47() || Global_1983503)
+		if (!bParam4 || num != func_47() || Global_1983505)
 		{
 			characterType = func_183(pedParam0);
 		
@@ -10200,7 +10200,7 @@ void func_141(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_142(&pedParam0);
 
 	i = 0;
@@ -10208,7 +10208,7 @@ void func_141(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -10262,7 +10262,7 @@ void func_142(var uParam0) // Position - 0x12A71 (76401)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -10289,7 +10289,7 @@ void func_142(var uParam0) // Position - 0x12A71 (76401)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -10304,20 +10304,20 @@ void func_143(eControlAction ecaParam0, BOOL bParam1) // Position - 0x12B17 (765
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }

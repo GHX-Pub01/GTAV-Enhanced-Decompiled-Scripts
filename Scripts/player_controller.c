@@ -39257,7 +39257,7 @@ int func_273(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, cons
 		}
 	}
 
-	if (Global_1973529 != -1 && echParam0 == Global_1973529)
+	if (Global_1973531 != -1 && echParam0 == Global_1973531)
 		num2 = 1;
 
 	func_274(echParam0, sParam1, num2, func_279(PLAYER::PLAYER_ID()));
@@ -39277,18 +39277,18 @@ void func_274(eCharacter echParam0, char* sParam1, BOOL bParam2, ePedComponentTy
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = epctParam3;
-	character.f_6 = Global_1973512.f_7;
-	character.f_7 = Global_1973512.f_8;
-	character.f_8 = Global_1973512.f_9;
-	character.f_9 = Global_1973512.f_10;
-	character.f_10 = Global_1973512.f_11;
-	character.f_11 = Global_1973512.f_12;
-	character.f_12 = Global_1973512.f_13;
-	character.f_13 = Global_1973512.f_14;
+	character.f_6 = Global_1973514.f_7;
+	character.f_7 = Global_1973514.f_8;
+	character.f_8 = Global_1973514.f_9;
+	character.f_9 = Global_1973514.f_10;
+	character.f_10 = Global_1973514.f_11;
+	character.f_11 = Global_1973514.f_12;
+	character.f_12 = Global_1973514.f_13;
+	character.f_13 = Global_1973514.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1973529 = -1;
+		Global_1973531 = -1;
 
 	return;
 }
@@ -53122,7 +53122,7 @@ void func_481(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_14() || Global_1983503)
+		if (!bParam4 || num != func_14() || Global_1983505)
 		{
 			characterType = func_513(pedParam0);
 		
@@ -53181,7 +53181,7 @@ void func_482(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_483(&pedParam0);
 
 	i = 0;
@@ -53189,7 +53189,7 @@ void func_482(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -53243,7 +53243,7 @@ void func_483(var uParam0) // Position - 0x4D811 (317457)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -53270,7 +53270,7 @@ void func_483(var uParam0) // Position - 0x4D811 (317457)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -53285,20 +53285,20 @@ void func_484(eControlAction ecaParam0, BOOL bParam1) // Position - 0x4D8B7 (317
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }

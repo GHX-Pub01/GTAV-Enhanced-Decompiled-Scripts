@@ -1767,12 +1767,12 @@ void func_39(BOOL bParam0, BOOL bParam1) // Position - 0x1E04 (7684)
 
 BOOL func_40() // Position - 0x1E78 (7800)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_41() // Position - 0x1E86 (7814)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_42() // Position - 0x1E95 (7829)

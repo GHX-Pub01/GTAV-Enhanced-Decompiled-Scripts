@@ -848,7 +848,7 @@ void main() // Position - 0x0 (0)
 	if (func_477(PLAYER::PLAYER_ID()))
 		iLocal_580 = func_475(PLAYER::PLAYER_ID());
 
-	Global_1944402 = 0;
+	Global_1944404 = 0;
 	_SET_PLAYER_CONTROL_EX(PLAYER::PLAYER_ID(), false, 0, false);
 	func_461();
 	func_454();
@@ -932,7 +932,7 @@ void main() // Position - 0x0 (0)
 				}
 				else if (func_325(&uLocal_781, 301000, false))
 				{
-					Global_1944402 = 0;
+					Global_1944404 = 0;
 					func_484(false, true);
 				}
 			
@@ -943,7 +943,7 @@ void main() // Position - 0x0 (0)
 				}
 				else if (!func_330(PLAYER::PLAYER_ID()))
 				{
-					Global_1944402 = 0;
+					Global_1944404 = 0;
 					func_484(false, true);
 				}
 				break;
@@ -962,11 +962,11 @@ void main() // Position - 0x0 (0)
 				}
 				else if (iLocal_577 == 17)
 				{
-					Global_1944423 = 0;
+					Global_1944425 = 0;
 				}
 				else
 				{
-					Global_1944423 = 1;
+					Global_1944425 = 1;
 				}
 			
 				func_484(false, true);
@@ -1030,7 +1030,7 @@ void func_4() // Position - 0x421 (1057)
 
 	unk = 4;
 	flag = func_322();
-	MISC::CLEAR_BIT(&(Global_1944436.f_4), 5);
+	MISC::CLEAR_BIT(&(Global_1944438.f_4), 5);
 
 	for (i = 0; i < 4; i = i + 1)
 	{
@@ -1521,13 +1521,13 @@ void func_26(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 	i = 0;
 	j = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_3[0] > 0)
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_3[0] > 0)
 		{
 			for (j = 0; j < 10; j = j + 1)
 			{
-				uParam2->[j] = Global_1982267.f_1[i /*14*/].f_3[j];
+				uParam2->[j] = Global_1982269.f_1[i /*14*/].f_3[j];
 			}
 		
 			return;
@@ -3115,10 +3115,10 @@ BOOL func_46(int iParam0, int iParam1) // Position - 0x2717 (10007)
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_2 > false)
-			return Global_1982267.f_1[i /*14*/].f_2;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_2 > false)
+			return Global_1982269.f_1[i /*14*/].f_2;
 	}
 
 	switch (iParam0)
@@ -6202,10 +6202,10 @@ BOOL func_64(int iParam0, int iParam1) // Position - 0x5977 (22903)
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_1 > false)
-			return Global_1982267.f_1[i /*14*/].f_1;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_1 > false)
+			return Global_1982269.f_1[i /*14*/].f_1;
 	}
 
 	flag = false;
@@ -12709,7 +12709,7 @@ int func_137(var uParam0, int iParam1, var uParam2) // Position - 0xE45E (58462)
 
 	if (func_89(player))
 	{
-		vector2 = { Global_1944436.f_762[func_140(func_90(player)) /*3*/] };
+		vector2 = { Global_1944438.f_762[func_140(func_90(player)) /*3*/] };
 		vector2.f_2 = 0f;
 	}
 	else
@@ -13164,7 +13164,7 @@ BOOL func_147(Player plParam0) // Position - 0xEE94 (61076)
 
 BOOL func_148() // Position - 0xEEC5 (61125)
 {
-	if (Global_1944403 && func_149())
+	if (Global_1944405 && func_149())
 		return true;
 
 	return false;
@@ -13431,7 +13431,7 @@ int func_160(int iParam0) // Position - 0xF30A (62218)
 
 BOOL func_161() // Position - 0xF42E (62510)
 {
-	if (Global_1944295)
+	if (Global_1944297)
 		return false;
 
 	return func_162();
@@ -31643,7 +31643,7 @@ void func_360(BOOL bParam0) // Position - 0x2288F (141455)
 
 	func_364(false);
 	func_361(uLocal_591[0], uLocal_591[1], uLocal_591[2], uLocal_591[3], Global_1835045[0 /*104*/].f_101, Global_1835045[1 /*104*/].f_101, Global_1835045[2 /*104*/].f_101, Global_1835045[3 /*104*/].f_101, iLocal_596, bParam0);
-	Global_1944402 = 1;
+	Global_1944404 = 1;
 	return;
 }
 
@@ -32535,49 +32535,49 @@ void func_399() // Position - 0x23C05 (146437)
 		{
 			str = "IE_SEC_TUT7" /*Your current stock of Vehicle Cargo is listed here. Hire Associates as additional drivers to export up to four vehicles at once.*/;
 			iLocal_612 = 9000;
-			MISC::SET_BIT(&Global_1944283, 16);
+			MISC::SET_BIT(&Global_1944285, 16);
 			func_401(&iLocal_610, &iLocal_611, 18);
 		}
 		else if (func_404(17))
 		{
 			str = "IE_SEC_TUT8" /*Each Buyer has a different set of requirements. Buyers that are offering higher commissions will require you to pay an upfront cost to modify your Vehicle Cargo to fit these requirements.*/;
 			iLocal_612 = 9500;
-			MISC::SET_BIT(&Global_1944283, 17);
+			MISC::SET_BIT(&Global_1944285, 17);
 			func_401(&iLocal_610, &iLocal_611, 21);
 		}
 		else if (func_404(18))
 		{
 			str = "IE_SEC_TUT13" /*Damaging Vehicle Cargo during delivery will lower the market value and affect your agreed commission. As the market value drops the commission you will be paid also drops in relation to the condition of your vehicles.*/;
 			iLocal_612 = 10000;
-			MISC::SET_BIT(&Global_1944283, 18);
+			MISC::SET_BIT(&Global_1944285, 18);
 			func_401(&iLocal_610, &iLocal_611, 36);
 		}
 		else if (func_404(19))
 		{
 			str = "IE_SEC_TUT9" /*Export mission difficulty scales by Buyer type. The higher the agreed offer is the faster your Vehicle Cargo will be visible to other players in session during delivery.*/;
 			iLocal_612 = 10000;
-			MISC::SET_BIT(&Global_1944283, 19);
+			MISC::SET_BIT(&Global_1944285, 19);
 			func_401(&iLocal_610, &iLocal_611, 24);
 		}
 		else if (func_404(20))
 		{
 			str = "IE_SEC_TUT10" /*Stockpile Vehicle Cargo to complete Collections. Buyers will pay bonuses for a unique collection of vehicles upon delivery.*/;
 			iLocal_612 = 8500;
-			MISC::SET_BIT(&Global_1944283, 20);
+			MISC::SET_BIT(&Global_1944285, 20);
 			func_401(&iLocal_610, &iLocal_611, 27);
 		}
 		else if (func_404(21))
 		{
 			str = "IE_SEC_TUT11" /*You have completed a Collection. Sell this to an interested Buyer to earn additional bonuses for all Members of your Organization.*/;
 			iLocal_612 = 8500;
-			MISC::SET_BIT(&Global_1944283, 21);
+			MISC::SET_BIT(&Global_1944285, 21);
 			func_401(&iLocal_610, &iLocal_611, 30);
 		}
 		else if (func_404(22))
 		{
 			str = "IE_SEC_TUT12" /*There is a short waiting period before you can export additional vehicles from your warehouse.*/;
 			iLocal_612 = 8000;
-			MISC::SET_BIT(&Global_1944283, 22);
+			MISC::SET_BIT(&Global_1944285, 22);
 			func_401(&iLocal_610, &iLocal_611, 33);
 		}
 	}
@@ -32704,37 +32704,37 @@ BOOL func_404(int iParam0) // Position - 0x23EFE (147198)
 	switch (iParam0)
 	{
 		case 16:
-			if (!func_406(iLocal_610, iLocal_611, 18) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 4))
+			if (!func_406(iLocal_610, iLocal_611, 18) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 4))
 				return true;
 			break;
 	
 		case 17:
-			if (!func_406(iLocal_610, iLocal_611, 21) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
+			if (!func_406(iLocal_610, iLocal_611, 21) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
 				return true;
 			break;
 	
 		case 18:
-			if (!func_406(iLocal_610, iLocal_611, 24) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
+			if (!func_406(iLocal_610, iLocal_611, 24) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
 				return true;
 			break;
 	
 		case 19:
-			if (!func_406(iLocal_610, iLocal_611, 27) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 6) && iLocal_578 == 1)
+			if (!func_406(iLocal_610, iLocal_611, 27) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 6) && iLocal_578 == 1)
 				return true;
 			break;
 	
 		case 20:
-			if (!func_406(iLocal_610, iLocal_611, 30) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 6) && iLocal_578 == 1 && func_405())
+			if (!func_406(iLocal_610, iLocal_611, 30) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 6) && iLocal_578 == 1 && func_405())
 				return true;
 			break;
 	
 		case 21:
-			if (!func_406(iLocal_610, iLocal_611, 33) && !IS_BIT_SET(Global_1944283, num) && !func_392(8))
+			if (!func_406(iLocal_610, iLocal_611, 33) && !IS_BIT_SET(Global_1944285, num) && !func_392(8))
 				return true;
 			break;
 	
 		case 22:
-			if (!func_406(iLocal_610, iLocal_611, 36) && !IS_BIT_SET(Global_1944283, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
+			if (!func_406(iLocal_610, iLocal_611, 36) && !IS_BIT_SET(Global_1944285, num) && !IS_BIT_SET(iLocal_579, 5) && iLocal_578 == 2)
 				return true;
 			break;
 	}
@@ -32981,9 +32981,9 @@ void func_411() // Position - 0x2445B (148571)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -33447,7 +33447,7 @@ BOOL func_436(int iParam0) // Position - 0x24C39 (150585)
 
 BOOL func_437() // Position - 0x24C90 (150672)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_438() // Position - 0x24C9F (150687)
@@ -33500,7 +33500,7 @@ BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x24D1F 
 
 BOOL func_444() // Position - 0x24D32 (150834)
 {
-	return Global_1964340 != -1;
+	return Global_1964342 != -1;
 }
 
 void func_445(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x24D40 (150848)
@@ -34409,7 +34409,7 @@ void func_482(BOOL bParam0, BOOL bParam1) // Position - 0x25C84 (154756)
 
 BOOL func_483() // Position - 0x25CF8 (154872)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 void func_484(BOOL bParam0, BOOL bParam1) // Position - 0x25D06 (154886)

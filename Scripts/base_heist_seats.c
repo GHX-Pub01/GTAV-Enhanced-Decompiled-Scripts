@@ -1306,12 +1306,12 @@ void func_41(BOOL bParam0, BOOL bParam1) // Position - 0x1075 (4213)
 
 BOOL func_42() // Position - 0x10E9 (4329)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_43() // Position - 0x10F7 (4343)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 Vector3 func_44(var uParam0) // Position - 0x1106 (4358)

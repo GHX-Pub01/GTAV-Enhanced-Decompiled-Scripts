@@ -4643,7 +4643,7 @@ void func_93(BOOL bParam0, BOOL bParam1) // Position - 0x5DD1 (24017)
 
 BOOL func_94() // Position - 0x5E45 (24133)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_95(int iParam0) // Position - 0x5E53 (24147)
@@ -4668,7 +4668,7 @@ BOOL func_95(int iParam0) // Position - 0x5E53 (24147)
 
 BOOL func_96() // Position - 0x5EAA (24234)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_97(int iParam0) // Position - 0x5EB9 (24249)

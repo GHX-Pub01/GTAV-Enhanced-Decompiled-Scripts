@@ -7988,12 +7988,12 @@ void func_299(BOOL bParam0, BOOL bParam1) // Position - 0xBAFC (47868)
 
 BOOL func_300() // Position - 0xBB70 (47984)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_301() // Position - 0xBB7E (47998)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_302(int iParam0) // Position - 0xBB8D (48013)

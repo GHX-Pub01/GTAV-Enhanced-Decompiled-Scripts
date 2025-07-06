@@ -5796,9 +5796,9 @@ void func_147() // Position - 0x5BBB (23483)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -7887,12 +7887,12 @@ void func_180(BOOL bParam0, BOOL bParam1) // Position - 0x829D (33437)
 
 BOOL func_181() // Position - 0x8311 (33553)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_182() // Position - 0x831F (33567)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_183(Vehicle veParam0) // Position - 0x832E (33582)

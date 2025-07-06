@@ -416,10 +416,10 @@ void main() // Position - 0x0 (0)
 				func_3(PLAYER::PLAYER_ID(), bLocal_148, iLocal_151, true);
 				func_639(0, false);
 			}
-			else if (!Global_1944436.f_3889 && CAM::IS_SCREEN_FADED_OUT())
+			else if (!Global_1944438.f_3889 && CAM::IS_SCREEN_FADED_OUT())
 			{
 				func_1(1);
-				Global_1944290 = true;
+				Global_1944292 = true;
 				func_639(0, true);
 			}
 		}
@@ -434,8 +434,8 @@ void func_1(int iParam0) // Position - 0x178 (376)
 {
 	if (!func_2())
 	{
-		Global_1944436.f_3889 = 1;
-		Global_1944436.f_3890 = iParam0;
+		Global_1944438.f_3889 = 1;
+		Global_1944438.f_3890 = iParam0;
 	}
 
 	return;
@@ -443,7 +443,7 @@ void func_1(int iParam0) // Position - 0x178 (376)
 
 BOOL func_2() // Position - 0x199 (409)
 {
-	return Global_1944436.f_748;
+	return Global_1944438.f_748;
 }
 
 void func_3(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 0x1A8 (424)
@@ -2621,7 +2621,7 @@ int func_71(int iParam0) // Position - 0x2542 (9538)
 
 BOOL func_72() // Position - 0x2666 (9830)
 {
-	if (Global_1944295)
+	if (Global_1944297)
 		return false;
 
 	return func_73();
@@ -12122,7 +12122,7 @@ void func_263() // Position - 0xAE68 (44648)
 				func_550(226, func_529());
 				func_528(func_529());
 				func_249();
-				MISC::SET_BIT(&(Global_1944436.f_1), 14);
+				MISC::SET_BIT(&(Global_1944438.f_1), 14);
 			}
 			else
 			{
@@ -12178,7 +12178,7 @@ void func_263() // Position - 0xAE68 (44648)
 					{
 						num = func_485(1);
 						func_474(num, true);
-						MISC::SET_BIT(&Global_1944285, 5);
+						MISC::SET_BIT(&Global_1944287, 5);
 					}
 				}
 			}
@@ -13318,13 +13318,13 @@ void func_289(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 
 	i = 0;
 	j = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_3[0] > 0)
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_3[0] > 0)
 		{
 			for (j = 0; j < 10; j = j + 1)
 			{
-				uParam2->[j] = Global_1982267.f_1[i /*14*/].f_3[j];
+				uParam2->[j] = Global_1982269.f_1[i /*14*/].f_3[j];
 			}
 		
 			return;
@@ -14912,10 +14912,10 @@ BOOL func_309(int iParam0, int iParam1) // Position - 0xDF84 (57220)
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_2 > false)
-			return Global_1982267.f_1[i /*14*/].f_2;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_2 > false)
+			return Global_1982269.f_1[i /*14*/].f_2;
 	}
 
 	switch (iParam0)
@@ -17999,10 +17999,10 @@ BOOL func_327(int iParam0, int iParam1) // Position - 0x111E4 (70116)
 
 	i = 0;
 
-	for (i = 0; i < Global_1982267; i = i + 1)
+	for (i = 0; i < Global_1982269; i = i + 1)
 	{
-		if (Global_1982267.f_1[i /*14*/] == iParam1 && Global_1982267.f_1[i /*14*/].f_1 > false)
-			return Global_1982267.f_1[i /*14*/].f_1;
+		if (Global_1982269.f_1[i /*14*/] == iParam1 && Global_1982269.f_1[i /*14*/].f_1 > false)
+			return Global_1982269.f_1[i /*14*/].f_1;
 	}
 
 	flag = false;
@@ -25689,7 +25689,7 @@ void func_356(int iParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 			num = 0;
 	
 		if (!bParam2)
-			Global_1944286 = -1;
+			Global_1944288 = -1;
 	
 		func_368(iParam0, false, bParam2);
 	}
@@ -28219,9 +28219,9 @@ int func_413(int iParam0) // Position - 0x1E76B (124779)
 void func_414(BOOL bParam0) // Position - 0x1E7D1 (124881)
 {
 	if (bParam0)
-		MISC::SET_BIT(&Global_1944436, 26);
+		MISC::SET_BIT(&Global_1944438, 26);
 	else
-		MISC::CLEAR_BIT(&Global_1944436, 26);
+		MISC::CLEAR_BIT(&Global_1944438, 26);
 
 	return;
 }
@@ -29090,8 +29090,8 @@ BOOL func_439(Any* panParam0) // Position - 0x1F6D2 (128722)
 
 	for (i = 0; i < 31; i = i + 1)
 	{
-		if (IS_GAMER_HANDLE_VALID(Global_1983005[i /*13*/]))
-			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&Global_1983005[i /*13*/], panParam0))
+		if (IS_GAMER_HANDLE_VALID(Global_1983007[i /*13*/]))
+			if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&Global_1983007[i /*13*/], panParam0))
 				return true;
 	}
 
@@ -29465,7 +29465,7 @@ BOOL func_464(int iParam0) // Position - 0x1FCA1 (130209)
 
 Vector3 func_465(BOOL bParam0) // Position - 0x1FCB6 (130230)
 {
-	return Global_1944436.f_762[func_466(bParam0) /*3*/];
+	return Global_1944438.f_762[func_466(bParam0) /*3*/];
 }
 
 int func_466(BOOL bParam0) // Position - 0x1FCCF (130255)
@@ -29902,7 +29902,7 @@ int func_480(int iParam0) // Position - 0x2042E (132142)
 	return 14379;
 }
 
-BOOL func_481(int iParam0) // Position - 0x20494 (132244)
+int func_481(int iParam0) // Position - 0x20494 (132244)
 {
 	if (!func_482(iParam0))
 		return -1;
@@ -31253,12 +31253,12 @@ void func_530() // Position - 0x21ADC (137948)
 
 void func_531() // Position - 0x21AEC (137964)
 {
-	Global_1944290 = true;
+	Global_1944292 = true;
 	Global_1942126.f_43 = 0;
 	MISC::SET_BIT(&iLocal_136, 4);
 
 	if (func_533(PLAYER::PLAYER_ID()) || func_532(PLAYER::PLAYER_ID()))
-		MISC::SET_BIT(&(Global_1944436.f_1), 15);
+		MISC::SET_BIT(&(Global_1944438.f_1), 15);
 
 	func_1(1);
 	return;
@@ -31999,7 +31999,7 @@ void func_574() // Position - 0x228B0 (141488)
 	func_585();
 	func_578(0);
 	func_575(true);
-	Global_1964340.f_5 = MISC::GET_FRAME_COUNT();
+	Global_1964342.f_5 = MISC::GET_FRAME_COUNT();
 	return;
 }
 
@@ -32127,7 +32127,7 @@ void func_581(BOOL bParam0, BOOL bParam1) // Position - 0x22AB5 (142005)
 
 BOOL func_582() // Position - 0x22B29 (142121)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_583(int iParam0) // Position - 0x22B37 (142135)
@@ -32152,7 +32152,7 @@ BOOL func_583(int iParam0) // Position - 0x22B37 (142135)
 
 BOOL func_584() // Position - 0x22B8E (142222)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_585() // Position - 0x22B9D (142237)
@@ -32213,49 +32213,49 @@ void func_591() // Position - 0x22C4C (142412)
 		{
 			str = "UA_TUT_RESUP" /*This is the Resupply page. If you run out of supplies, manufacturing and research will cease. Supplies can be stolen from various sources or you can pay to have them delivered directly to the Bunker. The cost will depend on the supplies remaining.*/;
 			iLocal_142 = 9000;
-			MISC::SET_BIT(&Global_1944283, 23);
+			MISC::SET_BIT(&Global_1944285, 23);
 			func_599(&iLocal_143, &iLocal_144, 39);
 		}
 		else if (func_600(24))
 		{
 			str = "UA_TUT_RESEA" /*This is the Research page. If you assign staff to research they will automatically select the next project and use available supplies to unlock weapon and vehicle modifications over time, making them available for purchase.*/;
 			iLocal_142 = 9000;
-			MISC::SET_BIT(&Global_1944283, 24);
+			MISC::SET_BIT(&Global_1944285, 24);
 			func_599(&iLocal_143, &iLocal_144, 42);
 		}
 		else if (func_600(25))
 		{
 			str = "UA_TUT_FTR" /*You can select the Fast-track option to complete your current Research project and unlock it, making it available for purchase. The cost of fast-tracking will depend on the Research time remaining.*/;
 			iLocal_142 = 8000;
-			MISC::SET_BIT(&Global_1944283, 25);
+			MISC::SET_BIT(&Global_1944285, 25);
 			func_599(&iLocal_143, &iLocal_144, 45);
 		}
 		else if (func_600(26))
 		{
 			str = "UA_TUT_UNLOCK" /*Your unlocked research projects are displayed here. Highlight any unlocked modifications to see further details on where to purchase and install them. Assigned staff will continue to select a new research project from those that are still locked.*/;
 			iLocal_142 = 11000;
-			MISC::SET_BIT(&Global_1944283, 26);
+			MISC::SET_BIT(&Global_1944285, 26);
 			func_599(&iLocal_143, &iLocal_144, 48);
 		}
 		else if (func_600(27))
 		{
 			str = "UA_TUT_SELL" /*You can sell your current stock of weapons at any time. Choose to sell to buyers in Blaine County or risk traveling into Los Santos for a larger payment. If some weapons are lost during a sale you can still continue on and sell the remaining stock to earn partial payment.*/;
 			iLocal_142 = 9000;
-			MISC::SET_BIT(&Global_1944283, 27);
+			MISC::SET_BIT(&Global_1944285, 27);
 			func_597(&iLocal_143, &iLocal_144, 51);
 		}
 		else if (func_600(28))
 		{
 			str = "UA_TUT_STAFF" /*This is the Manage Staff page. Here you can assign staff to use supplies for manufacturing weapons for sale, or researching the unlocking of modifications. You can split your staff across both areas which will increase manufacturing and research times.*/;
 			iLocal_142 = 9000;
-			MISC::SET_BIT(&Global_1944283, 28);
+			MISC::SET_BIT(&Global_1944285, 28);
 			func_599(&iLocal_143, &iLocal_144, 54);
 		}
 		else if (func_600(29))
 		{
 			str = "UA_TUT_UPGR" /*Purchase upgrades to enhance the Business. Install new equipment to improve stock value, hire additional staff to speed up research and manufacturing times or install security to reduce enemy attacks.*/;
 			iLocal_142 = 8500;
-			MISC::SET_BIT(&Global_1944283, 29);
+			MISC::SET_BIT(&Global_1944285, 29);
 			func_599(&iLocal_143, &iLocal_144, 57);
 		}
 	}
@@ -32406,37 +32406,37 @@ BOOL func_600(int iParam0) // Position - 0x22FD6 (143318)
 	switch (iParam0)
 	{
 		case 23:
-			if (!func_593(&iLocal_143, &iLocal_144, 39) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 2)
+			if (!func_593(&iLocal_143, &iLocal_144, 39) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 2)
 				return true;
 			break;
 	
 		case 24:
-			if (!func_593(&iLocal_143, &iLocal_144, 42) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 3)
+			if (!func_593(&iLocal_143, &iLocal_144, 42) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 3)
 				return true;
 			break;
 	
 		case 25:
-			if (iLocal_140 > 0 && !func_593(&iLocal_143, &iLocal_144, 45) && func_593(&iLocal_143, &iLocal_144, 42) || IS_BIT_SET(Global_1944283, 24) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 3)
+			if (iLocal_140 > 0 && !func_593(&iLocal_143, &iLocal_144, 45) && func_593(&iLocal_143, &iLocal_144, 42) || IS_BIT_SET(Global_1944285, 24) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 3)
 				return true;
 			break;
 	
 		case 26:
-			if (!func_593(&iLocal_143, &iLocal_144, 48) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 6)
+			if (!func_593(&iLocal_143, &iLocal_144, 48) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 6)
 				return true;
 			break;
 	
 		case 27:
-			if (!func_593(&iLocal_143, &iLocal_144, 51) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 7)
+			if (!func_593(&iLocal_143, &iLocal_144, 51) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 7)
 				return true;
 			break;
 	
 		case 28:
-			if (!func_593(&iLocal_143, &iLocal_144, 54) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 4)
+			if (!func_593(&iLocal_143, &iLocal_144, 54) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 4)
 				return true;
 			break;
 	
 		case 29:
-			if (!func_593(&iLocal_143, &iLocal_144, 57) && !IS_BIT_SET(Global_1944283, num) && iLocal_149 == 5)
+			if (!func_593(&iLocal_143, &iLocal_144, 57) && !IS_BIT_SET(Global_1944285, num) && iLocal_149 == 5)
 				return true;
 			break;
 	}
@@ -32470,7 +32470,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_22449 = false;
 	Global_22451 = 0;
-	Global_22456 = 0;
+	Global_22456 = false;
 	Global_23433 = 0;
 	Global_23435 = 0;
 	Global_23439 = 0;
@@ -32665,9 +32665,9 @@ void func_605() // Position - 0x234B9 (144569)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -32935,10 +32935,10 @@ void func_621() // Position - 0x23992 (145810)
 	return;
 }
 
-void func_622(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x239E9 (145897)
+void func_622(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x239E9 (145897)
 {
 	Global_21896 = { *uParam0 };
-	Global_8235 = iParam1;
+	Global_8235 = echParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_22512, sParam2, 24);
 	Global_23431 = iParam5;
 
@@ -33302,7 +33302,7 @@ void func_639(int iParam0, BOOL bParam1) // Position - 0x23F33 (147251)
 		func_640(&unk, false);
 	}
 
-	Global_1964340.f_5 = -1;
+	Global_1964342.f_5 = -1;
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

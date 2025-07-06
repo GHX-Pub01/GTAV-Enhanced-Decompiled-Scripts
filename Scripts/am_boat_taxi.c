@@ -3293,7 +3293,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x2F99 (12185)
 
 BOOL func_54() // Position - 0x2FAC (12204)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_55(BOOL bParam0) // Position - 0x2FBA (12218)
@@ -4081,14 +4081,14 @@ void func_85(int iParam0) // Position - 0x3F13 (16147)
 
 void func_86(var uParam0) // Position - 0x3F21 (16161)
 {
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_87(var uParam0) // Position - 0x3F34 (16180)
 {
-	return Global_1982835 || uParam0->f_692;
+	return Global_1982837 || uParam0->f_692;
 }
 
 void func_88(int iParam0) // Position - 0x3F4B (16203)
@@ -4181,7 +4181,7 @@ void func_92(var uParam0) // Position - 0x4028 (16424)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	return;
 }
 
@@ -5063,9 +5063,9 @@ void func_114() // Position - 0x5261 (21089)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;

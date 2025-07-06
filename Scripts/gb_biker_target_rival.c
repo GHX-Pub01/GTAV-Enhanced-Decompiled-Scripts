@@ -2237,7 +2237,7 @@ void func_91(Player plParam0, eBlipSprite ebsParam1, BOOL bParam2, BOOL bParam3)
 void func_92() // Position - 0x28C6 (10438)
 {
 	Global_2647040.f_1656 = 1;
-	Global_1944436.f_4125 = 1;
+	Global_1944438.f_4125 = 1;
 	return;
 }
 

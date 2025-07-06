@@ -11523,12 +11523,12 @@ void func_157(BOOL bParam0, BOOL bParam1) // Position - 0x8053 (32851)
 
 BOOL func_158() // Position - 0x80C7 (32967)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_159() // Position - 0x80D5 (32981)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_160(int iParam0) // Position - 0x80E4 (32996)
@@ -13401,7 +13401,7 @@ BOOL func_229(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA5F9 (42
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_230(PLAYER::PLAYER_ID()))

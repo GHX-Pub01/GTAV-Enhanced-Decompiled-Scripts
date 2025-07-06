@@ -37904,9 +37904,9 @@ void func_226() // Position - 0x28759 (165721)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -48125,7 +48125,7 @@ Vector3 func_435(int iParam0, BOOL bParam1) // Position - 0x3758C (226700)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -48178,8 +48178,8 @@ Vector3 func_435(int iParam0, BOOL bParam1) // Position - 0x3758C (226700)
 
 Vector3 func_436() // Position - 0x37D06 (228614)
 {
-	if (!func_220(Global_1950936))
-		return Global_1950936;
+	if (!func_220(Global_1950938))
+		return Global_1950938;
 
 	switch (func_437())
 	{
@@ -49708,7 +49708,7 @@ BOOL func_477(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3A0EE (2
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_478(PLAYER::PLAYER_ID()))
@@ -56984,12 +56984,12 @@ void func_693(BOOL bParam0, BOOL bParam1) // Position - 0x44D8F (281999)
 
 BOOL func_694() // Position - 0x44E03 (282115)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_695() // Position - 0x44E11 (282129)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_696() // Position - 0x44E20 (282144)

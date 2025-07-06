@@ -42414,7 +42414,7 @@ void func_379(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_233() || Global_1983503)
+		if (!bParam4 || num != func_233() || Global_1983505)
 		{
 			characterType = func_421(pedParam0);
 		
@@ -42473,7 +42473,7 @@ void func_380(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_381(&pedParam0);
 
 	i = 0;
@@ -42481,7 +42481,7 @@ void func_380(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -42535,7 +42535,7 @@ void func_381(var uParam0) // Position - 0x3AA5B (240219)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -42562,7 +42562,7 @@ void func_381(var uParam0) // Position - 0x3AA5B (240219)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -42577,20 +42577,20 @@ void func_382(int iParam0, BOOL bParam1) // Position - 0x3AB01 (240385)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -93688,10 +93688,10 @@ BOOL func_561() // Position - 0x76625 (484901)
 void func_562(BOOL bParam0) // Position - 0x76684 (484996)
 {
 	if (bParam0)
-		if (!Global_1973438)
-			Global_1973438 = true;
-	else if (Global_1973438)
-		Global_1973438 = false;
+		if (!Global_1973440)
+			Global_1973440 = true;
+	else if (Global_1973440)
+		Global_1973440 = false;
 
 	return;
 }

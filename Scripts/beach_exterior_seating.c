@@ -2402,7 +2402,7 @@ void func_8(var uParam0) // Position - 0x263 (611)
 			break;
 	
 		case 1:
-			Global_1944419 = false;
+			Global_1944421 = false;
 		
 			if (func_66(uParam0))
 			{
@@ -2414,7 +2414,7 @@ void func_8(var uParam0) // Position - 0x263 (611)
 		case 2:
 			if (func_65(PLAYER::PLAYER_PED_ID(), &uParam0->f_16[uParam0->f_9 /*14*/]) && func_64(PLAYER::PLAYER_PED_ID(), uParam0->f_16[uParam0->f_9 /*14*/].f_3, uParam0->f_16[uParam0->f_9 /*14*/].f_13))
 			{
-				if (func_63(uParam0) || func_59(uParam0) || func_58(uParam0) || !func_57(uParam0) || func_55(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944436.f_4, 2) || func_49(PLAYER::PLAYER_ID()))
+				if (func_63(uParam0) || func_59(uParam0) || func_58(uParam0) || !func_57(uParam0) || func_55(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944438.f_4, 2) || func_49(PLAYER::PLAYER_ID()))
 				{
 					if (func_59(uParam0))
 					{
@@ -2430,7 +2430,7 @@ void func_8(var uParam0) // Position - 0x263 (611)
 				}
 				else
 				{
-					Global_1944419 = true;
+					Global_1944421 = true;
 				
 					if (uParam0->f_6 == -1)
 					{
@@ -2895,7 +2895,7 @@ void func_22(var uParam0) // Position - 0xEBE (3774)
 
 BOOL func_23() // Position - 0xF28 (3880)
 {
-	return IS_BIT_SET(Global_1944436.f_3, 25);
+	return IS_BIT_SET(Global_1944438.f_3, 25);
 }
 
 BOOL func_24(int* piParam0, int iParam1) // Position - 0xF39 (3897)
@@ -3082,7 +3082,7 @@ void func_35(BOOL bParam0, BOOL bParam1) // Position - 0x11B3 (4531)
 
 BOOL func_36() // Position - 0x1227 (4647)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_37(int iParam0) // Position - 0x1235 (4661)
@@ -3107,7 +3107,7 @@ BOOL func_37(int iParam0) // Position - 0x1235 (4661)
 
 BOOL func_38() // Position - 0x128C (4748)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 Vector3 func_39(var uParam0) // Position - 0x129B (4763)
@@ -4003,7 +4003,7 @@ BOOL func_82(Player plParam0) // Position - 0x2165 (8549)
 
 void func_83() // Position - 0x217E (8574)
 {
-	Global_1944419 = false;
+	Global_1944421 = false;
 	func_85(&uLocal_120);
 	func_84();
 	return;

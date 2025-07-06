@@ -3222,12 +3222,12 @@ void func_29(BOOL bParam0, BOOL bParam1) // Position - 0x3B75 (15221)
 
 BOOL func_30() // Position - 0x3BE9 (15337)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_31() // Position - 0x3BF7 (15351)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_32(int iParam0) // Position - 0x3C06 (15366)
@@ -21346,9 +21346,9 @@ void func_410() // Position - 0x1E989 (125321)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;

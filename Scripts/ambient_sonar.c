@@ -3370,12 +3370,12 @@ void func_99(BOOL bParam0, BOOL bParam1) // Position - 0x39F3 (14835)
 
 BOOL func_100() // Position - 0x3A67 (14951)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_101() // Position - 0x3A75 (14965)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_102() // Position - 0x3A84 (14980)

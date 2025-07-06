@@ -2084,12 +2084,12 @@ void func_65(BOOL bParam0, BOOL bParam1) // Position - 0x2099 (8345)
 
 BOOL func_66() // Position - 0x210D (8461)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_67() // Position - 0x211B (8475)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_68(var uParam0, var uParam1, var uParam2, float fParam3, var uParam4, var uParam5) // Position - 0x212A (8490)

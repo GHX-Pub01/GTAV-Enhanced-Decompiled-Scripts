@@ -7578,7 +7578,7 @@ void func_74(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bParam
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_9() || Global_1983503)
+		if (!bParam4 || num != func_9() || Global_1983505)
 		{
 			characterType = func_118(pedParam0);
 		
@@ -7637,7 +7637,7 @@ void func_75(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	int num;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_76(&pedParam0);
 
 	i = 0;
@@ -7645,7 +7645,7 @@ void func_75(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1983474[i];
+		num = Global_1983476[i];
 	
 		if (num <= -1)
 		{
@@ -7699,7 +7699,7 @@ void func_76(var uParam0) // Position - 0xFA24 (64036)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -7726,7 +7726,7 @@ void func_76(var uParam0) // Position - 0xFA24 (64036)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -7741,20 +7741,20 @@ void func_77(int iParam0, BOOL bParam1) // Position - 0xFACA (64202)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -89389,7 +89389,7 @@ void func_489(BOOL bParam0, BOOL bParam1) // Position - 0x6EF81 (454529)
 
 BOOL func_490() // Position - 0x6EFF5 (454645)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_491(int iParam0) // Position - 0x6F003 (454659)
@@ -89414,7 +89414,7 @@ BOOL func_491(int iParam0) // Position - 0x6F003 (454659)
 
 BOOL func_492() // Position - 0x6F05A (454746)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_493(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0x6F069 (454761)

@@ -3772,9 +3772,9 @@ void func_70() // Position - 0x4C8F (19599)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -5383,7 +5383,7 @@ BOOL func_134(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x6AB9 (27
 		}
 	}
 
-	if (Global_1957267)
+	if (Global_1957269)
 		return false;
 
 	if (func_135(PLAYER::PLAYER_ID()))

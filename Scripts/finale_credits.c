@@ -2269,12 +2269,12 @@ void func_49(BOOL bParam0, BOOL bParam1) // Position - 0x45D7 (17879)
 
 BOOL func_50() // Position - 0x464B (17995)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_51() // Position - 0x4659 (18009)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_52(int iParam0) // Position - 0x4668 (18024)

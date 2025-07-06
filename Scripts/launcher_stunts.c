@@ -2076,12 +2076,12 @@ void func_61(BOOL bParam0, BOOL bParam1) // Position - 0x2575 (9589)
 
 BOOL func_62() // Position - 0x25E9 (9705)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_63() // Position - 0x25F7 (9719)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_64(char* sParam0) // Position - 0x2606 (9734)

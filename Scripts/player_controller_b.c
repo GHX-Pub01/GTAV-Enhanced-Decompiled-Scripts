@@ -16594,7 +16594,7 @@ BOOL func_192() // Position - 0x18ED0 (102096)
 				if (func_197())
 					return true;
 			
-				if (Global_1958271)
+				if (Global_1958273)
 					return true;
 			
 				if (IS_BIT_SET(Global_4718592.f_37, 23))
@@ -16942,7 +16942,7 @@ int func_200() // Position - 0x19616 (103958)
 
 BOOL func_201(int iParam0) // Position - 0x19624 (103972)
 {
-	if (func_211(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944436.f_4, 22))
+	if (func_211(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
 	if (Global_1577926)
@@ -28008,7 +28008,7 @@ void func_339(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_51() || Global_1983503)
+		if (!bParam4 || num != func_51() || Global_1983505)
 		{
 			characterType = func_370(pedParam0);
 		
@@ -28067,7 +28067,7 @@ void func_340(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_341(&pedParam0);
 
 	i = 0;
@@ -28075,7 +28075,7 @@ void func_340(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -28129,7 +28129,7 @@ void func_341(var uParam0) // Position - 0x2F7B3 (194483)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -28156,7 +28156,7 @@ void func_341(var uParam0) // Position - 0x2F7B3 (194483)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -28171,20 +28171,20 @@ void func_342(eControlAction ecaParam0, BOOL bParam1) // Position - 0x2F859 (194
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }
@@ -107088,12 +107088,12 @@ void func_583(BOOL bParam0, BOOL bParam1) // Position - 0x8A2A7 (565927)
 
 BOOL func_584() // Position - 0x8A31B (566043)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_585() // Position - 0x8A329 (566057)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_586(int iParam0) // Position - 0x8A338 (566072)
@@ -112404,13 +112404,13 @@ BOOL func_634(eCharacter echParam0, var uParam1, var uParam2, var uParam3, var u
 {
 	float endRange;
 	int i;
-	eCharacter character;
-	int num;
+	eCharacter num;
+	int num2;
 	Vector3 vector;
 	Vector3 vector2;
-	float num2;
-	var unk5;
 	float num3;
+	var unk5;
+	float num4;
 	float randomFloatInRange;
 
 	endRange = 0f;
@@ -112432,27 +112432,27 @@ BOOL func_634(eCharacter echParam0, var uParam1, var uParam2, var uParam3, var u
 	{
 		if (Global_99001[echParam0] == 1)
 		{
-			character = Global_99005[echParam0];
-			num = Global_92476[character /*34*/].f_10;
+			num = Global_99005[echParam0];
+			num2 = Global_92476[num /*34*/].f_10;
 		
-			if (!func_636(num))
-				vector = { func_635(num, 0) };
+			if (!func_636(num2))
+				vector = { func_635(num2, 0) };
 			else
-				vector = { func_635(num, echParam0) };
+				vector = { func_635(num2, echParam0) };
 		
 			vector2 = { 0f, 0f, 0f };
-			num2 = 0f;
+			num3 = 0f;
 			TEXT_LABEL_ASSIGN_STRING(&unk5, "", 32);
 		
 			for (i = 0; i < *uParam2; i = i + 1)
 			{
 				if (uParam1->[i] != 318)
 				{
-					if (func_588(uParam1->[i], &vector2, &num2, &unk5))
+					if (func_588(uParam1->[i], &vector2, &num3, &unk5))
 					{
-						num3 = BUILTIN::VDIST2(vector, vector2);
+						num4 = BUILTIN::VDIST2(vector, vector2);
 					
-						if (num3 < 22500f)
+						if (num4 < 22500f)
 						{
 							*uParam3 = uParam1->[i];
 							*uParam4 = 100f;

@@ -1029,14 +1029,14 @@ int func_3() // Position - 0x164 (356)
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		player = Global_1944436.f_5375.f_1[i];
+		player = Global_1944438.f_5375.f_1[i];
 	
 		if (player == _INVALID_PLAYER_INDEX())
 		{
 		}
 		else if (!_NETWORK_IS_PLAYER_VALID(player, true, true))
 		{
-			Global_1944436.f_5375.f_1[i] = _INVALID_PLAYER_INDEX();
+			Global_1944438.f_5375.f_1[i] = _INVALID_PLAYER_INDEX();
 		}
 		else
 		{
@@ -1256,7 +1256,7 @@ void func_7(var uParam0) // Position - 0x236 (566)
 			func_62(&(iLocal_143.f_1), false, true);
 		
 			if (iLocal_143.f_1.f_375 > uParam0->f_175.f_3)
-				Global_1973626 = 1;
+				Global_1973628 = 1;
 		
 			if (iLocal_143.f_1.f_375 > uParam0->f_175.f_1 - 322 - 322)
 				func_378(9);
@@ -2317,12 +2317,12 @@ void func_51(BOOL bParam0, BOOL bParam1) // Position - 0x19DA (6618)
 
 BOOL func_52() // Position - 0x1A4E (6734)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_53() // Position - 0x1A5C (6748)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_54(int iParam0) // Position - 0x1A6B (6763)
@@ -2878,16 +2878,16 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 	BOOL flag10;
 	BOOL flag11;
 	BOOL flag12;
-	Hash hash;
+	BOOL flag13;
 	var unk31;
-	Hash hash2;
+	BOOL flag14;
 	Hash hashNameForComponent2;
 	ePedComponentType j;
-	BOOL flag13;
+	BOOL flag15;
 	int k;
 	int l;
 	int numTattooShopDlcItems;
-	BOOL flag14;
+	BOOL flag16;
 	var outComponent2;
 	var unk46;
 	Hash characterType;
@@ -3319,7 +3319,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 						
 							if (!func_275(false))
 							{
-								hash = -1;
+								flag13 = -1;
 							
 								if (uParam0->f_1 == 0)
 								{
@@ -3330,29 +3330,29 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 									flag12 = true;
 								
 									if (uParam0->f_1 == 1642)
-										hash = Global_79417.f_46[0];
+										flag13 = Global_79417.f_46[0];
 								}
 							
 								if (uParam0->f_8 != -1)
-									func_170(*uParam0, &Global_1880027[uParam0->f_8 /*55*/], flag12, hash);
+									func_170(*uParam0, &Global_1880027[uParam0->f_8 /*55*/], flag12, flag13);
 								else
-									func_97(*uParam0, flag12, false, hash, true);
+									func_97(*uParam0, flag12, false, flag13, true);
 							
 								if (iParam8 != -1)
 								{
 									hashNameForComponent2 = EXTRAMETADATA::GET_HASH_NAME_FOR_COMPONENT(*uParam0, 11, PED::GET_PED_DRAWABLE_VARIATION(*uParam0, PV_COMP_JBIB), PED::GET_PED_TEXTURE_VARIATION(*uParam0, PV_COMP_JBIB));
 								
-									if (func_96(hashNameForComponent2, iParam8, &unk31, &hash2))
-										Global_79417.f_46[0] = hash2;
+									if (func_96(hashNameForComponent2, iParam8, &unk31, &flag14))
+										Global_79417.f_46[0] = flag14;
 								}
 							
 								for (j = PV_COMP_HEAD; j < Global_79417.f_46; j = j + 1)
 								{
 									if (Global_79417.f_46[j] != -1)
-										flag13 = true;
+										flag15 = true;
 								}
 							
-								if (flag13)
+								if (flag15)
 								{
 									characterType = func_95(*uParam0);
 									numTattooShopDlcItems = EXTRAMETADATA::GET_NUM_TATTOO_SHOP_DLC_ITEMS(characterType);
@@ -3365,13 +3365,13 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 											{
 												if (Global_79417.f_46[j] == unk46.f_5 && Global_79417.f_46[j] != -1)
 												{
-													flag14 = false;
+													flag16 = false;
 												
 													if (unk46.f_8 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag14 = true;
+															flag16 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -3383,7 +3383,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 														}
 													}
 												
-													if (!flag14)
+													if (!flag16)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, unk46.f_4, unk46.f_5);
 														func_84(*uParam0, unk46.f_4, unk46.f_5);
@@ -3401,13 +3401,13 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 											{
 												if (Global_79417.f_46[j] == outComponent2.f_3 && Global_79417.f_46[j] != -1)
 												{
-													flag14 = false;
+													flag16 = false;
 												
 													if (outComponent2.f_6 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag14 = true;
+															flag16 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -3419,7 +3419,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 														}
 													}
 												
-													if (!flag14)
+													if (!flag16)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, outComponent2.f_2, outComponent2.f_3);
 														func_84(*uParam0, outComponent2.f_2, outComponent2.f_3);
@@ -6002,7 +6002,7 @@ BOOL func_96(Hash hParam0, int iParam1, var uParam2, var uParam3) // Position - 
 	return *uParam2 != 0;
 }
 
-void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bParam4) // Position - 0x86A4 (34468)
+void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x86A4 (34468)
 {
 	int num;
 	BOOL flag;
@@ -6022,7 +6022,7 @@ void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bPara
 		PED::CLEAR_PED_DECORATIONS_LEAVE_SCARS(pedParam0);
 		flag = func_165(pedParam0, false);
 		flag2 = func_157(pedParam0);
-		flag3 = func_130(pedParam0, hParam3);
+		flag3 = func_130(pedParam0, bParam3);
 	
 		if (bParam1)
 			flag2 = true;
@@ -6030,7 +6030,7 @@ void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_26() || Global_1983503)
+		if (!bParam4 || num != func_26() || Global_1983505)
 		{
 			characterType = func_95(pedParam0);
 		
@@ -6089,7 +6089,7 @@ void func_98(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	int num;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_99(&pedParam0);
 
 	i = 0;
@@ -6097,7 +6097,7 @@ void func_98(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		num = Global_1983474[i];
+		num = Global_1983476[i];
 	
 		if (num <= -1)
 		{
@@ -6151,7 +6151,7 @@ void func_99(var uParam0) // Position - 0x896D (35181)
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = 0;
@@ -6178,7 +6178,7 @@ void func_99(var uParam0) // Position - 0x896D (35181)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -6193,20 +6193,20 @@ void func_100(int iParam0, BOOL bParam1) // Position - 0x8A13 (35347)
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == iParam0)
+			if (Global_1983476[i] == iParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == iParam0)
+		else if (Global_1983476[i] == iParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = iParam0;
+		Global_1983476[num] = iParam0;
 
 	return;
 }
@@ -16101,7 +16101,7 @@ int func_129(int iParam0) // Position - 0x13CC1 (81089)
 	return 17239;
 }
 
-BOOL func_130(Ped pedParam0, Hash hParam1) // Position - 0x14062 (82018)
+BOOL func_130(Ped pedParam0, BOOL bParam1) // Position - 0x14062 (82018)
 {
 	int pedDrawableVariation;
 	int pedTextureVariation;
@@ -16118,8 +16118,8 @@ BOOL func_130(Ped pedParam0, Hash hParam1) // Position - 0x14062 (82018)
 			pedDrawableVariation = PED::GET_PED_DRAWABLE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_319(1759, -1);
 		
-			if (hParam1 != -1)
-				flag = hParam1;
+			if (bParam1 != -1)
+				flag = bParam1;
 		
 			if (pedDrawableVariation > 15)
 			{
@@ -16174,8 +16174,8 @@ BOOL func_130(Ped pedParam0, Hash hParam1) // Position - 0x14062 (82018)
 			pedTextureVariation = PED::GET_PED_TEXTURE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_319(1759, -1);
 		
-			if (hParam1 != -1)
-				flag = hParam1;
+			if (bParam1 != -1)
+				flag = bParam1;
 		
 			if (pedDrawableVariation == 3)
 			{
@@ -20056,7 +20056,7 @@ int func_169(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 	return -1;
 }
 
-void func_170(Ped pedParam0, var uParam1, BOOL bParam2, Hash hParam3) // Position - 0x1A1E2 (106978)
+void func_170(Ped pedParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Position - 0x1A1E2 (106978)
 {
 	var unk;
 	Hash characterType;
@@ -20075,7 +20075,7 @@ void func_170(Ped pedParam0, var uParam1, BOOL bParam2, Hash hParam3) // Positio
 		characterType = func_95(pedParam0);
 		flag = func_165(pedParam0, false);
 		flag2 = func_157(pedParam0);
-		flag3 = func_130(pedParam0, hParam3);
+		flag3 = func_130(pedParam0, bParam3);
 	
 		if (bParam2)
 			flag2 = true;
@@ -64874,12 +64874,12 @@ void func_322(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x522BC
 	return;
 }
 
-void func_323(Player plParam0, Hash hParam1, int iParam2) // Position - 0x523A9 (336809)
+void func_323(Player plParam0, BOOL bParam1, int iParam2) // Position - 0x523A9 (336809)
 {
 	Hash model;
 	int tintIndex;
 
-	if (func_324(hParam1, iParam2, &model, &tintIndex))
+	if (func_324(bParam1, iParam2, &model, &tintIndex))
 	{
 		PLAYER::SET_PLAYER_PARACHUTE_TINT_INDEX(plParam0, tintIndex);
 		PLAYER::SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(plParam0, model);
@@ -73465,14 +73465,14 @@ void func_375(Ped pedParam0) // Position - 0x5D600 (382464)
 
 Player func_376(int iParam0) // Position - 0x5D673 (382579)
 {
-	return Global_1944436.f_5375.f_1[iParam0];
+	return Global_1944438.f_5375.f_1[iParam0];
 }
 
 BOOL func_377(int iParam0) // Position - 0x5D688 (382600)
 {
 	Player player;
 
-	player = Global_1944436.f_5375.f_1[iParam0];
+	player = Global_1944438.f_5375.f_1[iParam0];
 
 	if (player == _INVALID_PLAYER_INDEX())
 		return false;
@@ -73498,13 +73498,13 @@ BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Ped pedParam0) // Position - 0x5D6CA (38266
 
 void func_380(int iParam0) // Position - 0x5D6EB (382699)
 {
-	Global_1944436.f_738 = iParam0;
+	Global_1944438.f_738 = iParam0;
 	return;
 }
 
 void func_381(BOOL bParam0) // Position - 0x5D6FC (382716)
 {
-	Global_1944436.f_736 = bParam0;
+	Global_1944438.f_736 = bParam0;
 
 	if (bParam0)
 		OBJECT::SET_ONLY_ALLOW_AMMO_COLLECTION_WHEN_LOW(false);
@@ -73515,9 +73515,9 @@ void func_381(BOOL bParam0) // Position - 0x5D6FC (382716)
 void func_382(BOOL bParam0) // Position - 0x5D717 (382743)
 {
 	if (bParam0)
-		Global_1944436.f_5247 = 1;
+		Global_1944438.f_5247 = 1;
 	else
-		Global_1944436.f_5247 = 0;
+		Global_1944438.f_5247 = 0;
 
 	return;
 }
@@ -73544,7 +73544,7 @@ BOOL func_384(var uParam0) // Position - 0x5D76C (382828)
 	if (func_385() != uParam0->f_2)
 		return true;
 
-	if (!_NETWORK_IS_PLAYER_VALID(Global_1944436.f_5375.f_1[0], true, true))
+	if (!_NETWORK_IS_PLAYER_VALID(Global_1944438.f_5375.f_1[0], true, true))
 		return true;
 
 	return false;
@@ -73582,11 +73582,11 @@ void func_389(var uParam0) // Position - 0x5D808 (382984)
 		CAM::DO_SCREEN_FADE_IN(322);
 
 	Global_79833 = true;
-	Global_1944436.f_5375 = 0;
+	Global_1944438.f_5375 = 0;
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		Global_1944436.f_5375.f_1[i] = _INVALID_PLAYER_INDEX();
+		Global_1944438.f_5375.f_1[i] = _INVALID_PLAYER_INDEX();
 	}
 
 	func_11(uParam0);
@@ -73642,7 +73642,7 @@ void func_393() // Position - 0x5D90A (383242)
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		if (PLAYER::PLAYER_ID() == Global_1944436.f_5375.f_1[i])
+		if (PLAYER::PLAYER_ID() == Global_1944438.f_5375.f_1[i])
 		{
 			iLocal_143 = i;
 			return;

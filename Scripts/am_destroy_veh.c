@@ -1438,7 +1438,7 @@ Vector3 func_33(Player plParam0) // Position - 0x16C3 (5827)
 
 BOOL func_34() // Position - 0x1738 (5944)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_35(BOOL bParam0) // Position - 0x1746 (5958)

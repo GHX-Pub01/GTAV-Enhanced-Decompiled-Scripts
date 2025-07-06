@@ -4482,12 +4482,12 @@ void func_36(BOOL bParam0, BOOL bParam1) // Position - 0x56EE (22254)
 
 BOOL func_37() // Position - 0x5762 (22370)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_38() // Position - 0x5770 (22384)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_39() // Position - 0x577F (22399)
@@ -6011,14 +6011,14 @@ void func_100(const char* sParam0) // Position - 0x752F (29999)
 
 void func_101(var uParam0) // Position - 0x753D (30013)
 {
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_102(var uParam0) // Position - 0x7550 (30032)
 {
-	return Global_1982835 || uParam0->f_692;
+	return Global_1982837 || uParam0->f_692;
 }
 
 void func_103(int iParam0) // Position - 0x7567 (30055)
@@ -6088,7 +6088,7 @@ void func_107(var uParam0) // Position - 0x75EA (30186)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	return;
 }
 

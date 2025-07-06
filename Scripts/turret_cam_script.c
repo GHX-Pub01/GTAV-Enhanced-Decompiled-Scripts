@@ -1826,16 +1826,16 @@ void func_54(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1D99 (7577
 
 BOOL func_55() // Position - 0x1DDE (7646)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 void func_56(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5) // Position - 0x1DEC (7660)
 {
-	if (!func_57(Global_1958238.f_16, uParam0, false))
+	if (!func_57(Global_1958240.f_16, uParam0, false))
 	{
-		Global_1958238.f_16 = { uParam0 };
+		Global_1958240.f_16 = { uParam0 };
 		uParam3 = { uParam3 + { 0f, -180f, 180f } };
-		Global_1958238.f_19 = { uParam3 };
+		Global_1958240.f_19 = { uParam3 };
 	}
 
 	return;
@@ -1853,15 +1853,15 @@ void func_58(BOOL bParam0) // Position - 0x1E7C (7804)
 {
 	if (bParam0)
 	{
-		if (!IS_BIT_SET(Global_1958238.f_2, 4))
+		if (!IS_BIT_SET(Global_1958240.f_2, 4))
 		{
-			Global_1958238.f_2 = 0;
-			MISC::SET_BIT(&(Global_1958238.f_2), 4);
+			Global_1958240.f_2 = 0;
+			MISC::SET_BIT(&(Global_1958240.f_2), 4);
 		}
 	}
-	else if (IS_BIT_SET(Global_1958238.f_2, 4))
+	else if (IS_BIT_SET(Global_1958240.f_2, 4))
 	{
-		MISC::CLEAR_BIT(&(Global_1958238.f_2), 4);
+		MISC::CLEAR_BIT(&(Global_1958240.f_2), 4);
 	}
 
 	return;
@@ -2021,9 +2021,9 @@ void func_67(BOOL bParam0) // Position - 0x21EF (8687)
 	if (bParam0)
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("AM_MP_DRONE")) > 0)
 			if (!func_70())
-				MISC::SET_BIT(&Global_1958238, 0);
+				MISC::SET_BIT(&Global_1958240, 0);
 	else if (func_70())
-		MISC::CLEAR_BIT(&Global_1958238, 0);
+		MISC::CLEAR_BIT(&Global_1958240, 0);
 
 	return;
 }
@@ -2041,7 +2041,7 @@ BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x2240 (8768)
 
 BOOL func_70() // Position - 0x224C (8780)
 {
-	return IS_BIT_SET(Global_1958238, 0);
+	return IS_BIT_SET(Global_1958240, 0);
 }
 
 void func_71() // Position - 0x225A (8794)
@@ -3236,7 +3236,7 @@ BOOL func_114(int iParam0) // Position - 0x3AD4 (15060)
 
 BOOL func_115() // Position - 0x3B2B (15147)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_116() // Position - 0x3B3A (15162)

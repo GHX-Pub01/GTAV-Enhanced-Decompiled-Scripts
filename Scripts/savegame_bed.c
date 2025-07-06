@@ -693,7 +693,7 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x701 (1793)
 
 BOOL func_15() // Position - 0x775 (1909)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_16(int iParam0) // Position - 0x783 (1923)
@@ -718,7 +718,7 @@ BOOL func_16(int iParam0) // Position - 0x783 (1923)
 
 BOOL func_17() // Position - 0x7DA (2010)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_18() // Position - 0x7E9 (2025)
@@ -12175,7 +12175,7 @@ void func_146(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_74() || Global_1983503)
+		if (!bParam4 || num != func_74() || Global_1983505)
 		{
 			characterType = func_188(pedParam0);
 		
@@ -12234,7 +12234,7 @@ void func_147(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_148(&pedParam0);
 
 	i = 0;
@@ -12242,7 +12242,7 @@ void func_147(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -12296,7 +12296,7 @@ void func_148(var uParam0) // Position - 0x168B4 (92340)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -12323,7 +12323,7 @@ void func_148(var uParam0) // Position - 0x168B4 (92340)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -12338,20 +12338,20 @@ void func_149(eControlAction ecaParam0, BOOL bParam1) // Position - 0x1695A (925
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }

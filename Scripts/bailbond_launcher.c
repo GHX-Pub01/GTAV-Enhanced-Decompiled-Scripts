@@ -6649,7 +6649,7 @@ Vector3 func_131(int iParam0, BOOL bParam1) // Position - 0x8F2C (36652)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -6702,8 +6702,8 @@ Vector3 func_131(int iParam0, BOOL bParam1) // Position - 0x8F2C (36652)
 
 Vector3 func_132() // Position - 0x96A6 (38566)
 {
-	if (!func_134(Global_1950936))
-		return Global_1950936;
+	if (!func_134(Global_1950938))
+		return Global_1950938;
 
 	switch (func_133())
 	{
@@ -8590,9 +8590,9 @@ void func_184() // Position - 0xC4EA (50410)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;

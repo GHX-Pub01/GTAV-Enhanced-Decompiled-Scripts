@@ -1234,7 +1234,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x123C (4668)
 
 BOOL func_30() // Position - 0x124F (4687)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_31(BOOL bParam0) // Position - 0x125D (4701)
@@ -44556,7 +44556,7 @@ void func_303(int iParam0, int iParam1) // Position - 0x329F4 (207348)
 
 BOOL func_304() // Position - 0x32A49 (207433)
 {
-	if (MISC::IS_PC_VERSION() && Global_1982156 == 0)
+	if (MISC::IS_PC_VERSION() && Global_1982158 == 0)
 		return false;
 
 	return false;

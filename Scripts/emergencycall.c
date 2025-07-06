@@ -117,10 +117,10 @@ void main() // Position - 0x0 (0)
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1963522)
+						if (func_8(PLAYER::PLAYER_ID(), false) && func_4(PLAYER::PLAYER_ID()) == 5 && Global_1963524)
 						{
-							if (Global_1963523 == 0)
-								Global_1963523 = 1;
+							if (Global_1963525 == 0)
+								Global_1963525 = 1;
 						
 							iLocal_41 = 5;
 						}
@@ -534,12 +534,12 @@ BOOL func_16(int iParam0) // Position - 0x8A2 (2210)
 
 BOOL func_17() // Position - 0x8F9 (2297)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_18() // Position - 0x907 (2311)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 int func_19() // Position - 0x916 (2326)

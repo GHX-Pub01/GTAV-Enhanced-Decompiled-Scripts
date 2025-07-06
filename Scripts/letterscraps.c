@@ -841,7 +841,7 @@ BOOL func_4(int iParam0) // Position - 0x368 (872)
 
 BOOL func_5() // Position - 0x3BF (959)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 int func_6(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x3CE (974)
@@ -931,7 +931,7 @@ void func_9(BOOL bParam0, BOOL bParam1) // Position - 0x4B2 (1202)
 
 BOOL func_10() // Position - 0x526 (1318)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 void func_11(const char* sParam0) // Position - 0x534 (1332)

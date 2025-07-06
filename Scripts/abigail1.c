@@ -37143,7 +37143,7 @@ void func_314(BOOL bParam0, BOOL bParam1) // Position - 0x2C42D (181293)
 
 BOOL func_315() // Position - 0x2C4A1 (181409)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_316(int iParam0) // Position - 0x2C4AF (181423)
@@ -37168,7 +37168,7 @@ BOOL func_316(int iParam0) // Position - 0x2C4AF (181423)
 
 BOOL func_317() // Position - 0x2C506 (181510)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_318(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10) // Position - 0x2C515 (181525)

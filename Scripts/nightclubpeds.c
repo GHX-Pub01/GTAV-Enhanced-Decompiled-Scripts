@@ -9348,7 +9348,7 @@ Player _INVALID_PLAYER_INDEX() // Position - 0x1F9E (8094)
 
 BOOL func_18() // Position - 0x1FA7 (8103)
 {
-	return IS_BIT_SET(Global_1944436.f_3, 22);
+	return IS_BIT_SET(Global_1944438.f_3, 22);
 }
 
 void func_19(var uParam0) // Position - 0x1FB8 (8120)
@@ -15135,9 +15135,9 @@ void func_33() // Position - 0x848D (33933)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -17635,13 +17635,13 @@ BOOL func_88(ePedComponentType epctParam0) // Position - 0xB147 (45383)
 
 	if (type != PV_COMP_INVALID)
 	{
-		if (Global_1964136[type] == -1)
+		if (Global_1964138[type] == -1)
 			return false;
 	
 		playerName = PLAYER::GET_PLAYER_NAME(epctParam0);
 	
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(playerName))
-			return MISC::GET_HASH_KEY(playerName) == Global_1964136[type];
+			return MISC::GET_HASH_KEY(playerName) == Global_1964138[type];
 	}
 
 	return false;
@@ -27073,12 +27073,12 @@ void func_280(BOOL bParam0, BOOL bParam1) // Position - 0x18580 (99712)
 
 BOOL func_281() // Position - 0x185F4 (99828)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_282() // Position - 0x18602 (99842)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_283() // Position - 0x18611 (99857)
@@ -29447,29 +29447,29 @@ int func_336(ePedComponentType epctParam0) // Position - 0x1AA50 (109136)
 BOOL func_337() // Position - 0x1AAB3 (109235)
 {
 	if (func_338())
-		return Global_1944436.f_749 == 1;
+		return Global_1944438.f_749 == 1;
 
 	return false;
 }
 
 BOOL func_338() // Position - 0x1AACF (109263)
 {
-	return Global_1944436.f_748;
+	return Global_1944438.f_748;
 }
 
 void func_339(BOOL bParam0) // Position - 0x1AADE (109278)
 {
 	if (bParam0)
-		Global_1944436.f_5247 = 1;
+		Global_1944438.f_5247 = 1;
 	else
-		Global_1944436.f_5247 = 0;
+		Global_1944438.f_5247 = 0;
 
 	return;
 }
 
 BOOL func_340() // Position - 0x1AAFE (109310)
 {
-	return IS_BIT_SET(Global_1944436.f_3, 6);
+	return IS_BIT_SET(Global_1944438.f_3, 6);
 }
 
 void func_341(var uParam0) // Position - 0x1AB0E (109326)

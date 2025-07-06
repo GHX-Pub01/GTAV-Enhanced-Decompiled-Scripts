@@ -1768,7 +1768,7 @@ void _CONTEXT_ADD_HELP_TEXT(var uParam0, int iParam1, char* sParam2, int iParam3
 
 BOOL func_50() // Position - 0x1A67 (6759)
 {
-	return Global_1963587;
+	return Global_1963589;
 }
 
 BOOL func_51(Player plParam0) // Position - 0x1A73 (6771)

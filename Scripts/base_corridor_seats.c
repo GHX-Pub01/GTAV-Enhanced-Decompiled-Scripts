@@ -926,7 +926,7 @@ void func_35(BOOL bParam0, BOOL bParam1) // Position - 0xE31 (3633)
 
 BOOL func_36() // Position - 0xEA5 (3749)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_37(int iParam0) // Position - 0xEB3 (3763)
@@ -951,7 +951,7 @@ BOOL func_37(int iParam0) // Position - 0xEB3 (3763)
 
 BOOL func_38() // Position - 0xF0A (3850)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 Vector3 func_39(var uParam0) // Position - 0xF19 (3865)

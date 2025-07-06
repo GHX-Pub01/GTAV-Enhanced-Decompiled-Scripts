@@ -1229,7 +1229,7 @@ Vector3 func_48(Player plParam0) // Position - 0x148A (5258)
 
 BOOL func_49() // Position - 0x14FF (5375)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_50(BOOL bParam0) // Position - 0x150D (5389)
@@ -1840,7 +1840,7 @@ void func_72() // Position - 0x1F79 (8057)
 	BOOL flag;
 	Ped ped;
 
-	if (!Global_1958225)
+	if (!Global_1958227)
 		return;
 
 	if (!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(iLocal_78.f_1))
@@ -1867,7 +1867,7 @@ void func_72() // Position - 0x1F79 (8057)
 			if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_COORDS(vehicle, true), false) > 50f)
 				return;
 
-	if (!func_4(&uLocal_74, Global_1958224, false))
+	if (!func_4(&uLocal_74, Global_1958226, false))
 		return;
 
 	_STOPWATCH_DESTROY(&uLocal_74);
@@ -1932,7 +1932,7 @@ void func_74() // Position - 0x2089 (8329)
 		return;
 
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(playerPed2))
-		if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed2, true), ENTITY::GET_ENTITY_COORDS(playerPed, true), false) > Global_1958226)
+		if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed2, true), ENTITY::GET_ENTITY_COORDS(playerPed, true), false) > Global_1958228)
 			return;
 
 	if (func_55(player2, player) || func_75(player2, player, -2, 0))

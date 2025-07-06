@@ -1344,9 +1344,9 @@ char* func_29() // Position - 0x12DB (4827)
 	{
 		return "ARENA_BOX";
 	}
-	else if (Global_2739945.f_6036.f_1 && Global_1981973 != -1)
+	else if (Global_2739945.f_6036.f_1 && Global_1981975 != -1)
 	{
-		return func_37(Global_1981973);
+		return func_37(Global_1981975);
 	}
 	else if (Global_101765.f_399 > 0)
 	{
@@ -2880,7 +2880,7 @@ void func_57(BOOL bParam0, BOOL bParam1) // Position - 0x2C32 (11314)
 
 BOOL func_58() // Position - 0x2CA6 (11430)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_59(int iParam0) // Position - 0x2CB4 (11444)
@@ -2905,7 +2905,7 @@ BOOL func_59(int iParam0) // Position - 0x2CB4 (11444)
 
 BOOL func_60() // Position - 0x2D0B (11531)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_61(char* sParam0, BOOL bParam1, BOOL bParam2) // Position - 0x2D1A (11546)
@@ -9104,7 +9104,7 @@ BOOL func_204() // Position - 0xB742 (46914)
 	if (func_253(PLAYER::PLAYER_ID()) && !func_226(epctLocal_138))
 		flag = false;
 
-	if (!IS_BIT_SET(Global_2707963, 5) && !func_211() && !func_59(0) && !func_210() && !PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false) && INTERIOR::GET_ROOM_KEY_FROM_ENTITY(PLAYER::PLAYER_PED_ID()) == INTERIOR::GET_ROOM_KEY_FROM_ENTITY(obLocal_137) && func_175(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), fLocal_164, 75f) && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_165, 0.55f, 0.8f, 1.5f, false, true, 1) && !ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), sLocal_152, "EXIT", 3) && !func_209(PLAYER::PLAYER_ID()) && !func_208() && flag && !IS_BIT_SET(Global_1944436.f_4, 2) && func_205(PLAYER::PLAYER_PED_ID()) <= 9 && !Global_2635516.f_2982 && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && !Global_1920802)
+	if (!IS_BIT_SET(Global_2707963, 5) && !func_211() && !func_59(0) && !func_210() && !PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false) && INTERIOR::GET_ROOM_KEY_FROM_ENTITY(PLAYER::PLAYER_PED_ID()) == INTERIOR::GET_ROOM_KEY_FROM_ENTITY(obLocal_137) && func_175(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), fLocal_164, 75f) && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_165, 0.55f, 0.8f, 1.5f, false, true, 1) && !ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), sLocal_152, "EXIT", 3) && !func_209(PLAYER::PLAYER_ID()) && !func_208() && flag && !IS_BIT_SET(Global_1944438.f_4, 2) && func_205(PLAYER::PLAYER_PED_ID()) <= 9 && !Global_2635516.f_2982 && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && !Global_1920802)
 		return true;
 
 	return false;
@@ -9466,7 +9466,7 @@ BOOL func_227(ePedComponentType epctParam0) // Position - 0xBF27 (48935)
 		return IS_BIT_SET(func_20(8726, -1), 4);
 
 	if (epctParam0 != PV_COMP_INVALID)
-		return IS_BIT_SET(Global_1971259[epctParam0 /*68*/].f_40, 4);
+		return IS_BIT_SET(Global_1971261[epctParam0 /*68*/].f_40, 4);
 
 	return false;
 }
@@ -9990,7 +9990,7 @@ void func_246() // Position - 0xC8BB (51387)
 			MISC::CLEAR_BIT(&Global_2707963, 1);
 			func_254(false);
 		}
-		else if (IS_BIT_SET(Global_1944436.f_6, 10))
+		else if (IS_BIT_SET(Global_1944438.f_6, 10))
 		{
 			if (iLocal_154 != 0)
 			{

@@ -5799,11 +5799,11 @@ BOOL func_91(int iParam0) // Position - 0x5A32 (23090)
 
 BOOL func_92() // Position - 0x5A89 (23177)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_93() // Position - 0x5A97 (23191)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 

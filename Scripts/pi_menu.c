@@ -10000,7 +10000,7 @@ void func_116(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_12() || Global_1983503)
+		if (!bParam4 || num != func_12() || Global_1983505)
 		{
 			characterType = func_159(pedParam0);
 		
@@ -10059,7 +10059,7 @@ void func_117(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_118(&pedParam0);
 
 	i = 0;
@@ -10067,7 +10067,7 @@ void func_117(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -10121,7 +10121,7 @@ void func_118(var uParam0) // Position - 0x127C8 (75720)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -10148,7 +10148,7 @@ void func_118(var uParam0) // Position - 0x127C8 (75720)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -10163,20 +10163,20 @@ void func_119(eControlAction ecaParam0, BOOL bParam1) // Position - 0x1286E (758
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }
@@ -85139,7 +85139,7 @@ Vector3 func_357(int iParam0, BOOL bParam1) // Position - 0x669D6 (420310)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -85192,8 +85192,8 @@ Vector3 func_357(int iParam0, BOOL bParam1) // Position - 0x669D6 (420310)
 
 Vector3 func_358() // Position - 0x67150 (422224)
 {
-	if (!func_360(Global_1950936))
-		return Global_1950936;
+	if (!func_360(Global_1950938))
+		return Global_1950938;
 
 	switch (func_359())
 	{
@@ -88545,12 +88545,12 @@ void func_403(BOOL bParam0, BOOL bParam1) // Position - 0x6CFF6 (446454)
 
 BOOL func_404() // Position - 0x6D06A (446570)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_405() // Position - 0x6D078 (446584)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 float func_406(int iParam0) // Position - 0x6D087 (446599)

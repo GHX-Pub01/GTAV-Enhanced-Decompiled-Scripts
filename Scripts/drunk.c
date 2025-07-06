@@ -284,7 +284,7 @@ void func_10() // Position - 0x2D9 (729)
 	char* str2;
 	int num;
 
-	if (!IS_BIT_SET(Global_1944436.f_3, 27))
+	if (!IS_BIT_SET(Global_1944438.f_3, 27))
 		PED::SET_PED_TO_RAGDOLL(uLocal_41.f_1, 3000, 3500, 0, true, true, false);
 
 	Global_1938507 = true;
@@ -314,15 +314,15 @@ void func_10() // Position - 0x2D9 (729)
 		if (!NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(PLAYER::PLAYER_PED_ID()))
 			func_183();
 	
-		MISC::CLEAR_BIT(&(Global_1944436.f_3), 27);
+		MISC::CLEAR_BIT(&(Global_1944438.f_3), 27);
 		_SET_PLAYER_CONTROL_EX(PLAYER::PLAYER_ID(), false, 57344, false);
 		Global_2635516.f_2982 = 1;
 	
-		if (IS_BIT_SET(Global_1944436, 15))
-			MISC::CLEAR_BIT(&Global_1944436, 15);
+		if (IS_BIT_SET(Global_1944438, 15))
+			MISC::CLEAR_BIT(&Global_1944438, 15);
 	
-		if (IS_BIT_SET(Global_1944436.f_2, 6))
-			MISC::CLEAR_BIT(&(Global_1944436.f_2), 6);
+		if (IS_BIT_SET(Global_1944438.f_2, 6))
+			MISC::CLEAR_BIT(&(Global_1944438.f_2), 6);
 	
 		if (PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
 			Global_2635516.f_2983 = 1;
@@ -1412,9 +1412,9 @@ void func_24() // Position - 0x19D6 (6614)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -1737,7 +1737,7 @@ void func_42(BOOL bParam0, BOOL bParam1) // Position - 0x1EE0 (7904)
 
 BOOL func_43() // Position - 0x1F54 (8020)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_44(int iParam0) // Position - 0x1F62 (8034)
@@ -1762,7 +1762,7 @@ BOOL func_44(int iParam0) // Position - 0x1F62 (8034)
 
 BOOL func_45() // Position - 0x1FB9 (8121)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x1FC8 (8136)
@@ -3504,7 +3504,7 @@ void func_124() // Position - 0x3D06 (15622)
 
 	if (Global_45196[iLocal_63 /*5*/].f_3 >= 10 || Global_45196[iLocal_63 /*5*/].f_4 >= 15 || IS_BIT_SET(Global_45413, 9))
 	{
-		if (TASK::GET_SCRIPT_TASK_STATUS(uLocal_41.f_1, SCRIPT_TASK_SYNCHRONIZED_SCENE) == 1 && !IS_BIT_SET(Global_1944436.f_3, 27))
+		if (TASK::GET_SCRIPT_TASK_STATUS(uLocal_41.f_1, SCRIPT_TASK_SYNCHRONIZED_SCENE) == 1 && !IS_BIT_SET(Global_1944438.f_3, 27))
 			return;
 	
 		if (AUDIO::IS_ANY_SPEECH_PLAYING(uLocal_41.f_1))

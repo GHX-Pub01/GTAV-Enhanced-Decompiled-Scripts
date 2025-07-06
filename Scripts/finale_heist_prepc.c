@@ -2285,7 +2285,7 @@ void func_71(BOOL bParam0, BOOL bParam1) // Position - 0x25FA (9722)
 
 BOOL func_72() // Position - 0x266E (9838)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_73(int iParam0) // Position - 0x267C (9852)
@@ -2310,7 +2310,7 @@ BOOL func_73(int iParam0) // Position - 0x267C (9852)
 
 BOOL func_74() // Position - 0x26D3 (9939)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_75(Vehicle veParam0, int iParam1, int iParam2) // Position - 0x26E2 (9954)

@@ -5629,7 +5629,7 @@ Vector3 func_118(int iParam0, BOOL bParam1) // Position - 0x7BF7 (31735)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -5682,8 +5682,8 @@ Vector3 func_118(int iParam0, BOOL bParam1) // Position - 0x7BF7 (31735)
 
 Vector3 func_119() // Position - 0x8375 (33653)
 {
-	if (!func_121(Global_1950936))
-		return Global_1950936;
+	if (!func_121(Global_1950938))
+		return Global_1950938;
 
 	switch (func_120())
 	{

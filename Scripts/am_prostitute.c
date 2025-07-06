@@ -411,7 +411,7 @@ void func_2() // Position - 0x232 (562)
 
 BOOL func_3() // Position - 0x414 (1044)
 {
-	return Global_1963573;
+	return Global_1963575;
 }
 
 BOOL func_4() // Position - 0x420 (1056)

@@ -567,11 +567,11 @@ void func_9() // Position - 0x5C7 (1479)
 				STREAMING::REMOVE_IPL("xm_hatches_terrain");
 		}
 	
-		if (IS_BIT_SET(Global_1944436.f_1820, 8))
+		if (IS_BIT_SET(Global_1944438.f_1820, 8))
 		{
 			STREAMING::REMOVE_IPL("Coroner_Int_on");
 			STREAMING::REQUEST_IPL("Coroner_Int_off");
-			MISC::CLEAR_BIT(&(Global_1944436.f_1820), 8);
+			MISC::CLEAR_BIT(&(Global_1944438.f_1820), 8);
 		}
 	
 		if (!Global_1836290)
@@ -830,13 +830,13 @@ void func_9() // Position - 0x5C7 (1479)
 	
 		if (!Global_1836289)
 		{
-			if (IS_BIT_SET(Global_1944436.f_5, 18))
+			if (IS_BIT_SET(Global_1944438.f_5, 18))
 				if (STREAMING::IS_IPL_ACTIVE("hei_dlc_windows_casino"))
 					STREAMING::REMOVE_IPL("hei_dlc_windows_casino");
 			else if (!STREAMING::IS_IPL_ACTIVE("hei_dlc_windows_casino"))
 				STREAMING::REQUEST_IPL("hei_dlc_windows_casino");
 		
-			if (IS_BIT_SET(Global_1944436.f_5, 19))
+			if (IS_BIT_SET(Global_1944438.f_5, 19))
 			{
 				if (STREAMING::IS_IPL_ACTIVE("hei_dlc_casino_door"))
 					STREAMING::REMOVE_IPL("hei_dlc_casino_door");
@@ -2973,9 +2973,9 @@ BOOL func_35(float fParam0, var uParam1, var uParam2) // Position - 0x455A (1775
 	return false;
 }
 
-var func_36(var uParam0) // Position - 0x4584 (17796)
+char* func_36(char* sParam0) // Position - 0x4584 (17796)
 {
-	return uParam0;
+	return sParam0;
 }
 
 struct<6> func_37(int iParam0, BOOL bParam1) // Position - 0x458E (17806)

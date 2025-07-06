@@ -41193,12 +41193,12 @@ void func_353(BOOL bParam0, BOOL bParam1) // Position - 0x32896 (206998)
 
 BOOL func_354() // Position - 0x3290A (207114)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_355() // Position - 0x32918 (207128)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_356() // Position - 0x32927 (207143)

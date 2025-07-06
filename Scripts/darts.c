@@ -3426,7 +3426,7 @@ BOOL func_42(int iParam0) // Position - 0x4740 (18240)
 
 BOOL func_43() // Position - 0x4797 (18327)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_44(var uParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) // Position - 0x47A6 (18342)
@@ -22560,7 +22560,7 @@ void func_453(BOOL bParam0, BOOL bParam1) // Position - 0x219CB (137675)
 
 BOOL func_454() // Position - 0x21A3F (137791)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_455() // Position - 0x21A4D (137805)
@@ -23499,7 +23499,7 @@ void func_492() // Position - 0x22E58 (142936)
 {
 	if (Global_21083.f_1 == 9 || Global_21083.f_1 == 10)
 	{
-		Global_22495 = false;
+		Global_22495 = 0;
 		Global_22491 = 1;
 	}
 

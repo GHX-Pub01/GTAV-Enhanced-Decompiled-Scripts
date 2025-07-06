@@ -36495,7 +36495,7 @@ void func_233(BOOL bParam0, BOOL bParam1) // Position - 0x27AE6 (162534)
 
 BOOL func_234() // Position - 0x27B5A (162650)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_235(int iParam0) // Position - 0x27B68 (162664)
@@ -36520,7 +36520,7 @@ BOOL func_235(int iParam0) // Position - 0x27B68 (162664)
 
 BOOL func_236() // Position - 0x27BBF (162751)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_237(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5, BOOL bParam6) // Position - 0x27BCE (162766)
@@ -36865,9 +36865,9 @@ void func_249() // Position - 0x280DA (164058)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -37375,7 +37375,7 @@ int func_265(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char
 		}
 	}
 
-	if (Global_1973529 != -1 && echParam0 == Global_1973529)
+	if (Global_1973531 != -1 && echParam0 == Global_1973531)
 		num2 = 1;
 
 	func_266(echParam0, sParam1, num2, func_267(PLAYER::PLAYER_ID()));
@@ -37395,18 +37395,18 @@ void func_266(eCharacter echParam0, char* sParam1, BOOL bParam2, ePedComponentTy
 	character.f_3 = 0;
 	character.f_4 = bParam2;
 	character.f_5 = epctParam3;
-	character.f_6 = Global_1973512.f_7;
-	character.f_7 = Global_1973512.f_8;
-	character.f_8 = Global_1973512.f_9;
-	character.f_9 = Global_1973512.f_10;
-	character.f_10 = Global_1973512.f_11;
-	character.f_11 = Global_1973512.f_12;
-	character.f_12 = Global_1973512.f_13;
-	character.f_13 = Global_1973512.f_14;
+	character.f_6 = Global_1973514.f_7;
+	character.f_7 = Global_1973514.f_8;
+	character.f_8 = Global_1973514.f_9;
+	character.f_9 = Global_1973514.f_10;
+	character.f_10 = Global_1973514.f_11;
+	character.f_11 = Global_1973514.f_12;
+	character.f_12 = Global_1973514.f_13;
+	character.f_13 = Global_1973514.f_14;
 	STATS::PLAYSTATS_NPC_PHONE(&character);
 
 	if (bParam2)
-		Global_1973529 = -1;
+		Global_1973531 = -1;
 
 	return;
 }
@@ -44198,7 +44198,7 @@ Vector3 func_400(int iParam0, BOOL bParam1) // Position - 0x31BA0 (203680)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -44251,8 +44251,8 @@ Vector3 func_400(int iParam0, BOOL bParam1) // Position - 0x31BA0 (203680)
 
 Vector3 func_401() // Position - 0x3231A (205594)
 {
-	if (!func_403(Global_1950936))
-		return Global_1950936;
+	if (!func_403(Global_1950938))
+		return Global_1950938;
 
 	switch (func_402())
 	{

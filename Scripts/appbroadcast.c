@@ -245,12 +245,12 @@ BOOL func_7(int iParam0) // Position - 0x2CB (715)
 
 BOOL func_8() // Position - 0x322 (802)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_9() // Position - 0x330 (816)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_10(int iParam0, int iParam1) // Position - 0x33F (831)

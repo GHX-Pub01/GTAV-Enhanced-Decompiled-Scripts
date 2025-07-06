@@ -920,7 +920,7 @@ Vector3 func_24(Player plParam0) // Position - 0xF2B (3883)
 
 BOOL func_25() // Position - 0xFA0 (4000)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_26(BOOL bParam0) // Position - 0xFAE (4014)

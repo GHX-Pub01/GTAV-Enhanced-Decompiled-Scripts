@@ -1481,9 +1481,9 @@ void func_23() // Position - 0x10BD (4285)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -32779,7 +32779,7 @@ void func_229(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4)
 			Global_114162.f_7265.f_227[iParam0] = iParam1;
 	
 		Global_40739[iParam0] = bParam2;
-		Global_40938[iParam0] = 1;
+		Global_40938[iParam0] = true;
 		func_232(iParam0, bParam3, iParam4, false);
 		func_230(iParam0, iParam1);
 	}
@@ -32926,7 +32926,7 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 						if (vector.f_4[num2] != 0)
 							ENTITY::CREATE_MODEL_HIDE(vector, 10f, vector.f_4[num2], true);
 					
-						Global_42333[iParam0] = 1;
+						Global_42333[iParam0] = true;
 					}
 				
 					flag = true;
@@ -33008,8 +33008,8 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								STREAMING::REQUEST_IPL(&vector.f_8[2 /*8*/]);
 					}
 				
-					Global_42134[iParam0] = 1;
-					Global_42333[iParam0] = 1;
+					Global_42134[iParam0] = true;
+					Global_42333[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -33069,8 +33069,8 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							INTERIOR::REFRESH_INTERIOR(interiorAtCoordsWithType);
 					}
 				
-					Global_42333[iParam0] = 1;
-					Global_42134[iParam0] = 1;
+					Global_42333[iParam0] = true;
+					Global_42134[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -33084,7 +33084,7 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (num == 0)
 							{
 								OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 3);
-								Global_42333[iParam0] = 1;
+								Global_42333[iParam0] = true;
 								flag = true;
 							}
 							else if (num == 1)
@@ -33092,7 +33092,7 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								if (OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 6 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 7 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 8)
 								{
 									OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 10);
-									Global_42333[iParam0] = 1;
+									Global_42333[iParam0] = true;
 									flag = true;
 								}
 							}
@@ -33122,7 +33122,7 @@ BOOL func_232(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		
 			if (flag)
 			{
-				Global_40938[iParam0] = 0;
+				Global_40938[iParam0] = false;
 				Global_41137[iParam0] = num;
 			
 				if (!func_233())
@@ -38948,7 +38948,7 @@ Vector3 func_298(int iParam0, BOOL bParam1) // Position - 0x2DB7B (187259)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -39001,8 +39001,8 @@ Vector3 func_298(int iParam0, BOOL bParam1) // Position - 0x2DB7B (187259)
 
 Vector3 func_299() // Position - 0x2E2F5 (189173)
 {
-	if (!func_301(Global_1950936))
-		return Global_1950936;
+	if (!func_301(Global_1950938))
+		return Global_1950938;
 
 	switch (func_300())
 	{
@@ -44380,12 +44380,12 @@ void func_438(BOOL bParam0, BOOL bParam1) // Position - 0x3577E (219006)
 
 BOOL func_439() // Position - 0x357F2 (219122)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_440() // Position - 0x35800 (219136)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_441() // Position - 0x3580F (219151)

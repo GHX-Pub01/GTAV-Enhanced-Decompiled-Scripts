@@ -4941,7 +4941,7 @@ Vector3 func_79(int iParam0, BOOL bParam1) // Position - 0x6CCD (27853)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -4994,8 +4994,8 @@ Vector3 func_79(int iParam0, BOOL bParam1) // Position - 0x6CCD (27853)
 
 Vector3 func_80() // Position - 0x7447 (29767)
 {
-	if (!func_82(Global_1950936))
-		return Global_1950936;
+	if (!func_82(Global_1950938))
+		return Global_1950938;
 
 	switch (func_81())
 	{
@@ -7751,7 +7751,7 @@ void func_164(BOOL bParam0, BOOL bParam1) // Position - 0xB976 (47478)
 
 BOOL func_165() // Position - 0xB9EA (47594)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_166(int iParam0) // Position - 0xB9F8 (47608)
@@ -7776,7 +7776,7 @@ BOOL func_166(int iParam0) // Position - 0xB9F8 (47608)
 
 BOOL func_167() // Position - 0xBA4F (47695)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_168(int iParam0) // Position - 0xBA5E (47710)

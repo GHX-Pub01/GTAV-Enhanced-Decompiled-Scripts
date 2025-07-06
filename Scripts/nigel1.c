@@ -34087,9 +34087,9 @@ void func_219() // Position - 0x275C5 (161221)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;
@@ -34688,7 +34688,7 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_246(-1, false) == CHAR_MIKE_FRANK_CONF;
+		flag = func_246(-1, false) == 8;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -34699,28 +34699,28 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 	return flag;
 }
 
-eCharacter func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
+int func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
 {
-	eCharacter character;
 	int num;
+	int num2;
 
-	num = iParam0;
+	num2 = iParam0;
 
-	if (num == -1)
-		num = func_11();
+	if (num2 == -1)
+		num2 = func_11();
 
-	if (Global_1575066[num] == true)
+	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		character = CHAR_MIKE_FRANK_CONF;
+		num = 8;
 	}
 	else
 	{
-		character = Global_1574920[num];
+		num = Global_1574920[num2];
 		bParam1;
 	}
 
-	return character;
+	return num;
 }
 
 BOOL func_247(Player plParam0) // Position - 0x28240 (164416)
@@ -39273,12 +39273,12 @@ void func_385(BOOL bParam0, BOOL bParam1) // Position - 0x2E625 (189989)
 
 BOOL func_386() // Position - 0x2E699 (190105)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_387() // Position - 0x2E6A7 (190119)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_388() // Position - 0x2E6B6 (190134)

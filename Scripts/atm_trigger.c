@@ -3468,12 +3468,12 @@ void func_46(BOOL bParam0, BOOL bParam1) // Position - 0x3387 (13191)
 
 BOOL func_47() // Position - 0x33FB (13307)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_48() // Position - 0x3409 (13321)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_49() // Position - 0x3418 (13336)

@@ -3514,12 +3514,12 @@ BOOL func_65(int iParam0) // Position - 0x2B69 (11113)
 
 BOOL func_66() // Position - 0x2BC0 (11200)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_67() // Position - 0x2BCE (11214)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_68(int iParam0) // Position - 0x2BDD (11229)

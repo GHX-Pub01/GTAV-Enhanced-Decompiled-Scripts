@@ -1315,7 +1315,7 @@ Vector3 func_46(Player plParam0) // Position - 0x14D2 (5330)
 
 BOOL func_47() // Position - 0x1547 (5447)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_48(BOOL bParam0) // Position - 0x1555 (5461)
@@ -1978,9 +1978,9 @@ void func_67() // Position - 0x2182 (8578)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;

@@ -414,9 +414,9 @@ void func_2() // Position - 0xEC (236)
 	func_6();
 	func_5();
 	func_4();
-	Global_1958079 = 0;
-	Global_1977478 = 0;
-	_STOPWATCH_DESTROY(&Global_1958080);
+	Global_1958081 = 0;
+	Global_1977480 = 0;
+	_STOPWATCH_DESTROY(&Global_1958082);
 	return;
 }
 
@@ -428,17 +428,17 @@ void _STOPWATCH_DESTROY(var uParam0) // Position - 0x17E (382)
 
 void func_4() // Position - 0x18B (395)
 {
-	Global_1958190 = 0;
-	Global_1958190.f_1 = 0;
-	Global_1958190.f_3 = 0;
+	Global_1958192 = 0;
+	Global_1958192.f_1 = 0;
+	Global_1958192.f_3 = 0;
 	return;
 }
 
 void func_5() // Position - 0x1A6 (422)
 {
-	Global_1958162 = 0;
-	Global_1958162.f_1 = 0;
-	Global_1958162.f_3 = 0;
+	Global_1958164 = 0;
+	Global_1958164.f_1 = 0;
+	Global_1958164.f_3 = 0;
 	return;
 }
 
@@ -525,9 +525,9 @@ void func_6() // Position - 0x1C1 (449)
 	src.f_6236.f_32 = 4;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1950959, &src, 6281);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1950961, &src, 6281);
 	else
-		Global_1950959 = { src };
+		Global_1950961 = { src };
 
 	return;
 }
@@ -573,9 +573,9 @@ void func_7() // Position - 0x453 (1107)
 	src.f_856 = 26;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1950021, &src, 886);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1950023, &src, 886);
 	else
-		Global_1950021 = { src };
+		Global_1950023 = { src };
 
 	return;
 }
@@ -584,9 +584,9 @@ void func_8() // Position - 0x54F (1359)
 {
 	var src;
 
-	if (IS_BIT_SET(Global_1949868.f_63, 0) && !IS_BIT_SET(Global_1949868.f_63, 1))
+	if (IS_BIT_SET(Global_1949870.f_63, 0) && !IS_BIT_SET(Global_1949870.f_63, 1))
 	{
-		Global_1949868.f_63 = 0;
+		Global_1949870.f_63 = 0;
 	}
 	else
 	{
@@ -600,9 +600,9 @@ void func_8() // Position - 0x54F (1359)
 		src.f_64 = 43;
 	
 		if (Global_2672941)
-			MISC::COPY_SCRIPT_STRUCT(&Global_1949868, &src, 151);
+			MISC::COPY_SCRIPT_STRUCT(&Global_1949870, &src, 151);
 		else
-			Global_1949868 = { src };
+			Global_1949870 = { src };
 	}
 
 	return;
@@ -968,14 +968,14 @@ void func_10() // Position - 0x66C (1644)
 	src.f_5375.f_1 = 4;
 	src.f_5381 = 1;
 	src.f_5382 = 1120403456;
-	unk5383 = Global_1944436.f_3897;
+	unk5383 = Global_1944438.f_3897;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1944436, &src, 5383);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1944438, &src, 5383);
 	else
-		Global_1944436 = { src };
+		Global_1944438 = { src };
 
-	Global_1944436.f_3897 = unk5383;
+	Global_1944438.f_3897 = unk5383;
 	return;
 }
 

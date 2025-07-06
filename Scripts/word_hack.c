@@ -862,7 +862,7 @@ void main() // Position - 0x0 (0)
 	while (true)
 	{
 		BUILTIN::WAIT(0);
-		func_1(&uScriptParam_0, &Global_1982759, &uLocal_49, &uLocal_106);
+		func_1(&uScriptParam_0, &Global_1982761, &uLocal_49, &uLocal_106);
 	}
 
 	return;
@@ -2296,14 +2296,14 @@ void func_66(int iParam0) // Position - 0x1CBB (7355)
 
 void func_67(var uParam0) // Position - 0x1CC9 (7369)
 {
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_68(var uParam0) // Position - 0x1CDC (7388)
 {
-	return Global_1982835 || uParam0->f_692;
+	return Global_1982837 || uParam0->f_692;
 }
 
 struct<9> func_69() // Position - 0x1CF3 (7411)
@@ -2370,7 +2370,7 @@ void func_71(var uParam0) // Position - 0x1D87 (7559)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	return;
 }
 
@@ -2717,7 +2717,7 @@ void func_92(BOOL bParam0, BOOL bParam1) // Position - 0x242C (9260)
 
 BOOL func_93() // Position - 0x24A0 (9376)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_94(int iParam0) // Position - 0x24AE (9390)
@@ -2742,7 +2742,7 @@ BOOL func_94(int iParam0) // Position - 0x24AE (9390)
 
 BOOL func_95() // Position - 0x2505 (9477)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_96(int iParam0, int iParam1) // Position - 0x2514 (9492)

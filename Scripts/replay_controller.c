@@ -2541,12 +2541,12 @@ void func_58(BOOL bParam0, BOOL bParam1) // Position - 0x3573 (13683)
 
 BOOL func_59() // Position - 0x35E7 (13799)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_60() // Position - 0x35F5 (13813)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_61(int iParam0) // Position - 0x3604 (13828)
@@ -7187,7 +7187,7 @@ Vector3 func_138(int iParam0, BOOL bParam1) // Position - 0x9E98 (40600)
 			return 2714.5466f, -354.2701f, -55.1867f;
 	
 		case 50:
-			return Global_1966473;
+			return Global_1966475;
 	
 		case 51:
 			return 1100f, 220f, -50f;
@@ -7240,8 +7240,8 @@ Vector3 func_138(int iParam0, BOOL bParam1) // Position - 0x9E98 (40600)
 
 Vector3 func_139() // Position - 0xA612 (42514)
 {
-	if (!func_141(Global_1950936))
-		return Global_1950936;
+	if (!func_141(Global_1950938))
+		return Global_1950938;
 
 	switch (func_140())
 	{
@@ -54673,7 +54673,7 @@ void func_613(Ped pedParam0, BOOL bParam1, BOOL bParam2, int iParam3, BOOL bPara
 		if (bParam2)
 			flag2 = false;
 	
-		if (!bParam4 || num != func_49() || Global_1983503)
+		if (!bParam4 || num != func_49() || Global_1983505)
 		{
 			characterType = func_649(pedParam0);
 		
@@ -54732,7 +54732,7 @@ void func_614(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 	eControlAction action;
 	int decorationIndex;
 
-	if (!Global_1983502)
+	if (!Global_1983504)
 		func_615(&pedParam0);
 
 	i = 0;
@@ -54740,7 +54740,7 @@ void func_614(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPar
 
 	for (i = 0; i < 27; i = i + 1)
 	{
-		action = Global_1983474[i];
+		action = Global_1983476[i];
 	
 		if (action <= -1)
 		{
@@ -54794,7 +54794,7 @@ void func_615(var uParam0) // Position - 0x4A044 (303172)
 
 	for (i = INPUT_NEXT_CAMERA; i < INPUT_PHONE; i = i + 1)
 	{
-		Global_1983474[i] = -1;
+		Global_1983476[i] = -1;
 	}
 
 	i = INPUT_NEXT_CAMERA;
@@ -54821,7 +54821,7 @@ void func_615(var uParam0) // Position - 0x4A044 (303172)
 		}
 	}
 
-	Global_1983502 = true;
+	Global_1983504 = true;
 	return;
 }
 
@@ -54836,20 +54836,20 @@ void func_616(eControlAction ecaParam0, BOOL bParam1) // Position - 0x4A0EA (303
 	{
 		if (bParam1)
 		{
-			if (Global_1983474[i] == ecaParam0)
+			if (Global_1983476[i] == ecaParam0)
 				return;
-			else if (Global_1983474[i] == -1)
+			else if (Global_1983476[i] == -1)
 				num = i;
 		}
-		else if (Global_1983474[i] == ecaParam0)
+		else if (Global_1983476[i] == ecaParam0)
 		{
-			Global_1983474[i] = -1;
+			Global_1983476[i] = -1;
 			return;
 		}
 	}
 
 	if (bParam1 && num >= 0)
-		Global_1983474[num] = ecaParam0;
+		Global_1983476[num] = ecaParam0;
 
 	return;
 }

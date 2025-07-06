@@ -1765,12 +1765,12 @@ void func_37(BOOL bParam0, BOOL bParam1) // Position - 0xE5A (3674)
 
 BOOL func_38() // Position - 0xECE (3790)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_39() // Position - 0xEDC (3804)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 BOOL func_40(int iParam0) // Position - 0xEEB (3819)
@@ -2820,7 +2820,7 @@ void func_75(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2284 (88
 		GRAPHICS::USE_PARTICLE_FX_ASSET("scr_xm_orbital");
 		GRAPHICS::START_NETWORKED_PARTICLE_FX_NON_LOOPED_AT_COORD("scr_xm_orbital_blast", vParam0, normal, 1065353216, false, false, false, true);
 	
-		if (!Global_1963556)
+		if (!Global_1963558)
 			AUDIO::PLAY_SOUND_FROM_COORD(-1, "DLC_XM_Explosions_Orbital_Cannon", vParam0, 0, true, 0, false);
 	}
 
@@ -5163,7 +5163,7 @@ BOOL func_138(var uParam0) // Position - 0x4ADA (19162)
 			break;
 	
 		case 8:
-			if (Global_1944429 == 7 || Global_2708170)
+			if (Global_1944431 == 7 || Global_2708170)
 			{
 				if (!CAM::IS_SCREEN_FADED_IN())
 				{
@@ -5565,14 +5565,14 @@ void func_145(int iParam0) // Position - 0x578C (22412)
 
 void func_146(var uParam0) // Position - 0x579A (22426)
 {
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	uParam0->f_692 = 0;
 	return;
 }
 
 BOOL func_147(var uParam0) // Position - 0x57AD (22445)
 {
-	return Global_1982835 || uParam0->f_692;
+	return Global_1982837 || uParam0->f_692;
 }
 
 void func_148(var uParam0, float fParam1) // Position - 0x57C4 (22468)
@@ -5652,7 +5652,7 @@ void func_152(var uParam0) // Position - 0x587B (22651)
 	uParam0->f_697 = 0f;
 	uParam0->f_698 = 0f;
 	uParam0->f_699 = 1f;
-	Global_1982835 = 0;
+	Global_1982837 = 0;
 	return;
 }
 

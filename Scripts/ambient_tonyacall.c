@@ -493,7 +493,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 		if (iParam3 < 12)
 			iParam3 = 7;
 
-	Global_22449 = 0;
+	Global_22449 = false;
 	Global_22451 = 0;
 	Global_22456 = 0;
 	Global_23433 = 0;
@@ -513,7 +513,7 @@ BOOL func_6(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x638 (1592)
 		{
 			if (iParam1 > Global_22444)
 			{
-				if (Global_22449 == 0)
+				if (Global_22449 == false)
 				{
 					AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 					Global_21083.f_1 = 3;
@@ -690,9 +690,9 @@ void func_7() // Position - 0x906 (2310)
 
 	if (Global_22448)
 	{
-		TEXT_LABEL_COPY(&(Global_1973512.f_1), { Global_22061 }, 4);
-		Global_1973512 = Global_8234;
-		Global_1973512.f_6 = Global_22452;
+		TEXT_LABEL_COPY(&(Global_1973514.f_1), { Global_22061 }, 4);
+		Global_1973514 = Global_8234;
+		Global_1973514.f_6 = Global_22452;
 	}
 
 	return;

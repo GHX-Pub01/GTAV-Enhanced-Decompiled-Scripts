@@ -752,9 +752,9 @@ void func_18(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4) //
 	return;
 }
 
-void func_19(int iParam0, Hash hParam1) // Position - 0xBDB (3035)
+void func_19(int iParam0, int iParam1) // Position - 0xBDB (3035)
 {
-	Global_2699121 = hParam1;
+	Global_2699121 = iParam1;
 	Global_2699120 = iParam0;
 	return;
 }
@@ -2559,19 +2559,19 @@ void func_36() // Position - 0x4C9D (19613)
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		Global_1982763[i] = 0;
-		TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_7[i /*4*/], "", 16);
+		Global_1982765[i] = 0;
+		TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_7[i /*4*/], "", 16);
 	}
 
-	Global_1982763.f_32 = 0;
+	Global_1982765.f_32 = 0;
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		TEXT_LABEL_ASSIGN_INT(&Global_1982763.f_33[i /*8*/], 0, 32);
-		TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_58[i /*4*/], "", 16);
+		TEXT_LABEL_ASSIGN_INT(&Global_1982765.f_33[i /*8*/], 0, 32);
+		TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_58[i /*4*/], "", 16);
 	}
 
-	Global_1982763.f_71 = 0;
+	Global_1982765.f_71 = 0;
 	return;
 }
 
@@ -2582,7 +2582,7 @@ void func_37(int iParam0, Hash hParam1, char* sParam2, char* sParam3) // Positio
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam2, 32);
 	TEXT_LABEL_ASSIGN_STRING(&unk9, sParam3, 32);
-	MONEY::_NETWORK_EARN_GENERIC(iParam0, hParam1, &unk, &unk9, &Global_1982763);
+	MONEY::_NETWORK_EARN_GENERIC(iParam0, hParam1, &unk, &unk9, &Global_1982765);
 	return;
 }
 
@@ -2590,12 +2590,12 @@ void func_38(int iParam0, Hash hParam1, BOOL bParam2) // Position - 0x4D2F (1975
 {
 	if (bParam2)
 		func_36();
-	else if (Global_1982763.f_32 == 6)
+	else if (Global_1982765.f_32 == 6)
 		return;
 
-	Global_1982763[Global_1982763.f_32] = hParam1;
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_7[Global_1982763.f_32 /*4*/], func_39(iParam0), 16);
-	Global_1982763.f_32 = Global_1982763.f_32 + 1;
+	Global_1982765[Global_1982765.f_32] = hParam1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_7[Global_1982765.f_32 /*4*/], func_39(iParam0), 16);
+	Global_1982765.f_32 = Global_1982765.f_32 + 1;
 	return;
 }
 
@@ -2812,7 +2812,7 @@ void func_48(int iParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, Hash hParam4
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam5, 32);
 	TEXT_LABEL_ASSIGN_STRING(&unk9, sParam6, 32);
-	MONEY::_NETWORK_SPENT_GENERIC(iParam0, bParam1, bParam2, hParam3, hParam4, &unk, &unk9, &Global_1982763);
+	MONEY::_NETWORK_SPENT_GENERIC(iParam0, bParam1, bParam2, hParam3, hParam4, &unk, &unk9, &Global_1982765);
 
 	if (bParam7)
 		if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
@@ -2985,12 +2985,12 @@ void func_58(int iParam0, char* sParam1, BOOL bParam2) // Position - 0x543F (215
 {
 	if (bParam2)
 		func_36();
-	else if (Global_1982763.f_71 == 3)
+	else if (Global_1982765.f_71 == 3)
 		return;
 
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_33[Global_1982763.f_71 /*8*/], sParam1, 32);
-	TEXT_LABEL_ASSIGN_STRING(&Global_1982763.f_58[Global_1982763.f_71 /*4*/], func_39(iParam0), 16);
-	Global_1982763.f_71 = Global_1982763.f_71 + 1;
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_33[Global_1982765.f_71 /*8*/], sParam1, 32);
+	TEXT_LABEL_ASSIGN_STRING(&Global_1982765.f_58[Global_1982765.f_71 /*4*/], func_39(iParam0), 16);
+	Global_1982765.f_71 = Global_1982765.f_71 + 1;
 	return;
 }
 

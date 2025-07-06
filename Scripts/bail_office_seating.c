@@ -396,7 +396,7 @@ void func_1(var uParam0) // Position - 0xBE (190)
 			break;
 	
 		case 1:
-			Global_1944419 = false;
+			Global_1944421 = false;
 		
 			if (func_57(uParam0))
 			{
@@ -408,9 +408,9 @@ void func_1(var uParam0) // Position - 0xBE (190)
 		case 2:
 			if (func_56(PLAYER::PLAYER_PED_ID(), &uParam0->f_16[uParam0->f_9 /*15*/]) && func_55(PLAYER::PLAYER_PED_ID(), uParam0->f_16[uParam0->f_9 /*15*/].f_3))
 			{
-				if (func_54(uParam0) || func_50(uParam0) || func_49(uParam0) || !func_48(uParam0) || func_46(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944436.f_4, 2))
+				if (func_54(uParam0) || func_50(uParam0) || func_49(uParam0) || !func_48(uParam0) || func_46(PLAYER::PLAYER_ID()) || PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true) || PED::IS_PED_IN_COMBAT(PLAYER::PLAYER_PED_ID(), 0) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_PERFORMING_MELEE_ACTION(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || IS_BIT_SET(Global_1944438.f_4, 2))
 				{
-					MISC::SET_BIT(&(Global_1944436.f_3), 16);
+					MISC::SET_BIT(&(Global_1944438.f_3), 16);
 				
 					if (func_50(uParam0))
 					{
@@ -870,7 +870,7 @@ void func_16(var uParam0, const char* sParam1) // Position - 0xCDB (3291)
 
 BOOL func_17() // Position - 0xD3D (3389)
 {
-	return IS_BIT_SET(Global_1944436.f_3, 25);
+	return IS_BIT_SET(Global_1944438.f_3, 25);
 }
 
 BOOL func_18(var uParam0, int iParam1) // Position - 0xD4E (3406)
@@ -1056,7 +1056,7 @@ void func_29(BOOL bParam0, BOOL bParam1) // Position - 0xFBE (4030)
 
 BOOL func_30() // Position - 0x1032 (4146)
 {
-	return IS_BIT_SET(Global_1958238, 5);
+	return IS_BIT_SET(Global_1958240, 5);
 }
 
 BOOL func_31(int iParam0) // Position - 0x1040 (4160)
@@ -1081,7 +1081,7 @@ BOOL func_31(int iParam0) // Position - 0x1040 (4160)
 
 BOOL func_32() // Position - 0x1097 (4247)
 {
-	return IS_BIT_SET(Global_1958238, 19);
+	return IS_BIT_SET(Global_1958240, 19);
 }
 
 void func_33(int iParam0) // Position - 0x10A6 (4262)
@@ -1794,7 +1794,7 @@ BOOL func_65() // Position - 0x1C56 (7254)
 
 BOOL func_66() // Position - 0x1C62 (7266)
 {
-	if (CAM::IS_SCREEN_FADED_OUT() && !func_80() && !IS_BIT_SET(Global_1944436.f_6, 10))
+	if (CAM::IS_SCREEN_FADED_OUT() && !func_80() && !IS_BIT_SET(Global_1944438.f_6, 10))
 		return true;
 
 	if (func_77(PLAYER::PLAYER_ID()) && CAM::IS_SCREEN_FADED_OUT())

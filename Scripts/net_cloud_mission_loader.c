@@ -871,7 +871,7 @@ void func_6(var uParam0, BOOL bParam1) // Position - 0x6F3 (1779)
 	num = func_80(Global_794744.f_135107[uParam0->f_8 /*13*/].f_1);
 
 	if (num != -1)
-		Global_1963525[num] = uParam0->f_8;
+		Global_1963527[num] = uParam0->f_8;
 
 	if (Global_794744.f_4[uParam0->f_8 /*89*/].f_65 < 13 && !bParam1 && !flag)
 	{
@@ -4104,7 +4104,7 @@ Vector3 func_147(BOOL bParam0) // Position - 0x5014 (20500)
 
 Vector3 func_148() // Position - 0x5044 (20548)
 {
-	if (IS_BIT_SET(Global_1982112, 9))
+	if (IS_BIT_SET(Global_1982114, 9))
 		return 1387.3915f, 3615.8123f, 37.926f;
 
 	return 612.673f, -403.2929f, 23.7075f;
@@ -6617,7 +6617,7 @@ BOOL func_225(int iParam0, BOOL bParam1, const char* sParam2, int iParam3) // Po
 	gamerHandle = { GET_GAMER_HANDLE_USER(sParam2) };
 	unk13 = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
 
-	if (!Global_1982167)
+	if (!Global_1982169)
 		return func_226(&gamerHandle, &unk13, iParam0, bParam1);
 
 	if (!NETWORK::_NETWORK_HAS_PLAYER_PASSED_CHECK_TYPE(2, &gamerHandle))
@@ -6648,7 +6648,7 @@ BOOL func_226(Any* panParam0, Any* panParam1, int iParam2, BOOL bParam3) // Posi
 		return 0;
 	else if (NETWORK::NETWORK_PERMISSIONS_HAS_GAMER_RECORD(panParam0) && NETWORK::NETWORK_HAS_VIEW_GAMER_USER_CONTENT_RESULT(panParam0) && !NETWORK::NETWORK_CAN_VIEW_GAMER_USER_CONTENT(panParam0))
 		return 0;
-	else if (!Global_1982173 && !NETWORK::NETWORK_PERMISSIONS_HAS_GAMER_RECORD(panParam0))
+	else if (!Global_1982175 && !NETWORK::NETWORK_PERMISSIONS_HAS_GAMER_RECORD(panParam0))
 		if (!NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0) && !NETWORK::NETWORK_IS_FRIEND(panParam0) && func_219())
 			return 0;
 
@@ -21302,19 +21302,19 @@ ePedComponentType func_402(int iParam0) // Position - 0x26C78 (158840)
 {
 	int i;
 
-	if (Global_1963766[iParam0] != PV_COMP_INVALID)
-		return Global_1963766[iParam0];
+	if (Global_1963768[iParam0] != PV_COMP_INVALID)
+		return Global_1963768[iParam0];
 
 	for (i = 0; i <= 89; i = i + 1)
 	{
 		if (func_400(iParam0, i) != 0)
-			Global_1963766[iParam0] = i + 1;
+			Global_1963768[iParam0] = i + 1;
 	}
 
-	if (Global_1963766[iParam0] == PV_COMP_INVALID)
-		Global_1963766[iParam0] = PV_COMP_HEAD;
+	if (Global_1963768[iParam0] == PV_COMP_INVALID)
+		Global_1963768[iParam0] = PV_COMP_HEAD;
 
-	return Global_1963766[iParam0];
+	return Global_1963768[iParam0];
 }
 
 void func_403(int iParam0, BOOL bParam1) // Position - 0x26CDF (158943)
@@ -42414,7 +42414,7 @@ void func_514(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4F4D6 (324
 	
 		for (w = 0; w < 36; w = w + 1)
 		{
-			Global_1963766[w] = PV_COMP_INVALID;
+			Global_1963768[w] = PV_COMP_INVALID;
 		
 			for (x = func_402(w); x <= 31; x = x + 1)
 			{
@@ -45857,11 +45857,11 @@ struct<16> func_549() // Position - 0x5A7F8 (370680)
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("FMMC_CH_DN" /*The Diamond Casino Heist*/), 64);
 
-	if (Global_1966862 == PV_COMP_BERD)
+	if (Global_1966864 == PV_COMP_BERD)
 		TEXT_LABEL_ASSIGN_STRING(&unk, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("FMMC_CH_SS" /*The Diamond Casino Heist – Silent & Sneaky*/), 64);
-	else if (Global_1966862 == PV_COMP_HAIR)
+	else if (Global_1966864 == PV_COMP_HAIR)
 		TEXT_LABEL_ASSIGN_STRING(&unk, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("FMMC_CH_BC" /*The Diamond Casino Heist – The Big Con*/), 64);
-	else if (Global_1966862 == PV_COMP_UPPR)
+	else if (Global_1966864 == PV_COMP_UPPR)
 		TEXT_LABEL_ASSIGN_STRING(&unk, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION("FMMC_CH_AG" /*The Diamond Casino Heist – Aggressive*/), 64);
 
 	return unk;
@@ -48774,7 +48774,7 @@ void func_601(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_108431[i] = -1;
 		Global_4718592.f_108436[i] = PV_COMP_INVALID;
 		Global_4718592.f_108451[i] = 0;
-		Global_4718592.f_108456[i] = PV_COMP_INVALID;
+		Global_4718592.f_108456[i] = -1;
 		Global_4718592.f_108369[i] = PV_COMP_HEAD;
 		Global_4718592.f_108396[i] = 0;
 		Global_4718592.f_163850[i] = 0;
