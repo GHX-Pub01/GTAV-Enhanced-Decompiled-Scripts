@@ -800,14 +800,14 @@ void func_10() // Position - 0x1003 (4099)
 	return;
 }
 
-void func_11(var uParam0) // Position - 0x1037 (4151)
+void func_11(Any* panParam0) // Position - 0x1037 (4151)
 {
-	func_12(&(uParam0->f_12));
-	*uParam0 = { 0f, 0f, 0f };
-	uParam0->f_3 = { 0f, 0f, 0f };
-	uParam0->f_6 = 0f;
-	uParam0->f_8 = 0;
-	uParam0->f_9 = 0;
+	func_12(&(panParam0->f_12));
+	*panParam0 = { 0f, 0f, 0f };
+	panParam0->f_3 = { 0f, 0f, 0f };
+	panParam0->f_6 = 0f;
+	panParam0->f_8 = 0;
+	panParam0->f_9 = 0;
 	return;
 }
 
@@ -851,16 +851,16 @@ void func_12(var uParam0) // Position - 0x1066 (4198)
 	return;
 }
 
-void func_13(var uParam0) // Position - 0x1116 (4374)
+void func_13(Any* panParam0) // Position - 0x1116 (4374)
 {
-	*uParam0 = { 0f, 0f, 0f };
-	uParam0->f_3 = 0f;
-	uParam0->f_4 = 0;
-	uParam0->f_5 = -1;
+	*panParam0 = { 0f, 0f, 0f };
+	panParam0->f_3 = 0f;
+	panParam0->f_4 = 0;
+	panParam0->f_5 = -1;
 	return;
 }
 
-BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6, BOOL bParam7) // Position - 0x1134 (4404)
+BOOL func_14(Any* panParam0, var uParam1, int iParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6, BOOL bParam7) // Position - 0x1134 (4404)
 {
 	int num;
 	var unk;
@@ -876,14 +876,14 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 
 	num = 0;
 
-	if (func_121(uParam0))
+	if (func_121(panParam0))
 	{
 		if (iParam2 == 0)
 		{
-			if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66))
+			if (VEHICLE::IS_THIS_MODEL_A_BOAT(panParam0->f_12.f_66))
 			{
-				if (uParam0->f_9 == 1)
-					func_103(&(uParam0->f_12), uParam0->f_11);
+				if (panParam0->f_9 == 1)
+					func_103(&(panParam0->f_12), panParam0->f_11);
 			
 				return false;
 			}
@@ -891,10 +891,10 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 	
 		if (iParam4 == 0)
 		{
-			if (VEHICLE::IS_THIS_MODEL_A_PLANE(uParam0->f_12.f_66))
+			if (VEHICLE::IS_THIS_MODEL_A_PLANE(panParam0->f_12.f_66))
 			{
-				if (uParam0->f_9 == 1)
-					func_103(&(uParam0->f_12), uParam0->f_11);
+				if (panParam0->f_9 == 1)
+					func_103(&(panParam0->f_12), panParam0->f_11);
 			
 				return false;
 			}
@@ -902,10 +902,10 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 	
 		if (iParam5 == 0)
 		{
-			if (func_102(uParam0->f_12.f_66))
+			if (func_102(panParam0->f_12.f_66))
 			{
-				if (uParam0->f_9 == 1)
-					func_103(&(uParam0->f_12), uParam0->f_11);
+				if (panParam0->f_9 == 1)
+					func_103(&(panParam0->f_12), panParam0->f_11);
 			
 				return false;
 			}
@@ -915,7 +915,7 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
-				MISC::GET_MODEL_DIMENSIONS(uParam0->f_12.f_66, &minimum, &maximum);
+				MISC::GET_MODEL_DIMENSIONS(panParam0->f_12.f_66, &minimum, &maximum);
 				num2 = maximum - minimum;
 				num3 = maximum.f_1 - minimum.f_1;
 				num4 = maximum.f_2 - minimum.f_2;
@@ -927,9 +927,9 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 				if (num4 > radius)
 					radius = num4;
 			
-				unk = { *uParam0 };
+				unk = { *panParam0 };
 				unk = { unk - minimum };
-				unk4 = { *uParam0 };
+				unk4 = { *panParam0 };
 				unk4 = { unk4 + maximum };
 			
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -940,33 +940,33 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 				flag = true;
 			
 				if (bParam7)
-					if (VEHICLE::IS_THIS_MODEL_A_PLANE(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_HELI(uParam0->f_12.f_66))
+					if (VEHICLE::IS_THIS_MODEL_A_PLANE(panParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_HELI(panParam0->f_12.f_66))
 						flag = false;
 			
 				if (flag)
 				{
-					if (!func_101(*uParam0, vehiclePedIsIn))
+					if (!func_101(*panParam0, vehiclePedIsIn))
 					{
-						if (!func_92(uParam0, vehiclePedIsIn))
+						if (!func_92(panParam0, vehiclePedIsIn))
 						{
-							if (uParam0->f_9 == 1)
-								func_103(&(uParam0->f_12), uParam0->f_11);
+							if (panParam0->f_9 == 1)
+								func_103(&(panParam0->f_12), panParam0->f_11);
 						
 							return false;
 						}
 					}
 				}
 			
-				MISC::CLEAR_AREA(*uParam0, radius, true, false, false, false);
-				MISC::CLEAR_AREA_OF_OBJECTS(*uParam0, radius, 2);
-				func_120(uParam0);
+				MISC::CLEAR_AREA(*panParam0, radius, true, false, false, false);
+				MISC::CLEAR_AREA_OF_OBJECTS(*panParam0, radius, 2);
+				func_120(panParam0);
 			
-				while (!func_91(uParam0))
+				while (!func_91(panParam0))
 				{
 					BUILTIN::WAIT(0);
 				}
 			
-				*uParam1 = func_15(uParam0, 0f, 0f, 0f, 0f, bParam6);
+				*uParam1 = func_15(panParam0, 0f, 0f, 0f, 0f, bParam6);
 			
 				if (ENTITY::DOES_ENTITY_EXIST(*uParam1))
 				{
@@ -976,7 +976,7 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 						{
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
-								if (iParam3 == 1 && uParam0->f_8 == 1)
+								if (iParam3 == 1 && panParam0->f_8 == 1)
 									num = 1;
 								else if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(*uParam1, true), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), true) < 3f || ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), *uParam1))
 									num = 1;
@@ -999,7 +999,7 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 									ENTITY::SET_ENTITY_COLLISION(PLAYER::PLAYER_PED_ID(), true, false);
 									PED::SET_PED_INTO_VEHICLE(PLAYER::PLAYER_PED_ID(), *uParam1, -1);
 								
-									if (VEHICLE::IS_THIS_MODEL_A_HELI(uParam0->f_12.f_66))
+									if (VEHICLE::IS_THIS_MODEL_A_HELI(panParam0->f_12.f_66))
 										VEHICLE::SET_HELI_BLADES_FULL_SPEED(*uParam1);
 								}
 							}
@@ -1015,7 +1015,7 @@ BOOL func_14(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4, in
 	return false;
 }
 
-Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4, BOOL bParam5) // Position - 0x1494 (5268)
+Vehicle func_15(Any* panParam0, float fParam1, float fParam2, float fParam3, float fParam4, BOOL bParam5) // Position - 0x1494 (5268)
 {
 	Vehicle vehicle;
 	Vector3 entityCoords;
@@ -1023,15 +1023,15 @@ Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float 
 	var result;
 	int num;
 
-	if (func_121(uParam0))
+	if (func_121(panParam0))
 	{
 		if (func_797(fParam1, 0f, 0f, 0f, false))
 		{
-			fParam1 = { *uParam0 };
-			fParam4 = uParam0->f_6;
+			fParam1 = { *panParam0 };
+			fParam4 = panParam0->f_6;
 		}
 	
-		if (uParam0->f_12.f_66 == joaat("monster") || uParam0->f_12.f_66 == joaat("marshall"))
+		if (panParam0->f_12.f_66 == joaat("monster") || panParam0->f_12.f_66 == joaat("marshall"))
 		{
 			if (OBJECT::IS_POINT_IN_ANGLED_AREA(fParam1, -816.87164f, 185.62384f, 71.40275f, -807.48944f, 189.3762f, 75.27323f, 6.5f, false, true))
 			{
@@ -1040,11 +1040,11 @@ Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float 
 			}
 		}
 	
-		if (func_91(uParam0))
+		if (func_91(panParam0))
 		{
 			MISC::CLEAR_AREA(fParam1, 5f, true, false, false, false);
 			func_90(fParam1, 5f, false);
-			vehicle = VEHICLE::CREATE_VEHICLE(uParam0->f_12.f_66, fParam1, fParam4, true, true, false);
+			vehicle = VEHICLE::CREATE_VEHICLE(panParam0->f_12.f_66, fParam1, fParam4, true, true, false);
 		
 			if (ENTITY::DOES_ENTITY_EXIST(vehicle))
 			{
@@ -1053,35 +1053,35 @@ Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float 
 				if (BUILTIN::VDIST2(entityCoords, -1151.15f, -1530.32f, 7.48925f) <= 3f)
 					ENTITY::SET_ENTITY_COORDS_NO_OFFSET(vehicle, fParam1, false, false, true);
 			
-				func_56(vehicle, &(uParam0->f_12), false, true);
+				func_56(vehicle, &(panParam0->f_12), false, true);
 				flag = true;
 			
-				if (VEHICLE::IS_THIS_MODEL_A_BOAT(uParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(uParam0->f_12.f_66))
+				if (VEHICLE::IS_THIS_MODEL_A_BOAT(panParam0->f_12.f_66) || VEHICLE::IS_THIS_MODEL_A_JETSKI(panParam0->f_12.f_66))
 					if (!WATER::TEST_PROBE_AGAINST_WATER(fParam1, fParam1.f_1, fParam1.f_2 + 30f, fParam1, fParam1.f_1, fParam1.f_2 - 30f, &result))
 						flag = false;
 			
 				if (flag)
 					VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(vehicle, 1084227584);
 			
-				if (uParam0->f_7 == 1)
+				if (panParam0->f_7 == 1)
 				{
 					if (bParam5)
 						if (VEHICLE::IS_THIS_MODEL_A_CAR(ENTITY::GET_ENTITY_MODEL(vehicle)))
-							func_55(uParam0->f_11, 1);
+							func_55(panParam0->f_11, 1);
 						else if (VEHICLE::IS_THIS_MODEL_A_BIKE(ENTITY::GET_ENTITY_MODEL(vehicle)))
-							func_55(uParam0->f_11, 2);
+							func_55(panParam0->f_11, 2);
 				
 					VEHICLE::SET_VEHICLE_NOT_STEALABLE_AMBIENTLY(vehicle, false);
 					VEHICLE::SET_VEHICLE_CAN_SAVE_IN_GARAGE(vehicle, false);
 					VEHICLE::SET_VEHICLE_HAS_STRONG_AXLES(vehicle, true);
-					func_54(vehicle, uParam0->f_11);
+					func_54(vehicle, panParam0->f_11);
 				}
-				else if (!func_52(vehicle, uParam0->f_3, uParam0->f_8) && uParam0->f_10 && MISC::ARE_STRINGS_EQUAL(SCRIPT::GET_THIS_SCRIPT_NAME(), "startup_positioning"))
+				else if (!func_52(vehicle, panParam0->f_3, panParam0->f_8) && panParam0->f_10 && MISC::ARE_STRINGS_EQUAL(SCRIPT::GET_THIS_SCRIPT_NAME(), "startup_positioning"))
 				{
 					num = func_51(vehicle);
 				
 					if (num == -1)
-						uParam0->f_10 = 0;
+						panParam0->f_10 = 0;
 					else
 						func_44(num);
 				}
@@ -1090,7 +1090,7 @@ Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float 
 				{
 					if (MISC::GET_HASH_KEY(&(Global_101713.f_3)) == Global_79342)
 					{
-						if (uParam0->f_12.f_66 == Global_114162.f_32754.f_69[21 /*78*/].f_66)
+						if (panParam0->f_12.f_66 == Global_114162.f_32754.f_69[21 /*78*/].f_66)
 						{
 							func_41(24, false);
 							func_44(24);
@@ -1098,10 +1098,10 @@ Vehicle func_15(var uParam0, float fParam1, float fParam2, float fParam3, float 
 					}
 				}
 			
-				if (uParam0->f_9 == 1)
-					func_16(vehicle, uParam0->f_11);
+				if (panParam0->f_9 == 1)
+					func_16(vehicle, panParam0->f_11);
 			
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(uParam0->f_12.f_66);
+				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(panParam0->f_12.f_66);
 				entityCoords = { ENTITY::GET_ENTITY_COORDS(vehicle, true) };
 			}
 		

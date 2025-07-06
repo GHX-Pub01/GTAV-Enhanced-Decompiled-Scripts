@@ -107304,7 +107304,7 @@ int func_801(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	return 1;
 }
 
-void func_802(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x85AA2 (547490)
+void func_802(Hash hParam0, int iParam1, int iParam2) // Position - 0x85AA2 (547490)
 {
 	int num;
 	int num2;
@@ -107318,14 +107318,14 @@ void func_802(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x85AA2 (54
 
 	if (func_804(hParam0, 12, num))
 	{
-		if (func_803(hParam0, iParam1, bParam2))
+		if (func_803(hParam0, iParam1, iParam2))
 		{
 			num2 = func_800(hParam0);
 		
 			if (iParam1 == 3)
-				Global_114162.f_2367.f_539.f_196[num2] = bParam2;
+				Global_114162.f_2367.f_539.f_196[num2] = iParam2;
 			else if (iParam1 == 4)
-				Global_114162.f_2367.f_539.f_200[num2] = bParam2;
+				Global_114162.f_2367.f_539.f_200[num2] = iParam2;
 		}
 	}
 
@@ -132579,14 +132579,14 @@ void func_1283(int iParam0, int iParam1) // Position - 0xA57AA (677802)
 	return;
 }
 
-void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (677828)
+void func_1284(int iParam0, int iParam1, int iParam2) // Position - 0xA57C4 (677828)
 {
 	BOOL flag;
 	int num;
 
 	if (*Global_262145.f_35150)
 	{
-		func_868(iParam0, bParam1, iParam2, true);
+		func_868(iParam0, iParam1, iParam2, true);
 		return;
 	}
 
@@ -132594,7 +132594,7 @@ void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (67
 	num.f_2 = -1;
 	num = func_1287(iParam0);
 
-	if (!func_1023(num, bParam1 == func_1230(iParam0, -1)))
+	if (!func_1023(num, iParam1 == func_1230(iParam0, -1)))
 	{
 		flag = false;
 	}
@@ -132609,7 +132609,7 @@ void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (67
 			flag = false;
 	}
 
-	func_868(iParam0, bParam1, iParam2, true);
+	func_868(iParam0, iParam1, iParam2, true);
 
 	if (flag)
 		func_970(&num);
@@ -135324,28 +135324,28 @@ void func_1426(float fParam0) // Position - 0xA84AC (689324)
 
 BOOL func_1427(int iParam0) // Position - 0xA84D0 (689360)
 {
-	BOOL flag;
+	int num;
 
 	if (Global_1939321[iParam0 /*8*/] == -1)
 	{
-		flag = func_1230(func_1429(iParam0), -1);
+		num = func_1230(func_1429(iParam0), -1);
 	
-		if (flag == -1)
+		if (num == -1)
 		{
 			func_1428(iParam0, 0);
-			flag = 0;
+			num = 0;
 		}
 	
-		Global_1939321[iParam0 /*8*/] = flag;
+		Global_1939321[iParam0 /*8*/] = num;
 	}
 
 	return Global_1939321[iParam0 /*8*/];
 }
 
-void func_1428(int iParam0, BOOL bParam1) // Position - 0xA8513 (689427)
+void func_1428(int iParam0, int iParam1) // Position - 0xA8513 (689427)
 {
-	Global_1939321[iParam0 /*8*/] = bParam1;
-	func_1284(func_1429(iParam0), bParam1, -1);
+	Global_1939321[iParam0 /*8*/] = iParam1;
+	func_1284(func_1429(iParam0), iParam1, -1);
 	return;
 }
 

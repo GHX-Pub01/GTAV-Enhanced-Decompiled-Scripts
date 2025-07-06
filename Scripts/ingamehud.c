@@ -125483,7 +125483,7 @@ BOOL func_1214(int iParam0) // Position - 0x9A212 (631314)
 BOOL func_1215(Player plParam0) // Position - 0x9A225 (631333)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }

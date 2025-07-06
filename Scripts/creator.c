@@ -103777,20 +103777,20 @@ char* func_585(int iParam0, int iParam1) // Position - 0x6F5E8 (456168)
 
 BOOL func_586(int iParam0) // Position - 0x6FAED (457453)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_587(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_236(num2));
+	p_num = func_587(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_236(num));
 }
 
-int func_587(int iParam0) // Position - 0x6FB0A (457482)
+int* func_587(int iParam0) // Position - 0x6FB0A (457482)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_2751072.f_1032[func_239(iParam0)];
-	return unk;
+	p_num = Global_2751072.f_1032[func_239(iParam0)];
+	return p_num;
 }
 
 void func_588(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6FB25 (457509)
@@ -105777,7 +105777,7 @@ BOOL func_623(Hash hParam0) // Position - 0x72B83 (469891)
 
 void func_624(Hash hParam0, int iParam1) // Position - 0x72B90 (469904)
 {
-	BOOL i;
+	int i;
 
 	if (iParam1 >= 1500)
 		return;

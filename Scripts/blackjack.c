@@ -11891,11 +11891,11 @@ int func_140(Player plParam0) // Position - 0x10056 (65622)
 	return address;
 }
 
-int func_141(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x10071 (65649)
+int func_141(int iParam0, int iParam1, int iParam2) // Position - 0x10071 (65649)
 {
-	if (hParam0 == -433440095 || hParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
+	if (iParam0 == -433440095 || iParam0 == joaat("CATEGORY_SERVICE_WITH_THRESHOLD"))
 	{
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_SPEND_MATCH_ENTRY_FEE"):
 				if (iParam2 >= 10000)
@@ -12074,7 +12074,7 @@ int func_141(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x10071 (656
 				return 2;
 		}
 	
-		switch (hParam1)
+		switch (iParam1)
 		{
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_SMASH_N_GRAB"):
 			case joaat("SERVICE_EARN_CASINO_HEIST_AWARD_IN_PLAIN_SIGHT"):
@@ -12194,7 +12194,7 @@ int func_141(Hash hParam0, Hash hParam1, int iParam2) // Position - 0x10071 (656
 	
 		return 0;
 	}
-	else if (hParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || hParam0 == joaat("CATEGORY_PRICE_MODIFIER") || hParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
+	else if (iParam0 == joaat("CATEGORY_SERVICE_WITH_LIMIT") || iParam0 == joaat("CATEGORY_PRICE_MODIFIER") || iParam0 == joaat("CATEGORY_PRICE_OVERRIDE"))
 	{
 		return 0;
 	}
@@ -15651,8 +15651,8 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	int b;
 	int a;
 	int i;
-	BOOL numberOfLinesForString;
-	BOOL j;
+	ePedComponentType numberOfLinesForString;
+	ePedComponentType j;
 	int k;
 	int num2;
 	int num3;
@@ -15711,7 +15711,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	float num42;
 	float size;
 	float size2;
-	BOOL flag8;
+	ePedComponentType type;
 	float num43;
 	float num44;
 	int m;
@@ -15900,7 +15900,7 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			while (num2 < Global_23987.f_5828 && numberOfLinesForString <= Global_23987.f_5821)
 			{
-				if (numberOfLinesForString >= false)
+				if (numberOfLinesForString >= PV_COMP_HEAD)
 				{
 					if (Global_23987.f_6088[numberOfLinesForString])
 					{
@@ -16382,15 +16382,15 @@ void func_258(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 			num4 = 0;
 			num5 = 0;
 			num6 = 0;
-			flag8 = Global_23987.f_5821;
+			type = Global_23987.f_5821;
 		
 			if (Global_23987.f_6332)
-				flag8 = Global_23987.f_6335 - 1;
+				type = Global_23987.f_6335 - 1;
 		
 			num43 = 0f;
 			num44 = 0f;
 		
-			for (j = false; j <= flag8; j = j + 1)
+			for (j = PV_COMP_HEAD; j <= type; j = j + 1)
 			{
 				num37 = 0.034722f;
 			
@@ -18757,7 +18757,7 @@ void func_308(char* sParam0, int iParam1, int iParam2) // Position - 0x19EF9 (10
 
 void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106334)
 {
-	BOOL i;
+	ePedComponentType i;
 	int num;
 
 	Global_23987.f_6342 = iParam0;
@@ -18771,7 +18771,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 	{
 		for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 		{
-			if (i >= false && i < 127)
+			if (i >= PV_COMP_HEAD && i < 127)
 				if (Global_23987.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -18783,7 +18783,7 @@ void func_309(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19F5E (106
 		
 			for (i = Global_23987.f_6341; i <= Global_23987.f_6342; i = i + 1)
 			{
-				if (i >= false && i < 127)
+				if (i >= PV_COMP_HEAD && i < 127)
 					if (Global_23987.f_5692[i] != 0)
 						num = num + 1;
 			}

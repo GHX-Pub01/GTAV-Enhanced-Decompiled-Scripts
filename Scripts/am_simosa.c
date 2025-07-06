@@ -64874,12 +64874,12 @@ void func_322(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x522BC
 	return;
 }
 
-void func_323(Player plParam0, BOOL bParam1, int iParam2) // Position - 0x523A9 (336809)
+void func_323(Player plParam0, Hash hParam1, int iParam2) // Position - 0x523A9 (336809)
 {
 	Hash model;
 	int tintIndex;
 
-	if (func_324(bParam1, iParam2, &model, &tintIndex))
+	if (func_324(hParam1, iParam2, &model, &tintIndex))
 	{
 		PLAYER::SET_PLAYER_PARACHUTE_TINT_INDEX(plParam0, tintIndex);
 		PLAYER::SET_PLAYER_PARACHUTE_MODEL_OVERRIDE(plParam0, model);

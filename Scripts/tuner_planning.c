@@ -7146,51 +7146,51 @@ Vector3 func_253(ePedComponentType epctParam0) // Position - 0x8338 (33592)
 
 ePedComponentType func_254(ePedComponentType epctParam0) // Position - 0x8444 (33860)
 {
-	BOOL flag;
+	ePedComponentType type;
 
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 	{
-		flag = func_256(epctParam0);
+		type = func_256(epctParam0);
 	
-		if (flag != false)
-			return func_255(flag);
+		if (type != PV_COMP_HEAD)
+			return func_255(type);
 	}
 
 	return -1;
 }
 
-int func_255(BOOL bParam0) // Position - 0x846D (33901)
+int func_255(ePedComponentType epctParam0) // Position - 0x846D (33901)
 {
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case true:
+		case PV_COMP_BERD:
 			return 102;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			return 103;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			return 104;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			return 105;
 	
-		case 5:
+		case PV_COMP_HAND:
 			return 106;
 	
-		case 6:
+		case PV_COMP_FEET:
 			return 107;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			return 108;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			return 109;
 	
-		case 9:
+		case PV_COMP_TASK:
 			return 110;
 	
-		case 10:
+		case PV_COMP_DECL:
 			return 111;
 	
 		default:
@@ -7200,18 +7200,18 @@ int func_255(BOOL bParam0) // Position - 0x846D (33901)
 	return -1;
 }
 
-BOOL func_256(ePedComponentType epctParam0) // Position - 0x84EB (34027)
+ePedComponentType func_256(ePedComponentType epctParam0) // Position - 0x84EB (34027)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[epctParam0 /*892*/].f_268.f_360;
 
-	return false;
+	return PV_COMP_HEAD;
 }
 
 BOOL func_257(ePedComponentType epctParam0) // Position - 0x850F (34063)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }
@@ -12487,7 +12487,7 @@ void func_509(int iParam0, int iParam1) // Position - 0xE942 (59714)
 	return;
 }
 
-void func_510(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0xE9AA (59818)
+void func_510(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0xE9AA (59818)
 {
 	Hash eventData;
 
@@ -12496,7 +12496,7 @@ void func_510(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	eventData.f_3 = iParam0;
 	eventData.f_4 = iParam2;
 	eventData.f_5 = iParam3;
-	eventData.f_6 = iParam4;
+	eventData.f_6 = uParam4;
 	eventData.f_7 = iParam5;
 
 	if (!(iParam1 == 0))
@@ -12505,7 +12505,7 @@ void func_510(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	return;
 }
 
-int func_511() // Position - 0xE9F7 (59895)
+var func_511() // Position - 0xE9F7 (59895)
 {
 	return Global_2739945.f_5266.f_349;
 }

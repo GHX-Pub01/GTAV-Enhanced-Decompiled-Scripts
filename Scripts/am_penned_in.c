@@ -51042,16 +51042,16 @@ BOOL func_337() // Position - 0x32DBB (208315)
 	return func_338(*Global_4718592.f_134976);
 }
 
-BOOL func_338(Hash hParam0) // Position - 0x32DDF (208351)
+BOOL func_338(int iParam0) // Position - 0x32DDF (208351)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (iParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 16; i = i + 1)
 	{
-		if (Global_262145.f_4707[i] == hParam0)
+		if (Global_262145.f_4707[i] == iParam0)
 			return 1;
 	}
 
@@ -64706,11 +64706,11 @@ void func_475() // Position - 0x43419 (275481)
 	Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_144 = flag2;
 	func_267(3666, flag, -1, true);
 	func_364(3667, flag2, -1);
-	func_476(63, 1);
+	func_476(63, true);
 	return;
 }
 
-void func_476(int iParam0, Hash hParam1) // Position - 0x43475 (275573)
+void func_476(int iParam0, BOOL bParam1) // Position - 0x43475 (275573)
 {
 	int i;
 
@@ -64725,7 +64725,7 @@ void func_476(int iParam0, Hash hParam1) // Position - 0x43475 (275573)
 			{
 				Global_1574749.f_4[i] = iParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}
@@ -65738,7 +65738,7 @@ void func_488(int iParam0, BOOL bParam1) // Position - 0x44855 (280661)
 		case 220:
 		case 221:
 			if (bParam1)
-				func_476(53, 1);
+				func_476(53, true);
 			break;
 	
 		case 160:
@@ -65750,7 +65750,7 @@ void func_488(int iParam0, BOOL bParam1) // Position - 0x44855 (280661)
 		case 171:
 		case 172:
 			if (func_489(PLAYER::PLAYER_ID()))
-				func_476(27, 1);
+				func_476(27, true);
 			break;
 	
 		case 199:
@@ -65761,7 +65761,7 @@ void func_488(int iParam0, BOOL bParam1) // Position - 0x44855 (280661)
 		case 193:
 		case 189:
 			if (func_489(PLAYER::PLAYER_ID()))
-				func_476(26, 1);
+				func_476(26, true);
 			break;
 	
 		case 242:
@@ -65771,7 +65771,7 @@ void func_488(int iParam0, BOOL bParam1) // Position - 0x44855 (280661)
 		case 239:
 		case 240:
 			if (bParam1)
-				func_476(59, 1);
+				func_476(59, true);
 			break;
 	}
 
@@ -69032,7 +69032,7 @@ int func_501(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	return 0;
 }
 
-void func_502(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x48AF8 (297720)
+void func_502(int iParam0, Hash hParam1, int iParam2, int iParam3, int iParam4) // Position - 0x48AF8 (297720)
 {
 	switch (hParam1)
 	{
@@ -74430,16 +74430,16 @@ BOOL func_688() // Position - 0x4F203 (324099)
 	return func_689(*Global_4718592.f_134976);
 }
 
-BOOL func_689(Hash hParam0) // Position - 0x4F227 (324135)
+BOOL func_689(int iParam0) // Position - 0x4F227 (324135)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (iParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_4689[i] == hParam0)
+		if (Global_262145.f_4689[i] == iParam0)
 			return 1;
 	}
 
@@ -80889,7 +80889,7 @@ void func_939(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x56A96 (35
 	if (iParam0 == 133)
 		func_476(79, 1);
 	else
-		func_476(80, 1);
+		func_476(80, true);
 
 	if (PLAYER::PLAYER_ID() != -1)
 	{

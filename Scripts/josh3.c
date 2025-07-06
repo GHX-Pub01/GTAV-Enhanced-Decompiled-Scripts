@@ -46097,7 +46097,7 @@ void func_489() // Position - 0x37F48 (229192)
 	if (num == -1)
 		return;
 
-	Global_113249[num /*10*/] = true;
+	Global_113249[num /*10*/] = 1;
 	return;
 }
 

@@ -97317,9 +97317,9 @@ void func_707(BOOL bParam0) // Position - 0x77783 (489347)
 	return;
 }
 
-void func_708(int iParam0, int iParam1) // Position - 0x77791 (489361)
+void func_708(BOOL bParam0, int iParam1) // Position - 0x77791 (489361)
 {
-	Global_1577884[iParam1] = iParam0;
+	Global_1577884[iParam1] = bParam0;
 	return;
 }
 

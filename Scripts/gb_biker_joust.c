@@ -47860,7 +47860,7 @@ int func_260(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	return 0;
 }
 
-void func_261(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x313A3 (201635)
+void func_261(int iParam0, Hash hParam1, int iParam2, ePedComponentType epctParam3, int iParam4) // Position - 0x313A3 (201635)
 {
 	switch (hParam1)
 	{
@@ -63948,11 +63948,11 @@ void func_510() // Position - 0x448DD (280797)
 	Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_144 = type2;
 	func_233(3666, type, -1, true);
 	func_396(3667, type2, -1);
-	func_511(63, 1);
+	func_511(63, true);
 	return;
 }
 
-void func_511(int iParam0, Hash hParam1) // Position - 0x44939 (280889)
+void func_511(int iParam0, BOOL bParam1) // Position - 0x44939 (280889)
 {
 	int i;
 
@@ -63967,7 +63967,7 @@ void func_511(int iParam0, Hash hParam1) // Position - 0x44939 (280889)
 			{
 				Global_1574749.f_4[i] = iParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}
@@ -64992,7 +64992,7 @@ void func_523(int iParam0, BOOL bParam1) // Position - 0x45D18 (285976)
 		case 171:
 		case 172:
 			if (func_524(PLAYER::PLAYER_ID()))
-				func_511(27, 1);
+				func_511(27, true);
 			break;
 	
 		case 199:
@@ -65003,7 +65003,7 @@ void func_523(int iParam0, BOOL bParam1) // Position - 0x45D18 (285976)
 		case 193:
 		case 189:
 			if (func_524(PLAYER::PLAYER_ID()))
-				func_511(26, 1);
+				func_511(26, true);
 			break;
 	
 		case 242:
@@ -65013,7 +65013,7 @@ void func_523(int iParam0, BOOL bParam1) // Position - 0x45D18 (285976)
 		case 239:
 		case 240:
 			if (bParam1)
-				func_511(59, 1);
+				func_511(59, true);
 			break;
 	}
 
@@ -88944,7 +88944,7 @@ int func_935(ePedComponentType epctParam0) // Position - 0x609F0 (395760)
 BOOL func_936(Player plParam0) // Position - 0x60A14 (395796)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }

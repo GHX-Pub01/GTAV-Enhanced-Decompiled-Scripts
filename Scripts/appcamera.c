@@ -7521,7 +7521,7 @@ BOOL func_101() // Position - 0xC6F0 (50928)
 	{
 		if (Global_21083.f_1 == 10 || Global_21083.f_1 == 9)
 			if (Global_21026 == false)
-				if (Global_8234 != 128)
+				if (Global_8234 != _CHAR_DETONATEBOMB_2)
 					if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 						Global_22442 != 2;
 	
@@ -7741,7 +7741,7 @@ void func_103() // Position - 0xCC3D (52285)
 		MOBILE::SET_MOBILE_PHONE_ROTATION(fLocal_76, 0);
 	}
 
-	Global_23475 = 0;
+	Global_23475 = false;
 	func_144(false, false);
 	func_148(false);
 	iLocal_113 = 0;
@@ -8059,12 +8059,12 @@ void func_106() // Position - 0xD577 (54647)
 	return;
 }
 
-int func_107(int iParam0, eCharacter echParam1) // Position - 0xD5A8 (54696)
+int func_107(eCharacter echParam0, eCharacter echParam1) // Position - 0xD5A8 (54696)
 {
 	if (echParam1 < CHAR_MICHAEL || echParam1 > CHAR_ALL_PLAYERS_CONF)
 		return 0;
 
-	return Global_2201[iParam0 /*29*/].f_24[echParam1];
+	return Global_2201[echParam0 /*29*/].f_24[echParam1];
 }
 
 void func_108() // Position - 0xD5D2 (54738)
@@ -9305,7 +9305,7 @@ void func_147() // Position - 0xEBFD (60413)
 		
 			if (iLocal_101 == 0)
 			{
-				Global_23476 = 0;
+				Global_23476 = false;
 				func_144(true, true);
 				iLocal_113 = 1;
 				func_148(true);
@@ -9330,7 +9330,7 @@ void func_147() // Position - 0xEBFD (60413)
 	{
 		fLocal_76 = { fLocal_82 };
 		MOBILE::SET_MOBILE_PHONE_ROTATION(fLocal_76, 0);
-		Global_23476 = 0;
+		Global_23476 = false;
 	}
 
 	return;

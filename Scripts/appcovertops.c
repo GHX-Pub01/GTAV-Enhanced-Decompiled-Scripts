@@ -622,7 +622,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_22449 = false;
 	Global_22451 = 0;
-	Global_22456 = false;
+	Global_22456 = 0;
 	Global_23433 = 0;
 	Global_23435 = 0;
 	Global_23439 = 0;

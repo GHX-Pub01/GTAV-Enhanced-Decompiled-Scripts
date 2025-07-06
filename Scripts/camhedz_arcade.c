@@ -81845,39 +81845,39 @@ BOOL func_499() // Position - 0x623A5 (402341)
 
 int func_500(Player plParam0) // Position - 0x623B3 (402355)
 {
-	ePedComponentType type;
+	int num;
 
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 	{
-		type = func_502(plParam0);
+		num = func_502(plParam0);
 	
-		if (type != PV_COMP_HEAD)
-			return func_501(type);
+		if (num != 0)
+			return func_501(num);
 	}
 
 	return -1;
 }
 
-int func_501(ePedComponentType epctParam0) // Position - 0x623DC (402396)
+int func_501(int iParam0) // Position - 0x623DC (402396)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
-		case PV_COMP_BERD:
+		case 1:
 			return 128;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 129;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 130;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			return 131;
 	
-		case PV_COMP_HAND:
+		case 5:
 			return 132;
 	
-		case PV_COMP_FEET:
+		case 6:
 			return 133;
 	
 		default:
@@ -81887,12 +81887,12 @@ int func_501(ePedComponentType epctParam0) // Position - 0x623DC (402396)
 	return -1;
 }
 
-ePedComponentType func_502(Player plParam0) // Position - 0x6242E (402478)
+int func_502(Player plParam0) // Position - 0x6242E (402478)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[plParam0 /*892*/].f_268.f_435;
 
-	return PV_COMP_HEAD;
+	return 0;
 }
 
 int func_503(int iParam0, var uParam1) // Position - 0x62452 (402514)
@@ -82059,7 +82059,7 @@ int func_511(var uParam0, var uParam1) // Position - 0x626C1 (403137)
 	struct<21> args;
 	var scriptName;
 	int num;
-	ePedComponentType type;
+	BOOL flag;
 
 	args.f_1 = -1;
 	args.f_2 = -1;
@@ -82076,23 +82076,23 @@ int func_511(var uParam0, var uParam1) // Position - 0x626C1 (403137)
 	{
 		if (Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_11 != _INVALID_PLAYER_INDEX())
 		{
-			type = func_512(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_11, num, uParam1);
+			flag = func_512(Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_11, num, uParam1);
 		
-			switch (type)
+			switch (flag)
 			{
-				case PV_COMP_BERD:
+				case true:
 					args.f_19 = 0;
 					break;
 			
-				case PV_COMP_HAIR:
+				case 2:
 					args.f_19 = 3;
 					break;
 			
-				case PV_COMP_UPPR:
+				case 3:
 					args.f_19 = 2;
 					break;
 			
-				case PV_COMP_LOWR:
+				case 4:
 					args.f_19 = 1;
 					break;
 			}
@@ -82117,9 +82117,9 @@ int func_511(var uParam0, var uParam1) // Position - 0x626C1 (403137)
 	return 0;
 }
 
-ePedComponentType func_512(Player plParam0, int iParam1, int iParam2) // Position - 0x627DC (403420)
+BOOL func_512(Player plParam0, int iParam1, int iParam2) // Position - 0x627DC (403420)
 {
-	ePedComponentType type;
+	BOOL flag;
 	int num;
 
 	if (plParam0 != _INVALID_PLAYER_INDEX())
@@ -82127,22 +82127,22 @@ ePedComponentType func_512(Player plParam0, int iParam1, int iParam2) // Positio
 		switch (iParam2)
 		{
 			case 0:
-				type = Global_1845270[plParam0 /*892*/].f_268.f_443[iParam1];
+				flag = Global_1845270[plParam0 /*892*/].f_268.f_443[iParam1];
 				break;
 		
 			case 1:
-				type = Global_1845270[plParam0 /*892*/].f_268.f_507[iParam1];
+				flag = Global_1845270[plParam0 /*892*/].f_268.f_507[iParam1];
 				break;
 		}
 	
-		num = func_514(type);
+		num = func_514(flag);
 	
 		if (num != -1)
 			if (func_294(plParam0, num, iParam2) && func_513(plParam0, num, iParam2) || func_295(num))
-				return type;
+				return flag;
 	}
 
-	return PV_COMP_HEAD;
+	return false;
 }
 
 BOOL func_513(Player plParam0, int iParam1, int iParam2) // Position - 0x6286F (403567)
@@ -82163,38 +82163,38 @@ BOOL func_513(Player plParam0, int iParam1, int iParam2) // Position - 0x6286F (
 	return true;
 }
 
-int func_514(ePedComponentType epctParam0) // Position - 0x628AC (403628)
+int func_514(BOOL bParam0) // Position - 0x628AC (403628)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
-		case PV_COMP_BERD:
-		case PV_COMP_HAIR:
-		case PV_COMP_UPPR:
-		case PV_COMP_LOWR:
+		case true:
+		case 2:
+		case 3:
+		case 4:
 			return 10;
 	
-		case PV_COMP_HAND:
+		case 5:
 			return 0;
 	
-		case PV_COMP_FEET:
+		case 6:
 			return 1;
 	
-		case PV_COMP_TEEF:
+		case 7:
 			return 5;
 	
-		case PV_COMP_ACCS:
+		case 8:
 			return 3;
 	
-		case PV_COMP_TASK:
+		case 9:
 			return 4;
 	
-		case PV_COMP_DECL:
+		case 10:
 			return 2;
 	
-		case PV_COMP_JBIB:
+		case 11:
 			return 6;
 	
-		case PV_COMP_MAX:
+		case 12:
 			return 7;
 	
 		case 13:

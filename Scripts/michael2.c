@@ -50584,7 +50584,7 @@ BOOL func_332(var uParam0, Cam caParam1, int iParam2, int iParam3, int iParam4, 
 			if (!PED::IS_PED_INJURED(uParam0->f_13) || bParam10 && !PED::IS_PED_INJURED(uParam0->f_12))
 			{
 				uParam0->f_27 = 0;
-				Global_98607 = 1;
+				Global_98607 = true;
 			
 				if (!bParam10)
 				{
@@ -128588,7 +128588,7 @@ void func_932(int iParam0) // Position - 0xA4CD5 (675029)
 	{
 		if (iParam0 == Global_98610)
 		{
-			Global_98614 = 1;
+			Global_98614 = true;
 			return;
 		}
 	}
@@ -128920,7 +128920,7 @@ BOOL func_940(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 		if (!func_942())
 			func_941();
 	
-		Global_98607 = 0;
+		Global_98607 = false;
 		return true;
 	}
 	else
@@ -132540,7 +132540,7 @@ void func_989(float fParam0, float fParam1, float fParam2, float fParam3) // Pos
 
 void func_990(Ped pedParam0, eCharacter echParam1) // Position - 0xAAFE9 (700393)
 {
-	int weaponHash;
+	Hash weaponHash;
 
 	weaponHash = 0;
 

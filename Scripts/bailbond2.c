@@ -7230,7 +7230,7 @@ int func_205(Hash hParam0) // Position - 0x898E (35214)
 	return 145;
 }
 
-void func_206(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x89C9 (35273)
+void func_206(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Position - 0x89C9 (35273)
 {
 	BOOL flag;
 	int num;
@@ -7244,14 +7244,14 @@ void func_206(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x89C9 (352
 
 	if (func_208(hParam0, 12, flag))
 	{
-		if (func_207(hParam0, iParam1, bParam2))
+		if (func_207(hParam0, iParam1, epctParam2))
 		{
 			num = func_205(hParam0);
 		
 			if (iParam1 == 3)
-				Global_114162.f_2367.f_539.f_196[num] = bParam2;
+				Global_114162.f_2367.f_539.f_196[num] = epctParam2;
 			else if (iParam1 == 4)
-				Global_114162.f_2367.f_539.f_200[num] = bParam2;
+				Global_114162.f_2367.f_539.f_200[num] = epctParam2;
 		}
 	}
 
@@ -42228,12 +42228,12 @@ BOOL func_460(Player plParam0) // Position - 0x30926 (198950)
 	return false;
 }
 
-int func_461(int iParam0) // Position - 0x3096D (199021)
+int func_461(BOOL bParam0) // Position - 0x3096D (199021)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
-		case 0:
-		case 1:
+		case false:
+		case true:
 		case 2:
 		case 3:
 		case 4:
@@ -43332,7 +43332,7 @@ BOOL func_495() // Position - 0x31F9E (204702)
 	return func_496() != -1;
 }
 
-int func_496() // Position - 0x31FAC (204716)
+BOOL func_496() // Position - 0x31FAC (204716)
 {
 	return Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
 }

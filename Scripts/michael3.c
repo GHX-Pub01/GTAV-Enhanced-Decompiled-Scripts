@@ -109999,15 +109999,15 @@ void func_711(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83E85 (54
 	return;
 }
 
-int func_712(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83EC2 (540354)
+int func_712(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83EC2 (540354)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
 		if (!bParam2)
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *iParam0);
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0);
 		else
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *iParam0);
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *uParam0);
 
-	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *iParam0);
+	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0);
 }
 
 char* func_713(eTransitionState etsParam0) // Position - 0x83F09 (540425)

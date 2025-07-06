@@ -46187,7 +46187,7 @@ int func_224(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	return 0;
 }
 
-void func_225(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x30AF8 (199416)
+void func_225(int iParam0, Hash hParam1, int iParam2, ePedComponentType epctParam3, int iParam4) // Position - 0x30AF8 (199416)
 {
 	switch (hParam1)
 	{
@@ -62232,11 +62232,11 @@ void func_470() // Position - 0x44147 (278855)
 	Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_144 = type2;
 	func_27(3666, type, -1, true);
 	func_358(3667, type2, -1);
-	func_471(63, 1);
+	func_471(63, true);
 	return;
 }
 
-void func_471(ePedComponentType epctParam0, Hash hParam1) // Position - 0x441A3 (278947)
+void func_471(ePedComponentType epctParam0, BOOL bParam1) // Position - 0x441A3 (278947)
 {
 	int i;
 
@@ -62251,7 +62251,7 @@ void func_471(ePedComponentType epctParam0, Hash hParam1) // Position - 0x441A3 
 			{
 				Global_1574749.f_4[i] = epctParam0;
 				Global_1574749.f_1 = 1;
-				Global_1574749 = hParam1;
+				Global_1574749 = bParam1;
 				return;
 			}
 		}
@@ -63276,7 +63276,7 @@ void func_483(int iParam0, BOOL bParam1) // Position - 0x45582 (284034)
 		case 171:
 		case 172:
 			if (func_484(PLAYER::PLAYER_ID()))
-				func_471(27, 1);
+				func_471(27, true);
 			break;
 	
 		case 199:
@@ -63287,7 +63287,7 @@ void func_483(int iParam0, BOOL bParam1) // Position - 0x45582 (284034)
 		case 193:
 		case 189:
 			if (func_484(PLAYER::PLAYER_ID()))
-				func_471(26, 1);
+				func_471(26, true);
 			break;
 	
 		case 242:
@@ -63297,7 +63297,7 @@ void func_483(int iParam0, BOOL bParam1) // Position - 0x45582 (284034)
 		case 239:
 		case 240:
 			if (bParam1)
-				func_471(59, 1);
+				func_471(59, true);
 			break;
 	}
 
@@ -70309,7 +70309,7 @@ void func_684() // Position - 0x4E124 (319780)
 BOOL func_685(Player plParam0) // Position - 0x4E205 (320005)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }

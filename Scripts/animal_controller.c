@@ -2081,7 +2081,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2096,7 +2096,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2106,7 +2106,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam5);
 			
-				func_12(false);
+				func_12(0);
 				*uParam1 = 0;
 				*uParam0 = 0;
 				*uParam4 = 0;
@@ -2228,10 +2228,10 @@ int func_11(int iParam0) // Position - 0x902 (2306)
 	return 15;
 }
 
-void func_12(BOOL bParam0) // Position - 0x952 (2386)
+void func_12(int iParam0) // Position - 0x952 (2386)
 {
-	if (Global_79832 != bParam0)
-		Global_79832 = bParam0;
+	if (Global_79832 != iParam0)
+		Global_79832 = iParam0;
 
 	return;
 }
@@ -87794,7 +87794,7 @@ void func_388(int iParam0) // Position - 0x68B0F (428815)
 	return;
 }
 
-void func_389(const char* sParam0) // Position - 0x68C44 (429124)
+void func_389(char* sParam0) // Position - 0x68C44 (429124)
 {
 	int i;
 
@@ -87834,7 +87834,7 @@ BOOL func_390(int iParam0) // Position - 0x68CF3 (429299)
 	return false;
 }
 
-void func_391(const char* sParam0, int iParam1) // Position - 0x68D48 (429384)
+void func_391(char* sParam0, int iParam1) // Position - 0x68D48 (429384)
 {
 	int i;
 
@@ -93545,7 +93545,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_22449 = false;
 	Global_22451 = 0;
-	Global_22456 = false;
+	Global_22456 = 0;
 	Global_23433 = 0;
 	Global_23435 = 0;
 	Global_23439 = 0;
@@ -93927,10 +93927,10 @@ void func_495() // Position - 0x72534 (468276)
 	return;
 }
 
-void func_496(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x7258B (468363)
+void func_496(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x7258B (468363)
 {
 	Global_21896 = { *uParam0 };
-	Global_8235 = echParam1;
+	Global_8235 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_22512, sParam2, 24);
 	Global_23431 = iParam5;
 

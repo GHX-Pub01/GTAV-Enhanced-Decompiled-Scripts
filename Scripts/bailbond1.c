@@ -41993,12 +41993,12 @@ BOOL func_454(Player plParam0) // Position - 0x304A8 (197800)
 	return false;
 }
 
-int func_455(int iParam0) // Position - 0x304EF (197871)
+int func_455(BOOL bParam0) // Position - 0x304EF (197871)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
-		case 0:
-		case 1:
+		case false:
+		case true:
 		case 2:
 		case 3:
 		case 4:
@@ -43097,7 +43097,7 @@ BOOL func_489() // Position - 0x31B20 (203552)
 	return func_490() != -1;
 }
 
-int func_490() // Position - 0x31B2E (203566)
+BOOL func_490() // Position - 0x31B2E (203566)
 {
 	return Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
 }

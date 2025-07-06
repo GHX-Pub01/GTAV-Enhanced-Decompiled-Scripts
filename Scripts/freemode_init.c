@@ -5615,7 +5615,7 @@ BOOL func_181(int iParam0) // Position - 0x66A6 (26278)
 BOOL func_182(Player plParam0) // Position - 0x66B9 (26297)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }
@@ -6890,11 +6890,11 @@ void func_239() // Position - 0x8147 (33095)
 
 void func_240() // Position - 0x8159 (33113)
 {
-	if (Global_4597699 == 0 && Global_4597700 == false)
+	if (Global_4597699 == 0 && Global_4597700 == PV_COMP_HEAD)
 		return;
 
 	Global_4597699 = 0;
-	Global_4597700 = false;
+	Global_4597700 = PV_COMP_HEAD;
 	return;
 }
 
@@ -8477,7 +8477,7 @@ void func_327(BOOL bParam0) // Position - 0x9BBF (39871)
 
 void func_328() // Position - 0x9BE9 (39913)
 {
-	Global_1882102 = false;
+	Global_1882102 = PV_COMP_HEAD;
 	return;
 }
 

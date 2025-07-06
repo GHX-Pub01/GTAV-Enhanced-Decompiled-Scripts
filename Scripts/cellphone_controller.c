@@ -3532,7 +3532,7 @@ BOOL func_86(int iParam0, int iParam1) // Position - 0x4375 (17269)
 	return 0;
 }
 
-BOOL _SEND_TEXT_MESSAGE_FROM_CHARACTER_2(eCharacter echParam0, const char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9) // Position - 0x4556 (17750)
+BOOL _SEND_TEXT_MESSAGE_FROM_CHARACTER_2(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, BOOL bParam7, int iParam8, int iParam9) // Position - 0x4556 (17750)
 {
 	int num;
 	char* str;
@@ -3575,7 +3575,7 @@ struct<4> _GET_CHARACTER_NAME(eCharacter character) // Position - 0x45E5 (17893)
 	return Global_2201[character /*29*/].f_3;
 }
 
-int func_89(eCharacter echParam0, const char* sParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10, int iParam11, int iParam12, int iParam13, char* sParam14, char* sParam15, int iParam16) // Position - 0x45F8 (17912)
+int func_89(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char* sParam4, char* sParam5, int iParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10, int iParam11, int iParam12, int iParam13, char* sParam14, char* sParam15, int iParam16) // Position - 0x45F8 (17912)
 {
 	int num;
 	int num2;
@@ -3810,7 +3810,7 @@ int func_89(eCharacter echParam0, const char* sParam1, int iParam2, int iParam3,
 	return 1;
 }
 
-void func_90(eCharacter echParam0, const char* sParam1, BOOL bParam2, int iParam3) // Position - 0x4ADD (19165)
+void func_90(eCharacter echParam0, char* sParam1, BOOL bParam2, int iParam3) // Position - 0x4ADD (19165)
 {
 	eCharacter character;
 

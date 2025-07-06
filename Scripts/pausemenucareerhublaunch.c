@@ -1871,7 +1871,7 @@ int func_39(int iParam0, int iParam1) // Position - 0x2186 (8582)
 BOOL func_40(Player plParam0) // Position - 0x23D6 (9174)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }
@@ -15597,10 +15597,10 @@ void func_95(Hash hParam0, var uParam1) // Position - 0xFB4A (64330)
 
 BOOL func_96() // Position - 0x1103E (69694)
 {
-	return func_97() != false;
+	return func_97() != PV_COMP_HEAD;
 }
 
-BOOL func_97() // Position - 0x1104C (69708)
+ePedComponentType func_97() // Position - 0x1104C (69708)
 {
 	return Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_360;
 }

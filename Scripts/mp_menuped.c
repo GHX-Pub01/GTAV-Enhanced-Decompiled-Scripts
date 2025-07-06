@@ -1144,7 +1144,7 @@ BOOL func_35(ePedComponentType epctParam0, int iParam1) // Position - 0x1102 (43
 		return false;
 
 	if (epctParam0 == PLAYER::PLAYER_ID())
-		flag = func_36(-1, false) == CHAR_MIKE_FRANK_CONF;
+		flag = func_36(-1, false) == 8;
 	else
 		flag = Global_1845270[epctParam0 /*892*/].f_206 == 8;
 
@@ -1155,28 +1155,28 @@ BOOL func_35(ePedComponentType epctParam0, int iParam1) // Position - 0x1102 (43
 	return flag;
 }
 
-eCharacter func_36(int iParam0, BOOL bParam1) // Position - 0x115B (4443)
+int func_36(int iParam0, BOOL bParam1) // Position - 0x115B (4443)
 {
-	eCharacter character;
 	int num;
+	int num2;
 
-	num = iParam0;
+	num2 = iParam0;
 
-	if (num == -1)
-		num = func_37();
+	if (num2 == -1)
+		num2 = func_37();
 
-	if (Global_1575066[num] == true)
+	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		character = CHAR_MIKE_FRANK_CONF;
+		num = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		character = Global_1574920[num];
+		num = Global_1574920[num2];
 		bParam1;
 	}
 
-	return character;
+	return num;
 }
 
 int func_37() // Position - 0x119C (4508)
@@ -6326,10 +6326,10 @@ void func_93(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x9B8D (398
 	int num4;
 	int num5;
 	int num6;
-	eCharacter character;
+	int num7;
 	float opacity;
 	int colorID;
-	int num7;
+	int num8;
 	int secondColorID;
 	int colorType;
 
@@ -6356,16 +6356,16 @@ void func_93(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x9B8D (398
 		{
 			if (!bParam2)
 			{
-				character = _STAT_GET_PACKED_INT(num3, iParam1);
+				num7 = _STAT_GET_PACKED_INT(num3, iParam1);
 				opacity = func_107(num4, iParam1);
 			}
 			else
 			{
-				character = func_436(num3, iParam1);
+				num7 = func_436(num3, iParam1);
 				opacity = func_103(num4, iParam1);
 			}
 		
-			PED::SET_PED_HEAD_OVERLAY(pedParam0, overlayID, character, opacity);
+			PED::SET_PED_HEAD_OVERLAY(pedParam0, overlayID, num7, opacity);
 			num5 = func_98(overlayID);
 			num6 = func_97(overlayID);
 		
@@ -6373,16 +6373,16 @@ void func_93(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x9B8D (398
 			{
 				if (!bParam2)
 				{
-					num7 = func_177(num5, iParam1);
+					num8 = func_177(num5, iParam1);
 					secondColorID = func_177(num6, iParam1);
 				}
 				else
 				{
-					num7 = func_96(num5, iParam1);
+					num8 = func_96(num5, iParam1);
 					secondColorID = func_96(num6, iParam1);
 				}
 			
-				func_95(num7, &colorID, &colorType);
+				func_95(num8, &colorID, &colorType);
 				PED::SET_PED_HEAD_OVERLAY_TINT(pedParam0, overlayID, colorType, colorID, secondColorID);
 			}
 		}
@@ -85965,13 +85965,13 @@ ePedComponentType func_411(int iParam0, BOOL bParam1) // Position - 0x6801F (426
 
 void func_412(Ped pedParam0, int iParam1) // Position - 0x680E1 (426209)
 {
-	eCharacter character;
-	eCharacter character2;
-	eCharacter character3;
-	eCharacter character4;
-	eCharacter character5;
-	eCharacter character6;
-	eCharacter character7;
+	int num;
+	int num2;
+	int num3;
+	int num4;
+	int num5;
+	int num6;
+	int num7;
 	float opacity;
 	float opacity2;
 	float opacity3;
@@ -85985,13 +85985,13 @@ void func_412(Ped pedParam0, int iParam1) // Position - 0x680E1 (426209)
 		if (pedParam0 == 0)
 			pedParam0 = PLAYER::PLAYER_PED_ID();
 	
-		character = func_436(447, iParam1);
-		character2 = func_436(448, iParam1);
-		character3 = func_436(449, iParam1);
-		character4 = func_436(450, iParam1);
-		character5 = func_436(451, iParam1);
-		character6 = func_436(452, iParam1);
-		character7 = func_436(453, iParam1);
+		num = func_436(447, iParam1);
+		num2 = func_436(448, iParam1);
+		num3 = func_436(449, iParam1);
+		num4 = func_436(450, iParam1);
+		num5 = func_436(451, iParam1);
+		num6 = func_436(452, iParam1);
+		num7 = func_436(453, iParam1);
 		opacity = func_103(87, iParam1);
 		opacity2 = func_103(88, iParam1);
 		opacity3 = func_103(89, iParam1);
@@ -86000,24 +86000,24 @@ void func_412(Ped pedParam0, int iParam1) // Position - 0x680E1 (426209)
 		opacity6 = func_103(92, iParam1);
 		opacity7 = func_103(93, iParam1);
 	
-		if (character5 >= CHAR_MICHAEL)
+		if (num5 >= 0)
 			opacity5 = 1f;
 		else
 			opacity5 = 0f;
 	
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 0, character, opacity);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 0, num, opacity);
 	
-		if (character2 >= CHAR_LAZLOW)
-			character2 = character2 - 7;
+		if (num2 >= 27)
+			num2 = num2 - 7;
 	
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 1, character2, opacity2);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 1, num2, opacity2);
 		PED::SET_PED_HEAD_OVERLAY_TINT(pedParam0, 1, 1, 0, 0);
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 2, character3, opacity3);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 2, num3, opacity3);
 		PED::SET_PED_HEAD_OVERLAY_TINT(pedParam0, 2, 1, 0, 0);
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 3, character4, opacity4);
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 4, character5, opacity5);
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 6, character6, opacity6);
-		PED::SET_PED_HEAD_OVERLAY(pedParam0, 7, character7, opacity7);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 3, num4, opacity4);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 4, num5, opacity5);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 6, num6, opacity6);
+		PED::SET_PED_HEAD_OVERLAY(pedParam0, 7, num7, opacity7);
 	}
 
 	return;
@@ -92267,20 +92267,20 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 {
 	int num;
 	Vector3 camCoord;
-	eCharacter character;
-	eCharacter character2;
-	eCharacter character3;
-	eCharacter character4;
-	eCharacter character5;
+	int num2;
+	int num3;
+	int num4;
+	int num5;
+	int num6;
 	int pedHeadBlendFirstIndex;
 	int pedHeadBlendFirstIndex2;
 	float shapeMix;
 	Hash model;
 	BOOL flag;
-	int num2;
-	int num3;
-	eCharacter character6;
-	float num4;
+	int num7;
+	int num8;
+	int num9;
+	float num10;
 
 	if (bParam3 == false)
 		num = func_177(2103, iParam2);
@@ -92302,11 +92302,11 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 			flag = true;
 		
 			if (bParam3 == false)
-				character = func_36(iParam2, false);
+				num2 = func_36(iParam2, false);
 			else
-				character = func_436(384, iParam2);
+				num2 = func_436(384, iParam2);
 		
-			model = func_435(character, CHAR_MICHAEL);
+			model = func_435(num2, 0);
 		
 			if (bParam3 == false)
 				STREAMING::REQUEST_MODEL(model);
@@ -92322,31 +92322,31 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				
 					if (bParam3 == false)
 					{
-						character2 = _STAT_GET_PACKED_INT(1400, iParam2);
-						character3 = _STAT_GET_PACKED_INT(1402, iParam2);
-						character4 = _STAT_GET_PACKED_INT(1401, iParam2);
-						character5 = _STAT_GET_PACKED_INT(1403, iParam2);
+						num3 = _STAT_GET_PACKED_INT(1400, iParam2);
+						num4 = _STAT_GET_PACKED_INT(1402, iParam2);
+						num5 = _STAT_GET_PACKED_INT(1401, iParam2);
+						num6 = _STAT_GET_PACKED_INT(1403, iParam2);
 						shapeMix = BUILTIN::TO_FLOAT(_STAT_GET_PACKED_INT(1404, iParam2)) / 100f;
 					}
 					else
 					{
-						character2 = func_436(1400, iParam2);
-						character3 = func_436(1402, iParam2);
-						character4 = func_436(1401, iParam2);
-						character5 = func_436(1403, iParam2);
+						num3 = func_436(1400, iParam2);
+						num4 = func_436(1402, iParam2);
+						num5 = func_436(1401, iParam2);
+						num6 = func_436(1403, iParam2);
 						shapeMix = BUILTIN::TO_FLOAT(func_436(1404, iParam2)) / 100f;
 					}
 				
 					if (bParam3 == true)
 						ENTITY::SET_ENTITY_VISIBLE(ppedParam0->f_1, false, false);
 				
-					func_431(true, &pedHeadBlendFirstIndex, &pedHeadBlendFirstIndex2, character2, character4, character3, character5);
-					num2 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
+					func_431(true, &pedHeadBlendFirstIndex, &pedHeadBlendFirstIndex2, num3, num5, num4, num6);
+					num7 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
 				
-					if (pedHeadBlendFirstIndex >= num2)
+					if (pedHeadBlendFirstIndex >= num7)
 						pedHeadBlendFirstIndex = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
 				
-					if (pedHeadBlendFirstIndex2 >= num2)
+					if (pedHeadBlendFirstIndex2 >= num7)
 						pedHeadBlendFirstIndex2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0);
 				
 					PED::SET_PED_HEAD_BLEND_DATA(ppedParam0->f_1, pedHeadBlendFirstIndex, pedHeadBlendFirstIndex2, 0, pedHeadBlendFirstIndex, pedHeadBlendFirstIndex2, 0, shapeMix, shapeMix, 0f, true);
@@ -92357,7 +92357,7 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				flag = false;
 			}
 		
-			model = func_435(character, CHAR_FRANKLIN);
+			model = func_435(num2, 1);
 			STREAMING::REQUEST_MODEL(model);
 		
 			if (STREAMING::HAS_MODEL_LOADED(model))
@@ -92369,31 +92369,31 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				
 					if (bParam3 == false)
 					{
-						character2 = _STAT_GET_PACKED_INT(1396, iParam2);
-						character3 = _STAT_GET_PACKED_INT(1398, iParam2);
-						character4 = _STAT_GET_PACKED_INT(1397, iParam2);
-						character5 = _STAT_GET_PACKED_INT(1399, iParam2);
+						num3 = _STAT_GET_PACKED_INT(1396, iParam2);
+						num4 = _STAT_GET_PACKED_INT(1398, iParam2);
+						num5 = _STAT_GET_PACKED_INT(1397, iParam2);
+						num6 = _STAT_GET_PACKED_INT(1399, iParam2);
 						shapeMix = BUILTIN::TO_FLOAT(_STAT_GET_PACKED_INT(1405, iParam2)) / 100f;
 					}
 					else
 					{
-						character2 = func_436(1396, iParam2);
-						character3 = func_436(1398, iParam2);
-						character4 = func_436(1397, iParam2);
-						character5 = func_436(1399, iParam2);
+						num3 = func_436(1396, iParam2);
+						num4 = func_436(1398, iParam2);
+						num5 = func_436(1397, iParam2);
+						num6 = func_436(1399, iParam2);
 						shapeMix = BUILTIN::TO_FLOAT(func_436(1405, iParam2)) / 100f;
 					}
 				
 					if (bParam3 == true)
 						ENTITY::SET_ENTITY_VISIBLE(*ppedParam0, false, false);
 				
-					func_431(false, &pedHeadBlendFirstIndex, &pedHeadBlendFirstIndex2, character2, character4, character3, character5);
-					num3 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
+					func_431(false, &pedHeadBlendFirstIndex, &pedHeadBlendFirstIndex2, num3, num5, num4, num6);
+					num8 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
 				
-					if (pedHeadBlendFirstIndex >= num3)
+					if (pedHeadBlendFirstIndex >= num8)
 						pedHeadBlendFirstIndex = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
 				
-					if (pedHeadBlendFirstIndex2 >= num3)
+					if (pedHeadBlendFirstIndex2 >= num8)
 						pedHeadBlendFirstIndex2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0);
 				
 					PED::SET_PED_HEAD_BLEND_DATA(*ppedParam0, pedHeadBlendFirstIndex, pedHeadBlendFirstIndex2, 0, pedHeadBlendFirstIndex, pedHeadBlendFirstIndex2, 0, shapeMix, shapeMix, 0f, true);
@@ -92405,11 +92405,11 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 			}
 		
 			if (bParam3 == false)
-				character6 = _STAT_GET_PACKED_INT(386, iParam2);
+				num9 = _STAT_GET_PACKED_INT(386, iParam2);
 			else
-				character6 = func_436(386, iParam2);
+				num9 = func_436(386, iParam2);
 		
-			model = func_435(character, character6);
+			model = func_435(num2, num9);
 			STREAMING::REQUEST_MODEL(model);
 		
 			if (STREAMING::HAS_MODEL_LOADED(model))
@@ -92437,11 +92437,11 @@ BOOL func_429(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 			if (func_430(*ppedParam0) && func_430(ppedParam0->f_1) && !ENTITY::IS_ENTITY_DEAD(*pedParam1, false))
 			{
 				if (bParam3 == false)
-					num4 = func_107(97, iParam2);
+					num10 = func_107(97, iParam2);
 				else
-					num4 = func_103(97, iParam2);
+					num10 = func_103(97, iParam2);
 			
-				PED::SET_PED_BLEND_FROM_PARENTS(*pedParam1, *ppedParam0, ppedParam0->f_1, num4, -1082130432);
+				PED::SET_PED_BLEND_FROM_PARENTS(*pedParam1, *ppedParam0, ppedParam0->f_1, num10, -1082130432);
 				ppedParam0->f_5 = 3;
 			}
 			break;
@@ -92468,54 +92468,54 @@ BOOL func_430(Ped pedParam0) // Position - 0x7155B (464219)
 	return false;
 }
 
-void func_431(BOOL bParam0, var uParam1, var uParam2, eCharacter echParam3, eCharacter echParam4, eCharacter echParam5, eCharacter echParam6) // Position - 0x71593 (464275)
+void func_431(BOOL bParam0, var uParam1, var uParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x71593 (464275)
 {
 	if (bParam0)
 	{
-		if (echParam3 == 255)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(2) + echParam4;
-		else if (echParam4 == CHAR_MICHAEL)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (echParam3 * 2);
-		else if (echParam4 == CHAR_FRANKLIN)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (echParam3 * 2) + 1;
-		else if (echParam3 == CHAR_MICHAEL)
+		if (iParam3 == 255)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(2) + iParam4;
+		else if (iParam4 == 0)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (iParam3 * 2);
+		else if (iParam4 == 1)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (iParam3 * 2) + 1;
+		else if (iParam3 == 0)
 			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + 12;
-		else if (echParam3 == CHAR_MULTIPLAYER)
+		else if (iParam3 == 3)
 			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + 13;
 	
-		if (echParam5 == 255)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(2) + echParam6;
-		else if (echParam6 == CHAR_MICHAEL)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (echParam5 * 2);
-		else if (echParam6 == CHAR_FRANKLIN)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (echParam5 * 2) + 1;
-		else if (echParam5 == CHAR_MICHAEL)
+		if (iParam5 == 255)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(2) + iParam6;
+		else if (iParam6 == 0)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (iParam5 * 2);
+		else if (iParam6 == 1)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + (iParam5 * 2) + 1;
+		else if (iParam5 == 0)
 			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + 12;
-		else if (echParam5 == CHAR_MULTIPLAYER)
+		else if (iParam5 == 3)
 			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0) + 13;
 	}
 	else
 	{
-		if (echParam3 == 255)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(3) + echParam4;
-		else if (echParam4 == CHAR_MICHAEL)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (echParam3 * 2);
-		else if (echParam4 == CHAR_FRANKLIN)
-			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (echParam3 * 2) + 1;
-		else if (echParam3 == CHAR_TREVOR)
+		if (iParam3 == 255)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(3) + iParam4;
+		else if (iParam4 == 0)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (iParam3 * 2);
+		else if (iParam4 == 1)
+			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (iParam3 * 2) + 1;
+		else if (iParam3 == 2)
 			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + 12;
-		else if (echParam3 == CHAR_FRANKLIN)
+		else if (iParam3 == 1)
 			*uParam1 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + 13;
 	
-		if (echParam5 == 255)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(3) + echParam6;
-		else if (echParam6 == CHAR_MICHAEL)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (echParam5 * 2);
-		else if (echParam6 == CHAR_FRANKLIN)
-			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (echParam5 * 2) + 1;
-		else if (echParam5 == CHAR_TREVOR)
+		if (iParam5 == 255)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(3) + iParam6;
+		else if (iParam6 == 0)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (iParam5 * 2);
+		else if (iParam6 == 1)
+			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + (iParam5 * 2) + 1;
+		else if (iParam5 == 2)
 			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + 12;
-		else if (echParam5 == CHAR_FRANKLIN)
+		else if (iParam5 == 1)
 			*uParam2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1) + 13;
 	}
 
@@ -92525,17 +92525,17 @@ void func_431(BOOL bParam0, var uParam1, var uParam2, eCharacter echParam3, eCha
 BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Position - 0x7173B (464699)
 {
 	Vector3 camCoord;
-	eCharacter character;
+	int num;
 	Hash model;
 	BOOL flag;
-	eCharacter character2;
-	eCharacter pedHeadBlendFirstIndex;
-	eCharacter pedHeadBlendFirstIndex2;
-	eCharacter character3;
-	eCharacter character4;
+	int num2;
+	int pedHeadBlendFirstIndex;
+	int pedHeadBlendFirstIndex2;
+	int num3;
+	int num4;
 	float shapeMix;
 	float skinMix;
-	eCharacter character5;
+	int num5;
 
 	switch (ppedParam0->f_5)
 	{
@@ -92549,11 +92549,11 @@ BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 			flag = true;
 		
 			if (bParam3 == false)
-				character = func_36(iParam2, false);
+				num = func_36(iParam2, false);
 			else
-				character = func_436(384, iParam2);
+				num = func_436(384, iParam2);
 		
-			model = func_435(character, 0);
+			model = func_435(num, 0);
 		
 			if (bParam3 == false)
 				STREAMING::REQUEST_MODEL(model);
@@ -92561,11 +92561,11 @@ BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				STREAMING::REQUEST_MENU_PED_MODEL(model);
 		
 			if (bParam3 == false)
-				character2 = _STAT_GET_PACKED_INT(386, iParam2);
+				num2 = _STAT_GET_PACKED_INT(386, iParam2);
 			else
-				character2 = func_436(386, iParam2);
+				num2 = func_436(386, iParam2);
 		
-			model = func_435(character, character2);
+			model = func_435(num, num2);
 			STREAMING::REQUEST_MODEL(model);
 		
 			if (STREAMING::HAS_MODEL_LOADED(model))
@@ -92602,8 +92602,8 @@ BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				{
 					pedHeadBlendFirstIndex = _STAT_GET_PACKED_INT(1396, iParam2);
 					pedHeadBlendFirstIndex2 = _STAT_GET_PACKED_INT(1400, iParam2);
-					character3 = _STAT_GET_PACKED_INT(1397, iParam2);
-					character4 = _STAT_GET_PACKED_INT(1401, iParam2);
+					num3 = _STAT_GET_PACKED_INT(1397, iParam2);
+					num4 = _STAT_GET_PACKED_INT(1401, iParam2);
 					shapeMix = func_107(94, iParam2);
 					skinMix = func_107(95, iParam2);
 				}
@@ -92611,27 +92611,27 @@ BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				{
 					pedHeadBlendFirstIndex = func_436(1396, iParam2);
 					pedHeadBlendFirstIndex2 = func_436(1400, iParam2);
-					character3 = func_436(1397, iParam2);
-					character4 = func_436(1401, iParam2);
+					num3 = func_436(1397, iParam2);
+					num4 = func_436(1401, iParam2);
 					shapeMix = func_103(94, iParam2);
 					skinMix = func_103(95, iParam2);
 				}
 			
-				pedHeadBlendFirstIndex = func_434(pedHeadBlendFirstIndex, false, character3 == CHAR_FRANKLIN);
-				pedHeadBlendFirstIndex2 = func_434(pedHeadBlendFirstIndex2, true, character4 == CHAR_FRANKLIN);
-				character5 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
+				pedHeadBlendFirstIndex = func_434(pedHeadBlendFirstIndex, false, num3 == 1);
+				pedHeadBlendFirstIndex2 = func_434(pedHeadBlendFirstIndex2, true, num4 == 1);
+				num5 = PED::GET_PED_HEAD_BLEND_NUM_HEADS(1) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(0) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(3) + PED::GET_PED_HEAD_BLEND_NUM_HEADS(2);
 			
-				if (pedHeadBlendFirstIndex >= character5)
+				if (pedHeadBlendFirstIndex >= num5)
 				{
 					pedHeadBlendFirstIndex = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
-					Global_2698298 = true;
+					Global_2698298 = 1;
 					func_433(1);
 				}
 			
-				if (pedHeadBlendFirstIndex2 >= character5)
+				if (pedHeadBlendFirstIndex2 >= num5)
 				{
 					pedHeadBlendFirstIndex2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0);
-					Global_2698298 = true;
+					Global_2698298 = 1;
 					func_433(1);
 				}
 			
@@ -92665,7 +92665,7 @@ void func_433(int iParam0) // Position - 0x719D3 (465363)
 	return;
 }
 
-eCharacter func_434(eCharacter echParam0, BOOL bParam1, BOOL bParam2) // Position - 0x719E1 (465377)
+int func_434(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x719E1 (465377)
 {
 	int num;
 	int num2;
@@ -92687,16 +92687,16 @@ eCharacter func_434(eCharacter echParam0, BOOL bParam1, BOOL bParam2) // Positio
 	if (bParam2)
 		pedHeadBlendFirstIndex = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(num2);
 
-	return pedHeadBlendFirstIndex + echParam0;
+	return pedHeadBlendFirstIndex + iParam0;
 }
 
-Hash func_435(eCharacter echParam0, eCharacter echParam1) // Position - 0x71A17 (465431)
+Hash func_435(int iParam0, int iParam1) // Position - 0x71A17 (465431)
 {
-	switch (echParam0)
+	switch (iParam0)
 	{
 		case 9:
 		case 8:
-			if (echParam1 == 0)
+			if (iParam1 == 0)
 				return Global_152839.f_7;
 			else
 				return Global_152839.f_8;

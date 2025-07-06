@@ -36378,7 +36378,7 @@ void func_213(Ped pedParam0, int iParam1, Player plParam2, int iParam3) // Posit
 
 	for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 	{
-		Global_79417[i] = PV_COMP_INVALID;
+		Global_79417[i] = -1;
 		Global_79417.f_13[i] = -1;
 	}
 
@@ -36399,7 +36399,7 @@ void func_213(Ped pedParam0, int iParam1, Player plParam2, int iParam3) // Posit
 	{
 		for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 		{
-			if (Global_79417[i] != PV_COMP_INVALID)
+			if (Global_79417[i] != -1)
 			{
 				if (PED::GET_PED_DRAWABLE_VARIATION(pedParam0, i) == Global_79417[i] && PED::GET_PED_TEXTURE_VARIATION(pedParam0, i) == Global_79417.f_13[i])
 				{

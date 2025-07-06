@@ -97740,7 +97740,7 @@ void func_609(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		}
 	
 		func_615(true, bParam3, bParam2, false);
-		Global_64332 = 1;
+		Global_64332 = true;
 		Global_76661 = true;
 		Global_79562 = true;
 	}
@@ -97748,7 +97748,7 @@ void func_609(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 	{
 		func_616(0);
 		HUD::THEFEED_RESUME();
-		Global_64332 = 0;
+		Global_64332 = false;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -125327,51 +125327,51 @@ Vector3 func_1357(ePedComponentType epctParam0) // Position - 0xA35EF (669167)
 
 ePedComponentType func_1358(ePedComponentType epctParam0) // Position - 0xA36FB (669435)
 {
-	BOOL flag;
+	ePedComponentType type;
 
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 	{
-		flag = func_1360(epctParam0);
+		type = func_1360(epctParam0);
 	
-		if (flag != false)
-			return func_1359(flag);
+		if (type != PV_COMP_HEAD)
+			return func_1359(type);
 	}
 
 	return -1;
 }
 
-int func_1359(BOOL bParam0) // Position - 0xA3724 (669476)
+int func_1359(ePedComponentType epctParam0) // Position - 0xA3724 (669476)
 {
-	switch (bParam0)
+	switch (epctParam0)
 	{
-		case true:
+		case PV_COMP_BERD:
 			return 102;
 	
-		case 2:
+		case PV_COMP_HAIR:
 			return 103;
 	
-		case 3:
+		case PV_COMP_UPPR:
 			return 104;
 	
-		case 4:
+		case PV_COMP_LOWR:
 			return 105;
 	
-		case 5:
+		case PV_COMP_HAND:
 			return 106;
 	
-		case 6:
+		case PV_COMP_FEET:
 			return 107;
 	
-		case 7:
+		case PV_COMP_TEEF:
 			return 108;
 	
-		case 8:
+		case PV_COMP_ACCS:
 			return 109;
 	
-		case 9:
+		case PV_COMP_TASK:
 			return 110;
 	
-		case 10:
+		case PV_COMP_DECL:
 			return 111;
 	
 		default:
@@ -125381,18 +125381,18 @@ int func_1359(BOOL bParam0) // Position - 0xA3724 (669476)
 	return -1;
 }
 
-BOOL func_1360(ePedComponentType epctParam0) // Position - 0xA37A2 (669602)
+ePedComponentType func_1360(ePedComponentType epctParam0) // Position - 0xA37A2 (669602)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[epctParam0 /*892*/].f_268.f_360;
 
-	return false;
+	return PV_COMP_HEAD;
 }
 
 BOOL func_1361(ePedComponentType epctParam0) // Position - 0xA37C6 (669638)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
+		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
 
 	return false;
 }

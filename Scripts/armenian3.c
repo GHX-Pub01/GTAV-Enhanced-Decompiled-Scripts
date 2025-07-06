@@ -31644,12 +31644,12 @@ BOOL func_184() // Position - 0x2153E (136510)
 	return false;
 }
 
-var func_185(int iParam0) // Position - 0x2155C (136540)
+BOOL func_185(int iParam0) // Position - 0x2155C (136540)
 {
 	return Global_1574538[iParam0];
 }
 
-var func_186() // Position - 0x2156C (136556)
+BOOL func_186() // Position - 0x2156C (136556)
 {
 	return func_185(func_43() + 1);
 }
@@ -34522,7 +34522,7 @@ BOOL func_251(float fParam0, var uParam1, var uParam2) // Position - 0x2630D (15
 	return false;
 }
 
-int func_252() // Position - 0x26337 (156471)
+BOOL func_252() // Position - 0x26337 (156471)
 {
 	return Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
 }
@@ -107354,12 +107354,12 @@ BOOL func_719(Player plParam0) // Position - 0x8C027 (573479)
 	return false;
 }
 
-int func_720(int iParam0) // Position - 0x8C06E (573550)
+int func_720(BOOL bParam0) // Position - 0x8C06E (573550)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
-		case 0:
-		case 1:
+		case false:
+		case true:
 		case 2:
 		case 3:
 		case 4:
