@@ -13610,14 +13610,14 @@ int func_110(char* sParam0, ePedComponentType epctParam1, BOOL bParam2, BOOL bPa
 				}
 			}
 		
-			func_111(14, sParam0, 1, &playerName, false, false, false, 0, 1, 0, 0, 0);
+			func_111(14, sParam0, 1, &playerName, 0, 0, 0, 0, 1, 0, 0, 0);
 		}
 	}
 
 	return num;
 }
 
-void func_111(int iParam0, char* sParam1, int iParam2, char* sParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x104F5 (66805)
+void func_111(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x104F5 (66805)
 {
 	int num;
 
@@ -13631,9 +13631,9 @@ void func_111(int iParam0, char* sParam1, int iParam2, char* sParam3, BOOL bPara
 		Global_1938165.f_5[num /*53*/] = iParam0;
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
-		Global_1938165.f_5[num /*53*/].f_2[0] = bParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[0] = iParam4;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -16158,7 +16158,7 @@ BOOL func_238(Player plParam0) // Position - 0x1346F (78959)
 
 void func_239(var uParam0, int iParam1) // Position - 0x13484 (78980)
 {
-	BOOL flag;
+	int num;
 
 	if (*uParam0 > 0)
 	{
@@ -16172,22 +16172,22 @@ void func_239(var uParam0, int iParam1) // Position - 0x13484 (78980)
 					{
 						if (func_248() == 100)
 						{
-							flag = *uParam0;
+							num = *uParam0;
 							*uParam0 = 0;
 						}
 						else
 						{
-							flag = (*uParam0 / 100) * func_248();
-							*uParam0 = *uParam0 - flag;
+							num = (*uParam0 / 100) * func_248();
+							*uParam0 = *uParam0 - num;
 						}
 					
-						func_246(&flag, false);
+						func_246(&num, false);
 					
 						if (iParam1 == 1)
-							func_245("GB_BCUT_TICK1" /*You paid ~a~ ~s~a $~1~ ~s~cut.*/, _GET_BOSS_OF_LOCAL_PLAYER(), flag, HUD_COLOUR_PURE_WHITE, false, true);
+							func_245("GB_BCUT_TICK1" /*You paid ~a~ ~s~a $~1~ ~s~cut.*/, _GET_BOSS_OF_LOCAL_PLAYER(), num, HUD_COLOUR_PURE_WHITE, false, true);
 					
 						func_244(20);
-						func_240(_GET_BOSS_OF_LOCAL_PLAYER(), flag, 1);
+						func_240(_GET_BOSS_OF_LOCAL_PLAYER(), num, 1);
 					}
 				}
 			}
@@ -16197,7 +16197,7 @@ void func_239(var uParam0, int iParam1) // Position - 0x13484 (78980)
 	return;
 }
 
-void func_240(ePedComponentType epctParam0, BOOL bParam1, int iParam2) // Position - 0x13524 (79140)
+void func_240(ePedComponentType epctParam0, int iParam1, int iParam2) // Position - 0x13524 (79140)
 {
 	Hash eventData;
 
@@ -16205,7 +16205,7 @@ void func_240(ePedComponentType epctParam0, BOOL bParam1, int iParam2) // Positi
 	{
 		eventData = -1141119736;
 		eventData.f_1 = PLAYER::PLAYER_ID();
-		eventData.f_3 = bParam1;
+		eventData.f_3 = iParam1;
 		eventData.f_5 = iParam2;
 		eventData.f_6 = func_243(epctParam0);
 		func_242(&(eventData.f_7), &(eventData.f_8));
@@ -16248,7 +16248,7 @@ void func_244(int iParam0) // Position - 0x135C5 (79301)
 	return;
 }
 
-int func_245(char* sParam0, ePedComponentType epctParam1, BOOL bParam2, eHudColour ehcParam3, BOOL bParam4, BOOL bParam5) // Position - 0x135EE (79342)
+int func_245(char* sParam0, ePedComponentType epctParam1, int iParam2, eHudColour ehcParam3, BOOL bParam4, BOOL bParam5) // Position - 0x135EE (79342)
 {
 	int num;
 	var unk;
@@ -16270,9 +16270,9 @@ int func_245(char* sParam0, ePedComponentType epctParam1, BOOL bParam2, eHudColo
 		if (!(ehcParam3 == HUD_COLOUR_PURE_WHITE))
 			HUD::SET_COLOUR_OF_NEXT_TEXT_COMPONENT(ehcParam3);
 	
-		HUD::ADD_TEXT_COMPONENT_INTEGER(bParam2);
+		HUD::ADD_TEXT_COMPONENT_INTEGER(iParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_111(27, sParam0, 1, &unk, bParam2, false, false, 0, 1, 0, 0, 0);
+		func_111(27, sParam0, 1, &unk, iParam2, 0, 0, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -30732,7 +30732,7 @@ BOOL func_573(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x27C69 (16
 
 void func_574() // Position - 0x27CCE (163022)
 {
-	BOOL flag;
+	int num;
 
 	if (IS_BIT_SET(uLocal_305.f_18, 2))
 	{
@@ -30773,10 +30773,10 @@ void func_574() // Position - 0x27CCE (163022)
 					
 						AUDIO::PLAY_SOUND_FRONTEND(-1, "SELECT" /*Filter List*/, "HUD_FRONTEND_DEFAULT_SOUNDSET", true);
 						func_578(iLocal_98.f_4, iLocal_98.f_7, uLocal_273, NETWORK::NETWORK_GET_INSTANCE_ID_OF_THIS_SCRIPT(), func_5(PLAYER::GET_PLAYER_TEAM(PLAYER::PLAYER_ID()), 300));
-						flag = func_577();
+						num = func_577();
 					
-						if (flag != true)
-							func_576("R2P_TINVS" /*Your invite has been sent to ~1~ players.*/, flag, false);
+						if (num != 1)
+							func_576("R2P_TINVS" /*Your invite has been sent to ~1~ players.*/, num, false);
 						else
 							_THEFEED_SHOW_MESSAGE("R2P_TINVS1" /*Your invite has been sent to 1 player.*/, false);
 					
@@ -30818,28 +30818,28 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0x27E5D (16
 
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-	func_111(0, sParam0, num2, 0, false, false, false, 0, 1, 0, 0, 0);
+	func_111(0, sParam0, num2, 0, 0, 0, 0, 0, 1, 0, 0, 0);
 	return num;
 }
 
-int func_576(char* sParam0, BOOL bParam1, BOOL bParam2) // Position - 0x27E95 (163477)
+int func_576(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x27E95 (163477)
 {
 	int num;
 
 	num = -1;
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam1);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_111(3, sParam0, 2, "", bParam1, 0, 0, 0, 1, 0, 0, 0);
+		func_111(3, sParam0, 2, "", iParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_111(3, sParam0, 1, "", bParam1, false, false, 0, 1, 0, 0, 0);
+		func_111(3, sParam0, 1, "", iParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-BOOL func_577() // Position - 0x27EE8 (163560)
+int func_577() // Position - 0x27EE8 (163560)
 {
 	int num;
 	int i;

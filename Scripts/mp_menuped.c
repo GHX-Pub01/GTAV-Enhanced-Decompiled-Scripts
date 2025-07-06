@@ -92624,14 +92624,14 @@ BOOL func_432(Ped* ppedParam0, Ped pedParam1, int iParam2, BOOL bParam3) // Posi
 				if (pedHeadBlendFirstIndex >= num5)
 				{
 					pedHeadBlendFirstIndex = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(1);
-					Global_2698298 = 1;
+					Global_2698298 = true;
 					func_433(1);
 				}
 			
 				if (pedHeadBlendFirstIndex2 >= num5)
 				{
 					pedHeadBlendFirstIndex2 = PED::GET_PED_HEAD_BLEND_FIRST_INDEX(0);
-					Global_2698298 = 1;
+					Global_2698298 = true;
 					func_433(1);
 				}
 			

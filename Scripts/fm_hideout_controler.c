@@ -145034,38 +145034,38 @@ int func_1664(Player plParam0) // Position - 0xC2A79 (797305)
 	return 0;
 }
 
-BOOL func_1665(ePedComponentType epctParam0) // Position - 0xC2A9D (797341)
+BOOL func_1665(BOOL bParam0) // Position - 0xC2A9D (797341)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
-		case PV_COMP_BERD:
+		case true:
 			return 102;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 103;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 104;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			return 105;
 	
-		case PV_COMP_HAND:
+		case 5:
 			return 106;
 	
-		case PV_COMP_FEET:
+		case 6:
 			return 107;
 	
-		case PV_COMP_TEEF:
+		case 7:
 			return 108;
 	
-		case PV_COMP_ACCS:
+		case 8:
 			return 109;
 	
-		case PV_COMP_TASK:
+		case 9:
 			return 110;
 	
-		case PV_COMP_DECL:
+		case 10:
 			return 111;
 	
 		default:
@@ -145075,12 +145075,12 @@ BOOL func_1665(ePedComponentType epctParam0) // Position - 0xC2A9D (797341)
 	return -1;
 }
 
-ePedComponentType func_1666(ePedComponentType epctParam0) // Position - 0xC2B1B (797467)
+BOOL func_1666(ePedComponentType epctParam0) // Position - 0xC2B1B (797467)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[epctParam0 /*892*/].f_268.f_360;
 
-	return PV_COMP_HEAD;
+	return false;
 }
 
 BOOL func_1667(int iParam0) // Position - 0xC2B3F (797503)
@@ -147728,14 +147728,14 @@ Vector3 func_1725(BOOL bParam0) // Position - 0xC6810 (813072)
 
 BOOL func_1726(ePedComponentType epctParam0) // Position - 0xC691C (813340)
 {
-	ePedComponentType type;
+	BOOL flag;
 
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 	{
-		type = func_1666(epctParam0);
+		flag = func_1666(epctParam0);
 	
-		if (type != PV_COMP_HEAD)
-			return func_1665(type);
+		if (flag != false)
+			return func_1665(flag);
 	}
 
 	return -1;
@@ -147744,7 +147744,7 @@ BOOL func_1726(ePedComponentType epctParam0) // Position - 0xC691C (813340)
 BOOL func_1727(ePedComponentType epctParam0) // Position - 0xC6945 (813381)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
 
 	return false;
 }

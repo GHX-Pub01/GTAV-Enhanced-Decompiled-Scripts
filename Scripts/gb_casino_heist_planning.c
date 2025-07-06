@@ -5634,7 +5634,7 @@ BOOL func_153(Player plParam0, int iParam1) // Position - 0x7401 (29697)
 BOOL func_154(ePedComponentType epctParam0) // Position - 0x74D8 (29912)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
 
 	return false;
 }
@@ -5909,13 +5909,13 @@ char* func_169(var uParam0, int iParam1) // Position - 0x794D (31053)
 	return "";
 }
 
-Hash func_170(var uParam0, int iParam1) // Position - 0x7986 (31110)
+BOOL func_170(var uParam0, int iParam1) // Position - 0x7986 (31110)
 {
 	switch (iParam1)
 	{
 		case 10:
 			if (func_155(uParam0))
-				return 0;
+				return false;
 			else
 				return func_173(uParam0->f_744.f_738);
 			break;
@@ -5925,16 +5925,16 @@ Hash func_170(var uParam0, int iParam1) // Position - 0x7986 (31110)
 	
 		case 12:
 			if (func_149(uParam0))
-				return 0;
+				return false;
 			else
 				return func_171(uParam0->f_744.f_743);
 			break;
 	}
 
-	return 0;
+	return false;
 }
 
-Hash func_171(int iParam0) // Position - 0x79FE (31230)
+BOOL func_171(int iParam0) // Position - 0x79FE (31230)
 {
 	switch (iParam0)
 	{
@@ -5960,7 +5960,7 @@ Hash func_171(int iParam0) // Position - 0x79FE (31230)
 	return 0;
 }
 
-Hash func_172(int iParam0) // Position - 0x7A5E (31326)
+BOOL func_172(int iParam0) // Position - 0x7A5E (31326)
 {
 	switch (iParam0)
 	{
@@ -5986,7 +5986,7 @@ Hash func_172(int iParam0) // Position - 0x7A5E (31326)
 	return 0;
 }
 
-Hash func_173(int iParam0) // Position - 0x7ABE (31422)
+BOOL func_173(int iParam0) // Position - 0x7ABE (31422)
 {
 	switch (iParam0)
 	{
@@ -35879,51 +35879,51 @@ Vector3 func_760(BOOL bParam0) // Position - 0x290BB (168123)
 
 BOOL func_761(ePedComponentType epctParam0) // Position - 0x291C7 (168391)
 {
-	ePedComponentType type;
+	BOOL flag;
 
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 	{
-		type = func_763(epctParam0);
+		flag = func_763(epctParam0);
 	
-		if (type != PV_COMP_HEAD)
-			return func_762(type);
+		if (flag != false)
+			return func_762(flag);
 	}
 
 	return -1;
 }
 
-int func_762(ePedComponentType epctParam0) // Position - 0x291F0 (168432)
+int func_762(BOOL bParam0) // Position - 0x291F0 (168432)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
-		case PV_COMP_BERD:
+		case true:
 			return 102;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 103;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 104;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			return 105;
 	
-		case PV_COMP_HAND:
+		case 5:
 			return 106;
 	
-		case PV_COMP_FEET:
+		case 6:
 			return 107;
 	
-		case PV_COMP_TEEF:
+		case 7:
 			return 108;
 	
-		case PV_COMP_ACCS:
+		case 8:
 			return 109;
 	
-		case PV_COMP_TASK:
+		case 9:
 			return 110;
 	
-		case PV_COMP_DECL:
+		case 10:
 			return 111;
 	
 		default:
@@ -35933,12 +35933,12 @@ int func_762(ePedComponentType epctParam0) // Position - 0x291F0 (168432)
 	return -1;
 }
 
-ePedComponentType func_763(ePedComponentType epctParam0) // Position - 0x2926E (168558)
+BOOL func_763(ePedComponentType epctParam0) // Position - 0x2926E (168558)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[epctParam0 /*892*/].f_268.f_360;
 
-	return PV_COMP_HEAD;
+	return false;
 }
 
 BOOL func_764(ePedComponentType epctParam0) // Position - 0x29292 (168594)
@@ -48333,14 +48333,14 @@ void func_1189(int iParam0, int iParam1, BOOL bParam2) // Position - 0x38505 (23
 	return;
 }
 
-void func_1190(int iParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, Hash hParam5, int iParam6) // Position - 0x38528 (230696)
+void func_1190(int iParam0, int iParam1, char* sParam2, char* sParam3, int iParam4, BOOL bParam5, int iParam6) // Position - 0x38528 (230696)
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_CREW_MEMBER");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam1);
 	func_91(sParam2);
 	func_91(sParam3);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam4);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(hParam5);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(bParam5);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam6);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;

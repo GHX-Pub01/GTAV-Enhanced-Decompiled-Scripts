@@ -86235,9 +86235,9 @@ void func_727(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-int func_728(ePedComponentType epctParam0) // Position - 0x6F962 (457058)
+int func_728(int iParam0) // Position - 0x6F962 (457058)
 {
-	switch (epctParam0)
+	switch (iParam0)
 	{
 		case 0:
 			return 0;
@@ -86304,7 +86304,7 @@ void func_730(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position
 	int i;
 	Hash nameHash;
 	int enumValue;
-	ePedComponentType componentType;
+	int componentType;
 	int num;
 	int num2;
 	BOOL address;
@@ -86346,7 +86346,7 @@ void func_730(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position
 					if (num < Global_4540932)
 					{
 						Global_4540932[num] = -1;
-						Global_4540943[num] = PV_COMP_INVALID;
+						Global_4540943[num] = -1;
 					}
 				
 					EXTRAMETADATA::GET_VARIANT_COMPONENT(Global_2883588, i, &nameHash, &enumValue, &componentType);
@@ -113651,20 +113651,20 @@ char* func_965(int iParam0, int iParam1) // Position - 0x8DAF9 (580345)
 
 BOOL func_966(int iParam0) // Position - 0x8E45F (582751)
 {
-	int* p_num;
 	int num;
+	int num2;
 
-	p_num = func_967(iParam0);
-	num = iParam0;
-	return IS_BIT_SET(p_num, func_215(num));
+	num = func_967(iParam0);
+	num2 = iParam0;
+	return IS_BIT_SET(num, func_215(num2));
 }
 
-int* func_967(int iParam0) // Position - 0x8E47C (582780)
+int func_967(int iParam0) // Position - 0x8E47C (582780)
 {
-	int* p_num;
+	var unk;
 
-	p_num = Global_1682393.f_1061[func_219(iParam0)];
-	return p_num;
+	unk = Global_1682393.f_1061[func_219(iParam0)];
+	return unk;
 }
 
 void func_968(BOOL bParam0) // Position - 0x8E497 (582807)
@@ -131822,7 +131822,7 @@ void func_1273(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 		switch (Global_1920804.f_9)
 		{
 			case 1:
-				if (!func_1430() && func_1427(0) > false)
+				if (!func_1430() && func_1427(0) > 0)
 					Global_1939321[0 /*8*/].f_5 = 1;
 			
 				if (!flag3)
@@ -135322,7 +135322,7 @@ void func_1426(float fParam0) // Position - 0xA84AC (689324)
 	return;
 }
 
-BOOL func_1427(int iParam0) // Position - 0xA84D0 (689360)
+int func_1427(int iParam0) // Position - 0xA84D0 (689360)
 {
 	int num;
 

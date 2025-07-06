@@ -12119,16 +12119,16 @@ void func_287() // Position - 0xF25B (62043)
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("prop_phone_ing"));
 	func_205(47, "MIC_2_INT", -1, 0, 0);
 	func_288(47, "DENISE", Global_98185.f_9[0]);
-	func_288(47, "Denises_Friend_1", Global_98185.f_9[1]);
-	func_288(47, "Denises_Friend_2", Global_98185.f_9[2]);
+	func_288(CHAR_CHEF, "Denises_Friend_1", Global_98185.f_9[1]);
+	func_288(CHAR_CHEF, "Denises_Friend_2", Global_98185.f_9[2]);
 	return;
 }
 
-void func_288(int iParam0, char* sParam1, Ped pedParam2) // Position - 0xF674 (63092)
+void func_288(eCharacter echParam0, char* sParam1, Ped pedParam2) // Position - 0xF674 (63092)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79763 < 5)
 		{
@@ -97685,26 +97685,26 @@ void func_676() // Position - 0x77776 (489334)
 	num = func_678(4, 4);
 	num2 = func_678(4, 0);
 	func_677(84, "HACKER_SELECTION", 0, Global_97563[num /*5*/].f_2, 0);
-	func_677(84, "HACKER_SELECTION", 2, Global_97563[num /*5*/].f_3, 0);
+	func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 2, Global_97563[num /*5*/].f_3, 0);
 
 	if (num == 6 || num == 7)
-		func_677(84, "HACKER_SELECTION", 5, 0, 0);
+		func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 5, 0, 0);
 	else
-		func_677(84, "HACKER_SELECTION", 5, 2, 0);
+		func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 5, 2, 0);
 
-	func_677(84, "HACKER_SELECTION", 3, Global_97563[num /*5*/].f_3, 0);
-	func_677(84, "HACKER_SELECTION", 4, Global_97563[num /*5*/].f_3, 0);
-	func_677(84, "HACKER_SELECTION", 8, 0, 0);
-	func_677(84, "gunman_selection_1", 0, Global_97563[num2 /*5*/].f_2, 0);
+	func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 3, Global_97563[num /*5*/].f_3, 0);
+	func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 4, Global_97563[num /*5*/].f_3, 0);
+	func_677(CHAR_MP_BRUCIE, "HACKER_SELECTION", 8, 0, 0);
+	func_677(CHAR_MP_BRUCIE, "gunman_selection_1", 0, Global_97563[num2 /*5*/].f_2, 0);
 	OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(1382825971, 1, false, true);
 	return;
 }
 
-void func_677(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x77860 (489568)
+void func_677(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x77860 (489568)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79627 < 30)
 		{
@@ -98851,11 +98851,11 @@ void func_697() // Position - 0x79675 (497269)
 	return;
 }
 
-void func_698(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x797BA (497594)
+void func_698(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x797BA (497594)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79775 < 5)
 		{
@@ -103681,7 +103681,7 @@ void func_812() // Position - 0x81394 (529300)
 	func_815(&(Global_98185.f_44), 1);
 	func_793(CHAR_PA_MALE, 0);
 
-	if (func_814() != 26)
+	if (func_814() != CHAR_SOLOMON)
 		func_813(6, true);
 
 	AUDIO::SET_AMBIENT_ZONE_LIST_STATE_PERSISTENT("AZL_LESTERS_DOGS", true, true);
@@ -103705,7 +103705,7 @@ void func_813(int iParam0, BOOL bParam1) // Position - 0x81403 (529411)
 	return;
 }
 
-int func_814() // Position - 0x81446 (529478)
+eCharacter func_814() // Position - 0x81446 (529478)
 {
 	return Global_79827;
 }
@@ -103768,7 +103768,7 @@ void func_816() // Position - 0x8146F (529519)
 	func_815(&(Global_98185.f_44), 1);
 	func_793(CHAR_PA_MALE, 0);
 
-	if (func_814() != 26)
+	if (func_814() != CHAR_SOLOMON)
 		func_813(6, true);
 
 	AUDIO::SET_AMBIENT_ZONE_LIST_STATE_PERSISTENT("AZL_LESTERS_DOGS", true, true);
@@ -104340,7 +104340,7 @@ void func_835() // Position - 0x82531 (533809)
 {
 	func_193();
 
-	if (func_814() != 25)
+	if (func_814() != CHAR_TENNIS_COACH)
 		func_836(1, 1);
 
 	return;
@@ -104357,7 +104357,7 @@ void func_837() // Position - 0x82560 (533856)
 {
 	func_193();
 
-	if (func_814() != 25)
+	if (func_814() != CHAR_TENNIS_COACH)
 		func_836(1, 1);
 
 	return;
@@ -104471,7 +104471,7 @@ void func_848() // Position - 0x82797 (534423)
 {
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(1199.4f, -2661.9f, 70f, 1597.1f, -2447.7f, -5f, 1);
 
-	if (func_814() != 24)
+	if (func_814() != CHAR_WADE)
 		func_836(1, 1);
 
 	return;
@@ -104481,7 +104481,7 @@ void func_849() // Position - 0x827D1 (534481)
 {
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(1199.4f, -2661.9f, 70f, 1597.1f, -2447.7f, -5f, 1);
 
-	if (func_814() != 24)
+	if (func_814() != CHAR_WADE)
 		func_836(1, 1);
 
 	return;
@@ -105991,7 +105991,7 @@ void func_966() // Position - 0x842BB (541371)
 void func_967() // Position - 0x84350 (541520)
 {
 	func_205(70, "AH_3B_INT", 0, 2, -1);
-	func_698(70, "Lester", 1, 0, 0);
+	func_698(CHAR_MP_BIKER_BOSS, "Lester", 1, 0, 0);
 	PED::ADD_RELATIONSHIP_GROUP("REL_TS_FRIENDLY", &(Global_98185.f_42));
 	OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(-874851305, -1f, false, true);
 	OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(-874851305, 1, false, true);
@@ -109869,8 +109869,8 @@ void func_1057() // Position - 0x8A68F (566927)
 	OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(949391213, 1f, false, false);
 	OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(949391213, 4, false, true);
 	func_205(69, "AH_3A_INT", 0, -1, -1);
-	func_288(69, "lester", Global_98185.f_9[0]);
-	func_698(69, "lester", 1, 0, 0);
+	func_288(CHAR_OMEGA, "lester", Global_98185.f_9[0]);
+	func_698(CHAR_OMEGA, "lester", 1, 0, 0);
 	return;
 }
 

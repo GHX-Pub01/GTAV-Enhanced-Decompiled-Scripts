@@ -11496,7 +11496,7 @@ void func_158(int iParam0) // Position - 0x12C17 (76823)
 	return;
 }
 
-Hash func_159() // Position - 0x12C85 (76933)
+BOOL func_159() // Position - 0x12C85 (76933)
 {
 	return Global_262145.f_26556;
 }

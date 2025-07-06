@@ -34342,7 +34342,7 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0x252F1 (15
 	return num;
 }
 
-void func_420(int iParam0, char* sParam1, int iParam2, char* sParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x25329 (152361)
+void func_420(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x25329 (152361)
 {
 	int num;
 
@@ -34356,9 +34356,9 @@ void func_420(int iParam0, char* sParam1, int iParam2, char* sParam3, BOOL bPara
 		Global_1938165.f_5[num /*53*/] = iParam0;
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
-		Global_1938165.f_5[num /*53*/].f_2[0] = bParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[0] = iParam4;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -38260,10 +38260,10 @@ float func_502() // Position - 0x2B1D1 (176593)
 	return Global_23987.f_9117;
 }
 
-void func_503(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x2B1DF (176607)
+void func_503(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x2B1DF (176607)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_500(fParam0), fParam1, iParam4);
 	return;
 }
@@ -39804,7 +39804,7 @@ void func_543(int iParam0) // Position - 0x2CFC9 (184265)
 	return;
 }
 
-void func_544(Hash hParam0, BOOL bParam1) // Position - 0x2D082 (184450)
+void func_544(BOOL bParam0, BOOL bParam1) // Position - 0x2D082 (184450)
 {
 	float num;
 	float num2;
@@ -39823,7 +39823,7 @@ void func_544(Hash hParam0, BOOL bParam1) // Position - 0x2D082 (184450)
 	if (Global_23987.f_6346 >= Global_23987.f_6344)
 		return;
 
-	Global_23987.f_4469[Global_23987.f_5825] = hParam0;
+	Global_23987.f_4469[Global_23987.f_5825] = bParam0;
 	Global_23987.f_5825 = Global_23987.f_5825 + 1;
 	Global_23987.f_2387[Global_23987.f_6345 /*5*/][Global_23987.f_6346] = 2;
 	Global_23987.f_6346 = Global_23987.f_6346 + 1;
@@ -40230,7 +40230,7 @@ void func_554(BOOL bParam0, BOOL bParam1) // Position - 0x2DB14 (187156)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)

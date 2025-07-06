@@ -46885,14 +46885,14 @@ int func_244(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_245(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_245(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_245(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_245(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-void func_245(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x300C5 (196805)
+void func_245(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x300C5 (196805)
 {
 	int num;
 
@@ -46907,8 +46907,8 @@ void func_245(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompon
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -50258,7 +50258,7 @@ int func_341(char* sParam0, ePedComponentType epctParam1, ePedComponentType epct
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_245(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
+		func_245(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -88944,7 +88944,7 @@ int func_935(ePedComponentType epctParam0) // Position - 0x609F0 (395760)
 BOOL func_936(Player plParam0) // Position - 0x60A14 (395796)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
 
 	return false;
 }
@@ -95773,11 +95773,11 @@ void func_1205() // Position - 0x693B6 (431030)
 	return;
 }
 
-void func_1206(eCharacter echParam0, eCharacter echParam1) // Position - 0x693D7 (431063)
+void func_1206(int iParam0, eCharacter echParam1) // Position - 0x693D7 (431063)
 {
 	eCharacter character;
 
-	if (Global_120[echParam0 /*10*/].f_8 != 184)
+	if (Global_120[iParam0 /*10*/].f_8 != 184)
 	{
 		if (echParam1 > 3)
 		{
@@ -95785,8 +95785,8 @@ void func_1206(eCharacter echParam0, eCharacter echParam1) // Position - 0x693D7
 		else
 		{
 			character = echParam1;
-			func_1208(echParam0, character, 0);
-			func_1207(echParam0, character, 0);
+			func_1208(iParam0, character, 0);
+			func_1207(iParam0, character, 0);
 		}
 	}
 
@@ -95819,7 +95819,7 @@ void func_1208(int iParam0, eCharacter echParam1, int iParam2) // Position - 0x6
 	return;
 }
 
-eCharacter func_1209() // Position - 0x69496 (431254)
+int func_1209() // Position - 0x69496 (431254)
 {
 	return Global_1964326;
 }

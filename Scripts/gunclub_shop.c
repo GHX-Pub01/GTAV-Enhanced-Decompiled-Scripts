@@ -39448,14 +39448,14 @@ int func_277(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_278(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_278(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_278(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_278(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-void func_278(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x3A0C5 (237765)
+void func_278(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x3A0C5 (237765)
 {
 	int num;
 
@@ -39470,8 +39470,8 @@ void func_278(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompon
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -86859,15 +86859,15 @@ BOOL func_630(eCharacter echParam0, int iParam1) // Position - 0x775C6 (488902)
 	return false;
 }
 
-Hash func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
+BOOL func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
 {
 	switch (epctParam0)
 	{
 		case joaat("WEAPON_PISTOL"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_KNIFE"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_MICROSMG"):
 			return 5;
@@ -86891,7 +86891,7 @@ Hash func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
 			return 21;
 	
 		case joaat("WEAPON_STICKYBOMB"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_PETROLCAN"):
 			return 20;
@@ -86903,14 +86903,14 @@ Hash func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
 			return 33;
 	
 		case joaat("WEAPON_SMOKEGRENADE"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_GRENADE"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_CARBINERIFLE"):
 			if (_STAT_GET_PACKED_BOOL(3741, -1))
-				return 0;
+				return false;
 			else
 				return 42;
 			break;
@@ -86920,7 +86920,7 @@ Hash func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
 	
 		case joaat("WEAPON_MOLOTOV"):
 			if (_STAT_GET_PACKED_BOOL(3741, -1))
-				return 0;
+				return false;
 			else
 				return 31;
 			break;
@@ -86947,19 +86947,19 @@ Hash func_631(ePedComponentType epctParam0) // Position - 0x775FA (488954)
 			return 120;
 	
 		case joaat("WEAPON_SAWNOFFSHOTGUN"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_GOLFCLUB"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_CROWBAR"):
-			return 0;
+			return false;
 	
 		case joaat("WEAPON_BAT"):
-			return 0;
+			return false;
 	}
 
-	return 0;
+	return false;
 }
 
 BOOL func_632() // Position - 0x777B9 (489401)
@@ -87020,7 +87020,7 @@ void func_636(BOOL bParam0) // Position - 0x778C8 (489672)
 	return;
 }
 
-Hash func_637(int iParam0) // Position - 0x77927 (489767)
+BOOL func_637(int iParam0) // Position - 0x77927 (489767)
 {
 	switch (iParam0)
 	{
@@ -87166,19 +87166,19 @@ Hash func_637(int iParam0) // Position - 0x77927 (489767)
 			return 11;
 	
 		case 156:
-			return 1;
+			return true;
 	
 		case 157:
-			return 1;
+			return true;
 	
 		case 158:
-			return 1;
+			return true;
 	
 		case 159:
-			return 1;
+			return true;
 	
 		case 160:
-			return 1;
+			return true;
 	
 		case 2:
 			return 27;
@@ -87313,7 +87313,7 @@ Hash func_637(int iParam0) // Position - 0x77927 (489767)
 			if (Global_262145.f_2802 > -1)
 				return Global_262145.f_2802;
 			else
-				return 0;
+				return false;
 			break;
 	
 		case 239:
@@ -88076,7 +88076,7 @@ Hash func_637(int iParam0) // Position - 0x77927 (489767)
 			return 11;
 	}
 
-	return 0;
+	return false;
 }
 
 int func_638(ePedComponentType epctParam0, int iParam1) // Position - 0x78A4C (494156)
@@ -145871,7 +145871,7 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0xBD4E2 (77
 
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-	func_278(0, sParam0, num2, 0, PV_COMP_HEAD, false, false, 0, 1, 0, 0, 0);
+	func_278(0, sParam0, num2, 0, PV_COMP_HEAD, 0, 0, 0, 1, 0, 0, 0);
 	return num;
 }
 

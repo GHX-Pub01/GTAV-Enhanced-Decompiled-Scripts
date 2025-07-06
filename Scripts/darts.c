@@ -18316,7 +18316,7 @@ void func_358(BOOL bParam0, BOOL bParam1) // Position - 0x1B470 (111728)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
@@ -20130,10 +20130,10 @@ float func_366() // Position - 0x1EC12 (125970)
 	return Global_23987.f_9117;
 }
 
-void func_367(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x1EC20 (125984)
+void func_367(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x1EC20 (125984)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_364(fParam0), fParam1, iParam4);
 	return;
 }
@@ -21075,14 +21075,14 @@ BOOL func_396(int iParam0, int iParam1) // Position - 0x1FDC1 (130497)
 }
 
 // Unhandled jump detected. Output should be considered invalid
-Hash func_397(int iParam0, BOOL bParam1) // Position - 0x1FDF9 (130553)
+BOOL func_397(int iParam0, BOOL bParam1) // Position - 0x1FDF9 (130553)
 {
 	if (bParam1)
 	{
 		switch (iParam0)
 		{
 			case 1:
-				return 1;
+				return true;
 		
 			case 2:
 				return 3;
@@ -21099,7 +21099,7 @@ Hash func_397(int iParam0, BOOL bParam1) // Position - 0x1FDF9 (130553)
 		switch (iParam0)
 		{
 			case 1:
-				return 1;
+				return true;
 		
 			case 2:
 				return 3;
@@ -21124,7 +21124,7 @@ Hash func_397(int iParam0, BOOL bParam1) // Position - 0x1FDF9 (130553)
 		}
 	}
 
-	return 0;
+	return false;
 }
 
 int func_398(int* piParam0, ePedComponentType epctParam1, int iParam2) // Position - 0x1FE80 (130688)
@@ -21268,7 +21268,7 @@ void func_404(int iParam0, eHudColour ehcParam1, eHudColour ehcParam2, int iPara
 	return;
 }
 
-void func_405(ePedComponentType epctParam0, Hash hParam1, BOOL bParam2) // Position - 0x20183 (131459)
+void func_405(ePedComponentType epctParam0, BOOL bParam1, BOOL bParam2) // Position - 0x20183 (131459)
 {
 	int num;
 	float num2;
@@ -21308,9 +21308,9 @@ void func_405(ePedComponentType epctParam0, Hash hParam1, BOOL bParam2) // Posit
 			return;
 	}
 
-	Global_23987.f_4469[Global_23987.f_5825] = hParam1;
+	Global_23987.f_4469[Global_23987.f_5825] = bParam1;
 	Global_23987.f_5825 = Global_23987.f_5825 + 1;
-	num2 = func_407("NUMBER" /*~1~*/, hParam1);
+	num2 = func_407("NUMBER" /*~1~*/, bParam1);
 
 	if (Global_23987.f_5678[Global_23987.f_5822])
 	{
@@ -21323,7 +21323,7 @@ void func_405(ePedComponentType epctParam0, Hash hParam1, BOOL bParam2) // Posit
 
 	if (bParam2)
 	{
-		num4 = func_406("NUMBER" /*~1~*/, hParam1);
+		num4 = func_406("NUMBER" /*~1~*/, bParam1);
 	
 		if (num4 > Global_23987.f_6348[epctParam0])
 			Global_23987.f_6348[epctParam0] = num4;
@@ -21335,21 +21335,21 @@ void func_405(ePedComponentType epctParam0, Hash hParam1, BOOL bParam2) // Posit
 	return;
 }
 
-float func_406(char* sParam0, Hash hParam1) // Position - 0x20302 (131842)
+float func_406(char* sParam0, BOOL bParam1) // Position - 0x20302 (131842)
 {
 	!HUD::DOES_TEXT_LABEL_EXIST(sParam0);
-	hParam1 == 0;
+	bParam1 == false;
 	return HUD::GET_RENDERED_CHARACTER_HEIGHT(0.35f, 0);
 }
 
-float func_407(char* sParam0, Hash hParam1) // Position - 0x20324 (131876)
+float func_407(char* sParam0, BOOL bParam1) // Position - 0x20324 (131876)
 {
 	if (!HUD::DOES_TEXT_LABEL_EXIST(sParam0))
 		return 0f;
 
 	func_373(true, true, false, false, 0, false, false);
 	HUD::BEGIN_TEXT_COMMAND_GET_SCREEN_WIDTH_OF_DISPLAY_TEXT(sParam0);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam1);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam1);
 	return func_370(true);
 }
 
@@ -21942,7 +21942,7 @@ void func_429(var uParam0) // Position - 0x20E6D (134765)
 	func_390(0, "DARTS_LEGS", 0, 1, 0, false, 0);
 	func_405(0, 1, false);
 	func_390(PV_COMP_BERD, "DARTS_SETS", 0, true, false, false, false);
-	func_405(PV_COMP_BERD, 1, false);
+	func_405(PV_COMP_BERD, true, false);
 	func_390(PV_COMP_HAIR, "DARTS_START", 0, true, false, false, false);
 	func_404(2, 141, 141, 1);
 	func_403(0);

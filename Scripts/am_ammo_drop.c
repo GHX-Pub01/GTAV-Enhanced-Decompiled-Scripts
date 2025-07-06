@@ -1397,7 +1397,7 @@ int func_23(int iParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, 
 			Global_4536600[i /*84*/].f_65.f_12 = 0;
 			Global_4536600[i /*84*/].f_65.f_14 = MISC::GET_FRAME_COUNT();
 			Global_4536600[i /*84*/].f_65.f_18 = 0;
-			Global_4538071 = false;
+			Global_4538071 = 0;
 		
 			if (bParam6)
 				Global_4536600[i /*84*/].f_65.f_5 = 1;

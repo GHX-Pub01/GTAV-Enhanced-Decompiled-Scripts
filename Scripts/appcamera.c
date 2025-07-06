@@ -2446,12 +2446,12 @@ BOOL func_31(int iParam0) // Position - 0x2FAF (12207)
 	return false;
 }
 
-BOOL func_32(Hash hParam0, Hash hParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x2FEF (12271)
+BOOL func_32(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x2FEF (12271)
 {
-	return func_33(PLAYER::PLAYER_PED_ID(), hParam0, hParam1, bParam2, bParam3, bParam4);
+	return func_33(PLAYER::PLAYER_PED_ID(), bParam0, bParam1, bParam2, bParam3, bParam4);
 }
 
-BOOL func_33(Ped pedParam0, Hash hParam1, Hash hParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5) // Position - 0x3009 (12297)
+BOOL func_33(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5) // Position - 0x3009 (12297)
 {
 	var unk;
 	var unk10;
@@ -2468,7 +2468,7 @@ BOOL func_33(Ped pedParam0, Hash hParam1, Hash hParam2, BOOL bParam3, BOOL bPara
 	unk10 = 8;
 	unk19 = 8;
 
-	if (hParam1 == 0)
+	if (bParam1 == false)
 		num4 = 3;
 	else if (bParam3)
 		num4 = 1;
@@ -2477,7 +2477,7 @@ BOOL func_33(Ped pedParam0, Hash hParam1, Hash hParam2, BOOL bParam3, BOOL bPara
 	else
 		num4 = 0;
 
-	func_41(hParam1, hParam2, &unk, &unk10, &unk19, num4, bParam5);
+	func_41(bParam1, bParam2, &unk, &unk10, &unk19, num4, bParam5);
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
 	{
@@ -2575,19 +2575,19 @@ int func_40(Ped pedParam0) // Position - 0x31A9 (12713)
 	return pedPropIndex;
 }
 
-void func_41(Hash hParam0, Hash hParam1, var uParam2, var uParam3, var uParam4, int iParam5, BOOL bParam6) // Position - 0x31BD (12733)
+void func_41(BOOL bParam0, BOOL bParam1, var uParam2, var uParam3, var uParam4, int iParam5, BOOL bParam6) // Position - 0x31BD (12733)
 {
 	func_47(uParam4, 91, true);
 
-	switch (hParam0)
+	switch (bParam0)
 	{
-		case 1:
-		case 0:
-			func_46(hParam0, hParam1, uParam2, uParam3, uParam4, iParam5, bParam6);
+		case true:
+		case false:
+			func_46(bParam0, bParam1, uParam2, uParam3, uParam4, iParam5, bParam6);
 			break;
 	
 		case 2:
-			switch (hParam1)
+			switch (bParam1)
 			{
 				case 3:
 					switch (iParam5)
@@ -5470,15 +5470,15 @@ void func_41(Hash hParam0, Hash hParam1, var uParam2, var uParam3, var uParam4, 
 					}
 					break;
 			
-				case 0:
+				case false:
 					break;
 			}
 			break;
 	
 		case 3:
-			switch (hParam1)
+			switch (bParam1)
 			{
-				case 0:
+				case false:
 					break;
 			
 				case 9:
@@ -5562,16 +5562,16 @@ void func_45(var uParam0, int iParam1, BOOL bParam2) // Position - 0x94F7 (38135
 	return;
 }
 
-void func_46(Hash hParam0, Hash hParam1, var uParam2, var uParam3, var uParam4, int iParam5, BOOL bParam6) // Position - 0x9509 (38153)
+void func_46(BOOL bParam0, BOOL bParam1, var uParam2, var uParam3, var uParam4, int iParam5, BOOL bParam6) // Position - 0x9509 (38153)
 {
 	func_47(uParam4, 91, true);
 
-	switch (hParam0)
+	switch (bParam0)
 	{
-		case 1:
-			switch (hParam1)
+		case true:
+			switch (bParam1)
 			{
-				case 0:
+				case false:
 					switch (iParam5)
 					{
 						case 0:
@@ -5605,8 +5605,8 @@ void func_46(Hash hParam0, Hash hParam1, var uParam2, var uParam3, var uParam4, 
 			}
 			break;
 	
-		case 0:
-			switch (hParam1)
+		case false:
+			switch (bParam1)
 			{
 				case 6:
 				case 26:
@@ -5694,7 +5694,7 @@ void func_46(Hash hParam0, Hash hParam1, var uParam2, var uParam3, var uParam4, 
 					func_47(uParam4, 116, true);
 					break;
 			
-				case 1:
+				case true:
 					if (bParam6)
 					{
 						func_45(uParam3, 16, true);
@@ -6244,22 +6244,22 @@ BOOL func_48() // Position - 0xAA25 (43557)
 	return false;
 }
 
-BOOL func_49(Hash hParam0, Hash hParam1) // Position - 0xAA3D (43581)
+BOOL func_49(BOOL bParam0, BOOL bParam1) // Position - 0xAA3D (43581)
 {
-	switch (hParam0)
+	switch (bParam0)
 	{
-		case 1:
-			switch (hParam1)
+		case true:
+			switch (bParam1)
 			{
-				case 0:
+				case false:
 					return true;
 			}
 			break;
 	
 		case 2:
-			switch (hParam1)
+			switch (bParam1)
 			{
-				case 1:
+				case true:
 				case 2:
 				case 3:
 				case 4:
@@ -6301,9 +6301,9 @@ BOOL func_49(Hash hParam0, Hash hParam1) // Position - 0xAA3D (43581)
 			break;
 	
 		case 3:
-			switch (hParam1)
+			switch (bParam1)
 			{
-				case 0:
+				case false:
 					return true;
 			}
 			break;

@@ -2424,10 +2424,10 @@ float func_13() // Position - 0x37B5 (14261)
 	return Global_23987.f_9117;
 }
 
-void func_14(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x37C3 (14275)
+void func_14(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x37C3 (14275)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_11(fParam0), fParam1, iParam4);
 	return;
 }
@@ -4069,14 +4069,14 @@ Hash func_64() // Position - 0x5655 (22101)
 	return 1746989812;
 }
 
-void func_65(Hash hParam0) // Position - 0x5687 (22151)
+void func_65(BOOL bParam0) // Position - 0x5687 (22151)
 {
 	if (Global_23987.f_5320 >= 3 || Global_23987.f_5319 >= 4)
 		return;
 
 	Global_23987.f_5253[Global_23987.f_5319] = 2;
 	Global_23987.f_5319 = Global_23987.f_5319 + 1;
-	Global_23987.f_5258[Global_23987.f_5320] = hParam0;
+	Global_23987.f_5258[Global_23987.f_5320] = bParam0;
 	Global_23987.f_5320 = Global_23987.f_5320 + 1;
 	return;
 }
@@ -19686,7 +19686,7 @@ void func_238(BOOL bParam0, BOOL bParam1) // Position - 0x19E1C (106012)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
@@ -21229,11 +21229,11 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0x1BBA3 (11
 
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-	func_291(0, sParam0, num2, 0, false, false, false, 0, 1, 0, 0, 0);
+	func_291(0, sParam0, num2, 0, 0, 0, 0, 0, 1, 0, 0, 0);
 	return num;
 }
 
-void func_291(int iParam0, char* sParam1, int iParam2, const char* sParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x1BBDB (113627)
+void func_291(int iParam0, char* sParam1, int iParam2, const char* sParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x1BBDB (113627)
 {
 	int num;
 
@@ -21247,9 +21247,9 @@ void func_291(int iParam0, char* sParam1, int iParam2, const char* sParam3, BOOL
 		Global_1938165.f_5[num /*53*/] = iParam0;
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
-		Global_1938165.f_5[num /*53*/].f_2[0] = bParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[0] = iParam4;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -89227,7 +89227,7 @@ int func_720(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position -
 		case 292:
 			if (Global_262145.f_17365 || func_722(24))
 			{
-				if (Global_262145.f_17414 == 0)
+				if (Global_262145.f_17414 == false)
 				{
 					return func_733(hash2, func_721(iParam1), bParam2);
 				}

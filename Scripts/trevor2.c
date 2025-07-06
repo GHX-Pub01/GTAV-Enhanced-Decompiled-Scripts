@@ -107021,7 +107021,7 @@ void func_640(Vehicle veParam0, int iParam1, int iParam2, int iParam3) // Positi
 	return;
 }
 
-void func_641(Entity eParam0, int iParam1) // Position - 0x81391 (529297)
+void func_641(Ped pedParam0, int iParam1) // Position - 0x81391 (529297)
 {
 	int i;
 
@@ -107031,7 +107031,7 @@ void func_641(Entity eParam0, int iParam1) // Position - 0x81391 (529297)
 	{
 		if (Global_76574[i /*2*/] == 0)
 		{
-			Global_76574[i /*2*/] = eParam0;
+			Global_76574[i /*2*/] = pedParam0;
 			Global_76574[i /*2*/].f_1 = iParam1;
 		
 			if (i == Global_76607)

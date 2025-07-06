@@ -7786,7 +7786,7 @@ int func_104(Hash hParam0) // Position - 0x9F5A (40794)
 	return -99;
 }
 
-BOOL func_105(ePedComponentType epctParam0) // Position - 0x9FB9 (40889)
+int func_105(ePedComponentType epctParam0) // Position - 0x9FB9 (40889)
 {
 	switch (epctParam0)
 	{
@@ -29603,48 +29603,48 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[0 /*65*/].f_59;
 			
 				case 3:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return true;
+						return 1;
 					else
-						return false;
+						return 0;
 					break;
 			
 				case 4:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return true;
+						return 1;
 					else
-						return false;
+						return 0;
 					break;
 			
 				case 6:
 					return 6;
 			
 				case 5:
-					return false;
+					return 0;
 			
 				case 8:
-					return false;
+					return 0;
 			
 				case 9:
-					return false;
+					return 0;
 			
 				case 10:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 7:
-					return false;
+					return 0;
 			
 				case 11:
-					return false;
+					return 0;
 			
 				case 12:
 					break;
@@ -29658,7 +29658,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[1 /*65*/].f_59;
@@ -29673,25 +29673,25 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					return 17;
 			
 				case 5:
-					return false;
+					return 0;
 			
 				case 8:
 					return 26;
 			
 				case 9:
-					return false;
+					return 0;
 			
 				case 10:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 7:
-					return false;
+					return 0;
 			
 				case 11:
-					return false;
+					return 0;
 			
 				case 12:
 					break;
@@ -29705,13 +29705,13 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[2 /*65*/].f_59;
 			
 				case 3:
-					return false;
+					return 0;
 			
 				case 4:
 					return 91;
@@ -29720,25 +29720,25 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					return 8;
 			
 				case 5:
-					return false;
+					return 0;
 			
 				case 8:
 					return 15;
 			
 				case 9:
-					return false;
+					return 0;
 			
 				case 10:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 7:
-					return false;
+					return 0;
 			
 				case 11:
-					return false;
+					return 0;
 			
 				case 12:
 					break;
@@ -29758,7 +29758,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 3:
-					return false;
+					return 0;
 			
 				case 4:
 					return 80;
@@ -29770,19 +29770,19 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 8:
-					return false;
+					return 0;
 			
 				case 9:
-					return false;
+					return 0;
 			
 				case 10:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 7:
-					return false;
+					return 0;
 			
 				case 11:
 					return 2;
@@ -29799,7 +29799,7 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 3:
-					return false;
+					return 0;
 			
 				case 4:
 					return 233;
@@ -29811,19 +29811,19 @@ BOOL func_226(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Positi
 					break;
 			
 				case 8:
-					return false;
+					return 0;
 			
 				case 9:
-					return false;
+					return 0;
 			
 				case 10:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 7:
-					return false;
+					return 0;
 			
 				case 11:
 					return 78;

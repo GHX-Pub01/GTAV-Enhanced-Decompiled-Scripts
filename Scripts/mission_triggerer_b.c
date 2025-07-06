@@ -8379,13 +8379,13 @@ void func_210() // Position - 0x919E (37278)
 	return;
 }
 
-void func_211(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x9203 (37379)
+void func_211(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x9203 (37379)
 {
 	if (Global_114162.f_9089)
 	{
-		if (!(Global_79567 && Global_79569 == iParam0))
+		if (!(Global_79567 && Global_79569 == echParam0))
 		{
-			Global_79569 = iParam0;
+			Global_79569 = echParam0;
 			TEXT_LABEL_ASSIGN_STRING(&Global_79570, sParam1, 24);
 			Global_79576[0] = iParam2;
 			Global_79576[1] = iParam3;
@@ -9247,7 +9247,7 @@ void func_243() // Position - 0xA263 (41571)
 	}
 
 	STREAMING::SET_SRL_FORCE_PRESTREAM(3);
-	func_211(75, "LSDH_2B_INT", 124, 112, 0);
+	func_211(CHAR_PA_MALE, "LSDH_2B_INT", 124, 112, 0);
 	func_238(true);
 	return;
 }
@@ -97351,32 +97351,32 @@ void func_624() // Position - 0x770A7 (487591)
 		PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_717, true);
 	}
 
-	func_211(74, "LSDH_2A_INT", 60, 48, 0);
+	func_211(CHAR_PA_FEMALE, "LSDH_2A_INT", 60, 48, 0);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[0]))
 		func_625(74, "Wade", Global_98185.f_9[0]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[1]))
-		func_625(74, "Floyd", Global_98185.f_9[1]);
+		func_625(CHAR_PA_FEMALE, "Floyd", Global_98185.f_9[1]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[2]))
-		func_625(74, "Trevor", Global_98185.f_9[2]);
+		func_625(CHAR_PA_FEMALE, "Trevor", Global_98185.f_9[2]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[3]))
-		func_625(74, "Michael", Global_98185.f_9[3]);
+		func_625(CHAR_PA_FEMALE, "Michael", Global_98185.f_9[3]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[4]))
-		func_625(74, "Franklin", Global_98185.f_9[4]);
+		func_625(CHAR_PA_FEMALE, "Franklin", Global_98185.f_9[4]);
 
 	MISC::CLEAR_BIT(&iLocal_718, 0);
 	return;
 }
 
-void func_625(int iParam0, char* sParam1, Ped pedParam2) // Position - 0x7771A (489242)
+void func_625(eCharacter echParam0, char* sParam1, Ped pedParam2) // Position - 0x7771A (489242)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79763 < 5)
 		{
@@ -101873,9 +101873,9 @@ void func_693() // Position - 0x80823 (526371)
 	PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_699, true);
 	iLocal_700 = 0;
 	TASK::USE_WAYPOINT_RECORDING_AS_ASSISTED_MOVEMENT_ROUTE("d1leadin", true, 1065353216, 1056964608);
-	func_211(71, "LSDH_INT", -1, -1, 0);
-	func_625(71, "FLOYD", Global_98185.f_9[0]);
-	func_625(71, "WADE", Global_98185.f_9[1]);
+	func_211(CHAR_MP_FAM_BOSS, "LSDH_INT", -1, -1, 0);
+	func_625(CHAR_MP_FAM_BOSS, "FLOYD", Global_98185.f_9[0]);
+	func_625(CHAR_MP_FAM_BOSS, "WADE", Global_98185.f_9[1]);
 	func_686(145, 2, false, true, 0);
 	func_686(146, 1, false, true, 0);
 	return;
@@ -102265,19 +102265,19 @@ void func_724() // Position - 0x8112C (528684)
 		{
 			if (BUILTIN::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), vector) < 90f * 90f)
 			{
-				func_211(41, "FRANKLIN_1_INT", -1, 0, 14);
+				func_211(CHAR_PEGASUS_DELIVERY, "FRANKLIN_1_INT", -1, 0, 14);
 				func_728(41, "Lamar", 0, 0, 0);
-				func_728(41, "Lamar", 1, 0, 0);
-				func_728(41, "Lamar", 2, 0, 0);
-				func_728(41, "Lamar", 3, 2, 1);
-				func_728(41, "Lamar", 4, 5, 0);
-				func_728(41, "Lamar", 5, 0, 0);
-				func_728(41, "Lamar", 6, 1, 0);
-				func_728(41, "Lamar", 7, 0, 0);
-				func_728(41, "Lamar", 8, 0, 0);
-				func_728(41, "Lamar", 9, 0, 0);
-				func_728(41, "Lamar", 10, 1, 2);
-				func_728(41, "Chop", 3, 0, func_727());
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 1, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 2, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 3, 2, 1);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 4, 5, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 5, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 6, 1, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 7, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 8, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 9, 0, 0);
+				func_728(CHAR_PEGASUS_DELIVERY, "Lamar", 10, 1, 2);
+				func_728(CHAR_PEGASUS_DELIVERY, "Chop", 3, 0, func_727());
 				MISC::SET_BIT(&iLocal_1479, 3);
 			}
 		}
@@ -102445,11 +102445,11 @@ int func_727() // Position - 0x818C1 (530625)
 	return Global_114162.f_20122.f_254.f_4;
 }
 
-void func_728(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x818D4 (530644)
+void func_728(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, int iParam4) // Position - 0x818D4 (530644)
 {
 	int num;
 
-	if (Global_79569 == iParam0)
+	if (Global_79569 == echParam0)
 	{
 		if (Global_79627 < 30)
 		{
@@ -104310,13 +104310,13 @@ void func_776() // Position - 0x8471B (542491)
 			break;
 	}
 
-	func_211(38, "FBI_4_MCS_3_CONCAT", 0, 14, 12);
+	func_211(CHAR_ORTEGA, "FBI_4_MCS_3_CONCAT", 0, 14, 12);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[0]))
-		func_625(38, "MICHAEL", Global_98185.f_9[0]);
+		func_625(CHAR_ORTEGA, "MICHAEL", Global_98185.f_9[0]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[1]))
-		func_625(38, "FRANKLIN", Global_98185.f_9[1]);
+		func_625(CHAR_ORTEGA, "FRANKLIN", Global_98185.f_9[1]);
 
 	return;
 }
@@ -111713,19 +111713,19 @@ void func_1022() // Position - 0x8F20A (586250)
 			break;
 	}
 
-	func_211(32, "FBI_4_INT", 0, 120, 126);
+	func_211(CHAR_FLOYD, "FBI_4_INT", 0, 120, 126);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[2]))
 	{
-		func_625(32, "steve_FBI", Global_98185.f_9[2]);
+		func_625(CHAR_FLOYD, "steve_FBI", Global_98185.f_9[2]);
 		func_1023(32, "steve_FBI", 1, 0, 0);
 	}
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[3]))
-		func_625(32, "michael", Global_98185.f_9[3]);
+		func_625(CHAR_FLOYD, "michael", Global_98185.f_9[3]);
 
 	if (ENTITY::DOES_ENTITY_EXIST(Global_98185.f_9[4]))
-		func_625(32, "trevor", Global_98185.f_9[4]);
+		func_625(CHAR_FLOYD, "trevor", Global_98185.f_9[4]);
 
 	return;
 }
@@ -112096,7 +112096,7 @@ void func_1049() // Position - 0x8FB49 (588617)
 					{
 						if (!Global_79581)
 						{
-							func_211(29, "FBI_1_INT", 61, -1, -1);
+							func_211(CHAR_DEVIN, "FBI_1_INT", 61, -1, -1);
 							MISC::SET_BIT(&iLocal_1094, 2);
 						}
 					}
@@ -112113,7 +112113,7 @@ void func_1049() // Position - 0x8FB49 (588617)
 					{
 						if (!Global_79581)
 						{
-							func_211(29, "FBI_1_INT", 62, -1, -1);
+							func_211(CHAR_DEVIN, "FBI_1_INT", 62, -1, -1);
 							MISC::SET_BIT(&iLocal_1094, 1);
 						}
 					}
@@ -112589,7 +112589,7 @@ int func_1090() // Position - 0x90602 (591362)
 		{
 			if (BUILTIN::VDIST2(func_153(176, CHAR_MICHAEL), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 625f)
 			{
-				func_211(13, "CHINESE_2_INT", -1, -1, 0);
+				func_211(CHAR_LESTER_DEATHWISH, "CHINESE_2_INT", -1, -1, 0);
 				MISC::SET_BIT(&iLocal_527, 5);
 			}
 		}
@@ -112859,7 +112859,7 @@ void func_1100() // Position - 0x90EC4 (593604)
 	
 		if (!IS_BIT_SET(iLocal_503, 4))
 		{
-			func_211(12, "CHINESE_1_INT", -1, -1, 0);
+			func_211(CHAR_LESTER, "CHINESE_1_INT", -1, -1, 0);
 			MISC::SET_BIT(&iLocal_503, 4);
 		}
 	
@@ -113574,7 +113574,7 @@ void func_1124() // Position - 0x927F6 (600054)
 	PED::ADD_SCENARIO_BLOCKING_AREA({ 32.677f, 3814.013f, 1974.4551f } + { 7f, 7f, 7f }, { 32.677f, 3814.013f, 1974.4551f } - { 7f, 7f, 7f }, false, true, true, true, 1);
 	TASK::USE_WAYPOINT_RECORDING_AS_ASSISTED_MOVEMENT_ROUTE("trv3_1", true, 0.7f, 1f);
 	STREAMING::REQUEST_IPL("TrevorsTrailerCollision");
-	func_211(64, "TREVOR_DRIVE_INT", -1, -1, 0);
+	func_211(CHAR_NIGEL, "TREVOR_DRIVE_INT", -1, -1, 0);
 	return;
 }
 
@@ -113883,9 +113883,9 @@ void func_1137() // Position - 0x93076 (602230)
 	PED::SET_SYNCHRONIZED_SCENE_LOOPED(iLocal_1939, true);
 	iLocal_1938 = 0;
 	TASK::USE_WAYPOINT_RECORDING_AS_ASSISTED_MOVEMENT_ROUTE("T2leadin", true, 1065353216, 1056964608);
-	func_211(63, "TREVOR_2_INT", -1, -1, 0);
-	func_625(63, "RON", Global_98185.f_9[0]);
-	func_211(63, "TREVOR_2_INT", -1, -1, 0);
+	func_211(CHAR_MRS_THORNHILL, "TREVOR_2_INT", -1, -1, 0);
+	func_625(CHAR_MRS_THORNHILL, "RON", Global_98185.f_9[0]);
+	func_211(CHAR_MRS_THORNHILL, "TREVOR_2_INT", -1, -1, 0);
 	return;
 }
 

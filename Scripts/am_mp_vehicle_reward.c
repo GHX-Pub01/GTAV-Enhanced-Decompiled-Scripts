@@ -47423,10 +47423,10 @@ float func_434() // Position - 0x381E0 (229856)
 	return Global_23987.f_9117;
 }
 
-void func_435(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x381EE (229870)
+void func_435(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x381EE (229870)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_432(fParam0), fParam1, iParam4);
 	return;
 }
@@ -52106,7 +52106,7 @@ void func_561(BOOL bParam0, BOOL bParam1) // Position - 0x3E5EC (255468)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)

@@ -22105,7 +22105,7 @@ ePedComponentType func_467(Player plParam0) // Position - 0x20095 (131221)
 	if (player != -1)
 		return Global_1887694[player /*611*/];
 
-	return PV_COMP_INVALID;
+	return -1;
 }
 
 BOOL func_468() // Position - 0x200B4 (131252)
@@ -44603,7 +44603,7 @@ void func_1061() // Position - 0x3AF71 (241521)
 BOOL func_1062(ePedComponentType epctParam0) // Position - 0x3B052 (241746)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+		return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
 
 	return false;
 }
@@ -87338,14 +87338,14 @@ int func_1169(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posi
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_1170(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_1170(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_1170(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_1170(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-void func_1170(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x67C12 (424978)
+void func_1170(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x67C12 (424978)
 {
 	int num;
 
@@ -87360,8 +87360,8 @@ void func_1170(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompo
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -89955,7 +89955,7 @@ int func_1238(char* sParam0, ePedComponentType epctParam1, ePedComponentType epc
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_1170(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
+		func_1170(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -159834,38 +159834,38 @@ int func_1878(Player plParam0) // Position - 0xD07B2 (853938)
 	return 0;
 }
 
-ePedComponentType func_1879(ePedComponentType epctParam0) // Position - 0xD07D6 (853974)
+ePedComponentType func_1879(BOOL bParam0) // Position - 0xD07D6 (853974)
 {
-	switch (epctParam0)
+	switch (bParam0)
 	{
-		case PV_COMP_BERD:
+		case true:
 			return 102;
 	
-		case PV_COMP_HAIR:
+		case 2:
 			return 103;
 	
-		case PV_COMP_UPPR:
+		case 3:
 			return 104;
 	
-		case PV_COMP_LOWR:
+		case 4:
 			return 105;
 	
-		case PV_COMP_HAND:
+		case 5:
 			return 106;
 	
-		case PV_COMP_FEET:
+		case 6:
 			return 107;
 	
-		case PV_COMP_TEEF:
+		case 7:
 			return 108;
 	
-		case PV_COMP_ACCS:
+		case 8:
 			return 109;
 	
-		case PV_COMP_TASK:
+		case 9:
 			return 110;
 	
-		case PV_COMP_DECL:
+		case 10:
 			return 111;
 	
 		default:
@@ -159875,12 +159875,12 @@ ePedComponentType func_1879(ePedComponentType epctParam0) // Position - 0xD07D6 
 	return -1;
 }
 
-ePedComponentType func_1880(ePedComponentType epctParam0) // Position - 0xD0854 (854100)
+BOOL func_1880(ePedComponentType epctParam0) // Position - 0xD0854 (854100)
 {
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[epctParam0 /*892*/].f_268.f_360;
 
-	return PV_COMP_HEAD;
+	return false;
 }
 
 ePedComponentType func_1881(int iParam0) // Position - 0xD0878 (854136)
@@ -162506,14 +162506,14 @@ Vector3 func_1937(ePedComponentType epctParam0) // Position - 0xD44E7 (869607)
 
 ePedComponentType func_1938(ePedComponentType epctParam0) // Position - 0xD45F3 (869875)
 {
-	ePedComponentType type;
+	BOOL flag;
 
 	if (epctParam0 != _INVALID_PLAYER_INDEX())
 	{
-		type = func_1880(epctParam0);
+		flag = func_1880(epctParam0);
 	
-		if (type != PV_COMP_HEAD)
-			return func_1879(type);
+		if (flag != false)
+			return func_1879(flag);
 	}
 
 	return -1;

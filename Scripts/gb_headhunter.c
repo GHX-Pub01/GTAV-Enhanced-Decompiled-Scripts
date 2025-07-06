@@ -5097,7 +5097,7 @@ BOOL func_137(ePedComponentType epctParam0) // Position - 0x5364 (21348)
 	player = epctParam0;
 
 	if (player != -1)
-		return Global_1887694[player /*611*/] != PV_COMP_INVALID;
+		return Global_1887694[player /*611*/] != -1;
 
 	return false;
 }
@@ -6325,7 +6325,7 @@ ePedComponentType func_188(Player plParam0) // Position - 0x68C8 (26824)
 	if (player != -1)
 		return Global_1887694[player /*611*/];
 
-	return PV_COMP_INVALID;
+	return -1;
 }
 
 BOOL func_189() // Position - 0x68E7 (26855)
@@ -9344,11 +9344,11 @@ int _THEFEED_SHOW_MESSAGE(char* sParam0, BOOL bParam1) // Position - 0x9C60 (400
 
 	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST(sParam0);
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-	func_328(0, sParam0, num2, 0, PV_COMP_HEAD, false, false, 0, 1, 0, 0, 0);
+	func_328(0, sParam0, num2, 0, PV_COMP_HEAD, 0, 0, 0, 1, 0, 0, 0);
 	return num;
 }
 
-void func_328(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x9C98 (40088)
+void func_328(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x9C98 (40088)
 {
 	int num;
 
@@ -9363,8 +9363,8 @@ void func_328(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompon
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -54921,9 +54921,9 @@ int func_545(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_328(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_328(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_328(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_328(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
@@ -57934,7 +57934,7 @@ int func_627(char* sParam0, ePedComponentType epctParam1, ePedComponentType epct
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_328(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
+		func_328(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -78566,7 +78566,7 @@ void func_959() // Position - 0x569D1 (354769)
 BOOL func_960(Player plParam0) // Position - 0x56AB2 (354994)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1845270[plParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+		return Global_1845270[plParam0 /*892*/].f_268.f_360 != false;
 
 	return false;
 }

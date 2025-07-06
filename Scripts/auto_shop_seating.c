@@ -2886,12 +2886,12 @@ BOOL func_100(Player plParam0) // Position - 0x29E6 (10726)
 	return false;
 }
 
-int func_101(int iParam0) // Position - 0x2A2D (10797)
+int func_101(BOOL bParam0) // Position - 0x2A2D (10797)
 {
-	switch (iParam0)
+	switch (bParam0)
 	{
-		case 0:
-		case 1:
+		case false:
+		case true:
 		case 2:
 		case 3:
 		case 4:

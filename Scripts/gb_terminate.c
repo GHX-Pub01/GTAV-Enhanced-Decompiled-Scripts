@@ -45601,14 +45601,14 @@ int func_237(char* sParam0, ePedComponentType epctParam1, BOOL bParam2) // Posit
 	num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
 
 	if (bParam2)
-		func_238(3, sParam0, 2, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_238(3, sParam0, 2, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 	else
-		func_238(3, sParam0, 1, "", epctParam1, false, false, 0, 1, 0, 0, 0);
+		func_238(3, sParam0, 1, "", epctParam1, 0, 0, 0, 1, 0, 0, 0);
 
 	return num;
 }
 
-void func_238(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x2F79E (194462)
+void func_238(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, char* sParam9, char* sParam10, char* sParam11) // Position - 0x2F79E (194462)
 {
 	int num;
 
@@ -45623,8 +45623,8 @@ void func_238(int iParam0, char* sParam1, int iParam2, char* sParam3, ePedCompon
 		Global_1938165.f_5[num /*53*/].f_1 = iParam2;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_8), sParam1, 16);
 		Global_1938165.f_5[num /*53*/].f_2[0] = epctParam4;
-		Global_1938165.f_5[num /*53*/].f_2[1] = bParam5;
-		Global_1938165.f_5[num /*53*/].f_2[2] = bParam6;
+		Global_1938165.f_5[num /*53*/].f_2[1] = iParam5;
+		Global_1938165.f_5[num /*53*/].f_2[2] = iParam6;
 		Global_1938165.f_5[num /*53*/].f_7 = iParam7;
 		Global_1938165.f_5[num /*53*/].f_6 = iParam8;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_1938165.f_5[num /*53*/].f_12), sParam3, 64);
@@ -48714,7 +48714,7 @@ int func_325(char* sParam0, ePedComponentType epctParam1, ePedComponentType epct
 	
 		HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam2);
 		num = HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-		func_238(27, sParam0, 1, &unk, epctParam2, false, false, 0, 1, 0, 0, 0);
+		func_238(27, sParam0, 1, &unk, epctParam2, 0, 0, 0, 1, 0, 0, 0);
 	}
 
 	return num;
@@ -62157,9 +62157,9 @@ int func_459(int iParam0, BOOL bParam1) // Position - 0x42FC7 (274375)
 	return 0;
 }
 
-BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (275339)
+int func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (275339)
 {
-	BOOL flag;
+	int num;
 
 	if (bParam2)
 		return Global_262145.f_18579;
@@ -62170,13 +62170,13 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			return BUILTIN::ROUND((float)Global_262145.f_12964 * Global_262145.f_12969);
 	
 		case 157:
-			return false;
+			return 0;
 	
 		case 159:
 			return BUILTIN::ROUND((float)Global_262145.f_12914 * Global_262145.f_12919);
 	
 		case 151:
-			return false;
+			return 0;
 	
 		case 148:
 			return BUILTIN::ROUND((float)Global_262145.f_12941 * Global_262145.f_12945);
@@ -62218,18 +62218,18 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			return Global_262145.f_15422;
 	
 		case 166:
-			return false;
+			return 0;
 	
 		case 167:
 			return Global_262145.f_17417;
 	
 		case 168:
-			flag = Global_262145.f_17416;
+			num = Global_262145.f_17416;
 		
 			if (func_265() && *Global_262145.f_32870 && !_STAT_GET_PACKED_BOOL(32350, -1))
-				flag = flag * *Global_262145.f_32888;
+				num = num * *Global_262145.f_32888;
 		
-			return flag;
+			return num;
 	
 		case 179:
 			return Global_262145.f_18585;
@@ -62238,7 +62238,7 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			return Global_262145.f_18465;
 	
 		case 182:
-			return false;
+			return 0;
 	
 		case 183:
 			return Global_262145.f_18473;
@@ -62247,40 +62247,40 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			return Global_262145.f_18482;
 	
 		case 186:
-			return false;
+			return 0;
 	
 		case 189:
 			return Global_262145.f_18666;
 	
 		case 190:
-			return false;
+			return 0;
 	
 		case 191:
-			return false;
+			return 0;
 	
 		case 192:
-			return false;
+			return 0;
 	
 		case 193:
 			return Global_262145.f_18682;
 	
 		case 194:
-			return false;
+			return 0;
 	
 		case 195:
-			return false;
+			return 0;
 	
 		case 197:
 			return Global_262145.f_18542;
 	
 		case 198:
-			return false;
+			return 0;
 	
 		case 199:
 			return Global_262145.f_18711;
 	
 		case 200:
-			return false;
+			return 0;
 	
 		case 201:
 			return Global_262145.f_18599;
@@ -62289,13 +62289,13 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			return Global_262145.f_18699;
 	
 		case 207:
-			return false;
+			return 0;
 	
 		case 208:
 			return Global_262145.f_18570;
 	
 		case 209:
-			return false;
+			return 0;
 	
 		case 210:
 			return Global_262145.f_18694;
@@ -62348,16 +62348,16 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 		case 226:
 			if (func_265() && !func_227())
 				if (func_242(PLAYER::PLAYER_ID()))
-					flag = Global_262145.f_21224;
+					num = Global_262145.f_21224;
 				else
-					flag = Global_262145.f_21225;
+					num = Global_262145.f_21225;
 			else if (func_227())
-				flag = Global_262145.f_21226;
+				num = Global_262145.f_21226;
 		
 			if (func_265() && *Global_262145.f_32878 && !_STAT_GET_PACKED_BOOL(32357, -1))
-				flag = flag * *Global_262145.f_32890;
+				num = num * *Global_262145.f_32890;
 		
-			return flag;
+			return num;
 	
 		case 227:
 			if (func_265() && !func_227())
@@ -62420,16 +62420,16 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 		case 237:
 			if (func_265() && !func_227())
 				if (func_242(PLAYER::PLAYER_ID()))
-					flag = Global_262145.f_24037;
+					num = Global_262145.f_24037;
 				else
-					flag = Global_262145.f_24038;
+					num = Global_262145.f_24038;
 			else if (func_227())
-				flag = Global_262145.f_24039;
+				num = Global_262145.f_24039;
 		
 			if (func_265() && *Global_262145.f_32877 && !_STAT_GET_PACKED_BOOL(32356, -1))
-				flag = flag * *Global_262145.f_32889;
+				num = num * *Global_262145.f_32889;
 		
-			return flag;
+			return num;
 	
 		case 238:
 			if (func_265() && !func_227())
@@ -62472,7 +62472,7 @@ BOOL func_460(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x4338B (27
 			break;
 	}
 
-	return false;
+	return 0;
 }
 
 void func_461(ePedComponentType epctParam0, var uParam1, var uParam2) // Position - 0x43BC2 (277442)

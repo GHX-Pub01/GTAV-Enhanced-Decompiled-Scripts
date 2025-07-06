@@ -19260,7 +19260,7 @@ BOOL func_111() // Position - 0xD615 (54805)
 
 BOOL func_112(ePedComponentType epctParam0) // Position - 0xD660 (54880)
 {
-	return Global_1845270[epctParam0 /*892*/].f_268.f_360 != PV_COMP_HEAD;
+	return Global_1845270[epctParam0 /*892*/].f_268.f_360 != false;
 }
 
 BOOL func_113() // Position - 0xD679 (54905)

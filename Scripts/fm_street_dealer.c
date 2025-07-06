@@ -2838,10 +2838,10 @@ float func_36() // Position - 0x4293 (17043)
 	return Global_23987.f_9117;
 }
 
-void func_37(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x42A1 (17057)
+void func_37(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x42A1 (17057)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_34(fParam0), fParam1, iParam4);
 	return;
 }
@@ -4275,16 +4275,16 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 	var unk;
 	int num;
 	char* str;
-	Hash hash;
-	Hash hash2;
-	Hash hash3;
+	BOOL flag;
+	BOOL flag2;
+	BOOL flag3;
 	var unk5;
 
 	num = func_117(uParam0);
 	str = "";
-	hash = -1;
-	hash2 = -1;
-	hash3 = -1;
+	flag = -1;
+	flag2 = -1;
+	flag3 = -1;
 
 	if (IS_BIT_SET(uParam0->f_5, 6))
 	{
@@ -4310,8 +4310,8 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				if (IS_BIT_SET(uParam0->f_5, 5))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_13;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_13;
 				}
 				else
 				{
@@ -4321,15 +4321,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				str = "SDM_COKE" /*Cocaine*/;
 			
 				if (IS_BIT_SET(uParam0->f_5, 4))
-					hash = uParam0->f_13;
+					flag = uParam0->f_13;
 				break;
 		
 			case 3:
 				if (IS_BIT_SET(uParam0->f_5, 5))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_14;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_14;
 				}
 				else
 				{
@@ -4339,15 +4339,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				str = "SDM_METH" /*Meth*/;
 			
 				if (IS_BIT_SET(uParam0->f_5, 4))
-					hash = uParam0->f_14;
+					flag = uParam0->f_14;
 				break;
 		
 			case 4:
 				if (IS_BIT_SET(uParam0->f_5, 5))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_15;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_15;
 				}
 				else
 				{
@@ -4357,15 +4357,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				str = "SDM_WEED" /*Weed*/;
 			
 				if (IS_BIT_SET(uParam0->f_5, 4))
-					hash = uParam0->f_15;
+					flag = uParam0->f_15;
 				break;
 		
 			case 7:
 				if (IS_BIT_SET(uParam0->f_5, 5))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_16;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_16;
 				}
 				else
 				{
@@ -4375,7 +4375,7 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				str = "SDM_ACID" /*Acid*/;
 			
 				if (IS_BIT_SET(uParam0->f_5, 4))
-					hash = uParam0->f_16;
+					flag = uParam0->f_16;
 				break;
 		}
 	}
@@ -4392,8 +4392,8 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				if (func_108(uParam0))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_13;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_13;
 				}
 				else
 				{
@@ -4401,15 +4401,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				}
 			
 				str = "SDM_COKE" /*Cocaine*/;
-				hash = uParam0->f_13;
+				flag = uParam0->f_13;
 				break;
 		
 			case 3:
 				if (func_107(uParam0))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_14;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_14;
 				}
 				else
 				{
@@ -4417,15 +4417,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				}
 			
 				str = "SDM_METH" /*Meth*/;
-				hash = uParam0->f_14;
+				flag = uParam0->f_14;
 				break;
 		
 			case 4:
 				if (func_106(uParam0))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_15;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_15;
 				}
 				else
 				{
@@ -4433,15 +4433,15 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				}
 			
 				str = "SDM_WEED" /*Weed*/;
-				hash = uParam0->f_15;
+				flag = uParam0->f_15;
 				break;
 		
 			case 7:
 				if (func_83(uParam0))
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "A", 16);
-					hash2 = func_109(uParam0, num);
-					hash3 = hash2 * uParam0->f_16;
+					flag2 = func_109(uParam0, num);
+					flag3 = flag2 * uParam0->f_16;
 				}
 				else
 				{
@@ -4449,7 +4449,7 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 				}
 			
 				str = "SDM_ACID" /*Acid*/;
-				hash = uParam0->f_16;
+				flag = uParam0->f_16;
 				break;
 		}
 	}
@@ -4461,38 +4461,38 @@ void func_79(var uParam0) // Position - 0x5DA6 (23974)
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(str))
 			func_81(str);
 	
-		if (hash > -1)
-			func_80(hash);
+		if (flag > -1)
+			func_80(flag);
 	
-		if (hash2 > -1)
-			func_80(hash2);
+		if (flag2 > -1)
+			func_80(flag2);
 	
-		if (hash3 > -1)
-			func_80(hash3);
+		if (flag3 > -1)
+			func_80(flag3);
 	}
 	else if (IS_BIT_SET(uParam0->f_5, 5))
 	{
-		func_80(hash2);
+		func_80(flag2);
 		func_81(str);
-		func_80(hash3);
+		func_80(flag3);
 	}
 	else if (IS_BIT_SET(uParam0->f_5, 4))
 	{
 		func_81(str);
-		func_80(hash);
+		func_80(flag);
 	}
 
 	return;
 }
 
-void func_80(Hash hParam0) // Position - 0x613F (24895)
+void func_80(BOOL bParam0) // Position - 0x613F (24895)
 {
 	if (Global_23987.f_5320 >= 3 || Global_23987.f_5319 >= 4)
 		return;
 
 	Global_23987.f_5253[Global_23987.f_5319] = 2;
 	Global_23987.f_5319 = Global_23987.f_5319 + 1;
-	Global_23987.f_5258[Global_23987.f_5320] = hParam0;
+	Global_23987.f_5258[Global_23987.f_5320] = bParam0;
 	Global_23987.f_5320 = Global_23987.f_5320 + 1;
 	return;
 }
@@ -5025,7 +5025,7 @@ BOOL func_108(var uParam0) // Position - 0x6A82 (27266)
 	return 0;
 }
 
-Hash func_109(var uParam0, int iParam1) // Position - 0x6AA4 (27300)
+BOOL func_109(var uParam0, int iParam1) // Position - 0x6AA4 (27300)
 {
 	int num;
 	int num2;
@@ -5264,7 +5264,7 @@ void func_119(var uParam0) // Position - 0x6E87 (28295)
 	BOOL flag;
 	int num2;
 	BOOL flag2;
-	Hash hash;
+	BOOL flag3;
 
 	func_126(uParam0);
 	i = PV_COMP_HEAD;
@@ -5279,52 +5279,52 @@ void func_119(var uParam0) // Position - 0x6E87 (28295)
 		switch (num)
 		{
 			case 2:
-				hash = Global_262145.f_32411 - uParam0->f_17;
+				flag3 = Global_262145.f_32411 - uParam0->f_17;
 				func_67(i, "SDM_O_COKE" /*Sell Cocaine (~1~/~1~)*/, num2, flag2, 0, false, 0);
 			
 				if (flag)
 					func_125(2, false);
 			
-				func_122(hash, false);
+				func_122(flag3, false);
 				func_122(Global_262145.f_32411, false);
 				func_67(i, "R2P_MENU_SC" /*$~1~*/, 1, flag2, false, false, false);
 				func_122(uParam0->f_13, false);
 				break;
 		
 			case 3:
-				hash = Global_262145.f_32412 - uParam0->f_18;
+				flag3 = Global_262145.f_32412 - uParam0->f_18;
 				func_67(i, "SDM_O_METH" /*Sell Meth (~1~/~1~)*/, num2, flag2, false, false, false);
 			
 				if (flag)
 					func_125(2, false);
 			
-				func_122(hash, false);
+				func_122(flag3, false);
 				func_122(Global_262145.f_32412, false);
 				func_67(i, "R2P_MENU_SC" /*$~1~*/, 1, flag2, false, false, false);
 				func_122(uParam0->f_14, false);
 				break;
 		
 			case 4:
-				hash = Global_262145.f_32413 - uParam0->f_19;
+				flag3 = Global_262145.f_32413 - uParam0->f_19;
 				func_67(i, "SDM_O_WEED" /*Sell Weed (~1~/~1~)*/, num2, flag2, false, false, false);
 			
 				if (flag)
 					func_125(2, false);
 			
-				func_122(hash, false);
+				func_122(flag3, false);
 				func_122(Global_262145.f_32413, false);
 				func_67(i, "R2P_MENU_SC" /*$~1~*/, 1, flag2, false, false, false);
 				func_122(uParam0->f_15, false);
 				break;
 		
 			case 7:
-				hash = Global_262145.f_32414 - uParam0->f_20;
+				flag3 = Global_262145.f_32414 - uParam0->f_20;
 				func_67(i, "SDM_O_ACID" /*Sell Acid (~1~/~1~)*/, num2, flag2, false, false, false);
 			
 				if (flag)
 					func_125(2, false);
 			
-				func_122(hash, false);
+				func_122(flag3, false);
 				func_122(Global_262145.f_32414, false);
 				func_67(i, "R2P_MENU_SC" /*$~1~*/, 1, flag2, false, false, false);
 				func_122(uParam0->f_16, false);
@@ -5403,7 +5403,7 @@ void func_121(eControlAction ecaParam0, char* sParam1, int iParam2, BOOL bParam3
 	return;
 }
 
-void func_122(Hash hParam0, BOOL bParam1) // Position - 0x71C2 (29122)
+void func_122(BOOL bParam0, BOOL bParam1) // Position - 0x71C2 (29122)
 {
 	float num;
 	float num2;
@@ -5422,7 +5422,7 @@ void func_122(Hash hParam0, BOOL bParam1) // Position - 0x71C2 (29122)
 	if (Global_23987.f_6346 >= Global_23987.f_6344)
 		return;
 
-	Global_23987.f_4469[Global_23987.f_5825] = hParam0;
+	Global_23987.f_4469[Global_23987.f_5825] = bParam0;
 	Global_23987.f_5825 = Global_23987.f_5825 + 1;
 	Global_23987.f_2387[Global_23987.f_6345 /*5*/][Global_23987.f_6346] = 2;
 	Global_23987.f_6346 = Global_23987.f_6346 + 1;
@@ -5777,7 +5777,7 @@ void func_133(BOOL bParam0, BOOL bParam1) // Position - 0x7AE4 (31460)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
@@ -6777,12 +6777,12 @@ BOOL func_153(Hash hParam0, int iParam1, var uParam2, var uParam3, int iParam4) 
 	return *uParam2 != 1;
 }
 
-ePedComponentType func_154(Player plParam0) // Position - 0x8E44 (36420)
+BOOL func_154(Player plParam0) // Position - 0x8E44 (36420)
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 		return Global_1845270[plParam0 /*892*/].f_268.f_360;
 
-	return PV_COMP_HEAD;
+	return false;
 }
 
 int func_155(int iParam0) // Position - 0x8E68 (36456)

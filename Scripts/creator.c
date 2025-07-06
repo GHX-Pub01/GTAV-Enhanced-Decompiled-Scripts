@@ -118081,10 +118081,10 @@ void func_907(float fParam0, float fParam1, char* sParam2, float fParam3, int iP
 	return;
 }
 
-void func_908(float fParam0, float fParam1, char* sParam2, Hash hParam3, int iParam4) // Position - 0x88748 (558920)
+void func_908(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x88748 (558920)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(hParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_875(fParam0), fParam1, iParam4);
 	return;
 }
@@ -121144,7 +121144,7 @@ void func_1015(BOOL bParam0, BOOL bParam1) // Position - 0x8C485 (574597)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_23987.f_4469[i] = 0;
+		Global_23987.f_4469[i] = false;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
