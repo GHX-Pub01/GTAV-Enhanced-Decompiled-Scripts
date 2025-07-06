@@ -87304,7 +87304,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		{
 			if (hParam3 == joaat("CATEGORY_WEAPON_AMMO") || hParam3 == joaat("CATEGORY_MART"))
 			{
-				Global_4538091 = 1;
+				Global_4538091 = true;
 				return 0;
 			}
 		}
@@ -87351,7 +87351,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 	{
 		if (iParam7 & 2 != 0)
 		{
-			Global_4538089 = 1;
+			Global_4538089 = true;
 			Global_4538092 = hParam4;
 			Global_4538094 = hParam3;
 			Global_4538095 = 1;
@@ -87371,7 +87371,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		if (flag4)
 		{
 			func_1076(1, hParam4);
-			Global_4538089 = 0;
+			Global_4538089 = false;
 		}
 	
 		if (iParam7 & 4 != 0)
@@ -151025,7 +151025,7 @@ void func_1874(BOOL bParam0) // Position - 0xBDB2B (777003)
 {
 	var unk;
 	int i;
-	ePedComponentType type;
+	int num;
 
 	unk = -1;
 	unk.f_22 = -1082130432;
@@ -151038,11 +151038,11 @@ void func_1874(BOOL bParam0) // Position - 0xBDB2B (777003)
 
 	for (i = 0; i <= 31; i = i + 1)
 	{
-		type = Global_1920830[i /*42*/].f_3;
+		num = Global_1920830[i /*42*/].f_3;
 		Global_1920830[i /*42*/] = { unk };
 	
 		if (func_1219())
-			Global_1920830[i /*42*/].f_3 = type;
+			Global_1920830[i /*42*/].f_3 = num;
 	
 		Global_1920830[i /*42*/].f_1 = _INVALID_PLAYER_INDEX();
 		Global_1920830[i /*42*/] = PV_COMP_INVALID;
@@ -151065,7 +151065,7 @@ BOOL func_1875() // Position - 0xBDBF8 (777208)
 	for (i = 0; i < 32; i = i + 1)
 	{
 		if (Global_1920830[i /*42*/].f_1 != _INVALID_PLAYER_INDEX())
-			if (Global_1920830[i /*42*/].f_10 > PV_COMP_HEAD)
+			if (Global_1920830[i /*42*/].f_10 > 0)
 				return true;
 	}
 

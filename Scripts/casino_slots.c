@@ -11783,7 +11783,7 @@ void func_248(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 	if (bParam3)
 	{
-		if (Global_23987.f_5821 <= PV_COMP_BERD)
+		if (Global_23987.f_5821 <= true)
 		{
 			func_273(Global_23987.f_5821 + 1, "DFLT_MNU_OPT" /*Exit*/, 0, 1, 0, false, 0);
 			Global_23987.f_6617 = 1;
@@ -14041,7 +14041,7 @@ char* func_272(int iParam0) // Position - 0xDB36 (56118)
 	return "CommonMenu";
 }
 
-void func_273(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0xDBAB (56235)
+void func_273(BOOL bParam0, char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0xDBAB (56235)
 {
 	int num;
 	float num2;
@@ -14049,7 +14049,7 @@ void func_273(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bPa
 	var unk;
 	float num4;
 
-	if (Global_23987.f_5821 > epctParam0)
+	if (Global_23987.f_5821 > bParam0)
 		return;
 
 	if (Global_23987.f_5821 >= 128)
@@ -14061,9 +14061,9 @@ void func_273(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bPa
 	if (Global_23987.f_6346 < Global_23987.f_6344)
 		return;
 
-	if (Global_23987.f_5821 != epctParam0)
+	if (Global_23987.f_5821 != bParam0)
 	{
-		Global_23987.f_5821 = epctParam0;
+		Global_23987.f_5821 = bParam0;
 		Global_23987.f_5822 = 0;
 	}
 
@@ -14113,12 +14113,12 @@ void func_273(ePedComponentType epctParam0, char* sParam1, int iParam2, BOOL bPa
 		{
 			num4 = func_274(&Global_23987.f_79[Global_23987.f_5823 /*6*/]);
 		
-			if (num4 > Global_23987.f_6348[epctParam0])
-				Global_23987.f_6348[epctParam0] = num4;
+			if (num4 > Global_23987.f_6348[bParam0])
+				Global_23987.f_6348[bParam0] = num4;
 		}
 	}
 
-	MISC::SET_BIT(&Global_23987.f_5692[epctParam0], Global_23987.f_5822);
+	MISC::SET_BIT(&Global_23987.f_5692[bParam0], Global_23987.f_5822);
 	Global_23987.f_5822 = Global_23987.f_5822 + 1;
 	Global_23987.f_6347 = 1;
 	Global_23987.f_6345 = Global_23987.f_5823 - 1;
@@ -14146,16 +14146,16 @@ float func_275(char* sParam0) // Position - 0xDDE3 (56803)
 	return func_256(true);
 }
 
-void func_276(ePedComponentType epctParam0, BOOL bParam1) // Position - 0xDE20 (56864)
+void func_276(BOOL bParam0, BOOL bParam1) // Position - 0xDE20 (56864)
 {
 	int num;
 
-	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(epctParam0) / 32f);
+	num = BUILTIN::FLOOR(BUILTIN::TO_FLOAT(bParam0) / 32f);
 
 	if (bParam1)
-		MISC::SET_BIT(&Global_23987.f_6618[num], epctParam0 - (num * 32));
+		MISC::SET_BIT(&Global_23987.f_6618[num], bParam0 - (num * 32));
 	else
-		MISC::CLEAR_BIT(&Global_23987.f_6618[num], epctParam0 - (num * 32));
+		MISC::CLEAR_BIT(&Global_23987.f_6618[num], bParam0 - (num * 32));
 
 	return;
 }

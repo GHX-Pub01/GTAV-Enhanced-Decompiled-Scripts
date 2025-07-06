@@ -120636,13 +120636,13 @@ BOOL func_1027(int iParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, var uParam
 		if (type > 5000)
 			num = 1;
 	
-		func_1028(type, "GR_GLBPNG" /*GLOBAL SIGNAL*/, 0, 0, PV_COMP_INVALID, 0, 6, 0, num, 0, 0, 0, num, 0, 0, 0, 0, -1);
+		func_1028(type, "GR_GLBPNG" /*GLOBAL SIGNAL*/, 0, 0, -1, 0, 6, 0, num, 0, 0, 0, num, 0, 0, 0, 0, -1);
 	}
 
 	return false;
 }
 
-void func_1028(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x97836 (620598)
+void func_1028(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x97836 (620598)
 {
 	int num;
 	int i;
@@ -120664,7 +120664,7 @@ void func_1028(ePedComponentType epctParam0, char* sParam1, int iParam2, int iPa
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_4714.f_11[num /*16*/], sParam1, 64);
 		Global_1675263.f_4714.f_172[num] = iParam2;
 		Global_1675263.f_4714.f_216[num] = iParam3;
-		Global_1675263.f_4714.f_183[num] = epctParam4;
+		Global_1675263.f_4714.f_183[num] = iParam4;
 		Global_1675263.f_4714.f_194[num] = iParam5;
 		Global_1675263.f_4714.f_249[num] = iParam6;
 		Global_1675263.f_4714.f_260[num] = iParam7;
@@ -122588,7 +122588,7 @@ void func_1122() // Position - 0x99D38 (630072)
 			if (iLocal_1080 > 0)
 				func_1028(iLocal_1080, "HACK_WORK_END" /*JOB TIME*/, 0, 0, -1, 0, 3, 0, num, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 			else
-				func_1028(PV_COMP_HEAD, "HACK_WORK_END" /*JOB TIME*/, 0, 0, PV_COMP_INVALID, 0, 3, 0, num, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+				func_1028(PV_COMP_HEAD, "HACK_WORK_END" /*JOB TIME*/, 0, 0, -1, 0, 3, 0, num, 0, 0, 0, 0, 0, 0, 0, 0, -1);
 		
 			func_1123(iLocal_1080, func_170() != 0, &uLocal_1750, -1);
 		}

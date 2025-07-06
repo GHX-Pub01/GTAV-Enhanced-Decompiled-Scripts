@@ -103729,12 +103729,12 @@ void func_792(BOOL bParam0) // Position - 0x833E9 (537577)
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
 		func_41(1);
-		Global_4547016 = false;
+		Global_4547016 = 0;
 	}
 	else
 	{
 		MISC::IGNORE_NEXT_RESTART(true);
-		Global_4547016 = true;
+		Global_4547016 = 1;
 	}
 
 	func_508(&unk4);
@@ -104485,7 +104485,7 @@ void func_801(int iParam0) // Position - 0x84CF8 (543992)
 	return;
 }
 
-void func_802(char* sParam0) // Position - 0x84E2D (544301)
+void func_802(const char* sParam0) // Position - 0x84E2D (544301)
 {
 	int i;
 
@@ -104525,7 +104525,7 @@ BOOL func_803(int iParam0) // Position - 0x84EDC (544476)
 	return false;
 }
 
-void func_804(char* sParam0, int iParam1) // Position - 0x84F31 (544561)
+void func_804(const char* sParam0, int iParam1) // Position - 0x84F31 (544561)
 {
 	int i;
 

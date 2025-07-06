@@ -97525,7 +97525,7 @@ void func_704(BOOL bParam0, var uParam1) // Position - 0x7BBAC (506796)
 
 	*uParam1 = -1;
 
-	if (bParam0 >= 0)
+	if (bParam0 >= false)
 	{
 		for (i = 0; i < 547; i = i + 1)
 		{

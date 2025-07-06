@@ -109108,7 +109108,7 @@ BOOL func_688(var uParam0, Cam caParam1, int iParam2, int iParam3, int iParam4, 
 			if (!PED::IS_PED_INJURED(uParam0->f_13) || bParam10 && !PED::IS_PED_INJURED(uParam0->f_12))
 			{
 				uParam0->f_27 = 0;
-				Global_98607 = 1;
+				Global_98607 = true;
 			
 				if (!bParam10)
 				{
@@ -109999,15 +109999,15 @@ void func_711(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83E85 (54
 	return;
 }
 
-int func_712(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83EC2 (540354)
+int func_712(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x83EC2 (540354)
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !bParam1)
 		if (!bParam2)
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *uParam0);
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), *iParam0);
 		else
-			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *uParam0);
+			return NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME_ACCURATE(), *iParam0);
 
-	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *uParam0);
+	return NETWORK::GET_TIME_DIFFERENCE(MISC::GET_GAME_TIMER(), *iParam0);
 }
 
 char* func_713(eTransitionState etsParam0) // Position - 0x83F09 (540425)
@@ -122391,7 +122391,7 @@ void func_981(int iParam0) // Position - 0x99DD4 (630228)
 	{
 		if (iParam0 == Global_98610)
 		{
-			Global_98614 = 1;
+			Global_98614 = true;
 			return;
 		}
 	}

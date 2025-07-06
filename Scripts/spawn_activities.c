@@ -6370,7 +6370,7 @@ void func_180(int iParam0, int iParam1) // Position - 0x8235 (33333)
 	return;
 }
 
-void func_181(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0x829D (33437)
+void func_181(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0x829D (33437)
 {
 	Hash eventData;
 
@@ -6379,7 +6379,7 @@ void func_181(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, i
 	eventData.f_3 = iParam0;
 	eventData.f_4 = iParam2;
 	eventData.f_5 = iParam3;
-	eventData.f_6 = uParam4;
+	eventData.f_6 = iParam4;
 	eventData.f_7 = iParam5;
 
 	if (!(iParam1 == 0))
@@ -6388,7 +6388,7 @@ void func_181(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, i
 	return;
 }
 
-var func_182() // Position - 0x82EA (33514)
+int func_182() // Position - 0x82EA (33514)
 {
 	return Global_2739945.f_5266.f_349;
 }

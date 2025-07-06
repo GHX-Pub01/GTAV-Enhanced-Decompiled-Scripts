@@ -86235,9 +86235,9 @@ void func_727(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-int func_728(int iParam0) // Position - 0x6F962 (457058)
+int func_728(ePedComponentType epctParam0) // Position - 0x6F962 (457058)
 {
-	switch (iParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			return 0;
@@ -86304,7 +86304,7 @@ void func_730(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position
 	int i;
 	Hash nameHash;
 	int enumValue;
-	int componentType;
+	ePedComponentType componentType;
 	int num;
 	int num2;
 	BOOL address;
@@ -86346,7 +86346,7 @@ void func_730(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position
 					if (num < Global_4540932)
 					{
 						Global_4540932[num] = -1;
-						Global_4540943[num] = -1;
+						Global_4540943[num] = PV_COMP_INVALID;
 					}
 				
 					EXTRAMETADATA::GET_VARIANT_COMPONENT(Global_2883588, i, &nameHash, &enumValue, &componentType);
@@ -107304,7 +107304,7 @@ int func_801(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	return 1;
 }
 
-void func_802(Hash hParam0, int iParam1, int iParam2) // Position - 0x85AA2 (547490)
+void func_802(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x85AA2 (547490)
 {
 	int num;
 	int num2;
@@ -107318,14 +107318,14 @@ void func_802(Hash hParam0, int iParam1, int iParam2) // Position - 0x85AA2 (547
 
 	if (func_804(hParam0, 12, num))
 	{
-		if (func_803(hParam0, iParam1, iParam2))
+		if (func_803(hParam0, iParam1, bParam2))
 		{
 			num2 = func_800(hParam0);
 		
 			if (iParam1 == 3)
-				Global_114162.f_2367.f_539.f_196[num2] = iParam2;
+				Global_114162.f_2367.f_539.f_196[num2] = bParam2;
 			else if (iParam1 == 4)
-				Global_114162.f_2367.f_539.f_200[num2] = iParam2;
+				Global_114162.f_2367.f_539.f_200[num2] = bParam2;
 		}
 	}
 
@@ -113651,20 +113651,20 @@ char* func_965(int iParam0, int iParam1) // Position - 0x8DAF9 (580345)
 
 BOOL func_966(int iParam0) // Position - 0x8E45F (582751)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_967(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_215(num2));
+	p_num = func_967(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_215(num));
 }
 
-int func_967(int iParam0) // Position - 0x8E47C (582780)
+int* func_967(int iParam0) // Position - 0x8E47C (582780)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682393.f_1061[func_219(iParam0)];
-	return unk;
+	p_num = Global_1682393.f_1061[func_219(iParam0)];
+	return p_num;
 }
 
 void func_968(BOOL bParam0) // Position - 0x8E497 (582807)
@@ -131822,7 +131822,7 @@ void func_1273(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 		switch (Global_1920804.f_9)
 		{
 			case 1:
-				if (!func_1430() && func_1427(0) > 0)
+				if (!func_1430() && func_1427(0) > false)
 					Global_1939321[0 /*8*/].f_5 = 1;
 			
 				if (!flag3)
@@ -132579,14 +132579,14 @@ void func_1283(int iParam0, int iParam1) // Position - 0xA57AA (677802)
 	return;
 }
 
-void func_1284(int iParam0, int iParam1, int iParam2) // Position - 0xA57C4 (677828)
+void func_1284(int iParam0, BOOL bParam1, int iParam2) // Position - 0xA57C4 (677828)
 {
 	BOOL flag;
 	int num;
 
 	if (*Global_262145.f_35150)
 	{
-		func_868(iParam0, iParam1, iParam2, true);
+		func_868(iParam0, bParam1, iParam2, true);
 		return;
 	}
 
@@ -132594,7 +132594,7 @@ void func_1284(int iParam0, int iParam1, int iParam2) // Position - 0xA57C4 (677
 	num.f_2 = -1;
 	num = func_1287(iParam0);
 
-	if (!func_1023(num, iParam1 == func_1230(iParam0, -1)))
+	if (!func_1023(num, bParam1 == func_1230(iParam0, -1)))
 	{
 		flag = false;
 	}
@@ -132609,7 +132609,7 @@ void func_1284(int iParam0, int iParam1, int iParam2) // Position - 0xA57C4 (677
 			flag = false;
 	}
 
-	func_868(iParam0, iParam1, iParam2, true);
+	func_868(iParam0, bParam1, iParam2, true);
 
 	if (flag)
 		func_970(&num);
@@ -135322,30 +135322,30 @@ void func_1426(float fParam0) // Position - 0xA84AC (689324)
 	return;
 }
 
-int func_1427(int iParam0) // Position - 0xA84D0 (689360)
+BOOL func_1427(int iParam0) // Position - 0xA84D0 (689360)
 {
-	int num;
+	BOOL flag;
 
 	if (Global_1939321[iParam0 /*8*/] == -1)
 	{
-		num = func_1230(func_1429(iParam0), -1);
+		flag = func_1230(func_1429(iParam0), -1);
 	
-		if (num == -1)
+		if (flag == -1)
 		{
 			func_1428(iParam0, 0);
-			num = 0;
+			flag = 0;
 		}
 	
-		Global_1939321[iParam0 /*8*/] = num;
+		Global_1939321[iParam0 /*8*/] = flag;
 	}
 
 	return Global_1939321[iParam0 /*8*/];
 }
 
-void func_1428(int iParam0, int iParam1) // Position - 0xA8513 (689427)
+void func_1428(int iParam0, BOOL bParam1) // Position - 0xA8513 (689427)
 {
-	Global_1939321[iParam0 /*8*/] = iParam1;
-	func_1284(func_1429(iParam0), iParam1, -1);
+	Global_1939321[iParam0 /*8*/] = bParam1;
+	func_1284(func_1429(iParam0), bParam1, -1);
 	return;
 }
 

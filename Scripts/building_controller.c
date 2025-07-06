@@ -2973,9 +2973,9 @@ BOOL func_35(float fParam0, var uParam1, var uParam2) // Position - 0x455A (1775
 	return false;
 }
 
-var func_36(var uParam0) // Position - 0x4584 (17796)
+char* func_36(char* sParam0) // Position - 0x4584 (17796)
 {
-	return uParam0;
+	return sParam0;
 }
 
 struct<6> func_37(int iParam0, BOOL bParam1) // Position - 0x458E (17806)

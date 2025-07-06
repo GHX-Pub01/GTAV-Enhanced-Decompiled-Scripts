@@ -15964,10 +15964,10 @@ void func_269(int iParam0, BOOL bParam1) // Position - 0x17580 (95616)
 	else
 		MISC::CLEAR_BIT(&(Global_33485[num /*23*/].f_11), 20);
 
-	if (Global_33482 == true)
-		Global_33483 = true;
+	if (Global_33482 == 1)
+		Global_33483 = 1;
 
-	Global_33482 = true;
+	Global_33482 = 1;
 	MISC::SET_BIT(&(Global_33485[num /*23*/].f_11), 20);
 	return;
 }

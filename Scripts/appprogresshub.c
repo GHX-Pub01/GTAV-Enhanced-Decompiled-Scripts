@@ -4355,7 +4355,7 @@ BOOL func_8(int iParam0) // Position - 0x500 (1280)
 	return true;
 }
 
-int func_9(int iParam0) // Position - 0x528 (1320)
+BOOL func_9(int iParam0) // Position - 0x528 (1320)
 {
 	return func_8(iParam0) ? 250000 : 150000;
 }
@@ -29408,32 +29408,32 @@ int func_210(int iParam0, int iParam1, int iParam2) // Position - 0x1CF4A (11860
 
 BOOL func_211(int iParam0, Hash hParam1, var uParam2) // Position - 0x1CF95 (118677)
 {
-	int num;
-	int num2;
 	BOOL flag;
-	Hash hash;
-	int num3;
-	int num4;
+	int num;
 	BOOL flag2;
+	Hash hash;
+	int num2;
+	int num3;
+	BOOL flag3;
 
-	num = func_9(iParam0);
+	flag = func_9(iParam0);
 
 	if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
 	{
 		if (func_94(iParam0) && *uParam2 == 0)
 			return 1;
 	
-		num2 = func_238(iParam0);
-		flag = func_237(iParam0, num2);
+		num = func_238(iParam0);
+		flag2 = func_237(iParam0, num);
 		hash = func_236(iParam0);
 	
-		if (func_225(uParam2, hash, flag))
+		if (func_225(uParam2, hash, flag2))
 		{
 			if (*uParam2 == 2)
 			{
-				func_101(num2, flag, -1, true);
-				_NETSHOPPING_PROCESS_TRANSACTION(1288347381, num, &num3, false, false, false);
-				Global_4536600[num3 /*84*/] = hParam1;
+				func_101(num, flag2, -1, true);
+				_NETSHOPPING_PROCESS_TRANSACTION(1288347381, flag, &num2, false, false, false);
+				Global_4536600[num2 /*84*/] = hParam1;
 			}
 			else
 			{
@@ -29451,16 +29451,16 @@ BOOL func_211(int iParam0, Hash hParam1, var uParam2) // Position - 0x1CF95 (118
 		if (func_94(iParam0))
 			return 1;
 	
-		MONEY::_NETWORK_EARN_PROGRESS_HUB(num, hParam1);
-		num4 = func_238(iParam0);
-		flag2 = func_237(iParam0, num4);
-		func_101(num4, flag2, -1, true);
+		MONEY::_NETWORK_EARN_PROGRESS_HUB(flag, hParam1);
+		num3 = func_238(iParam0);
+		flag3 = func_237(iParam0, num3);
+		func_101(num3, flag3, -1, true);
 	}
 
 	return 1;
 }
 
-void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, int iParam1, var uParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5) // Position - 0x1D063 (118883)
+void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, BOOL bParam1, var uParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5) // Position - 0x1D063 (118883)
 {
 	int num;
 
@@ -29559,8 +29559,8 @@ void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, int iParam1, var uParam2, BO
 		case joaat("SERVICE_SPEND_ARENA_SPECTATOR_BOX"):
 		case joaat("SERVICE_SPEND_MAKE_IT_RAIN"):
 		case 571787049:
-			if (iParam1 > 0 || Global_262145.f_27955)
-				func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), joaat("NET_SHOP_ACTION_SPEND"), joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, iParam1, num, 7);
+			if (bParam1 > false || Global_262145.f_27955)
+				func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), joaat("NET_SHOP_ACTION_SPEND"), joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, bParam1, num, 7);
 			break;
 	
 		case joaat("SERVICE_EARN_PICKUP"):
@@ -29674,7 +29674,7 @@ void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, int iParam1, var uParam2, BO
 		case joaat("SERVICE_EARN_ARENA_CAREER_TIER_PROGRESSION_3"):
 		case joaat("SERVICE_EARN_ARENA_CAREER_TIER_PROGRESSION_4"):
 		case joaat("SERVICE_EARN_SPIN_THE_WHEEL_CASH"):
-			func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), 1445302971, joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, iParam1, num, 7);
+			func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), 1445302971, joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, bParam1, num, 7);
 			break;
 	}
 
@@ -29712,8 +29712,8 @@ void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, int iParam1, var uParam2, BO
 		case joaat("SERVICE_SPEND_JUGALLO_BOSS_VEHICLE_REQUEST"):
 		case joaat("SERVICE_SPEND_SALVAGE_YARD_CLAIM_VEH"):
 		case 767920357:
-			if (iParam1 > 0 || Global_262145.f_27955)
-				func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), joaat("NET_SHOP_ACTION_SPEND"), joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, iParam1, num, 7);
+			if (bParam1 > false || Global_262145.f_27955)
+				func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), joaat("NET_SHOP_ACTION_SPEND"), joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, bParam1, num, 7);
 			break;
 	
 		case joaat("SERVICE_EARN_ASSASSINATE_TARGET_KILLED"):
@@ -29858,14 +29858,14 @@ void _NETSHOPPING_PROCESS_TRANSACTION(Hash hParam0, int iParam1, var uParam2, BO
 		case -485163763:
 		case 723646035:
 		case 805615290:
-			func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), 1445302971, joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, iParam1, num, 7);
+			func_213(uParam2, joaat("NET_SHOP_TTYPE_SERVICE"), 1445302971, joaat("CATEGORY_SERVICE_WITH_THRESHOLD"), hParam0, bParam1, num, 7);
 			break;
 	}
 
 	return;
 }
 
-int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, int iParam5, int iParam6, int iParam7) // Position - 0x1D9E2 (121314)
+int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, BOOL bParam5, int iParam6, int iParam7) // Position - 0x1D9E2 (121314)
 {
 	BOOL flag;
 	BOOL flag2;
@@ -29913,11 +29913,11 @@ int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	*uParam0 = 15;
 	transactionId = 2147483647;
 
-	if (flag || flag2 || NETSHOPPING::NET_GAMESERVER_BEGIN_SERVICE(&transactionId, hParam3, hParam4, hParam2, iParam5, iParam6))
+	if (flag || flag2 || NETSHOPPING::NET_GAMESERVER_BEGIN_SERVICE(&transactionId, hParam3, hParam4, hParam2, bParam5, iParam6))
 	{
 		if (flag || flag2 || NETSHOPPING::NET_GAMESERVER_CHECKOUT_START(transactionId))
 		{
-			*uParam0 = func_220(transactionId, iParam1, hParam4, hParam2, hParam3, iParam5, false, iParam6, iParam7, 1, true);
+			*uParam0 = func_220(transactionId, iParam1, hParam4, hParam2, hParam3, bParam5, false, iParam6, iParam7, 1, true);
 		
 			if (flag2 && !flag)
 			{
@@ -29944,7 +29944,7 @@ int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 			Global_4538092 = hParam4;
 			Global_4538094 = hParam3;
 			Global_4538095 = 1;
-			Global_4538093 = iParam5;
+			Global_4538093 = bParam5;
 		}
 	
 		if (iParam7 & 8 != 0)
@@ -29952,7 +29952,7 @@ int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 			Global_4538092 = hParam4;
 			Global_4538094 = hParam3;
 			Global_4538095 = 1;
-			Global_4538093 = iParam5;
+			Global_4538093 = bParam5;
 		}
 	
 		flag4 = false;
@@ -29964,13 +29964,13 @@ int func_213(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 		}
 	
 		if (iParam7 & 4 != 0)
-			func_214(-1, hParam4, iParam6, iParam5, -1);
+			func_214(-1, hParam4, iParam6, bParam5, -1);
 	}
 
 	return 0;
 }
 
-void func_214(int iParam0, Hash hParam1, int iParam2, int iParam3, int iParam4) // Position - 0x1DB8F (121743)
+void func_214(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x1DB8F (121743)
 {
 	switch (hParam1)
 	{
@@ -30080,7 +30080,7 @@ void func_219(int iParam0, Hash hParam1) // Position - 0x1DD95 (122261)
 	return;
 }
 
-int func_220(int iParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, int iParam5, BOOL bParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x1DDA9 (122281)
+int func_220(int iParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, BOOL bParam5, BOOL bParam6, int iParam7, int iParam8, int iParam9, BOOL bParam10) // Position - 0x1DDA9 (122281)
 {
 	int i;
 
@@ -30094,7 +30094,7 @@ int func_220(int iParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 				iParam0 = i + 900;
 		
 			Global_4536600[i /*84*/].f_65.f_2 = 1;
-			Global_4536600[i /*84*/].f_65.f_1 = iParam5;
+			Global_4536600[i /*84*/].f_65.f_1 = bParam5;
 			Global_4536600[i /*84*/].f_65.f_3 = iParam1;
 			Global_4536600[i /*84*/].f_65.f_4 = hParam2;
 			Global_4536600[i /*84*/].f_65.f_7 = hParam3;

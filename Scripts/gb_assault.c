@@ -90498,7 +90498,7 @@ struct<8> func_1313() // Position - 0x67FBB (425915)
 
 void func_1314() // Position - 0x68074 (426100)
 {
-	ePedComponentType type;
+	int num;
 
 	if (!_STOPWATCH_IS_INITIALIZED(&(iLocal_102.f_54)))
 		return;
@@ -90506,7 +90506,7 @@ void func_1314() // Position - 0x68074 (426100)
 	if (IS_BIT_SET(iLocal_361, 6))
 		return;
 
-	type = func_12() - func_1319(&(iLocal_102.f_54), false, false);
+	num = func_12() - func_1319(&(iLocal_102.f_54), false, false);
 
 	if (!func_590())
 		return;
@@ -90520,7 +90520,7 @@ void func_1314() // Position - 0x68074 (426100)
 	if (func_396(PLAYER::PLAYER_ID()) < 3)
 		return;
 
-	if (type <= 10000)
+	if (num <= 10000)
 	{
 		if (!IS_BIT_SET(iLocal_360, 19))
 		{
@@ -90530,19 +90530,19 @@ void func_1314() // Position - 0x68074 (426100)
 		}
 	}
 
-	func_1318(type);
+	func_1318(num);
 
-	if (type > 30000)
-		func_1315(type, "GB_WORK_END" /*VIP WORK END*/, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, -1);
-	else if (type >= PV_COMP_HEAD)
-		func_1315(type, "GB_WORK_END" /*VIP WORK END*/, 0, 0, PV_COMP_HEAD, 0, 3, 0, 6, 0, 0, 0, 6, 0, 0, 0, 0, -1);
+	if (num > 30000)
+		func_1315(num, "GB_WORK_END" /*VIP WORK END*/, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, -1);
+	else if (num >= 0)
+		func_1315(num, "GB_WORK_END" /*VIP WORK END*/, 0, 0, 0, 0, 3, 0, 6, 0, 0, 0, 6, 0, 0, 0, 0, -1);
 	else
-		func_1315(PV_COMP_HEAD, "GB_WORK_END" /*VIP WORK END*/, 0, 0, PV_COMP_HEAD, 0, 3, 0, 6, 0, 0, 0, 6, 0, 0, 0, 0, -1);
+		func_1315(0, "GB_WORK_END" /*VIP WORK END*/, 0, 0, 0, 0, 3, 0, 6, 0, 0, 0, 6, 0, 0, 0, 0, -1);
 
 	return;
 }
 
-void func_1315(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x6817D (426365)
+void func_1315(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x6817D (426365)
 {
 	int num;
 	int i;
@@ -90560,11 +90560,11 @@ void func_1315(ePedComponentType epctParam0, char* sParam1, int iParam2, int iPa
 	{
 		Global_1675263.f_1 = 1;
 		func_1316(7, num);
-		Global_1675263.f_4714[num] = epctParam0;
+		Global_1675263.f_4714[num] = iParam0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_4714.f_11[num /*16*/], sParam1, 64);
 		Global_1675263.f_4714.f_172[num] = iParam2;
 		Global_1675263.f_4714.f_216[num] = iParam3;
-		Global_1675263.f_4714.f_183[num] = epctParam4;
+		Global_1675263.f_4714.f_183[num] = iParam4;
 		Global_1675263.f_4714.f_194[num] = iParam5;
 		Global_1675263.f_4714.f_249[num] = iParam6;
 		Global_1675263.f_4714.f_260[num] = iParam7;
@@ -90594,7 +90594,7 @@ BOOL func_1317(int iParam0, int iParam1) // Position - 0x682F3 (426739)
 	return IS_BIT_SET(Global_1675263.f_7064[iParam0], iParam1);
 }
 
-void func_1318(ePedComponentType epctParam0) // Position - 0x68309 (426761)
+void func_1318(int iParam0) // Position - 0x68309 (426761)
 {
 	if (IS_BIT_SET(iLocal_360, 29))
 	{
@@ -90604,7 +90604,7 @@ void func_1318(ePedComponentType epctParam0) // Position - 0x68309 (426761)
 
 	if (!IS_BIT_SET(iLocal_360, 30))
 	{
-		if (epctParam0 <= 35000)
+		if (iParam0 <= 35000)
 		{
 			if (AUDIO::TRIGGER_MUSIC_EVENT("APT_PRE_COUNTDOWN_STOP"))
 			{
@@ -90616,7 +90616,7 @@ void func_1318(ePedComponentType epctParam0) // Position - 0x68309 (426761)
 
 	if (IS_BIT_SET(iLocal_360, 28))
 	{
-		if (epctParam0 <= 30000)
+		if (iParam0 <= 30000)
 		{
 			if (!IS_BIT_SET(iLocal_361, 0))
 			{
@@ -90634,7 +90634,7 @@ void func_1318(ePedComponentType epctParam0) // Position - 0x68309 (426761)
 		
 			if (IS_BIT_SET(iLocal_360, 31))
 			{
-				if (epctParam0 <= 27000)
+				if (iParam0 <= 27000)
 				{
 					if (!IS_BIT_SET(iLocal_361, 1))
 					{
@@ -90643,7 +90643,7 @@ void func_1318(ePedComponentType epctParam0) // Position - 0x68309 (426761)
 						MISC::SET_BIT(&iLocal_361, 1);
 					}
 				
-					if (epctParam0 <= 500)
+					if (iParam0 <= 500)
 					{
 						if (AUDIO::TRIGGER_MUSIC_EVENT("APT_FADE_IN_RADIO"))
 						{

@@ -6462,7 +6462,7 @@ BOOL func_213(int* piParam0, int* piParam1) // Position - 0x6A28 (27176)
 			
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1929777);
 				Global_1929778 = false;
-				Global_1929780 = false;
+				Global_1929780 = 0;
 				Global_1929779 = false;
 				Global_1929781 = 0;
 				piParam0->f_19 = { 0f, 0f, 0f };

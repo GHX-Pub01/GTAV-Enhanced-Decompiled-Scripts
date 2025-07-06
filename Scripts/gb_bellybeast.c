@@ -73926,14 +73926,14 @@ void func_816() // Position - 0x51D32 (335154)
 			if (epctLocal_133 > PV_COMP_HEAD)
 				func_817(epctLocal_133, "GB_WORK_END" /*VIP WORK END*/, 0, 0, -1, 0, 3, 0, num, 0, 0, 0, num, 0, 0, 0, 0, -1);
 			else
-				func_817(PV_COMP_HEAD, "GB_WORK_END" /*VIP WORK END*/, 0, 0, PV_COMP_INVALID, 0, 3, 0, num, 0, 0, 0, num, 0, 0, 0, 0, -1);
+				func_817(PV_COMP_HEAD, "GB_WORK_END" /*VIP WORK END*/, 0, 0, -1, 0, 3, 0, num, 0, 0, 0, num, 0, 0, 0, 0, -1);
 		}
 	}
 
 	return;
 }
 
-void func_817(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x51DDE (335326)
+void func_817(ePedComponentType epctParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17) // Position - 0x51DDE (335326)
 {
 	int num;
 	int i;
@@ -73955,7 +73955,7 @@ void func_817(ePedComponentType epctParam0, char* sParam1, int iParam2, int iPar
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_4714.f_11[num /*16*/], sParam1, 64);
 		Global_1675263.f_4714.f_172[num] = iParam2;
 		Global_1675263.f_4714.f_216[num] = iParam3;
-		Global_1675263.f_4714.f_183[num] = epctParam4;
+		Global_1675263.f_4714.f_183[num] = iParam4;
 		Global_1675263.f_4714.f_194[num] = iParam5;
 		Global_1675263.f_4714.f_249[num] = iParam6;
 		Global_1675263.f_4714.f_260[num] = iParam7;

@@ -6152,7 +6152,7 @@ int func_110(int iParam0, BOOL bParam1) // Position - 0x5C2F (23599)
 	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		num = 8;
+		num = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{

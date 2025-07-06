@@ -30031,9 +30031,9 @@ struct<2> func_160(int iParam0) // Position - 0x2023A (131642)
 	return unk;
 }
 
-void func_161(int iParam0, int iParam1) // Position - 0x20686 (132742)
+void func_161(int iParam0, BOOL bParam1) // Position - 0x20686 (132742)
 {
-	Global_79833 = iParam1;
+	Global_79833 = bParam1;
 
 	if (Global_64320)
 		return;

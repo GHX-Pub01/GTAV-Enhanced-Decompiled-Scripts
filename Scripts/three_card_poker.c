@@ -10220,7 +10220,7 @@ BOOL func_132() // Position - 0x114F9 (70905)
 		if (!NETSHOPPING::NET_GAMESERVER_IS_SESSION_VALID(func_138()) || NETSHOPPING::NET_GAMESERVER_IS_SESSION_REFRESH_PENDING())
 		{
 			if (func_137(Global_4536600[num /*84*/].f_65.f_6, Global_4536600[num /*84*/].f_65.f_4, Global_4536600[num /*84*/].f_65.f_1) == 1)
-				Global_4538090 = 1;
+				Global_4538090 = true;
 		
 			return false;
 		}
@@ -10653,7 +10653,7 @@ BOOL func_139(int iParam0, Hash hParam1, int iParam2, Hash hParam3, int iParam4,
 	{
 		if (!NETSHOPPING::NET_GAMESERVER_IS_SESSION_VALID(func_138()) || NETSHOPPING::NET_GAMESERVER_IS_SESSION_REFRESH_PENDING())
 		{
-			Global_4538090 = 1;
+			Global_4538090 = true;
 			return false;
 		}
 	
@@ -10750,7 +10750,7 @@ BOOL func_141(var uParam0, int iParam1, Hash hParam2, Hash hParam3, int iParam4,
 	{
 		if (!NETSHOPPING::NET_GAMESERVER_IS_SESSION_VALID(func_138()) || NETSHOPPING::NET_GAMESERVER_IS_SESSION_REFRESH_PENDING())
 		{
-			Global_4538090 = 1;
+			Global_4538090 = true;
 			return false;
 		}
 	

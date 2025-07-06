@@ -173397,7 +173397,7 @@ void func_2512(BOOL bParam0) // Position - 0xE225D (926301)
 {
 	var unk;
 	int i;
-	ePedComponentType type;
+	int num;
 
 	unk = -1;
 	unk.f_22 = -1082130432;
@@ -173410,11 +173410,11 @@ void func_2512(BOOL bParam0) // Position - 0xE225D (926301)
 
 	for (i = 0; i <= 31; i = i + 1)
 	{
-		type = Global_1920830[i /*42*/].f_3;
+		num = Global_1920830[i /*42*/].f_3;
 		Global_1920830[i /*42*/] = { unk };
 	
 		if (func_2012())
-			Global_1920830[i /*42*/].f_3 = type;
+			Global_1920830[i /*42*/].f_3 = num;
 	
 		Global_1920830[i /*42*/].f_1 = _INVALID_PLAYER_INDEX();
 		Global_1920830[i /*42*/] = PV_COMP_INVALID;
@@ -173437,7 +173437,7 @@ BOOL func_2513() // Position - 0xE232A (926506)
 	for (i = 0; i < 32; i = i + 1)
 	{
 		if (Global_1920830[i /*42*/].f_1 != _INVALID_PLAYER_INDEX())
-			if (Global_1920830[i /*42*/].f_10 > PV_COMP_HEAD)
+			if (Global_1920830[i /*42*/].f_10 > 0)
 				return true;
 	}
 

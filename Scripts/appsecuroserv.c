@@ -40973,7 +40973,7 @@ void func_574(var uParam0, int iParam1, int iParam2, float fParam3, float fParam
 	BOOL flag;
 	float amplitude;
 	BOOL flag2;
-	int num;
+	BOOL flag3;
 	var unk5;
 
 	func_652(uParam0, iParam1, 1, iParam14, true);
@@ -41108,9 +41108,9 @@ void func_574(var uParam0, int iParam1, int iParam2, float fParam3, float fParam
 	}
 	else if (IS_BIT_SET(iParam16, 5))
 	{
-		num = func_622(PLAYER::PLAYER_ID());
-		entityCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_621(num), func_620(num), 3.5688f, 7.9792f, 4.1641f) };
-		finalRenderedCamRot = { -21.6791f, 0f, func_620(num) + 40.237f };
+		flag3 = func_622(PLAYER::PLAYER_ID());
+		entityCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_621(flag3), func_620(flag3), 3.5688f, 7.9792f, 4.1641f) };
+		finalRenderedCamRot = { -21.6791f, 0f, func_620(flag3) + 40.237f };
 		finalRenderedCamFov = 70f;
 	}
 	else if (IS_BIT_SET(iParam16, 6) || func_619())
@@ -43166,17 +43166,17 @@ BOOL func_619() // Position - 0x321E2 (205282)
 	return false;
 }
 
-float func_620(int iParam0) // Position - 0x32200 (205312)
+float func_620(BOOL bParam0) // Position - 0x32200 (205312)
 {
-	return Global_4280768[iParam0 /*45*/].f_7;
+	return Global_4280768[bParam0 /*45*/].f_7;
 }
 
-Vector3 func_621(int iParam0) // Position - 0x32212 (205330)
+Vector3 func_621(BOOL bParam0) // Position - 0x32212 (205330)
 {
-	return Global_4280768[iParam0 /*45*/].f_4;
+	return Global_4280768[bParam0 /*45*/].f_4;
 }
 
-int func_622(Player plParam0) // Position - 0x32226 (205350)
+BOOL func_622(Player plParam0) // Position - 0x32226 (205350)
 {
 	return Global_2652571[plParam0 /*3*/];
 }

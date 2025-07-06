@@ -17329,7 +17329,7 @@ int func_137(Hash hParam0) // Position - 0x13A26 (80422)
 	return -99;
 }
 
-ePedComponentType func_138(ePedComponentType epctParam0) // Position - 0x13A85 (80517)
+BOOL func_138(ePedComponentType epctParam0) // Position - 0x13A85 (80517)
 {
 	switch (epctParam0)
 	{
@@ -57430,48 +57430,48 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 			switch (iParam1)
 			{
 				case 0:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[0 /*65*/].f_59;
 			
 				case 3:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return PV_COMP_BERD;
+						return true;
 					else
-						return PV_COMP_HEAD;
+						return false;
 					break;
 			
 				case 4:
 					if (Global_114162.f_9089.f_99.f_58[120])
-						return PV_COMP_BERD;
+						return true;
 					else
-						return PV_COMP_HEAD;
+						return false;
 					break;
 			
 				case 6:
-					return PV_COMP_FEET;
+					return 6;
 			
 				case 5:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 8:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 9:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 10:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 1:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 7:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 11:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 12:
 					break;
@@ -57485,7 +57485,7 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 			switch (iParam1)
 			{
 				case 0:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[1 /*65*/].f_59;
@@ -57500,25 +57500,25 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 					return 17;
 			
 				case 5:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 8:
 					return 26;
 			
 				case 9:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 10:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 1:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 7:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 11:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 12:
 					break;
@@ -57532,40 +57532,40 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 			switch (iParam1)
 			{
 				case 0:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 2:
 					return Global_114162.f_2367.f_539[2 /*65*/].f_59;
 			
 				case 3:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 4:
 					return 91;
 			
 				case 6:
-					return PV_COMP_ACCS;
+					return 8;
 			
 				case 5:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 8:
 					return 15;
 			
 				case 9:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 10:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 1:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 7:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 11:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 12:
 					break;
@@ -57585,34 +57585,34 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 					break;
 			
 				case 3:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 4:
 					return 80;
 			
 				case 6:
-					return PV_COMP_DECL;
+					return 10;
 			
 				case 5:
 					break;
 			
 				case 8:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 9:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 10:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 1:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 7:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 11:
-					return PV_COMP_HAIR;
+					return 2;
 			}
 			break;
 	
@@ -57626,7 +57626,7 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 					break;
 			
 				case 3:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 4:
 					return 233;
@@ -57638,19 +57638,19 @@ ePedComponentType func_271(Hash hParam0, int iParam1, ePedComponentType epctPara
 					break;
 			
 				case 8:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 9:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 10:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 1:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 7:
-					return PV_COMP_HEAD;
+					return false;
 			
 				case 11:
 					return 78;

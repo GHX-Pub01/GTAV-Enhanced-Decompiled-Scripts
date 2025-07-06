@@ -126547,7 +126547,7 @@ void func_1331(BOOL bParam0) // Position - 0xAB00F (700431)
 	return;
 }
 
-BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position - 0xAB041 (700481)
+BOOL func_1332(Ped pedParam0, Any* panParam1, int iParam2, var uParam3) // Position - 0xAB041 (700481)
 {
 	var outComponent;
 	var outProp;
@@ -126563,8 +126563,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 	switch (iParam2)
 	{
 		case 0:
-			uParam1->[1] = 4;
-			uParam1->f_13[1] = 0;
+			panParam1->[1] = 4;
+			panParam1->f_13[1] = 0;
 			return true;
 	
 		case 1:
@@ -126573,8 +126573,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_BERD_2_0"), &outComponent);
 		
-			uParam1->[1] = outComponent.f_3;
-			uParam1->f_13[1] = outComponent.f_4;
+			panParam1->[1] = outComponent.f_3;
+			panParam1->f_13[1] = outComponent.f_4;
 			return true;
 	
 		case 2:
@@ -126583,8 +126583,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_HAND_5_0"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 3:
@@ -126593,28 +126593,28 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_BERD_1_0"), &outComponent);
 		
-			uParam1->[1] = outComponent.f_3;
-			uParam1->f_13[1] = outComponent.f_4;
+			panParam1->[1] = outComponent.f_3;
+			panParam1->f_13[1] = outComponent.f_4;
 			return true;
 	
 		case 4:
 			if (flag)
 			{
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_M_BERD_0_0"), &outComponent);
-				uParam1->[1] = outComponent.f_3;
-				uParam1->f_13[1] = outComponent.f_4;
+				panParam1->[1] = outComponent.f_3;
+				panParam1->f_13[1] = outComponent.f_4;
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_M_HAIR_0_0"), &outComponent);
-				uParam1->[2] = outComponent.f_3;
-				uParam1->f_13[2] = outComponent.f_4;
+				panParam1->[2] = outComponent.f_3;
+				panParam1->f_13[2] = outComponent.f_4;
 			}
 			else
 			{
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_BERD_0_0"), &outComponent);
-				uParam1->[1] = outComponent.f_3;
-				uParam1->f_13[1] = outComponent.f_4;
+				panParam1->[1] = outComponent.f_3;
+				panParam1->f_13[1] = outComponent.f_4;
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_HAIR_0_0"), &outComponent);
-				uParam1->[2] = outComponent.f_3;
-				uParam1->f_13[2] = outComponent.f_4;
+				panParam1->[2] = outComponent.f_3;
+				panParam1->f_13[2] = outComponent.f_4;
 			}
 		
 			return true;
@@ -126625,8 +126625,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_PROP(joaat("DLC_MP_HEIST_F_EAR0_0"), &outProp);
 		
-			uParam1->f_26[2] = outProp.f_3;
-			uParam1->f_36[2] = outProp.f_4;
+			panParam1->f_26[2] = outProp.f_3;
+			panParam1->f_36[2] = outProp.f_4;
 			return true;
 	
 		case 6:
@@ -126635,8 +126635,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_PROP(joaat("DLC_MP_HEIST_F_EAR1_0"), &outProp);
 		
-			uParam1->f_26[2] = outProp.f_3;
-			uParam1->f_36[2] = outProp.f_4;
+			panParam1->f_26[2] = outProp.f_3;
+			panParam1->f_36[2] = outProp.f_4;
 			return true;
 	
 		case 7:
@@ -126645,18 +126645,18 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_PROP(joaat("DLC_MP_HEIST_F_EAR2_0"), &outProp);
 		
-			uParam1->f_26[2] = outProp.f_3;
-			uParam1->f_36[2] = outProp.f_4;
+			panParam1->f_26[2] = outProp.f_3;
+			panParam1->f_36[2] = outProp.f_4;
 			return true;
 	
 		case 8:
-			uParam1->f_26[0] = 19;
-			uParam1->f_36[0] = 0;
+			panParam1->f_26[0] = 19;
+			panParam1->f_36[0] = 0;
 			return true;
 	
 		case 9:
-			uParam1->f_26[5] = 6;
-			uParam1->f_36[5] = 0;
+			panParam1->f_26[5] = 6;
+			panParam1->f_36[5] = 0;
 			return true;
 	
 		case 10:
@@ -126665,8 +126665,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_HEIST_F_BERD_3_0"), &outComponent);
 		
-			uParam1->[1] = outComponent.f_3;
-			uParam1->f_13[1] = outComponent.f_4;
+			panParam1->[1] = outComponent.f_3;
+			panParam1->f_13[1] = outComponent.f_4;
 			return true;
 	
 		case 11:
@@ -126685,7 +126685,7 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			ped.f_2 = *uParam3;
 			ped = pedParam0;
 		
-			if (func_1333(uParam1, ped, true, true))
+			if (func_1333(panParam1, ped, true, true))
 				return true;
 			break;
 	
@@ -126695,8 +126695,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_0"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 13:
@@ -126705,8 +126705,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_0"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 14:
@@ -126715,8 +126715,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_0"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 15:
@@ -126725,8 +126725,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_0"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 16:
@@ -126735,8 +126735,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_1"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 17:
@@ -126745,8 +126745,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_1"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 18:
@@ -126755,8 +126755,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_1"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 19:
@@ -126765,8 +126765,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_1"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 20:
@@ -126775,8 +126775,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_2"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 21:
@@ -126785,8 +126785,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_2"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 22:
@@ -126795,8 +126795,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_2"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 23:
@@ -126805,8 +126805,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_2"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 24:
@@ -126815,8 +126815,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_3"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 25:
@@ -126825,8 +126825,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_3"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 26:
@@ -126835,8 +126835,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_3"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 27:
@@ -126845,8 +126845,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_3"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 28:
@@ -126855,8 +126855,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_4"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 29:
@@ -126865,8 +126865,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_4"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 30:
@@ -126875,8 +126875,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_4"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 31:
@@ -126885,8 +126885,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_4"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 32:
@@ -126895,8 +126895,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_5"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 33:
@@ -126905,8 +126905,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_5"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 34:
@@ -126915,8 +126915,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_5"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 35:
@@ -126925,8 +126925,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_5"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 36:
@@ -126935,8 +126935,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_6"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 37:
@@ -126945,8 +126945,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_6"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 38:
@@ -126955,8 +126955,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_6"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 39:
@@ -126965,8 +126965,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_6"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 40:
@@ -126975,8 +126975,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_7"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 41:
@@ -126985,8 +126985,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_7"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 42:
@@ -126995,8 +126995,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_7"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 43:
@@ -127005,8 +127005,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_7"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 44:
@@ -127015,8 +127015,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_8"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 45:
@@ -127025,8 +127025,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_8"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 46:
@@ -127035,8 +127035,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_8"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 47:
@@ -127045,8 +127045,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_8"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 48:
@@ -127055,8 +127055,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_9"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 49:
@@ -127065,8 +127065,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_9"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 50:
@@ -127075,8 +127075,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_9"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 51:
@@ -127085,8 +127085,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_9"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 52:
@@ -127095,8 +127095,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_10"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 53:
@@ -127105,8 +127105,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_10"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 54:
@@ -127115,8 +127115,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_10"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 55:
@@ -127125,8 +127125,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_10"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 56:
@@ -127135,8 +127135,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_11"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 57:
@@ -127145,8 +127145,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_11"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 58:
@@ -127155,8 +127155,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_11"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 59:
@@ -127165,8 +127165,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_11"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 60:
@@ -127175,8 +127175,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_12"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 61:
@@ -127185,8 +127185,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_12"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 62:
@@ -127195,8 +127195,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_12"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 63:
@@ -127205,8 +127205,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_12"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 64:
@@ -127215,8 +127215,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_13"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 65:
@@ -127225,8 +127225,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_13"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 66:
@@ -127235,8 +127235,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_13"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 67:
@@ -127245,8 +127245,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_13"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 68:
@@ -127255,8 +127255,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_14"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 69:
@@ -127265,8 +127265,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_14"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 70:
@@ -127275,8 +127275,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_14"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 71:
@@ -127285,8 +127285,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_14"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 72:
@@ -127295,8 +127295,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_0_15"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 73:
@@ -127305,8 +127305,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_1_15"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 74:
@@ -127315,8 +127315,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_2_15"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 75:
@@ -127325,8 +127325,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_H3_F_HAND_3_15"), &outComponent);
 		
-			uParam1->[5] = outComponent.f_3;
-			uParam1->f_13[5] = outComponent.f_4;
+			panParam1->[5] = outComponent.f_3;
+			panParam1->f_13[5] = outComponent.f_4;
 			return true;
 	
 		case 76:
@@ -127335,8 +127335,8 @@ BOOL func_1332(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position
 			else
 				EXTRAMETADATA::GET_SHOP_PED_COMPONENT(joaat("DLC_MP_X17_F_TEETH_3_0"), &outComponent);
 		
-			uParam1->[7] = outComponent.f_3;
-			uParam1->f_13[7] = outComponent.f_4;
+			panParam1->[7] = outComponent.f_3;
+			panParam1->f_13[7] = outComponent.f_4;
 			return true;
 	}
 

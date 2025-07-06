@@ -102144,7 +102144,7 @@ void func_545(var uParam0) // Position - 0x77A0E (489998)
 	return;
 }
 
-void func_546(int iParam0, BOOL bParam1) // Position - 0x77B2A (490282)
+void func_546(Ped pedParam0, BOOL bParam1) // Position - 0x77B2A (490282)
 {
 	int i;
 	int num;
@@ -102157,7 +102157,7 @@ void func_546(int iParam0, BOOL bParam1) // Position - 0x77B2A (490282)
 		for (i = 0; i < 64; i = i + 1)
 		{
 			if (Global_64356[i /*2*/] != 0)
-				if (Global_64356[i /*2*/] == iParam0)
+				if (Global_64356[i /*2*/] == pedParam0)
 					return;
 		}
 	}
@@ -102176,7 +102176,7 @@ void func_546(int iParam0, BOOL bParam1) // Position - 0x77B2A (490282)
 	if (num == -1)
 		return;
 
-	Global_64356[num /*2*/] = iParam0;
+	Global_64356[num /*2*/] = pedParam0;
 	Global_64356[num /*2*/].f_1 = 7;
 	Global_64355 = Global_64355 + 1;
 	return;

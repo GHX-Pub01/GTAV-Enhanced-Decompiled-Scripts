@@ -54000,7 +54000,7 @@ BOOL func_480(Vehicle veParam0) // Position - 0x3FB40 (260928)
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
-					if (func_482() != PV_COMP_INVALID && func_482() < 547)
+					if (func_482() != -1 && func_482() < 547)
 						if (!func_481(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_482() /*143*/].f_66)
 							return true;
 					else
@@ -54018,7 +54018,7 @@ BOOL func_481(Vehicle veParam0) // Position - 0x3FC3C (261180)
 	return false;
 }
 
-ePedComponentType func_482() // Position - 0x3FC55 (261205)
+BOOL func_482() // Position - 0x3FC55 (261205)
 {
 	return Global_2359296[func_483() /*5571*/].f_681.f_2;
 }

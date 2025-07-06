@@ -5097,7 +5097,7 @@ BOOL func_137(ePedComponentType epctParam0) // Position - 0x5364 (21348)
 	player = epctParam0;
 
 	if (player != -1)
-		return Global_1887694[player /*611*/] != -1;
+		return Global_1887694[player /*611*/] != PV_COMP_INVALID;
 
 	return false;
 }
@@ -6325,7 +6325,7 @@ ePedComponentType func_188(Player plParam0) // Position - 0x68C8 (26824)
 	if (player != -1)
 		return Global_1887694[player /*611*/];
 
-	return -1;
+	return PV_COMP_INVALID;
 }
 
 BOOL func_189() // Position - 0x68E7 (26855)

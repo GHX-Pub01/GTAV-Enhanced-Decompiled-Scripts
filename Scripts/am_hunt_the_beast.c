@@ -12231,9 +12231,9 @@ int func_99(Ped pedParam0, Hash hParam1, int iParam2) // Position - 0xA470 (4209
 BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (43825)
 {
 	Hash entityModel;
+	BOOL flag;
 	Hash hash;
 	Hash hash2;
-	Hash hash3;
 	int num;
 	ePedComponentType i;
 	Hash j;
@@ -12248,15 +12248,15 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 	var anchorPoint;
 	int shopPedApparelVariantPropCount;
 	var outProp;
-	Hash hash4;
+	Hash hash3;
 
 	if (PED::IS_PED_INJURED(pedParam0))
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
 	Global_79347[1 /*14*/] = { func_236(entityModel, hParam1, hParam2, -1) };
-	hash2 = Global_2883588;
-	hash3 = Global_2883589;
+	hash = Global_2883588;
+	hash2 = Global_2883589;
 
 	if (!IS_BIT_SET(Global_79347[1 /*14*/].f_6, 0))
 		return false;
@@ -12302,8 +12302,8 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 			{
 				if (!func_100(pedParam0, num, unk[num]))
 				{
-					Global_2883588 = hash2;
-					Global_2883589 = hash3;
+					Global_2883588 = hash;
+					Global_2883589 = hash2;
 					return false;
 				
 					if (num == 13)
@@ -12324,8 +12324,8 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 										{
 											if (!func_101(entityModel, hParam2, 14, j, &unk, &Global_79347[2 /*14*/]))
 											{
-												Global_2883588 = hash2;
-												Global_2883589 = hash3;
+												Global_2883588 = hash;
+												Global_2883589 = hash2;
 												return false;
 											}
 										}
@@ -12336,13 +12336,13 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 					}
 					else
 					{
-						hash = func_197(pedParam0, num);
-						Global_79347[2 /*14*/] = { func_236(entityModel, num, hash, -1) };
+						flag = func_197(pedParam0, num);
+						Global_79347[2 /*14*/] = { func_236(entityModel, num, flag, -1) };
 					
-						if (!func_101(entityModel, hParam2, num, hash, &unk, &Global_79347[2 /*14*/]))
+						if (!func_101(entityModel, hParam2, num, flag, &unk, &Global_79347[2 /*14*/]))
 						{
-							Global_2883588 = hash2;
-							Global_2883589 = hash3;
+							Global_2883588 = hash;
+							Global_2883589 = hash2;
 							return false;
 						}
 					}
@@ -12354,14 +12354,14 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 		{
 			if (func_411(1759, Global_79344) != unk[10])
 			{
-				Global_2883588 = hash2;
-				Global_2883589 = hash3;
+				Global_2883588 = hash;
+				Global_2883589 = hash2;
 				return false;
 			}
 		}
 	
-		Global_2883588 = hash2;
-		Global_2883589 = hash3;
+		Global_2883588 = hash;
+		Global_2883589 = hash2;
 		return true;
 	}
 	else if (hParam1 == 13)
@@ -12411,10 +12411,10 @@ BOOL func_100(Ped pedParam0, Hash hParam1, Hash hParam2) // Position - 0xAB31 (4
 		
 			if (Global_79346 == 1)
 				if (func_89(entityModel, 11, func_197(pedParam0, 11), -1))
-					if (func_87(entityModel, 4, hParam2, &hash4))
-						return func_100(pedParam0, 4, hash4);
-				else if (func_86(entityModel, 4, hParam2, &hash4))
-					return func_100(pedParam0, 4, hash4);
+					if (func_87(entityModel, 4, hParam2, &hash3))
+						return func_100(pedParam0, 4, hash3);
+				else if (func_86(entityModel, 4, hParam2, &hash3))
+					return func_100(pedParam0, 4, hash3);
 		
 			Global_79346 = Global_79346 - 1;
 		}
@@ -118478,7 +118478,7 @@ void func_711(int* piParam0, const char* sParam1) // Position - 0x8C520 (574752)
 BOOL func_712(Ped pedParam0) // Position - 0x8C5D6 (574934)
 {
 	Hash entityModel;
-	Hash hash;
+	BOOL flag;
 	Hash componentHash;
 	int num;
 
@@ -118488,15 +118488,15 @@ BOOL func_712(Ped pedParam0) // Position - 0x8C5D6 (574934)
 
 	if (entityModel == joaat("MP_F_Freemode_01"))
 	{
-		hash = func_197(pedParam0, 6);
+		flag = func_197(pedParam0, 6);
 	
-		if (hash >= 256)
+		if (flag >= 256)
 		{
-			componentHash = func_196(entityModel, hash, 6, 4);
+			componentHash = func_196(entityModel, flag, 6, 4);
 			num = func_186(componentHash);
 		}
 	
-		if (hash >= 0 && hash <= 15 || hash >= 96 && hash <= 111 || hash >= 112 && hash <= 127 || hash >= 128 && hash <= 143 || hash >= 192 && hash <= 207 || hash >= 224 && hash <= 239 || num == 0 || num == 6 || num == 7 || num == 8 || num == 12 || num == 14 || componentHash != -1 && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash, joaat("HIGH_HEELS"), 0))
+		if (flag >= false && flag <= 15 || flag >= 96 && flag <= 111 || flag >= 112 && flag <= 127 || flag >= 128 && flag <= 143 || flag >= 192 && flag <= 207 || flag >= 224 && flag <= 239 || num == 0 || num == 6 || num == 7 || num == 8 || num == 12 || num == 14 || componentHash != -1 && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash, joaat("HIGH_HEELS"), 0))
 			return true;
 	}
 

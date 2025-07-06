@@ -126375,7 +126375,7 @@ BOOL func_608(int* piParam0, int iParam1, var uParam2, int iParam3, BOOL bParam4
 			if (IS_BIT_SET(uParam2->f_33, 0))
 			{
 				Global_1836504 = iParam3;
-				Global_1836503 = 1;
+				Global_1836503 = true;
 				HUD::THEFEED_SET_SCRIPTED_MENU_HEIGHT(pos);
 			
 				if (flag)
@@ -127340,7 +127340,7 @@ void func_638(int* piParam0, var uParam1, BOOL bParam2) // Position - 0xA764A (6
 	MISC::CLEAR_BIT(&(uParam1->f_33), 7);
 	Global_1836504 = 0;
 	func_542();
-	Global_1836503 = 0;
+	Global_1836503 = false;
 	uParam1->f_27 = 0;
 
 	if (bParam2)
@@ -128933,7 +128933,7 @@ void func_728(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4) /
 
 BOOL func_729() // Position - 0xA97C3 (694211)
 {
-	if (func_303(PLAYER::PLAYER_ID()) == 229 || func_303(PLAYER::PLAYER_ID()) == 191 || func_732(*Global_4718592.f_194133) || func_731() || func_740() || func_499() || Global_2708543.f_227 == 1 || Global_2635516.f_2054 && func_730(PLAYER::PLAYER_ID()))
+	if (func_303(PLAYER::PLAYER_ID()) == 229 || func_303(PLAYER::PLAYER_ID()) == 191 || func_732(*Global_4718592.f_194133) || func_731() || func_740() || func_499() || Global_2708543.f_227 == true || Global_2635516.f_2054 && func_730(PLAYER::PLAYER_ID()))
 		return false;
 
 	return true;

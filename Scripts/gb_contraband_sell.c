@@ -167589,10 +167589,10 @@ int func_1949(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0xDC50E (90
 
 void func_1950() // Position - 0xDC555 (902485)
 {
-	BOOL flag;
 	ePedComponentType type;
+	ePedComponentType type2;
 
-	type = PV_COMP_BERD;
+	type2 = PV_COMP_BERD;
 
 	if (_STOPWATCH_IS_INITIALIZED(&(epctLocal_145.f_151)))
 	{
@@ -167603,36 +167603,36 @@ void func_1950() // Position - 0xDC555 (902485)
 				if (!func_201(&(epctLocal_145.f_151), iLocal_565.f_386 + iLocal_565.f_387 + iLocal_565.f_388, false))
 				{
 					func_1954();
-					flag = func_1949(&(epctLocal_145.f_151), false, false) - (iLocal_565.f_386 + iLocal_565.f_387);
+					type = func_1949(&(epctLocal_145.f_151), false, false) - (iLocal_565.f_386 + iLocal_565.f_387);
 				
-					if ((float)flag < (float)iLocal_565.f_388 * 0.9f)
-						type = PV_COMP_FEET;
+					if ((float)type < (float)iLocal_565.f_388 * 0.9f)
+						type2 = PV_COMP_FEET;
 				
-					func_1958(flag, iLocal_565.f_388, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
+					func_1958(type, iLocal_565.f_388, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type2, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
 				}
 			}
 			else
 			{
 				func_1953();
-				type = PV_COMP_FEET;
-				func_1958(false, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
+				type2 = PV_COMP_FEET;
+				func_1958(PV_COMP_HEAD, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type2, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
 			}
 		}
 		else
 		{
 			func_1952();
-			flag = iLocal_565.f_386 - func_1949(&(epctLocal_145.f_151), false, false);
+			type = iLocal_565.f_386 - func_1949(&(epctLocal_145.f_151), false, false);
 		
-			if (flag < iLocal_565.f_386 / 4)
-				type = PV_COMP_FEET;
+			if (type < iLocal_565.f_386 / 4)
+				type2 = PV_COMP_FEET;
 		
-			func_1958(flag, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
+			func_1958(type, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type2, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
 		}
 	}
 	else
 	{
 		func_1951();
-		func_1958(iLocal_565.f_386, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
+		func_1958(iLocal_565.f_386, iLocal_565.f_386, "SCONTRA_RJAM" /*LOCK-ON JAMMER*/, type2, -1, 13, -1082130432, -1082130432, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, -1, 0, -1, -1082130432, -1082130432, 0, 1, 0, 0, 1, -1, 0, -1, 1, 255, 0, -1082130432);
 	}
 
 	return;
@@ -167768,7 +167768,7 @@ BOOL func_1957(int iParam0) // Position - 0xDC91E (903454)
 	return 0;
 }
 
-void func_1958(BOOL bParam0, int iParam1, char* sParam2, ePedComponentType epctParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, int iParam28, int iParam29, int iParam30, int iParam31, int iParam32, int iParam33, int iParam34, int iParam35, int iParam36, int iParam37, int iParam38, int iParam39) // Position - 0xDC979 (903545)
+void func_1958(ePedComponentType epctParam0, int iParam1, char* sParam2, ePedComponentType epctParam3, int iParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16, int iParam17, int iParam18, int iParam19, int iParam20, int iParam21, int iParam22, int iParam23, int iParam24, int iParam25, int iParam26, int iParam27, int iParam28, int iParam29, int iParam30, int iParam31, int iParam32, int iParam33, int iParam34, int iParam35, int iParam36, int iParam37, int iParam38, int iParam39) // Position - 0xDC979 (903545)
 {
 	int num;
 	int i;
@@ -167786,7 +167786,7 @@ void func_1958(BOOL bParam0, int iParam1, char* sParam2, ePedComponentType epctP
 	{
 		Global_1675263.f_1 = 1;
 		func_1932(0, num);
-		Global_1675263.f_1177[num] = bParam0;
+		Global_1675263.f_1177[num] = epctParam0;
 		Global_1675263.f_1177.f_11[num] = iParam1;
 		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_1177.f_22[num /*16*/], sParam2, 64);
 		Global_1675263.f_1177.f_194[num] = epctParam3;
@@ -182496,7 +182496,7 @@ void func_2486(ePedComponentType epctParam0, int iParam1, ePedComponentType epct
 		}
 	}
 
-	Global_1944270 = 0;
+	Global_1944270 = false;
 
 	for (i = 0; i <= 2; i = i + 1)
 	{

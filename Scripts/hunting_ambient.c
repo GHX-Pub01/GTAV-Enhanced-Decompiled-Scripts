@@ -3123,7 +3123,7 @@ void func_20(BOOL bParam0) // Position - 0xC5B (3163)
 	return;
 }
 
-void func_21(char* sParam0) // Position - 0xCBB (3259)
+void func_21(const char* sParam0) // Position - 0xCBB (3259)
 {
 	int i;
 

@@ -51042,16 +51042,16 @@ BOOL func_337() // Position - 0x32DBB (208315)
 	return func_338(*Global_4718592.f_134976);
 }
 
-BOOL func_338(int iParam0) // Position - 0x32DDF (208351)
+BOOL func_338(Hash hParam0) // Position - 0x32DDF (208351)
 {
 	int i;
 
-	if (iParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 16; i = i + 1)
 	{
-		if (Global_262145.f_4707[i] == iParam0)
+		if (Global_262145.f_4707[i] == hParam0)
 			return 1;
 	}
 
@@ -69032,7 +69032,7 @@ int func_501(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4,
 	return 0;
 }
 
-void func_502(int iParam0, Hash hParam1, int iParam2, int iParam3, int iParam4) // Position - 0x48AF8 (297720)
+void func_502(int iParam0, Hash hParam1, int iParam2, BOOL bParam3, int iParam4) // Position - 0x48AF8 (297720)
 {
 	switch (hParam1)
 	{
@@ -74430,16 +74430,16 @@ BOOL func_688() // Position - 0x4F203 (324099)
 	return func_689(*Global_4718592.f_134976);
 }
 
-BOOL func_689(int iParam0) // Position - 0x4F227 (324135)
+BOOL func_689(Hash hParam0) // Position - 0x4F227 (324135)
 {
 	int i;
 
-	if (iParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_4689[i] == iParam0)
+		if (Global_262145.f_4689[i] == hParam0)
 			return 1;
 	}
 

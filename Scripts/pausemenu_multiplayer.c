@@ -37221,7 +37221,7 @@ void func_859(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_108431[i] = -1;
 		Global_4718592.f_108436[i] = PV_COMP_INVALID;
 		Global_4718592.f_108451[i] = 0;
-		Global_4718592.f_108456[i] = PV_COMP_INVALID;
+		Global_4718592.f_108456[i] = -1;
 		Global_4718592.f_108369[i] = PV_COMP_HEAD;
 		Global_4718592.f_108396[i] = 0;
 		Global_4718592.f_163850[i] = 0;

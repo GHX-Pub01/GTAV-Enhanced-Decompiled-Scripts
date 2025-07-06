@@ -16197,7 +16197,7 @@ BOOL func_353(float fParam0, var uParam1, var uParam2) // Position - 0x13CFF (81
 	return false;
 }
 
-BOOL func_354() // Position - 0x13D29 (81193)
+int func_354() // Position - 0x13D29 (81193)
 {
 	return Global_2657994[PLAYER::PLAYER_ID() /*467*/].f_324.f_8;
 }

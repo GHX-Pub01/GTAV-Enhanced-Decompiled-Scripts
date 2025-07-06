@@ -100938,7 +100938,7 @@ BOOL func_620(Vehicle veParam0) // Position - 0x7CDDF (511455)
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
-					if (func_622() != PV_COMP_INVALID && func_622() < 547)
+					if (func_622() != -1 && func_622() < 547)
 						if (!func_621(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_622() /*143*/].f_66)
 							return true;
 					else
@@ -100956,7 +100956,7 @@ BOOL func_621(Vehicle veParam0) // Position - 0x7CEDB (511707)
 	return false;
 }
 
-ePedComponentType func_622() // Position - 0x7CEF4 (511732)
+BOOL func_622() // Position - 0x7CEF4 (511732)
 {
 	return Global_2359296[func_623() /*5571*/].f_681.f_2;
 }
@@ -101621,7 +101621,7 @@ BOOL _NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM() // Position - 0x7E024 (516132)
 	return false;
 }
 
-BOOL func_643(ePedComponentType epctParam0, int iParam1) // Position - 0x7E03B (516155)
+BOOL func_643(Hash hParam0, int iParam1) // Position - 0x7E03B (516155)
 {
 	int cloudTimeAsInt;
 	int num;
@@ -101637,7 +101637,7 @@ BOOL func_643(ePedComponentType epctParam0, int iParam1) // Position - 0x7E03B (
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
 	num = 0;
 
-	switch (epctParam0)
+	switch (hParam0)
 	{
 		case -1321131184:
 			num = Global_262145.f_36169[0];
@@ -101717,7 +101717,7 @@ BOOL func_643(ePedComponentType epctParam0, int iParam1) // Position - 0x7E03B (
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		if (epctParam0 == Global_1835471[i])
+		if (hParam0 == Global_1835471[i])
 			return true;
 	}
 

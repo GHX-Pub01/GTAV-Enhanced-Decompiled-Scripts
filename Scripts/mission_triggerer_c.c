@@ -2441,7 +2441,7 @@ void func_1(var uParam0) // Position - 0x4B4 (1204)
 		func_13();
 		func_6(0);
 	
-		if (func_5() != 60 && func_5() != 23 || CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON && func_5() != 38 || CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON)
+		if (func_5() != CHAR_MARNIE && func_5() != CHAR_STEVE || CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON && func_5() != CHAR_ORTEGA || CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON)
 			func_4(true, false);
 		else
 			func_4(true, true);
@@ -2640,7 +2640,7 @@ void func_4(BOOL bParam0, BOOL bParam1) // Position - 0xA79 (2681)
 	return;
 }
 
-int func_5() // Position - 0xB33 (2867)
+eCharacter func_5() // Position - 0xB33 (2867)
 {
 	return Global_98609;
 }
@@ -6128,7 +6128,7 @@ BOOL func_109(Player plParam0, int iParam1) // Position - 0x5BD3 (23507)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_110(-1, false) == 8;
+		flag = func_110(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -6139,28 +6139,28 @@ BOOL func_109(Player plParam0, int iParam1) // Position - 0x5BD3 (23507)
 	return flag;
 }
 
-int func_110(int iParam0, BOOL bParam1) // Position - 0x5C2C (23596)
+eCharacter func_110(int iParam0, BOOL bParam1) // Position - 0x5C2C (23596)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_111();
+	if (num == -1)
+		num = func_111();
 
-	if (Global_1575066[num2] == true)
+	if (Global_1575066[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574920[num2];
+		character = Global_1574920[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 int func_111() // Position - 0x5C6D (23661)

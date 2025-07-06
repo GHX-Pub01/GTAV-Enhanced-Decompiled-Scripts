@@ -925,7 +925,7 @@ BOOL func_33(ePedComponentType epctParam0, int iParam1) // Position - 0xE2D (362
 		return false;
 
 	if (epctParam0 == PLAYER::PLAYER_ID())
-		flag = func_34(-1, false) == 8;
+		flag = func_34(-1, false) == CHAR_MIKE_FRANK_CONF;
 	else
 		flag = Global_1845270[epctParam0 /*892*/].f_206 == 8;
 
@@ -936,28 +936,28 @@ BOOL func_33(ePedComponentType epctParam0, int iParam1) // Position - 0xE2D (362
 	return flag;
 }
 
-int func_34(int iParam0, BOOL bParam1) // Position - 0xE86 (3718)
+eCharacter func_34(int iParam0, BOOL bParam1) // Position - 0xE86 (3718)
 {
+	eCharacter character;
 	int num;
-	int num2;
 
-	num2 = iParam0;
+	num = iParam0;
 
-	if (num2 == -1)
-		num2 = func_21();
+	if (num == -1)
+		num = func_21();
 
-	if (Global_1575066[num2] == true)
+	if (Global_1575066[num] == true)
 	{
 		bParam1;
-		num = 8;
+		character = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		num = Global_1574920[num2];
+		character = Global_1574920[num];
 		bParam1;
 	}
 
-	return num;
+	return character;
 }
 
 BOOL func_35(ePedComponentType epctParam0) // Position - 0xEC7 (3783)
@@ -97621,14 +97621,14 @@ void func_617(int iParam0) // Position - 0x7AC60 (502880)
 	return;
 }
 
-void func_618(eCharacter echParam0) // Position - 0x7AE42 (503362)
+void func_618(int iParam0) // Position - 0x7AE42 (503362)
 {
-	if (echParam0 >= CHAR_BROKEN_DOWN_GIRL)
+	if (iParam0 >= 94)
 		return;
 
 	if (Global_97535 != -1)
 	{
-		if (Global_97535 != echParam0)
+		if (Global_97535 != iParam0)
 			return;
 	
 		Global_97535 = -1;
@@ -121174,7 +121174,7 @@ void func_915(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA1695 (6
 
 	Global_114162.f_7692.f_924 = MISC::GET_GAME_TIMER();
 
-	if (Global_79827 == CHAR_MAUDE || Global_79828 == 62)
+	if (Global_79827 == 62 || Global_79828 == 62)
 		func_811(2, true);
 
 	if (!bParam0)
