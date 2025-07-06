@@ -559,7 +559,7 @@ BOOL func_20(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_24(iParam0) - func_23(iParam0, false))
@@ -619,13 +619,13 @@ int func_22(int iParam0) // Position - 0x79D (1949)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -669,13 +669,13 @@ int func_24(int iParam0) // Position - 0x880 (2176)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;

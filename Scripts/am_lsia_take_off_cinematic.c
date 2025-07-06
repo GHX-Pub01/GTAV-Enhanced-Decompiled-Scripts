@@ -992,14 +992,14 @@ void func_35(int iParam0, BOOL bParam1, int iParam2) // Position - 0xE0E (3598)
 	{
 		case 5:
 			if (iParam2 > -1)
-				Global_1673706.f_137[iParam2] = bParam1;
+				Global_1673707.f_137[iParam2] = bParam1;
 			break;
 	
 		default:
 			if (bParam1)
-				MISC::SET_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::SET_BIT(&(Global_1673707.f_1046), iParam0);
 			else
-				MISC::CLEAR_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::CLEAR_BIT(&(Global_1673707.f_1046), iParam0);
 			break;
 	}
 
@@ -2766,7 +2766,7 @@ BOOL func_100(Vehicle veParam0) // Position - 0x2E68 (11880)
 			else
 				networkTime = MISC::GET_GAME_TIMER();
 		
-			num = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(networkTime, Global_1577967));
+			num = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(networkTime, Global_1577968));
 			num2 = 20000;
 		
 			if (Global_1836740)
@@ -2832,9 +2832,9 @@ BOOL func_102(var uParam0, Player plParam1) // Position - 0x2F51 (12113)
 		if (func_103(uParam0, plParam1, Global_1944325, Global_1944325.f_1, Global_1944325.f_4, Global_1944325.f_7, Global_1944325.f_10, 0, Global_1944325.f_13))
 		{
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-				Global_1577967 = NETWORK::GET_NETWORK_TIME();
+				Global_1577968 = NETWORK::GET_NETWORK_TIME();
 			else
-				Global_1577967 = MISC::GET_GAME_TIMER();
+				Global_1577968 = MISC::GET_GAME_TIMER();
 		
 			return true;
 		}
@@ -2864,9 +2864,9 @@ BOOL func_102(var uParam0, Player plParam1) // Position - 0x2F51 (12113)
 		if (Global_1944325.f_23 == 0 && func_103(uParam0, plParam1, Global_1944325, Global_1944325.f_1, Global_1944325.f_4, Global_1944325.f_7, Global_1944325.f_10, 0, Global_1944325.f_13) || Global_1944325.f_23 != 0 && Global_1944325.f_24 == 0 && func_103(uParam0, plParam1, Global_1944325, Global_1944325.f_14, Global_1944325.f_17, Global_1944325.f_20, Global_1944325.f_10, 1, Global_1944325.f_13) || Global_1944325.f_24 != 0)
 		{
 			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-				Global_1577967 = NETWORK::GET_NETWORK_TIME();
+				Global_1577968 = NETWORK::GET_NETWORK_TIME();
 			else
-				Global_1577967 = MISC::GET_GAME_TIMER();
+				Global_1577968 = MISC::GET_GAME_TIMER();
 		
 			return true;
 		}
@@ -6702,7 +6702,7 @@ BOOL func_109(Vehicle veParam0, Any* panParam1) // Position - 0x9131 (37169)
 		num = Global_2359296[func_116() /*5571*/].f_681.f_2;
 	
 		if (num > -1 && num < 547)
-			if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 8))
+			if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 8))
 				flag = true;
 	}
 
@@ -7583,8 +7583,8 @@ int func_132(int iParam0, int iParam1, int iParam2) // Position - 0xA17E (41342)
 	if (iParam0 == 15 && iParam1 == 3 && iParam2 == 255)
 		return 12;
 
-	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && func_133() && Global_1576242)
-		if (iParam0 == Global_1576243 && iParam1 == Global_1576244 && iParam2 == Global_1576245)
+	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && func_133() && Global_1576243)
+		if (iParam0 == Global_1576244 && iParam1 == Global_1576245 && iParam2 == Global_1576246)
 			return 13;
 
 	return 0;
@@ -45590,7 +45590,7 @@ BOOL func_269(Ped pedParam0) // Position - 0x3394B (211275)
 int func_270(int iParam0) // Position - 0x339C7 (211399)
 {
 	if (func_271(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -46681,13 +46681,13 @@ void func_291(BOOL bParam0) // Position - 0x34D86 (216454)
 
 void func_292(int iParam0, int iParam1) // Position - 0x34DD7 (216535)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 

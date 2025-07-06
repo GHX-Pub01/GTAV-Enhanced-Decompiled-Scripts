@@ -943,7 +943,7 @@ void func_11(const char* sParam0) // Position - 0x534 (1332)
 
 BOOL func_12() // Position - 0x546 (1350)
 {
-	return Global_1577879;
+	return Global_1577880;
 }
 
 BOOL func_13() // Position - 0x552 (1362)
@@ -957,7 +957,7 @@ BOOL func_13() // Position - 0x552 (1362)
 	{
 		if (Global_2696325[i] != 0)
 		{
-			Global_1577880 = i;
+			Global_1577881 = i;
 			num = 1;
 			i = 10;
 		}

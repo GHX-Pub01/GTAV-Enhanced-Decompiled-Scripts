@@ -1377,7 +1377,7 @@ BOOL func_46(var uParam0) // Position - 0x14F3 (5363)
 
 BOOL func_47() // Position - 0x1522 (5410)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_48(BOOL bParam0) // Position - 0x1530 (5424)

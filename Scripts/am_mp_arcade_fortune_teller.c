@@ -1370,7 +1370,7 @@ void func_42() // Position - 0x107D (4221)
 				switch (eventData)
 				{
 					case 1461088877:
-						if (Global_1689056.f_869)
+						if (Global_1689057.f_869)
 							return;
 					
 						func_43(i);

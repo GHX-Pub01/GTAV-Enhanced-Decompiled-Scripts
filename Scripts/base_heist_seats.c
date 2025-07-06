@@ -722,7 +722,7 @@ BOOL func_15(int iParam0) // Position - 0x37D (893)
 
 BOOL func_16() // Position - 0x3D4 (980)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;

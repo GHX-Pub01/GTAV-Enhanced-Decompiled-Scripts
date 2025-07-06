@@ -2452,7 +2452,7 @@ void func_93(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 		func_99(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_98(1);
 
 	if (*uParam2 == 0)
@@ -2642,7 +2642,7 @@ void func_97(const char* sParam0) // Position - 0x1F10 (7952)
 
 void func_98(int iParam0) // Position - 0x1F1E (7966)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
@@ -2660,7 +2660,7 @@ BOOL func_100(var uParam0) // Position - 0x1F3F (7999)
 
 void func_101(int iParam0) // Position - 0x1F56 (8022)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -2886,13 +2886,13 @@ void func_117() // Position - 0x230C (8972)
 
 void func_118(int iParam0, int iParam1) // Position - 0x2335 (9013)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 

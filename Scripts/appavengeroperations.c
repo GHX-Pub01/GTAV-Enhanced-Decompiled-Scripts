@@ -3156,7 +3156,7 @@ void func_141(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > 0)
+		else if (Global_2635102.f_1 > false)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;
@@ -3170,7 +3170,7 @@ void func_141(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > 0)
+		else if (Global_2635102.f_1 > false)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;
@@ -4773,11 +4773,11 @@ BOOL func_197(int iParam0, int iParam1) // Position - 0x5A23 (23075)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_198() // Position - 0x5A5B (23131)
@@ -5226,13 +5226,13 @@ void func_218(BOOL bParam0) // Position - 0x6357 (25431)
 
 void func_219(int iParam0, int iParam1) // Position - 0x63A8 (25512)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 

@@ -627,8 +627,8 @@ void func_3(var uParam0, var uParam1) // Position - 0xF2 (242)
 
 void func_4() // Position - 0x271 (625)
 {
-	if (IS_BIT_SET(Global_1668458, 4))
-		MISC::CLEAR_BIT(&Global_1668458, 4);
+	if (IS_BIT_SET(Global_1668459, 4))
+		MISC::CLEAR_BIT(&Global_1668459, 4);
 
 	return;
 }
@@ -1446,7 +1446,7 @@ BOOL func_41(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_45(iParam0) - func_44(iParam0, false))
@@ -1506,13 +1506,13 @@ int func_43(int iParam0) // Position - 0x1209 (4617)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -1556,13 +1556,13 @@ int func_45(int iParam0) // Position - 0x12EC (4844)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;
@@ -2970,7 +2970,7 @@ BOOL func_86(Ped pedParam0) // Position - 0x3D56 (15702)
 
 BOOL func_87() // Position - 0x3DB3 (15795)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -3753,16 +3753,16 @@ void func_124() // Position - 0x4C8A (19594)
 {
 	func_125();
 
-	if (!IS_BIT_SET(Global_1668458, 4))
-		MISC::SET_BIT(&Global_1668458, 4);
+	if (!IS_BIT_SET(Global_1668459, 4))
+		MISC::SET_BIT(&Global_1668459, 4);
 
 	return;
 }
 
 void func_125() // Position - 0x4CA9 (19625)
 {
-	MISC::CLEAR_BIT(&Global_1668458, 0);
-	MISC::CLEAR_BIT(&Global_1668458, 1);
+	MISC::CLEAR_BIT(&Global_1668459, 0);
+	MISC::CLEAR_BIT(&Global_1668459, 1);
 	return;
 }
 

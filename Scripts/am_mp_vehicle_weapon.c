@@ -434,13 +434,13 @@ void func_3() // Position - 0x15C (348)
 
 void func_4(int iParam0) // Position - 0x17F (383)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
 void func_5(int iParam0) // Position - 0x18D (397)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -857,11 +857,11 @@ BOOL func_18(int iParam0, int iParam1) // Position - 0x977 (2423)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_19(var uParam0, BOOL bParam1, int iParam2) // Position - 0x9AF (2479)
@@ -1042,47 +1042,47 @@ BOOL func_23(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xC69 (3177
 	return flag && flag2;
 }
 
-BOOL func_24(int* piParam0) // Position - 0xD70 (3440)
+BOOL func_24(int iParam0) // Position - 0xD70 (3440)
 {
-	switch (piParam0->f_9)
+	switch (iParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
-				piParam0->f_9 = 1;
+				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
+				iParam0->f_9 = 1;
 			
-				if (piParam0->f_7)
+				if (iParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 					{
-						piParam0->f_8 = MISC::GET_GAME_TIMER();
-						piParam0->f_9 = 2;
+						iParam0->f_8 = MISC::GET_GAME_TIMER();
+						iParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-				piParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+				iParam0->f_9 = 0;
 			break;
 	}
 
-	return piParam0->f_9 == 2;
+	return iParam0->f_9 == 2;
 }
 
 void func_25() // Position - 0xE12 (3602)
@@ -1532,8 +1532,8 @@ Vehicle func_31() // Position - 0x1739 (5945)
 {
 	if (func_27(PLAYER::PLAYER_ID(), false))
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_1668135))
-			return Global_1668135;
+		if (ENTITY::DOES_ENTITY_EXIST(Global_1668136))
+			return Global_1668136;
 	
 		if (Global_1845109 != -1)
 			if (ENTITY::DOES_ENTITY_EXIST(Global_1963359[Global_1845109]))
@@ -2063,7 +2063,7 @@ BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x223E (8766)
 Vehicle func_60() // Position - 0x224A (8778)
 {
 	if (func_27(PLAYER::PLAYER_ID(), false))
-		return Global_1668135;
+		return Global_1668136;
 
 	return -1;
 }
@@ -3899,8 +3899,8 @@ Vehicle func_117() // Position - 0x478A (18314)
 	{
 		if (!func_119(Global_1845109) && !func_118(Global_1845109))
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1668135))
-				return Global_1668135;
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1668136))
+				return Global_1668136;
 		
 			if (ENTITY::DOES_ENTITY_EXIST(Global_1963359[Global_1845109]))
 				return Global_1963359[Global_1845109];
@@ -4724,7 +4724,7 @@ BOOL func_154() // Position - 0x5735 (22325)
 
 BOOL func_155() // Position - 0x5766 (22374)
 {
-	if (Global_1582030 != -1 || Global_1582036 != -1)
+	if (Global_1582031 != -1 || Global_1582037 != -1)
 	{
 		if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "COMPUTER_idle", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "COMPUTER_idle_control", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "COMPUTER_enter_control", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "COMPUTER_enter", 3))
 			return true;
@@ -4816,7 +4816,7 @@ BOOL func_156() // Position - 0x57EF (22511)
 
 	if (func_162(PLAYER::PLAYER_ID()) || func_163(PLAYER::PLAYER_ID()))
 	{
-		switch (Global_1582036)
+		switch (Global_1582037)
 		{
 			case 1:
 				if (Global_262145.f_22744)
@@ -4835,7 +4835,7 @@ BOOL func_156() // Position - 0x57EF (22511)
 		}
 	}
 
-	if (Global_1582034 == true)
+	if (Global_1582035 == true)
 		return true;
 
 	if (func_157(3))
@@ -5019,7 +5019,7 @@ BOOL _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(char* message) // Position - 0x5F47 (
 
 BOOL func_174() // Position - 0x5F5A (24410)
 {
-	if (func_27(PLAYER::PLAYER_ID(), false) && Global_1582030 == 2 && func_175())
+	if (func_27(PLAYER::PLAYER_ID(), false) && Global_1582031 == 2 && func_175())
 		return true;
 
 	return false;
@@ -5027,7 +5027,7 @@ BOOL func_174() // Position - 0x5F5A (24410)
 
 BOOL func_175() // Position - 0x5F87 (24455)
 {
-	if (Global_1582030 != -1 || Global_1582036 != -1)
+	if (Global_1582031 != -1 || Global_1582037 != -1)
 	{
 		if (ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "enter", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "enter_left", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "exit", 3) || ENTITY::IS_ENTITY_PLAYING_ANIM(PLAYER::PLAYER_PED_ID(), "ANIM@AMB@FACILITY@LAUNCH_CONTROLS@", "exit_left", 3) || func_176(PLAYER::PLAYER_PED_ID(), SCRIPT_TASK_GO_STRAIGHT_TO_COORD))
 			return false;
@@ -5107,7 +5107,7 @@ BOOL func_178() // Position - 0x60FF (24831)
 	if (func_120())
 		return true;
 
-	if (Global_1582034)
+	if (Global_1582035)
 		return true;
 
 	if (func_27(PLAYER::PLAYER_ID(), false))
@@ -5172,7 +5172,7 @@ BOOL func_181() // Position - 0x62EB (25323)
 
 BOOL func_182() // Position - 0x62FA (25338)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -5587,15 +5587,15 @@ void func_205(BOOL bParam0, int iParam1) // Position - 0x6940 (26944)
 	return;
 }
 
-void func_206(int* piParam0) // Position - 0x6A03 (27139)
+void func_206(int iParam0) // Position - 0x6A03 (27139)
 {
-	if (piParam0->f_9 != 0)
+	if (iParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
 	
-		*piParam0 = 0;
-		piParam0->f_9 = 0;
+		*iParam0 = 0;
+		iParam0->f_9 = 0;
 	}
 
 	return;

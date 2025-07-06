@@ -1050,11 +1050,11 @@ BOOL func_22(int iParam0, int iParam1) // Position - 0xD6F (3439)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_23() // Position - 0xDA7 (3495)
@@ -3686,7 +3686,7 @@ BOOL func_90(ePedComponentType epctParam0, int iParam1) // Position - 0x450A (17
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

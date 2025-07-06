@@ -1554,7 +1554,7 @@ BOOL func_28(Hash hParam0) // Position - 0x1A5E (6750)
 
 BOOL func_29() // Position - 0x1A8D (6797)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_30() // Position - 0x1A9B (6811)
@@ -2481,11 +2481,11 @@ BOOL func_61(int iParam0, int iParam1) // Position - 0x2CE2 (11490)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_62(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13, int iParam14, int iParam15, int iParam16) // Position - 0x2D1A (11546)

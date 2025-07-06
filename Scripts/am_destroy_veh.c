@@ -3043,7 +3043,7 @@ int func_93(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positio
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 
-	if (func_106() || func_105() && func_103() && Global_1685224.f_1)
+	if (func_106() || func_105() && func_103() && Global_1685225.f_1)
 		if (bParam1)
 			return func_102(iParam2, playerTeam);
 		else
@@ -4101,13 +4101,13 @@ void func_149(int iParam0, char* sParam1, int iParam2, BOOL bParam3, const char*
 
 void func_150(int iParam0, int iParam1) // Position - 0x4B9C (19356)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_15 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_15 = iParam1;
 	return;
 }
 
 void func_151(int iParam0, const char* sParam1, BOOL bParam2) // Position - 0x4BB2 (19378)
 {
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1668461.f_59[iParam0 /*16*/].f_7), sParam1, 32);
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1668462.f_59[iParam0 /*16*/].f_7), sParam1, 32);
 
 	if (!bParam2)
 		return;
@@ -4118,13 +4118,13 @@ void func_151(int iParam0, const char* sParam1, BOOL bParam2) // Position - 0x4B
 
 void func_152(int iParam0) // Position - 0x4BD9 (19417)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 5);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 5);
 	return;
 }
 
 void func_153(int iParam0) // Position - 0x4BF0 (19440)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 4);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 4);
 	return;
 }
 
@@ -4133,23 +4133,23 @@ void func_154(int iParam0, char* sParam1) // Position - 0x4C07 (19463)
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam1, 16);
-	Global_1668461.f_59[iParam0 /*16*/].f_3 = { unk };
+	Global_1668462.f_59[iParam0 /*16*/].f_3 = { unk };
 	return;
 }
 
 void func_155(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4C27 (19495)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_2 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_2 = iParam1;
 
 	if (bParam2)
 	{
-		MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 2);
-		MISC::CLEAR_BIT(&Global_1668461.f_59[iParam0 /*16*/], 3);
+		MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 2);
+		MISC::CLEAR_BIT(&Global_1668462.f_59[iParam0 /*16*/], 3);
 	}
 	else
 	{
-		MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 3);
-		MISC::CLEAR_BIT(&Global_1668461.f_59[iParam0 /*16*/], 2);
+		MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 3);
+		MISC::CLEAR_BIT(&Global_1668462.f_59[iParam0 /*16*/], 2);
 	}
 
 	return;
@@ -4157,13 +4157,13 @@ void func_155(int iParam0, int iParam1, BOOL bParam2) // Position - 0x4C27 (1949
 
 void func_156(int iParam0, int iParam1) // Position - 0x4C81 (19585)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_1 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_1 = iParam1;
 	return;
 }
 
 void func_157(int iParam0) // Position - 0x4C97 (19607)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 0);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 0);
 	return;
 }
 
@@ -4184,7 +4184,7 @@ int func_158() // Position - 0x4CAE (19630)
 
 BOOL func_159(int iParam0) // Position - 0x4CDC (19676)
 {
-	return IS_BIT_SET(Global_1668461.f_59[iParam0 /*16*/], 0);
+	return IS_BIT_SET(Global_1668462.f_59[iParam0 /*16*/], 0);
 }
 
 int func_160(int iParam0, Ped pedParam1, char* sParam2, Hash hParam3, Hash hParam4, int iParam5, int iParam6, int iParam7, char* sParam8, BOOL bParam9, int iParam10) // Position - 0x4CF0 (19696)

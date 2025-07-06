@@ -3685,7 +3685,7 @@ void func_72(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 		func_77(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_79(1);
 
 	if (*uParam2 == 0)
@@ -3887,13 +3887,13 @@ BOOL func_78(var uParam0) // Position - 0x3890 (14480)
 
 void func_79(int iParam0) // Position - 0x38A7 (14503)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
 void func_80(int iParam0) // Position - 0x38B5 (14517)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -9524,14 +9524,14 @@ void func_188(int iParam0, BOOL bParam1, int iParam2) // Position - 0xD2D3 (5397
 	{
 		case 5:
 			if (iParam2 > -1)
-				Global_1673706.f_137[iParam2] = bParam1;
+				Global_1673707.f_137[iParam2] = bParam1;
 			break;
 	
 		default:
 			if (bParam1)
-				MISC::SET_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::SET_BIT(&(Global_1673707.f_1046), iParam0);
 			else
-				MISC::CLEAR_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::CLEAR_BIT(&(Global_1673707.f_1046), iParam0);
 			break;
 	}
 
@@ -9612,11 +9612,11 @@ BOOL func_192(int iParam0, int iParam1) // Position - 0xD471 (54385)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_193() // Position - 0xD4A9 (54441)
@@ -10703,7 +10703,7 @@ void func_203(eBlipSprite ebsParam0, BOOL bParam1) // Position - 0xEAE2 (60130)
 	Blip firstBlipInfoId;
 	int num;
 	int blipInfoIdType;
-	int num2;
+	eCharacter character;
 
 	firstBlipInfoId = HUD::GET_FIRST_BLIP_INFO_ID(ebsParam0);
 	num = 20;
@@ -10863,9 +10863,9 @@ void func_203(eBlipSprite ebsParam0, BOOL bParam1) // Position - 0xEAE2 (60130)
 								break;
 						
 							case BLIP_HEIST_PREP:
-								num2 = func_212(&firstBlipInfoId);
+								character = func_212(&firstBlipInfoId);
 							
-								if (num2 == 33 || num2 == 92 || num2 == 89 || num2 == 88)
+								if (character == CHAR_GAYMILITARY || character == CHAR_DOMESTIC_GIRL || character == CHAR_LS_CUSTOMS || character == CHAR_DETONATEBOMB)
 									flag = false;
 								else
 									flag = true;
@@ -11096,7 +11096,7 @@ BOOL func_211(var uParam0) // Position - 0xF1C2 (61890)
 	return false;
 }
 
-int func_212(var uParam0) // Position - 0xF230 (62000)
+eCharacter func_212(var uParam0) // Position - 0xF230 (62000)
 {
 	int i;
 

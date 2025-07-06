@@ -494,13 +494,13 @@ int func_9(int iParam0, BOOL bParam1, Hash hParam2, ePedComponentType epctParam3
 								return num6;
 					}
 				}
-				else if (Global_1586542[num6 /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[num6 /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return num5;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num6 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num6 /*143*/].f_104, 0))
 						return num5;
 				}
 			}
@@ -690,13 +690,13 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 										return num;
 							}
 						}
-						else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+						else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 								return num2;
 						}
 					}
@@ -725,7 +725,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 						if (bParam7)
 							if (func_64(func_67(4, num), iParam6) == 0)
 								return num2;
-						else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+						else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 							return num2;
 					else
 						return num2;
@@ -755,7 +755,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 								if (IS_BIT_SET(num3, 0))
 									return num2;
 							}
-							else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 							{
 								return num2;
 							}
@@ -789,7 +789,7 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 							if (IS_BIT_SET(num3, 1) && !IS_BIT_SET(num3, 2))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num /*143*/].f_104, 2))
+						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
 						{
 							return num2;
 						}
@@ -836,18 +836,18 @@ int func_10(int iParam0, int iParam1, int iParam2, BOOL bParam3, Hash hParam4, i
 									return num2;
 							}
 						}
-						else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+						else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 						{
 							return num2;
 						}
 						else if (bParam3)
 						{
-							if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+							if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 								return num2;
-							else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+							else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 								return num2;
 						}
-						else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 						{
 							return num2;
 						}
@@ -2004,13 +2004,13 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 									return num2;
 						}
 					}
-					else if (Global_1586542[num2 /*143*/].f_66 == PV_COMP_HEAD)
+					else if (Global_1586543[num2 /*143*/].f_66 == PV_COMP_HEAD)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 							return iParam0;
 					}
 				}
@@ -2035,7 +2035,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 					if (bParam5)
 						if (func_64(func_67(4, num2), iParam4) == 0)
 							return iParam0;
-					else if (Global_1586542[num2 /*143*/].f_66 == PV_COMP_HEAD)
+					else if (Global_1586543[num2 /*143*/].f_66 == PV_COMP_HEAD)
 						return iParam0;
 				else
 					return iParam0;
@@ -2061,7 +2061,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 							if (IS_BIT_SET(num, 0))
 								return iParam0;
 						}
-						else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 						{
 							return iParam0;
 						}
@@ -2091,7 +2091,7 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 						if (IS_BIT_SET(num, 1) && !IS_BIT_SET(num, 2))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 2))
+					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 2))
 					{
 						return iParam0;
 					}
@@ -2134,18 +2134,18 @@ int func_51(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, int iParam4, B
 								return iParam0;
 						}
 					}
-					else if (Global_1586542[num2 /*143*/].f_66 == PV_COMP_HEAD)
+					else if (Global_1586543[num2 /*143*/].f_66 == PV_COMP_HEAD)
 					{
 						return iParam0;
 					}
 					else if (bParam2)
 					{
-						if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 0))
+						if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 0))
 							return iParam0;
-						else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1))
+						else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
 							return iParam0;
 					}
-					else if (IS_BIT_SET(Global_1586542[num2 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[num2 /*143*/].f_104, 1))
 					{
 						return iParam0;
 					}
@@ -14899,13 +14899,13 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 						return num;
 				}
 			}
@@ -14919,7 +14919,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return num;
 				}
@@ -14934,7 +14934,7 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 					if (!func_84(hParam2, num))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 					{
 						return num;
 					}
@@ -14948,11 +14948,11 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[num /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[num /*143*/].f_104, 2))
 				{
 					return num;
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 				{
 				}
 			}
@@ -14966,18 +14966,18 @@ int func_86(int iParam0, BOOL bParam1, Hash hParam2, int iParam3, int iParam4, i
 				if (!func_84(hParam2, num))
 				{
 				}
-				else if (Global_1586542[num /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[num /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return num;
 				}
 				else if (bParam1)
 				{
-					if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 0))
 						return num;
-					else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 						return num;
 				}
-				else if (IS_BIT_SET(Global_1586542[num /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[num /*143*/].f_104, 1))
 				{
 					return num;
 				}
@@ -15029,9 +15029,9 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					return iParam0;
 				else
 					return iParam0;
-			else if (Global_1586542[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586542[iParam0 /*143*/].f_66 == joaat("phantom3"))
+			else if (Global_1586543[iParam0 /*143*/].f_66 == joaat("hauler2") || Global_1586543[iParam0 /*143*/].f_66 == joaat("phantom3"))
 				return iParam0;
-			else if (Global_1586542[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
+			else if (Global_1586543[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
 				return iParam0;
 			else
 				return iParam0;
@@ -15114,13 +15114,13 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 						return iParam0;
 				}
 				break;
@@ -15129,7 +15129,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return iParam0;
 				}
@@ -15139,7 +15139,7 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 					if (!func_84(hParam3, iParam0))
 					{
 					}
-					else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 					{
 						return iParam0;
 					}
@@ -15148,11 +15148,11 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 2))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1) && !IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 2))
 				{
 					return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 				{
 				}
 				break;
@@ -15161,18 +15161,18 @@ int func_88(int iParam0, int iParam1, BOOL bParam2, Hash hParam3, BOOL bParam4, 
 				if (!func_84(hParam3, iParam0))
 				{
 				}
-				else if (Global_1586542[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
+				else if (Global_1586543[iParam0 /*143*/].f_66 == PV_COMP_HEAD)
 				{
 					return iParam0;
 				}
 				else if (bParam2)
 				{
-					if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 0))
+					if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 0))
 						return iParam0;
-					else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+					else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 						return iParam0;
 				}
-				else if (IS_BIT_SET(Global_1586542[iParam0 /*143*/].f_104, 1))
+				else if (IS_BIT_SET(Global_1586543[iParam0 /*143*/].f_104, 1))
 				{
 					return iParam0;
 				}

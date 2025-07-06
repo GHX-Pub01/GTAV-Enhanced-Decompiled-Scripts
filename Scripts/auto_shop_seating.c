@@ -1722,7 +1722,7 @@ BOOL func_35(Ped pedParam0) // Position - 0x15C6 (5574)
 
 BOOL func_36() // Position - 0x1623 (5667)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;

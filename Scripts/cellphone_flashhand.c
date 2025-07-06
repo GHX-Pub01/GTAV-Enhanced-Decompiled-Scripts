@@ -3943,7 +3943,7 @@ void func_50() // Position - 0x4194 (16788)
 
 BOOL func_51() // Position - 0x4726 (18214)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -4120,7 +4120,7 @@ void func_52() // Position - 0x4748 (18248)
 					
 						if (Global_21086 == 23)
 						{
-							MISC::SET_BIT(&Global_1668458, 0);
+							MISC::SET_BIT(&Global_1668459, 0);
 							return;
 						}
 					
@@ -5595,7 +5595,7 @@ BOOL func_119() // Position - 0x68C9 (26825)
 
 BOOL func_120() // Position - 0x68F5 (26869)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 void func_121() // Position - 0x6903 (26883)

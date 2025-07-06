@@ -835,7 +835,7 @@ ePedComponentType func_26(ePedComponentType epctParam0, BOOL bParam1, int iParam
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(epctParam0);
 
-	if (func_41() || func_40() && func_38() && Global_1685224.f_1)
+	if (func_41() || func_40() && func_38() && Global_1685225.f_1)
 		if (bParam1)
 			return func_37(iParam2, playerTeam);
 		else

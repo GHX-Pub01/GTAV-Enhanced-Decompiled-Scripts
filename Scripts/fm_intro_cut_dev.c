@@ -2477,15 +2477,15 @@ void func_3(BOOL bParam0) // Position - 0x384A (14410)
 
 void func_4() // Position - 0x38A7 (14503)
 {
-	GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(Global_1577918, 255, 255, 255, 255, 0);
+	GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(Global_1577919, 255, 255, 255, 255, 0);
 
-	if (Global_1577923 == 0)
+	if (Global_1577924 == 0)
 	{
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577918, "SET_BIG_LOGO_VISIBLE");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577919, "SET_BIG_LOGO_VISIBLE");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		Global_1577923 = 1;
+		Global_1577924 = 1;
 	}
 
 	return;
@@ -3985,11 +3985,11 @@ BOOL func_64(int iParam0, int iParam1) // Position - 0x5676 (22134)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_65() // Position - 0x56AE (22190)
@@ -4601,15 +4601,15 @@ Hash func_93(int iParam0) // Position - 0x6153 (24915)
 
 void func_94() // Position - 0x61EF (25071)
 {
-	Global_1577923 = 0;
+	Global_1577924 = 0;
 
-	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577918))
+	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577919))
 	{
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577918, "SET_BIG_LOGO_VISIBLE");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577919, "SET_BIG_LOGO_VISIBLE");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1577918);
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1577919);
 	}
 
 	return;
@@ -4675,9 +4675,9 @@ BOOL func_98() // Position - 0x6360 (25440)
 	if (DLC::GET_IS_LOADING_SCREEN_ACTIVE())
 		return false;
 
-	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577918))
+	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577919))
 	{
-		Global_1577918 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("GTAV_ONLINE");
+		Global_1577919 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("GTAV_ONLINE");
 		return false;
 	}
 
@@ -6270,14 +6270,14 @@ void func_145(int iParam0, BOOL bParam1, int iParam2) // Position - 0x96D0 (3860
 	{
 		case 5:
 			if (iParam2 > -1)
-				Global_1673706.f_137[iParam2] = bParam1;
+				Global_1673707.f_137[iParam2] = bParam1;
 			break;
 	
 		default:
 			if (bParam1)
-				MISC::SET_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::SET_BIT(&(Global_1673707.f_1046), iParam0);
 			else
-				MISC::CLEAR_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::CLEAR_BIT(&(Global_1673707.f_1046), iParam0);
 			break;
 	}
 
@@ -8897,7 +8897,7 @@ BOOL func_173(int iParam0) // Position - 0xD9FD (55805)
 	if (func_183(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
-	if (Global_1577926)
+	if (Global_1577927)
 		return false;
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -9280,14 +9280,14 @@ void func_189(BOOL bParam0, BOOL bParam1) // Position - 0xE0D2 (57554)
 			STREAMING::STOP_PLAYER_SWITCH();
 			func_190(0);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1577877))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1577878))
 			{
-				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577877, false))
+				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577878, false))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577877))
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577877, false, false);
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577878))
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577878, false, false);
 				
-					PED::DELETE_PED(&Global_1577877);
+					PED::DELETE_PED(&Global_1577878);
 				}
 			}
 		}

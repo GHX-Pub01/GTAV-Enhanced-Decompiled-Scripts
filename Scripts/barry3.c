@@ -34482,11 +34482,11 @@ BOOL func_235(int iParam0, int iParam1) // Position - 0x27E03 (163331)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_236() // Position - 0x27E3B (163387)
@@ -41269,14 +41269,14 @@ BOOL func_397(Vehicle veParam0) // Position - 0x314BE (201918)
 		if (func_403() || func_402(PLAYER::PLAYER_ID()))
 			return false;
 	
-		if (func_401(PLAYER::PLAYER_ID(), true, false) && Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > PV_COMP_HEAD || IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_34, 14) || IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_34, 11))
+		if (func_401(PLAYER::PLAYER_ID(), true, false) && Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false || IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_34, 14) || IS_BIT_SET(Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_34, 11))
 			return false;
 	
 		if (DECORATOR::DECOR_IS_REGISTERED_AS_TYPE("Player_Vehicle", INT))
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
-					if (func_399() != PV_COMP_INVALID && func_399() < 547)
-						if (!func_398(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_399() /*143*/].f_66)
+					if (func_399() != -1 && func_399() < 547)
+						if (!func_398(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_399() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -41293,7 +41293,7 @@ BOOL func_398(Vehicle veParam0) // Position - 0x315B7 (202167)
 	return false;
 }
 
-ePedComponentType func_399() // Position - 0x315D0 (202192)
+BOOL func_399() // Position - 0x315D0 (202192)
 {
 	return Global_2359296[func_400() /*5571*/].f_681.f_2;
 }
@@ -41928,7 +41928,7 @@ BOOL func_419(Hash hParam0, int iParam1) // Position - 0x3265C (206428)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

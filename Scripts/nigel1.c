@@ -34231,11 +34231,11 @@ BOOL func_229(int iParam0, int iParam1) // Position - 0x2786D (161901)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_230() // Position - 0x278A5 (161957)
@@ -34688,7 +34688,7 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_246(-1, false) == CHAR_MIKE_FRANK_CONF;
+		flag = func_246(-1, false) == 8;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -34699,28 +34699,28 @@ BOOL func_245(Player plParam0, int iParam1) // Position - 0x281A6 (164262)
 	return flag;
 }
 
-eCharacter func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
+int func_246(int iParam0, BOOL bParam1) // Position - 0x281FF (164351)
 {
-	eCharacter character;
 	int num;
+	int num2;
 
-	num = iParam0;
+	num2 = iParam0;
 
-	if (num == -1)
-		num = func_11();
+	if (num2 == -1)
+		num2 = func_11();
 
-	if (Global_1575066[num] == true)
+	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		character = CHAR_MIKE_FRANK_CONF;
+		num = CHAR_MIKE_FRANK_CONF;
 	}
 	else
 	{
-		character = Global_1574920[num];
+		num = Global_1574920[num2];
 		bParam1;
 	}
 
-	return character;
+	return num;
 }
 
 BOOL func_247(Player plParam0) // Position - 0x28240 (164416)
@@ -35314,7 +35314,7 @@ BOOL func_265(ePedComponentType epctParam0, int iParam1) // Position - 0x28F11 (
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

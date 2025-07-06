@@ -1388,7 +1388,7 @@ void func_17(var uParam0) // Position - 0x5F2 (1522)
 	int num;
 	float vehicleClassMaxAcceleration;
 
-	if (!Global_1586039.f_21)
+	if (!Global_1586040.f_21)
 	{
 		num = func_19(*uParam0, uParam0->f_1);
 	
@@ -1398,7 +1398,7 @@ void func_17(var uParam0) // Position - 0x5F2 (1522)
 			uParam0->f_1 = 0;
 		
 			if (*uParam0 >= 4)
-				Global_1586039.f_21 = 1;
+				Global_1586040.f_21 = 1;
 		
 			return;
 		}
@@ -1407,26 +1407,26 @@ void func_17(var uParam0) // Position - 0x5F2 (1522)
 			vehicleClass = num;
 			vehicleClassMaxAcceleration = func_18(vehicleClass);
 		
-			if (Global_1586039[*uParam0 /*5*/][0] < vehicleClassMaxAcceleration)
-				Global_1586039[*uParam0 /*5*/][0] = vehicleClassMaxAcceleration;
+			if (Global_1586040[*uParam0 /*5*/][0] < vehicleClassMaxAcceleration)
+				Global_1586040[*uParam0 /*5*/][0] = vehicleClassMaxAcceleration;
 		
 			vehicleClassMaxAcceleration = VEHICLE::GET_VEHICLE_CLASS_MAX_ACCELERATION(vehicleClass);
 		
-			if (Global_1586039[*uParam0 /*5*/][1] < vehicleClassMaxAcceleration)
-				Global_1586039[*uParam0 /*5*/][1] = vehicleClassMaxAcceleration;
+			if (Global_1586040[*uParam0 /*5*/][1] < vehicleClassMaxAcceleration)
+				Global_1586040[*uParam0 /*5*/][1] = vehicleClassMaxAcceleration;
 		
 			if (vehicleClass == 15 || vehicleClass == 16 || vehicleClass == 14)
 				vehicleClassMaxAcceleration = VEHICLE::GET_VEHICLE_CLASS_MAX_AGILITY(vehicleClass);
 			else
 				vehicleClassMaxAcceleration = VEHICLE::GET_VEHICLE_CLASS_MAX_TRACTION(vehicleClass);
 		
-			if (Global_1586039[*uParam0 /*5*/][3] < vehicleClassMaxAcceleration)
-				Global_1586039[*uParam0 /*5*/][3] = vehicleClassMaxAcceleration;
+			if (Global_1586040[*uParam0 /*5*/][3] < vehicleClassMaxAcceleration)
+				Global_1586040[*uParam0 /*5*/][3] = vehicleClassMaxAcceleration;
 		
 			vehicleClassMaxAcceleration = VEHICLE::GET_VEHICLE_CLASS_MAX_BRAKING(vehicleClass);
 		
-			if (Global_1586039[*uParam0 /*5*/][2] < vehicleClassMaxAcceleration)
-				Global_1586039[*uParam0 /*5*/][2] = vehicleClassMaxAcceleration;
+			if (Global_1586040[*uParam0 /*5*/][2] < vehicleClassMaxAcceleration)
+				Global_1586040[*uParam0 /*5*/][2] = vehicleClassMaxAcceleration;
 		
 			uParam0->f_1 = uParam0->f_1 + 1;
 		}
@@ -2568,7 +2568,7 @@ BOOL func_42(ePedComponentType epctParam0, int iParam1) // Position - 0x207F (83
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -4744,15 +4744,15 @@ void func_73(BOOL bParam0, int iParam1) // Position - 0x598D (22925)
 	return;
 }
 
-void func_74(int* piParam0) // Position - 0x5A53 (23123)
+void func_74(int iParam0) // Position - 0x5A53 (23123)
 {
-	if (piParam0->f_9 != 0)
+	if (iParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
 	
-		*piParam0 = 0;
-		piParam0->f_9 = 0;
+		*iParam0 = 0;
+		iParam0->f_9 = 0;
 	}
 
 	return;
@@ -6381,7 +6381,7 @@ void func_76(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 
 void func_77(int iParam0) // Position - 0x8CD8 (36056)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -7810,11 +7810,11 @@ BOOL func_126(int iParam0, int iParam1) // Position - 0xA6E6 (42726)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_127(eCharacter echParam0) // Position - 0xA71E (42782)
@@ -21659,47 +21659,47 @@ BOOL func_299(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1A611 (1
 	return flag && flag2;
 }
 
-BOOL func_300(int* piParam0) // Position - 0x1A71F (108319)
+BOOL func_300(int iParam0) // Position - 0x1A71F (108319)
 {
-	switch (piParam0->f_9)
+	switch (iParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
-				piParam0->f_9 = 1;
+				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
+				iParam0->f_9 = 1;
 			
-				if (piParam0->f_7)
+				if (iParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 					{
-						piParam0->f_8 = MISC::GET_GAME_TIMER();
-						piParam0->f_9 = 2;
+						iParam0->f_8 = MISC::GET_GAME_TIMER();
+						iParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-				piParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+				iParam0->f_9 = 0;
 			break;
 	}
 
-	return piParam0->f_9 == 2;
+	return iParam0->f_9 == 2;
 }
 
 void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x1A7C1 (108481)
@@ -24913,7 +24913,7 @@ BOOL func_351(Vehicle veParam0) // Position - 0x1F849 (129097)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_353() != PV_COMP_INVALID && func_353() < 547)
-						if (!func_352(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_353() /*143*/].f_66)
+						if (!func_352(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_353() /*143*/].f_66)
 							return true;
 					else
 						return true;

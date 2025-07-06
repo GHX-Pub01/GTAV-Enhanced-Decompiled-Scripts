@@ -1222,7 +1222,7 @@ int func_16(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, 
 				}
 			}
 		
-			Global_4538071 = true;
+			Global_4538071 = 1;
 			return 1;
 		}
 	}
@@ -1298,42 +1298,42 @@ void func_18(int iParam0) // Position - 0x1136 (4406)
 	return;
 }
 
-void func_19(Hash hParam0) // Position - 0x118A (4490)
+void func_19(var uParam0) // Position - 0x118A (4490)
 {
-	hParam0->f_65 = 0;
-	hParam0->f_65 = 2147483647;
-	hParam0->f_65.f_1 = 0;
-	hParam0->f_65.f_2 = 0;
-	hParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
-	hParam0->f_65.f_4 = joaat("SERVICE_INVALID");
-	hParam0->f_65.f_5 = 0;
-	hParam0->f_65.f_6 = joaat("CATEGORY_CLOTH");
-	hParam0->f_65.f_7 = joaat("NET_SHOP_ACTION_INVALID");
-	*hParam0 = 0;
-	hParam0->f_1 = 0;
-	hParam0->f_12 = 0;
-	hParam0->f_2 = 0;
-	func_20(&(hParam0->f_13));
-	func_20(&(hParam0->f_13.f_13));
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_26), "", 32);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_34), "", 24);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_40), "", 16);
-	TEXT_LABEL_ASSIGN_STRING(&(hParam0->f_13.f_44), "", 32);
-	hParam0->f_3 = 0;
-	hParam0->f_4 = 0;
-	hParam0->f_5 = 0;
-	hParam0->f_6 = 0;
-	hParam0->f_7 = 0;
-	hParam0->f_65.f_8 = 0;
-	hParam0->f_65.f_9 = 0;
-	hParam0->f_65.f_10 = 0;
-	hParam0->f_65.f_11 = 0;
-	hParam0->f_65.f_13 = 0;
-	hParam0->f_65.f_12 = 0;
-	hParam0->f_65.f_14 = 0;
-	hParam0->f_65.f_15 = 0;
-	hParam0->f_65.f_16 = 0;
-	hParam0->f_65.f_18 = 0;
+	uParam0->f_65 = 0;
+	uParam0->f_65 = 2147483647;
+	uParam0->f_65.f_1 = 0;
+	uParam0->f_65.f_2 = 0;
+	uParam0->f_65.f_3 = joaat("NET_SHOP_TTYPE_INVALID");
+	uParam0->f_65.f_4 = joaat("SERVICE_INVALID");
+	uParam0->f_65.f_5 = 0;
+	uParam0->f_65.f_6 = joaat("CATEGORY_CLOTH");
+	uParam0->f_65.f_7 = joaat("NET_SHOP_ACTION_INVALID");
+	*uParam0 = 0;
+	uParam0->f_1 = 0;
+	uParam0->f_12 = 0;
+	uParam0->f_2 = 0;
+	func_20(&(uParam0->f_13));
+	func_20(&(uParam0->f_13.f_13));
+	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_13.f_26), "", 32);
+	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_13.f_34), "", 24);
+	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_13.f_40), "", 16);
+	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_13.f_44), "", 32);
+	uParam0->f_3 = 0;
+	uParam0->f_4 = 0;
+	uParam0->f_5 = 0;
+	uParam0->f_6 = 0;
+	uParam0->f_7 = 0;
+	uParam0->f_65.f_8 = 0;
+	uParam0->f_65.f_9 = 0;
+	uParam0->f_65.f_10 = 0;
+	uParam0->f_65.f_11 = 0;
+	uParam0->f_65.f_13 = 0;
+	uParam0->f_65.f_12 = 0;
+	uParam0->f_65.f_14 = 0;
+	uParam0->f_65.f_15 = 0;
+	uParam0->f_65.f_16 = 0;
+	uParam0->f_65.f_18 = 0;
 	return;
 }
 
@@ -1397,7 +1397,7 @@ int func_23(int iParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4, 
 			Global_4536600[i /*84*/].f_65.f_12 = 0;
 			Global_4536600[i /*84*/].f_65.f_14 = MISC::GET_FRAME_COUNT();
 			Global_4536600[i /*84*/].f_65.f_18 = 0;
-			Global_4538071 = false;
+			Global_4538071 = 0;
 		
 			if (bParam6)
 				Global_4536600[i /*84*/].f_65.f_5 = 1;
@@ -2409,11 +2409,11 @@ BOOL func_65(int iParam0, int iParam1) // Position - 0x26BC (9916)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_66() // Position - 0x26F4 (9972)
@@ -3665,7 +3665,7 @@ BOOL func_123(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_127(iParam0) - func_126(iParam0, false))
@@ -3725,13 +3725,13 @@ int func_125(int iParam0) // Position - 0x42E7 (17127)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -3775,13 +3775,13 @@ int func_127(int iParam0) // Position - 0x43CA (17354)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;

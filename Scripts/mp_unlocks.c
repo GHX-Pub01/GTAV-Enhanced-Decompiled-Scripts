@@ -2758,17 +2758,17 @@ BOOL func_82(eControlAction ecaParam0) // Position - 0x3767 (14183)
 	num = func_20(action);
 	offset = func_9(action);
 
-	if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || PAD::IS_DISABLED_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || func_83(ecaParam0, &(Global_1673706.f_1060), 1))
+	if (PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || PAD::IS_DISABLED_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, ecaParam0) || func_83(ecaParam0, &(Global_1673707.f_1060), 1))
 	{
-		if (!IS_BIT_SET(Global_1673706.f_1049[num], offset))
+		if (!IS_BIT_SET(Global_1673707.f_1049[num], offset))
 		{
-			MISC::SET_BIT(&Global_1673706.f_1049[num], offset);
+			MISC::SET_BIT(&Global_1673707.f_1049[num], offset);
 			return true;
 		}
 	}
-	else if (IS_BIT_SET(Global_1673706.f_1049[num], offset))
+	else if (IS_BIT_SET(Global_1673707.f_1049[num], offset))
 	{
-		MISC::CLEAR_BIT(&Global_1673706.f_1049[num], offset);
+		MISC::CLEAR_BIT(&Global_1673707.f_1049[num], offset);
 	}
 
 	return false;

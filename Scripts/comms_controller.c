@@ -1639,7 +1639,7 @@ void func_60(int iParam0, int iParam1) // Position - 0x1F08 (7944)
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	Global_114162.f_8617[iParam0] = 1;
+	Global_114162.f_8617[iParam0] = true;
 	Global_114162.f_8617.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
@@ -6378,11 +6378,11 @@ BOOL func_174(int iParam0, int iParam1) // Position - 0x769C (30364)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_175() // Position - 0x76D4 (30420)

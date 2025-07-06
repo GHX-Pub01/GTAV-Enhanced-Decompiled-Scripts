@@ -37038,11 +37038,11 @@ BOOL func_260(int iParam0, int iParam1) // Position - 0x28416 (164886)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_261(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2844E (164942)
@@ -48006,15 +48006,15 @@ void func_503(char* sParam0, int iParam1, float fParam2, int iParam3, int iParam
 
 	if (num > -1)
 	{
-		Global_1675263.f_1 = 1;
+		Global_1675264.f_1 = 1;
 		func_504(8, num);
-		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_5115.f_11[num /*16*/], sParam0, 64);
-		Global_1675263.f_5115.f_172[num] = iParam1;
-		Global_1675263.f_5115[num] = fParam2;
-		Global_1675263.f_5115.f_183[num] = iParam3;
-		Global_1675263.f_5115.f_194[num] = iParam4;
-		Global_1675263.f_5115.f_205[num] = iParam5;
-		Global_1675263.f_5115.f_216[num] = iParam6;
+		TEXT_LABEL_ASSIGN_STRING(&Global_1675264.f_5115.f_11[num /*16*/], sParam0, 64);
+		Global_1675264.f_5115.f_172[num] = iParam1;
+		Global_1675264.f_5115[num] = fParam2;
+		Global_1675264.f_5115.f_183[num] = iParam3;
+		Global_1675264.f_5115.f_194[num] = iParam4;
+		Global_1675264.f_5115.f_205[num] = iParam5;
+		Global_1675264.f_5115.f_216[num] = iParam6;
 	}
 
 	return;
@@ -48022,13 +48022,13 @@ void func_503(char* sParam0, int iParam1, float fParam2, int iParam3, int iParam
 
 void func_504(int iParam0, int iParam1) // Position - 0x37864 (227428)
 {
-	MISC::SET_BIT(&Global_1675263.f_7064[iParam0], iParam1);
+	MISC::SET_BIT(&Global_1675264.f_7064[iParam0], iParam1);
 	return;
 }
 
 BOOL func_505(int iParam0, int iParam1) // Position - 0x3787D (227453)
 {
-	return IS_BIT_SET(Global_1675263.f_7064[iParam0], iParam1);
+	return IS_BIT_SET(Global_1675264.f_7064[iParam0], iParam1);
 }
 
 BOOL func_506() // Position - 0x37893 (227475)
@@ -48072,7 +48072,7 @@ BOOL func_506() // Position - 0x37893 (227475)
 
 void func_507() // Position - 0x3797C (227708)
 {
-	Global_1675263.f_1171 = 1;
+	Global_1675264.f_1171 = 1;
 	return;
 }
 

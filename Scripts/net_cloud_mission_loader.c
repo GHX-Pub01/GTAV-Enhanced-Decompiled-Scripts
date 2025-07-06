@@ -3900,17 +3900,17 @@ BOOL func_132(var uParam0, const char* sParam1, int iParam2, int iParam3, BOOL b
 			}
 			else if (Global_4718592 == PV_COMP_BERD)
 			{
-				Global_1685251.f_4 = 99;
-				Global_1685251.f_6 = Global_4718592.f_3550;
-				Global_1685251.f_7 = *Global_4980736.f_105495;
-				Global_1685251.f_9 = *Global_4718592.f_128363;
-				Global_1685251.f_11 = Global_4718592.f_3551;
-				Global_1685251.f_12 = Global_4718592.f_3553;
-				Global_1685251.f_13 = Global_4718592.f_3555;
-				Global_1685251.f_14 = Global_4718592.f_3554;
-				Global_1685251.f_16 = Global_4718592.f_3524;
-				Global_1685251.f_5 = Global_4718592.f_3547;
-				Global_1685251.f_10 = Global_4718592.f_3561;
+				Global_1685252.f_4 = 99;
+				Global_1685252.f_6 = Global_4718592.f_3550;
+				Global_1685252.f_7 = *Global_4980736.f_105495;
+				Global_1685252.f_9 = *Global_4718592.f_128363;
+				Global_1685252.f_11 = Global_4718592.f_3551;
+				Global_1685252.f_12 = Global_4718592.f_3553;
+				Global_1685252.f_13 = Global_4718592.f_3555;
+				Global_1685252.f_14 = Global_4718592.f_3554;
+				Global_1685252.f_16 = Global_4718592.f_3524;
+				Global_1685252.f_5 = Global_4718592.f_3547;
+				Global_1685252.f_10 = Global_4718592.f_3561;
 			}
 			else if (func_142())
 			{
@@ -20603,7 +20603,7 @@ ePedComponentType func_400(int iParam0, ePedComponentType epctParam1) // Positio
 					return func_401(joaat("impaler2"));
 			
 				case 6:
-					if (Global_1685350)
+					if (Global_1685351)
 						return joaat("imperator");
 				
 					return func_401(joaat("imperator"));

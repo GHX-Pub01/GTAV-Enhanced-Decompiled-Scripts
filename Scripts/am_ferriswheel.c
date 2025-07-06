@@ -5435,7 +5435,7 @@ BOOL func_77(int iParam0, var uParam1, int iParam2, BOOL bParam3) // Position - 
 
 BOOL func_78() // Position - 0x6A22 (27170)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -5821,7 +5821,7 @@ void func_96(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 		func_101(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_103(1);
 
 	if (*uParam2 == 0)
@@ -6023,13 +6023,13 @@ BOOL func_102(var uParam0) // Position - 0x7550 (30032)
 
 void func_103(int iParam0) // Position - 0x7567 (30055)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
 void func_104(int iParam0) // Position - 0x7575 (30069)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 

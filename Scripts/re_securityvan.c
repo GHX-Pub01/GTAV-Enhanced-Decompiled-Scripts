@@ -1723,11 +1723,11 @@ BOOL func_24(int iParam0, int iParam1) // Position - 0x1BD3 (7123)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_25() // Position - 0x1C0B (7179)
@@ -5572,7 +5572,7 @@ void func_131(var uParam0, Object obParam1, Vector3 vParam2, var uParam3, var uP
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(obParam1, false))

@@ -40,7 +40,7 @@ void main() // Position - 0x0 (0)
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (IS_BIT_SET(Global_1686553, 1))
+		if (IS_BIT_SET(Global_1686554, 1))
 		{
 			func_25();
 		}

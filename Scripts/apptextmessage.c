@@ -3352,7 +3352,7 @@ BOOL func_29(Hash hParam0) // Position - 0x149A (5274)
 
 BOOL func_30() // Position - 0x14C9 (5321)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 BOOL func_31() // Position - 0x14D7 (5335)

@@ -9070,7 +9070,7 @@ BOOL func_42() // Position - 0xB5B0 (46512)
 
 BOOL func_43() // Position - 0xB5BC (46524)
 {
-	return Global_1586542[189 /*143*/].f_66 == joaat("thruster");
+	return Global_1586543[189 /*143*/].f_66 == joaat("thruster");
 }
 
 Hash func_44() // Position - 0xB5D4 (46548)

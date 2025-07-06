@@ -5974,8 +5974,8 @@ int func_186(Ped pedParam0, Blip* pblParam1, int iParam2, Player plParam3, BOOL 
 
 void func_187() // Position - 0x9619 (38425)
 {
-	Global_1668649.f_2 = 1;
-	Global_1668649.f_3 = NETWORK::GET_TIME_OFFSET(NETWORK::GET_NETWORK_TIME(), 1000);
+	Global_1668650.f_2 = 1;
+	Global_1668650.f_3 = NETWORK::GET_TIME_OFFSET(NETWORK::GET_NETWORK_TIME(), 1000);
 	return;
 }
 
@@ -45491,7 +45491,7 @@ int func_330(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 
-	if (func_339() || func_338() && func_336() && Global_1685224.f_1)
+	if (func_339() || func_338() && func_336() && Global_1685225.f_1)
 		if (bParam1)
 			return func_335(iParam2, playerTeam);
 		else
@@ -46855,7 +46855,7 @@ BOOL func_416(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_420(iParam0) - func_419(iParam0, false))
@@ -46915,13 +46915,13 @@ int func_418(int iParam0) // Position - 0x35715 (218901)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -46965,13 +46965,13 @@ int func_420(int iParam0) // Position - 0x357F8 (219128)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;

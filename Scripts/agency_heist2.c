@@ -3011,11 +3011,11 @@ BOOL func_47(int iParam0, int iParam1) // Position - 0x3185 (12677)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_48() // Position - 0x31BD (12733)
@@ -16385,7 +16385,7 @@ BOOL func_283(Vehicle veParam0) // Position - 0x183D8 (99288)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_285() != -1 && func_285() < 547)
-						if (!func_284(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_285() /*143*/].f_66)
+						if (!func_284(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_285() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -16869,7 +16869,7 @@ BOOL func_301(Hash hParam0, int iParam1) // Position - 0x191E3 (102883)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -49502,10 +49502,10 @@ int func_493(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_460(pedParam0, 11);
@@ -67553,7 +67553,7 @@ BOOL func_579(Ped pedParam0) // Position - 0x5CA83 (379523)
 int func_580(int iParam0) // Position - 0x5CAFF (379647)
 {
 	if (func_581(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -76759,7 +76759,7 @@ void func_625(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 	int i;
 	Hash nameHash;
 	int enumValue;
-	int componentType;
+	ePedComponentType componentType;
 	int num;
 	int num2;
 	int address;
@@ -76801,7 +76801,7 @@ void func_625(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 					if (num < Global_4540932)
 					{
 						Global_4540932[num] = -1;
-						Global_4540943[num] = -1;
+						Global_4540943[num] = PV_COMP_INVALID;
 					}
 				
 					EXTRAMETADATA::GET_VARIANT_COMPONENT(Global_2883588, i, &nameHash, &enumValue, &componentType);

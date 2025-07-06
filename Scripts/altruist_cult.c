@@ -2277,7 +2277,7 @@ void func_67(var uParam0) // Position - 0x1E3F (7743)
 	Global_44160 = 0;
 	Global_44162 = 0;
 	Global_44199 = 15;
-	Global_64323 = 0;
+	Global_64323 = false;
 	Global_64324 = 0;
 	return;
 }
@@ -3474,11 +3474,11 @@ BOOL func_113(int iParam0, int iParam1) // Position - 0x3290 (12944)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_114() // Position - 0x32C8 (13000)

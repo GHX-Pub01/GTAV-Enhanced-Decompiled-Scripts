@@ -486,7 +486,7 @@ int func_4(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var 
 		num6 = 1;
 	}
 
-	num11 = Global_1685165;
+	num11 = Global_1685166;
 
 	if (num11 >= 12)
 		num11 = num11 - 1;
@@ -497,10 +497,10 @@ int func_4(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var 
 		num11 = num11 - 1;
 	}
 
-	Global_1685165 = Global_1685165 + 1;
+	Global_1685166 = Global_1685166 + 1;
 
-	if (Global_1685165 > 12)
-		Global_1685165 = 12;
+	if (Global_1685166 > 12)
+		Global_1685166 = 12;
 
 	num12 = 0;
 	Global_2623445[num12 /*99*/] = false;
@@ -1975,7 +1975,7 @@ void func_39(int iParam0) // Position - 0x2017 (8215)
 	int num;
 	int j;
 
-	if (iParam0 >= Global_1685165)
+	if (iParam0 >= Global_1685166)
 		return;
 
 	i = 0;
@@ -2003,17 +2003,17 @@ void func_39(int iParam0) // Position - 0x2017 (8215)
 	func_47(Global_2623445[iParam0 /*99*/].f_91);
 	num = iParam0;
 
-	for (j = num + 1; j < Global_1685165; j = j + 1)
+	for (j = num + 1; j < Global_1685166; j = j + 1)
 	{
 		Global_2623445[num /*99*/] = { Global_2623445[j /*99*/] };
 		num = num + 1;
 	}
 
 	func_41(num);
-	Global_1685165 = Global_1685165 - 1;
+	Global_1685166 = Global_1685166 - 1;
 
-	if (Global_1685138)
-		if (Global_1685136 > 0)
+	if (Global_1685139)
+		if (Global_1685137 > 0)
 			func_40();
 
 	return;
@@ -2021,7 +2021,7 @@ void func_39(int iParam0) // Position - 0x2017 (8215)
 
 void func_40() // Position - 0x215F (8543)
 {
-	Global_1685138 = false;
+	Global_1685139 = false;
 	return;
 }
 
@@ -2063,7 +2063,7 @@ int func_42(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 
 	i = 0;
 
-	for (i = 0; i < Global_1685165; i = i + 1)
+	for (i = 0; i < Global_1685166; i = i + 1)
 	{
 		if (MISC::ARE_STRINGS_EQUAL(&uParam0, &(Global_2623445[i /*99*/].f_15)))
 			return i;

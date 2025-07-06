@@ -30031,9 +30031,9 @@ struct<2> func_160(int iParam0) // Position - 0x2023A (131642)
 	return unk;
 }
 
-void func_161(int iParam0, BOOL bParam1) // Position - 0x20686 (132742)
+void func_161(int iParam0, int iParam1) // Position - 0x20686 (132742)
 {
-	Global_79833 = bParam1;
+	Global_79833 = iParam1;
 
 	if (Global_64320)
 		return;
@@ -34624,7 +34624,7 @@ BOOL func_247(Hash hParam0, int iParam1) // Position - 0x2881C (165916)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

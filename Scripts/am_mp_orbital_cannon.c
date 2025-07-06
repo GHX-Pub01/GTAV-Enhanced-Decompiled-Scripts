@@ -1054,8 +1054,8 @@ int func_10(int iParam0) // Position - 0x265 (613)
 
 void func_11() // Position - 0x2A0 (672)
 {
-	if (IS_BIT_SET(Global_1668458, 4))
-		MISC::CLEAR_BIT(&Global_1668458, 4);
+	if (IS_BIT_SET(Global_1668459, 4))
+		MISC::CLEAR_BIT(&Global_1668459, 4);
 
 	return;
 }
@@ -2800,15 +2800,15 @@ void func_75(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2284 (88
 			}
 		}
 	
-		allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_1578083);
+		allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_1578084);
 	
 		for (j = 0; j < allVehicles; j = j + 1)
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1578083[j]))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1578084[j]))
 			{
-				if (func_79(Global_1578083[j], false) || func_78(Global_1578083[j], false) || func_77(Global_1578083[j], false) || func_76(Global_1578083[j], false))
+				if (func_79(Global_1578084[j], false) || func_78(Global_1578084[j], false) || func_77(Global_1578084[j], false) || func_76(Global_1578084[j], false))
 				{
-					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(Global_1578083[j], false) };
+					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(Global_1578084[j], false) };
 				
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(vParam0, entityCoords2, false) < 15f && entityCoords2.f_2 >= vParam0.f_2 - 15f)
 						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), entityCoords2, 59, 1f, true, false, 1065353216);
@@ -5336,7 +5336,7 @@ BOOL func_138(var uParam0) // Position - 0x4ADA (19162)
 
 void func_139(int iParam0) // Position - 0x5376 (21366)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -5369,7 +5369,7 @@ void func_140(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 		func_146(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_145(1);
 
 	if (*uParam2 == 0)
@@ -5559,7 +5559,7 @@ void func_144(const char* sParam0) // Position - 0x577E (22398)
 
 void func_145(int iParam0) // Position - 0x578C (22412)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
@@ -6527,22 +6527,22 @@ void func_232() // Position - 0x66AA (26282)
 {
 	func_233();
 
-	if (!IS_BIT_SET(Global_1668458, 4))
-		MISC::SET_BIT(&Global_1668458, 4);
+	if (!IS_BIT_SET(Global_1668459, 4))
+		MISC::SET_BIT(&Global_1668459, 4);
 
 	return;
 }
 
 void func_233() // Position - 0x66C9 (26313)
 {
-	MISC::CLEAR_BIT(&Global_1668458, 0);
-	MISC::CLEAR_BIT(&Global_1668458, 1);
+	MISC::CLEAR_BIT(&Global_1668459, 0);
+	MISC::CLEAR_BIT(&Global_1668459, 1);
 	return;
 }
 
 BOOL func_234() // Position - 0x66E3 (26339)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 void func_235() // Position - 0x66F1 (26353)

@@ -35807,11 +35807,11 @@ BOOL func_284(int iParam0, int iParam1) // Position - 0x28CFB (167163)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_285(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x28D33 (167219)
@@ -45107,7 +45107,7 @@ void func_471(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -52599,7 +52599,7 @@ BOOL func_583(Vehicle veParam0) // Position - 0x41464 (267364)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_585() != PV_COMP_INVALID && func_585() < 547)
-						if (!func_584(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_585() /*143*/].f_66)
+						if (!func_584(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_585() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -53083,7 +53083,7 @@ BOOL func_601(ePedComponentType epctParam0, int iParam1) // Position - 0x4227A (
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

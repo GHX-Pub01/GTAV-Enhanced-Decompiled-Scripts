@@ -3356,24 +3356,24 @@ void func_18(int iParam0, int iParam1) // Position - 0x1B36 (6966)
 	num = func_19(iParam0);
 	offset = func_29(iParam0, iParam1);
 
-	if (!IS_BIT_SET(Global_1668414.f_33[num], offset))
+	if (!IS_BIT_SET(Global_1668415.f_33[num], offset))
 	{
-		MISC::SET_BIT(&Global_1668414.f_33[num], offset);
-		Global_1668414.f_42 = Global_1668414.f_42 + 1;
+		MISC::SET_BIT(&Global_1668415.f_33[num], offset);
+		Global_1668415.f_42 = Global_1668415.f_42 + 1;
 	}
 
-	if (!IS_BIT_SET(Global_1668414.f_27[num], offset))
+	if (!IS_BIT_SET(Global_1668415.f_27[num], offset))
 	{
-		MISC::SET_BIT(&Global_1668414.f_27[num], offset);
-		Global_1668414.f_41 = Global_1668414.f_41 + 1;
+		MISC::SET_BIT(&Global_1668415.f_27[num], offset);
+		Global_1668415.f_41 = Global_1668415.f_41 + 1;
 	}
 
 	if (iParam1 != 3 && iParam1 != 4)
 	{
-		if (!IS_BIT_SET(Global_1668414.f_27[num], offset + 1))
+		if (!IS_BIT_SET(Global_1668415.f_27[num], offset + 1))
 		{
-			MISC::SET_BIT(&Global_1668414.f_27[num], offset + 1);
-			Global_1668414.f_41 = Global_1668414.f_41 + 1;
+			MISC::SET_BIT(&Global_1668415.f_27[num], offset + 1);
+			Global_1668415.f_41 = Global_1668415.f_41 + 1;
 		}
 	}
 
@@ -3668,15 +3668,15 @@ Hash func_25() // Position - 0x200D (8205)
 
 int func_26() // Position - 0x201D (8221)
 {
-	if (Global_1668413 == 0)
+	if (Global_1668414 == 0)
 		func_27();
 
-	return Global_1668413;
+	return Global_1668414;
 }
 
 void func_27() // Position - 0x2035 (8245)
 {
-	Global_1668413 = MISC::GET_HASH_KEY(NETWORK::GET_CLOUD_TIME_AS_STRING()) + NETWORK::GET_CLOUD_TIME_AS_INT() + NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()) + MISC::GET_HASH_KEY(PLAYER::GET_PLAYER_NAME(PLAYER::PLAYER_ID()));
+	Global_1668414 = MISC::GET_HASH_KEY(NETWORK::GET_CLOUD_TIME_AS_STRING()) + NETWORK::GET_CLOUD_TIME_AS_INT() + NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()) + MISC::GET_HASH_KEY(PLAYER::GET_PLAYER_NAME(PLAYER::PLAYER_ID()));
 	return;
 }
 
@@ -4895,8 +4895,8 @@ void func_40(int iParam0) // Position - 0x34D0 (13520)
 	num = func_43(iParam0);
 	num2 = func_42(num);
 	offset = func_41(num);
-	MISC::SET_BIT(&Global_1668414.f_8[num2], offset);
-	Global_1668414.f_40 = Global_1668414.f_40 + 1;
+	MISC::SET_BIT(&Global_1668415.f_8[num2], offset);
+	Global_1668415.f_40 = Global_1668415.f_40 + 1;
 	return;
 }
 
@@ -6018,7 +6018,7 @@ void func_44(var uParam0) // Position - 0x47A8 (18344)
 	{
 		num3 = func_42(num2);
 		offset = func_41(num2);
-		MISC::SET_BIT(&Global_1668414[num3], offset);
+		MISC::SET_BIT(&Global_1668415[num3], offset);
 	}
 
 	return;
@@ -13495,14 +13495,14 @@ void func_120() // Position - 0xE07A (57466)
 
 void func_121() // Position - 0xE0C5 (57541)
 {
-	MISC::CLEAR_BIT(&Global_1668458, 0);
-	MISC::CLEAR_BIT(&Global_1668458, 1);
+	MISC::CLEAR_BIT(&Global_1668459, 0);
+	MISC::CLEAR_BIT(&Global_1668459, 1);
 	return;
 }
 
 BOOL func_122() // Position - 0xE0DF (57567)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -17076,13 +17076,13 @@ BOOL func_229() // Position - 0x12CD7 (77015)
 
 void func_230(int iParam0, int iParam1) // Position - 0x12CE9 (77033)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = true;
+				Global_1673707.f_170[iParam1] = true;
 			break;
 	}
 
@@ -21104,11 +21104,11 @@ BOOL func_411(int iParam0, int iParam1) // Position - 0x17CD0 (97488)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_412() // Position - 0x17D08 (97544)
@@ -23964,7 +23964,7 @@ void func_524(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 		func_530(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_529(1);
 
 	if (*uParam2 == 0)
@@ -24154,7 +24154,7 @@ void func_528(const char* sParam0) // Position - 0x1BA1C (113180)
 
 void func_529(int iParam0) // Position - 0x1BA2A (113194)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
@@ -25211,7 +25211,7 @@ char* func_587(int iParam0) // Position - 0x1CCA5 (117925)
 
 BOOL func_588() // Position - 0x1CF69 (118633)
 {
-	return Global_1579699;
+	return Global_1579700;
 }
 
 char* func_589() // Position - 0x1CF75 (118645)
@@ -30251,7 +30251,7 @@ void func_740(int iParam0, int iParam1) // Position - 0x22EC1 (143041)
 	return;
 }
 
-void func_741(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0x22F29 (143145)
+void func_741(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0x22F29 (143145)
 {
 	Hash eventData;
 
@@ -30260,7 +30260,7 @@ void func_741(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, i
 	eventData.f_3 = iParam0;
 	eventData.f_4 = iParam2;
 	eventData.f_5 = iParam3;
-	eventData.f_6 = uParam4;
+	eventData.f_6 = iParam4;
 	eventData.f_7 = iParam5;
 
 	if (!(iParam1 == 0))
@@ -30269,7 +30269,7 @@ void func_741(int iParam0, int iParam1, int iParam2, int iParam3, var uParam4, i
 	return;
 }
 
-var func_742() // Position - 0x22F76 (143222)
+int func_742() // Position - 0x22F76 (143222)
 {
 	return Global_2739945.f_5266.f_349;
 }
@@ -31577,7 +31577,7 @@ BOOL func_790(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_794(iParam0) - func_793(iParam0, false))
@@ -31637,13 +31637,13 @@ int func_792(int iParam0) // Position - 0x24706 (149254)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -31687,13 +31687,13 @@ int func_794(int iParam0) // Position - 0x247E9 (149481)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;

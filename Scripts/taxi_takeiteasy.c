@@ -2069,20 +2069,20 @@ void func_50() // Position - 0x1499 (5273)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
+				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
 					func_51(Global_98621[i /*17*/].f_5, true);
 	}
 
 	return;
 }
 
-void func_51(int iParam0, BOOL bParam1) // Position - 0x1520 (5408)
+void func_51(eCharacter echParam0, BOOL bParam1) // Position - 0x1520 (5408)
 {
 	if (bParam1)
-		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
-			Global_95673[iParam0 /*2*/] = true;
+		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
+			Global_95673[echParam0 /*2*/] = true;
 	else
-		Global_95673[iParam0 /*2*/] = false;
+		Global_95673[echParam0 /*2*/] = false;
 
 	return;
 }
@@ -4950,7 +4950,7 @@ void func_148(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(pedParam1, false))
@@ -6577,11 +6577,11 @@ BOOL func_213(int iParam0, int iParam1) // Position - 0x6D1E (27934)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_214(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x6D56 (27990)

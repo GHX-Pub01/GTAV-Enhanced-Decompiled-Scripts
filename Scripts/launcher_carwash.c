@@ -1250,7 +1250,7 @@ BOOL func_51(Player plParam0) // Position - 0x157E (5502)
 
 BOOL func_52() // Position - 0x15A1 (5537)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;

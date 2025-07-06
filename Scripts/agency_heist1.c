@@ -5595,11 +5595,11 @@ BOOL func_84(int iParam0, int iParam1) // Position - 0x6E6D (28269)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_85() // Position - 0x6EA5 (28325)
@@ -31880,9 +31880,9 @@ void func_173(var uParam0, Hash hParam1, int iParam2, int iParam3) // Position -
 	return;
 }
 
-int func_174(int iParam0) // Position - 0x2268D (140941)
+int func_174(ePedComponentType epctParam0) // Position - 0x2268D (140941)
 {
-	switch (iParam0)
+	switch (epctParam0)
 	{
 		case 0:
 			return 0;
@@ -35052,7 +35052,7 @@ void func_218(Ped pedParam0, BOOL bParam1) // Position - 0x271A8 (160168)
 	eCharacter character;
 	int num;
 	var unk;
-	int i;
+	ePedComponentType i;
 
 	if (!PED::IS_PED_INJURED(pedParam0))
 	{
@@ -35089,12 +35089,12 @@ void func_218(Ped pedParam0, BOOL bParam1) // Position - 0x271A8 (160168)
 					Global_114162.f_2367.f_539[character /*65*/] = { unk };
 					Global_114162.f_2367.f_539.f_2391[character] = func_219(pedParam0);
 				
-					for (i = 0; i < 12; i = i + 1)
+					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_206(pedParam0, func_174(i));
 					}
 				
-					for (i = 0; i < 12; i = i + 1)
+					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_206(pedParam0, func_174(i));
 					}
@@ -36194,10 +36194,10 @@ int func_232(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_206(pedParam0, 11);
@@ -54298,7 +54298,7 @@ BOOL func_321(Ped pedParam0) // Position - 0x46114 (286996)
 int func_322(int iParam0) // Position - 0x46190 (287120)
 {
 	if (func_323(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -94836,7 +94836,7 @@ BOOL func_494(Vehicle veParam0) // Position - 0x74A43 (477763)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_496() != -1 && func_496() < 547)
-						if (!func_495(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_496() /*143*/].f_66)
+						if (!func_495(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_496() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -95528,7 +95528,7 @@ BOOL func_517(Hash hParam0, int iParam1) // Position - 0x75C9E (482462)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -104917,7 +104917,7 @@ void func_712(var uParam0, Vehicle veParam1, Vector3 vParam2, var uParam3, var u
 	eScriptLookAtFlags flags;
 	int num;
 
-	if (Global_1582037 == 1)
+	if (Global_1582038 == 1)
 		return;
 
 	if (ENTITY::IS_ENTITY_DEAD(veParam1, false))

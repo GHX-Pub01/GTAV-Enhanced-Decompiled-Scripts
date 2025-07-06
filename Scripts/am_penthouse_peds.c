@@ -2517,7 +2517,7 @@ void main() // Position - 0x0 (0)
 	fLocal_29 = 140f;
 	fLocal_30 = 180f;
 	iLocal_33 = 3;
-	Global_1579736 = 1;
+	Global_1579737 = 1;
 	func_46();
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -2543,7 +2543,7 @@ void main() // Position - 0x0 (0)
 	{
 		func_37();
 	
-		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579736 == 0 || func_28())
+		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS() || _SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1579737 == 0 || func_28())
 			func_25();
 	
 		func_3();
@@ -3709,7 +3709,7 @@ void func_27() // Position - 0x1414 (5140)
 
 BOOL func_28() // Position - 0x1439 (5177)
 {
-	return !Global_1579732 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return !Global_1579733 && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x144F (5199)
@@ -7103,7 +7103,7 @@ int func_43() // Position - 0x83FE (33790)
 
 int func_44() // Position - 0x840E (33806)
 {
-	if (Global_1579732)
+	if (Global_1579733)
 		return 1;
 
 	return 0;
@@ -7125,12 +7125,12 @@ int func_45(var uParam0) // Position - 0x8422 (33826)
 
 void func_46() // Position - 0x8474 (33908)
 {
-	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579751))
+	while (!NETWORK::NETWORK_TRY_TO_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, Global_1579752))
 	{
 		BUILTIN::WAIT(0);
 	}
 
-	Global_1579751 = Global_1579751 + 1;
+	Global_1579752 = Global_1579752 + 1;
 	func_47(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_38, 3, 0);
 	return;

@@ -31302,7 +31302,7 @@ void func_186(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4)
 			Global_114162.f_7265.f_227[iParam0] = iParam1;
 	
 		Global_40739[iParam0] = bParam2;
-		Global_40938[iParam0] = 1;
+		Global_40938[iParam0] = true;
 		func_189(iParam0, bParam3, iParam4, false);
 		func_187(iParam0, iParam1);
 	}
@@ -31449,7 +31449,7 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 						if (vector.f_4[num2] != 0)
 							ENTITY::CREATE_MODEL_HIDE(vector, 10f, vector.f_4[num2], true);
 					
-						Global_42333[iParam0] = 1;
+						Global_42333[iParam0] = true;
 					}
 				
 					flag = true;
@@ -31531,8 +31531,8 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								STREAMING::REQUEST_IPL(&vector.f_8[2 /*8*/]);
 					}
 				
-					Global_42134[iParam0] = 1;
-					Global_42333[iParam0] = 1;
+					Global_42134[iParam0] = true;
+					Global_42333[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -31592,8 +31592,8 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							INTERIOR::REFRESH_INTERIOR(interiorAtCoordsWithType);
 					}
 				
-					Global_42333[iParam0] = 1;
-					Global_42134[iParam0] = 1;
+					Global_42333[iParam0] = true;
+					Global_42134[iParam0] = true;
 					flag = true;
 					break;
 			
@@ -31607,7 +31607,7 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 							if (num == 0)
 							{
 								OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 3);
-								Global_42333[iParam0] = 1;
+								Global_42333[iParam0] = true;
 								flag = true;
 							}
 							else if (num == 1)
@@ -31615,7 +31615,7 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 								if (OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 6 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 7 && OBJECT::GET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject) != 8)
 								{
 									OBJECT::SET_STATE_OF_RAYFIRE_MAP_OBJECT(rayfireMapObject, 10);
-									Global_42333[iParam0] = 1;
+									Global_42333[iParam0] = true;
 									flag = true;
 								}
 							}
@@ -31645,7 +31645,7 @@ BOOL func_189(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position 
 		
 			if (flag)
 			{
-				Global_40938[iParam0] = 0;
+				Global_40938[iParam0] = false;
 				Global_41137[iParam0] = num;
 			
 				if (!func_190())
@@ -34090,11 +34090,11 @@ BOOL func_222(int iParam0, int iParam1) // Position - 0x27589 (161161)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_223() // Position - 0x275C1 (161217)
@@ -38135,7 +38135,7 @@ BOOL func_291(Vehicle veParam0) // Position - 0x2CE85 (183941)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_293() != PV_COMP_INVALID && func_293() < 547)
-						if (!func_292(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_293() /*143*/].f_66)
+						if (!func_292(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_293() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -38787,7 +38787,7 @@ BOOL func_313(Hash hParam0, int iParam1) // Position - 0x2E023 (188451)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

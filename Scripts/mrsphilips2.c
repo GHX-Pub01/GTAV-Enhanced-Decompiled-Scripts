@@ -2674,7 +2674,7 @@ BOOL func_15(ePedComponentType epctParam0, int iParam1) // Position - 0x438D (17
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -36638,7 +36638,7 @@ BOOL func_240(Player plParam0, int iParam1) // Position - 0x2C768 (182120)
 		return false;
 
 	if (plParam0 == PLAYER::PLAYER_ID())
-		flag = func_241(-1, false) == CHAR_MIKE_FRANK_CONF;
+		flag = func_241(-1, false) == 8;
 	else
 		flag = Global_1845270[plParam0 /*892*/].f_206 == 8;
 
@@ -36649,28 +36649,28 @@ BOOL func_240(Player plParam0, int iParam1) // Position - 0x2C768 (182120)
 	return flag;
 }
 
-eCharacter func_241(int iParam0, BOOL bParam1) // Position - 0x2C7C1 (182209)
+int func_241(int iParam0, BOOL bParam1) // Position - 0x2C7C1 (182209)
 {
-	eCharacter character;
 	int num;
+	int num2;
 
-	num = iParam0;
+	num2 = iParam0;
 
-	if (num == -1)
-		num = func_45();
+	if (num2 == -1)
+		num2 = func_45();
 
-	if (Global_1575066[num] == true)
+	if (Global_1575066[num2] == true)
 	{
 		bParam1;
-		character = CHAR_MIKE_FRANK_CONF;
+		num = 8;
 	}
 	else
 	{
-		character = Global_1574920[num];
+		num = Global_1574920[num2];
 		bParam1;
 	}
 
-	return character;
+	return num;
 }
 
 BOOL func_242(ePedComponentType epctParam0) // Position - 0x2C802 (182274)
@@ -50126,7 +50126,7 @@ BOOL func_396(int iParam0) // Position - 0x40804 (264196)
 	if (func_406(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
-	if (Global_1577926)
+	if (Global_1577927)
 		return false;
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -50546,14 +50546,14 @@ void func_415(BOOL bParam0, BOOL bParam1) // Position - 0x40F93 (266131)
 			STREAMING::STOP_PLAYER_SWITCH();
 			func_283(0);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1577877))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1577878))
 			{
-				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577877, false))
+				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577878, false))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577877))
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577877, false, false);
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577878))
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577878, false, false);
 				
-					PED::DELETE_PED(&Global_1577877);
+					PED::DELETE_PED(&Global_1577878);
 				}
 			}
 		}
@@ -50960,10 +50960,10 @@ int func_425(int iParam0) // Position - 0x41662 (267874)
 	return 0;
 }
 
-void func_426(int iParam0) // Position - 0x417E1 (268257)
+void func_426(eCharacter echParam0) // Position - 0x417E1 (268257)
 {
 	if (Global_98612 == -1)
-		Global_98612 = iParam0;
+		Global_98612 = echParam0;
 
 	return;
 }
@@ -52010,10 +52010,10 @@ int func_440(Ped pedParam0, int iParam1, ePedComponentType epctParam2, int iPara
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				type8 = func_99(pedParam0, 11);
@@ -70056,7 +70056,7 @@ BOOL func_525(Ped pedParam0) // Position - 0x60681 (394881)
 ePedComponentType func_526(ePedComponentType epctParam0) // Position - 0x606FD (395005)
 {
 	if (func_527(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
 		return PV_COMP_INVALID;

@@ -38658,7 +38658,7 @@ BOOL func_366(Player plParam0) // Position - 0x2CEA9 (183977)
 
 BOOL func_367() // Position - 0x2CECC (184012)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;

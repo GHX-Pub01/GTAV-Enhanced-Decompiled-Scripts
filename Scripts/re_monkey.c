@@ -3435,11 +3435,11 @@ BOOL func_128(int iParam0, int iParam1) // Position - 0x46AA (18090)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_129() // Position - 0x46E2 (18146)

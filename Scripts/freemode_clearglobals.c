@@ -2445,9 +2445,9 @@ void func_29() // Position - 0x359C (13724)
 	src.f_1517 = 32;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1673706, &src, 1557);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1673707, &src, 1557);
 	else
-		Global_1673706 = { src };
+		Global_1673707 = { src };
 
 	return;
 }
@@ -2498,9 +2498,9 @@ void func_32() // Position - 0x3886 (14470)
 	src.f_59 = 8;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1668461, &src, 188);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1668462, &src, 188);
 	else
-		Global_1668461 = { src };
+		Global_1668462 = { src };
 
 	return;
 }
@@ -5915,9 +5915,9 @@ void func_57() // Position - 0x8FF7 (36855)
 	src.f_16 = 2;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1685224, &src, 27);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1685225, &src, 27);
 	else
-		Global_1685224 = { src };
+		Global_1685225 = { src };
 
 	return;
 }
@@ -6383,21 +6383,21 @@ void func_67(int iParam0) // Position - 0x9ADF (39647)
 	var src;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1685497[iParam0 /*26*/], &src, 26);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1685498[iParam0 /*26*/], &src, 26);
 	else
-		Global_1685497[iParam0 /*26*/] = { src };
+		Global_1685498[iParam0 /*26*/] = { src };
 
 	return;
 }
 
 void func_68(int iParam0) // Position - 0x9B11 (39697)
 {
-	Any* src;
+	int src;
 
 	if (Global_2672941)
-		MISC::COPY_SCRIPT_STRUCT(&Global_1685281[iParam0], &src, 1);
+		MISC::COPY_SCRIPT_STRUCT(&Global_1685282[iParam0], &src, 1);
 	else
-		Global_1685281[iParam0] = src;
+		Global_1685282[iParam0] = src;
 
 	return;
 }

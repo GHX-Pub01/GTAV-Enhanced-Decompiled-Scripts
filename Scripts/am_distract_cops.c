@@ -1126,7 +1126,7 @@ int func_40(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positio
 
 	playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 
-	if (func_55() || func_54() && func_52() && Global_1685224.f_1)
+	if (func_55() || func_54() && func_52() && Global_1685225.f_1)
 		if (bParam1)
 			return func_51(iParam2, playerTeam);
 		else
@@ -2208,13 +2208,13 @@ void func_94(int iParam0, char* sParam1, int iParam2, BOOL bParam3, const char* 
 
 void func_95(int iParam0, int iParam1) // Position - 0x23C6 (9158)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_15 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_15 = iParam1;
 	return;
 }
 
 void func_96(int iParam0, const char* sParam1, BOOL bParam2) // Position - 0x23DC (9180)
 {
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1668461.f_59[iParam0 /*16*/].f_7), sParam1, 32);
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1668462.f_59[iParam0 /*16*/].f_7), sParam1, 32);
 
 	if (!bParam2)
 		return;
@@ -2225,13 +2225,13 @@ void func_96(int iParam0, const char* sParam1, BOOL bParam2) // Position - 0x23D
 
 void func_97(int iParam0) // Position - 0x2403 (9219)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 5);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 5);
 	return;
 }
 
 void func_98(int iParam0) // Position - 0x241A (9242)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 4);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 4);
 	return;
 }
 
@@ -2240,23 +2240,23 @@ void func_99(int iParam0, char* sParam1) // Position - 0x2431 (9265)
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam1, 16);
-	Global_1668461.f_59[iParam0 /*16*/].f_3 = { unk };
+	Global_1668462.f_59[iParam0 /*16*/].f_3 = { unk };
 	return;
 }
 
 void func_100(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2451 (9297)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_2 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_2 = iParam1;
 
 	if (bParam2)
 	{
-		MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 2);
-		MISC::CLEAR_BIT(&Global_1668461.f_59[iParam0 /*16*/], 3);
+		MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 2);
+		MISC::CLEAR_BIT(&Global_1668462.f_59[iParam0 /*16*/], 3);
 	}
 	else
 	{
-		MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 3);
-		MISC::CLEAR_BIT(&Global_1668461.f_59[iParam0 /*16*/], 2);
+		MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 3);
+		MISC::CLEAR_BIT(&Global_1668462.f_59[iParam0 /*16*/], 2);
 	}
 
 	return;
@@ -2264,13 +2264,13 @@ void func_100(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2451 (9297
 
 void func_101(int iParam0, int iParam1) // Position - 0x24AB (9387)
 {
-	Global_1668461.f_59[iParam0 /*16*/].f_1 = iParam1;
+	Global_1668462.f_59[iParam0 /*16*/].f_1 = iParam1;
 	return;
 }
 
 void func_102(int iParam0) // Position - 0x24C1 (9409)
 {
-	MISC::SET_BIT(&Global_1668461.f_59[iParam0 /*16*/], 0);
+	MISC::SET_BIT(&Global_1668462.f_59[iParam0 /*16*/], 0);
 	return;
 }
 
@@ -2291,7 +2291,7 @@ int func_103() // Position - 0x24D8 (9432)
 
 BOOL func_104(int iParam0) // Position - 0x2506 (9478)
 {
-	return IS_BIT_SET(Global_1668461.f_59[iParam0 /*16*/], 0);
+	return IS_BIT_SET(Global_1668462.f_59[iParam0 /*16*/], 0);
 }
 
 BOOL _GET_RANDOM_BOOL() // Position - 0x251A (9498)
@@ -3432,26 +3432,26 @@ void func_148(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 
 	if (num > -1)
 	{
-		Global_1675263.f_1 = 1;
+		Global_1675264.f_1 = 1;
 		func_149(7, num);
-		Global_1675263.f_4714[num] = iParam0;
-		TEXT_LABEL_ASSIGN_STRING(&Global_1675263.f_4714.f_11[num /*16*/], sParam1, 64);
-		Global_1675263.f_4714.f_172[num] = iParam2;
-		Global_1675263.f_4714.f_216[num] = iParam3;
-		Global_1675263.f_4714.f_183[num] = iParam4;
-		Global_1675263.f_4714.f_194[num] = iParam5;
-		Global_1675263.f_4714.f_249[num] = iParam6;
-		Global_1675263.f_4714.f_260[num] = iParam7;
-		Global_1675263.f_4714.f_205[num] = iParam8;
-		Global_1675263.f_4714.f_314[num] = iParam9;
-		Global_1675263.f_4714.f_325[num] = iParam10;
-		Global_1675263.f_4714.f_357[num] = iParam11;
-		Global_1675263.f_4714.f_238[num] = iParam12;
-		Global_1675263.f_4714.f_271[num] = iParam13;
-		Global_1675263.f_4714.f_368[num] = iParam14;
-		Global_1675263.f_4714.f_379[num] = iParam15;
-		Global_1675263.f_4714.f_390[num] = iParam16;
-		Global_1675263.f_4714.f_227[num] = iParam17;
+		Global_1675264.f_4714[num] = iParam0;
+		TEXT_LABEL_ASSIGN_STRING(&Global_1675264.f_4714.f_11[num /*16*/], sParam1, 64);
+		Global_1675264.f_4714.f_172[num] = iParam2;
+		Global_1675264.f_4714.f_216[num] = iParam3;
+		Global_1675264.f_4714.f_183[num] = iParam4;
+		Global_1675264.f_4714.f_194[num] = iParam5;
+		Global_1675264.f_4714.f_249[num] = iParam6;
+		Global_1675264.f_4714.f_260[num] = iParam7;
+		Global_1675264.f_4714.f_205[num] = iParam8;
+		Global_1675264.f_4714.f_314[num] = iParam9;
+		Global_1675264.f_4714.f_325[num] = iParam10;
+		Global_1675264.f_4714.f_357[num] = iParam11;
+		Global_1675264.f_4714.f_238[num] = iParam12;
+		Global_1675264.f_4714.f_271[num] = iParam13;
+		Global_1675264.f_4714.f_368[num] = iParam14;
+		Global_1675264.f_4714.f_379[num] = iParam15;
+		Global_1675264.f_4714.f_390[num] = iParam16;
+		Global_1675264.f_4714.f_227[num] = iParam17;
 	}
 
 	return;
@@ -3459,13 +3459,13 @@ void func_148(int iParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 
 void func_149(int iParam0, int iParam1) // Position - 0x3DAA (15786)
 {
-	MISC::SET_BIT(&Global_1675263.f_7064[iParam0], iParam1);
+	MISC::SET_BIT(&Global_1675264.f_7064[iParam0], iParam1);
 	return;
 }
 
 BOOL func_150(int iParam0, int iParam1) // Position - 0x3DC3 (15811)
 {
-	return IS_BIT_SET(Global_1675263.f_7064[iParam0], iParam1);
+	return IS_BIT_SET(Global_1675264.f_7064[iParam0], iParam1);
 }
 
 int func_151(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3DD9 (15833)
@@ -3481,13 +3481,13 @@ int func_151(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3DD9 (1583
 
 void func_152() // Position - 0x3E20 (15904)
 {
-	Global_1675263.f_1173 = 1;
+	Global_1675264.f_1173 = 1;
 	return;
 }
 
 void func_153() // Position - 0x3E30 (15920)
 {
-	Global_1675263.f_1172 = 1;
+	Global_1675264.f_1172 = 1;
 	return;
 }
 

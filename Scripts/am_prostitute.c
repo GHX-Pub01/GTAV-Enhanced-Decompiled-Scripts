@@ -1247,8 +1247,8 @@ void func_47() // Position - 0x12B4 (4788)
 
 void func_48() // Position - 0x12C0 (4800)
 {
-	if (IS_BIT_SET(Global_1668458, 4))
-		MISC::CLEAR_BIT(&Global_1668458, 4);
+	if (IS_BIT_SET(Global_1668459, 4))
+		MISC::CLEAR_BIT(&Global_1668459, 4);
 
 	return;
 }

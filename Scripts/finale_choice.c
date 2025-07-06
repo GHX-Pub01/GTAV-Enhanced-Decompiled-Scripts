@@ -911,7 +911,7 @@ BOOL func_39(Hash hParam0) // Position - 0x1355 (4949)
 
 BOOL func_40() // Position - 0x1384 (4996)
 {
-	return IS_BIT_SET(Global_1668458, 4);
+	return IS_BIT_SET(Global_1668459, 4);
 }
 
 int func_41(eCharacter echParam0, eCharacter echParam1) // Position - 0x1392 (5010)

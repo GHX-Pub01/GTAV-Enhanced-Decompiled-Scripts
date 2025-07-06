@@ -1725,7 +1725,7 @@ BOOL func_35(Ped pedParam0) // Position - 0x15F5 (5621)
 
 BOOL func_36() // Position - 0x1652 (5714)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -2659,7 +2659,7 @@ BOOL func_78() // Position - 0x260A (9738)
 
 BOOL func_79() // Position - 0x2629 (9769)
 {
-	return Global_1579668.f_2 != 8;
+	return Global_1579669.f_2 != 8;
 }
 
 BOOL func_80(Ped pedParam0, var uParam1, var uParam2, var uParam3, int iParam4) // Position - 0x263A (9786)

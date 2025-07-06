@@ -2401,20 +2401,20 @@ void func_45() // Position - 0x1CCE (7374)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
+				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
 					func_46(Global_98621[i /*17*/].f_5, true);
 	}
 
 	return;
 }
 
-void func_46(int iParam0, BOOL bParam1) // Position - 0x1D55 (7509)
+void func_46(eCharacter echParam0, BOOL bParam1) // Position - 0x1D55 (7509)
 {
 	if (bParam1)
-		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
-			Global_95673[iParam0 /*2*/] = true;
+		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
+			Global_95673[echParam0 /*2*/] = true;
 	else
-		Global_95673[iParam0 /*2*/] = false;
+		Global_95673[echParam0 /*2*/] = false;
 
 	return;
 }
@@ -6360,11 +6360,11 @@ BOOL func_201(int iParam0, int iParam1) // Position - 0x6A9E (27294)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_202(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x6AD6 (27350)

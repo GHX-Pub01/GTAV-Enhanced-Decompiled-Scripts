@@ -6385,11 +6385,11 @@ BOOL func_130(int iParam0, int iParam1) // Position - 0x881D (34845)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_131() // Position - 0x8855 (34901)
@@ -6641,20 +6641,20 @@ void func_144() // Position - 0x8C71 (35953)
 	{
 		if (Global_98621[i /*17*/] && !Global_98621[i /*17*/].f_1)
 			if (Global_98621[i /*17*/].f_3 == 0)
-				if (Global_98621[i /*17*/].f_5 != 88 && Global_98621[i /*17*/].f_5 != 89 && Global_98621[i /*17*/].f_5 != 92)
+				if (Global_98621[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98621[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98621[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
 					func_145(Global_98621[i /*17*/].f_5, true);
 	}
 
 	return;
 }
 
-void func_145(int iParam0, BOOL bParam1) // Position - 0x8CF8 (36088)
+void func_145(eCharacter echParam0, BOOL bParam1) // Position - 0x8CF8 (36088)
 {
 	if (bParam1)
-		if (iParam0 != 88 && iParam0 != 89 && iParam0 != 92)
-			Global_95673[iParam0 /*2*/] = true;
+		if (echParam0 != CHAR_DETONATEBOMB && echParam0 != CHAR_LS_CUSTOMS && echParam0 != CHAR_DOMESTIC_GIRL)
+			Global_95673[echParam0 /*2*/] = true;
 	else
-		Global_95673[iParam0 /*2*/] = false;
+		Global_95673[echParam0 /*2*/] = false;
 
 	return;
 }
@@ -40374,10 +40374,10 @@ int func_344(Ped pedParam0, int iParam1, ePedComponentType epctParam2, int iPara
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				type8 = func_253(pedParam0, 11);
@@ -58427,7 +58427,7 @@ BOOL func_431(Ped pedParam0) // Position - 0x4B8FE (309502)
 ePedComponentType func_432(ePedComponentType epctParam0) // Position - 0x4B97A (309626)
 {
 	if (func_433(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
 		return PV_COMP_INVALID;

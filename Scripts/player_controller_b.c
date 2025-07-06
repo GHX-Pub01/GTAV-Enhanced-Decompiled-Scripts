@@ -14911,7 +14911,7 @@ BOOL func_132(ePedComponentType epctParam0, int iParam1) // Position - 0x170F8 (
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -16945,7 +16945,7 @@ BOOL func_201(int iParam0) // Position - 0x19624 (103972)
 	if (func_211(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
-	if (Global_1577926)
+	if (Global_1577927)
 		return false;
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -17365,14 +17365,14 @@ void func_220(BOOL bParam0, BOOL bParam1) // Position - 0x19D6D (105837)
 			STREAMING::STOP_PLAYER_SWITCH();
 			func_141(0);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1577877))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1577878))
 			{
-				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577877, false))
+				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577878, false))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577877))
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577877, false, false);
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577878))
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577878, false, false);
 				
-					PED::DELETE_PED(&Global_1577877);
+					PED::DELETE_PED(&Global_1577878);
 				}
 			}
 		}
@@ -17757,10 +17757,10 @@ int func_228(int iParam0) // Position - 0x1A3B5 (107445)
 	return 0;
 }
 
-void func_229(int iParam0) // Position - 0x1A519 (107801)
+void func_229(eCharacter echParam0) // Position - 0x1A519 (107801)
 {
 	if (Global_98612 == -1)
-		Global_98612 = iParam0;
+		Global_98612 = echParam0;
 
 	return;
 }
@@ -21916,10 +21916,10 @@ int func_289(Ped pedParam0, int iParam1, ePedComponentType epctParam2, int iPara
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				type8 = func_275(pedParam0, 11);
@@ -39029,7 +39029,7 @@ BOOL func_372(Ped pedParam0) // Position - 0x3C439 (246841)
 ePedComponentType func_373(ePedComponentType epctParam0) // Position - 0x3C4B5 (246965)
 {
 	if (func_374(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
 		return PV_COMP_INVALID;
@@ -112404,13 +112404,13 @@ BOOL func_634(eCharacter echParam0, var uParam1, var uParam2, var uParam3, var u
 {
 	float endRange;
 	int i;
-	eCharacter num;
-	int num2;
+	eCharacter character;
+	int num;
 	Vector3 vector;
 	Vector3 vector2;
-	float num3;
+	float num2;
 	var unk5;
-	float num4;
+	float num3;
 	float randomFloatInRange;
 
 	endRange = 0f;
@@ -112432,27 +112432,27 @@ BOOL func_634(eCharacter echParam0, var uParam1, var uParam2, var uParam3, var u
 	{
 		if (Global_99001[echParam0] == 1)
 		{
-			num = Global_99005[echParam0];
-			num2 = Global_92476[num /*34*/].f_10;
+			character = Global_99005[echParam0];
+			num = Global_92476[character /*34*/].f_10;
 		
-			if (!func_636(num2))
-				vector = { func_635(num2, 0) };
+			if (!func_636(num))
+				vector = { func_635(num, 0) };
 			else
-				vector = { func_635(num2, echParam0) };
+				vector = { func_635(num, echParam0) };
 		
 			vector2 = { 0f, 0f, 0f };
-			num3 = 0f;
+			num2 = 0f;
 			TEXT_LABEL_ASSIGN_STRING(&unk5, "", 32);
 		
 			for (i = 0; i < *uParam2; i = i + 1)
 			{
 				if (uParam1->[i] != 318)
 				{
-					if (func_588(uParam1->[i], &vector2, &num3, &unk5))
+					if (func_588(uParam1->[i], &vector2, &num2, &unk5))
 					{
-						num4 = BUILTIN::VDIST2(vector, vector2);
+						num3 = BUILTIN::VDIST2(vector, vector2);
 					
-						if (num4 < 22500f)
+						if (num3 < 22500f)
 						{
 							*uParam3 = uParam1->[i];
 							*uParam4 = 100f;

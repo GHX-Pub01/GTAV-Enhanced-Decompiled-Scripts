@@ -3885,7 +3885,7 @@ void func_80(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 		func_86(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_85(1);
 
 	if (*uParam2 == 0)
@@ -4075,7 +4075,7 @@ void func_84(const char* sParam0) // Position - 0x3F05 (16133)
 
 void func_85(int iParam0) // Position - 0x3F13 (16147)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
@@ -4093,7 +4093,7 @@ BOOL func_87(var uParam0) // Position - 0x3F34 (16180)
 
 void func_88(int iParam0) // Position - 0x3F4B (16203)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -4255,11 +4255,11 @@ BOOL func_96(int iParam0, int iParam1) // Position - 0x41FA (16890)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 BOOL func_97(int iParam0) // Position - 0x4232 (16946)

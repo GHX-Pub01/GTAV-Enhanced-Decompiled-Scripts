@@ -2234,11 +2234,11 @@ BOOL func_58(int iParam0, int iParam1) // Position - 0x2679 (9849)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_59() // Position - 0x26B1 (9905)
@@ -3326,7 +3326,7 @@ BOOL func_89(int iParam0) // Position - 0x3A7E (14974)
 	if (func_99(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
-	if (Global_1577926)
+	if (Global_1577927)
 		return false;
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -3741,14 +3741,14 @@ void func_107(BOOL bParam0, BOOL bParam1) // Position - 0x41C1 (16833)
 			STREAMING::STOP_PLAYER_SWITCH();
 			func_113(0);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1577877))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1577878))
 			{
-				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577877, false))
+				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577878, false))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577877))
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577877, false, false);
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577878))
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577878, false, false);
 				
-					PED::DELETE_PED(&Global_1577877);
+					PED::DELETE_PED(&Global_1577878);
 				}
 			}
 		}
@@ -10800,10 +10800,10 @@ int func_217(Ped pedParam0, int iParam1, ePedComponentType epctParam2, int iPara
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				type8 = func_203(pedParam0, 11);
@@ -29351,7 +29351,7 @@ BOOL func_310(Ped pedParam0) // Position - 0x2C0BE (180414)
 ePedComponentType func_311(ePedComponentType epctParam0) // Position - 0x2C13A (180538)
 {
 	if (func_312(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
 		return PV_COMP_INVALID;
@@ -93156,21 +93156,21 @@ void func_532(Vehicle veParam0, var uParam1, var uParam2, var uParam3, float fPa
 	return;
 }
 
-void func_533(eCharacter echParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x7223A (467514)
+void func_533(int iParam0, Vehicle veParam1, int iParam2) // Position - 0x7223A (467514)
 {
 	Vehicle vehicle;
 
-	if (echParam0 == -1)
+	if (iParam0 == -1)
 		return;
 
-	if (!func_550(&Global_78354.f_555[0 /*21*/], echParam0))
+	if (!func_550(&Global_78354.f_555[0 /*21*/], iParam0))
 		return;
 
 	if (!IS_BIT_SET(Global_78354.f_555[0 /*21*/].f_9, 12) && !IS_BIT_SET(Global_78354.f_555[0 /*21*/].f_9, 10))
 		if (Global_78354.f_555[0 /*21*/].f_4 != ENTITY::GET_ENTITY_MODEL(veParam1))
 			return;
 
-	if (Global_79261 != -1 && Global_79261 != echParam0)
+	if (Global_79261 != -1 && Global_79261 != iParam0)
 		return;
 
 	if (ENTITY::DOES_ENTITY_EXIST(veParam1))
@@ -93180,22 +93180,22 @@ void func_533(eCharacter echParam0, Vehicle veParam1, BOOL bParam2) // Position 
 			if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(veParam1))
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(veParam1, true, true);
 		
-			if (echParam0 == CHAR_WADE)
+			if (iParam0 == 24)
 				Global_114162.f_32754.f_4801 = func_143();
 		
-			if (veParam1 != Global_78354.f_139[echParam0])
+			if (veParam1 != Global_78354.f_139[iParam0])
 			{
-				if (echParam0 == CHAR_WADE)
+				if (iParam0 == 24)
 				{
-					vehicle = func_568(echParam0);
+					vehicle = func_568(iParam0);
 				
 					if (ENTITY::DOES_ENTITY_EXIST(vehicle) && VEHICLE::IS_VEHICLE_DRIVEABLE(vehicle, false) && veParam1 != vehicle)
 						func_534(vehicle, _CHAR_NULL);
 				}
 			
 				Global_79260 = veParam1;
-				Global_79261 = echParam0;
-				Global_79262 = bParam2;
+				Global_79261 = iParam0;
+				Global_79262 = iParam2;
 			}
 		}
 	}
@@ -93491,7 +93491,7 @@ BOOL func_540(ePedComponentType epctParam0, int iParam1) // Position - 0x72A5E (
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -94691,7 +94691,7 @@ void func_554(int iParam0, BOOL bParam1) // Position - 0x74A82 (477826)
 			func_555(iParam0, 3, false);
 			func_555(iParam0, 4, false);
 			func_555(iParam0, 0, true);
-			Global_78354[iParam0] = true;
+			Global_78354[iParam0] = 1;
 		}
 	}
 	else
@@ -95165,12 +95165,12 @@ BOOL func_567(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, v
 	return false;
 }
 
-Vehicle func_568(eCharacter echParam0) // Position - 0x75484 (480388)
+Vehicle func_568(int iParam0) // Position - 0x75484 (480388)
 {
-	if (echParam0 == -1)
+	if (iParam0 == -1)
 		return 0;
 
-	return Global_78354.f_139[echParam0];
+	return Global_78354.f_139[iParam0];
 }
 
 void func_569(float fParam0, float fParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7, float fParam8, float fParam9, float fParam10, BOOL bParam11, BOOL bParam12, BOOL bParam13, BOOL bParam14, BOOL bParam15) // Position - 0x754A0 (480416)
@@ -101154,7 +101154,7 @@ BOOL func_699(Vehicle veParam0) // Position - 0x7DDAC (515500)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_701() != PV_COMP_INVALID && func_701() < 547)
-						if (!func_700(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_701() /*143*/].f_66)
+						if (!func_700(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_701() /*143*/].f_66)
 							return true;
 					else
 						return true;

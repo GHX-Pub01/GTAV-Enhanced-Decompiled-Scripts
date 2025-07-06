@@ -807,11 +807,11 @@ BOOL func_18(int iParam0, int iParam1) // Position - 0xB8D (2957)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_19() // Position - 0xBC5 (3013)

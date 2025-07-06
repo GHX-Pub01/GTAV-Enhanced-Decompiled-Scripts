@@ -1131,14 +1131,14 @@ void func_16() // Position - 0x660 (1632)
 
 void func_17() // Position - 0x6AB (1707)
 {
-	MISC::CLEAR_BIT(&Global_1668458, 0);
-	MISC::CLEAR_BIT(&Global_1668458, 1);
+	MISC::CLEAR_BIT(&Global_1668459, 0);
+	MISC::CLEAR_BIT(&Global_1668459, 1);
 	return;
 }
 
 BOOL func_18() // Position - 0x6C5 (1733)
 {
-	if (IS_BIT_SET(Global_1668458, 0) || IS_BIT_SET(Global_1668458, 1))
+	if (IS_BIT_SET(Global_1668459, 0) || IS_BIT_SET(Global_1668459, 1))
 		return true;
 
 	return false;
@@ -4856,13 +4856,13 @@ BOOL func_140() // Position - 0x5502 (21762)
 
 void func_141(int iParam0, int iParam1) // Position - 0x5514 (21780)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = true;
+				Global_1673707.f_170[iParam1] = true;
 			break;
 	}
 
@@ -8913,11 +8913,11 @@ BOOL func_326(int iParam0, int iParam1) // Position - 0xA56E (42350)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_327() // Position - 0xA5A6 (42406)
@@ -10333,7 +10333,7 @@ void func_389(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 		func_395(uParam2);
 	}
 
-	if (Global_1577952 < 2)
+	if (Global_1577953 < 2)
 		func_394(1);
 
 	if (*uParam2 == 0)
@@ -10523,7 +10523,7 @@ void func_393(char* sParam0) // Position - 0xC6F5 (50933)
 
 void func_394(int iParam0) // Position - 0xC703 (50947)
 {
-	Global_1577952 = iParam0;
+	Global_1577953 = iParam0;
 	return;
 }
 
@@ -11838,15 +11838,15 @@ void func_475(BOOL bParam0, int iParam1) // Position - 0xDD4E (56654)
 	return;
 }
 
-void func_476(int* piParam0) // Position - 0xDE14 (56852)
+void func_476(int iParam0) // Position - 0xDE14 (56852)
 {
-	if (piParam0->f_9 != 0)
+	if (iParam0->f_9 != 0)
 	{
-		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
+		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(iParam0);
 	
-		*piParam0 = 0;
-		piParam0->f_9 = 0;
+		*iParam0 = 0;
+		iParam0->f_9 = 0;
 	}
 
 	return;
@@ -14109,7 +14109,7 @@ void func_523(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 
 void func_524(int iParam0) // Position - 0x11AA2 (72354)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -16324,47 +16324,47 @@ BOOL func_575(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1445E (8
 	return flag && flag2;
 }
 
-BOOL func_576(int* piParam0) // Position - 0x1456C (83308)
+BOOL func_576(int iParam0) // Position - 0x1456C (83308)
 {
-	switch (piParam0->f_9)
+	switch (iParam0->f_9)
 	{
 		case 0:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				*piParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(piParam0->f_1));
-				piParam0->f_9 = 1;
+				*iParam0 = GRAPHICS::REQUEST_SCALEFORM_MOVIE(&(iParam0->f_1));
+				iParam0->f_9 = 1;
 			
-				if (piParam0->f_7)
+				if (iParam0->f_7)
 				{
-					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 					{
-						piParam0->f_8 = MISC::GET_GAME_TIMER();
-						piParam0->f_9 = 2;
+						iParam0->f_8 = MISC::GET_GAME_TIMER();
+						iParam0->f_9 = 2;
 					}
 				}
 			}
 			else
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 1:
-			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
+			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
 			{
-				piParam0->f_8 = MISC::GET_GAME_TIMER();
-				piParam0->f_9 = 2;
+				iParam0->f_8 = MISC::GET_GAME_TIMER();
+				iParam0->f_9 = 2;
 			}
 			break;
 	
 		case 2:
-			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
-				piParam0->f_9 = 0;
+			if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*iParam0))
+				iParam0->f_9 = 0;
 			break;
 	}
 
-	return piParam0->f_9 == 2;
+	return iParam0->f_9 == 2;
 }
 
 void func_577(var uParam0) // Position - 0x1460E (83470)
@@ -36478,7 +36478,7 @@ void func_682(ePedComponentType epctParam0, int iParam1) // Position - 0x31B6C (
 	return;
 }
 
-void func_683(ePedComponentType epctParam0, int iParam1, int iParam2, int iParam3, var uParam4, int iParam5) // Position - 0x31BD4 (203732)
+void func_683(ePedComponentType epctParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0x31BD4 (203732)
 {
 	Hash eventData;
 
@@ -36487,7 +36487,7 @@ void func_683(ePedComponentType epctParam0, int iParam1, int iParam2, int iParam
 	eventData.f_3 = epctParam0;
 	eventData.f_4 = iParam2;
 	eventData.f_5 = iParam3;
-	eventData.f_6 = uParam4;
+	eventData.f_6 = iParam4;
 	eventData.f_7 = iParam5;
 
 	if (!(iParam1 == 0))
@@ -36496,7 +36496,7 @@ void func_683(ePedComponentType epctParam0, int iParam1, int iParam2, int iParam
 	return;
 }
 
-var func_684() // Position - 0x31C21 (203809)
+int func_684() // Position - 0x31C21 (203809)
 {
 	return Global_2739945.f_5266.f_349;
 }
@@ -39391,7 +39391,7 @@ BOOL func_738(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_742(iParam0) - func_741(iParam0, false))
@@ -39451,13 +39451,13 @@ int func_740(int iParam0) // Position - 0x34706 (214790)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -39501,13 +39501,13 @@ int func_742(int iParam0) // Position - 0x347E9 (215017)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;

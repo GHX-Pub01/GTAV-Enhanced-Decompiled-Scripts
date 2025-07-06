@@ -2081,7 +2081,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2096,7 +2096,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				{
 					if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					{
-						func_12(true);
+						func_12(1);
 						GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(*piParam5, 100, 100, 100, 255, 0);
 					}
 				}
@@ -2106,7 +2106,7 @@ void func_4(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4, int
 				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam5))
 					GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam5);
 			
-				func_12(false);
+				func_12(0);
 				*uParam1 = 0;
 				*uParam0 = 0;
 				*uParam4 = 0;
@@ -2228,10 +2228,10 @@ int func_11(int iParam0) // Position - 0x902 (2306)
 	return 15;
 }
 
-void func_12(BOOL bParam0) // Position - 0x952 (2386)
+void func_12(int iParam0) // Position - 0x952 (2386)
 {
-	if (Global_79832 != bParam0)
-		Global_79832 = bParam0;
+	if (Global_79832 != iParam0)
+		Global_79832 = iParam0;
 
 	return;
 }
@@ -8523,10 +8523,10 @@ int func_112(Ped pedParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4,
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				flag7 = func_230(pedParam0, 11);
@@ -25674,7 +25674,7 @@ BOOL func_201(Ped pedParam0) // Position - 0x251E7 (152039)
 int func_202(int iParam0) // Position - 0x25263 (152163)
 {
 	if (func_203(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -93897,11 +93897,11 @@ BOOL func_494(int iParam0, int iParam1) // Position - 0x724FC (468220)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_495() // Position - 0x72534 (468276)
@@ -94588,7 +94588,7 @@ BOOL func_514(Hash hParam0, int iParam1) // Position - 0x734BF (472255)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();

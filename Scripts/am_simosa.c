@@ -2114,14 +2114,14 @@ void func_42(int iParam0, BOOL bParam1, int iParam2) // Position - 0x1677 (5751)
 	{
 		case 5:
 			if (iParam2 > -1)
-				Global_1673706.f_137[iParam2] = bParam1;
+				Global_1673707.f_137[iParam2] = bParam1;
 			break;
 	
 		default:
 			if (bParam1)
-				MISC::SET_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::SET_BIT(&(Global_1673707.f_1046), iParam0);
 			else
-				MISC::CLEAR_BIT(&(Global_1673706.f_1046), iParam0);
+				MISC::CLEAR_BIT(&(Global_1673707.f_1046), iParam0);
 			break;
 	}
 
@@ -2878,16 +2878,16 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 	BOOL flag10;
 	BOOL flag11;
 	BOOL flag12;
-	BOOL flag13;
+	Hash hash;
 	var unk31;
-	BOOL flag14;
+	Hash hash2;
 	Hash hashNameForComponent2;
 	ePedComponentType j;
-	BOOL flag15;
+	BOOL flag13;
 	int k;
 	int l;
 	int numTattooShopDlcItems;
-	BOOL flag16;
+	BOOL flag14;
 	var outComponent2;
 	var unk46;
 	Hash characterType;
@@ -3319,7 +3319,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 						
 							if (!func_275(false))
 							{
-								flag13 = -1;
+								hash = -1;
 							
 								if (uParam0->f_1 == 0)
 								{
@@ -3330,29 +3330,29 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 									flag12 = true;
 								
 									if (uParam0->f_1 == 1642)
-										flag13 = Global_79417.f_46[0];
+										hash = Global_79417.f_46[0];
 								}
 							
 								if (uParam0->f_8 != -1)
-									func_170(*uParam0, &Global_1880027[uParam0->f_8 /*55*/], flag12, flag13);
+									func_170(*uParam0, &Global_1880027[uParam0->f_8 /*55*/], flag12, hash);
 								else
-									func_97(*uParam0, flag12, false, flag13, true);
+									func_97(*uParam0, flag12, false, hash, true);
 							
 								if (iParam8 != -1)
 								{
 									hashNameForComponent2 = EXTRAMETADATA::GET_HASH_NAME_FOR_COMPONENT(*uParam0, 11, PED::GET_PED_DRAWABLE_VARIATION(*uParam0, PV_COMP_JBIB), PED::GET_PED_TEXTURE_VARIATION(*uParam0, PV_COMP_JBIB));
 								
-									if (func_96(hashNameForComponent2, iParam8, &unk31, &flag14))
-										Global_79417.f_46[0] = flag14;
+									if (func_96(hashNameForComponent2, iParam8, &unk31, &hash2))
+										Global_79417.f_46[0] = hash2;
 								}
 							
 								for (j = PV_COMP_HEAD; j < Global_79417.f_46; j = j + 1)
 								{
 									if (Global_79417.f_46[j] != -1)
-										flag15 = true;
+										flag13 = true;
 								}
 							
-								if (flag15)
+								if (flag13)
 								{
 									characterType = func_95(*uParam0);
 									numTattooShopDlcItems = EXTRAMETADATA::GET_NUM_TATTOO_SHOP_DLC_ITEMS(characterType);
@@ -3365,13 +3365,13 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 											{
 												if (Global_79417.f_46[j] == unk46.f_5 && Global_79417.f_46[j] != -1)
 												{
-													flag16 = false;
+													flag14 = false;
 												
 													if (unk46.f_8 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag16 = true;
+															flag14 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -3383,7 +3383,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 														}
 													}
 												
-													if (!flag16)
+													if (!flag14)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, unk46.f_4, unk46.f_5);
 														func_84(*uParam0, unk46.f_4, unk46.f_5);
@@ -3401,13 +3401,13 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 											{
 												if (Global_79417.f_46[j] == outComponent2.f_3 && Global_79417.f_46[j] != -1)
 												{
-													flag16 = false;
+													flag14 = false;
 												
 													if (outComponent2.f_6 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag16 = true;
+															flag14 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -3419,7 +3419,7 @@ int func_82(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4,
 														}
 													}
 												
-													if (!flag16)
+													if (!flag14)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, outComponent2.f_2, outComponent2.f_3);
 														func_84(*uParam0, outComponent2.f_2, outComponent2.f_3);
@@ -6002,7 +6002,7 @@ BOOL func_96(Hash hParam0, int iParam1, var uParam2, var uParam3) // Position - 
 	return *uParam2 != 0;
 }
 
-void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x86A4 (34468)
+void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bParam4) // Position - 0x86A4 (34468)
 {
 	int num;
 	BOOL flag;
@@ -6022,7 +6022,7 @@ void func_97(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		PED::CLEAR_PED_DECORATIONS_LEAVE_SCARS(pedParam0);
 		flag = func_165(pedParam0, false);
 		flag2 = func_157(pedParam0);
-		flag3 = func_130(pedParam0, bParam3);
+		flag3 = func_130(pedParam0, hParam3);
 	
 		if (bParam1)
 			flag2 = true;
@@ -16101,7 +16101,7 @@ int func_129(int iParam0) // Position - 0x13CC1 (81089)
 	return 17239;
 }
 
-BOOL func_130(Ped pedParam0, BOOL bParam1) // Position - 0x14062 (82018)
+BOOL func_130(Ped pedParam0, Hash hParam1) // Position - 0x14062 (82018)
 {
 	int pedDrawableVariation;
 	int pedTextureVariation;
@@ -16118,8 +16118,8 @@ BOOL func_130(Ped pedParam0, BOOL bParam1) // Position - 0x14062 (82018)
 			pedDrawableVariation = PED::GET_PED_DRAWABLE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_319(1759, -1);
 		
-			if (bParam1 != -1)
-				flag = bParam1;
+			if (hParam1 != -1)
+				flag = hParam1;
 		
 			if (pedDrawableVariation > 15)
 			{
@@ -16174,8 +16174,8 @@ BOOL func_130(Ped pedParam0, BOOL bParam1) // Position - 0x14062 (82018)
 			pedTextureVariation = PED::GET_PED_TEXTURE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_319(1759, -1);
 		
-			if (bParam1 != -1)
-				flag = bParam1;
+			if (hParam1 != -1)
+				flag = hParam1;
 		
 			if (pedDrawableVariation == 3)
 			{
@@ -19102,7 +19102,7 @@ BOOL func_157(Ped pedParam0) // Position - 0x18F24 (102180)
 int func_158(int iParam0) // Position - 0x18FA0 (102304)
 {
 	if (func_159(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -20056,7 +20056,7 @@ int func_169(Hash hParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 	return -1;
 }
 
-void func_170(Ped pedParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Position - 0x1A1E2 (106978)
+void func_170(Ped pedParam0, var uParam1, BOOL bParam2, Hash hParam3) // Position - 0x1A1E2 (106978)
 {
 	var unk;
 	Hash characterType;
@@ -20075,7 +20075,7 @@ void func_170(Ped pedParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Positio
 		characterType = func_95(pedParam0);
 		flag = func_165(pedParam0, false);
 		flag2 = func_157(pedParam0);
-		flag3 = func_130(pedParam0, bParam3);
+		flag3 = func_130(pedParam0, hParam3);
 	
 		if (bParam2)
 			flag2 = true;
@@ -20966,10 +20966,10 @@ int func_179(Ped pedParam0, int iParam1, BOOL bParam2, int iParam3, int iParam4,
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				flag7 = func_136(pedParam0, 11);

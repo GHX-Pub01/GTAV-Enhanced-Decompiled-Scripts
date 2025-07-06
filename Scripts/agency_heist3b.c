@@ -45058,10 +45058,10 @@ int func_240(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			
 				if (IS_BIT_SET(Global_79347[1 /*14*/].f_6, 6) && EXTRAMETADATA::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(Global_2883588, joaat("CREW_COL"), 11))
 				{
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 0);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 1);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 2);
-					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576243, Global_1576244, Global_1576245, 3);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 0);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 1);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 2);
+					PED::SET_HEAD_BLEND_PALETTE_COLOR(pedParam0, Global_1576244, Global_1576245, Global_1576246, 3);
 				}
 			
 				num9 = func_223(pedParam0, 11);
@@ -55287,7 +55287,7 @@ Hash func_307(int iParam0, int iParam1) // Position - 0x41E15 (269845)
 	return STATS::_GET_STAT_HASH_FOR_CHARACTER_STAT(10, iParam0, func_147(iParam1));
 }
 
-BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (269867)
+int func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (269867)
 {
 	iParam2 == 0;
 
@@ -55297,10 +55297,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55323,10 +55323,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55349,10 +55349,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55375,10 +55375,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55401,10 +55401,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55427,10 +55427,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55453,10 +55453,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 2;
@@ -55479,10 +55479,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 2;
@@ -55505,13 +55505,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 2;
@@ -55531,13 +55531,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 2;
@@ -55557,10 +55557,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55583,10 +55583,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55609,10 +55609,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55635,10 +55635,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55661,10 +55661,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55687,10 +55687,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55713,10 +55713,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55739,10 +55739,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55765,10 +55765,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55791,10 +55791,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55817,10 +55817,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55843,10 +55843,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55869,10 +55869,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55895,10 +55895,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55921,10 +55921,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -55947,10 +55947,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55973,10 +55973,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -55999,10 +55999,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56025,10 +56025,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56051,10 +56051,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56077,10 +56077,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56103,10 +56103,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56129,10 +56129,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56155,10 +56155,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56181,10 +56181,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56207,10 +56207,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56233,10 +56233,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56259,10 +56259,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56285,10 +56285,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56311,10 +56311,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56337,10 +56337,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56363,10 +56363,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56389,10 +56389,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56415,10 +56415,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56441,10 +56441,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56467,10 +56467,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56493,10 +56493,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56519,10 +56519,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56545,10 +56545,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56571,10 +56571,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56597,10 +56597,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56623,10 +56623,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56649,10 +56649,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 1000;
@@ -56675,10 +56675,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 3;
@@ -56701,10 +56701,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56727,10 +56727,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56753,10 +56753,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56779,10 +56779,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56805,10 +56805,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56831,10 +56831,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56857,10 +56857,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56883,10 +56883,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -56909,10 +56909,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56935,10 +56935,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56961,10 +56961,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -56987,10 +56987,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57013,10 +57013,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57039,10 +57039,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57065,10 +57065,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57091,10 +57091,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57117,10 +57117,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57143,10 +57143,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57169,10 +57169,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57195,10 +57195,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57221,10 +57221,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57247,10 +57247,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57273,10 +57273,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57299,10 +57299,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57325,10 +57325,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57351,10 +57351,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57377,10 +57377,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57403,10 +57403,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_24850;
@@ -57429,10 +57429,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_24850;
@@ -57455,10 +57455,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_24850;
@@ -57481,10 +57481,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_24850;
@@ -57507,10 +57507,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57533,13 +57533,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -57559,13 +57559,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -57585,10 +57585,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57611,10 +57611,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57637,10 +57637,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57663,13 +57663,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -57689,13 +57689,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -57715,13 +57715,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -57741,10 +57741,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57767,10 +57767,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57793,10 +57793,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -57819,10 +57819,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57845,10 +57845,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57871,10 +57871,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 100000;
@@ -57897,10 +57897,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57923,10 +57923,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 1000;
@@ -57949,10 +57949,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -57975,10 +57975,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58001,10 +58001,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58027,10 +58027,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58053,10 +58053,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 25000;
@@ -58079,10 +58079,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -58105,10 +58105,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28227;
@@ -58131,10 +58131,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28410;
@@ -58157,10 +58157,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28438;
@@ -58183,10 +58183,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28442;
@@ -58209,10 +58209,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28158;
@@ -58235,10 +58235,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return Global_262145.f_28414;
@@ -58261,10 +58261,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58287,10 +58287,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58313,10 +58313,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 50000;
@@ -58339,10 +58339,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58365,10 +58365,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58391,10 +58391,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58417,10 +58417,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 1000000;
@@ -58443,10 +58443,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58469,10 +58469,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58495,10 +58495,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58521,10 +58521,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58547,10 +58547,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58573,10 +58573,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58599,10 +58599,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58625,10 +58625,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58651,10 +58651,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58677,10 +58677,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 30;
@@ -58703,10 +58703,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 10;
@@ -58729,10 +58729,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58755,10 +58755,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58781,10 +58781,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58807,13 +58807,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 2;
@@ -58833,10 +58833,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58859,10 +58859,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58885,10 +58885,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58911,10 +58911,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58937,13 +58937,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 2;
@@ -58963,10 +58963,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -58989,10 +58989,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59015,10 +59015,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59041,10 +59041,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59067,10 +59067,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 250000;
@@ -59093,10 +59093,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 250000;
@@ -59119,10 +59119,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59145,10 +59145,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59171,10 +59171,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59197,10 +59197,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 250000;
@@ -59223,10 +59223,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 250000;
@@ -59249,10 +59249,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59275,10 +59275,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59301,10 +59301,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 3;
@@ -59327,10 +59327,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59353,10 +59353,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59379,10 +59379,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59405,10 +59405,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59431,10 +59431,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 250000;
@@ -59457,10 +59457,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5000;
@@ -59483,13 +59483,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 2;
@@ -59509,13 +59509,13 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
-					return true;
+					return 1;
 			
 				case 3:
 					return 3;
@@ -59535,10 +59535,10 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 			switch (iParam1)
 			{
 				case 0:
-					return false;
+					return 0;
 			
 				case 1:
-					return false;
+					return 0;
 			
 				case 2:
 					return 5;
@@ -59561,17 +59561,17 @@ BOOL func_308(int iParam0, int iParam1, int iParam2) // Position - 0x41E2B (2698
 	return 999;
 }
 
-BOOL func_309(int iParam0, int iParam1) // Position - 0x4522B (283179)
+int func_309(int iParam0, int iParam1) // Position - 0x4522B (283179)
 {
 	Hash statHash;
-	BOOL outValue;
+	int outValue;
 
 	statHash = func_310(iParam0, iParam1);
 
 	if (STATS::STAT_GET_INT(statHash, &outValue, -1))
 		return outValue;
 
-	return false;
+	return 0;
 }
 
 Hash func_310(int iParam0, int iParam1) // Position - 0x4524F (283215)
@@ -61760,7 +61760,7 @@ BOOL func_324(Ped pedParam0) // Position - 0x47A20 (293408)
 int func_325(int iParam0) // Position - 0x47A9C (293532)
 {
 	if (func_326(true))
-		return Global_1685348;
+		return Global_1685349;
 
 	if (iParam0 <= -1 || iParam0 >= 4)
 		return -1;
@@ -102507,11 +102507,11 @@ BOOL func_527(int iParam0, int iParam1) // Position - 0x76B8F (486287)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_528(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x76BC7 (486343)
@@ -118436,11 +118436,11 @@ void func_803() // Position - 0x912CD (594637)
 {
 	int i;
 
-	Global_1673706.f_1047 = 0;
+	Global_1673707.f_1047 = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
 	{
-		Global_1673706.f_170[i] = 0;
+		Global_1673707.f_170[i] = 0;
 	}
 
 	Global_2739945.f_4668 = 1;
@@ -120525,13 +120525,13 @@ void func_825(int iParam0) // Position - 0x94881 (608385)
 
 void func_826(int iParam0, int iParam1) // Position - 0x948B4 (608436)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 
@@ -120540,7 +120540,7 @@ void func_826(int iParam0, int iParam1) // Position - 0x948B4 (608436)
 
 void func_827(int iParam0) // Position - 0x948EA (608490)
 {
-	Global_1675263.f_1163 = iParam0;
+	Global_1675264.f_1163 = iParam0;
 	return;
 }
 
@@ -126037,7 +126037,7 @@ void func_922(Ped pedParam0, BOOL bParam1) // Position - 0x9DB23 (645923)
 	eCharacter character;
 	int num;
 	var unk;
-	int i;
+	ePedComponentType i;
 
 	if (!PED::IS_PED_INJURED(pedParam0))
 	{
@@ -126074,12 +126074,12 @@ void func_922(Ped pedParam0, BOOL bParam1) // Position - 0x9DB23 (645923)
 					Global_114162.f_2367.f_539[character /*65*/] = { unk };
 					Global_114162.f_2367.f_539.f_2391[character] = func_432(pedParam0);
 				
-					for (i = 0; i < 12; i = i + 1)
+					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_223(pedParam0, func_219(i));
 					}
 				
-					for (i = 0; i < 12; i = i + 1)
+					for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 					{
 						Global_114162.f_2367.f_539.f_204[i /*4*/][character] = func_223(pedParam0, func_219(i));
 					}
@@ -129586,7 +129586,7 @@ BOOL func_974(Vehicle veParam0) // Position - 0xA325F (668255)
 			if (DECORATOR::DECOR_EXIST_ON(veParam0, "Player_Vehicle"))
 				if (DECORATOR::DECOR_GET_INT(veParam0, "Player_Vehicle") == NETWORK::NETWORK_HASH_FROM_PLAYER_HANDLE(PLAYER::PLAYER_ID()))
 					if (func_976() != -1 && func_976() < 547)
-						if (!func_975(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586542[func_976() /*143*/].f_66)
+						if (!func_975(veParam0) || ENTITY::GET_ENTITY_MODEL(veParam0) != Global_1586543[func_976() /*143*/].f_66)
 							return true;
 					else
 						return true;
@@ -130070,7 +130070,7 @@ BOOL func_992(Hash hParam0, int iParam1) // Position - 0xA4078 (671864)
 		return true;
 
 	if (!Global_2707807 && iParam1 >= 0 && iParam1 <= 547)
-		if (IS_BIT_SET(Global_1586542[iParam1 /*143*/].f_104, 2))
+		if (IS_BIT_SET(Global_1586543[iParam1 /*143*/].f_104, 2))
 			return true;
 
 	cloudTimeAsInt = NETWORK::GET_CLOUD_TIME_AS_INT();
@@ -137096,7 +137096,7 @@ BOOL func_1078(int iParam0) // Position - 0xB365E (734814)
 	if (func_952(PLAYER::PLAYER_ID()) && IS_BIT_SET(Global_1944438.f_4, 22))
 		return false;
 
-	if (Global_1577926)
+	if (Global_1577927)
 		return false;
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -137459,14 +137459,14 @@ void func_1091(BOOL bParam0, BOOL bParam1) // Position - 0xB3D05 (736517)
 			STREAMING::STOP_PLAYER_SWITCH();
 			func_1095(0);
 		
-			if (ENTITY::DOES_ENTITY_EXIST(Global_1577877))
+			if (ENTITY::DOES_ENTITY_EXIST(Global_1577878))
 			{
-				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577877, false))
+				if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1577878, false))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577877))
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577877, false, false);
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1577878))
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1577878, false, false);
 				
-					PED::DELETE_PED(&Global_1577877);
+					PED::DELETE_PED(&Global_1577878);
 				}
 			}
 		}
@@ -138265,7 +138265,7 @@ void func_1112(var uParam0, int iParam1, var uParam2) // Position - 0xB50E4 (741
 
 BOOL func_1113() // Position - 0xB5202 (741890)
 {
-	return Global_1577924;
+	return Global_1577925;
 }
 
 BOOL func_1114(BOOL bParam0) // Position - 0xB520E (741902)

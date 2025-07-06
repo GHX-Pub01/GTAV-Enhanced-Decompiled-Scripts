@@ -6657,7 +6657,7 @@ BOOL func_180(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_184(iParam0) - func_183(iParam0, false))
@@ -6717,13 +6717,13 @@ int func_182(int iParam0) // Position - 0x69D8 (27096)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -6767,13 +6767,13 @@ int func_184(int iParam0) // Position - 0x6ABB (27323)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;
@@ -18413,7 +18413,7 @@ BOOL func_390(int iParam0, Player plParam1) // Position - 0x14A32 (84530)
 			if (!func_145(plParam1))
 				return 0;
 		
-			if (Global_1579668.f_2 == 4)
+			if (Global_1579669.f_2 == 4)
 				return 0;
 			break;
 	
@@ -18427,7 +18427,7 @@ BOOL func_390(int iParam0, Player plParam1) // Position - 0x14A32 (84530)
 			if (!func_145(plParam1))
 				return 0;
 		
-			if (Global_1579668.f_2 == 4)
+			if (Global_1579669.f_2 == 4)
 				return 0;
 			break;
 	
@@ -18441,7 +18441,7 @@ BOOL func_390(int iParam0, Player plParam1) // Position - 0x14A32 (84530)
 			if (!func_145(plParam1))
 				return 0;
 		
-			if (Global_1579668.f_2 == 4)
+			if (Global_1579669.f_2 == 4)
 				return 0;
 			break;
 	

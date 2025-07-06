@@ -2577,7 +2577,7 @@ void func_110(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > 0)
+		else if (Global_2635102.f_1 > false)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;
@@ -2591,7 +2591,7 @@ void func_110(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		if (Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36 > false)
 			*uParam3 = Global_1845270[PLAYER::PLAYER_ID() /*892*/].f_268.f_36;
-		else if (Global_2635102.f_1 > 0)
+		else if (Global_2635102.f_1 > false)
 			*uParam3 = Global_2635102.f_1;
 		else
 			*uParam3 = num;
@@ -7222,7 +7222,7 @@ BOOL func_220(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	int num;
 	int num2;
 
-	if (!IS_BIT_SET(Global_1686553, 0))
+	if (!IS_BIT_SET(Global_1686554, 0))
 		return 0;
 
 	if (bParam2 && !bParam3 && iParam1 <= func_224(iParam0) - func_223(iParam0, false))
@@ -7282,13 +7282,13 @@ int func_222(int iParam0) // Position - 0x7857 (30807)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686553.f_1;
+			return Global_1686554.f_1;
 	
 		case 1:
-			return Global_1686553.f_2;
+			return Global_1686554.f_2;
 	
 		case 2:
-			return Global_1686553.f_3;
+			return Global_1686554.f_3;
 	}
 
 	return 0;
@@ -7332,13 +7332,13 @@ int func_224(int iParam0) // Position - 0x793A (31034)
 	switch (iParam0)
 	{
 		case 0:
-			return Global_1686561;
-	
-		case 1:
 			return Global_1686562;
 	
-		case 2:
+		case 1:
 			return Global_1686563;
+	
+		case 2:
+			return Global_1686564;
 	}
 
 	return 0;
@@ -15634,11 +15634,11 @@ BOOL func_381(int iParam0, int iParam1) // Position - 0xEBF4 (60404)
 	{
 		case 5:
 			if (iParam1 > -1)
-				return Global_1673706.f_203[iParam1];
+				return Global_1673707.f_203[iParam1];
 			break;
 	}
 
-	return IS_BIT_SET(Global_1673706.f_1048, iParam0);
+	return IS_BIT_SET(Global_1673707.f_1048, iParam0);
 }
 
 void func_382() // Position - 0xEC2C (60460)
@@ -16397,13 +16397,13 @@ void func_407(BOOL bParam0) // Position - 0xFA0C (64012)
 
 void func_408(int iParam0, int iParam1) // Position - 0xFA5D (64093)
 {
-	MISC::SET_BIT(&(Global_1673706.f_1047), iParam0);
+	MISC::SET_BIT(&(Global_1673707.f_1047), iParam0);
 
 	switch (iParam0)
 	{
 		case 5:
 			if (iParam1 > -1)
-				Global_1673706.f_170[iParam1] = 1;
+				Global_1673707.f_170[iParam1] = 1;
 			break;
 	}
 

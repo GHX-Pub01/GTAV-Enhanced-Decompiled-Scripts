@@ -6946,7 +6946,7 @@ int func_232(int iParam0, int iParam1, int iParam2) // Position - 0x7F16 (32534)
 
 BOOL func_233(int iParam0) // Position - 0x7FAA (32682)
 {
-	return Global_1575114[iParam0 + 1];
+	return Global_1575115[iParam0 + 1];
 }
 
 int func_234(eCharacter echParam0) // Position - 0x7FBC (32700)
