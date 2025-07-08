@@ -2536,7 +2536,7 @@ int func_64(BOOL bParam0, BOOL bParam1) // Position - 0x1E2E (7726)
 	return address;
 }
 
-void func_65(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4) // Position - 0x1E93 (7827)
+void func_65(Ped pedParam0, BOOL bParam1, BOOL bParam2, Hash hParam3, BOOL bParam4) // Position - 0x1E93 (7827)
 {
 	int num;
 	BOOL flag;
@@ -2556,7 +2556,7 @@ void func_65(Ped pedParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		PED::CLEAR_PED_DECORATIONS_LEAVE_SCARS(pedParam0);
 		flag = func_195(pedParam0, false);
 		flag2 = func_187(pedParam0);
-		flag3 = func_113(pedParam0, bParam3);
+		flag3 = func_113(pedParam0, hParam3);
 	
 		if (bParam1)
 			flag2 = true;
@@ -15144,7 +15144,7 @@ Hash func_112(Ped pedParam0) // Position - 0x12449 (74825)
 	return 0;
 }
 
-BOOL func_113(Ped pedParam0, BOOL bParam1) // Position - 0x124AC (74924)
+BOOL func_113(Ped pedParam0, Hash hParam1) // Position - 0x124AC (74924)
 {
 	int pedDrawableVariation;
 	int pedTextureVariation;
@@ -15161,8 +15161,8 @@ BOOL func_113(Ped pedParam0, BOOL bParam1) // Position - 0x124AC (74924)
 			pedDrawableVariation = PED::GET_PED_DRAWABLE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_219(1759, -1);
 		
-			if (bParam1 != -1)
-				flag = bParam1;
+			if (hParam1 != -1)
+				flag = hParam1;
 		
 			if (pedDrawableVariation > 15)
 			{
@@ -15217,8 +15217,8 @@ BOOL func_113(Ped pedParam0, BOOL bParam1) // Position - 0x124AC (74924)
 			pedTextureVariation = PED::GET_PED_TEXTURE_VARIATION(pedParam0, PV_COMP_JBIB);
 			flag = func_219(1759, -1);
 		
-			if (bParam1 != -1)
-				flag = bParam1;
+			if (hParam1 != -1)
+				flag = hParam1;
 		
 			if (pedDrawableVariation == 3)
 			{
@@ -85196,16 +85196,16 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	BOOL flag10;
 	BOOL flag11;
 	BOOL flag12;
-	BOOL flag13;
+	Hash hash;
 	var unk31;
-	BOOL flag14;
+	Hash hash2;
 	Hash hashNameForComponent2;
 	ePedComponentType j;
-	BOOL flag15;
+	BOOL flag13;
 	int k;
 	int l;
 	int numTattooShopDlcItems;
-	BOOL flag16;
+	BOOL flag14;
 	var outComponent2;
 	var unk46;
 	Hash characterType;
@@ -85637,7 +85637,7 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 						
 							if (!func_278(false))
 							{
-								flag13 = -1;
+								hash = -1;
 							
 								if (uParam0->f_1 == 0)
 								{
@@ -85648,29 +85648,29 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 									flag12 = true;
 								
 									if (uParam0->f_1 == 1642)
-										flag13 = Global_79621.f_46[0];
+										hash = Global_79621.f_46[0];
 								}
 							
 								if (uParam0->f_8 != -1)
-									func_401(*uParam0, &Global_1879551[uParam0->f_8 /*55*/], flag12, flag13);
+									func_401(*uParam0, &Global_1879551[uParam0->f_8 /*55*/], flag12, hash);
 								else
-									func_65(*uParam0, flag12, false, flag13, true);
+									func_65(*uParam0, flag12, false, hash, true);
 							
 								if (iParam8 != -1)
 								{
 									hashNameForComponent2 = EXTRAMETADATA::GET_HASH_NAME_FOR_COMPONENT(*uParam0, 11, PED::GET_PED_DRAWABLE_VARIATION(*uParam0, PV_COMP_JBIB), PED::GET_PED_TEXTURE_VARIATION(*uParam0, PV_COMP_JBIB));
 								
-									if (func_400(hashNameForComponent2, iParam8, &unk31, &flag14))
-										Global_79621.f_46[0] = flag14;
+									if (func_400(hashNameForComponent2, iParam8, &unk31, &hash2))
+										Global_79621.f_46[0] = hash2;
 								}
 							
 								for (j = PV_COMP_HEAD; j < Global_79621.f_46; j = j + 1)
 								{
 									if (Global_79621.f_46[j] != -1)
-										flag15 = true;
+										flag13 = true;
 								}
 							
-								if (flag15)
+								if (flag13)
 								{
 									characterType = func_112(*uParam0);
 									numTattooShopDlcItems = EXTRAMETADATA::GET_NUM_TATTOO_SHOP_DLC_ITEMS(characterType);
@@ -85683,13 +85683,13 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 											{
 												if (Global_79621.f_46[j] == unk46.f_5 && Global_79621.f_46[j] != -1)
 												{
-													flag16 = false;
+													flag14 = false;
 												
 													if (unk46.f_8 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag16 = true;
+															flag14 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -85701,7 +85701,7 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 														}
 													}
 												
-													if (!flag16)
+													if (!flag14)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, unk46.f_4, unk46.f_5);
 														func_70(*uParam0, unk46.f_4, unk46.f_5);
@@ -85719,13 +85719,13 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 											{
 												if (Global_79621.f_46[j] == outComponent2.f_3 && Global_79621.f_46[j] != -1)
 												{
-													flag16 = false;
+													flag14 = false;
 												
 													if (outComponent2.f_6 == joaat("crewLogo"))
 													{
 														if (iParam7 == 0)
 														{
-															flag16 = true;
+															flag14 = true;
 														}
 														else if (iParam7 == 1)
 														{
@@ -85737,7 +85737,7 @@ int func_398(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 														}
 													}
 												
-													if (!flag16)
+													if (!flag14)
 													{
 														PED::ADD_PED_DECORATION_FROM_HASHES(*uParam0, outComponent2.f_2, outComponent2.f_3);
 														func_70(*uParam0, outComponent2.f_2, outComponent2.f_3);
@@ -86053,7 +86053,7 @@ BOOL func_400(Hash hParam0, int iParam1, var uParam2, var uParam3) // Position -
 	return *uParam2 != 0;
 }
 
-void func_401(Ped pedParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Position - 0x676DE (423646)
+void func_401(Ped pedParam0, var uParam1, BOOL bParam2, Hash hParam3) // Position - 0x676DE (423646)
 {
 	var unk;
 	Hash characterType;
@@ -86072,7 +86072,7 @@ void func_401(Ped pedParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Positio
 		characterType = func_112(pedParam0);
 		flag = func_195(pedParam0, false);
 		flag2 = func_187(pedParam0);
-		flag3 = func_113(pedParam0, bParam3);
+		flag3 = func_113(pedParam0, hParam3);
 	
 		if (bParam2)
 			flag2 = true;

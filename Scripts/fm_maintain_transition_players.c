@@ -1418,7 +1418,7 @@ void main() // Position - 0x0 (0)
 					{
 						if (func_29(&iLocal_226, &uLocal_351, bLocal_214))
 						{
-							if (Global_2684748.f_669.f_10 != 0 && bLocal_219 || IS_BIT_SET(Global_4718592.f_16, 14))
+							if (Global_2684748.f_669.f_10 != false && bLocal_219 || IS_BIT_SET(Global_4718592.f_16, 14))
 							{
 								Global_1882449[PLAYER::PLAYER_ID() /*201*/] = Global_4718592.f_3540;
 								Global_2684748.f_669.f_13 = Global_4718592.f_3540;

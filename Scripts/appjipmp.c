@@ -18843,7 +18843,7 @@ BOOL func_339() // Position - 0x1697B (92539)
 	if (Global_262145.f_12657 == 1)
 		return false;
 
-	return Global_794954.f_163950[0 /*11*/].f_9 != false;
+	return Global_794954.f_163950[0 /*11*/].f_9 != 0;
 }
 
 BOOL func_340() // Position - 0x169A2 (92578)

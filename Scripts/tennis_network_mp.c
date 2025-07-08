@@ -8501,9 +8501,9 @@ void func_104(var uParam0, var uParam1, var uParam2) // Position - 0x4E6E (20078
 	return;
 }
 
-void func_105(int iParam0, int iParam1) // Position - 0x4EBE (20158)
+void func_105(Any* panParam0, int iParam1) // Position - 0x4EBE (20158)
 {
-	iParam0->f_13 = iParam0->f_13 - iParam0->f_13 && iParam1;
+	panParam0->f_13 = panParam0->f_13 - panParam0->f_13 && iParam1;
 	return;
 }
 
@@ -8517,9 +8517,9 @@ void func_106(BOOL bParam0) // Position - 0x4ED6 (20182)
 	return;
 }
 
-void func_107(int iParam0, int iParam1) // Position - 0x4EF2 (20210)
+void func_107(Any* panParam0, int iParam1) // Position - 0x4EF2 (20210)
 {
-	iParam0->f_13 = iParam0->f_13 || iParam1;
+	panParam0->f_13 = panParam0->f_13 || iParam1;
 	return;
 }
 
@@ -87342,7 +87342,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		{
 			if (hParam3 == joaat("CATEGORY_WEAPON_AMMO") || hParam3 == joaat("CATEGORY_MART"))
 			{
-				Global_4538673 = true;
+				Global_4538673 = 1;
 				return 0;
 			}
 		}
@@ -87389,7 +87389,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 	{
 		if (iParam7 & 2 != 0)
 		{
-			Global_4538671 = true;
+			Global_4538671 = 1;
 			Global_4538674 = hParam4;
 			Global_4538676 = hParam3;
 			Global_4538677 = 1;
@@ -87409,7 +87409,7 @@ int func_1070(var uParam0, int iParam1, Hash hParam2, Hash hParam3, Hash hParam4
 		if (flag4)
 		{
 			func_1076(1, hParam4);
-			Global_4538671 = false;
+			Global_4538671 = 0;
 		}
 	
 		if (iParam7 & 4 != 0)
@@ -97048,9 +97048,9 @@ void func_1250(var uParam0, int iParam1, BOOL bParam2) // Position - 0x6ECAE (45
 	return;
 }
 
-BOOL func_1251(int iParam0, int iParam1) // Position - 0x6ECCD (453837)
+BOOL func_1251(Any* panParam0, int iParam1) // Position - 0x6ECCD (453837)
 {
-	return iParam0->f_13 && iParam1 != false;
+	return panParam0->f_13 && iParam1 != false;
 }
 
 void func_1252(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6ECDE (453854)

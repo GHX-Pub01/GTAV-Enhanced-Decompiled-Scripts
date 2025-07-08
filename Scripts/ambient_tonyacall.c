@@ -493,7 +493,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 		if (iParam3 < 12)
 			iParam3 = 7;
 
-	Global_22609 = 0;
+	Global_22609 = false;
 	Global_22611 = 0;
 	Global_22616 = 0;
 	Global_23593 = 0;
@@ -513,7 +513,7 @@ BOOL func_6(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x638 (1592)
 		{
 			if (iParam1 > Global_22604)
 			{
-				if (Global_22609 == 0)
+				if (Global_22609 == false)
 				{
 					AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 					Global_21239.f_1 = 3;

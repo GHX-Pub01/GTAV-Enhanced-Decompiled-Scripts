@@ -40770,7 +40770,7 @@ float func_451(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4
 
 BOOL func_452() // Position - 0x2D52D (185645)
 {
-	return Global_97193[0 /*18*/].f_17 != false;
+	return Global_97193[0 /*18*/].f_17 != 0;
 }
 
 void func_453() // Position - 0x2D540 (185664)

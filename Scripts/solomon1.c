@@ -109951,12 +109951,12 @@ void func_770(BOOL bParam0) // Position - 0x8BF21 (573217)
 	if (bParam0)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_113426, SCRIPT::GET_THIS_SCRIPT_NAME(), 24);
-		Global_113420 = true;
+		Global_113420 = 1;
 	}
 	else
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_113426, "NULL", 24);
-		Global_113420 = false;
+		Global_113420 = 0;
 	}
 
 	return;

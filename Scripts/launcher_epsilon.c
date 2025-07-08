@@ -46726,7 +46726,7 @@ BOOL func_485(int iParam0) // Position - 0x39B51 (236369)
 		if (func_486(5))
 			Global_113457[iParam0 /*10*/].f_3 = 0;
 
-	if (Global_113457[iParam0 /*10*/].f_3 == 1)
+	if (Global_113457[iParam0 /*10*/].f_3 == true)
 		return false;
 
 	return true;

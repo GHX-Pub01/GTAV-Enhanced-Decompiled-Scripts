@@ -6457,7 +6457,7 @@ BOOL func_212(int* piParam0, int* piParam1) // Position - 0x6A1A (27162)
 			
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1931774);
 				Global_1931775 = false;
-				Global_1931777 = 0;
+				Global_1931777 = false;
 				Global_1931776 = false;
 				Global_1931778 = 0;
 				piParam0->f_19 = { 0f, 0f, 0f };
@@ -16882,7 +16882,7 @@ void func_432(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam4
 	else
 		MISC::CLEAR_BIT(&(Global_2685690.f_6090), 3);
 
-	if (player != -1 && Global_2684748.f_669.f_12 != PV_COMP_HEAD)
+	if (player != -1 && Global_2684748.f_669.f_12 != false)
 		Global_1882449[PLAYER::PLAYER_ID() /*201*/].f_2 = Global_2684748.f_669.f_12;
 
 	if (func_428() || player != -1 && IS_BIT_SET(Global_1845274[player /*877*/].f_876, 7))
@@ -31331,7 +31331,7 @@ void func_763(BOOL bParam0) // Position - 0x28524 (165156)
 	unk.f_39 = -1;
 	unk.f_41 = -1;
 
-	if (Global_2684748.f_669.f_10 == 0)
+	if (Global_2684748.f_669.f_10 == false)
 		Global_1922827.f_1345 = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
@@ -32038,7 +32038,7 @@ void func_807() // Position - 0x29493 (169107)
 
 BOOL func_808() // Position - 0x294A5 (169125)
 {
-	return Global_2684748.f_669.f_10 > 0;
+	return Global_2684748.f_669.f_10 > false;
 }
 
 BOOL func_809() // Position - 0x294B8 (169144)

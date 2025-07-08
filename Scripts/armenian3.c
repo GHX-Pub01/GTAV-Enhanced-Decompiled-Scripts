@@ -31664,12 +31664,12 @@ BOOL func_184() // Position - 0x2157A (136570)
 	return false;
 }
 
-var func_185(int iParam0) // Position - 0x21598 (136600)
+BOOL func_185(int iParam0) // Position - 0x21598 (136600)
 {
 	return Global_1574538[iParam0];
 }
 
-var func_186() // Position - 0x215A8 (136616)
+BOOL func_186() // Position - 0x215A8 (136616)
 {
 	return func_185(func_43() + 1);
 }
@@ -40155,7 +40155,7 @@ BOOL func_351(Ped pedParam0, Hash hParam1, var uParam2) // Position - 0x2F98B (1
 	return false;
 }
 
-BOOL func_352(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x2FA2C (195116)
+BOOL func_352(Ped pedParam0, ePedComponentType epctParam1, BOOL bParam2) // Position - 0x2FA2C (195116)
 {
 	Hash entityModel;
 	BOOL flag;
@@ -40171,12 +40171,12 @@ BOOL func_352(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x2FA2C (1
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_79551[1 /*14*/] = { func_34(entityModel, iParam1, bParam2, -1) };
+	Global_79551[1 /*14*/] = { func_34(entityModel, epctParam1, bParam2, -1) };
 
 	if (!IS_BIT_SET(Global_79551[1 /*14*/].f_6, 0))
 		return false;
 
-	if (iParam1 == 12)
+	if (epctParam1 == 12)
 	{
 		unk = { func_372(entityModel, bParam2) };
 	
@@ -40220,7 +40220,7 @@ BOOL func_352(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x2FA2C (1
 	
 		return true;
 	}
-	else if (iParam1 == 13)
+	else if (epctParam1 == 13)
 	{
 		unk28 = { func_369(entityModel, bParam2) };
 	
@@ -40232,12 +40232,12 @@ BOOL func_352(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x2FA2C (1
 	
 		return true;
 	}
-	else if (iParam1 == 14)
+	else if (epctParam1 == 14)
 	{
 		if (PED::GET_PED_PROP_INDEX(pedParam0, Global_79551[1 /*14*/].f_12, 1) == Global_79551[1 /*14*/].f_3 && PED::GET_PED_PROP_TEXTURE_INDEX(pedParam0, Global_79551[1 /*14*/].f_12) == Global_79551[1 /*14*/].f_4 || Global_79551[1 /*14*/].f_3 == -1)
 			return true;
 	}
-	else if (Global_79551[1 /*14*/].f_3 == PED::GET_PED_DRAWABLE_VARIATION(pedParam0, func_28(iParam1)) && Global_79551[1 /*14*/].f_4 == PED::GET_PED_TEXTURE_VARIATION(pedParam0, func_28(iParam1)))
+	else if (Global_79551[1 /*14*/].f_3 == PED::GET_PED_DRAWABLE_VARIATION(pedParam0, func_28(epctParam1)) && Global_79551[1 /*14*/].f_4 == PED::GET_PED_TEXTURE_VARIATION(pedParam0, func_28(epctParam1)))
 	{
 		return true;
 	}
@@ -40245,7 +40245,7 @@ BOOL func_352(Ped pedParam0, int iParam1, BOOL bParam2) // Position - 0x2FA2C (1
 	return false;
 }
 
-void func_353(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x2FC85 (195717)
+void func_353(Hash hParam0, int iParam1, ePedComponentType epctParam2) // Position - 0x2FC85 (195717)
 {
 	BOOL flag;
 	int num;
@@ -40259,14 +40259,14 @@ void func_353(Hash hParam0, int iParam1, BOOL bParam2) // Position - 0x2FC85 (19
 
 	if (func_355(hParam0, 12, flag))
 	{
-		if (func_354(hParam0, iParam1, bParam2))
+		if (func_354(hParam0, iParam1, epctParam2))
 		{
 			num = func_33(hParam0);
 		
 			if (iParam1 == 3)
-				Global_114370.f_2367.f_539.f_196[num] = bParam2;
+				Global_114370.f_2367.f_539.f_196[num] = epctParam2;
 			else if (iParam1 == 4)
-				Global_114370.f_2367.f_539.f_200[num] = bParam2;
+				Global_114370.f_2367.f_539.f_200[num] = epctParam2;
 		}
 	}
 
@@ -42340,7 +42340,7 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 26:
-					func_374(&unk, -99, -99, 3, 3, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_UPPR, PV_COMP_UPPR, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 27:
@@ -42352,15 +42352,15 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 29:
-					func_374(&unk, -99, -99, 2, 2, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HAIR, PV_COMP_HAIR, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 30:
-					func_374(&unk, -99, -99, 161, 3, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 161, PV_COMP_UPPR, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 31:
-					func_374(&unk, -99, -99, 3, 3, 0, 12, 0, 0, 0, -99, 0, 1, 31);
+					func_374(&unk, -99, -99, PV_COMP_UPPR, PV_COMP_UPPR, 0, 12, 0, 0, 0, -99, 0, 1, 31);
 					break;
 			
 				case 32:
@@ -42368,7 +42368,7 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 33:
-					func_374(&unk, -99, -99, 86, 4, 20, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 86, PV_COMP_LOWR, 20, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 34:
@@ -42380,39 +42380,39 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 36:
-					func_374(&unk, -99, -99, 4, 4, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, PV_COMP_LOWR, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 37:
-					func_374(&unk, -99, -99, 5, 5, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HAND, PV_COMP_HAND, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 38:
-					func_374(&unk, -99, -99, 6, 6, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_FEET, PV_COMP_FEET, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 39:
-					func_374(&unk, -99, -99, 7, 7, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_TEEF, PV_COMP_TEEF, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 40:
-					func_374(&unk, -99, -99, 8, 8, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_ACCS, PV_COMP_ACCS, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 41:
-					func_374(&unk, -99, -99, 9, 9, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_TASK, PV_COMP_TASK, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 42:
-					func_374(&unk, -99, -99, 10, 10, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_DECL, PV_COMP_DECL, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 43:
-					func_374(&unk, -99, -99, 11, 11, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_JBIB, PV_COMP_JBIB, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 44:
-					func_374(&unk, -99, -99, 12, 12, 0, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_MAX, PV_COMP_MAX, 0, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 45:
@@ -42461,7 +42461,7 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case true:
-					func_374(&unk, -99, -99, 22, 10, 64, 0, 24, 0, 0, -99, 0, 43, 31);
+					func_374(&unk, -99, -99, 22, PV_COMP_DECL, 64, 0, 24, 0, 0, -99, 0, 43, 31);
 					break;
 			
 				case 2:
@@ -42469,11 +42469,11 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 3:
-					func_374(&unk, -99, -99, 23, 11, 13, 5, 2, 4, 0, -99, 0, 0, 1);
+					func_374(&unk, -99, -99, 23, PV_COMP_JBIB, 13, 5, 2, 4, 0, -99, 0, 0, 1);
 					break;
 			
 				case 4:
-					func_374(&unk, -99, -99, 23, 11, 34, 5, 26, 0, 0, -99, 0, 0, 2);
+					func_374(&unk, -99, -99, 23, PV_COMP_JBIB, 34, 5, 26, 0, 0, -99, 0, 0, 2);
 					break;
 			
 				case 5:
@@ -42489,11 +42489,11 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 8:
-					func_374(&unk, -99, -99, 17, 5, 12, 0, 26, 0, 2, -99, 0, 0, 5);
+					func_374(&unk, -99, -99, 17, PV_COMP_HAND, 12, 0, 26, 0, 2, -99, 0, 0, 5);
 					break;
 			
 				case 9:
-					func_374(&unk, -99, -99, 16, 4, 12, 0, 26, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 16, PV_COMP_LOWR, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 10:
@@ -42501,23 +42501,23 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 11:
-					func_374(&unk, -99, -99, 259, 10, 35, 0, 24, 0, 0, -99, 0, 43, 31);
+					func_374(&unk, -99, -99, 259, PV_COMP_DECL, 35, 0, 24, 0, 0, -99, 0, 43, 31);
 					break;
 			
 				case 12:
-					func_374(&unk, -99, -99, 18, 6, 12, 0, 26, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 18, PV_COMP_FEET, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 13:
-					func_374(&unk, -99, -99, 19, 7, 12, 0, 26, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 19, PV_COMP_TEEF, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 14:
-					func_374(&unk, -99, -99, 20, 8, 12, 0, 26, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 20, PV_COMP_ACCS, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 15:
-					func_374(&unk, -99, -99, 21, 9, 12, 0, 26, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 21, PV_COMP_TASK, 12, 0, 26, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 16:
@@ -42654,15 +42654,15 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 			switch (bParam1)
 			{
 				case false:
-					func_374(&unk, -99, -99, false, 91, 28, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 91, 28, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case true:
-					func_374(&unk, -99, -99, 17, 5, 8, 2, 3, 0, 0, -99, 0, 0, 8);
+					func_374(&unk, -99, -99, 17, PV_COMP_HAND, 8, 2, 3, 0, 0, -99, 0, 0, 8);
 					break;
 			
 				case 2:
-					func_374(&unk, -99, -99, 43, 8, 12, 3, 5, 0, 0, -99, 0, 0, 1);
+					func_374(&unk, -99, -99, 43, PV_COMP_ACCS, 12, 3, 5, 0, 0, -99, 0, 0, 1);
 					break;
 			
 				case 3:
@@ -42702,7 +42702,7 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 12:
-					func_374(&unk, -99, -99, false, 93, 29, 0, 13, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 93, 29, 0, 13, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 13:
@@ -42718,19 +42718,19 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 16:
-					func_374(&unk, -99, -99, 44, 9, 12, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 44, PV_COMP_TASK, 12, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 17:
-					func_374(&unk, -99, -99, 45, 10, 12, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 45, PV_COMP_DECL, 12, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 18:
-					func_374(&unk, -99, -99, 46, 11, 12, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 46, PV_COMP_JBIB, 12, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 19:
-					func_374(&unk, -99, -99, 47, 12, 12, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 47, PV_COMP_MAX, 12, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 20:
@@ -42738,15 +42738,15 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 21:
-					func_374(&unk, -99, -99, false, 44, 8, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 44, 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 22:
-					func_374(&unk, -99, -99, 98, false, 28, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 98, PV_COMP_HEAD, 28, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 23:
-					func_374(&unk, -99, -99, 27, false, 31, 0, 15, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 27, PV_COMP_HEAD, 31, 0, 15, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 24:
@@ -42818,15 +42818,15 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 41:
-					func_374(&unk, -99, -99, 2, 43, 8, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HAIR, 43, 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 42:
-					func_374(&unk, -99, -99, 55, false, 28, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, 55, PV_COMP_HEAD, 28, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 43:
-					func_374(&unk, -99, -99, false, 52, 8, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 52, 8, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 44:
@@ -42838,7 +42838,7 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 					break;
 			
 				case 46:
-					func_374(&unk, -99, -99, false, false, 28, 0, 0, 0, 0, -99, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, PV_COMP_HEAD, 28, 0, 0, 0, 0, -99, 0, 0, 31);
 					break;
 			
 				case 47:
@@ -42855,107 +42855,107 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 			switch (bParam1)
 			{
 				case false:
-					func_374(&unk, -99, -99, false, false, 10, -99, 0, -99, -99, 0, 0, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, PV_COMP_HEAD, 10, -99, 0, -99, -99, 0, 0, 0, 31);
 					break;
 			
 				case true:
-					func_374(&unk, -99, -99, true, 127, 38, -99, 2, 0, 0, 0, 0, 62, 0);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 127, 38, -99, 2, 0, 0, 0, 0, 62, 0);
 					break;
 			
 				case 2:
-					func_374(&unk, -99, -99, false, 248, 45, -99, 240, 0, 0, 0, 0, 144, 1);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 248, 45, -99, 240, 0, 0, 0, 0, 144, 1);
 					break;
 			
 				case 3:
-					func_374(&unk, -99, -99, 4, 31, 25, -99, 240, 0, 0, 0, 0, 231, 2);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 31, 25, -99, 240, 0, 0, 0, 0, 231, 2);
 					break;
 			
 				case 4:
-					func_374(&unk, -99, -99, true, 66, 10, -99, 21, 0, 0, 0, 0, 123, 3);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 66, 10, -99, 21, 0, 0, 0, 0, 123, 3);
 					break;
 			
 				case 5:
-					func_374(&unk, -99, -99, true, 93, 141, -99, 3, 0, 0, 0, 0, 114, 4);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 93, 141, -99, 3, 0, 0, 0, 0, 114, 4);
 					break;
 			
 				case 6:
-					func_374(&unk, -99, -99, true, 116, 113, -99, 7, 0, 0, 0, 0, 113, 5);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 116, 113, -99, 7, 0, 0, 0, 0, 113, 5);
 					break;
 			
 				case 7:
-					func_374(&unk, -99, -99, true, 61, 136, -99, 27, 0, 0, 0, 0, 61, 6);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 61, 136, -99, 27, 0, 0, 0, 0, 61, 6);
 					break;
 			
 				case 8:
-					func_374(&unk, -99, -99, false, 112, 10, -99, 240, 0, 0, 0, 0, 8, 7);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 112, 10, -99, 240, 0, 0, 0, 0, 8, 7);
 					break;
 			
 				case 9:
-					func_374(&unk, -99, -99, 4, 131, 24, -99, 240, 0, 0, 0, 0, 223, 8);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 131, 24, -99, 240, 0, 0, 0, 0, 223, 8);
 					break;
 			
 				case 10:
-					func_374(&unk, -99, -99, true, 209, 188, -99, 208, 0, 0, 0, 0, 64, 9);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 209, 188, -99, 208, 0, 0, 0, 0, 64, 9);
 					break;
 			
 				case 11:
-					func_374(&unk, -99, -99, true, 209, 160, -99, 211, 0, 0, 0, 43, 157, 10);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 209, 160, -99, 211, 0, 0, 0, 43, 157, 10);
 					break;
 			
 				case 12:
-					func_374(&unk, -99, -99, true, 162, 174, -99, 201, 0, 0, 0, 0, 158, 11);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 162, 174, -99, 201, 0, 0, 0, 0, 158, 11);
 					break;
 			
 				case 13:
-					func_374(&unk, -99, -99, true, 4, 240, -99, 34, 0, 0, 0, 0, 97, 12);
+					func_374(&unk, -99, -99, PV_COMP_BERD, PV_COMP_LOWR, 240, -99, 34, 0, 0, 0, 0, 97, 12);
 					break;
 			
 				case 14:
-					func_374(&unk, -99, -99, true, 128, 232, -99, 43, 0, 0, 0, 0, 102, 13);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 128, 232, -99, 43, 0, 0, 0, 0, 102, 13);
 					break;
 			
 				case 15:
-					func_374(&unk, -99, -99, true, 66, 65, -99, 224, 0, 0, 0, 0, 100, 14);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 66, 65, -99, 224, 0, 0, 0, 0, 100, 14);
 					break;
 			
 				case 16:
-					func_374(&unk, -99, -99, true, 65, 172, -99, 202, 0, 0, 0, 0, 64, 15);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 65, 172, -99, 202, 0, 0, 0, 0, 64, 15);
 					break;
 			
 				case 17:
-					func_374(&unk, -99, -99, true, 64, 10, -99, 1, 0, 0, 0, 0, 66, 16);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 64, 10, -99, 1, 0, 0, 0, 0, 66, 16);
 					break;
 			
 				case 18:
-					func_374(&unk, -99, -99, 5, 98, 80, -99, 240, 0, 0, 0, 0, 87, 17);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 98, 80, -99, 240, 0, 0, 0, 0, 87, 17);
 					break;
 			
 				case 19:
-					func_374(&unk, -99, -99, 5, 192, 96, -99, 240, 0, 0, 0, 0, 80, 18);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 192, 96, -99, 240, 0, 0, 0, 0, 80, 18);
 					break;
 			
 				case 20:
-					func_374(&unk, -99, -99, true, 124, 96, -99, 11, 0, 0, 0, 0, 110, 19);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 124, 96, -99, 11, 0, 0, 0, 0, 110, 19);
 					break;
 			
 				case 21:
-					func_374(&unk, -99, -99, false, 80, 114, -99, 240, 0, 0, 0, 0, 2, 20);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 80, 114, -99, 240, 0, 0, 0, 0, 2, 20);
 					break;
 			
 				case 22:
-					func_374(&unk, -99, -99, 6, 43, 112, -99, 82, 0, 0, 0, 0, 48, 21);
+					func_374(&unk, -99, -99, PV_COMP_FEET, 43, 112, -99, 82, 0, 0, 0, 0, 48, 21);
 					break;
 			
 				case 23:
-					func_374(&unk, -99, -99, true, 116, 144, -99, 2, 0, 0, 0, 0, 108, 22);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 116, 144, -99, 2, 0, 0, 0, 0, 108, 22);
 					break;
 			
 				case 24:
-					func_374(&unk, -99, -99, true, 63, 38, -99, 3, 0, 0, 0, 0, 63, 23);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 63, 38, -99, 3, 0, 0, 0, 0, 63, 23);
 					break;
 			
 				case 25:
-					func_374(&unk, -99, -99, 2, 64, 10, -99, 240, 0, 0, 0, 0, 41, 24);
+					func_374(&unk, -99, -99, PV_COMP_HAIR, 64, 10, -99, 240, 0, 0, 0, 0, 41, 24);
 					break;
 			
 				default:
@@ -42968,111 +42968,111 @@ struct<17> func_372(Hash hParam0, BOOL bParam1) // Position - 0x327AA (206762)
 			switch (bParam1)
 			{
 				case false:
-					func_374(&unk, -99, -99, false, false, 0, -99, 0, -99, -99, 0, -99, 0, 31);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, PV_COMP_HEAD, 0, -99, 0, -99, -99, 0, -99, 0, 31);
 					break;
 			
 				case true:
-					func_374(&unk, -99, -99, 5, 136, 241, -99, 47, 0, 0, 0, 0, 21, 31);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 136, 241, -99, 47, 0, 0, 0, 0, 21, 31);
 					break;
 			
 				case 2:
-					func_374(&unk, -99, -99, 4, true, 96, -99, 32, 0, 0, 0, 7, 215, 0);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, PV_COMP_BERD, 96, -99, 32, 0, 0, 0, 7, 215, 0);
 					break;
 			
 				case 3:
-					func_374(&unk, -99, -99, true, 73, 241, -99, 3, 0, 0, 0, 0, 25, 1);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 73, 241, -99, 3, 0, 0, 0, 0, 25, 1);
 					break;
 			
 				case 4:
-					func_374(&unk, -99, -99, 2, 88, 217, -99, 32, 0, 0, 0, 0, 33, 2);
+					func_374(&unk, -99, -99, PV_COMP_HAIR, 88, 217, -99, 32, 0, 0, 0, 0, 33, 2);
 					break;
 			
 				case 5:
-					func_374(&unk, -99, -99, 9, 7, 98, -99, 32, 0, 0, 0, 7, 153, 3);
+					func_374(&unk, -99, -99, PV_COMP_TASK, PV_COMP_TEEF, 98, -99, 32, 0, 0, 0, 7, 153, 3);
 					break;
 			
 				case 6:
-					func_374(&unk, -99, -99, true, 140, 241, -99, 7, 0, 0, 0, 31, 16, 4);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 140, 241, -99, 7, 0, 0, 0, 31, 16, 4);
 					break;
 			
 				case 7:
-					func_374(&unk, -99, -99, 4, 139, 112, -99, 32, 0, 0, 0, 49, 78, 5);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 139, 112, -99, 32, 0, 0, 0, 49, 78, 5);
 					break;
 			
 				case 8:
-					func_374(&unk, -99, -99, true, 193, 48, -99, 108, 0, 0, 0, 0, 17, 6);
+					func_374(&unk, -99, -99, PV_COMP_BERD, 193, 48, -99, 108, 0, 0, 0, 0, 17, 6);
 					break;
 			
 				case 9:
-					func_374(&unk, -99, -99, 5, 114, 97, -99, 103, 0, 0, 0, 0, 98, 7);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 114, 97, -99, 103, 0, 0, 0, 0, 98, 7);
 					break;
 			
 				case 10:
-					func_374(&unk, -99, -99, 9, 134, 239, -99, 32, 0, 0, 0, 2, 144, 8);
+					func_374(&unk, -99, -99, PV_COMP_TASK, 134, 239, -99, 32, 0, 0, 0, 2, 144, 8);
 					break;
 			
 				case 11:
-					func_374(&unk, -99, -99, 5, 152, 96, -99, 10, 0, 0, 0, 31, 96, 9);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 152, 96, -99, 10, 0, 0, 0, 31, 96, 9);
 					break;
 			
 				case 12:
-					func_374(&unk, -99, -99, 6, 129, 1, -99, 96, 0, 0, 0, 5, 120, 10);
+					func_374(&unk, -99, -99, PV_COMP_FEET, 129, 1, -99, 96, 0, 0, 0, 5, 120, 10);
 					break;
 			
 				case 13:
-					func_374(&unk, -99, -99, 5, false, 0, -99, 10, 0, 0, 0, 0, 130, 31);
+					func_374(&unk, -99, -99, PV_COMP_HAND, PV_COMP_HEAD, 0, -99, 10, 0, 0, 0, 0, 130, 31);
 					break;
 			
 				case 14:
-					func_374(&unk, -99, -99, 4, 159, 96, -99, 32, 0, 0, 0, 22, 214, 11);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 159, 96, -99, 32, 0, 0, 0, 22, 214, 11);
 					break;
 			
 				case 15:
-					func_374(&unk, -99, -99, 9, 232, 213, -99, 32, 0, 0, 0, 22, 147, 12);
+					func_374(&unk, -99, -99, PV_COMP_TASK, 232, 213, -99, 32, 0, 0, 0, 22, 147, 12);
 					break;
 			
 				case 16:
-					func_374(&unk, -99, -99, 2, 8, 98, -99, 32, 0, 0, 0, 33, 39, 13);
+					func_374(&unk, -99, -99, PV_COMP_HAIR, PV_COMP_ACCS, 98, -99, 32, 0, 0, 0, 33, 39, 13);
 					break;
 			
 				case 17:
-					func_374(&unk, -99, -99, 5, 150, 235, -99, 106, 0, 0, 0, 0, 128, 14);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 150, 235, -99, 106, 0, 0, 0, 0, 128, 14);
 					break;
 			
 				case 18:
-					func_374(&unk, -99, -99, 6, 96, 97, -99, 7, 0, 0, 0, 32, 114, 15);
+					func_374(&unk, -99, -99, PV_COMP_FEET, 96, 97, -99, 7, 0, 0, 0, 32, 114, 15);
 					break;
 			
 				case 19:
-					func_374(&unk, -99, -99, 4, 48, 64, -99, 32, 0, 0, 0, 0, 89, 16);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 48, 64, -99, 32, 0, 0, 0, 0, 89, 16);
 					break;
 			
 				case 20:
-					func_374(&unk, -99, -99, 4, 62, 64, -99, 32, 0, 0, 0, 0, 78, 17);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 62, 64, -99, 32, 0, 0, 0, 0, 78, 17);
 					break;
 			
 				case 21:
-					func_374(&unk, -99, -99, 4, 49, 65, -99, 32, 0, 0, 0, 8, 80, 31);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 49, 65, -99, 32, 0, 0, 0, 8, 80, 31);
 					break;
 			
 				case 22:
-					func_374(&unk, -99, -99, 3, 20, 16, -99, 32, 0, 0, 0, 0, 49, 18);
+					func_374(&unk, -99, -99, PV_COMP_UPPR, 20, 16, -99, 32, 0, 0, 0, 0, 49, 18);
 					break;
 			
 				case 23:
-					func_374(&unk, -99, -99, false, 73, 178, -99, 32, 0, 0, 0, 38, 11, 19);
+					func_374(&unk, -99, -99, PV_COMP_HEAD, 73, 178, -99, 32, 0, 0, 0, 38, 11, 19);
 					break;
 			
 				case 24:
-					func_374(&unk, -99, -99, 5, 135, 53, -99, 9, 0, 0, 0, 29, 27, 20);
+					func_374(&unk, -99, -99, PV_COMP_HAND, 135, 53, -99, 9, 0, 0, 0, 29, 27, 20);
 					break;
 			
 				case 25:
-					func_374(&unk, -99, -99, 7, 233, 176, -99, 120, 0, 0, 0, 11, 160, 21);
+					func_374(&unk, -99, -99, PV_COMP_TEEF, 233, 176, -99, 120, 0, 0, 0, 11, 160, 21);
 					break;
 			
 				case 26:
-					func_374(&unk, -99, -99, 4, 34, 179, -99, 32, 0, 0, 0, 0, 77, 22);
+					func_374(&unk, -99, -99, PV_COMP_LOWR, 34, 179, -99, 32, 0, 0, 0, 0, 77, 22);
 					break;
 			
 				case 27:
@@ -43184,12 +43184,12 @@ void func_373(var uParam0, Hash hParam1, BOOL bParam2, int iParam3) // Position 
 	return;
 }
 
-void func_374(var uParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13) // Position - 0x347DC (215004)
+void func_374(var uParam0, int iParam1, int iParam2, ePedComponentType epctParam3, ePedComponentType epctParam4, int iParam5, int iParam6, int iParam7, int iParam8, int iParam9, int iParam10, int iParam11, int iParam12, int iParam13) // Position - 0x347DC (215004)
 {
 	uParam0->[0] = iParam1;
 	uParam0->[2] = iParam2;
-	uParam0->[3] = bParam3;
-	uParam0->[4] = bParam4;
+	uParam0->[3] = epctParam3;
+	uParam0->[4] = epctParam4;
 	uParam0->[6] = iParam5;
 	uParam0->[5] = iParam6;
 	uParam0->[8] = iParam7;
@@ -43685,7 +43685,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			
 				if (!PED::IS_PED_INJURED(pedParam0))
 				{
-					if (func_352(pedParam0, 3, 169))
+					if (func_352(pedParam0, PV_COMP_UPPR, 169))
 					{
 						func_350(pedParam0, 3, 85, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 						return 1;
@@ -43693,13 +43693,13 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 6))
+			if (func_352(pedParam0, PV_COMP_MAX, 6))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 17))
+			if (func_352(pedParam0, PV_COMP_MAX, 17))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 17))
 				{
@@ -43708,7 +43708,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 20))
+			if (func_352(pedParam0, PV_COMP_MAX, 20))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 20))
 				{
@@ -43717,7 +43717,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 21))
+			if (func_352(pedParam0, PV_COMP_MAX, 21))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 21))
 				{
@@ -43726,7 +43726,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 22))
+			if (func_352(pedParam0, PV_COMP_MAX, 22))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 22))
 				{
@@ -43735,19 +43735,19 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 11))
+			if (func_352(pedParam0, PV_COMP_MAX, 11))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 10))
+			if (func_352(pedParam0, PV_COMP_MAX, 10))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 50))
+			if (func_352(pedParam0, PV_COMP_MAX, 50))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43759,7 +43759,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				flag = true;
 			}
 		
-			if (func_352(pedParam0, 8, 22))
+			if (func_352(pedParam0, PV_COMP_ACCS, 22))
 			{
 				func_350(pedParam0, 8, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				flag = true;
@@ -43768,7 +43768,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			if (flag)
 				return 1;
 		
-			if (func_352(pedParam0, 12, 14))
+			if (func_352(pedParam0, PV_COMP_MAX, 14))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43776,7 +43776,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			break;
 	
 		case CHAR_FRANKLIN:
-			if (func_352(pedParam0, 12, 13))
+			if (func_352(pedParam0, PV_COMP_MAX, 13))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 13))
 				{
@@ -43785,7 +43785,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 14))
+			if (func_352(pedParam0, PV_COMP_MAX, 14))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 14))
 				{
@@ -43794,7 +43794,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 15))
+			if (func_352(pedParam0, PV_COMP_MAX, 15))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 15))
 				{
@@ -43803,13 +43803,13 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 4))
+			if (func_352(pedParam0, PV_COMP_MAX, 4))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 3))
+			if (func_352(pedParam0, PV_COMP_MAX, 3))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43821,7 +43821,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				flag = true;
 			}
 		
-			if (func_352(pedParam0, 8, 76))
+			if (func_352(pedParam0, PV_COMP_ACCS, 76))
 			{
 				func_350(pedParam0, 8, 26, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				flag = true;
@@ -43830,7 +43830,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			if (flag)
 				return 1;
 		
-			if (func_352(pedParam0, 12, true))
+			if (func_352(pedParam0, PV_COMP_MAX, true))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43838,13 +43838,13 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			break;
 	
 		case CHAR_TREVOR:
-			if (func_352(pedParam0, 12, 12))
+			if (func_352(pedParam0, PV_COMP_MAX, 12))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 15))
+			if (func_352(pedParam0, PV_COMP_MAX, 15))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43852,14 +43852,14 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 		
 			if (!bParam1)
 			{
-				if (func_352(pedParam0, 3, 71))
+				if (func_352(pedParam0, PV_COMP_UPPR, 71))
 				{
 					func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					return 1;
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 17))
+			if (func_352(pedParam0, PV_COMP_MAX, 17))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 17))
 				{
@@ -43868,7 +43868,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 18))
+			if (func_352(pedParam0, PV_COMP_MAX, 18))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 18))
 				{
@@ -43877,7 +43877,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 19))
+			if (func_352(pedParam0, PV_COMP_MAX, 19))
 			{
 				if (!func_388(ENTITY::GET_ENTITY_MODEL(pedParam0), 12, 19))
 				{
@@ -43886,13 +43886,13 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				}
 			}
 		
-			if (func_352(pedParam0, 12, 7))
+			if (func_352(pedParam0, PV_COMP_MAX, 7))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
 			}
 		
-			if (func_352(pedParam0, 12, 6))
+			if (func_352(pedParam0, PV_COMP_MAX, 6))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -43904,7 +43904,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 				flag = true;
 			}
 		
-			if (func_352(pedParam0, 8, 17))
+			if (func_352(pedParam0, PV_COMP_ACCS, 17))
 			{
 				func_350(pedParam0, 8, 15, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				flag = true;
@@ -43913,7 +43913,7 @@ int func_387(Ped pedParam0, BOOL bParam1) // Position - 0x35548 (218440)
 			if (flag)
 				return 1;
 		
-			if (func_352(pedParam0, 12, 11))
+			if (func_352(pedParam0, PV_COMP_MAX, 11))
 			{
 				func_350(pedParam0, 12, false, 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 				return 1;
@@ -62842,14 +62842,14 @@ BOOL func_483(Ped pedParam0, BOOL bParam1) // Position - 0x53FB8 (343992)
 
 BOOL func_484(Ped pedParam0) // Position - 0x54279 (344697)
 {
-	int num;
+	ePedComponentType type;
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 	{
-		num = Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_97.f_28;
+		type = Global_1845274[PLAYER::PLAYER_ID() /*877*/].f_97.f_28;
 	
-		if (num != -1 && num < 4)
-			if (func_485(num) != -1 && func_485(num) != 0)
+		if (type != PV_COMP_INVALID && type < PV_COMP_LOWR)
+			if (func_485(type) != -1 && func_485(type) != 0)
 				return 1;
 	}
 
@@ -62861,15 +62861,15 @@ BOOL func_484(Ped pedParam0) // Position - 0x54279 (344697)
 	return 0;
 }
 
-int func_485(int iParam0) // Position - 0x542F5 (344821)
+int func_485(ePedComponentType epctParam0) // Position - 0x542F5 (344821)
 {
 	if (func_486(true))
 		return Global_1685540;
 
-	if (iParam0 <= -1 || iParam0 >= 4)
+	if (epctParam0 <= PV_COMP_INVALID || epctParam0 >= PV_COMP_LOWR)
 		return -1;
 
-	return Global_2685690.f_6477[iParam0];
+	return Global_2685690.f_6477[epctParam0];
 }
 
 BOOL func_486(BOOL bParam0) // Position - 0x5432C (344876)

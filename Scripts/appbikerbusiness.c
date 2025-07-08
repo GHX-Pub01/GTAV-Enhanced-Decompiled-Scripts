@@ -31021,7 +31021,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 
 	Global_22609 = false;
 	Global_22611 = 0;
-	Global_22616 = false;
+	Global_22616 = 0;
 	Global_23593 = 0;
 	Global_23595 = 0;
 	Global_23599 = 0;
@@ -31494,10 +31494,10 @@ void func_537() // Position - 0x219FA (137722)
 	return;
 }
 
-void func_538(var uParam0, eCharacter echParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x21A51 (137809)
+void func_538(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x21A51 (137809)
 {
 	Global_22056 = { *uParam0 };
-	Global_8391 = echParam1;
+	Global_8391 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_22672, sParam2, 24);
 	Global_23591 = iParam5;
 

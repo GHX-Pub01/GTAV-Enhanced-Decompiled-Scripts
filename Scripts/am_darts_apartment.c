@@ -14867,14 +14867,14 @@ BOOL func_186(Ped pedParam0, int iParam1) // Position - 0x15236 (86582)
 	return false;
 }
 
-struct<14> func_187(Hash hParam0, int iParam1, int iParam2, Hash hParam3) // Position - 0x15253 (86611)
+struct<14> func_187(Hash hParam0, int iParam1, BOOL bParam2, Hash hParam3) // Position - 0x15253 (86611)
 {
 	func_236();
 
 	if (hParam0 == joaat("MP_M_Freemode_01"))
-		func_220(iParam1, iParam2, hParam3);
+		func_220(iParam1, bParam2, hParam3);
 	else if (hParam0 == joaat("MP_F_Freemode_01"))
-		func_188(iParam1, iParam2, hParam3);
+		func_188(iParam1, bParam2, hParam3);
 
 	return Global_79551[0 /*14*/];
 }
@@ -50907,14 +50907,14 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 	int num5;
 	BOOL flag2;
 	int num6;
-	int num7;
-	int num8;
 	BOOL flag3;
-	int num9;
+	int num7;
+	BOOL flag4;
+	int num8;
 	var unk102;
 	var unk127;
 	var unk133;
-	int num10;
+	int num9;
 	var unk171;
 
 	iParam17 == 0;
@@ -51122,21 +51122,21 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 	else
 	{
 		if (func_540() == 1)
-			num7 = Global_4521801.f_915;
+			flag3 = Global_4521801.f_915;
 		else
-			num7 = func_539();
+			flag3 = func_539();
 	
 		TEXT_LABEL_ASSIGN_STRING(&Global_1057185, "", 32);
-		num8 = { func_149(PLAYER::PLAYER_ID()) };
+		num7 = { func_149(PLAYER::PLAYER_ID()) };
 	
-		if (num8 < 0)
-			num8 = 0;
+		if (num7 < 0)
+			num7 = 0;
 	
 		iParam12 = iParam12;
 	
 		if (func_1021(false))
 		{
-			flag3 = 1;
+			flag4 = 1;
 		}
 		else if (!func_668(PLAYER::PLAYER_ID()))
 		{
@@ -51157,26 +51157,26 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		else if (func_693(PLAYER::PLAYER_ID()))
 			iParam0 = 165;
 	
-		num9 = Global_1837463;
-		num9.f_1 = Global_1837464;
+		num8 = Global_1837463;
+		num8.f_1 = Global_1837464;
 	
-		if (num9.f_1 < 0)
-			num9.f_1 = 0;
+		if (num8.f_1 < 0)
+			num8.f_1 = 0;
 	
-		num9.f_2 = Global_1837461;
-		num9.f_9 = iParam18;
-		num9.f_3 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
+		num8.f_2 = Global_1837461;
+		num8.f_9 = iParam18;
+		num8.f_3 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
 	
 		if (iParam0 == 5 || iParam0 == 6 || iParam0 == 148)
-			num9.f_4 = 17;
+			num8.f_4 = 17;
 		else if (func_692() != -1)
-			num9.f_4 = func_692();
+			num8.f_4 = func_692();
 	
 		if (Global_1837478 >= 0)
-			num9.f_39 = Global_1837478;
+			num8.f_39 = Global_1837478;
 	
 		if (Global_1837479 >= 0)
-			num9.f_38 = Global_1837479;
+			num8.f_38 = Global_1837479;
 	
 		if (func_705() && !func_538() && !bParam15 && Global_2684748.f_669.f_10 != 0 && !func_536(false))
 		{
@@ -51191,7 +51191,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		
 			unk102.f_4 = Global_1837461;
 			unk102.f_5 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
-			unk102.f_6 = num9.f_4;
+			unk102.f_6 = num8.f_4;
 		
 			if (func_668(PLAYER::PLAYER_ID()))
 			{
@@ -51209,7 +51209,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			unk102.f_11 = iParam6;
 			unk102.f_12 = iParam7;
 			unk102.f_13 = iParam11;
-			unk102.f_14 = num8;
+			unk102.f_14 = num7;
 			unk102.f_15 = Global_1837465;
 			unk102.f_16 = iParam9;
 			unk102.f_17 = iParam10;
@@ -51218,7 +51218,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			if (func_535() || func_668(PLAYER::PLAYER_ID()))
 				unk102.f_19 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
 		
-			unk102.f_20 = flag3;
+			unk102.f_20 = flag4;
 		
 			if (Global_1837478 >= 0)
 				unk102.f_23 = Global_1837478;
@@ -51246,81 +51246,81 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		if (!NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			Global_1837472 = NETWORK::NETWORK_SESSION_IS_VISIBLE();
 	
-		num9.f_7 = num2;
-		num9.f_8 = flag3;
-		num9.f_11 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
-		num9.f_12 = iParam8;
-		num9.f_13 = iParam5;
-		num9.f_14 = iParam6;
-		num9.f_15 = iParam7;
-		num9.f_16 = iParam11;
-		num9.f_17 = num8;
-		num9.f_18 = iParam13;
-		num9.f_19 = Global_1837465;
-		num9.f_20 = iParam14;
-		num9.f_21 = iParam9;
-		num9.f_22 = iParam0;
-		num9.f_23 = *Global_4718592.f_128052;
+		num8.f_7 = num2;
+		num8.f_8 = flag4;
+		num8.f_11 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
+		num8.f_12 = iParam8;
+		num8.f_13 = iParam5;
+		num8.f_14 = iParam6;
+		num8.f_15 = iParam7;
+		num8.f_16 = iParam11;
+		num8.f_17 = num7;
+		num8.f_18 = iParam13;
+		num8.f_19 = Global_1837465;
+		num8.f_20 = iParam14;
+		num8.f_21 = iParam9;
+		num8.f_22 = iParam0;
+		num8.f_23 = *Global_4718592.f_128052;
 	
 		if (func_554())
-			if (num9.f_23 == 6)
-				num9.f_23 = 14;
-			else if (num9.f_23 == 7)
-				num9.f_23 = 15;
+			if (num8.f_23 == 6)
+				num8.f_23 = 14;
+			else if (num8.f_23 == 7)
+				num8.f_23 = 15;
 		else if (func_534(*Global_4718592.f_138116))
-			if (num9.f_23 == 6)
-				num9.f_23 = 16;
-			else if (num9.f_23 == 7)
-				num9.f_23 = 17;
+			if (num8.f_23 == 6)
+				num8.f_23 = 16;
+			else if (num8.f_23 == 7)
+				num8.f_23 = 17;
 	
-		num9.f_24 = num;
-		num9.f_25 = iParam10;
-		num9.f_34 = Global_1837471;
-		num9.f_26 = func_667() - Global_1057437.f_1;
-		num9.f_29 = func_1035(1301, -1);
+		num8.f_24 = num;
+		num8.f_25 = iParam10;
+		num8.f_34 = Global_1837471;
+		num8.f_26 = func_667() - Global_1057437.f_1;
+		num8.f_29 = func_1035(1301, -1);
 	
 		if (func_668(PLAYER::PLAYER_ID()))
 		{
-			num9.f_40 = Global_2685690.f_3499;
-			num9.f_41 = Global_2685690.f_3499.f_1 + 1;
+			num8.f_40 = Global_2685690.f_3499;
+			num8.f_41 = Global_2685690.f_3499.f_1 + 1;
 		}
 		else
 		{
-			num9.f_5 = Global_2685690.f_3499;
-			num9.f_6 = Global_2685690.f_3499.f_1;
+			num8.f_5 = Global_2685690.f_3499;
+			num8.f_6 = Global_2685690.f_3499.f_1;
 		}
 	
-		num9.f_36 = Global_1837472;
-		num9.f_37 = iParam16;
-		num9.f_30 = num7;
+		num8.f_36 = Global_1837472;
+		num8.f_37 = iParam16;
+		num8.f_30 = flag3;
 	
 		if (func_533() || func_532())
-			num9.f_35 = 1;
+			num8.f_35 = 1;
 	
 		if (iParam0 == 2)
 		{
-			num9.f_27 = Global_4456449.f_8;
-			num9.f_10 = Global_4456484.f_31;
+			num8.f_27 = Global_4456449.f_8;
+			num8.f_10 = Global_4456484.f_31;
 		
 			if (func_527(false) && Global_1837476 != -1 && !func_535() && !func_668(PLAYER::PLAYER_ID()))
-				num9.f_31 = Global_1837476;
+				num8.f_31 = Global_1837476;
 		
 			Global_1837476 = -1;
-			num9.f_42 = Global_1685690[func_526() /*26*/].f_20;
-			num9.f_43 = Global_1685690[func_526() /*26*/].f_21;
-			num9.f_44 = Global_1685690[func_526() /*26*/].f_22;
-			num9.f_45 = Global_1685690[func_526() /*26*/].f_23;
-			num9.f_46 = Global_1685690[func_526() /*26*/].f_24;
+			num8.f_42 = Global_1685690[func_526() /*26*/].f_20;
+			num8.f_43 = Global_1685690[func_526() /*26*/].f_21;
+			num8.f_44 = Global_1685690[func_526() /*26*/].f_22;
+			num8.f_45 = Global_1685690[func_526() /*26*/].f_23;
+			num8.f_46 = Global_1685690[func_526() /*26*/].f_24;
 		}
 	
 		if (func_535() || func_668(PLAYER::PLAYER_ID()))
 		{
-			num9.f_28 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+			num8.f_28 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
 		
 			if (func_525() || func_524())
-				num9.f_32 = 1;
+				num8.f_32 = 1;
 			else if (func_523() || func_522())
-				num9.f_33 = 1;
+				num8.f_33 = 1;
 		}
 	
 		if (func_535() || func_668(PLAYER::PLAYER_ID()))
@@ -51335,76 +51335,76 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		{
 			if (func_520() || func_538() || bParam15)
 			{
-				num10 = Global_2684748.f_669.f_10;
-				num10.f_1 = Global_2684748.f_669.f_12;
+				num9 = Global_2684748.f_669.f_10;
+				num9.f_1 = Global_2684748.f_669.f_12;
 				Global_2684748.f_669.f_17 = 0;
-				num10.f_2 = Global_1837463;
-				num10.f_3 = Global_1837464;
+				num9.f_2 = Global_1837463;
+				num9.f_3 = Global_1837464;
 			
-				if (num10.f_3 < 0)
-					num10.f_3 = 0;
+				if (num9.f_3 < 0)
+					num9.f_3 = 0;
 			
-				num10.f_4 = Global_1837461;
-				num10.f_5 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
-				num10.f_6 = num9.f_4;
+				num9.f_4 = Global_1837461;
+				num9.f_5 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
+				num9.f_6 = num8.f_4;
 			
 				if (func_668(PLAYER::PLAYER_ID()))
 				{
-					num10.f_29 = Global_2685690.f_3499;
-					num10.f_30 = Global_2685690.f_3499.f_1 + 1;
+					num9.f_29 = Global_2685690.f_3499;
+					num9.f_30 = Global_2685690.f_3499.f_1 + 1;
 				}
 				else
 				{
-					num10.f_7 = Global_2685690.f_3499;
-					num10.f_8 = Global_2685690.f_3499.f_1;
+					num9.f_7 = Global_2685690.f_3499;
+					num9.f_8 = Global_2685690.f_3499.f_1;
 				}
 			
-				num10.f_9 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
-				num10.f_10 = iParam8;
-				num10.f_11 = iParam5;
-				num10.f_12 = iParam6;
-				num10.f_13 = iParam7;
-				num10.f_14 = iParam11;
-				num10.f_15 = num8;
-				num10.f_16 = Global_1837465;
-				num10.f_17 = iParam9;
-				num10.f_18 = iParam10;
-				num10.f_19 = func_667() - Global_1057437.f_1;
+				num9.f_9 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
+				num9.f_10 = iParam8;
+				num9.f_11 = iParam5;
+				num9.f_12 = iParam6;
+				num9.f_13 = iParam7;
+				num9.f_14 = iParam11;
+				num9.f_15 = num7;
+				num9.f_16 = Global_1837465;
+				num9.f_17 = iParam9;
+				num9.f_18 = iParam10;
+				num9.f_19 = func_667() - Global_1057437.f_1;
 			
 				if (func_535() || func_668(PLAYER::PLAYER_ID()))
 				{
-					num10.f_20 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
-					num10.f_23 = func_525() || func_524();
-					num10.f_24 = func_523() || func_522();
+					num9.f_20 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+					num9.f_23 = func_525() || func_524();
+					num9.f_24 = func_523() || func_522();
 				}
 			
-				num10.f_21 = func_1035(1301, -1);
-				num10.f_22 = num7;
-				num10.f_25 = Global_1837471;
-				num10.f_26 = func_533() || func_532();
-				num10.f_27 = Global_1837472;
-				num10.f_28 = flag3;
+				num9.f_21 = func_1035(1301, -1);
+				num9.f_22 = flag3;
+				num9.f_25 = Global_1837471;
+				num9.f_26 = func_533() || func_532();
+				num9.f_27 = Global_1837472;
+				num9.f_28 = flag4;
 			
 				if (Global_1837478 >= 0)
-					num10.f_31 = Global_1837478;
+					num9.f_31 = Global_1837478;
 				else if (Global_1837478 == -2)
-					num10.f_31 = 998;
+					num9.f_31 = 998;
 				else
-					num10.f_31 = 999;
+					num9.f_31 = 999;
 			
 				if (Global_1837479 >= 0)
-					num10.f_32 = Global_1837479;
+					num9.f_32 = Global_1837479;
 				else if (Global_1837479 == -2)
-					num10.f_32 = 998;
+					num9.f_32 = 998;
 				else
-					num10.f_32 = 999;
+					num9.f_32 = 999;
 			
 				TEXT_LABEL_ASSIGN_STRING(&unk171, "", 24);
 			
 				if (func_535() || func_668(PLAYER::PLAYER_ID()))
 					unk171 = { Global_1048576.f_44 };
 			
-				STATS::PLAYSTATS_JOB_LTS_END(&data, &matchId, &num10, &unk171);
+				STATS::PLAYSTATS_JOB_LTS_END(&data, &matchId, &num9, &unk171);
 				func_519();
 				Global_1837477 = 0;
 				return;
@@ -51413,23 +51413,23 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 	
 		if (func_51(PLAYER::PLAYER_ID()) || func_52(PLAYER::PLAYER_ID()))
 		{
-			Global_786435.f_3 = num9.f_13;
-			Global_786435.f_4 = num9.f_14;
+			Global_786435.f_3 = num8.f_13;
+			Global_786435.f_4 = num8.f_14;
 			Global_786435.f_6 = Global_1837463;
 			Global_786435.f_7 = Global_1837461;
 			Global_786435.f_8 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
-			Global_786435.f_9 = num9.f_4;
+			Global_786435.f_9 = num8.f_4;
 			Global_786435.f_10 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
 			Global_786435.f_11 = iParam7;
 			Global_786435.f_12 = iParam11;
-			Global_786435.f_13 = num8;
+			Global_786435.f_13 = num7;
 			Global_786435.f_14 = iParam9;
 			Global_786435.f_15 = iParam10;
 			Global_786435.f_16 = func_667() - Global_1057437.f_1;
 			Global_786435.f_17 = func_1035(1301, -1);
-			Global_786435.f_18 = num7;
+			Global_786435.f_18 = flag3;
 			Global_786435.f_19 = Global_1837472;
-			Global_786435.f_20 = flag3;
+			Global_786435.f_20 = flag4;
 			Global_786435.f_28 = iParam16;
 			Global_786435.f_43 = Global_786547;
 			Global_786435.f_44 = Global_786547.f_1;
@@ -51448,20 +51448,20 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 	
 		if (func_139())
 		{
-			Global_786481.f_3 = num9.f_13;
-			Global_786481.f_4 = num9.f_14;
+			Global_786481.f_3 = num8.f_13;
+			Global_786481.f_4 = num8.f_14;
 			Global_786481.f_6 = Global_1837463;
 			Global_786481.f_7 = Global_1837461;
 			Global_786481.f_8 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
-			Global_786481.f_9 = num9.f_4;
+			Global_786481.f_9 = num8.f_4;
 			Global_786481.f_10 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
 			Global_786481.f_11 = iParam7;
 			Global_786481.f_12 = iParam11;
-			Global_786481.f_13 = num8;
+			Global_786481.f_13 = num7;
 			Global_786481.f_14 = iParam9;
 			Global_786481.f_15 = iParam10;
 			Global_786481.f_19 = Global_1837472;
-			Global_786481.f_20 = flag3;
+			Global_786481.f_20 = flag4;
 			Global_786481.f_28 = iParam16;
 			Global_786481.f_43 = Global_786547;
 			Global_786481.f_44 = Global_786547.f_1;
@@ -51476,7 +51476,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		{
 			Global_2684748.f_669.f_17 = 0;
 			Global_1944406 = iParam2;
-			Global_1944406.f_4 = func_500(flag3);
+			Global_1944406.f_4 = func_500(flag4);
 			Global_1944406.f_5 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
 			Global_1944406.f_6 = iParam5;
 			Global_1944406.f_7 = iParam6;
@@ -51515,7 +51515,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		if (func_487(*Global_4718592.f_138116))
 		{
 			Global_2684748.f_669.f_17 = 0;
-			Global_1944482.f_17 = flag3;
+			Global_1944482.f_17 = flag4;
 			Global_1944482.f_20 = func_114(PLAYER::PLAYER_ID()) - Global_1837462;
 			Global_1944482.f_3 = iParam5;
 			Global_1944482.f_4 = iParam6;
@@ -51530,16 +51530,16 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			Global_1944482.f_5 = Global_1837463;
 			Global_1944482.f_6 = Global_1837461;
 			Global_1944482.f_7 = func_710(PLAYER::PLAYER_ID()) + MONEY::NETWORK_GET_VC_BANK_BALANCE();
-			Global_1944482.f_8 = num9.f_4;
+			Global_1944482.f_8 = num8.f_4;
 			Global_1944482.f_9 = iParam16;
 			Global_1944482.f_10 = CAM::GET_FOLLOW_PED_CAM_VIEW_MODE();
 			Global_1944482.f_38 = func_486(PLAYER::PLAYER_ID());
 			Global_1944482.f_39 = func_485(PLAYER::PLAYER_ID());
 			Global_1944482.f_40 = func_484(PLAYER::PLAYER_ID());
-			Global_1944482.f_17 = flag3;
+			Global_1944482.f_17 = flag4;
 			Global_1944482.f_27 = Global_786547.f_1;
 			Global_1944482.f_16 = Global_1837472;
-			Global_1944482.f_23 = num8;
+			Global_1944482.f_23 = num7;
 			Global_1944482.f_25 = func_667() - Global_1057437.f_1;
 			Global_1944482.f_26 = NETWORK::NETWORK_HAS_HEADSET();
 			Global_1944482.f_28 = 0;
@@ -51621,7 +51621,7 @@ void func_463(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		Global_2684748.f_669.f_17 = 0;
 	
 		if (!flag)
-			STATS::PLAYSTATS_JOB_ACTIVITY_END(&data, &matchId, &num9, &unk133);
+			STATS::PLAYSTATS_JOB_ACTIVITY_END(&data, &matchId, &num8, &unk133);
 	
 		func_519();
 		Global_1837477 = 0;
@@ -52530,7 +52530,7 @@ BOOL func_538() // Position - 0x3D395 (250773)
 	return Global_2684748.f_669.f_14;
 }
 
-int func_539() // Position - 0x3D3A6 (250790)
+BOOL func_539() // Position - 0x3D3A6 (250790)
 {
 	return func_1035(1299, -1);
 }
@@ -66130,7 +66130,7 @@ void func_881(int iParam0, BOOL bParam1) // Position - 0x4E0BB (319675)
 	return;
 }
 
-void func_882(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sParam4, int iParam5, int iParam6, int iParam7, const char* sParam8, int iParam9, int iParam10) // Position - 0x4E10A (319754)
+void func_882(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sParam4, BOOL bParam5, int iParam6, int iParam7, const char* sParam8, int iParam9, int iParam10) // Position - 0x4E10A (319754)
 {
 	int num;
 
@@ -66140,7 +66140,7 @@ void func_882(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sP
 	TEXT_LABEL_ASSIGN_STRING(&(Global_1682585[num /*106*/].f_1), sParam4, 64);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_1682585[num /*106*/].f_33), sParam1, 64);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_1682585[num /*106*/].f_49), sParam2, 64);
-	Global_1682585[num /*106*/].f_97 = iParam5;
+	Global_1682585[num /*106*/].f_97 = bParam5;
 	Global_1682585[num /*106*/].f_104 = iParam9;
 	Global_1682585[num /*106*/].f_105 = iParam10;
 	iParam6 != 0;
@@ -68490,20 +68490,20 @@ char* func_887(int iParam0, int iParam1) // Position - 0x5034F (328527)
 
 BOOL func_888(int iParam0) // Position - 0x50C77 (330871)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_889(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_213(num2));
+	p_num = func_889(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_213(num));
 }
 
-int func_889(int iParam0) // Position - 0x50C94 (330900)
+int* func_889(int iParam0) // Position - 0x50C94 (330900)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682585.f_1061[func_217(iParam0)];
-	return unk;
+	p_num = Global_1682585.f_1061[func_217(iParam0)];
+	return p_num;
 }
 
 void func_890(BOOL bParam0) // Position - 0x50CAF (330927)
@@ -82420,20 +82420,20 @@ void func_991(int iParam0, BOOL bParam1) // Position - 0x618E5 (399589)
 
 BOOL func_992(int iParam0) // Position - 0x61934 (399668)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_993(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_213(num2));
+	p_num = func_993(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_213(num));
 }
 
-int func_993(int iParam0) // Position - 0x61951 (399697)
+int* func_993(int iParam0) // Position - 0x61951 (399697)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682585.f_1205[func_217(iParam0)];
-	return unk;
+	p_num = Global_1682585.f_1205[func_217(iParam0)];
+	return p_num;
 }
 
 void func_994(int iParam0, BOOL bParam1) // Position - 0x6196C (399724)
@@ -82579,20 +82579,20 @@ void func_999(int iParam0, BOOL bParam1) // Position - 0x61B79 (400249)
 
 BOOL func_1000(int iParam0) // Position - 0x61BC8 (400328)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_1001(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_213(num2));
+	p_num = func_1001(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_213(num));
 }
 
-int func_1001(int iParam0) // Position - 0x61BE5 (400357)
+int* func_1001(int iParam0) // Position - 0x61BE5 (400357)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682585.f_1157[func_217(iParam0)];
-	return unk;
+	p_num = Global_1682585.f_1157[func_217(iParam0)];
+	return p_num;
 }
 
 void func_1002(int iParam0, BOOL bParam1) // Position - 0x61C00 (400384)
@@ -82702,7 +82702,7 @@ void func_1006(int iParam0, BOOL bParam1, int iParam2, int iParam3, BOOL bParam4
 			if (func_1008(iParam0) == false)
 			{
 				if (iParam0 == 0 || iParam0 == 16)
-					if (func_1014(iParam0, 2, iParam2) == 1)
+					if (func_1014(iParam0, 2, iParam2) == true)
 						if (iParam0 == 0)
 							func_882(iParam3, func_887(iParam0, iParam2), "AWD_S282", func_885(iParam0, 2, iParam2), func_884(iParam0, 2, iParam2), func_1014(iParam0, 2, iParam2), 0, 0, 0, -1, 0);
 						else if (iParam0 == 16)
@@ -82748,20 +82748,20 @@ void func_1007(int iParam0, BOOL bParam1) // Position - 0x61EDD (401117)
 
 BOOL func_1008(int iParam0) // Position - 0x61F2C (401196)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_1009(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_213(num2));
+	p_num = func_1009(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_213(num));
 }
 
-int func_1009(int iParam0) // Position - 0x61F49 (401225)
+int* func_1009(int iParam0) // Position - 0x61F49 (401225)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_1682585.f_1109[func_217(iParam0)];
-	return unk;
+	p_num = Global_1682585.f_1109[func_217(iParam0)];
+	return p_num;
 }
 
 void func_1010(int iParam0, BOOL bParam1) // Position - 0x61F64 (401252)
@@ -82846,15 +82846,15 @@ BOOL func_1012(int iParam0) // Position - 0x62027 (401447)
 	return false;
 }
 
-BOOL func_1013(BOOL bParam0, int iParam1) // Position - 0x620A1 (401569)
+BOOL func_1013(BOOL bParam0, BOOL bParam1) // Position - 0x620A1 (401569)
 {
-	if (iParam1 <= bParam0)
+	if (bParam1 <= bParam0)
 		return true;
 
 	return false;
 }
 
-int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (401589)
+BOOL func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (401589)
 {
 	iParam2 == 0;
 
@@ -82864,10 +82864,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -82890,10 +82890,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -82916,10 +82916,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -82942,10 +82942,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -82968,10 +82968,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -82994,10 +82994,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83020,10 +83020,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 2;
@@ -83046,10 +83046,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 2;
@@ -83072,13 +83072,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -83098,13 +83098,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -83124,10 +83124,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83150,10 +83150,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83176,10 +83176,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83202,10 +83202,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83228,10 +83228,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83254,10 +83254,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83280,10 +83280,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83306,10 +83306,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83332,10 +83332,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83358,10 +83358,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83384,10 +83384,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83410,10 +83410,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83436,10 +83436,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83462,10 +83462,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83488,10 +83488,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83514,10 +83514,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83540,10 +83540,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83566,10 +83566,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83592,10 +83592,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83618,10 +83618,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83644,10 +83644,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83670,10 +83670,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83696,10 +83696,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -83722,10 +83722,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83748,10 +83748,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83774,10 +83774,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83800,10 +83800,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83826,10 +83826,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83852,10 +83852,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83878,10 +83878,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83904,10 +83904,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83930,10 +83930,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83956,10 +83956,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -83982,10 +83982,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84008,10 +84008,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84034,10 +84034,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84060,10 +84060,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84086,10 +84086,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84112,10 +84112,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84138,10 +84138,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84164,10 +84164,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84190,10 +84190,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84216,10 +84216,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 1000;
@@ -84242,10 +84242,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 3;
@@ -84268,10 +84268,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84294,10 +84294,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84320,10 +84320,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84346,10 +84346,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84372,10 +84372,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84398,10 +84398,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84424,10 +84424,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84450,10 +84450,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84476,10 +84476,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84502,10 +84502,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84528,10 +84528,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84554,10 +84554,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84580,10 +84580,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84606,10 +84606,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84632,10 +84632,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84658,10 +84658,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84684,10 +84684,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84710,10 +84710,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84736,10 +84736,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84762,10 +84762,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84788,10 +84788,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84814,10 +84814,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84840,10 +84840,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84866,10 +84866,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84892,10 +84892,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84918,10 +84918,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -84944,10 +84944,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -84970,10 +84970,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_24849;
@@ -84996,10 +84996,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_24849;
@@ -85022,10 +85022,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_24849;
@@ -85048,10 +85048,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_24849;
@@ -85074,10 +85074,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85100,13 +85100,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -85126,13 +85126,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -85152,10 +85152,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85178,10 +85178,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85204,10 +85204,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85230,13 +85230,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -85256,13 +85256,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -85282,13 +85282,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -85308,10 +85308,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85334,10 +85334,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85360,10 +85360,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85386,10 +85386,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -85412,10 +85412,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -85438,10 +85438,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 100000;
@@ -85464,10 +85464,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -85490,10 +85490,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 1000;
@@ -85516,10 +85516,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -85542,10 +85542,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85568,10 +85568,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85594,10 +85594,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85620,10 +85620,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 25000;
@@ -85646,10 +85646,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -85672,10 +85672,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28226;
@@ -85698,10 +85698,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28409;
@@ -85724,10 +85724,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28437;
@@ -85750,10 +85750,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28441;
@@ -85776,10 +85776,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28157;
@@ -85802,10 +85802,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return Global_262145.f_28413;
@@ -85828,10 +85828,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85854,10 +85854,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85880,10 +85880,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 50000;
@@ -85906,10 +85906,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85932,10 +85932,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85958,10 +85958,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -85984,10 +85984,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 1000000;
@@ -86010,10 +86010,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86036,10 +86036,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86062,10 +86062,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86088,10 +86088,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86114,10 +86114,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86140,10 +86140,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86166,10 +86166,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86192,10 +86192,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86218,10 +86218,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86244,10 +86244,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 30;
@@ -86270,10 +86270,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 10;
@@ -86296,10 +86296,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86322,10 +86322,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86348,10 +86348,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86374,13 +86374,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -86400,10 +86400,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86426,10 +86426,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86452,10 +86452,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86478,10 +86478,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86504,13 +86504,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -86530,10 +86530,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86556,10 +86556,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86582,10 +86582,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86608,10 +86608,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86634,10 +86634,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -86660,10 +86660,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -86686,10 +86686,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86712,10 +86712,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86738,10 +86738,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86764,10 +86764,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -86790,10 +86790,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -86816,10 +86816,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86842,10 +86842,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86868,10 +86868,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 3;
@@ -86894,10 +86894,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86920,10 +86920,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86946,10 +86946,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86972,10 +86972,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -86998,10 +86998,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -87024,10 +87024,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5000;
@@ -87050,13 +87050,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -87076,13 +87076,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 3;
@@ -87102,10 +87102,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87128,13 +87128,13 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
-					return 1;
+					return true;
 			
 				case 3:
 					return 2;
@@ -87154,10 +87154,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87180,10 +87180,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 250000;
@@ -87206,10 +87206,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 50000;
@@ -87232,10 +87232,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87258,10 +87258,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87284,10 +87284,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87310,10 +87310,10 @@ int func_1014(int iParam0, int iParam1, int iParam2) // Position - 0x620B5 (4015
 			switch (iParam1)
 			{
 				case 0:
-					return 0;
+					return false;
 			
 				case 1:
-					return 0;
+					return false;
 			
 				case 2:
 					return 5;
@@ -87353,7 +87353,7 @@ BOOL func_1016() // Position - 0x65744 (415556)
 
 void func_1017(int iParam0, int iParam1, int iParam2) // Position - 0x65755 (415573)
 {
-	int num;
+	BOOL num;
 
 	num = func_576(iParam0, func_277(iParam2));
 	num = num + iParam1;
@@ -87361,12 +87361,12 @@ void func_1017(int iParam0, int iParam1, int iParam2) // Position - 0x65755 (415
 	return;
 }
 
-void func_1018(int iParam0, int iParam1, int iParam2) // Position - 0x6577C (415612)
+void func_1018(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6577C (415612)
 {
 	Hash statName;
 
 	statName = func_577(iParam0, iParam2);
-	STATS::STAT_SET_INT(statName, iParam1, true);
+	STATS::STAT_SET_INT(statName, bParam1, true);
 	return;
 }
 

@@ -2946,7 +2946,7 @@ void func_13(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		}
 	
 		func_21(true, bParam3, bParam2, false);
-		Global_64529 = true;
+		Global_64529 = 1;
 		Global_76858 = true;
 		Global_79766 = true;
 	}
@@ -2954,7 +2954,7 @@ void func_13(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	{
 		func_23(0);
 		HUD::THEFEED_RESUME();
-		Global_64529 = false;
+		Global_64529 = 0;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();

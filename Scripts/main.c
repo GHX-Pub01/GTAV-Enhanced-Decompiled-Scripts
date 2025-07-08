@@ -3607,7 +3607,7 @@ int func_128(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 		if (!func_131())
 			func_129();
 	
-		Global_98811 = 0;
+		Global_98811 = false;
 		return 1;
 	}
 	else
@@ -102688,11 +102688,11 @@ void func_650() // Position - 0x85FCB (548811)
 	Global_98814 = -1;
 	Global_98815 = -1;
 	Global_98816 = -1;
-	Global_98818 = 0;
+	Global_98818 = false;
 	Global_98819 = 0;
 	Global_98820 = false;
-	Global_98750 = 0;
-	Global_98751 = 0;
+	Global_98750 = false;
+	Global_98751 = false;
 	Global_98753 = -15;
 	Global_24008 = 0;
 
@@ -106845,14 +106845,14 @@ BOOL func_767() // Position - 0x8C4FE (574718)
 	if (Global_2708037.f_10)
 		return false;
 
-	if (Global_1986353.f_3)
+	if (Global_1986354.f_3)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("gb_ie_delivery_cutscene")) > 0)
 		return false;
 
-	if (_STOPWATCH_IS_INITIALIZED(&Global_1986353))
-		return func_768(&Global_1986353, Global_1986353.f_2, false);
+	if (_STOPWATCH_IS_INITIALIZED(&Global_1986354))
+		return func_768(&Global_1986354, Global_1986354.f_2, false);
 
 	return false;
 }

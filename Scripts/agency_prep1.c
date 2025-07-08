@@ -1551,7 +1551,7 @@ void func_7(BOOL bParam0, BOOL bParam1) // Position - 0x946 (2374)
 		}
 		else
 		{
-			Global_64523 = true;
+			Global_64523 = 1;
 		}
 	}
 
@@ -2861,7 +2861,7 @@ BOOL func_52(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x2728 (100
 		{
 			if (iParam1 > Global_22604)
 			{
-				if (Global_22609 == false)
+				if (Global_22609 == 0)
 				{
 					AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 					Global_21239.f_1 = 3;
@@ -3336,7 +3336,7 @@ BOOL _CONVERSATION_ADD_LINE(var uParam0, char* sParam1, char* sParam2, int iPara
 		if (iParam3 < 12)
 			iParam3 = 7;
 
-	Global_22609 = false;
+	Global_22609 = 0;
 	Global_22611 = 0;
 	Global_22616 = 0;
 	Global_23593 = 0;

@@ -115843,26 +115843,26 @@ Any func_1227(int iParam0) // Position - 0x891E0 (561632)
 
 float func_1228(int iParam0, int iParam1) // Position - 0x891EF (561647)
 {
-	float unk;
+	float num;
 
 	if (iParam1 != 0)
-		unk = Global_2359296[func_377() /*5571*/].f_681.f_1286[iParam0];
+		num = Global_2359296[func_377() /*5571*/].f_681.f_1286[iParam0];
 	else
-		unk = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/].f_1;
+		num = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/].f_1;
 
-	return unk;
+	return num;
 }
 
 float func_1229(int iParam0, int iParam1) // Position - 0x8922B (561707)
 {
-	float unk;
+	float num;
 
 	if (iParam1 != 0)
-		unk = Global_2359296[func_377() /*5571*/].f_681.f_1276[iParam0];
+		num = Global_2359296[func_377() /*5571*/].f_681.f_1276[iParam0];
 	else
-		unk = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/];
+		num = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/];
 
-	return unk;
+	return num;
 }
 
 BOOL func_1230() // Position - 0x89265 (561765)

@@ -44946,7 +44946,7 @@ BOOL func_322(int iParam0) // Position - 0x31836 (202806)
 	return iParam0 == 77;
 }
 
-var func_323(Player plParam0) // Position - 0x31843 (202819)
+int func_323(Player plParam0) // Position - 0x31843 (202819)
 {
 	return Global_1845274[plParam0 /*877*/].f_198.f_6;
 }

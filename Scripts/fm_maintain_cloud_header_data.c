@@ -3364,11 +3364,11 @@ void func_157(var uParam0, int iParam1, int iParam2) // Position - 0x3ED7 (16087
 {
 	if (iParam1 == 0 || iParam1 == 1)
 		if (NETWORK::UGC_GET_CONTENT_IS_VERIFIED(uParam0->f_6))
-			if (Global_993502.f_4[iParam2 /*95*/].f_71 == 2)
+			if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_HAIR)
 				func_161(Global_999464.f_4[iParam2 /*95*/].f_22);
-			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == 1)
+			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_BERD)
 				func_160(Global_999464.f_4[iParam2 /*95*/].f_22);
-			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == 4)
+			else if (Global_993502.f_4[iParam2 /*95*/].f_71 == PV_COMP_LOWR)
 				func_158(Global_999464.f_4[iParam2 /*95*/].f_22);
 
 	return;

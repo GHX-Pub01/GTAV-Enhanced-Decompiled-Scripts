@@ -96084,14 +96084,14 @@ char* func_603(int iParam0) // Position - 0x78039 (491577)
 
 float func_604(int iParam0, int iParam1) // Position - 0x78082 (491650)
 {
-	float num;
+	float unk;
 
 	if (iParam1 != 0)
-		num = Global_2359296[func_605() /*5571*/].f_681.f_1276[iParam0];
+		unk = Global_2359296[func_605() /*5571*/].f_681.f_1276[iParam0];
 	else
-		num = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/];
+		unk = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/];
 
-	return num;
+	return unk;
 }
 
 int func_605() // Position - 0x780BC (491708)
@@ -97386,14 +97386,14 @@ Any func_622(int iParam0) // Position - 0x79F63 (499555)
 
 float func_623(int iParam0, int iParam1) // Position - 0x79F72 (499570)
 {
-	float num;
+	float unk;
 
 	if (iParam1 != 0)
-		num = Global_2359296[func_605() /*5571*/].f_681.f_1286[iParam0];
+		unk = Global_2359296[func_605() /*5571*/].f_681.f_1286[iParam0];
 	else
-		num = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/].f_1;
+		unk = Global_114370.f_18983[0 /*19*/][iParam0 /*2*/].f_1;
 
-	return num;
+	return unk;
 }
 
 var func_624(BOOL bParam0, var uParam1, var uParam2) // Position - 0x79FAE (499630)

@@ -15648,8 +15648,8 @@ void func_257(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	int b;
 	int a;
 	int i;
-	BOOL numberOfLinesForString;
-	BOOL j;
+	ePedComponentType numberOfLinesForString;
+	ePedComponentType j;
 	int k;
 	int num2;
 	int num3;
@@ -15708,7 +15708,7 @@ void func_257(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	float num42;
 	float size;
 	float size2;
-	BOOL flag8;
+	ePedComponentType type;
 	float num43;
 	float num44;
 	int m;
@@ -15897,7 +15897,7 @@ void func_257(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		
 			while (num2 < Global_24148.f_5828 && numberOfLinesForString <= Global_24148.f_5821)
 			{
-				if (numberOfLinesForString >= false)
+				if (numberOfLinesForString >= PV_COMP_HEAD)
 				{
 					if (Global_24148.f_6088[numberOfLinesForString])
 					{
@@ -16379,15 +16379,15 @@ void func_257(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 			num4 = 0;
 			num5 = 0;
 			num6 = 0;
-			flag8 = Global_24148.f_5821;
+			type = Global_24148.f_5821;
 		
 			if (Global_24148.f_6332)
-				flag8 = Global_24148.f_6335 - 1;
+				type = Global_24148.f_6335 - 1;
 		
 			num43 = 0f;
 			num44 = 0f;
 		
-			for (j = false; j <= flag8; j = j + 1)
+			for (j = PV_COMP_HEAD; j <= type; j = j + 1)
 			{
 				num37 = 0.034722f;
 			
@@ -18761,7 +18761,7 @@ void func_307(char* sParam0, int iParam1, int iParam2) // Position - 0x19F6A (10
 
 void func_308(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19FCF (106447)
 {
-	BOOL i;
+	ePedComponentType i;
 	int num;
 
 	Global_24148.f_6342 = iParam0;
@@ -18775,7 +18775,7 @@ void func_308(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19FCF (106
 	{
 		for (i = Global_24148.f_6341; i <= Global_24148.f_6342; i = i + 1)
 		{
-			if (i >= false && i < 127)
+			if (i >= PV_COMP_HEAD && i < 127)
 				if (Global_24148.f_5692[i] != 0)
 					num = num + 1;
 		}
@@ -18787,7 +18787,7 @@ void func_308(int iParam0, BOOL bParam1, int iParam2) // Position - 0x19FCF (106
 		
 			for (i = Global_24148.f_6341; i <= Global_24148.f_6342; i = i + 1)
 			{
-				if (i >= false && i < 127)
+				if (i >= PV_COMP_HEAD && i < 127)
 					if (Global_24148.f_5692[i] != 0)
 						num = num + 1;
 			}

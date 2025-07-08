@@ -4512,20 +4512,20 @@ char* func_115(int iParam0, int iParam1) // Position - 0x3F6B (16235)
 
 BOOL func_116(int iParam0) // Position - 0x44A1 (17569)
 {
+	int* p_num;
 	int num;
-	int num2;
 
-	num = func_117(iParam0);
-	num2 = iParam0;
-	return IS_BIT_SET(num, func_99(num2));
+	p_num = func_117(iParam0);
+	num = iParam0;
+	return IS_BIT_SET(p_num, func_99(num));
 }
 
-int func_117(int iParam0) // Position - 0x44BE (17598)
+int* func_117(int iParam0) // Position - 0x44BE (17598)
 {
-	var unk;
+	int* p_num;
 
-	unk = Global_2751338.f_1032[func_97(iParam0)];
-	return unk;
+	p_num = Global_2751338.f_1032[func_97(iParam0)];
+	return p_num;
 }
 
 void func_118(int iParam0, BOOL bParam1, int iParam2) // Position - 0x44D9 (17625)

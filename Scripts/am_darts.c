@@ -115775,136 +115775,136 @@ void func_844(int iParam0, int iParam1) // Position - 0x90E37 (593463)
 
 BOOL func_845() // Position - 0x90E4C (593484)
 {
-	BOOL flag;
 	int num;
+	int num2;
 
-	num = 0;
-	flag = func_1223(2828, -1);
+	num2 = 0;
+	num = func_1223(2828, -1);
 
 	if (_STAT_GET_PACKED_BOOL(42002, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 19))
+	else if (IS_BIT_SET(num, 19))
 	{
 		_STAT_SET_PACKED_BOOL(42002, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42003, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 20))
+	else if (IS_BIT_SET(num, 20))
 	{
 		_STAT_SET_PACKED_BOOL(42003, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42006, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 21))
+	else if (IS_BIT_SET(num, 21))
 	{
 		_STAT_SET_PACKED_BOOL(42006, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42007, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 22))
+	else if (IS_BIT_SET(num, 22))
 	{
 		_STAT_SET_PACKED_BOOL(42007, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42005, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 23))
+	else if (IS_BIT_SET(num, 23))
 	{
 		_STAT_SET_PACKED_BOOL(42005, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42004, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 24))
+	else if (IS_BIT_SET(num, 24))
 	{
 		_STAT_SET_PACKED_BOOL(42004, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
-	flag = func_1223(5631, -1);
+	num = func_1223(5631, -1);
 
 	if (_STAT_GET_PACKED_BOOL(42012, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 5))
+	else if (IS_BIT_SET(num, 5))
 	{
 		_STAT_SET_PACKED_BOOL(42012, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42011, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 6))
+	else if (IS_BIT_SET(num, 6))
 	{
 		_STAT_SET_PACKED_BOOL(42011, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42008, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 7))
+	else if (IS_BIT_SET(num, 7))
 	{
 		_STAT_SET_PACKED_BOOL(42008, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42013, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 8))
+	else if (IS_BIT_SET(num, 8))
 	{
 		_STAT_SET_PACKED_BOOL(42013, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42009, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 9))
+	else if (IS_BIT_SET(num, 9))
 	{
 		_STAT_SET_PACKED_BOOL(42009, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
 	if (_STAT_GET_PACKED_BOOL(42010, -1))
 	{
-		num = num + 1;
+		num2 = num2 + 1;
 	}
-	else if (IS_BIT_SET(flag, 10))
+	else if (IS_BIT_SET(num, 10))
 	{
 		_STAT_SET_PACKED_BOOL(42010, true, -1);
-		num = num + 1;
+		num2 = num2 + 1;
 	}
 
-	func_873(41247, num, -1);
-	return num;
+	func_873(41247, num2, -1);
+	return num2;
 }
 
 int func_846(BOOL bParam0) // Position - 0x91091 (594065)
@@ -116333,17 +116333,17 @@ int func_848(int iParam0, int iParam1, int iParam2) // Position - 0x9111B (59420
 int func_849(int iParam0) // Position - 0x91646 (595526)
 {
 	int num;
-	BOOL flag;
 	int num2;
+	int num3;
 	int i;
 
 	num = func_818(iParam0);
-	flag = func_1223(num, -1);
-	num2 = func_816(iParam0, 0);
+	num2 = func_1223(num, -1);
+	num3 = func_816(iParam0, 0);
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		if (!IS_BIT_SET(flag, num2 + i))
+		if (!IS_BIT_SET(num2, num3 + i))
 			return i;
 	}
 

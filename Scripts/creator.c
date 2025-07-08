@@ -106299,7 +106299,7 @@ BOOL func_637(Hash hParam0) // Position - 0x73198 (471448)
 
 void func_638(Hash hParam0, int iParam1) // Position - 0x731A5 (471461)
 {
-	BOOL i;
+	int i;
 
 	if (iParam1 >= 1500)
 		return;

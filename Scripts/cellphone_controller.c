@@ -137,7 +137,7 @@ void main() // Position - 0x0 (0)
 	func_154();
 	Global_21239.f_1 = 3;
 	Global_21227 = false;
-	Global_21463 = false;
+	Global_21463 = 0;
 	Global_23637 = 0;
 	unk.f_23 = 2;
 	unk.f_56 = 21;
@@ -1351,7 +1351,7 @@ void func_24() // Position - 0x13B0 (5040)
 				func_53(Global_21220, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 		
-			if (Global_21463 == false)
+			if (Global_21463 == 0)
 			{
 				func_53(Global_21220, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 				MISC::CLEAR_BIT(&Global_9075, 17);
@@ -1745,7 +1745,7 @@ void func_30(BOOL bParam0) // Position - 0x1E3B (7739)
 	for (i = 0; i < 9; i = i + 1)
 	{
 		Global_9638[i] = 0;
-		Global_9676[i] = false;
+		Global_9676[i] = 0;
 	}
 
 	if (func_47() && func_33())
@@ -1774,7 +1774,7 @@ void func_30(BOOL bParam0) // Position - 0x1E3B (7739)
 void func_31(int iParam0, char* sParam1, int iParam2, char* sParam3, int iParam4) // Position - 0x1F5E (8030)
 {
 	func_32(iParam0, sParam1, iParam2, sParam3, iParam4, 1, 1, 0, 0);
-	Global_9676[iParam2] = true;
+	Global_9676[iParam2] = 1;
 	Global_9638[iParam2] = iParam0;
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_21220, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -1948,7 +1948,7 @@ void func_50() // Position - 0x2258 (8792)
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_9676[i] = false;
+		Global_9676[i] = 0;
 	}
 
 	return;
@@ -2051,7 +2051,7 @@ void func_54(int iParam0) // Position - 0x23DD (9181)
 				{
 					if (i == Global_9082[num /*15*/].f_4)
 					{
-						if (Global_9676[i] == false)
+						if (Global_9676[i] == 0)
 						{
 							Global_9638[i] = num;
 						
@@ -2082,7 +2082,7 @@ void func_54(int iParam0) // Position - 0x23DD (9181)
 								if (num == 14)
 									func_53(Global_21220, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_9082[num /*15*/].f_10), BUILTIN::TO_FLOAT(Global_23665), -1f, &Global_9082[num /*15*/], 0, 0, 0, 0);
 						
-							Global_9676[i] = true;
+							Global_9676[i] = 1;
 						}
 					}
 				}
@@ -2098,7 +2098,7 @@ void func_54(int iParam0) // Position - 0x23DD (9181)
 				{
 					if (i == Global_9082[num /*15*/].f_4)
 					{
-						if (Global_9676[i] == false)
+						if (Global_9676[i] == 0)
 						{
 							Global_9638[i] = num;
 						
@@ -2240,7 +2240,7 @@ void func_54(int iParam0) // Position - 0x23DD (9181)
 								func_53(Global_21220, "SET_DATA_SLOT", BUILTIN::TO_FLOAT(1), BUILTIN::TO_FLOAT(i), BUILTIN::TO_FLOAT(Global_9082[num /*15*/].f_10), BUILTIN::TO_FLOAT(0), -1f, &Global_9082[num /*15*/], 0, 0, 0, 0);
 							}
 						
-							Global_9676[i] = true;
+							Global_9676[i] = 1;
 						}
 					}
 				}

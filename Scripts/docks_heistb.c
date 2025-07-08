@@ -109143,7 +109143,7 @@ void func_620(eCharacter echParam0) // Position - 0x81183 (528771)
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_114370.f_2367.f_539[echParam0 /*65*/].f_39[i] = PV_COMP_INVALID;
+		Global_114370.f_2367.f_539[echParam0 /*65*/].f_39[i] = -1;
 		Global_114370.f_2367.f_539[echParam0 /*65*/].f_49[i] = -1;
 	}
 

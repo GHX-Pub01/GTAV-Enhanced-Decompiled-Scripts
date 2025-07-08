@@ -2362,16 +2362,16 @@ BOOL func_72() // Position - 0x2B74 (11124)
 	return func_73(*Global_4718592.f_138116);
 }
 
-BOOL func_73(Hash hParam0) // Position - 0x2B8A (11146)
+BOOL func_73(ePedComponentType epctParam0) // Position - 0x2B8A (11146)
 {
 	int i;
 
-	if (hParam0 == 0)
+	if (epctParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		if (Global_262145.f_31217[i] == hParam0)
+		if (Global_262145.f_31217[i] == epctParam0)
 			return 1;
 	}
 
@@ -36402,7 +36402,7 @@ void func_213(Ped pedParam0, int iParam1, Player plParam2, int iParam3) // Posit
 
 	for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 	{
-		Global_79621[i] = -1;
+		Global_79621[i] = PV_COMP_INVALID;
 		Global_79621.f_13[i] = -1;
 	}
 
@@ -36423,7 +36423,7 @@ void func_213(Ped pedParam0, int iParam1, Player plParam2, int iParam3) // Posit
 	{
 		for (i = PV_COMP_HEAD; i < PV_COMP_MAX; i = i + 1)
 		{
-			if (Global_79621[i] != -1)
+			if (Global_79621[i] != PV_COMP_INVALID)
 			{
 				if (PED::GET_PED_DRAWABLE_VARIATION(pedParam0, i) == Global_79621[i] && PED::GET_PED_TEXTURE_VARIATION(pedParam0, i) == Global_79621.f_13[i])
 				{

@@ -9757,7 +9757,7 @@ void func_31(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		}
 	
 		func_39(true, bParam3, bParam2, false);
-		Global_64529 = true;
+		Global_64529 = 1;
 		Global_76858 = true;
 		Global_79766 = true;
 	}
@@ -9765,7 +9765,7 @@ void func_31(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 	{
 		func_41(0);
 		HUD::THEFEED_RESUME();
-		Global_64529 = false;
+		Global_64529 = 0;
 	
 		if (bParam1)
 			GRAPHICS::CASCADE_SHADOWS_INIT_SESSION();
@@ -63266,16 +63266,16 @@ BOOL func_379() // Position - 0x4B3AA (308138)
 	return func_380(*Global_4718592.f_138116);
 }
 
-int func_380(ePedComponentType epctParam0) // Position - 0x4B3C0 (308160)
+int func_380(Hash hParam0) // Position - 0x4B3C0 (308160)
 {
 	int i;
 
-	if (epctParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_30384[i] == epctParam0)
+		if (Global_262145.f_30384[i] == hParam0)
 			return 1;
 	}
 

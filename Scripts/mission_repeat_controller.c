@@ -1382,7 +1382,7 @@ void func_59() // Position - 0x159E (5534)
 	{
 		if (Global_98825[i /*17*/] && !Global_98825[i /*17*/].f_1)
 			if (Global_98825[i /*17*/].f_3 == 0)
-				if (Global_98825[i /*17*/].f_5 != CHAR_DETONATEBOMB && Global_98825[i /*17*/].f_5 != CHAR_LS_CUSTOMS && Global_98825[i /*17*/].f_5 != CHAR_DOMESTIC_GIRL)
+				if (Global_98825[i /*17*/].f_5 != 88 && Global_98825[i /*17*/].f_5 != 89 && Global_98825[i /*17*/].f_5 != 92)
 					func_60(Global_98825[i /*17*/].f_5, true);
 	}
 
@@ -97861,14 +97861,14 @@ void func_618(int iParam0) // Position - 0x7AEC5 (503493)
 	return;
 }
 
-void func_619(eCharacter echParam0) // Position - 0x7B0A7 (503975)
+void func_619(int iParam0) // Position - 0x7B0A7 (503975)
 {
-	if (echParam0 >= CHAR_BROKEN_DOWN_GIRL)
+	if (iParam0 >= 94)
 		return;
 
 	if (Global_97739 != -1)
 	{
-		if (Global_97739 != echParam0)
+		if (Global_97739 != iParam0)
 			return;
 	
 		Global_97739 = -1;
@@ -121426,7 +121426,7 @@ void func_916(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA1992 (6
 
 	Global_114370.f_7692.f_924 = MISC::GET_GAME_TIMER();
 
-	if (Global_80031 == CHAR_MAUDE || Global_80032 == 62)
+	if (Global_80031 == 62 || Global_80032 == 62)
 		func_812(2, true);
 
 	if (!bParam0)

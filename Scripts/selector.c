@@ -6255,7 +6255,7 @@ int func_143(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 			}
 		}
 	
-		Global_99174 = 1;
+		Global_99174 = true;
 		func_186(PLAYER::PLAYER_PED_ID());
 		func_185();
 		func_184(character2);
@@ -9003,7 +9003,7 @@ void func_177(eCharacter echParam0, int iParam1) // Position - 0xC8E3 (51427)
 		case 7:
 			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("armenian3")) != 0 || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("trevor3")) != 0)
 			{
-				Global_99175 = 1;
+				Global_99175 = true;
 			}
 			else
 			{
@@ -97589,9 +97589,9 @@ void func_709(BOOL bParam0) // Position - 0x77956 (489814)
 	return;
 }
 
-void func_710(BOOL bParam0, int iParam1) // Position - 0x77964 (489828)
+void func_710(int iParam0, int iParam1) // Position - 0x77964 (489828)
 {
-	Global_1577887[iParam1] = bParam0;
+	Global_1577887[iParam1] = iParam0;
 	return;
 }
 

@@ -3482,10 +3482,10 @@ float func_80() // Position - 0x4D72 (19826)
 	return Global_24148.f_9149;
 }
 
-void func_81(float fParam0, float fParam1, char* sParam2, BOOL bParam3, int iParam4) // Position - 0x4D80 (19840)
+void func_81(float fParam0, float fParam1, char* sParam2, ePedComponentType epctParam3, int iParam4) // Position - 0x4D80 (19840)
 {
 	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::ADD_TEXT_COMPONENT_INTEGER(bParam3);
+	HUD::ADD_TEXT_COMPONENT_INTEGER(epctParam3);
 	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(func_78(fParam0), fParam1, iParam4);
 	return;
 }
@@ -7426,7 +7426,7 @@ void func_197(BOOL bParam0, BOOL bParam1) // Position - 0x90DD (37085)
 
 	for (i = 0; i < 256; i = i + 1)
 	{
-		Global_24148.f_4469[i] = false;
+		Global_24148.f_4469[i] = PV_COMP_HEAD;
 	}
 
 	for (i = 0; i < 128; i = i + 1)
@@ -40748,15 +40748,15 @@ void func_936(int iParam0) // Position - 0x2EE36 (192054)
 	return;
 }
 
-void func_937(var uParam0) // Position - 0x2EEEC (192236)
+void func_937(BOOL bParam0) // Position - 0x2EEEC (192236)
 {
-	*uParam0 = 0;
-	uParam0->f_1 = _INVALID_PLAYER_INDEX();
-	uParam0->f_2 = 0;
-	uParam0->f_4 = 0;
+	*bParam0 = 0;
+	bParam0->f_1 = _INVALID_PLAYER_INDEX();
+	bParam0->f_2 = 0;
+	bParam0->f_4 = 0;
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		uParam0->f_3 = NETWORK::GET_NETWORK_TIME();
+		bParam0->f_3 = NETWORK::GET_NETWORK_TIME();
 
 	return;
 }

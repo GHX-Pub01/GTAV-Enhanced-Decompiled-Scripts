@@ -30376,9 +30376,9 @@ struct<2> func_167(int iParam0) // Position - 0x20483 (132227)
 	return unk;
 }
 
-void func_168(int iParam0, int iParam1) // Position - 0x208CF (133327)
+void func_168(int iParam0, BOOL bParam1) // Position - 0x208CF (133327)
 {
-	Global_80037 = iParam1;
+	Global_80037 = bParam1;
 
 	if (Global_64517)
 		return;

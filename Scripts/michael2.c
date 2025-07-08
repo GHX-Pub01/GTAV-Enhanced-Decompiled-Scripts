@@ -11340,7 +11340,7 @@ void func_15() // Position - 0x28B7 (10423)
 	return;
 }
 
-void func_16(BOOL bParam0, BOOL bParam1) // Position - 0x28C3 (10435)
+void func_16(int iParam0, BOOL bParam1) // Position - 0x28C3 (10435)
 {
 	Global_80037 = bParam1;
 
@@ -11359,7 +11359,7 @@ void func_16(BOOL bParam0, BOOL bParam1) // Position - 0x28C3 (10435)
 		{
 		}
 	
-		Global_64543 = bParam0;
+		Global_64543 = iParam0;
 		Global_64517 = true;
 		Global_64528 = true;
 	}
@@ -82183,16 +82183,16 @@ BOOL func_626() // Position - 0x6B442 (439362)
 	return func_627(*Global_4718592.f_138116);
 }
 
-int func_627(ePedComponentType epctParam0) // Position - 0x6B458 (439384)
+int func_627(Hash hParam0) // Position - 0x6B458 (439384)
 {
 	int i;
 
-	if (epctParam0 == 0)
+	if (hParam0 == 0)
 		return 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		if (Global_262145.f_30384[i] == epctParam0)
+		if (Global_262145.f_30384[i] == hParam0)
 			return 1;
 	}
 

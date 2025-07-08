@@ -46113,7 +46113,7 @@ void func_489() // Position - 0x38417 (230423)
 	if (num == -1)
 		return;
 
-	Global_113457[num /*10*/] = true;
+	Global_113457[num /*10*/] = 1;
 	return;
 }
 
